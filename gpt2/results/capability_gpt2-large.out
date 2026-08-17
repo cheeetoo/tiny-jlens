@@ -1,0 +1,84 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights:   4%|▍         | 17/436 [00:00<00:02, 166.04it/s]Loading weights:  28%|██▊       | 121/436 [00:00<00:00, 431.62it/s]Loading weights:  53%|█████▎    | 229/436 [00:00<00:00, 656.68it/s]Loading weights:  69%|██████▊   | 299/436 [00:00<00:00, 399.87it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 615.99it/s]
+
+== two-hop (gpt2-large) ==
+  city_continent     twohop 22/28   onehop 23/28   firsthop  0/28
+  city_language      twohop 26/28   onehop 27/28   firsthop  0/28
+  lang_capital       twohop 11/21   onehop 18/21   firsthop 19/21
+  lang_continent     twohop 20/22   onehop 20/22   firsthop 20/22
+  paper_animal-cover twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_animal-legs  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_animal-nose  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_beverage-source twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_bird-time    twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_city-capital twohop  1/ 6   onehop  0/ 0   firsthop  0/ 0
+  paper_city-continent twohop  1/ 3   onehop  0/ 0   firsthop  0/ 0
+  paper_city-currency twohop  1/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_city-language twohop  1/ 3   onehop  0/ 0   firsthop  0/ 0
+  paper_city-state   twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_element-color twohop  1/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_element-state twohop  2/ 5   onehop  0/ 0   firsthop  0/ 0
+  paper_element-symbol twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_food-animal  twohop  1/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_fruit-grows  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_gem-color    twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_holiday-month twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_instr-played twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_language-capital twohop  2/ 4   onehop  0/ 0   firsthop  0/ 0
+  paper_multihop     twohop  3/27   onehop  0/ 0   firsthop  0/ 0
+  paper_organ-count  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_organ-function twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_organ-location twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_person-country twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_person-firstname twohop  2/ 3   onehop  0/ 0   firsthop  0/ 0
+  paper_planet-color twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_planet-feature twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_river-capital twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_season-next  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_sport-equip  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_vehicle-power twohop  1/ 1   onehop  0/ 0   firsthop  0/ 0
+  riddle             twohop  1/ 5   onehop  0/ 5   firsthop  0/ 0
+  TOTAL two-hop pass: 96/183
+
+== category report ==  top1-valid 8/16: ['color', 'fruit', 'sport', 'instrument', 'language', 'profession', 'beverage', 'day of the week']
+   member-in-top5 12/16: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'tree', 'bird', 'language', 'profession', 'beverage', 'day of the week']
+   miss country          -> ' United'
+   miss planet           -> ' planet'
+   miss tree             -> ' tree'
+   miss bird             -> ' bird'
+   miss organ            -> ' organ'
+   miss city             -> ' New'
+   miss river            -> ' river'
+   miss metal            -> ' hammer'
+
+== C4 grid (cells need >=3 correct args) ==
+  countries    capital          9/10
+  countries    language         9/10
+  countries    continent        10/10
+  months       season           0/4
+  months       number           0/4
+  months       holiday          0/4
+  months       next_month       0/4
+  animals      habitat          1/3
+  animals      legs             0/4
+  animals      class            1/3
+  numbers      double           0/4
+  numbers      square           0/4
+  numbers      successor        0/4
+  numbers      first_letter     4/4
+
+== C5a language tasks ==
+  fr1  French   cont->French   report Y('French'    ) country Y('France')
+  fr2  French   cont->French   report Y('French'    ) country Y('France')
+  de1  German   cont->German   report Y('German'    ) country Y('Germany')
+  de2  German   cont->German   report Y('German'    ) country Y('Germany')
+  es1  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  es2  Spanish  cont->unknown  report Y('Spanish'   ) country Y('Spain')
+  it1  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  it2  Italian  cont->unknown  report Y('Italian'   ) country Y('Italy')
+  fx1  French   cont->French   report Y('French'    ) country Y('France')
+  gx1  German   cont->German   report Y('German'    ) country Y('Germany')
+  sx1  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  ix1  Italian  cont->unknown  report Y('Italian'   ) country Y('Italy')
+
+saved results/capability_gpt2-large.json

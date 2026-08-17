@@ -1,0 +1,85 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 34696.61it/s]
+
+== two-hop (gpt2) ==
+  city_continent     twohop  3/28   onehop 15/28   firsthop  1/28
+  city_language      twohop 21/28   onehop 26/28   firsthop  1/28
+  lang_capital       twohop 11/21   onehop 19/21   firsthop 15/21
+  lang_continent     twohop 10/22   onehop 12/22   firsthop 16/22
+  paper_animal-cover twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_animal-legs  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_animal-nose  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_beverage-source twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_bird-time    twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_city-capital twohop  0/ 6   onehop  0/ 0   firsthop  0/ 0
+  paper_city-continent twohop  0/ 3   onehop  0/ 0   firsthop  0/ 0
+  paper_city-currency twohop  1/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_city-language twohop  0/ 3   onehop  0/ 0   firsthop  0/ 0
+  paper_city-state   twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_element-color twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_element-state twohop  0/ 5   onehop  0/ 0   firsthop  0/ 0
+  paper_element-symbol twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_food-animal  twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_fruit-grows  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_gem-color    twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_holiday-month twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_instr-played twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_language-capital twohop  4/ 4   onehop  0/ 0   firsthop  0/ 0
+  paper_multihop     twohop  1/27   onehop  0/ 0   firsthop  0/ 0
+  paper_organ-count  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_organ-function twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_organ-location twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_person-country twohop  0/ 2   onehop  0/ 0   firsthop  0/ 0
+  paper_person-firstname twohop  1/ 3   onehop  0/ 0   firsthop  0/ 0
+  paper_planet-color twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_planet-feature twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_river-capital twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_season-next  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_sport-equip  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  paper_vehicle-power twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
+  riddle             twohop  0/ 5   onehop  0/ 5   firsthop  0/ 0
+  TOTAL two-hop pass: 52/183
+
+== category report ==  top1-valid 7/16: ['country', 'color', 'fruit', 'instrument', 'language', 'beverage', 'day of the week']
+   member-in-top5 9/16: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'language', 'beverage', 'day of the week']
+   miss sport            -> ' horse'
+   miss planet           -> ' planet'
+   miss tree             -> ' tree'
+   miss bird             -> ' bird'
+   miss profession       -> ' gardening'
+   miss organ            -> ' hat'
+   miss city             -> ' city'
+   miss river            -> ' river'
+   miss metal            -> ' leather'
+
+== C4 grid (cells need >=3 correct args) ==
+  countries    capital          6/10
+  countries    language         9/10
+  countries    continent        2/10
+  months       season           0/4
+  months       number           0/4
+  months       holiday          0/4
+  months       next_month       0/4
+  animals      habitat          1/3
+  animals      legs             0/4
+  animals      class            1/3
+  numbers      double           0/4
+  numbers      square           0/4
+  numbers      successor        0/4
+  numbers      first_letter     2/4
+
+== C5a language tasks ==
+  fr1  French   cont->French   report Y('French'    ) country Y('France')
+  fr2  French   cont->French   report Y('French'    ) country Y('France')
+  de1  German   cont->German   report n('English'   ) country Y('Germany')
+  de2  German   cont->German   report n('English'   ) country Y('Germany')
+  es1  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  es2  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  it1  Italian  cont->unknown  report n('English'   ) country Y('Italy')
+  it2  Italian  cont->unknown  report n('English'   ) country Y('Italy')
+  fx1  French   cont->French   report Y('French'    ) country Y('France')
+  gx1  German   cont->German   report n('English'   ) country Y('Germany')
+  sx1  Spanish  cont->unknown  report n('English'   ) country Y('Spain')
+  ix1  Italian  cont->French   report Y('Italian'   ) country Y('Italy')
+
+saved results/capability_gpt2.json
