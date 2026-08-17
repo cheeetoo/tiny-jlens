@@ -46,7 +46,7 @@ GPT-2-small?** And, with more care, out of SmolLM2-135M-Instruct?
   clamp-mediation controls pass), report/flexibility/selectivity land at **Hints**
   (swap-to-report 84% top-5 vs the paper's 88%; one-swap-many-functions 73%;
   flexible-follows-swaps 78% vs automatic-tasks 16%), and instruction-driven
-  modulation is **Not shown** — the one clean failure.
+  modulation is **Not shown under the paper's metric** (but see the next bullet).
 - Our original pre-registered headline claim was **not met under its original bars**
   — instruction-driven modulation looked absent at 135M — but a revised,
   independently motivated, rank-sensitive operationalization (bars frozen before its
@@ -67,13 +67,13 @@ tasks follow swaps while automatic ones ignore them; and held items are maintain
 the lens *only when they'll be needed later* (23/24 paired trials, p<10⁻⁵ — median
 rank 6.5 with task demand vs 64 without).
 
-Everything about *top-down control and workspace structure* does not transfer:
-"think about X while copying" moves nothing on the paper's metric; "imagine this text
-is French" moves neither lens nor probes; whole-J-space ablation can't cleanly excise
-anything (content re-forms from the token stream); the J-space's sparse-code
-structure is gone — at d_model=576 the 49k lens vectors form a near-degenerate cone
-(one direction = 78% of their variance) and measured occupancy is ~1 slot, vs ~25 in
-the paper.
+What does not transfer is *dominance and structure*: instructed content is held at
+lens rank ~50, not rank 1, so the paper's top-of-lens metric reads it as absent;
+"imagine this text is French" moves neither lens nor probes; whole-J-space ablation
+can't cleanly excise anything (content re-forms from the token stream); and the
+J-space's sparse-code structure is gone — at d_model=576 the 49k lens vectors form a
+near-degenerate cone (one direction = 78% of their variance) and measured occupancy
+is ~1 slot, vs ~25 in the paper.
 
 ## The dose–response curve
 
@@ -86,12 +86,14 @@ paper-recipe lenses:
 | C3 readout / swap | — | 79/83% | 72/63% | 62/52% | 45/45% | —/54–70% |
 | report-swap top-1 | — | 41% | 60% | 100% | 98% | — |
 | privilege ratio (J:non-J) | — | n/a | 1.4× | 1.8× | 7.4× | 11× |
-| instruction modulation (÷baseline) | — | — | 1.0× (null) | 3.0× | **8.5× (passes)** | large |
+| instruction modulation, paper metric (÷baseline) | — | — | 1.0× | 3.0× | 8.5× | large |
+| instructed holding, rank metric (think vs baseline) | — | **17 vs 749** | 45 vs 564 | 1 vs 206 | 1 vs 854 | — |
 
-At 70M the capability filter empties — the question dissolves. At ~125–135M the
-causal core is present. The control-and-structure shell then arrives smoothly with
-scale. (And identical code producing null-at-135M and large-at-800M discharges the
-"maybe your code is broken" worry in both directions.)
+At 70M the capability filter empties — the question dissolves. From GPT-2 upward,
+both the causal core and instructed holding are present; what arrives smoothly with
+scale is *dominance* (how high held content sits in the lens) and the
+variance-privilege ratio. The paper-metric row shows how a top-k threshold
+manufactures an apparent onset from a smooth dominance curve.
 
 One wrinkle worth staring at: on the fixed item pool, C3 swap rates *fall* with
 scale (83→63→52→45%). The paper's own selectivity logic predicts this — tasks that
