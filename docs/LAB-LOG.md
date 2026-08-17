@@ -323,3 +323,21 @@ Scale ladder: SmolLM2-360M lens fit launched.
   cleanly measurable only at the small end; position-level analysis needed
   above ~360M (noted in report). Old "threshold" fully explained as top-k
   metric crossing the dominance level. REPORT/artifact/LW-draft updated.
+
+## 2026-08-17 ~14:00 — late-layer audit [E] (user's original hint, systematized)
+- C3 per-layer readout at final position: 0/44 for L14-21, cliff to 32/44 at
+  L23, sustained thru L28. Single live region L23-28; band rule had found
+  generic wikitext onset (L19), not task content. C3 readout 77% incl. late
+  layers (confirmatory 72% stands as scored).
+- C2c at L23:28: imagine lens-z doubles/triples (lang 0.6->2.0) with
+  J-orthogonal probe mostly flat; weak-present, not absent; still << paper.
+- C5b at L23:28: failure ROBUST to band aim — sentiment crashes like flexible
+  tasks, passage_report indestructible (20/20 everywhere), noise control ~=
+  ablation on twohop. Whole-space ablation doesn't dissociate at 135M in any
+  band; selectivity evidence rests on C5a (paper's primary design anyway).
+- Cone persists at L27-28 (top-PC 0.69-0.70). Probe split at L23:28: J 16/28
+  vs nonJ 10/28 (ratio shrinks to 1.6x as both gain power near output);
+  original-band 3.0x stands.
+- Blurt clarification recorded: at 135M/gpt2 the held word is in the model's
+  actual output top-10 in only 4/36 / 13/36 trials (held-not-spoken); at
+  360M+ the span-max flag saturates (dominance).

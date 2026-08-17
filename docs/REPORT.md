@@ -204,6 +204,38 @@ prompts re-derive the ablated content each layer from un-ablated token streams),
 the norm-matched noise control dents language→country almost as much. At this scale,
 top-k lens ablation cannot cleanly excise "the workspace" — see §5.
 
+## 4c. The late-layer audit (prompted by the user's "things happen later than
+you expect" — which was correct)
+
+After the C2 reversal we audited every place the L27–28 exclusion could have
+mattered. Findings:
+
+- **The task-content geography is a cliff, not a band.** Reasoning intermediates are
+  present at the answer position in 0/44 items at L14–L21, then 32/44 at L23,
+  sustained through L28. At 135M there is effectively one late region (L23–28) doing
+  workspace-and-motor duty together; the pre-registered band rule (L19 onset) had
+  detected the *generic* onset of lens signal on web text, not where task content
+  lives. Including L27–28 nudges C3 readout from 72% to 77% (the confirmatory 72%
+  stands as scored). Swap experiments were unaffected by design — motor-layer swaps
+  were excluded to keep interventions non-trivial, which is conservative.
+- **C2c ("imagine") partially wakes up at the live layers**: lens effects roughly
+  double or triple (language z 0.6→2.0) with the J-orthogonal probe mostly flat —
+  the same family as C2-revised, much weaker, and still far from the paper's
+  several-SD dissociation. Reported as weak-present rather than absent.
+- **C5b's failure is robust to band aim.** Re-running the ablation battery on
+  L23–28: sentiment (a "shallow" task) collapses as hard as the flexible tasks,
+  passage-language report is indestructible under every condition (long prompts
+  rebuild the content each layer), and matched noise damages two-hop as much as the
+  true ablation. Whole-space ablation does not produce clean dissociations at 135M
+  in any band we tried; the selectivity evidence properly rests on the targeted
+  same-latent swap design (C5a), which is also the paper's primary §3.5 experiment.
+- **The cone persists at L27–28** (top-PC share 0.69–0.70), so the matched-norm
+  variance-privilege failure is not rescued by late layers; restricting the probe
+  split to the live region raises both components' absolute effects (J 57%, non-J
+  36%) while *shrinking* the ratio to 1.6× — near the output, matched-norm
+  perturbations of any kind gain power, and the J/non-J comparison loses
+  selectivity. The confirmatory 3.0× at the original band stands as scored.
+
 ## 5. What does not transfer — the interesting part
 
 - **The J-frame is a degenerate cone.** At d_model=576, the 49k lens vectors have mean
