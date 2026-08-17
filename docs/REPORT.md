@@ -21,7 +21,7 @@ verdict bars, and held-out confirmatory items:
 | Criterion | Headline confirmatory result (SmolLM2-135M) | Paper reference | Verdict |
 |---|---|---|---|
 | **C1 Report** | report↔lens Spearman 0.55 [0.42, 0.66], rising through the band; swap-to-report **84% top-5** [76, 90]; J-beats-non-J paired rank 29/31 (p<0.001); clamp kills non-J route 9→0 (p=0.004); **but** matched-norm rate asymmetry 36% vs 25% misses the 3× bar | 88% top-5; 59% vs 5% | **Hints** |
-| **C2 Modulation** | paper's hit metric **null** (focus=baseline=2.5%); continuous contrasts significant & paper-directional (focus−baseline +0.50 [0.42, 0.58]; ignore cancels mention −0.48); "imagine" dissociation fails; demand-driven maintenance decisive (23/24, p<10⁻⁵; median rank 6.5 vs 64) | substantial hit rates, size-trended | **Not shown** |
+| **C2 Modulation** | paper's hit metric **null** (focus=baseline=2.5%); "imagine" dissociation fails; demand-driven maintenance decisive (23/24, p<10⁻⁵). **Revised operationalization (see §4b): Shown** — instructed concepts held at late layers, think median rank 45 vs baseline 564 (36/36, p=3×10⁻¹¹), think vs don't-think 34/36, blurt-controlled, confirmed on held-out items against pre-declared bars | substantial hit rates | **Not shown** (orig.) / **Shown** (revised) |
 | **C3 Reasoning** | unspoken intermediate in lens at answer position **72%** [57, 83]; intermediate swap redirects answer **63% top-1** [48, 76] (Haiku 54%, Sonnet 70%); cross-function consistency 15/30 both-flip; probe J-component 43% vs non-J 14% (**3.0×**), clamp → 0; band-robust | 54–70% swap | **Shown** |
 | **C4 Flexibility** | same-vector swap across functions **73% top-1** [56, 86] — but only the `countries` category survives the capability filter (grid breadth unmet) | 40–53% overall; countries "almost perfect" | **Hints** (capped) |
 | **C5 Selectivity** | same-latent design: flexible tasks follow the swap **78%** [63, 88] while automatic continuation changes 3/19 (**15.8%**, bar ≤15% — miss by 0.8pp; flexible-vs-automatic contrast p<0.0001); whole-J-space ablation battery **fails** its pre-declared conjunction | ~100% vs ~0%; battery dissociation clean | **Hints** |
@@ -34,6 +34,19 @@ sizes at or above the paper's Haiku 4.5 numbers. What fails to transfer is equal
 specific: **instruction-driven** covert modulation, the whole-space ablation
 dissociation, component-variance privilege at paper thresholds, and the structural
 signatures of a workspace (capacity, sparse-code geometry).
+
+**Update (day 2, later)**: prompted by independent prior work (the user's LW study
+showing internal state control with no size trend down to 270M, with tiny-model
+effects in late layers), we built a revised, rank-sensitive C2 operationalization,
+froze new bars, and confirmed on held-out words and sentences: **instruction-driven
+modulation is present at 135M after all** — my original protocol was insensitive
+(band excluded the late layers where the effect lives; a top-1 hit metric cannot see
+a 1000→100 rank shift). The original frozen verdict stands *for the original
+operationalization*; both are reported. The scale story changes accordingly: control
+exists at every rung including **base GPT-2** (think median 17 vs baseline 749,
+36/36; 23/23 under the strictest blurt filter; think vs don't-think 21/23); what
+scale buys is the *dominance* of held content (rank ~20–50 at ≤135M → rank 1 at
+360M+), which is exactly why top-k metrics manufacture an apparent threshold.
 
 **GPT-2-small** (2019; using the lens the paper's authors themselves released): on its
 capability-filtered two-hop items, unspoken intermediates appear in the lens at **79%**
@@ -135,7 +148,8 @@ model "report the injected thought" dose-responsively (7/24 top-1 at strength 16
 at strength 0) without indiscriminate blurting (3/24) — the paper's introspection
 protocol, working in a 135M model.
 
-**C2 — Modulation.** The one clean failure. "Think about X while copying" produces no
+**C2 — Modulation (original operationalization).** The one clean failure under the
+paper's metric — but see §4b below; the failure turned out to be the metric's. "Think about X while copying" produces no
 top-1 lens hits above baseline (the paper's metric), and "imagine this is
 French/past-tense/caps" barely moves anything (z<1.1 where the paper reports several
 SDs). The continuous-metric structure that does exist is exactly the paper's shape in
@@ -146,6 +160,20 @@ the held item will be needed after the copying task, it is maintained in the len
 throughout copying (median rank 6.5) vs. no-demand (median 64), 23/24 paired trials,
 p<10⁻⁵. At 135M, workspace contents follow **task demands, not verbal instructions
 about mental state**.
+
+**C2b — Modulation, revised (Shown).** Mirroring the protocol of the user's prior
+study (instruction after the sentence; paired think vs don't-think, which cancels
+mention-priming; measurement at all layers; explicit blurt controls), the instructed
+word's J-lens rank at the transcribed-sentence tokens drops from a baseline median
+of 564 to 45 under "think about X" (36/36 held-out pairs, p=3×10⁻¹¹), sits at 94
+under "don't think about X" (content sensitivity 34/36; suppression real but
+incomplete — the white-bear pattern, as in the paper), and the model is *not*
+preparing to say the word (in its actual output top-10 in only 4/36 trials, with
+the ordering intact among non-blurt trials). The effect lives at L23–28 — partly
+in layers the band analysis had classified as "motor," which at this scale
+evidently carry held-but-unspoken content too. All bars for this revision were
+frozen before its confirmatory run; the original verdict is reported unchanged
+alongside it.
 
 **C3 — Reasoning (Shown).** On 43 capability-filtered two-hop items ("The capital of
 the country where Polish is the primary language is…"), the unspoken intermediate
@@ -225,7 +253,8 @@ curve:
 | C3 readout / swap (fixed 135M-frontier pool) | — | 79% / 83% | 72% / 63% | 62% / 52% | 45% / 45%* | — / 54–70% |
 | C1 report corr (late band) / swap top-1 | — | 0.59 / 41%† | 0.55 / 60% | 0.75 / **100%** | 0.83 / 98% | high / — |
 | C1c privilege ratio: J vs non-J (matched norm) | — | n/a (frame degenerate) | 36% vs 25% (1.4×) | 86% vs 47% (1.8×) | **88% vs 12% (7.4×)** | 59% vs 5% (11×) |
-| C2 instruction modulation (focus ÷ baseline hits) | — | — | 1.0× (null) | 3.0× | **8.5× — passes the bar** | substantial |
+| C2 instruction modulation, original metric (focus ÷ baseline hits) | — | — | 1.0× (null) | 3.0× | 8.5× | substantial |
+| C2 revised: think vs baseline median lens rank | — | **17 vs 749** (base model!) | 45 vs 564 | 1 vs 206 | 1 vs 854 | — |
 | C2c "imagine" lens effect (z) | — | — | 0.6–0.7 | 1.1–1.45, probe flat | 0.2–0.8 (cross-family) | several SD |
 | Workspace band (fraction of depth) | — | 58–83% | 63–87% | 56–91% | 55–95% | 38–92% |
 | Kurtosis workspace-onset signature | — | flat | flat | flat | **present** | present |
@@ -236,12 +265,16 @@ curve:
 lower C3 rates likely reflect band/anchor mismatch (any-position readout is 92%) and
 are reported as-is.
 
-The ordering is clean: at 70M the capability filter empties and the question
-dissolves; at ~125–135M the **causal core** (readout, report- and reasoning-swaps,
-demand-selectivity, clamp-mediation) is present; the control-and-structure shell then
-arrives on smooth dose–response curves — instruction modulation 1.0× → 3.0× → 8.5×
-and variance-privilege 1.4× → 1.8× → 7.4× across 135M → 360M → 800M, with identical
-code, discharging any concern that the 135M nulls were implementation artifacts.
+The ordering: at 70M the capability filter empties and the question dissolves; from
+GPT-2/135M upward, both the **causal core** (readout, report- and reasoning-swaps,
+demand-selectivity, clamp-mediation) *and* instruction-driven control (revised
+metric) are present. What actually scales: the dominance of held/instructed content
+in top-of-lens terms (which is why the original top-k metric manufactured an
+apparent 1.0× → 3.0× → 8.5× "threshold"), and the variance-privilege ratio
+(1.4× → 1.8× → 7.4×). A methodological caution cuts both ways: the span-max blurt
+flag saturates on larger models (the held word enters their output top-10 somewhere
+in the span in ~all trials), so the held-vs-spoken dissociation is only cleanly
+measured at the small end; a position-level analysis would be needed above ~360M.
 
 One theoretically loaded wrinkle: on the *fixed* item pool (built at the 135M
 capability frontier), C3 readout and swap rates *fall* with scale (72/63 → 62/52 →
@@ -265,9 +298,13 @@ tests), (iii) serves multiple downstream functions, (iv) is engaged by flexible 
 and bypassed by automatic ones, (v) is loaded by task demands, and (vi) supports
 dose-responsive "injected thought" reports with selectivity.
 
-**Does not transfer:** instruction-driven covert modulation; the imagine-instruction
-dissociation; whole-space ablation dissociation; matched-norm variance privilege;
-sparse-code structure (occupancy, frame geometry); breadth across task categories.
+**Also transfers (revised metric):** instruction-driven covert modulation — down to
+base GPT-2 — as a rank shift rather than top-of-lens dominance.
+
+**Does not transfer:** the imagine-instruction dissociation; whole-space ablation
+dissociation; matched-norm variance privilege at paper thresholds; sparse-code
+structure (occupancy, frame geometry); breadth across task categories; top-of-lens
+dominance of held content.
 
 For the three-way update in §1: option 2 and 3 readers now have exactly what they
 need — the checklist was not a unit. If your update from the workspace paper tracked

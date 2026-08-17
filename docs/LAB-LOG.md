@@ -296,3 +296,30 @@ Scale ladder: SmolLM2-360M lens fit launched.
   for larger models; the paper's own selectivity logic predicts reduced
   workspace mediation for automatized tasks.
 - V1b at 360M: 17/22 demand<nodemand (p~0.008), medians 9.5 vs 31.5.
+
+## 2026-08-17 ~12:30 — C2-REVISED: instruction control IS present at 135M [C]
+- Motivation: user's prior LW study (no size trend in internal state control
+  down to 270M; tiny-model effects late-layer, held-not-blurted). Their
+  protocol mirrored: post-sentence instruction templates, think/dont_think
+  paired contrast, probe + lens measures at ALL layers, blurt controls.
+- Exploration: think median best-rank (L23:28) 28 vs baseline 472;
+  think<dont 34/36; think blurt 4/36. Mention echo-contaminated (blurt 22/36).
+- CONFIRMATORY (held-out words+sentences, frozen bars in CONFIRMATORY.md
+  addendum): ALL FOUR BARS PASS — think 45 vs baseline 564 (36/36, p=3e-11);
+  think<dont 34/36 (p=2e-8); dont<baseline 34/36 (white-bear: suppression
+  partial); blurt 4/36 with ordering preserved among non-blurt trials.
+- VERDICT: C2-revised = SHOWN at 135M under rank-sensitive late-layer
+  operationalization. Original frozen C2 verdict (paper's top-1 hit metric,
+  band L19:26) remains Not shown — both reported. Original protocol was
+  triply insensitive: band excluded L27-28 (where the effect peaks), top-1
+  hits can't see a 1000->100 rank shift, and template/contrast differed.
+- Consequence: the "instruction-modulation switches on with scale" story is
+  WRONG as stated; scale increases effect strength in top-of-lens terms, not
+  the existence of control. Ladder rerun under revised protocol in progress
+  (gpt2-raw / 360M / qwen). Report + artifact to be updated.
+- C2-revised ladder: gpt2(base,raw) think 17 vs base 749 (23/23 strict
+  non-blurt; think<dont 21/23); 360M think 1 vs 206; qwen think 1 vs 854.
+  Span-max blurt flag saturates at 360M+ (36/36) — held-vs-spoken dissociation
+  cleanly measurable only at the small end; position-level analysis needed
+  above ~360M (noted in report). Old "threshold" fully explained as top-k
+  metric crossing the dominance level. REPORT/artifact/LW-draft updated.

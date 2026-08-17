@@ -33,15 +33,28 @@ GPT-2-small?** And, with more care, out of SmolLM2-135M-Instruct?
   lens coordinates redirects GPT-2's answer to the counterfactual capital in **83%**
   of items. Its category reports correlate with late-band lens content (ρ→0.59) and
   follow report-swaps at 70% top-5.
+- **Base GPT-2 follows instructions about what to think about.** Given the plain-text
+  prompt "Write '{sentence}' Think about {word} while you write the sentence," the
+  word's lens rank at the transcription tokens drops from a baseline median of 749 to
+  17 (36/36 held-out pairs; 23/23 under the strictest filter excluding any trial
+  where the word appears in the model's actual next-token predictions — held, not
+  about-to-be-said). "Don't think about {word}" lands in between (21/23 paired
+  think-vs-don't) — partial suppression, the white-bear pattern the workspace paper
+  reports for Claude.
 - On SmolLM2-135M, under frozen pre-registered bars: internal reasoning is **Shown**
   (72% readout, 63% swap — above the paper's Haiku 4.5 at 54%; anti-smuggling and
   clamp-mediation controls pass), report/flexibility/selectivity land at **Hints**
   (swap-to-report 84% top-5 vs the paper's 88%; one-swap-many-functions 73%;
   flexible-follows-swaps 78% vs automatic-tasks 16%), and instruction-driven
   modulation is **Not shown** — the one clean failure.
-- Because of that failure, **our own pre-registered headline claim ("privileged set
-  present") was not met.** What we got instead is better: a decomposition, and then a
-  dose–response curve.
+- Our original pre-registered headline claim was **not met under its original bars**
+  — instruction-driven modulation looked absent at 135M — but a revised,
+  independently motivated, rank-sensitive operationalization (bars frozen before its
+  own confirmatory run, held-out items) then showed the control is present at every
+  scale, down to base GPT-2. The original metric simply couldn't see a 1000→100 rank
+  shift living in the last few layers. Both verdicts are reported; what genuinely
+  scales is how *dominantly* held content sits in the lens, not whether control
+  exists.
 
 ## The decomposition
 

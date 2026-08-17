@@ -1,0 +1,43 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2003.38it/s]
+orange: done
+lightning: done
+ocean: done
+truck: done
+guitar: done
+castle: done
+penguin: done
+volcano: done
+mirror: done
+honey: done
+winter: done
+robot: done
+
+per-layer probe cosine (think / dont / mention / baseline / null95):
+  L 0: +0.028 / +0.029 / +0.026 / +0.023 / +0.190
+  L 1: +0.036 / +0.035 / +0.034 / +0.032 / +0.136
+  L 2: +0.005 / +0.005 / +0.003 / +0.000 / +0.147
+  L 3: +0.027 / +0.027 / +0.025 / +0.022 / +0.156
+  L 4: +0.047 / +0.047 / +0.045 / +0.045 / +0.125
+  L 5: +0.022 / +0.023 / +0.021 / +0.019 / +0.164
+  L 6: +0.012 / +0.013 / +0.009 / +0.007 / +0.208
+  L 7: +0.028 / +0.025 / +0.022 / +0.018 / +0.211
+  L 8: +0.039 / +0.038 / +0.031 / +0.028 / +0.180
+  L 9: +0.050 / +0.049 / +0.038 / +0.032 / +0.190
+  L10: +0.078 / +0.071 / +0.076 / +0.038 / +0.166
+
+per-layer mean lens rank (think / dont / baseline):
+  L 0:     2354 /     2290 /     2938
+  L 1:     3974 /     3959 /     4552
+  L 2:     3180 /     3240 /     3983
+  L 3:     1976 /     1979 /     2768
+  L 4:     2224 /     2252 /     2887
+  L 5:     2583 /     2554 /     2801
+  L 6:     2800 /     2747 /     3730
+  L 7:     2065 /     2007 /     2268
+  L 8:     1217 /     1080 /     2053
+  L 9:      470 /      572 /     1813
+  L10:      104 /      200 /     1458
+
+blurt (word in model's actual top-10 next-token preds at carrier): 13/36 think trials
+saved runs/c2rev_gpt2.json

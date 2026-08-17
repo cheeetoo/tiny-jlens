@@ -108,3 +108,34 @@ Global choices (all criteria):
 1. C3, C1 (flagships), 2. C5a + C5b, 3. C2 battery + V1b + 2c, 4. C4, 5. C1d.
 All runs write to runs/confirm_*.json; every number goes into the report
 regardless of outcome.
+
+## ADDENDUM (frozen 2026-08-17 ~12:20 UTC, before its confirmatory run):
+## C2-revised — rank-sensitive late-layer operationalization
+
+Motivated by external evidence (user's prior LW study: internal state control
+shows no size trend down to 270M, with tiny-model effects in late layers that
+resemble but are not blurting) and by our own full-depth scan. Exploration
+(runs/c2_probe_control.json, 12 words x 3 sentences) found: think median
+best-rank 28 vs baseline 472 over L23:28; think<dont_think 34/36; think blurt
+4/36; mention heavily echo-contaminated (blurt 22/36).
+
+Frozen protocol: templates per the LW post ("Write '{s}' Think about {w}
+while you write the sentence." / "Don't think about..." / mention / baseline),
+chat format, teacher-forced transcription; metric = best J-lens rank of the
+word over layers L23:28 at transcribed-sentence positions; blurt control =
+word in model's actual next-token top-10 at those positions.
+
+Held-out material (never used in any prior run): words piano, glacier,
+dolphin, umbrella, tunnel, cherry, magnet, saddle, comet, harbor, walnut,
+cannon; sentences "The library closed early because of the storm." /
+"Three birds landed on the fence near the gate." / "She folded the letter
+and placed it in the drawer."
+
+Pre-declared bars: (1) think<baseline in >=80% of paired trials, sign
+p<0.001; (2) think<dont_think in >=65%, sign p<0.01; (3) dont_think<baseline
+majority (white-bear: suppression present but incomplete) — directional;
+(4) think blurt rate <=20% AND the median ordering must hold among non-blurt
+trials. Verdict language if passed: "C2-revised: Shown under rank-sensitive
+late-layer operationalization; the paper's original top-1 hit operational-
+ization remains Not shown at 135M." The original frozen C2 verdict is not
+retroactively altered.
