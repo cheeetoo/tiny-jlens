@@ -222,7 +222,18 @@ mattered. Findings:
   double or triple (language z 0.6→2.0) with the J-orthogonal probe mostly flat —
   the same family as C2-revised, much weaker, and still far from the paper's
   several-SD dissociation. Reported as weak-present rather than absent.
-- **C5b's failure is robust to band aim.** Re-running the ablation battery on
+- **C5b's failure is robust to band aim — and to dose.** A dose–response sweep
+  (k = 1, 2, 3, 5, 10 at the live band) shows the ablation has no gentle setting:
+  k=1 already removes 8.1% of residual norm (vs 9.7% at k=10) because the top lens
+  direction at nearly every position is the shared cone axis. At low k the "shallow"
+  sentiment task is already broken (the shared axis is load-bearing for it) while
+  flexible tasks are intact; at high k the flexible tasks collapse but shallow ones
+  are still broken. No dose satisfies the shallow-intact/flexible-collapsed
+  conjunction. Notably, the paper itself reports the beginning of this trend: "on
+  Haiku 4.5, J-space ablation degrades coherence before yielding any qualitative
+  change in responses" — our result is plausibly that same phenomenon one to two
+  orders of magnitude further down, i.e., closer to replicating the paper's
+  small-model observation than failing its large-model one. Re-running the battery on
   L23–28: sentiment (a "shallow" task) collapses as hard as the flexible tasks,
   passage-language report is indestructible under every condition (long prompts
   rebuild the content each layer), and matched noise damages two-hop as much as the

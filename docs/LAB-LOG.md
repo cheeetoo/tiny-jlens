@@ -341,3 +341,10 @@ Scale ladder: SmolLM2-360M lens fit launched.
 - Blurt clarification recorded: at 135M/gpt2 the held word is in the model's
   actual output top-10 in only 4/36 / 13/36 trials (held-not-spoken); at
   360M+ the span-max flag saturates (dominance).
+- Ablation dose sweep (k=1,2,3,5,10, band 23:28, protection on): k=1 removes
+  8.1% of norm vs 9.7% at k=10 — the cone axis IS the top atom everywhere; no
+  gentle dose exists. Damage pattern inverts shallow/flexible at low k
+  (sentiment dies at k=1, lang_country survives to k=5). No dose satisfies
+  the C5b conjunction. Paper's own Haiku observation ("ablation degrades
+  coherence before yielding qualitative change") reframed as the start of
+  this trend. Report updated.
