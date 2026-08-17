@@ -1,0 +1,751 @@
+{
+ "band": [
+  7,
+  10
+ ],
+ "filter": {
+  "n_total": 136,
+  "n_kept": 25,
+  "kept": [
+   "ref/city-currency:ex-city-currency-Toronto-Beijing",
+   "ref/city-currency:ex-city-currency-Toronto-Mumbai",
+   "ref/planet-color:ex-planet-color-third-fourth",
+   "ref/language-capital:ex2-language-capital-Greek",
+   "ref/language-capital:ex2-language-capital-Hungarian",
+   "ref/language-capital:ex2-language-capital-Polish",
+   "ref/language-capital:ex2-language-capital-Swedish",
+   "ref/multihop:month-3-godof",
+   "ref/person-firstname:person-firstname-einstein",
+   "lang-capital:Germany",
+   "lang-capital:Italy",
+   "lang-capital:Japan",
+   "lang-capital:China",
+   "lang-capital:Poland",
+   "lang-capital:Sweden",
+   "lang-capital:Greece",
+   "lang-capital:Hungary",
+   "lang-capital:Netherlands",
+   "lang-capital:Portugal",
+   "lang-capital:Korea",
+   "lang-capital:Finland",
+   "lang-capital:Norway",
+   "lang-capital:Denmark",
+   "lang-capital:India",
+   "landmark-country:Moscow"
+  ]
+ },
+ "readout": {
+  "n": 24,
+  "n_top10_final": 19,
+  "n_top10_any": 21,
+  "items": [
+   {
+    "family": "ref/city-currency",
+    "intermediate": "Canada",
+    "answer": "Canadian",
+    "inter_final_rank": 54,
+    "inter_final_layer": 10,
+    "inter_best_rank": 19,
+    "inter_best_layer": 7,
+    "inter_best_pos": 10
+   },
+   {
+    "family": "ref/city-currency",
+    "intermediate": "Canada",
+    "answer": "Canadian",
+    "inter_final_rank": 54,
+    "inter_final_layer": 10,
+    "inter_best_rank": 19,
+    "inter_best_layer": 7,
+    "inter_best_pos": 10
+   },
+   {
+    "family": "ref/planet-color",
+    "intermediate": "Earth",
+    "answer": "blue",
+    "inter_final_rank": 99,
+    "inter_final_layer": 10,
+    "inter_best_rank": 0,
+    "inter_best_layer": 10,
+    "inter_best_pos": 9
+   },
+   {
+    "family": "ref/language-capital",
+    "intermediate": "Greece",
+    "answer": "Athens",
+    "inter_final_rank": 1,
+    "inter_final_layer": 9,
+    "inter_best_rank": 1,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "ref/language-capital",
+    "intermediate": "Hungary",
+    "answer": "Budapest",
+    "inter_final_rank": 2,
+    "inter_final_layer": 9,
+    "inter_best_rank": 2,
+    "inter_best_layer": 7,
+    "inter_best_pos": 9
+   },
+   {
+    "family": "ref/language-capital",
+    "intermediate": "Poland",
+    "answer": "Warsaw",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "ref/language-capital",
+    "intermediate": "Sweden",
+    "answer": "Stockholm",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "ref/multihop",
+    "intermediate": "Mars",
+    "answer": "war",
+    "inter_final_rank": 2931,
+    "inter_final_layer": 10,
+    "inter_best_rank": 121,
+    "inter_best_layer": 10,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "ref/person-firstname",
+    "intermediate": "Einstein",
+    "answer": "Albert",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 16
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Germany",
+    "answer": "Berlin",
+    "inter_final_rank": 2,
+    "inter_final_layer": 9,
+    "inter_best_rank": 2,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Italy",
+    "answer": "Rome",
+    "inter_final_rank": 1,
+    "inter_final_layer": 9,
+    "inter_best_rank": 1,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Japan",
+    "answer": "Tokyo",
+    "inter_final_rank": 3,
+    "inter_final_layer": 10,
+    "inter_best_rank": 2,
+    "inter_best_layer": 7,
+    "inter_best_pos": 9
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "China",
+    "answer": "Beijing",
+    "inter_final_rank": 5,
+    "inter_final_layer": 8,
+    "inter_best_rank": 5,
+    "inter_best_layer": 8,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Poland",
+    "answer": "Warsaw",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Sweden",
+    "answer": "Stockholm",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Greece",
+    "answer": "Athens",
+    "inter_final_rank": 1,
+    "inter_final_layer": 9,
+    "inter_best_rank": 1,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Hungary",
+    "answer": "Budapest",
+    "inter_final_rank": 2,
+    "inter_final_layer": 9,
+    "inter_best_rank": 2,
+    "inter_best_layer": 7,
+    "inter_best_pos": 9
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Netherlands",
+    "answer": "Amsterdam",
+    "inter_final_rank": 0,
+    "inter_final_layer": 8,
+    "inter_best_rank": 0,
+    "inter_best_layer": 8,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Portugal",
+    "answer": "Lisbon",
+    "inter_final_rank": 1,
+    "inter_final_layer": 9,
+    "inter_best_rank": 1,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Korea",
+    "answer": "Seoul",
+    "inter_final_rank": 2,
+    "inter_final_layer": 9,
+    "inter_best_rank": 2,
+    "inter_best_layer": 7,
+    "inter_best_pos": 9
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Finland",
+    "answer": "Helsinki",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Norway",
+    "answer": "Oslo",
+    "inter_final_rank": 1,
+    "inter_final_layer": 9,
+    "inter_best_rank": 1,
+    "inter_best_layer": 7,
+    "inter_best_pos": 9
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "Denmark",
+    "answer": "Copenhagen",
+    "inter_final_rank": 0,
+    "inter_final_layer": 9,
+    "inter_best_rank": 0,
+    "inter_best_layer": 9,
+    "inter_best_pos": 14
+   },
+   {
+    "family": "lang-capital",
+    "intermediate": "India",
+    "answer": "Delhi",
+    "inter_final_rank": 15,
+    "inter_final_layer": 8,
+    "inter_best_rank": 5,
+    "inter_best_layer": 7,
+    "inter_best_pos": 9
+   }
+  ]
+ },
+ "swap": {
+  "n": 24,
+  "top1_a1": 20,
+  "top1_a2": 10,
+  "trials": [
+   {
+    "family": "ref/city-currency",
+    "inter": "Canada",
+    "swap_to": "China",
+    "want": "yuan",
+    "pre_rank": 51,
+    "post_rank_a1": 4,
+    "dlp_a1": 3.231494426727295,
+    "post_rank_a2": 2,
+    "dlp_a2": 3.6836369037628174
+   },
+   {
+    "family": "ref/city-currency",
+    "inter": "Canada",
+    "swap_to": "India",
+    "want": "rupee",
+    "pre_rank": 23,
+    "post_rank_a1": 0,
+    "dlp_a1": 3.5771520137786865,
+    "post_rank_a2": 0,
+    "dlp_a2": 4.230378150939941
+   },
+   {
+    "family": "ref/planet-color",
+    "inter": "Earth",
+    "swap_to": "Mars",
+    "want": "red",
+    "pre_rank": 1,
+    "post_rank_a1": 0,
+    "dlp_a1": -0.0467371940612793,
+    "post_rank_a2": 0,
+    "dlp_a2": -0.06652593612670898
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Greece",
+    "swap_to": "Sweden",
+    "want": "Stockholm",
+    "pre_rank": 1539,
+    "post_rank_a1": 0,
+    "dlp_a1": 9.422295570373535,
+    "post_rank_a2": 1,
+    "dlp_a2": 9.538283348083496
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Hungary",
+    "swap_to": "Poland",
+    "want": "Warsaw",
+    "pre_rank": 31,
+    "post_rank_a1": 0,
+    "dlp_a1": 4.116661548614502,
+    "post_rank_a2": 0,
+    "dlp_a2": 4.629068851470947
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Poland",
+    "swap_to": "Greece",
+    "want": "Athens",
+    "pre_rank": 419,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.939179420471191,
+    "post_rank_a2": 0,
+    "dlp_a2": 8.376263618469238
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Sweden",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 1473,
+    "post_rank_a1": 0,
+    "dlp_a1": 9.25395679473877,
+    "post_rank_a2": 0,
+    "dlp_a2": 9.639763832092285
+   },
+   {
+    "family": "ref/multihop",
+    "inter": "Mars",
+    "swap_to": "Venus",
+    "want": "love",
+    "pre_rank": 6,
+    "post_rank_a1": 5,
+    "dlp_a1": -0.027029991149902344,
+    "post_rank_a2": 7,
+    "dlp_a2": -0.47170162200927734
+   },
+   {
+    "family": "ref/person-firstname",
+    "inter": "Einstein",
+    "swap_to": "Newton",
+    "want": "Isaac",
+    "pre_rank": 11,
+    "post_rank_a1": 15,
+    "dlp_a1": -0.43419885635375977,
+    "post_rank_a2": 27,
+    "dlp_a2": -2.5569005012512207
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Germany",
+    "swap_to": "India",
+    "want": "Delhi",
+    "pre_rank": 1328,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.514571189880371,
+    "post_rank_a2": 3,
+    "dlp_a2": 7.4127326011657715
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Italy",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 1922,
+    "post_rank_a1": 1,
+    "dlp_a1": 9.277708053588867,
+    "post_rank_a2": 1,
+    "dlp_a2": 7.761319160461426
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Japan",
+    "swap_to": "Germany",
+    "want": "Berlin",
+    "pre_rank": 1090,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.593558311462402,
+    "post_rank_a2": 0,
+    "dlp_a2": 8.123266220092773
+   },
+   {
+    "family": "lang-capital",
+    "inter": "China",
+    "swap_to": "Greece",
+    "want": "Athens",
+    "pre_rank": 4633,
+    "post_rank_a1": 0,
+    "dlp_a1": 12.076045036315918,
+    "post_rank_a2": 0,
+    "dlp_a2": 12.577914237976074
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Poland",
+    "swap_to": "Germany",
+    "want": "Berlin",
+    "pre_rank": 45,
+    "post_rank_a1": 0,
+    "dlp_a1": 5.141812801361084,
+    "post_rank_a2": 1,
+    "dlp_a2": 3.9729831218719482
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Sweden",
+    "swap_to": "Portugal",
+    "want": "Lisbon",
+    "pre_rank": 2042,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.510902404785156,
+    "post_rank_a2": 1,
+    "dlp_a2": 9.120271682739258
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Greece",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 251,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.083086967468262,
+    "post_rank_a2": 0,
+    "dlp_a2": 8.004546165466309
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Hungary",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 889,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.395480155944824,
+    "post_rank_a2": 1,
+    "dlp_a2": 7.892184734344482
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Netherlands",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 1075,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.881824493408203,
+    "post_rank_a2": 0,
+    "dlp_a2": 9.029562950134277
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Portugal",
+    "swap_to": "Korea",
+    "want": "Seoul",
+    "pre_rank": 1884,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.232617378234863,
+    "post_rank_a2": 1,
+    "dlp_a2": 8.34288215637207
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Korea",
+    "swap_to": "Portugal",
+    "want": "Lisbon",
+    "pre_rank": 13651,
+    "post_rank_a1": 0,
+    "dlp_a1": 13.081130981445312,
+    "post_rank_a2": 1,
+    "dlp_a2": 13.118059158325195
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Finland",
+    "swap_to": "China",
+    "want": "Beijing",
+    "pre_rank": 1168,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.515926361083984,
+    "post_rank_a2": 1,
+    "dlp_a2": 8.566189765930176
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Norway",
+    "swap_to": "Netherlands",
+    "want": "Amsterdam",
+    "pre_rank": 87,
+    "post_rank_a1": 0,
+    "dlp_a1": 4.817866325378418,
+    "post_rank_a2": 1,
+    "dlp_a2": 5.09625768661499
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Denmark",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 5,
+    "post_rank_a1": 0,
+    "dlp_a1": 2.619551181793213,
+    "post_rank_a2": 1,
+    "dlp_a2": 1.786916732788086
+   },
+   {
+    "family": "lang-capital",
+    "inter": "India",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 3319,
+    "post_rank_a1": 0,
+    "dlp_a1": 9.636687278747559,
+    "post_rank_a2": 0,
+    "dlp_a2": 11.71163558959961
+   }
+  ]
+ },
+ "crossfn": {
+  "n_pairs": 0,
+  "n_any_flip": 0,
+  "n_both_flip": 0,
+  "trials": []
+ },
+ "probe": {
+  "n": 15,
+  "full_top1": 8,
+  "J_top1": 0,
+  "nonJ_top1": 0,
+  "nonJ_clamped_top1": 0,
+  "mean_J_var_share": 0.0016127963730089808,
+  "trials": [
+   {
+    "family": "lang-capital",
+    "inter": "Germany",
+    "swap_to": "India",
+    "want": "Delhi",
+    "pre_rank": 1328,
+    "J_var_share": 0.0002753819790086709,
+    "full_rank": 1,
+    "J_rank": 1244,
+    "nonJ_rank": 803,
+    "nonJ_clamped_rank": 1415
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Italy",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 1922,
+    "J_var_share": 0.0009962383142010367,
+    "full_rank": 1,
+    "J_rank": 1864,
+    "nonJ_rank": 1374,
+    "nonJ_clamped_rank": 1612
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Japan",
+    "swap_to": "Germany",
+    "want": "Berlin",
+    "pre_rank": 1090,
+    "J_var_share": 0.00013757067051756167,
+    "full_rank": 0,
+    "J_rank": 1153,
+    "nonJ_rank": 842,
+    "nonJ_clamped_rank": 998
+   },
+   {
+    "family": "lang-capital",
+    "inter": "China",
+    "swap_to": "Greece",
+    "want": "Athens",
+    "pre_rank": 4633,
+    "J_var_share": 0.00011260604878771119,
+    "full_rank": 0,
+    "J_rank": 3995,
+    "nonJ_rank": 3547,
+    "nonJ_clamped_rank": 3981
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Poland",
+    "swap_to": "Germany",
+    "want": "Berlin",
+    "pre_rank": 45,
+    "J_var_share": 0.00269032787582546,
+    "full_rank": 0,
+    "J_rank": 48,
+    "nonJ_rank": 39,
+    "nonJ_clamped_rank": 60
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Sweden",
+    "swap_to": "Portugal",
+    "want": "Lisbon",
+    "pre_rank": 2042,
+    "J_var_share": 0.0028579856880242005,
+    "full_rank": 0,
+    "J_rank": 1718,
+    "nonJ_rank": 1815,
+    "nonJ_clamped_rank": 1877
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Greece",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 251,
+    "J_var_share": 0.0018635699962032959,
+    "full_rank": 4,
+    "J_rank": 187,
+    "nonJ_rank": 186,
+    "nonJ_clamped_rank": 203
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Hungary",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 889,
+    "J_var_share": 0.004993015143554658,
+    "full_rank": 0,
+    "J_rank": 1137,
+    "nonJ_rank": 838,
+    "nonJ_clamped_rank": 791
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Netherlands",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 1075,
+    "J_var_share": 0.00017569169358466752,
+    "full_rank": 4,
+    "J_rank": 792,
+    "nonJ_rank": 795,
+    "nonJ_clamped_rank": 1105
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Portugal",
+    "swap_to": "Korea",
+    "want": "Seoul",
+    "pre_rank": 1884,
+    "J_var_share": 0.0008141263097058982,
+    "full_rank": 0,
+    "J_rank": 1710,
+    "nonJ_rank": 1665,
+    "nonJ_clamped_rank": 1691
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Korea",
+    "swap_to": "Portugal",
+    "want": "Lisbon",
+    "pre_rank": 13651,
+    "J_var_share": 0.00013881117047276348,
+    "full_rank": 1,
+    "J_rank": 12911,
+    "nonJ_rank": 10750,
+    "nonJ_clamped_rank": 12288
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Finland",
+    "swap_to": "China",
+    "want": "Beijing",
+    "pre_rank": 1168,
+    "J_var_share": 0.0024583646445535123,
+    "full_rank": 1,
+    "J_rank": 1097,
+    "nonJ_rank": 757,
+    "nonJ_clamped_rank": 1330
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Norway",
+    "swap_to": "Netherlands",
+    "want": "Amsterdam",
+    "pre_rank": 87,
+    "J_var_share": 0.0025821884337347,
+    "full_rank": 6,
+    "J_rank": 89,
+    "nonJ_rank": 48,
+    "nonJ_clamped_rank": 53
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Denmark",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 5,
+    "J_var_share": 0.0023632180964341387,
+    "full_rank": 0,
+    "J_rank": 5,
+    "nonJ_rank": 4,
+    "nonJ_clamped_rank": 6
+   },
+   {
+    "family": "lang-capital",
+    "inter": "India",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 3319,
+    "J_var_share": 0.0017328495305264369,
+    "full_rank": 0,
+    "J_rank": 2961,
+    "nonJ_rank": 2642,
+    "nonJ_clamped_rank": 3366
+   }
+  ]
+ }
+}

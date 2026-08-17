@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 2769.30it/s]
+{'light': (19, 20), 'medium': (19, 22), 'heavy': (19, 26)}
+task sentiment: 8/10 clean-correct
+task analogy: 5/8 clean-correct
+task lang_country: 8/10 clean-correct
+task twohop: 29/46 clean-correct
+task onehop_recall: 16/64 clean-correct
+none {'sentiment': '8/8', 'analogy': '5/5', 'lang_country': '8/8', 'twohop': '29/29', 'onehop_recall': '16/16', 'copy_forced': '46/52', 'wikitext_agree': '452/452'}
+ablate_light {'sentiment': '8/8', 'analogy': '5/5', 'lang_country': '2/8', 'twohop': '23/29', 'onehop_recall': '15/16', 'copy_forced': '46/52', 'wikitext_agree': '366/452'}
+ablate_medium {'sentiment': '7/8', 'analogy': '5/5', 'lang_country': '2/8', 'twohop': '25/29', 'onehop_recall': '15/16', 'copy_forced': '46/52', 'wikitext_agree': '371/452'}
+ablate_heavy {'sentiment': '4/8', 'analogy': '5/5', 'lang_country': '0/8', 'twohop': '18/29', 'onehop_recall': '10/16', 'copy_forced': '43/52', 'wikitext_agree': '337/452'}
+random_dirs {'sentiment': '5/8', 'analogy': '4/5', 'lang_country': '5/8', 'twohop': '13/29', 'onehop_recall': '6/16', 'copy_forced': '45/52', 'wikitext_agree': '281/452'}
+noise_matched {'sentiment': '8/8', 'analogy': '4/5', 'lang_country': '4/8', 'twohop': '22/29', 'onehop_recall': '15/16', 'copy_forced': '45/52', 'wikitext_agree': '374/452'}
+saved runs/c5b_explore.json

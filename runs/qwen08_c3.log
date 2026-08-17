@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights:  97%|█████████▋| 311/320 [00:00<00:00, 1627.97it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 1669.32it/s]
+filter: 51/136 items pass (20 ref)
+readout: intermediate in lens top-10 — final pos 23/51, any pos 47/51
+swap: {'top1_a1': 23} of n=51
+saved runs/qwen08_c3.json

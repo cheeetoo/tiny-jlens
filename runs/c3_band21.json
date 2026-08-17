@@ -1,0 +1,449 @@
+{
+ "band": [
+  21,
+  26
+ ],
+ "filter": {
+  "n_total": 136,
+  "n_kept": 44,
+  "kept": [
+   "ref/city-currency:ex-city-currency-Toronto-Beijing",
+   "ref/city-currency:ex-city-currency-Toronto-Mumbai",
+   "ref/city-language:ex-city-language-Lyon-Naples",
+   "ref/city-language:ex2-city-language-Cairo",
+   "ref/city-language:ex2-city-language-Moscow",
+   "ref/language-capital:ex2-language-capital-Greek",
+   "ref/language-capital:ex2-language-capital-Hungarian",
+   "ref/language-capital:ex2-language-capital-Polish",
+   "ref/language-capital:ex2-language-capital-Swedish",
+   "ref/river-capital:ex2-river-capital-Thames",
+   "ref/food-animal:food-animal-butter",
+   "ref/multihop:mars-color",
+   "ref/person-country:person-country-napoleon",
+   "ref/person-firstname:person-firstname-darwin",
+   "ref/person-firstname:person-firstname-einstein",
+   "lang-capital:France",
+   "lang-capital:Germany",
+   "lang-capital:Spain",
+   "lang-capital:Italy",
+   "lang-capital:Russia",
+   "lang-capital:Japan",
+   "lang-capital:China",
+   "lang-capital:Poland",
+   "lang-capital:Sweden",
+   "lang-capital:Greece",
+   "lang-capital:Hungary",
+   "lang-capital:Netherlands",
+   "lang-capital:Portugal",
+   "lang-capital:Turkey",
+   "lang-capital:Korea",
+   "lang-capital:Thailand",
+   "lang-capital:Vietnam",
+   "lang-capital:Finland",
+   "lang-capital:Norway",
+   "lang-capital:Denmark",
+   "lang-capital:England",
+   "city-language:Russia",
+   "city-language:France",
+   "city-language:Egypt",
+   "city-language:Germany",
+   "city-language:Spain",
+   "city-language:Poland",
+   "city-language:Netherlands",
+   "landmark-country:Moscow"
+  ]
+ },
+ "swap": {
+  "n": 43,
+  "top1_a1": 27,
+  "trials": [
+   {
+    "family": "ref/city-currency",
+    "inter": "Canada",
+    "swap_to": "China",
+    "want": "yuan",
+    "pre_rank": 50,
+    "post_rank_a1": 2,
+    "dlp_a1": 4.224880218505859
+   },
+   {
+    "family": "ref/city-currency",
+    "inter": "Canada",
+    "swap_to": "India",
+    "want": "rupee",
+    "pre_rank": 91,
+    "post_rank_a1": 2,
+    "dlp_a1": 5.604753494262695
+   },
+   {
+    "family": "ref/city-language",
+    "inter": "France",
+    "swap_to": "Italy",
+    "want": "Italian",
+    "pre_rank": 30,
+    "post_rank_a1": 1,
+    "dlp_a1": 2.6107375621795654
+   },
+   {
+    "family": "ref/city-language",
+    "inter": "Egypt",
+    "swap_to": "Russia",
+    "want": "Russian",
+    "pre_rank": 370,
+    "post_rank_a1": 7,
+    "dlp_a1": 5.400418281555176
+   },
+   {
+    "family": "ref/city-language",
+    "inter": "Russia",
+    "swap_to": "Egypt",
+    "want": "Arabic",
+    "pre_rank": 132,
+    "post_rank_a1": 13,
+    "dlp_a1": 2.8365139961242676
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Greece",
+    "swap_to": "Sweden",
+    "want": "Stockholm",
+    "pre_rank": 953,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.44811725616455
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Hungary",
+    "swap_to": "Poland",
+    "want": "Warsaw",
+    "pre_rank": 138,
+    "post_rank_a1": 2,
+    "dlp_a1": 5.041153430938721
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Poland",
+    "swap_to": "Greece",
+    "want": "Athens",
+    "pre_rank": 632,
+    "post_rank_a1": 0,
+    "dlp_a1": 9.761268615722656
+   },
+   {
+    "family": "ref/language-capital",
+    "inter": "Sweden",
+    "swap_to": "Hungary",
+    "want": "Budapest",
+    "pre_rank": 72,
+    "post_rank_a1": 0,
+    "dlp_a1": 6.3231306076049805
+   },
+   {
+    "family": "ref/river-capital",
+    "inter": "England",
+    "swap_to": "Germany",
+    "want": "Berlin",
+    "pre_rank": 3027,
+    "post_rank_a1": 16,
+    "dlp_a1": 7.508523941040039
+   },
+   {
+    "family": "ref/food-animal",
+    "inter": "butter",
+    "swap_to": "honey",
+    "want": "bee",
+    "pre_rank": 130,
+    "post_rank_a1": 26,
+    "dlp_a1": 1.3929104804992676
+   },
+   {
+    "family": "ref/multihop",
+    "inter": "Mars",
+    "swap_to": "Earth",
+    "want": "blue",
+    "pre_rank": 4,
+    "post_rank_a1": 4,
+    "dlp_a1": 0.03416109085083008
+   },
+   {
+    "family": "ref/person-country",
+    "inter": "Napoleon",
+    "swap_to": "Lincoln",
+    "want": "America",
+    "pre_rank": 338,
+    "post_rank_a1": 47,
+    "dlp_a1": 2.734166145324707
+   },
+   {
+    "family": "ref/person-firstname",
+    "inter": "Darwin",
+    "swap_to": "Einstein",
+    "want": "Albert",
+    "pre_rank": 148,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.522029876708984
+   },
+   {
+    "family": "ref/person-firstname",
+    "inter": "Einstein",
+    "swap_to": "Newton",
+    "want": "Isaac",
+    "pre_rank": 33,
+    "post_rank_a1": 0,
+    "dlp_a1": 4.905925750732422
+   },
+   {
+    "family": "lang-capital",
+    "inter": "France",
+    "swap_to": "Japan",
+    "want": "Tokyo",
+    "pre_rank": 254,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.4143805503845215
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Germany",
+    "swap_to": "England",
+    "want": "London",
+    "pre_rank": 70,
+    "post_rank_a1": 0,
+    "dlp_a1": 5.083364963531494
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Spain",
+    "swap_to": "Korea",
+    "want": "Seoul",
+    "pre_rank": 7360,
+    "post_rank_a1": 0,
+    "dlp_a1": 14.651721954345703
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Italy",
+    "swap_to": "France",
+    "want": "Paris",
+    "pre_rank": 114,
+    "post_rank_a1": 0,
+    "dlp_a1": 6.8109211921691895
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Russia",
+    "swap_to": "Italy",
+    "want": "Rome",
+    "pre_rank": 646,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.865924835205078
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Japan",
+    "swap_to": "England",
+    "want": "London",
+    "pre_rank": 565,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.271098136901855
+   },
+   {
+    "family": "lang-capital",
+    "inter": "China",
+    "swap_to": "Sweden",
+    "want": "Stockholm",
+    "pre_rank": 5578,
+    "post_rank_a1": 0,
+    "dlp_a1": 12.829410552978516
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Poland",
+    "swap_to": "Italy",
+    "want": "Rome",
+    "pre_rank": 374,
+    "post_rank_a1": 0,
+    "dlp_a1": 8.119775772094727
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Sweden",
+    "swap_to": "Norway",
+    "want": "Oslo",
+    "pre_rank": 3,
+    "post_rank_a1": 0,
+    "dlp_a1": 3.2036094665527344
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Greece",
+    "swap_to": "Italy",
+    "want": "Rome",
+    "pre_rank": 120,
+    "post_rank_a1": 0,
+    "dlp_a1": 6.175384044647217
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Hungary",
+    "swap_to": "Germany",
+    "want": "Berlin",
+    "pre_rank": 165,
+    "post_rank_a1": 0,
+    "dlp_a1": 5.5560784339904785
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Netherlands",
+    "swap_to": "China",
+    "want": "Beijing",
+    "pre_rank": 4064,
+    "post_rank_a1": 0,
+    "dlp_a1": 10.732162475585938
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Portugal",
+    "swap_to": "Finland",
+    "want": "Helsinki",
+    "pre_rank": 4758,
+    "post_rank_a1": 0,
+    "dlp_a1": 10.449562072753906
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Turkey",
+    "swap_to": "England",
+    "want": "London",
+    "pre_rank": 174,
+    "post_rank_a1": 0,
+    "dlp_a1": 6.679308891296387
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Korea",
+    "swap_to": "Denmark",
+    "want": "Copenhagen",
+    "pre_rank": 4200,
+    "post_rank_a1": 7,
+    "dlp_a1": 9.50579833984375
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Thailand",
+    "swap_to": "Finland",
+    "want": "Helsinki",
+    "pre_rank": 4777,
+    "post_rank_a1": 0,
+    "dlp_a1": 12.401893615722656
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Vietnam",
+    "swap_to": "Finland",
+    "want": "Helsinki",
+    "pre_rank": 6563,
+    "post_rank_a1": 0,
+    "dlp_a1": 13.520727157592773
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Finland",
+    "swap_to": "Sweden",
+    "want": "Stockholm",
+    "pre_rank": 19,
+    "post_rank_a1": 0,
+    "dlp_a1": 3.9417977333068848
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Norway",
+    "swap_to": "Korea",
+    "want": "Seoul",
+    "pre_rank": 651,
+    "post_rank_a1": 0,
+    "dlp_a1": 9.166949272155762
+   },
+   {
+    "family": "lang-capital",
+    "inter": "Denmark",
+    "swap_to": "Turkey",
+    "want": "Ankara",
+    "pre_rank": 180,
+    "post_rank_a1": 0,
+    "dlp_a1": 4.954432010650635
+   },
+   {
+    "family": "lang-capital",
+    "inter": "England",
+    "swap_to": "China",
+    "want": "Beijing",
+    "pre_rank": 210,
+    "post_rank_a1": 1,
+    "dlp_a1": 5.526909828186035
+   },
+   {
+    "family": "city-language",
+    "inter": "Russia",
+    "swap_to": "Netherlands",
+    "want": "Dutch",
+    "pre_rank": 749,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.649641036987305
+   },
+   {
+    "family": "city-language",
+    "inter": "France",
+    "swap_to": "Netherlands",
+    "want": "Dutch",
+    "pre_rank": 1041,
+    "post_rank_a1": 12,
+    "dlp_a1": 6.478764057159424
+   },
+   {
+    "family": "city-language",
+    "inter": "Egypt",
+    "swap_to": "Germany",
+    "want": "German",
+    "pre_rank": 453,
+    "post_rank_a1": 0,
+    "dlp_a1": 7.197537899017334
+   },
+   {
+    "family": "city-language",
+    "inter": "Germany",
+    "swap_to": "Egypt",
+    "want": "Arabic",
+    "pre_rank": 251,
+    "post_rank_a1": 18,
+    "dlp_a1": 3.550507068634033
+   },
+   {
+    "family": "city-language",
+    "inter": "Spain",
+    "swap_to": "Netherlands",
+    "want": "Dutch",
+    "pre_rank": 1611,
+    "post_rank_a1": 0,
+    "dlp_a1": 10.222721099853516
+   },
+   {
+    "family": "city-language",
+    "inter": "Poland",
+    "swap_to": "France",
+    "want": "French",
+    "pre_rank": 81,
+    "post_rank_a1": 1,
+    "dlp_a1": 3.752930164337158
+   },
+   {
+    "family": "city-language",
+    "inter": "Netherlands",
+    "swap_to": "Poland",
+    "want": "Polish",
+    "pre_rank": 103,
+    "post_rank_a1": 19,
+    "dlp_a1": 2.3979153633117676
+   }
+  ]
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "v1": [
+  {
+   "cat": "animal",
+   "carrier": "The old painting hun",
+   "answer": "Lion",
+   "best_rank_demand": 12,
+   "best_rank_nodemand": 47
+  },
+  {
+   "cat": "animal",
+   "carrier": "The sun is shining b",
+   "answer": "cat",
+   "best_rank_demand": 5,
+   "best_rank_nodemand": 55
+  },
+  {
+   "cat": "animal",
+   "carrier": "They all went home t",
+   "answer": "cat",
+   "best_rank_demand": 184,
+   "best_rank_nodemand": 405
+  },
+  {
+   "cat": "color",
+   "carrier": "The old painting hun",
+   "answer": "blue",
+   "best_rank_demand": 0,
+   "best_rank_nodemand": 11
+  },
+  {
+   "cat": "color",
+   "carrier": "The sun is shining b",
+   "answer": "blue",
+   "best_rank_demand": 3,
+   "best_rank_nodemand": 20
+  },
+  {
+   "cat": "color",
+   "carrier": "They all went home t",
+   "answer": "blue",
+   "best_rank_demand": 30,
+   "best_rank_nodemand": 225
+  },
+  {
+   "cat": "fruit",
+   "carrier": "The old painting hun",
+   "answer": "lemon",
+   "best_rank_demand": 7,
+   "best_rank_nodemand": 62
+  },
+  {
+   "cat": "fruit",
+   "carrier": "The sun is shining b",
+   "answer": "banana",
+   "best_rank_demand": 6,
+   "best_rank_nodemand": 113
+  },
+  {
+   "cat": "fruit",
+   "carrier": "They all went home t",
+   "answer": "banana",
+   "best_rank_demand": 207,
+   "best_rank_nodemand": 2045
+  },
+  {
+   "cat": "sport",
+   "carrier": "The old painting hun",
+   "answer": "basketball",
+   "best_rank_demand": 0,
+   "best_rank_nodemand": 46
+  },
+  {
+   "cat": "sport",
+   "carrier": "The sun is shining b",
+   "answer": "basketball",
+   "best_rank_demand": 5,
+   "best_rank_nodemand": 133
+  },
+  {
+   "cat": "sport",
+   "carrier": "They all went home t",
+   "answer": "basketball",
+   "best_rank_demand": 44,
+   "best_rank_nodemand": 66
+  },
+  {
+   "cat": "country",
+   "carrier": "The old painting hun",
+   "answer": "United",
+   "best_rank_demand": 4,
+   "best_rank_nodemand": 41
+  },
+  {
+   "cat": "country",
+   "carrier": "The sun is shining b",
+   "answer": "United",
+   "best_rank_demand": 3,
+   "best_rank_nodemand": 41
+  },
+  {
+   "cat": "country",
+   "carrier": "They all went home t",
+   "answer": "United",
+   "best_rank_demand": 10,
+   "best_rank_nodemand": 13
+  },
+  {
+   "cat": "beverage",
+   "carrier": "The old painting hun",
+   "answer": "cozy",
+   "best_rank_demand": 320,
+   "best_rank_nodemand": 386
+  },
+  {
+   "cat": "beverage",
+   "carrier": "The sun is shining b",
+   "answer": "coffee",
+   "best_rank_demand": 2,
+   "best_rank_nodemand": 70
+  },
+  {
+   "cat": "beverage",
+   "carrier": "They all went home t",
+   "answer": "coffee",
+   "best_rank_demand": 27,
+   "best_rank_nodemand": 46
+  },
+  {
+   "cat": "vegetable",
+   "carrier": "The old painting hun",
+   "answer": "vegetable",
+   "best_rank_demand": 0,
+   "best_rank_nodemand": 8
+  },
+  {
+   "cat": "vegetable",
+   "carrier": "The sun is shining b",
+   "answer": "type",
+   "best_rank_demand": 411,
+   "best_rank_nodemand": 385
+  },
+  {
+   "cat": "vegetable",
+   "carrier": "They all went home t",
+   "answer": "vegetable",
+   "best_rank_demand": 149,
+   "best_rank_nodemand": 854
+  },
+  {
+   "cat": "instrument",
+   "carrier": "The old painting hun",
+   "answer": "violin",
+   "best_rank_demand": 0,
+   "best_rank_nodemand": 1
+  },
+  {
+   "cat": "instrument",
+   "carrier": "The sun is shining b",
+   "answer": "violin",
+   "best_rank_demand": 0,
+   "best_rank_nodemand": 127
+  },
+  {
+   "cat": "instrument",
+   "carrier": "They all went home t",
+   "answer": "violin",
+   "best_rank_demand": 49,
+   "best_rank_nodemand": 600
+  }
+ ],
+ "v3": {
+  "0": 0.017008543014526367,
+  "1": -0.019490480422973633,
+  "2": -0.006722251574198405,
+  "3": 0.001186649004618327,
+  "4": -0.003082831700642904,
+  "5": 0.10512518882751465,
+  "6": 0.08978235721588135,
+  "7": 0.05792848269144694,
+  "8": 0.09906888008117676,
+  "9": -0.09031438827514648,
+  "10": -0.0705651839574178,
+  "11": 0.025347193082173664,
+  "12": 0.03446666399637858,
+  "13": -0.011608242988586426,
+  "14": -0.017365058263142902,
+  "15": -0.10026081403096516,
+  "16": -0.015751441319783527,
+  "17": -0.052507758140563965,
+  "18": -0.5623161395390829,
+  "19": -0.5773866176605225,
+  "20": -0.43996910254160565,
+  "21": -0.027353405952453613,
+  "22": 0.07310756047566731,
+  "23": 0.8116420904795328,
+  "24": 0.22126070658365884,
+  "25": 0.3858495553334554,
+  "26": 0.28960084915161133,
+  "27": 0.5481177171071371,
+  "28": 0.49585143725077313
+ }
+}

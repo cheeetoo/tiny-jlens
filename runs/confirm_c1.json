@@ -1,0 +1,1260 @@
+{
+ "band": [
+  19,
+  26
+ ],
+ "alpha": 1.0,
+ "corr_1a": {
+  "per_layer_mean": {
+   "19": 0.213789775522403,
+   "20": 0.2170909274229602,
+   "21": 0.3114210190511014,
+   "22": 0.39045525998732167,
+   "23": 0.5342000211052356,
+   "24": 0.5023357039497225,
+   "25": 0.5656304823840879,
+   "26": 0.5772609726725597
+  },
+  "per_cat": {
+   "country": {
+    "19": -0.12541261714395896,
+    "20": -0.1760177082722231,
+    "21": -0.2533039647577093,
+    "22": -0.22222235669368168,
+    "23": 0.3303964757709251,
+    "24": 0.1762114537444934,
+    "25": 0.28083700440528636,
+    "26": 0.25550660792951546
+   },
+   "color": {
+    "19": 0.4008820297369345,
+    "20": 0.3554083885209713,
+    "21": 0.5667037622995558,
+    "22": 0.39360553140260973,
+    "23": 0.4696805500770638,
+    "24": 0.5088300220750552,
+    "25": 0.5380378132338195,
+    "26": 0.6141128319082735
+   },
+   "fruit": {
+    "19": 0.4505494505494505,
+    "20": 0.5659340659340659,
+    "21": 0.6758241758241759,
+    "22": 0.7455302788783884,
+    "23": 0.5054945054945055,
+    "24": 0.46703296703296704,
+    "25": 0.576923076923077,
+    "26": 0.6079785669082061
+   },
+   "sport": {
+    "19": 0.7695704787647665,
+    "20": 0.7889507578834581,
+    "21": 0.7202660644174592,
+    "22": 0.7041942604856511,
+    "23": 0.8136719388658992,
+    "24": 0.7905186723128045,
+    "25": 0.8149799505640976,
+    "26": 0.8357226689164655
+   },
+   "instrument": {
+    "19": 0.09331043760369241,
+    "20": 0.29577648146076085,
+    "21": 0.41415994073187423,
+    "22": 0.7178141675371874,
+    "23": 0.780532195994686,
+    "24": 0.8049321018270617,
+    "25": 0.7918883568162092,
+    "26": 0.7640892437736322
+   },
+   "planet": {
+    "19": 0.5,
+    "20": 0.42857142857142855,
+    "21": 0.5934065934065934,
+    "22": 0.8186813186813187,
+    "23": 0.7142857142857143,
+    "24": 0.5171944370078857,
+    "25": 0.6740033886538936,
+    "26": 0.521978021978022
+   },
+   "tree": {
+    "19": 0.3181818181818182,
+    "20": 0.1412304347492436,
+    "21": 0.12785521419362247,
+    "22": 0.3181818181818182,
+    "23": 0.3727272727272728,
+    "24": 0.4000000000000001,
+    "25": 0.46469368852976933,
+    "26": 0.48181818181818187
+   },
+   "bird": {
+    "19": -0.20523415977961432,
+    "20": -0.10729033533674225,
+    "21": 0.2165519301327307,
+    "22": 0.3163689375314194,
+    "23": 0.5171944370078857,
+    "24": 0.5089413342896748,
+    "25": 0.5179063360881542,
+    "26": 0.5997254641899951
+   },
+   "language": {
+    "19": 0.3303972772557152,
+    "20": 0.4712493179051095,
+    "21": 0.7290766584776116,
+    "22": 0.6784633934948711,
+    "23": 0.8303984901693642,
+    "24": 0.9008832426505835,
+    "25": 0.7929534654137165,
+    "26": 0.8267177001986267
+   },
+   "profession": {
+    "19": 0.5006901314533837,
+    "20": 0.608817737172219,
+    "21": 0.4972298955822885,
+    "22": 0.6353591160220995,
+    "23": 0.6721788591403686,
+    "24": 0.8179318125395497,
+    "25": 0.8298763124646896,
+    "26": 0.8675870321878191
+   },
+   "beverage": {
+    "19": 0.2837132196770302,
+    "20": 0.27768400019361517,
+    "21": 0.3082316460688724,
+    "22": 0.35026323416917315,
+    "23": 0.5017574746630903,
+    "24": 0.4413316750531582,
+    "25": 0.45884483676161686,
+    "26": 0.5202181269450005
+   },
+   "organ": {
+    "19": -0.015384615384615385,
+    "20": -0.13406593406593406,
+    "21": 0.3450549450549451,
+    "22": 0.5956043956043956,
+    "23": 0.7274725274725276,
+    "24": 0.7150719398559063,
+    "25": 0.7142857142857143,
+    "26": 0.7370741533899342
+   },
+   "city": {
+    "19": 0.1252747252747253,
+    "20": 0.2797363614098389,
+    "21": 0.3758241758241759,
+    "22": 0.6776681768480589,
+    "23": 0.8382843356464625,
+    "24": 0.7832788018113928,
+    "25": 0.7714285714285714,
+    "26": 0.8065934065934066
+   },
+   "river": {
+    "19": 0.3479410456129855,
+    "20": 0.3995476960579534,
+    "21": 0.34944837230249426,
+    "22": 0.4654575577074376,
+    "23": 0.3862324114922305,
+    "24": 0.33565435760634316,
+    "25": 0.5184552004167002,
+    "26": 0.5747506123396285
+   },
+   "vegetable": {
+    "19": 0.5148869542286845,
+    "20": 0.4868658954951507,
+    "21": 0.4518395720782334,
+    "22": 0.4448343073948499,
+    "23": 0.6374790861878952,
+    "24": 0.6000000000000001,
+    "25": 0.6614035087719299,
+    "26": 0.5719298245614036
+   },
+   "animal": {
+    "19": -0.3719321140859271,
+    "20": -0.2987702329348866,
+    "21": -0.2970127609764461,
+    "22": -0.13333415410627575,
+    "23": 0.4393679896101273,
+    "24": 0.4330985915492957,
+    "25": 0.5316901408450704,
+    "26": 0.46126760563380276
+   },
+   "metal": {
+    "19": 0.3117342784105641,
+    "20": 0.20665530815981217,
+    "21": 0.3082316460688724,
+    "22": 0.04553422044199251,
+    "23": 0.3403508771929825,
+    "24": 0.26970269031026334,
+    "25": 0.4098079839779326,
+    "26": 0.40350877192982465
+   },
+   "flower": {
+    "19": -0.38095238095238104,
+    "20": -0.6826469692905576,
+    "21": -0.523809523809524,
+    "22": -0.523809523809524,
+    "23": -0.261904761904762,
+    "24": -0.4285714285714286,
+    "25": -0.1666666666666667,
+    "26": -0.05988131309566295
+   }
+  }
+ },
+ "swap_1b": {
+  "trials": [
+   {
+    "cat": "country",
+    "source": " Japan",
+    "target": "Spain",
+    "pre_rank": 141,
+    "post_rank": 0
+   },
+   {
+    "cat": "country",
+    "source": " Japan",
+    "target": "Brazil",
+    "pre_rank": 104,
+    "post_rank": 1
+   },
+   {
+    "cat": "country",
+    "source": " Japan",
+    "target": "Egypt",
+    "pre_rank": 9,
+    "post_rank": 0
+   },
+   {
+    "cat": "country",
+    "source": " Japan",
+    "target": "Germany",
+    "pre_rank": 37,
+    "post_rank": 0
+   },
+   {
+    "cat": "country",
+    "source": " Japan",
+    "target": "China",
+    "pre_rank": 34,
+    "post_rank": 1
+   },
+   {
+    "cat": "country",
+    "source": " Japan",
+    "target": "Canada",
+    "pre_rank": 29,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Orange",
+    "pre_rank": 13,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Pink",
+    "pre_rank": 21,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Silver",
+    "pre_rank": 44,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Gold",
+    "pre_rank": 44,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Yellow",
+    "pre_rank": 14,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Gray",
+    "pre_rank": 22,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " fruit",
+    "target": "Mango",
+    "pre_rank": 18,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " fruit",
+    "target": "Apple",
+    "pre_rank": 188,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " fruit",
+    "target": "Orange",
+    "pre_rank": 203,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " fruit",
+    "target": "Grape",
+    "pre_rank": 23,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " fruit",
+    "target": "Date",
+    "pre_rank": 37,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " fruit",
+    "target": "Plum",
+    "pre_rank": 31,
+    "post_rank": 0
+   },
+   {
+    "cat": "sport",
+    "source": " sport",
+    "target": "Cycling",
+    "pre_rank": 477,
+    "post_rank": 0
+   },
+   {
+    "cat": "sport",
+    "source": " sport",
+    "target": "Baseball",
+    "pre_rank": 37,
+    "post_rank": 0
+   },
+   {
+    "cat": "sport",
+    "source": " sport",
+    "target": "Cricket",
+    "pre_rank": 198,
+    "post_rank": 0
+   },
+   {
+    "cat": "sport",
+    "source": " sport",
+    "target": "Tennis",
+    "pre_rank": 35,
+    "post_rank": 0
+   },
+   {
+    "cat": "sport",
+    "source": " sport",
+    "target": "Football",
+    "pre_rank": 88,
+    "post_rank": 0
+   },
+   {
+    "cat": "sport",
+    "source": " sport",
+    "target": "Rugby",
+    "pre_rank": 149,
+    "post_rank": 0
+   },
+   {
+    "cat": "instrument",
+    "source": " piano",
+    "target": "Harp",
+    "pre_rank": 1803,
+    "post_rank": 0
+   },
+   {
+    "cat": "instrument",
+    "source": " piano",
+    "target": "Organ",
+    "pre_rank": 7367,
+    "post_rank": 0
+   },
+   {
+    "cat": "instrument",
+    "source": " piano",
+    "target": "Violin",
+    "pre_rank": 2062,
+    "post_rank": 1
+   },
+   {
+    "cat": "instrument",
+    "source": " piano",
+    "target": "Trumpet",
+    "pre_rank": 4107,
+    "post_rank": 0
+   },
+   {
+    "cat": "instrument",
+    "source": " piano",
+    "target": "Flute",
+    "pre_rank": 4107,
+    "post_rank": 0
+   },
+   {
+    "cat": "instrument",
+    "source": " piano",
+    "target": "Guitar",
+    "pre_rank": 2062,
+    "post_rank": 27
+   },
+   {
+    "cat": "planet",
+    "source": " Kepler",
+    "target": "Mercury",
+    "pre_rank": 18,
+    "post_rank": 0
+   },
+   {
+    "cat": "planet",
+    "source": " Kepler",
+    "target": "Moon",
+    "pre_rank": 156,
+    "post_rank": 2
+   },
+   {
+    "cat": "planet",
+    "source": " Kepler",
+    "target": "Titan",
+    "pre_rank": 10,
+    "post_rank": 0
+   },
+   {
+    "cat": "planet",
+    "source": " Kepler",
+    "target": "Ceres",
+    "pre_rank": 79,
+    "post_rank": 0
+   },
+   {
+    "cat": "planet",
+    "source": " Kepler",
+    "target": "Sun",
+    "pre_rank": 53,
+    "post_rank": 0
+   },
+   {
+    "cat": "planet",
+    "source": " Kepler",
+    "target": "Pluto",
+    "pre_rank": 24,
+    "post_rank": 0
+   },
+   {
+    "cat": "tree",
+    "source": " palm",
+    "target": "Fir",
+    "pre_rank": 16252,
+    "post_rank": 1
+   },
+   {
+    "cat": "tree",
+    "source": " palm",
+    "target": "Cedar",
+    "pre_rank": 15693,
+    "post_rank": 0
+   },
+   {
+    "cat": "tree",
+    "source": " palm",
+    "target": "Willow",
+    "pre_rank": 6570,
+    "post_rank": 1
+   },
+   {
+    "cat": "tree",
+    "source": " palm",
+    "target": "Elm",
+    "pre_rank": 20820,
+    "post_rank": 3
+   },
+   {
+    "cat": "tree",
+    "source": " palm",
+    "target": "Cherry",
+    "pre_rank": 9416,
+    "post_rank": 1
+   },
+   {
+    "cat": "tree",
+    "source": " palm",
+    "target": "Oak",
+    "pre_rank": 9761,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " sparrow",
+    "target": "Dove",
+    "pre_rank": 4498,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " sparrow",
+    "target": "Duck",
+    "pre_rank": 7544,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " sparrow",
+    "target": "Cardinal",
+    "pre_rank": 5841,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " sparrow",
+    "target": "Falcon",
+    "pre_rank": 6283,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " sparrow",
+    "target": "Eagle",
+    "pre_rank": 8660,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " sparrow",
+    "target": "Hawk",
+    "pre_rank": 2558,
+    "post_rank": 0
+   },
+   {
+    "cat": "language",
+    "source": " English",
+    "target": "French",
+    "pre_rank": 5276,
+    "post_rank": 304
+   },
+   {
+    "cat": "language",
+    "source": " English",
+    "target": "Dutch",
+    "pre_rank": 12439,
+    "post_rank": 56
+   },
+   {
+    "cat": "language",
+    "source": " English",
+    "target": "Arabic",
+    "pre_rank": 4274,
+    "post_rank": 48
+   },
+   {
+    "cat": "language",
+    "source": " English",
+    "target": "Spanish",
+    "pre_rank": 4498,
+    "post_rank": 301
+   },
+   {
+    "cat": "language",
+    "source": " English",
+    "target": "Russian",
+    "pre_rank": 8416,
+    "post_rank": 594
+   },
+   {
+    "cat": "language",
+    "source": " English",
+    "target": "Japanese",
+    "pre_rank": 5849,
+    "post_rank": 3464
+   },
+   {
+    "cat": "profession",
+    "source": " artist",
+    "target": "Farmer",
+    "pre_rank": 11573,
+    "post_rank": 63
+   },
+   {
+    "cat": "profession",
+    "source": " artist",
+    "target": "Dentist",
+    "pre_rank": 6677,
+    "post_rank": 2
+   },
+   {
+    "cat": "profession",
+    "source": " artist",
+    "target": "Chef",
+    "pre_rank": 5535,
+    "post_rank": 37
+   },
+   {
+    "cat": "profession",
+    "source": " artist",
+    "target": "Judge",
+    "pre_rank": 9951,
+    "post_rank": 1
+   },
+   {
+    "cat": "profession",
+    "source": " artist",
+    "target": "Engineer",
+    "pre_rank": 4266,
+    "post_rank": 4
+   },
+   {
+    "cat": "profession",
+    "source": " artist",
+    "target": "Actor",
+    "pre_rank": 5766,
+    "post_rank": 3
+   },
+   {
+    "cat": "beverage",
+    "source": " coffee",
+    "target": "Soda",
+    "pre_rank": 3870,
+    "post_rank": 1
+   },
+   {
+    "cat": "beverage",
+    "source": " coffee",
+    "target": "Cider",
+    "pre_rank": 7924,
+    "post_rank": 0
+   },
+   {
+    "cat": "beverage",
+    "source": " coffee",
+    "target": "Milk",
+    "pre_rank": 5081,
+    "post_rank": 5
+   },
+   {
+    "cat": "beverage",
+    "source": " coffee",
+    "target": "Tea",
+    "pre_rank": 2364,
+    "post_rank": 1
+   },
+   {
+    "cat": "beverage",
+    "source": " coffee",
+    "target": "Juice",
+    "pre_rank": 1932,
+    "post_rank": 0
+   },
+   {
+    "cat": "beverage",
+    "source": " coffee",
+    "target": "Wine",
+    "pre_rank": 4653,
+    "post_rank": 3
+   },
+   {
+    "cat": "organ",
+    "source": " heart",
+    "target": "Muscle",
+    "pre_rank": 235,
+    "post_rank": 2
+   },
+   {
+    "cat": "organ",
+    "source": " heart",
+    "target": "Nose",
+    "pre_rank": 100,
+    "post_rank": 0
+   },
+   {
+    "cat": "organ",
+    "source": " heart",
+    "target": "Ear",
+    "pre_rank": 46,
+    "post_rank": 0
+   },
+   {
+    "cat": "organ",
+    "source": " heart",
+    "target": "Spleen",
+    "pre_rank": 29,
+    "post_rank": 0
+   },
+   {
+    "cat": "organ",
+    "source": " heart",
+    "target": "Skin",
+    "pre_rank": 105,
+    "post_rank": 0
+   },
+   {
+    "cat": "organ",
+    "source": " heart",
+    "target": "Stomach",
+    "pre_rank": 23,
+    "post_rank": 0
+   },
+   {
+    "cat": "city",
+    "source": " New",
+    "target": "Seoul",
+    "pre_rank": 88,
+    "post_rank": 10
+   },
+   {
+    "cat": "city",
+    "source": " New",
+    "target": "Lima",
+    "pre_rank": 236,
+    "post_rank": 128
+   },
+   {
+    "cat": "city",
+    "source": " New",
+    "target": "Moscow",
+    "pre_rank": 34,
+    "post_rank": 4
+   },
+   {
+    "cat": "city",
+    "source": " New",
+    "target": "Beijing",
+    "pre_rank": 166,
+    "post_rank": 49
+   },
+   {
+    "cat": "city",
+    "source": " New",
+    "target": "Cairo",
+    "pre_rank": 32,
+    "post_rank": 4
+   },
+   {
+    "cat": "city",
+    "source": " New",
+    "target": "Madrid",
+    "pre_rank": 207,
+    "post_rank": 91
+   },
+   {
+    "cat": "river",
+    "source": " Mississippi",
+    "target": "Nile",
+    "pre_rank": 2022,
+    "post_rank": 0
+   },
+   {
+    "cat": "river",
+    "source": " Mississippi",
+    "target": "Danube",
+    "pre_rank": 4943,
+    "post_rank": 0
+   },
+   {
+    "cat": "river",
+    "source": " Mississippi",
+    "target": "Congo",
+    "pre_rank": 15247,
+    "post_rank": 0
+   },
+   {
+    "cat": "river",
+    "source": " Mississippi",
+    "target": "Amazon",
+    "pre_rank": 2022,
+    "post_rank": 1
+   },
+   {
+    "cat": "river",
+    "source": " Mississippi",
+    "target": "Tiber",
+    "pre_rank": 5754,
+    "post_rank": 0
+   },
+   {
+    "cat": "river",
+    "source": " Mississippi",
+    "target": "Ohio",
+    "pre_rank": 7431,
+    "post_rank": 16
+   },
+   {
+    "cat": "vegetable",
+    "source": " vegetable",
+    "target": "lettuce",
+    "pre_rank": 99,
+    "post_rank": 0
+   },
+   {
+    "cat": "vegetable",
+    "source": " vegetable",
+    "target": "carrot",
+    "pre_rank": 11,
+    "post_rank": 0
+   },
+   {
+    "cat": "vegetable",
+    "source": " vegetable",
+    "target": "tomato",
+    "pre_rank": 13,
+    "post_rank": 0
+   },
+   {
+    "cat": "vegetable",
+    "source": " vegetable",
+    "target": "corn",
+    "pre_rank": 46,
+    "post_rank": 0
+   },
+   {
+    "cat": "vegetable",
+    "source": " vegetable",
+    "target": "cabbage",
+    "pre_rank": 92,
+    "post_rank": 0
+   },
+   {
+    "cat": "vegetable",
+    "source": " vegetable",
+    "target": "spinach",
+    "pre_rank": 44,
+    "post_rank": 0
+   },
+   {
+    "cat": "animal",
+    "source": " mouse",
+    "target": "monkey",
+    "pre_rank": 4341,
+    "post_rank": 1
+   },
+   {
+    "cat": "animal",
+    "source": " mouse",
+    "target": "dog",
+    "pre_rank": 3148,
+    "post_rank": 4
+   },
+   {
+    "cat": "animal",
+    "source": " mouse",
+    "target": "rabbit",
+    "pre_rank": 2642,
+    "post_rank": 1
+   },
+   {
+    "cat": "animal",
+    "source": " mouse",
+    "target": "elephant",
+    "pre_rank": 9514,
+    "post_rank": 2
+   },
+   {
+    "cat": "animal",
+    "source": " mouse",
+    "target": "cat",
+    "pre_rank": 3148,
+    "post_rank": 9
+   },
+   {
+    "cat": "animal",
+    "source": " mouse",
+    "target": "lion",
+    "pre_rank": 3925,
+    "post_rank": 1
+   },
+   {
+    "cat": "metal",
+    "source": " metal",
+    "target": "gold",
+    "pre_rank": 107,
+    "post_rank": 0
+   },
+   {
+    "cat": "metal",
+    "source": " metal",
+    "target": "zinc",
+    "pre_rank": 160,
+    "post_rank": 0
+   },
+   {
+    "cat": "metal",
+    "source": " metal",
+    "target": "tin",
+    "pre_rank": 303,
+    "post_rank": 0
+   },
+   {
+    "cat": "metal",
+    "source": " metal",
+    "target": "aluminum",
+    "pre_rank": 706,
+    "post_rank": 0
+   },
+   {
+    "cat": "metal",
+    "source": " metal",
+    "target": "copper",
+    "pre_rank": 44,
+    "post_rank": 0
+   },
+   {
+    "cat": "metal",
+    "source": " metal",
+    "target": "silver",
+    "pre_rank": 17,
+    "post_rank": 0
+   },
+   {
+    "cat": "flower",
+    "source": " Lily",
+    "target": "rose",
+    "pre_rank": 4953,
+    "post_rank": 9
+   },
+   {
+    "cat": "flower",
+    "source": " Lily",
+    "target": "poppy",
+    "pre_rank": 12155,
+    "post_rank": 0
+   },
+   {
+    "cat": "flower",
+    "source": " Lily",
+    "target": "violet",
+    "pre_rank": 8568,
+    "post_rank": 1
+   },
+   {
+    "cat": "flower",
+    "source": " Lily",
+    "target": "sunflower",
+    "pre_rank": 7401,
+    "post_rank": 0
+   },
+   {
+    "cat": "flower",
+    "source": " Lily",
+    "target": "iris",
+    "pre_rank": 8875,
+    "post_rank": 1
+   },
+   {
+    "cat": "flower",
+    "source": " Lily",
+    "target": "orchid",
+    "pre_rank": 17289,
+    "post_rank": 0
+   }
+  ],
+  "n": 108,
+  "top1": 65,
+  "top5": 91
+ },
+ "split_1c": {
+  "trials": [
+   {
+    "cat": "country",
+    "source": "Japan",
+    "target": "Mexico",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 106
+   },
+   {
+    "cat": "country",
+    "source": "Japan",
+    "target": "Egypt",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 14
+   },
+   {
+    "cat": "country",
+    "source": "Japan",
+    "target": "Canada",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 56
+   },
+   {
+    "cat": "color",
+    "source": "blue",
+    "target": "Pink",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 18
+   },
+   {
+    "cat": "color",
+    "source": "blue",
+    "target": "Cyan",
+    "J_comp_rank": 10,
+    "nonJ_comp_rank": 1,
+    "nonJ_clamped_rank": 35
+   },
+   {
+    "cat": "color",
+    "source": "blue",
+    "target": "Gray",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 1,
+    "nonJ_clamped_rank": 46
+   },
+   {
+    "cat": "instrument",
+    "source": "piano",
+    "target": "Flute",
+    "J_comp_rank": 817,
+    "nonJ_comp_rank": 4264,
+    "nonJ_clamped_rank": 6786
+   },
+   {
+    "cat": "instrument",
+    "source": "piano",
+    "target": "Organ",
+    "J_comp_rank": 729,
+    "nonJ_comp_rank": 5354,
+    "nonJ_clamped_rank": 13504
+   },
+   {
+    "cat": "instrument",
+    "source": "piano",
+    "target": "Violin",
+    "J_comp_rank": 1046,
+    "nonJ_comp_rank": 1213,
+    "nonJ_clamped_rank": 4939
+   },
+   {
+    "cat": "tree",
+    "source": "palm",
+    "target": "Maple",
+    "J_comp_rank": 259,
+    "nonJ_comp_rank": 3438,
+    "nonJ_clamped_rank": 13338
+   },
+   {
+    "cat": "tree",
+    "source": "palm",
+    "target": "Oak",
+    "J_comp_rank": 395,
+    "nonJ_comp_rank": 3256,
+    "nonJ_clamped_rank": 10804
+   },
+   {
+    "cat": "tree",
+    "source": "palm",
+    "target": "Elm",
+    "J_comp_rank": 16371,
+    "nonJ_comp_rank": 11104,
+    "nonJ_clamped_rank": 18640
+   },
+   {
+    "cat": "bird",
+    "source": "sparrow",
+    "target": "Robin",
+    "J_comp_rank": 120,
+    "nonJ_comp_rank": 863,
+    "nonJ_clamped_rank": 6573
+   },
+   {
+    "cat": "bird",
+    "source": "sparrow",
+    "target": "Dove",
+    "J_comp_rank": 913,
+    "nonJ_comp_rank": 2021,
+    "nonJ_clamped_rank": 3474
+   },
+   {
+    "cat": "bird",
+    "source": "sparrow",
+    "target": "Falcon",
+    "J_comp_rank": 1101,
+    "nonJ_comp_rank": 3338,
+    "nonJ_clamped_rank": 7571
+   },
+   {
+    "cat": "language",
+    "source": "English",
+    "target": "Russian",
+    "J_comp_rank": 381,
+    "nonJ_comp_rank": 748,
+    "nonJ_clamped_rank": 8039
+   },
+   {
+    "cat": "language",
+    "source": "English",
+    "target": "Hindi",
+    "J_comp_rank": 58,
+    "nonJ_comp_rank": 1638,
+    "nonJ_clamped_rank": 9034
+   },
+   {
+    "cat": "language",
+    "source": "English",
+    "target": "Greek",
+    "J_comp_rank": 1306,
+    "nonJ_comp_rank": 3620,
+    "nonJ_clamped_rank": 10698
+   },
+   {
+    "cat": "profession",
+    "source": "artist",
+    "target": "Engineer",
+    "J_comp_rank": 80,
+    "nonJ_comp_rank": 439,
+    "nonJ_clamped_rank": 3130
+   },
+   {
+    "cat": "profession",
+    "source": "artist",
+    "target": "Teacher",
+    "J_comp_rank": 69,
+    "nonJ_comp_rank": 627,
+    "nonJ_clamped_rank": 6602
+   },
+   {
+    "cat": "profession",
+    "source": "artist",
+    "target": "Farmer",
+    "J_comp_rank": 707,
+    "nonJ_comp_rank": 3152,
+    "nonJ_clamped_rank": 13262
+   },
+   {
+    "cat": "beverage",
+    "source": "coffee",
+    "target": "Wine",
+    "J_comp_rank": 44,
+    "nonJ_comp_rank": 552,
+    "nonJ_clamped_rank": 6234
+   },
+   {
+    "cat": "beverage",
+    "source": "coffee",
+    "target": "Soda",
+    "J_comp_rank": 4,
+    "nonJ_comp_rank": 827,
+    "nonJ_clamped_rank": 2189
+   },
+   {
+    "cat": "beverage",
+    "source": "coffee",
+    "target": "Juice",
+    "J_comp_rank": 14,
+    "nonJ_comp_rank": 561,
+    "nonJ_clamped_rank": 3473
+   },
+   {
+    "cat": "organ",
+    "source": "heart",
+    "target": "Eye",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 1,
+    "nonJ_clamped_rank": 32
+   },
+   {
+    "cat": "organ",
+    "source": "heart",
+    "target": "Lung",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 8
+   },
+   {
+    "cat": "organ",
+    "source": "heart",
+    "target": "Nose",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 1,
+    "nonJ_clamped_rank": 71
+   },
+   {
+    "cat": "river",
+    "source": "Mississippi",
+    "target": "Ohio",
+    "J_comp_rank": 3,
+    "nonJ_comp_rank": 726,
+    "nonJ_clamped_rank": 10718
+   },
+   {
+    "cat": "river",
+    "source": "Mississippi",
+    "target": "Yukon",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 2550,
+    "nonJ_clamped_rank": 37850
+   },
+   {
+    "cat": "river",
+    "source": "Mississippi",
+    "target": "Thames",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 1154,
+    "nonJ_clamped_rank": 15535
+   },
+   {
+    "cat": "animal",
+    "source": "mouse",
+    "target": "cat",
+    "J_comp_rank": 70,
+    "nonJ_comp_rank": 437,
+    "nonJ_clamped_rank": 2700
+   },
+   {
+    "cat": "animal",
+    "source": "mouse",
+    "target": "monkey",
+    "J_comp_rank": 132,
+    "nonJ_comp_rank": 1517,
+    "nonJ_clamped_rank": 5759
+   },
+   {
+    "cat": "animal",
+    "source": "mouse",
+    "target": "wolf",
+    "J_comp_rank": 1,
+    "nonJ_comp_rank": 276,
+    "nonJ_clamped_rank": 4337
+   },
+   {
+    "cat": "flower",
+    "source": "Lily",
+    "target": "violet",
+    "J_comp_rank": 195,
+    "nonJ_comp_rank": 3588,
+    "nonJ_clamped_rank": 11676
+   },
+   {
+    "cat": "flower",
+    "source": "Lily",
+    "target": "orchid",
+    "J_comp_rank": 1774,
+    "nonJ_comp_rank": 6369,
+    "nonJ_clamped_rank": 15749
+   },
+   {
+    "cat": "flower",
+    "source": "Lily",
+    "target": "sunflower",
+    "J_comp_rank": 70,
+    "nonJ_comp_rank": 3085,
+    "nonJ_clamped_rank": 10770
+   }
+  ],
+  "J_top5": 13,
+  "nonJ_top5": 9,
+  "nonJ_clamped_top5": 0,
+  "n": 36
+ }
+}

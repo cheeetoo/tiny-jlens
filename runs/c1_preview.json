@@ -1,0 +1,788 @@
+{
+ "band": [
+  19,
+  26
+ ],
+ "alpha": 1.0,
+ "corr_1a": {
+  "per_layer_mean": {
+   "19": 0.27681650257441,
+   "20": 0.28474711468986436,
+   "21": 0.3998275323337081,
+   "22": 0.4797982867567971,
+   "23": 0.5928298290401993,
+   "24": 0.6077816388632359,
+   "25": 0.6292344938334123,
+   "26": 0.6532615341545268
+  },
+  "per_cat": {
+   "country": {
+    "19": -0.07260730466229204,
+    "20": -0.2037444933920705,
+    "21": -0.2508252342879179,
+    "22": -0.2728274478219458,
+    "23": 0.3564358592512517,
+    "24": 0.4378440493271549,
+    "25": 0.4466449347407661,
+    "26": 0.5506607929515419
+   },
+   "color": {
+    "19": 0.48017737627830614,
+    "20": 0.5286356436091444,
+    "21": 0.5644986892944991,
+    "22": 0.5903098020302112,
+    "23": 0.4933932673685348,
+    "24": 0.5898570288526505,
+    "25": 0.6284458064411416,
+    "26": 0.6196255144209151
+   },
+   "fruit": {
+    "19": 0.6960116625691227,
+    "20": 0.4539206495016019,
+    "21": 0.6740033886538936,
+    "22": 0.6850075256115082,
+    "23": 0.7592854500754067,
+    "24": 0.7537833815965993,
+    "25": 0.748281313117792,
+    "26": 0.726273039202563
+   },
+   "sport": {
+    "19": 0.4532455988009745,
+    "20": 0.47252747252747257,
+    "21": 0.46424670556798836,
+    "22": 0.3318681318681319,
+    "23": 0.8417582417582418,
+    "24": 0.8725274725274725,
+    "25": 0.8734878773009072,
+    "26": 0.8822887627145183
+   },
+   "instrument": {
+    "19": 0.11188811188811189,
+    "20": 0.16812635240120308,
+    "21": 0.27272727272727276,
+    "22": 0.6339764538462033,
+    "23": 0.7202797202797203,
+    "24": 0.6713286713286714,
+    "25": 0.7552447552447553,
+    "26": 0.6993006993006995
+   },
+   "planet": {
+    "19": 0.32044687966370133,
+    "20": 0.4198959112834707,
+    "21": 0.3679146472130661,
+    "22": 0.5414447277076332,
+    "23": 0.8022199074570614,
+    "24": 0.7856222541993291,
+    "25": 0.6906182751372874,
+    "26": 0.7192316411683999
+   },
+   "tree": {
+    "19": 0.5740333799485386,
+    "20": 0.7744894808829488,
+    "21": 0.7425987375524745,
+    "22": 0.7152638146977822,
+    "23": 0.7608220194556027,
+    "24": 0.6621004566210046,
+    "25": 0.6605939689883975,
+    "26": 0.7608220194556027
+   },
+   "bird": {
+    "19": 0.2310868761099064,
+    "20": 0.005494505494505494,
+    "21": 0.10989010989010989,
+    "22": 0.23626373626373626,
+    "23": 0.24759308154632828,
+    "24": 0.23076923076923078,
+    "25": 0.30769230769230765,
+    "26": 0.38461538461538464
+   },
+   "language": {
+    "19": -0.11343612334801763,
+    "20": -0.16281638015180636,
+    "21": 0.22222235669368168,
+    "22": 0.2992301040627792,
+    "23": 0.5346537888768776,
+    "24": 0.5698573305313223,
+    "25": 0.6145374449339208,
+    "26": 0.6204624216595864
+   },
+   "profession": {
+    "19": 0.514443402768482,
+    "20": 0.30769230769230765,
+    "21": 0.43956043956043955,
+    "22": 0.7362637362637362,
+    "23": 0.6813186813186813,
+    "24": 0.6703296703296703,
+    "25": 0.7142857142857143,
+    "26": 0.8516483516483516
+   },
+   "beverage": {
+    "19": -0.06293706293706294,
+    "20": 0.4125874125874127,
+    "21": 0.32867132867132864,
+    "22": 0.6503496503496504,
+    "23": 0.4658501014450003,
+    "24": 0.5104895104895105,
+    "25": 0.5639238070123688,
+    "26": 0.5874125874125874
+   },
+   "organ": {
+    "19": 0.3454347524842379,
+    "20": 0.45104537744757167,
+    "21": 0.7480752601569483,
+    "22": 0.7744779163977817,
+    "23": 0.7414745960967397,
+    "24": 0.7524757028637538,
+    "25": 0.7488986784140971,
+    "26": 0.5638766519823789
+   },
+   "city": {
+    "19": 0.47964825504180797,
+    "20": 0.6820686195548644,
+    "21": 0.8502202643171807,
+    "22": 0.822882786172643,
+    "23": 0.8580863278270876,
+    "24": 0.7832788018113928,
+    "25": 0.7832788018113928,
+    "26": 0.814977973568282
+   },
+   "river": {
+    "19": -0.08200476856407694,
+    "20": -0.3234632537805257,
+    "21": 0.06378148666094874,
+    "22": -0.027334922854692318,
+    "23": 0.03644656380625642,
+    "24": 0.21867938283753854,
+    "25": 0.2733492285469231,
+    "26": 0.36446563806256416
+   }
+  }
+ },
+ "swap_1b": {
+  "trials": [
+   {
+    "cat": "country",
+    "source": " **",
+    "target": "Egypt",
+    "pre_rank": 9,
+    "post_rank": 138
+   },
+   {
+    "cat": "country",
+    "source": " **",
+    "target": "France",
+    "pre_rank": 56,
+    "post_rank": 1005
+   },
+   {
+    "cat": "country",
+    "source": " **",
+    "target": "Germany",
+    "pre_rank": 37,
+    "post_rank": 623
+   },
+   {
+    "cat": "country",
+    "source": " **",
+    "target": "Peru",
+    "pre_rank": 24,
+    "post_rank": 803
+   },
+   {
+    "cat": "country",
+    "source": " **",
+    "target": "Mexico",
+    "pre_rank": 70,
+    "post_rank": 788
+   },
+   {
+    "cat": "country",
+    "source": " **",
+    "target": "Italy",
+    "pre_rank": 123,
+    "post_rank": 844
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Purple",
+    "pre_rank": 11,
+    "post_rank": 6
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Gray",
+    "pre_rank": 22,
+    "post_rank": 2
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Silver",
+    "pre_rank": 44,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Yellow",
+    "pre_rank": 14,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Orange",
+    "pre_rank": 13,
+    "post_rank": 0
+   },
+   {
+    "cat": "color",
+    "source": " blue",
+    "target": "Brown",
+    "pre_rank": 22,
+    "post_rank": 0
+   },
+   {
+    "cat": "fruit",
+    "source": " a",
+    "target": "Lemon",
+    "pre_rank": 28,
+    "post_rank": 149
+   },
+   {
+    "cat": "fruit",
+    "source": " a",
+    "target": "Grape",
+    "pre_rank": 92,
+    "post_rank": 238
+   },
+   {
+    "cat": "fruit",
+    "source": " a",
+    "target": "Cherry",
+    "pre_rank": 36,
+    "post_rank": 436
+   },
+   {
+    "cat": "fruit",
+    "source": " a",
+    "target": "Mango",
+    "pre_rank": 26,
+    "post_rank": 343
+   },
+   {
+    "cat": "fruit",
+    "source": " a",
+    "target": "Peach",
+    "pre_rank": 28,
+    "post_rank": 867
+   },
+   {
+    "cat": "fruit",
+    "source": " a",
+    "target": "Banana",
+    "pre_rank": 17,
+    "post_rank": 431
+   },
+   {
+    "cat": "sport",
+    "source": " a",
+    "target": "Golf",
+    "pre_rank": 15,
+    "post_rank": 2670
+   },
+   {
+    "cat": "sport",
+    "source": " a",
+    "target": "Chess",
+    "pre_rank": 24,
+    "post_rank": 9381
+   },
+   {
+    "cat": "sport",
+    "source": " a",
+    "target": "Running",
+    "pre_rank": 72,
+    "post_rank": 291
+   },
+   {
+    "cat": "sport",
+    "source": " a",
+    "target": "Hockey",
+    "pre_rank": 23,
+    "post_rank": 9579
+   },
+   {
+    "cat": "sport",
+    "source": " a",
+    "target": "Cricket",
+    "pre_rank": 14,
+    "post_rank": 11260
+   },
+   {
+    "cat": "sport",
+    "source": " a",
+    "target": "Rugby",
+    "pre_rank": 30,
+    "post_rank": 21647
+   },
+   {
+    "cat": "instrument",
+    "source": " a",
+    "target": "Flute",
+    "pre_rank": 831,
+    "post_rank": 32
+   },
+   {
+    "cat": "instrument",
+    "source": " a",
+    "target": "Horn",
+    "pre_rank": 1038,
+    "post_rank": 1
+   },
+   {
+    "cat": "instrument",
+    "source": " a",
+    "target": "Trumpet",
+    "pre_rank": 223,
+    "post_rank": 22
+   },
+   {
+    "cat": "instrument",
+    "source": " a",
+    "target": "Sax",
+    "pre_rank": 478,
+    "post_rank": 11
+   },
+   {
+    "cat": "instrument",
+    "source": " a",
+    "target": "Violin",
+    "pre_rank": 38,
+    "post_rank": 45
+   },
+   {
+    "cat": "instrument",
+    "source": " a",
+    "target": "Bell",
+    "pre_rank": 1338,
+    "post_rank": 1
+   },
+   {
+    "cat": "planet",
+    "source": " called",
+    "target": "Mars",
+    "pre_rank": 9,
+    "post_rank": 21
+   },
+   {
+    "cat": "planet",
+    "source": " called",
+    "target": "Earth",
+    "pre_rank": 22,
+    "post_rank": 15
+   },
+   {
+    "cat": "planet",
+    "source": " called",
+    "target": "Titan",
+    "pre_rank": 15,
+    "post_rank": 304
+   },
+   {
+    "cat": "planet",
+    "source": " called",
+    "target": "Venus",
+    "pre_rank": 13,
+    "post_rank": 1379
+   },
+   {
+    "cat": "planet",
+    "source": " called",
+    "target": "Ceres",
+    "pre_rank": 173,
+    "post_rank": 1498
+   },
+   {
+    "cat": "planet",
+    "source": " called",
+    "target": "Mercury",
+    "pre_rank": 65,
+    "post_rank": 86
+   },
+   {
+    "cat": "tree",
+    "source": " a",
+    "target": "Birch",
+    "pre_rank": 2715,
+    "post_rank": 41
+   },
+   {
+    "cat": "tree",
+    "source": " a",
+    "target": "Elm",
+    "pre_rank": 2715,
+    "post_rank": 73
+   },
+   {
+    "cat": "tree",
+    "source": " a",
+    "target": "Willow",
+    "pre_rank": 75,
+    "post_rank": 21
+   },
+   {
+    "cat": "tree",
+    "source": " a",
+    "target": "Cherry",
+    "pre_rank": 2161,
+    "post_rank": 12
+   },
+   {
+    "cat": "tree",
+    "source": " a",
+    "target": "Cedar",
+    "pre_rank": 378,
+    "post_rank": 42
+   },
+   {
+    "cat": "tree",
+    "source": " a",
+    "target": "Ash",
+    "pre_rank": 220,
+    "post_rank": 3
+   },
+   {
+    "cat": "bird",
+    "source": " a",
+    "target": "Robin",
+    "pre_rank": 69,
+    "post_rank": 5
+   },
+   {
+    "cat": "bird",
+    "source": " a",
+    "target": "Dove",
+    "pre_rank": 2382,
+    "post_rank": 47
+   },
+   {
+    "cat": "bird",
+    "source": " a",
+    "target": "Goose",
+    "pre_rank": 3670,
+    "post_rank": 43
+   },
+   {
+    "cat": "bird",
+    "source": " a",
+    "target": "Hawk",
+    "pre_rank": 166,
+    "post_rank": 16
+   },
+   {
+    "cat": "bird",
+    "source": " a",
+    "target": "Cardinal",
+    "pre_rank": 280,
+    "post_rank": 0
+   },
+   {
+    "cat": "bird",
+    "source": " a",
+    "target": "Swan",
+    "pre_rank": 5350,
+    "post_rank": 56
+   },
+   {
+    "cat": "language",
+    "source": " \"",
+    "target": "Chinese",
+    "pre_rank": 31,
+    "post_rank": 287
+   },
+   {
+    "cat": "language",
+    "source": " \"",
+    "target": "Arabic",
+    "pre_rank": 9,
+    "post_rank": 964
+   },
+   {
+    "cat": "language",
+    "source": " \"",
+    "target": "Russian",
+    "pre_rank": 34,
+    "post_rank": 96
+   },
+   {
+    "cat": "language",
+    "source": " \"",
+    "target": "German",
+    "pre_rank": 11,
+    "post_rank": 12
+   },
+   {
+    "cat": "language",
+    "source": " \"",
+    "target": "Hindi",
+    "pre_rank": 217,
+    "post_rank": 6620
+   },
+   {
+    "cat": "language",
+    "source": " \"",
+    "target": "Japanese",
+    "pre_rank": 18,
+    "post_rank": 209
+   },
+   {
+    "cat": "profession",
+    "source": " \"",
+    "target": "Engineer",
+    "pre_rank": 371,
+    "post_rank": 287
+   },
+   {
+    "cat": "profession",
+    "source": " \"",
+    "target": "Farmer",
+    "pre_rank": 2792,
+    "post_rank": 197
+   },
+   {
+    "cat": "profession",
+    "source": " \"",
+    "target": "Lawyer",
+    "pre_rank": 106,
+    "post_rank": 132
+   },
+   {
+    "cat": "profession",
+    "source": " \"",
+    "target": "Writer",
+    "pre_rank": 467,
+    "post_rank": 41
+   },
+   {
+    "cat": "profession",
+    "source": " \"",
+    "target": "Dentist",
+    "pre_rank": 1669,
+    "post_rank": 186
+   },
+   {
+    "cat": "profession",
+    "source": " \"",
+    "target": "Doctor",
+    "pre_rank": 73,
+    "post_rank": 40
+   },
+   {
+    "cat": "beverage",
+    "source": " a",
+    "target": "Rum",
+    "pre_rank": 29,
+    "post_rank": 7
+   },
+   {
+    "cat": "beverage",
+    "source": " a",
+    "target": "Cider",
+    "pre_rank": 281,
+    "post_rank": 12190
+   },
+   {
+    "cat": "beverage",
+    "source": " a",
+    "target": "Soda",
+    "pre_rank": 14,
+    "post_rank": 7619
+   },
+   {
+    "cat": "beverage",
+    "source": " a",
+    "target": "Whiskey",
+    "pre_rank": 44,
+    "post_rank": 11668
+   },
+   {
+    "cat": "beverage",
+    "source": " a",
+    "target": "Juice",
+    "pre_rank": 108,
+    "post_rank": 190
+   },
+   {
+    "cat": "beverage",
+    "source": " a",
+    "target": "Milk",
+    "pre_rank": 30,
+    "post_rank": 316
+   },
+   {
+    "cat": "organ",
+    "source": " the",
+    "target": "Liver",
+    "pre_rank": 99,
+    "post_rank": 15
+   },
+   {
+    "cat": "organ",
+    "source": " the",
+    "target": "Lung",
+    "pre_rank": 248,
+    "post_rank": 8
+   },
+   {
+    "cat": "organ",
+    "source": " the",
+    "target": "Spleen",
+    "pre_rank": 1791,
+    "post_rank": 24
+   },
+   {
+    "cat": "organ",
+    "source": " the",
+    "target": "Skin",
+    "pre_rank": 248,
+    "post_rank": 4
+   },
+   {
+    "cat": "organ",
+    "source": " the",
+    "target": "Muscle",
+    "pre_rank": 276,
+    "post_rank": 6
+   },
+   {
+    "cat": "organ",
+    "source": " the",
+    "target": "Kidney",
+    "pre_rank": 195,
+    "post_rank": 31
+   },
+   {
+    "cat": "city",
+    "source": " called",
+    "target": "Rome",
+    "pre_rank": 33,
+    "post_rank": 30
+   },
+   {
+    "cat": "city",
+    "source": " called",
+    "target": "Moscow",
+    "pre_rank": 80,
+    "post_rank": 361
+   },
+   {
+    "cat": "city",
+    "source": " called",
+    "target": "Madrid",
+    "pre_rank": 338,
+    "post_rank": 301
+   },
+   {
+    "cat": "city",
+    "source": " called",
+    "target": "London",
+    "pre_rank": 22,
+    "post_rank": 472
+   },
+   {
+    "cat": "city",
+    "source": " called",
+    "target": "Seoul",
+    "pre_rank": 206,
+    "post_rank": 429
+   },
+   {
+    "cat": "city",
+    "source": " called",
+    "target": "Berlin",
+    "pre_rank": 22,
+    "post_rank": 230
+   },
+   {
+    "cat": "river",
+    "source": " the",
+    "target": "Danube",
+    "pre_rank": 839,
+    "post_rank": 8468
+   },
+   {
+    "cat": "river",
+    "source": " the",
+    "target": "Jordan",
+    "pre_rank": 118,
+    "post_rank": 15
+   },
+   {
+    "cat": "river",
+    "source": " the",
+    "target": "Tiber",
+    "pre_rank": 151,
+    "post_rank": 1092
+   },
+   {
+    "cat": "river",
+    "source": " the",
+    "target": "Ohio",
+    "pre_rank": 992,
+    "post_rank": 135
+   },
+   {
+    "cat": "river",
+    "source": " the",
+    "target": "Amazon",
+    "pre_rank": 151,
+    "post_rank": 26
+   },
+   {
+    "cat": "river",
+    "source": " the",
+    "target": "Nile",
+    "pre_rank": 145,
+    "post_rank": 714
+   }
+  ],
+  "n": 84,
+  "top1": 5,
+  "top5": 10
+ },
+ "split_1c": {
+  "trials": [
+   {
+    "cat": "color",
+    "source": "blue",
+    "target": "Silver",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 56
+   },
+   {
+    "cat": "color",
+    "source": "blue",
+    "target": "Cyan",
+    "J_comp_rank": 6,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 31
+   },
+   {
+    "cat": "color",
+    "source": "blue",
+    "target": "Gold",
+    "J_comp_rank": 0,
+    "nonJ_comp_rank": 0,
+    "nonJ_clamped_rank": 47
+   }
+  ],
+  "J_top5": 2,
+  "nonJ_top5": 3,
+  "nonJ_clamped_top5": 0,
+  "n": 3
+ }
+}

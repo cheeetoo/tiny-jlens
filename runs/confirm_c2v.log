@@ -1,0 +1,58 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 7451.09it/s]
+V1 animal: answer='Lion' rank demand=12 nodemand=47
+V1 animal: answer='cat' rank demand=5 nodemand=55
+V1 animal: answer='cat' rank demand=184 nodemand=405
+V1 color: answer='blue' rank demand=0 nodemand=11
+V1 color: answer='blue' rank demand=3 nodemand=20
+V1 color: answer='blue' rank demand=30 nodemand=225
+V1 fruit: answer='lemon' rank demand=7 nodemand=62
+V1 fruit: answer='banana' rank demand=6 nodemand=113
+V1 fruit: answer='banana' rank demand=207 nodemand=2045
+V1 sport: answer='basketball' rank demand=0 nodemand=46
+V1 sport: answer='basketball' rank demand=5 nodemand=133
+V1 sport: answer='basketball' rank demand=44 nodemand=66
+V1 country: answer='United' rank demand=4 nodemand=41
+V1 country: answer='United' rank demand=3 nodemand=41
+V1 country: answer='United' rank demand=10 nodemand=13
+V1 beverage: answer='cozy' rank demand=320 nodemand=386
+V1 beverage: answer='coffee' rank demand=2 nodemand=70
+V1 beverage: answer='coffee' rank demand=27 nodemand=46
+V1 vegetable: answer='vegetable' rank demand=0 nodemand=8
+V1 vegetable: answer='type' rank demand=411 nodemand=385
+V1 vegetable: answer='vegetable' rank demand=149 nodemand=854
+V1 instrument: answer='violin' rank demand=0 nodemand=1
+V1 instrument: answer='violin' rank demand=0 nodemand=127
+V1 instrument: answer='violin' rank demand=49 nodemand=600
+
+V3 focus-minus-baseline mean target logprob by layer:
+  L 0: +0.017
+  L 1: -0.019
+  L 2: -0.007
+  L 3: +0.001
+  L 4: -0.003
+  L 5: +0.105
+  L 6: +0.090
+  L 7: +0.058
+  L 8: +0.099
+  L 9: -0.090
+  L10: -0.071
+  L11: +0.025
+  L12: +0.034
+  L13: -0.012
+  L14: -0.017
+  L15: -0.100
+  L16: -0.016
+  L17: -0.053
+  L18: -0.562
+  L19: -0.577
+  L20: -0.440
+  L21: -0.027
+  L22: +0.073
+  L23: +0.812
+  L24: +0.221
+  L25: +0.386
+  L26: +0.290
+  L27: +0.548
+  L28: +0.496
+saved runs/confirm_c2v.json

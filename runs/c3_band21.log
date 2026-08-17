@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:   9%|▉         | 25/272 [00:00<00:01, 243.75it/s]Loading weights:  18%|█▊        | 50/272 [00:00<00:00, 246.71it/s]Loading weights:  28%|██▊       | 75/272 [00:00<00:00, 246.92it/s]Loading weights:  37%|███▋      | 100/272 [00:00<00:01, 139.84it/s]Loading weights:  44%|████▍     | 119/272 [00:00<00:01, 151.23it/s]Loading weights:  51%|█████     | 138/272 [00:00<00:01, 128.65it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 299.93it/s]
+filter: 44/136 items pass (15 ref)
+swap: {'top1_a1': 27} of n=43
+saved runs/c3_band21.json

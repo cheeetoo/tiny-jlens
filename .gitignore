@@ -1,0 +1,7 @@
+# large binary artifacts — regenerable via scripts/fit_lens.py or downloadable
+# from neuronpedia/jacobian-lens on HF (see lenses/*/config.yaml)
+*.pt
+__pycache__/
+*.pyc
+# external clone of anthropics/jacobian-lens (install via pip -e, see README)
+ref/

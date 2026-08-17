@@ -1,0 +1,47 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  15%|█▍        | 40/272 [00:00<00:00, 399.73it/s]Loading weights:  band: L19..L26
+categories with >=6 single-token candidates: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'tree', 'bird', 'language', 'profession', 'beverage', 'organ', 'city', 'river', 'vegetable', 'animal', band: L19..L26
+cate1a mean Spearman by layer: {19: 0.214, 20: 0.217, 21: 0.311, 22: 0.39, 23: 0.534, 24: 0.502, 25: 0.566, 26: 0.577}
+1b: 65/108 top-1, 91/108 top-5
+{'cat': 'country', 'source': 'Japan', 'target': 'Mexico', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 106}
+{'cat': 'country', 'source': 'Japan', 'target': 'Egypt', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 14}
+{'cat': 'country', 'source': 'Japan', 'target': 'Canada', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 56}
+{'cat': 'color', 'source': 'blue', 'target': 'Pink', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 18}
+{'cat': 'color', 'source': 'blue', 'target': 'Cyan', 'J_comp_rank': 10, 'nonJ_comp_rank': 1, 'nonJ_clamped_rank': 35}
+{'cat': 'color', 'source': 'blue', 'target': 'Gray', 'J_comp_rank': 0, 'nonJ_comp_rank': 1, 'nonJ_clamped_rank': 46}
+{'cat': 'instrument', 'source': 'piano', 'target': 'Flute', 'J_comp_rank': 817, 'nonJ_comp_rank': 4264, 'nonJ_clamped_rank': 6786}
+{'cat': 'instrument', 'source': 'piano', 'target': 'Organ', 'J_comp_rank': 729, 'nonJ_comp_rank': 5354, 'nonJ_clamped_rank': 13504}
+{'cat': 'instrument', 'source': 'piano', 'target': 'Violin', 'J_comp_rank': 1046, 'nonJ_comp_rank': 1213, 'nonJ_clamped_rank': 4939}
+{'cat': 'tree', 'source': 'palm', 'target': 'Maple', 'J_comp_rank': 259, 'nonJ_comp_rank': 3438, 'nonJ_clamped_rank': 13338}
+{'cat': 'tree', 'source': 'palm', 'target': 'Oak', 'J_comp_rank': 395, 'nonJ_comp_rank': 3256, 'nonJ_clamped_rank': 10804}
+{'cat': 'tree', 'source': 'palm', 'target': 'Elm', 'J_comp_rank': 16371, 'nonJ_comp_rank': 11104, 'nonJ_clamped_rank': 18640}
+{'cat': 'bird', 'source': 'sparrow', 'target': 'Robin', 'J_comp_rank': 120, 'nonJ_comp_rank': 863, 'nonJ_clamped_rank': 6573}
+{'cat': 'bird', 'source': 'sparrow', 'target': 'Dove', 'J_comp_rank': 913, 'nonJ_comp_rank': 2021, 'nonJ_clamped_rank': 3474}
+{'cat': 'bird', 'source': 'sparrow', 'target': 'Falcon', 'J_comp_rank': 1101, 'nonJ_comp_rank': 3338, 'nonJ_clamped_rank': 7571}
+{'cat': 'language', 'source': 'English', 'target': 'Russian', 'J_comp_rank': 381, 'nonJ_comp_rank': 748, 'nonJ_clamped_rank': 8039}
+{'cat': 'language', 'source': 'English', 'target': 'Hindi', 'J_comp_rank': 58, 'nonJ_comp_rank': 1638, 'nonJ_clamped_rank': 9034}
+{'cat': 'language', 'source': 'English', 'target': 'Greek', 'J_comp_rank': 1306, 'nonJ_comp_rank': 3620, 'nonJ_clamped_rank': 10698}
+{'cat': 'profession', 'source': 'artist', 'target': 'Engineer', 'J_comp_rank': 80, 'nonJ_comp_rank': 439, 'nonJ_clamped_rank': 3130}
+{'cat': 'profession', 'source': 'artist', 'target': 'Teacher', 'J_comp_rank': 69, 'nonJ_comp_rank': 627, 'nonJ_clamped_rank': 6602}
+{'cat': 'profession', 'source': 'artist', 'target': 'Farmer', 'J_comp_rank': 707, 'nonJ_comp_rank': 3152, 'nonJ_clamped_rank': 13262}
+{'cat': 'beverage', 'source': 'coffee', 'target': 'Wine', 'J_comp_rank': 44, 'nonJ_comp_rank': 552, 'nonJ_clamped_rank': 6234}
+{'cat': 'beverage', 'source': 'coffee', 'target': 'Soda', 'J_comp_rank': 4, 'nonJ_comp_rank': 827, 'nonJ_clamped_rank': 2189}
+{'cat': 'beverage', 'source': 'coffee', 'target': 'Juice', 'J_comp_rank': 14, 'nonJ_comp_rank': 561, 'nonJ_clamped_rank': 3473}
+{'cat': 'organ', 'source': 'heart', 'target': 'Eye', 'J_comp_rank': 0, 'nonJ_comp_rank': 1, 'nonJ_clamped_rank': 32}
+{'cat': 'organ', 'source': 'heart', 'target': 'Lung', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 8}
+{'cat': 'organ', 'source': 'heart', 'target': 'Nose', 'J_comp_rank': 0, 'nonJ_comp_rank': 1, 'nonJ_clamped_rank': 71}
+{'cat': 'river', 'source': 'Mississippi', 'target': 'Ohio', 'J_comp_rank': 3, 'nonJ_comp_rank': 726, 'nonJ_clamped_rank': 10718}
+{'cat': 'river', 'source': 'Mississippi', 'target': 'Yukon', 'J_comp_rank': 0, 'nonJ_comp_rank': 2550, 'nonJ_clamped_rank': 37850}
+{'cat': 'river', 'source': 'Mississippi', 'target': 'Thames', 'J_comp_rank': 0, 'nonJ_comp_rank': 1154, 'nonJ_clamped_rank': 15535}
+{'cat': 'animal', 'source': 'mouse', 'target': 'cat', 'J_comp_rank': 70, 'nonJ_comp_rank': 437, 'nonJ_clamped_rank': 2700}
+{'cat': 'animal', 'source': 'mouse', 'target': 'monkey', 'J_comp_rank': 132, 'nonJ_comp_rank': 1517, 'nonJ_clamped_rank': 5759}
+{'cat': 'animal', 'source': 'mouse', 'target': 'wolf', 'J_comp_rank': 1, 'nonJ_comp_rank': 276, 'nonJ_clamped_rank': 4337}
+{'cat': 'flower', 'source': 'Lily', 'target': 'violet', 'J_comp_rank': 195, 'nonJ_comp_rank': 3588, 'nonJ_clamped_rank': 11676}
+{'cat': 'flower', 'source': 'Lily', 'target': 'orchid', 'J_comp_rank': 1774, 'nonJ_comp_rank': 6369, 'nonJ_clamped_rank': 15749}
+{'cat': 'flower', 'source': 'Lily', 'target': 'sunflower', 'J_comp_rank': 70, 'nonJ_comp_rank': 3085, 'nonJ_clamped_rank': 10770}
+1c: {'J_top5': 13, 'nonJ_top5': 9, 'nonJ_clamped_top5': 0, 'n': 36}
+saved runs/confirm_c1.json
+
+{'cat': 'flower', 'source': 'Lily', 'target': 'sunflower', 'J_comp_rank': 70, 'nonJ_comp_rank': 3085, 'nonJ_clamped_rank': 10770}
+1c: {'J_top5': 13, 'nonJ_top5': 9, 'nonJ_clamped_top5': 0, 'n': 36}
+saved runs/confirm_c1.json

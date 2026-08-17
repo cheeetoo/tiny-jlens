@@ -1,0 +1,462 @@
+{
+ "corr_by_layer": {
+  "7": [
+   -0.04526555414857781,
+   0.11953745216548659,
+   0.6565167920181465,
+   0.5577494626504911,
+   0.38392124695842517,
+   0.3872608522178538,
+   0.7927024853287575,
+   0.9222586578518925,
+   0.1509779735876536,
+   0.7549687269311938,
+   0.4895630806753246,
+   0.4727832267160735,
+   0.36309464597925767,
+   0.14414999403128945
+  ],
+  "8": [
+   0.30370363069396145,
+   0.10397876769855367,
+   0.6126979344569069,
+   0.4585766646236111,
+   0.4279777834946379,
+   0.21608383169834794,
+   0.7644851505045988,
+   0.8325975825268151,
+   0.36796057643298297,
+   0.6464092344003123,
+   0.13389759471461868,
+   0.587704606269742,
+   0.13443694170750994,
+   -0.16216874328520064
+  ],
+  "9": [
+   0.46541021814689393,
+   0.056761916894180156,
+   0.609024087914706,
+   0.4899706661137361,
+   0.4103417603342255,
+   0.09269883868554805,
+   0.898186651487636,
+   0.8355885671140038,
+   0.5651232529017464,
+   0.729582351610408,
+   0.24404143091199432,
+   0.5756867173292188,
+   0.21855776808143182,
+   0.46848748060169076
+  ],
+  "10": [
+   0.5478687860412803,
+   0.193051448936777,
+   0.6118177763913791,
+   0.6891867161163336,
+   0.5853225568382547,
+   0.36544734481802593,
+   0.9355732821031266,
+   0.8867016975491689,
+   0.520989330529616,
+   0.8520992064194175,
+   0.32916492034010425,
+   0.8269317890951972,
+   0.4998764240791154,
+   0.4272727272727273
+  ]
+ },
+ "swap": [
+  {
+   "cat": "country",
+   "src": " Brazil",
+   "tgt": "Kenya",
+   "pre": 158,
+   "post": 682
+  },
+  {
+   "cat": "country",
+   "src": " Brazil",
+   "tgt": "Egypt",
+   "pre": 99,
+   "post": 467
+  },
+  {
+   "cat": "country",
+   "src": " Brazil",
+   "tgt": "Germany",
+   "pre": 7,
+   "post": 37
+  },
+  {
+   "cat": "country",
+   "src": " Brazil",
+   "tgt": "Canada",
+   "pre": 7,
+   "post": 31
+  },
+  {
+   "cat": "color",
+   "src": " red",
+   "tgt": "Cyan",
+   "pre": 26,
+   "post": 71
+  },
+  {
+   "cat": "color",
+   "src": " red",
+   "tgt": "Gray",
+   "pre": 15,
+   "post": 23
+  },
+  {
+   "cat": "color",
+   "src": " red",
+   "tgt": "Silver",
+   "pre": 8,
+   "post": 14
+  },
+  {
+   "cat": "color",
+   "src": " red",
+   "tgt": "Pink",
+   "pre": 8,
+   "post": 11
+  },
+  {
+   "cat": "fruit",
+   "src": " apple",
+   "tgt": "Date",
+   "pre": 407,
+   "post": 353
+  },
+  {
+   "cat": "fruit",
+   "src": " apple",
+   "tgt": "Berry",
+   "pre": 2819,
+   "post": 4399
+  },
+  {
+   "cat": "fruit",
+   "src": " apple",
+   "tgt": "Plum",
+   "pre": 13,
+   "post": 21
+  },
+  {
+   "cat": "fruit",
+   "src": " apple",
+   "tgt": "Peach",
+   "pre": 5,
+   "post": 14
+  },
+  {
+   "cat": "sport",
+   "src": " football",
+   "tgt": "Soccer",
+   "pre": 15,
+   "post": 49
+  },
+  {
+   "cat": "sport",
+   "src": " football",
+   "tgt": "Golf",
+   "pre": 45,
+   "post": 110
+  },
+  {
+   "cat": "sport",
+   "src": " football",
+   "tgt": "Tennis",
+   "pre": 45,
+   "post": 147
+  },
+  {
+   "cat": "sport",
+   "src": " football",
+   "tgt": "Chess",
+   "pre": 140,
+   "post": 368
+  },
+  {
+   "cat": "instrument",
+   "src": " guitar",
+   "tgt": "Horn",
+   "pre": 26,
+   "post": 70
+  },
+  {
+   "cat": "instrument",
+   "src": " guitar",
+   "tgt": "Bass",
+   "pre": 330,
+   "post": 413
+  },
+  {
+   "cat": "instrument",
+   "src": " guitar",
+   "tgt": "Drum",
+   "pre": 26,
+   "post": 77
+  },
+  {
+   "cat": "instrument",
+   "src": " guitar",
+   "tgt": "Bell",
+   "pre": 26,
+   "post": 99
+  },
+  {
+   "cat": "planet",
+   "src": " moon",
+   "tgt": "Ceres",
+   "pre": 97,
+   "post": 493
+  },
+  {
+   "cat": "planet",
+   "src": " moon",
+   "tgt": "Pluto",
+   "pre": 53,
+   "post": 144
+  },
+  {
+   "cat": "planet",
+   "src": " moon",
+   "tgt": "Jupiter",
+   "pre": 32,
+   "post": 72
+  },
+  {
+   "cat": "planet",
+   "src": " moon",
+   "tgt": "Mercury",
+   "pre": 53,
+   "post": 121
+  },
+  {
+   "cat": "tree",
+   "src": " oak",
+   "tgt": "Willow",
+   "pre": 1291,
+   "post": 2237
+  },
+  {
+   "cat": "tree",
+   "src": " oak",
+   "tgt": "Elm",
+   "pre": 2956,
+   "post": 6111
+  },
+  {
+   "cat": "tree",
+   "src": " oak",
+   "tgt": "Ash",
+   "pre": 29,
+   "post": 40
+  },
+  {
+   "cat": "tree",
+   "src": " oak",
+   "tgt": "Birch",
+   "pre": 2956,
+   "post": 4748
+  },
+  {
+   "cat": "bird",
+   "src": " duck",
+   "tgt": "Eagle",
+   "pre": 7,
+   "post": 33
+  },
+  {
+   "cat": "bird",
+   "src": " duck",
+   "tgt": "Hawk",
+   "pre": 167,
+   "post": 195
+  },
+  {
+   "cat": "bird",
+   "src": " duck",
+   "tgt": "Crow",
+   "pre": 105,
+   "post": 167
+  },
+  {
+   "cat": "bird",
+   "src": " duck",
+   "tgt": "Falcon",
+   "pre": 4305,
+   "post": 6402
+  },
+  {
+   "cat": "language",
+   "src": " Spanish",
+   "tgt": "Italian",
+   "pre": 36,
+   "post": 83
+  },
+  {
+   "cat": "language",
+   "src": " Spanish",
+   "tgt": "Korean",
+   "pre": 36,
+   "post": 158
+  },
+  {
+   "cat": "language",
+   "src": " Spanish",
+   "tgt": "Greek",
+   "pre": 4,
+   "post": 65
+  },
+  {
+   "cat": "language",
+   "src": " Spanish",
+   "tgt": "Russian",
+   "pre": 15,
+   "post": 90
+  },
+  {
+   "cat": "profession",
+   "src": " doctor",
+   "tgt": "Engineer",
+   "pre": 176,
+   "post": 227
+  },
+  {
+   "cat": "profession",
+   "src": " doctor",
+   "tgt": "Chef",
+   "pre": 30,
+   "post": 109
+  },
+  {
+   "cat": "profession",
+   "src": " doctor",
+   "tgt": "Lawyer",
+   "pre": 98,
+   "post": 194
+  },
+  {
+   "cat": "profession",
+   "src": " doctor",
+   "tgt": "Farmer",
+   "pre": 15,
+   "post": 39
+  },
+  {
+   "cat": "beverage",
+   "src": " wine",
+   "tgt": "Cider",
+   "pre": 22,
+   "post": 59
+  },
+  {
+   "cat": "beverage",
+   "src": " wine",
+   "tgt": "Rum",
+   "pre": 104,
+   "post": 182
+  },
+  {
+   "cat": "beverage",
+   "src": " wine",
+   "tgt": "Vodka",
+   "pre": 40,
+   "post": 104
+  },
+  {
+   "cat": "beverage",
+   "src": " wine",
+   "tgt": "Soda",
+   "pre": 7,
+   "post": 26
+  },
+  {
+   "cat": "organ",
+   "src": " kidney",
+   "tgt": "Skin",
+   "pre": 252,
+   "post": 362
+  },
+  {
+   "cat": "organ",
+   "src": " kidney",
+   "tgt": "Liver",
+   "pre": 58,
+   "post": 126
+  },
+  {
+   "cat": "organ",
+   "src": " kidney",
+   "tgt": "Heart",
+   "pre": 31,
+   "post": 66
+  },
+  {
+   "cat": "organ",
+   "src": " kidney",
+   "tgt": "Muscle",
+   "pre": 252,
+   "post": 349
+  },
+  {
+   "cat": "city",
+   "src": " Rome",
+   "tgt": "Paris",
+   "pre": 183,
+   "post": 394
+  },
+  {
+   "cat": "city",
+   "src": " Rome",
+   "tgt": "Madrid",
+   "pre": 329,
+   "post": 1270
+  },
+  {
+   "cat": "city",
+   "src": " Rome",
+   "tgt": "London",
+   "pre": 55,
+   "post": 219
+  },
+  {
+   "cat": "city",
+   "src": " Rome",
+   "tgt": "Sydney",
+   "pre": 902,
+   "post": 3295
+  },
+  {
+   "cat": "river",
+   "src": " Nile",
+   "tgt": "Jordan",
+   "pre": 1291,
+   "post": 2873
+  },
+  {
+   "cat": "river",
+   "src": " Nile",
+   "tgt": "Congo",
+   "pre": 1782,
+   "post": 3376
+  },
+  {
+   "cat": "river",
+   "src": " Nile",
+   "tgt": "Ohio",
+   "pre": 3131,
+   "post": 6786
+  },
+  {
+   "cat": "river",
+   "src": " Nile",
+   "tgt": "Mississippi",
+   "pre": 2388,
+   "post": 3502
+  }
+ ]
+}

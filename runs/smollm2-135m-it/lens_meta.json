@@ -1,0 +1,12 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "n_prompts": 1000,
+  "skip_prompts": 0,
+  "dim_batch": 192,
+  "max_seq_len": 128,
+  "target_layer": null,
+  "skip_first": 16,
+  "corpus": "Salesforce/wikitext:wikitext-103-raw-v1:train (min200/max2000 chars, non-header)",
+  "dtype": "bfloat16",
+  "wall_seconds": 19232.8
+}

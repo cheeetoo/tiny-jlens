@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 6402Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 7676.91it/s]
+tense {'imagine': {'lens_z': [0.68, 0.22], 'probe_z': [0.31, 0.25]}, 'real': {'lens_z': [0.41, 0.23], 'probe_z': [1.81, 0.25]}}
+language {'imagine': {'lens_z': [0.59, 0.4], 'probe_z': [1.07, 0.36]}, 'real': {'lens_z': [6.66, 0.23], 'probe_z': [25.69, 0.37]}}
+caps {'imagine': {'lens_z': [0.41, 0.24], 'probe_z': [0.74, 0.28]}, 'real': {'lens_z': [1.46, 0.14], 'probe_z': [11.13, 0.23]}}
+saved runs/confirm_c2c.json
