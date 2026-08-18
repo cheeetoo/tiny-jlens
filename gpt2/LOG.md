@@ -256,3 +256,7 @@ are exploration unless marked.
   probe J/nonJ/clamp 22/5/1 (4.4x — ladder 2.2->2.9->4.4x); C4 91%
   same-pair-all-3 82%; C5a 24/24 vs 0/12 with latent at rank 1; occupancy
   5-9. Everything monotone.
+- Pre-declared for the LARGE confirmatory (before it runs): alongside the
+  frozen 0.55-fraction C5b band, a band-matched 4-layer column (L31-34) is
+  recorded as a sensitivity analysis — same rationale as the medium
+  band-matched run; the frozen-band number remains the bar-graded one.
