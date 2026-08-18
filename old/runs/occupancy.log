@@ -1,6 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  16%|█▌        | 44/272 [00:00<00:00, 439.51it/s]Loading weights:  32%|███▏      | 88/272 [00:00<00:00, 276.44it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 683.79it/s]
-L20: occupancy median 1 [1-2], excess var 0.008
-L23: occupancy median 1 [1-1], excess var 0.007
-L26: occupancy median 1 [1-2], excess var 0.010
-saved runs/occupancy.json

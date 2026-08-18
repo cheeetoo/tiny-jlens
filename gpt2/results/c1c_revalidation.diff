@@ -1,5 +1,0 @@
-1c1
-< {'full': [True, True, True, True, True, False, True, False, True, False, True, True], 'J': [True, True, True, True, True, False, True, False, False, True, True, True], 'nonJ': [False, False, False, False, True, False, False, False, True, False, True, False], 'nonJ_clamped': [False, False, False, False, False, False, False, False, False, True, False, False]}
----
-> {'full': [True, True, True, True, True, False, True, False, True, False, True, True], 'J': [True, True, True, True, True, False, True, False, False, True, True, True], 'nonJ': [False, False, False, False, True, False, False, False, True, False, True, False], 'nonJ_clamped': [False, False, False, False, False, False, False, False, False, False, False, False]}
-REVALIDATION DIFFERS

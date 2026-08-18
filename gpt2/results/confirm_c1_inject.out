@@ -1,6 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  42%|████▏     | 62/148 [00:00<00:00, 619.87it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1443.88it/s]
-20 concepts; steering centered lens vector at layers [7, 8, 9, 10] (all positions except the last 3)
-strength   report top-1   report top-5   median rank   control top-5 (blurt)
-     0         0/20            0/20         17530          0/20
-     0         8/20           13/20             1          2/20

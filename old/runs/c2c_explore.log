@@ -1,6 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  42%|████▏     | 114/272 [00:00<00:00, 637.18it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 977.80it/s]
-tense {'imagine': {'lens_z': [0.73, 0.22], 'probe_z': [0.31, 0.25]}, 'real': {'lens_z': [0.42, 0.23], 'probe_z': [1.81, 0.25]}}
-language {'imagine': {'lens_z': [0.55, 0.39], 'probe_z': [1.07, 0.36]}, 'real': {'lens_z': [6.26, 0.22], 'probe_z': [25.73, 0.37]}}
-caps {'imagine': {'lens_z': [0.43, 0.24], 'probe_z': [0.74, 0.28]}, 'real': {'lens_z': [1.47, 0.14], 'probe_z': [11.13, 0.23]}}
-saved runs/c2c_explore.json

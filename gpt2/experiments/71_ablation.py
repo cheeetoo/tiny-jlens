@@ -2,7 +2,7 @@
 
 At every prompt position (band L7–L10), project out the span of the top-k
 CENTERED lens vectors (readout ranking; the raw version removes the shared
-gauge axis instead and has no dose — see results/CONE.md), sparing the clean
+gauge axis instead and has no dose — see the README gauge note), sparing the clean
 top-10 output tokens per position (the paper's protection rule).
 
 Battery (capability-filtered per model; shallow/flexible assignment fixed by
@@ -129,7 +129,7 @@ def graded_top1(ids, edits=()):
 
 # ---------------- task definitions ----------------
 
-cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json"))
+cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
 ds = datasets.load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split="validation")
 wiki = [r["text"].strip() for r in ds if len(r["text"].strip()) > 600][:6]
 
@@ -242,4 +242,4 @@ for name, fn, kind in TASKS:
         line += f" {results[m][name] / c if c else float('nan'):>7.2f}" if c else "    n/a"
     print(line)
 suffix2 = f"_L{LAYS[0]}-{LAYS[-1]}" if len(sys.argv) > 3 else ""
-json.dump(results, open(f"/tiny-jlens/gpt2/results/c5b_{MODEL}{pools.SUFFIX}_k{K}{suffix2}.json", "w"))
+json.dump(results, open(f"/tiny-jlens/gpt2/results/c5b_{MODEL}_k{K}{suffix2}.json", "w"))

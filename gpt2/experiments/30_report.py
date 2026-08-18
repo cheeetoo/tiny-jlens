@@ -15,7 +15,6 @@ Phases:
 Run:  python experiments/30_report.py corr|swap|inject [model]
 """
 
-import os
 import json
 import random
 import sys
@@ -60,7 +59,7 @@ def anchor_state(prompt: str, edits=()):
     return ids, lg
 
 
-cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json"))
+cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
 cats_all = pools.report_categories(tok)          # curated members (swap targets)
 usable = {c for c, r in cap["report"].items() if r["member_top5"]}
 top1_valid = {c for c, r in cap["report"].items() if r["valid"]}
@@ -93,7 +92,7 @@ if PHASE == "corr":
         vals = torch.tensor(per_layer[l])
         print(f"  L{l:2d}  {vals.mean():+.3f}  (min {vals.min():+.2f}, max {vals.max():+.2f})")
     json.dump({l: per_layer[l] for l in kit.layers},
-              open(f"/tiny-jlens/gpt2/results/c1_corr_{MODEL}{pools.SUFFIX}.json", "w"))
+              open(f"/tiny-jlens/gpt2/results/c1_corr_{MODEL}.json", "w"))
 
 # ---------------- swap ----------------
 
@@ -115,7 +114,7 @@ if PHASE == "swap":
                     and min(int((lg > lg[v]).sum()) for v in variant_ids(m)) >= 10]
         for tgt_name in rng.sample(eligible, min(5, len(eligible))):
             tgt_tok = min(variant_ids(tgt_name), key=lambda v: int((lg > lg[v]).sum()))
-            for centered in ((True,) if pools.CONFIRM else (False, True)):
+            for centered in (False, True):
                 for alpha in (1.0, 2.0):
                     edits = core.swap_clamped(kit, ids, lays, [src_tok], [tgt_tok],
                                               alpha=alpha, centered=centered)
@@ -137,7 +136,7 @@ if PHASE == "swap":
                       f"top-1 {100*sum(r['top1'] for r in sel)/len(sel):.0f}%  "
                       f"top-5 {100*sum(r['top5'] for r in sel)/len(sel):.0f}%  "
                       f"median post rank {sorted(r['tgt_rank_post'] for r in sel)[len(sel)//2]}")
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_swap_{MODEL}{pools.SUFFIX}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_swap_{MODEL}.json", "w"))
 
 # ---------------- inject ----------------
 
@@ -146,9 +145,7 @@ if PHASE == "inject":
     CONTROL = "The weather report for tomorrow morning said it would be"
     CONCEPTS = pools.INJECT_CONCEPTS
     lays = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
-    STRENGTHS = (0.0, 0.25) if pools.CONFIRM else (0.0, 0.25, 0.5, 1.0, 2.0)
-    if os.environ.get("TJL_STRENGTHS"):  # post-hoc dose diagnostics only
-        STRENGTHS = tuple(float(s) for s in os.environ["TJL_STRENGTHS"].split(","))
+    STRENGTHS = (0.0, 0.25, 0.5, 1.0, 2.0)
     # inject at every position EXCEPT the last 3 (the readout anchor is never
     # steered directly — the report must be carried there by the model), as in
     # the paper's inject-on-the-user-turn protocol
@@ -181,4 +178,4 @@ if PHASE == "inject":
               f"       {sum(r['report_rank']<5 for r in sel):>6}/{len(sel)}"
               f"        {sorted(r['report_rank'] for r in sel)[len(sel)//2]:>6}"
               f"       {sum(r['control_rank']<5 for r in sel):>4}/{len(sel)}")
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_inject_{MODEL}{pools.SUFFIX}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_inject_{MODEL}.json", "w"))

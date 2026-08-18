@@ -1,20 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:   7%|▋         | 10/148 [00:00<00:01, 99.22it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 750.25it/s]
-23 items after capability filter + partner assignment (0 from the paper's sets)
-
-per-layer: median rank of each probe word at the answer position (n=23), and % items with intermediate in top-10
-  L  interm  top10%  answer     arg    null
-  0   40141      0%   15737   31089   29912
-  1   30664      0%   10015   17957   31160
-  2   31962      0%   17575   15151   40723
-  3   18566      0%    3015    6955   23425
-  4   15933      0%    1146    8119   27590
-  5   20274      0%     874   17866   21173
-  6    2023      0%      88    1709    2625
-  7     807      4%      56     896    2763
-  8     351      9%      37     474    2551
-  9      17     39%       4     110     468
- 10       5     52%       0      69     181
-
-intermediate in top-10 at SOME layer: 12/23
-UNSPOKEN items (intermediate not in output top-10): 15/23; of these, in lens top-10 at some layer: 5/15

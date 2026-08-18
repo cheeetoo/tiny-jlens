@@ -1,15 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 36770.35it/s]
-categories: 4 (usable = member in output top-5)
-per-layer mean Spearman (lens ranks vs output ranks of members):
-  L 0  -0.376  (min -0.57, max -0.18)
-  L 1  -0.217  (min -0.62, max +0.40)
-  L 2  -0.129  (min -0.48, max +0.50)
-  L 3  +0.091  (min -0.33, max +0.48)
-  L 4  -0.065  (min -0.28, max +0.33)
-  L 5  +0.347  (min -0.10, max +0.67)
-  L 6  +0.220  (min -0.15, max +0.48)
-  L 7  +0.363  (min -0.02, max +0.55)
-  L 8  +0.276  (min -0.20, max +0.55)
-  L 9  +0.345  (min +0.02, max +0.60)
-  L10  +0.395  (min +0.13, max +0.57)

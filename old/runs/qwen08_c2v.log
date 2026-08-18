@@ -1,32 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights:  72%|███████▎  | 232/320 [00:00<00:00, 2297.42it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3091.68it/s]
-V1 fruit: answer='apple' rank demand=1 nodemand=0
-V1 fruit: answer='apple' rank demand=1 nodemand=0
-V1 country: answer='I' rank demand=19 nodemand=16
-V1 country: answer='original' rank demand=628 nodemand=593
-
-V3 focus-minus-baseline mean target logprob by layer:
-  L 0: +0.013
-  L 1: -0.012
-  L 2: -0.002
-  L 3: +0.003
-  L 4: -0.020
-  L 5: -0.024
-  L 6: -0.011
-  L 7: -0.055
-  L 8: -0.222
-  L 9: -0.108
-  L10: +0.177
-  L11: +0.308
-  L12: +1.201
-  L13: +1.672
-  L14: +1.952
-  L15: +3.101
-  L16: +3.228
-  L17: +3.760
-  L18: +3.275
-  L19: +4.993
-  L20: +5.245
-  L21: +6.094
-  L22: +6.032
-saved runs/qwen08_c2v.json

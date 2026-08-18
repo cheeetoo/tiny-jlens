@@ -51,7 +51,7 @@ def graded_top1(ids, edits=()):
     return t, lg
 
 
-cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json"))
+cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
 cells = []
 for c in cap["c4"]:
     ok_args = {a for a, v in c["cell"].items() if v["ok"]}
@@ -123,4 +123,4 @@ if ok:
     if hit_load and miss_load:
         print(f"mean loading: hits {sum(hit_load)/len(hit_load):.3f} "
               f"vs misses {sum(miss_load)/len(miss_load):.3f}")
-json.dump(rows, open(f"/tiny-jlens/gpt2/results/c4_{MODEL}{pools.SUFFIX}.json", "w"))
+json.dump(rows, open(f"/tiny-jlens/gpt2/results/c4_{MODEL}.json", "w"))

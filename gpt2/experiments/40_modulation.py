@@ -97,5 +97,5 @@ for l in kit.layers:
     mb = sorted(r["base"]["per_layer"][l] for r in rows)[n // 2]
     print(f"  L{l:2d}  think {mt:>6}   base {mb:>6}")
 
-json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_{MODEL}{pools.SUFFIX}.json", "w"))
-print(f"saved results/c2_{MODEL}{pools.SUFFIX}.json")
+json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_{MODEL}.json", "w"))
+print(f"saved results/c2_{MODEL}.json")

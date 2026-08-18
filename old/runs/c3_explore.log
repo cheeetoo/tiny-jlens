@@ -1,36 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  76%|███████▌  | 206/272 [00:00<00:00, 2041.13it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 2644.37it/s]
-filter: 44/136 items pass (15 ref)
-readout: intermediate in lens top-10 — final pos 30/43, any pos 43/43
-swap: {'top1_a1': 24, 'top1_a1.5': 19} of n=43
-timing: median(answer_onset - inter_onset) = 0 over 36 items
-{'family': 'lang-capital', 'inter': 'France', 'swap_to': 'Japan', 'want': 'Tokyo', 'pre_rank': 254, 'J_var_share': 0.05836408887989819, 'full_rank': 0, 'J_rank': 0, 'nonJ_rank': 0, 'nonJ_clamped_rank': 135}
-{'family': 'lang-capital', 'inter': 'Germany', 'swap_to': 'England', 'want': 'London', 'pre_rank': 70, 'J_var_share': 0.06332902726717293, 'full_rank': 1, 'J_rank': 4, 'nonJ_rank': 2, 'nonJ_clamped_rank': 38}
-{'family': 'lang-capital', 'inter': 'Spain', 'swap_to': 'Korea', 'want': 'Seoul', 'pre_rank': 7360, 'J_var_share': 0.07535472116433084, 'full_rank': 1, 'J_rank': 0, 'nonJ_rank': 1, 'nonJ_clamped_rank': 5359}
-{'family': 'lang-capital', 'inter': 'Italy', 'swap_to': 'France', 'want': 'Paris', 'pre_rank': 114, 'J_var_share': 0.06406733440235257, 'full_rank': 6, 'J_rank': 2, 'nonJ_rank': 3, 'nonJ_clamped_rank': 85}
-{'family': 'lang-capital', 'inter': 'Russia', 'swap_to': 'Italy', 'want': 'Rome', 'pre_rank': 646, 'J_var_share': 0.08390516904182732, 'full_rank': 2, 'J_rank': 4, 'nonJ_rank': 2, 'nonJ_clamped_rank': 208}
-{'family': 'lang-capital', 'inter': 'Japan', 'swap_to': 'England', 'want': 'London', 'pre_rank': 565, 'J_var_share': 0.07248465530574322, 'full_rank': 0, 'J_rank': 14, 'nonJ_rank': 2, 'nonJ_clamped_rank': 484}
-{'family': 'lang-capital', 'inter': 'China', 'swap_to': 'Sweden', 'want': 'Stockholm', 'pre_rank': 5578, 'J_var_share': 0.08151409076526761, 'full_rank': 2, 'J_rank': 5, 'nonJ_rank': 5, 'nonJ_clamped_rank': 6417}
-{'family': 'lang-capital', 'inter': 'Poland', 'swap_to': 'Italy', 'want': 'Rome', 'pre_rank': 374, 'J_var_share': 0.04960440821014345, 'full_rank': 18, 'J_rank': 6, 'nonJ_rank': 11, 'nonJ_clamped_rank': 199}
-{'family': 'lang-capital', 'inter': 'Sweden', 'swap_to': 'Norway', 'want': 'Oslo', 'pre_rank': 3, 'J_var_share': 0.0648251036182046, 'full_rank': 0, 'J_rank': 0, 'nonJ_rank': 0, 'nonJ_clamped_rank': 1}
-{'family': 'lang-capital', 'inter': 'Greece', 'swap_to': 'Italy', 'want': 'Rome', 'pre_rank': 120, 'J_var_share': 0.04698636495595565, 'full_rank': 15, 'J_rank': 4, 'nonJ_rank': 2, 'nonJ_clamped_rank': 14}
-{'family': 'lang-capital', 'inter': 'Hungary', 'swap_to': 'Germany', 'want': 'Berlin', 'pre_rank': 165, 'J_var_share': 0.024389118210820016, 'full_rank': 61, 'J_rank': 7, 'nonJ_rank': 18, 'nonJ_clamped_rank': 94}
-{'family': 'lang-capital', 'inter': 'Netherlands', 'swap_to': 'China', 'want': 'Beijing', 'pre_rank': 4064, 'J_var_share': 0.0518031872343272, 'full_rank': 1, 'J_rank': 2, 'nonJ_rank': 6, 'nonJ_clamped_rank': 4333}
-{'family': 'lang-capital', 'inter': 'Portugal', 'swap_to': 'Finland', 'want': 'Helsinki', 'pre_rank': 4758, 'J_var_share': 0.0528818026650697, 'full_rank': 1, 'J_rank': 47, 'nonJ_rank': 58, 'nonJ_clamped_rank': 3567}
-{'family': 'lang-capital', 'inter': 'Turkey', 'swap_to': 'England', 'want': 'London', 'pre_rank': 174, 'J_var_share': 0.02642330387607217, 'full_rank': 2, 'J_rank': 16, 'nonJ_rank': 8, 'nonJ_clamped_rank': 102}
-{'family': 'lang-capital', 'inter': 'Korea', 'swap_to': 'Denmark', 'want': 'Copenhagen', 'pre_rank': 4200, 'J_var_share': 0.05961179919540882, 'full_rank': 0, 'J_rank': 101, 'nonJ_rank': 93, 'nonJ_clamped_rank': 1093}
-{'family': 'lang-capital', 'inter': 'Thailand', 'swap_to': 'Finland', 'want': 'Helsinki', 'pre_rank': 4777, 'J_var_share': 0.058568139211274683, 'full_rank': 1, 'J_rank': 93, 'nonJ_rank': 98, 'nonJ_clamped_rank': 2722}
-{'family': 'lang-capital', 'inter': 'Vietnam', 'swap_to': 'Finland', 'want': 'Helsinki', 'pre_rank': 6563, 'J_var_share': 0.04538614675402641, 'full_rank': 1, 'J_rank': 112, 'nonJ_rank': 215, 'nonJ_clamped_rank': 5625}
-{'family': 'lang-capital', 'inter': 'Finland', 'swap_to': 'Sweden', 'want': 'Stockholm', 'pre_rank': 19, 'J_var_share': 0.016402690205723047, 'full_rank': 3384, 'J_rank': 2, 'nonJ_rank': 1, 'nonJ_clamped_rank': 14}
-{'family': 'lang-capital', 'inter': 'Norway', 'swap_to': 'Korea', 'want': 'Seoul', 'pre_rank': 651, 'J_var_share': 0.030741841066628695, 'full_rank': 6, 'J_rank': 0, 'nonJ_rank': 2, 'nonJ_clamped_rank': 520}
-{'family': 'lang-capital', 'inter': 'Denmark', 'swap_to': 'Turkey', 'want': 'Ankara', 'pre_rank': 180, 'J_var_share': 0.031047982144784214, 'full_rank': 60, 'J_rank': 15, 'nonJ_rank': 3, 'nonJ_clamped_rank': 119}
-{'family': 'lang-capital', 'inter': 'England', 'swap_to': 'China', 'want': 'Beijing', 'pre_rank': 210, 'J_var_share': 0.01709934207610786, 'full_rank': 89, 'J_rank': 3, 'nonJ_rank': 0, 'nonJ_clamped_rank': 117}
-{'family': 'city-language', 'inter': 'Russia', 'swap_to': 'Netherlands', 'want': 'Dutch', 'pre_rank': 749, 'J_var_share': 0.08390516904182732, 'full_rank': 0, 'J_rank': 0, 'nonJ_rank': 0, 'nonJ_clamped_rank': 365}
-{'family': 'city-language', 'inter': 'France', 'swap_to': 'Netherlands', 'want': 'Dutch', 'pre_rank': 1041, 'J_var_share': 0.05836408887989819, 'full_rank': 1, 'J_rank': 2, 'nonJ_rank': 17, 'nonJ_clamped_rank': 473}
-{'family': 'city-language', 'inter': 'Egypt', 'swap_to': 'Germany', 'want': 'German', 'pre_rank': 453, 'J_var_share': 0.061949655413627625, 'full_rank': 340, 'J_rank': 0, 'nonJ_rank': 0, 'nonJ_clamped_rank': 365}
-{'family': 'city-language', 'inter': 'Germany', 'swap_to': 'Egypt', 'want': 'Arabic', 'pre_rank': 251, 'J_var_share': 0.06332902726717293, 'full_rank': 745, 'J_rank': 49, 'nonJ_rank': 55, 'nonJ_clamped_rank': 416}
-{'family': 'city-language', 'inter': 'Spain', 'swap_to': 'Netherlands', 'want': 'Dutch', 'pre_rank': 1611, 'J_var_share': 0.07535472116433084, 'full_rank': 9, 'J_rank': 0, 'nonJ_rank': 11, 'nonJ_clamped_rank': 1158}
-{'family': 'city-language', 'inter': 'Poland', 'swap_to': 'France', 'want': 'French', 'pre_rank': 81, 'J_var_share': 0.04960440821014345, 'full_rank': 0, 'J_rank': 0, 'nonJ_rank': 0, 'nonJ_clamped_rank': 62}
-{'family': 'city-language', 'inter': 'Netherlands', 'swap_to': 'Poland', 'want': 'Polish', 'pre_rank': 103, 'J_var_share': 0.0518031872343272, 'full_rank': 224, 'J_rank': 0, 'nonJ_rank': 3, 'nonJ_clamped_rank': 91}
-probe: {'n': 28, 'full_top1': 6, 'J_top1': 9, 'nonJ_top1': 6, 'nonJ_clamped_top1': 0, 'mean_J_var_share': 0.05425359190937381}
-saved runs/c3_explore.json

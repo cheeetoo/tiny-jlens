@@ -1,27 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 7139.07it/s]
-gpt2-medium: MLP gain at block l+1 (normalized: random isotropic = 1)
-  L  lens(cen)  mlp_out rows
-  0       1.00          0.96
-  1       0.80          0.90
-  2       0.83          1.04
-  3       0.75          1.03
-  4       0.74          1.00
-  5       0.99          1.03
-  6       0.96          1.03
-  7       0.89          1.04
-  8       0.85          1.06
-  9       0.88          1.10
- 10       0.91          1.05
- 11       0.94          1.08
- 12       0.97          1.09
- 13       1.05          1.07
- 14       1.03          1.05
- 15       1.07          1.06
- 16       1.06          1.01
- 17       1.07          1.00
- 18       1.08          0.96
- 19       1.06          0.93
- 20       1.11          0.92
- 21       1.13          0.92
- 22       1.12          0.91

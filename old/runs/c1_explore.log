@@ -1,17 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 2802.05it/s]
-band: L19..L26
-categories with >=6 single-token candidates: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'tree', 'bird', 'language', 'profession', 'beverage', 'organ', 'city', 'river']
-1a mean Spearman by layer: {19: 0.286, 20: 0.311, 21: 0.419, 22: 0.496, 23: 0.603, 24: 0.602, 25: 0.645, 26: 0.649}
-1b: 14/84 top-1, 24/84 top-5
-{'cat': 'color', 'source': 'blue', 'target': 'Pink', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 18}
-{'cat': 'color', 'source': 'blue', 'target': 'Gold', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 51}
-{'cat': 'color', 'source': 'blue', 'target': 'Cyan', 'J_comp_rank': 9, 'nonJ_comp_rank': 1, 'nonJ_clamped_rank': 37}
-{'cat': 'language', 'source': 'English', 'target': 'Russian', 'J_comp_rank': 307, 'nonJ_comp_rank': 657, 'nonJ_clamped_rank': 9250}
-{'cat': 'language', 'source': 'English', 'target': 'Italian', 'J_comp_rank': 247, 'nonJ_comp_rank': 1510, 'nonJ_clamped_rank': 8134}
-{'cat': 'language', 'source': 'English', 'target': 'Korean', 'J_comp_rank': 16, 'nonJ_comp_rank': 1083, 'nonJ_clamped_rank': 12109}
-{'cat': 'organ', 'source': 'heart', 'target': 'Bone', 'J_comp_rank': 0, 'nonJ_comp_rank': 0, 'nonJ_clamped_rank': 86}
-{'cat': 'organ', 'source': 'heart', 'target': 'Muscle', 'J_comp_rank': 0, 'nonJ_comp_rank': 2, 'nonJ_clamped_rank': 130}
-{'cat': 'organ', 'source': 'heart', 'target': 'Spleen', 'J_comp_rank': 0, 'nonJ_comp_rank': 7, 'nonJ_clamped_rank': 64}
-1c: {'J_top5': 5, 'nonJ_top5': 5, 'nonJ_clamped_top5': 0, 'n': 9}
-saved runs/c1_explore.json

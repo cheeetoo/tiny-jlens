@@ -2,27 +2,72 @@
 
 Can the "privileged set" evidence pattern from *Verbalizable Representations
 Form a Global Workspace in Language Models* (Gurnee et al. 2026) be
-instantiated in tiny models? Phase 1 (days 1–2): SmolLM2-135M + a scale
-ladder. Phase 2 (current): a clean rewrite focused on **GPT-2**, including
-the cone/gauge analysis of the J-lens dictionary at small scale.
+instantiated in **gpt2-small** (124M), using the J-lens artifact the authors
+released for it?
 
-- **gpt2/** — the current work. Start with `gpt2/PLAN.md`, then
-  `gpt2/REPORT.md` (results), `gpt2/results/CONE.md` (the cone-is-gauge
-  finding), `gpt2/CONFIRMED.md` (frozen confirmatory protocol),
-  `gpt2/LOG.md` (every run and dead end).
-  - `core.py` — model+lens loading, exact readouts, lens vectors,
-    interventions (validated to 0.0 against the reference `apply()`)
-  - `pools.py` / `pools_confirm.py` — task materials (exploration / held-out)
-  - `experiments/` — numbered, one file per experiment
-  - `results/` — JSONs + run logs
-- **old/** — phase 1, kept verbatim as the audit trail (pre-registration
-  BRIEF.md, confirmatory protocol, lab log, report, code, runs).
-- **paper.md / eleos-commentary.txt** — source materials.
-- **ref/jacobian-lens** — Anthropic's reference implementation (installed
+## Layout
+
+- `gpt2/core.py` — model + lens loading, exact lens readouts, J-lens
+  vectors, residual-stream interventions (validated to 0.0 against the
+  reference `apply()`; see the module docstring for all conventions).
+- `gpt2/pools.py` — task materials (country facts, two-hop families, report
+  categories, C2/C5 items; single-token constraints enforced at build time).
+- `gpt2/experiments/` — numbered, one file per experiment; each has a
+  docstring saying what it measures. `python gpt2/experiments/NN_name.py
+  [phase] [model]`, run from `gpt2/`.
+- `gpt2/results/` — result JSONs from the runs behind the write-up.
+- `paper.md`, `eleos-commentary.txt` — source materials.
+- `ref/jacobian-lens` — Anthropic's reference implementation (installed
   editable; fitting + readout backend).
-- **lenses/** — prefit lenses (gpt2-small is the authors' release; medium
-  and large are fitted here with the same recipe; .pt files gitignored).
+- `lenses/gpt2-small/` — the authors' released GPT-2 lens.
 
-Setup: `pip install -e ref/jacobian-lens` plus torch/transformers/datasets/
-scipy/langid. Every experiment is `python gpt2/experiments/NN_name.py
-[phase] [model]` from `gpt2/`.
+Setup: `pip install -e ref/jacobian-lens` plus
+torch/transformers/datasets/scipy/langid.
+
+## The cone is gauge (read this before the geometry)
+
+Every geometric operation in the code runs on the **centered** dictionary
+(`centered=True`). This is not a tuning knob; it is a canonical-gauge choice:
+
+- The exact lens readout is `logit_t(h) = ⟨v_t, h⟩/σ(Jh) + β_t`. Replace
+  every dictionary vector by `a·v_t + u` (any fixed `u`, any `a > 0`): every
+  logit shifts by the same per-position constant and rescales — and softmax
+  is invariant to both. **No readout the lens produces can distinguish the
+  dictionary from any of its gauge transforms**, so raw-dictionary geometry
+  (cosines, spans, projections, pseudoinverse coordinates) is not a property
+  of the lens until a gauge is fixed.
+- At GPT-2 scale one gauge component dominates: the vocabulary-mean vector
+  `v̄ = Jᵀū` is 97–99% of the dictionary's second moment (cos = 1.000 with
+  the top principal axis at every layer), and its logit profile is constant
+  across the vocabulary to ~2% — softmax-invisible, pure gauge. This is the
+  previously-reported "cone".
+- In the centered gauge (mean removed) the dictionary is healthy (mean
+  |cos| 0.07–0.10) and the blocked operations come alive: gradient pursuit
+  recovers 3–16% of activation variance (raw: 0.0–0.6%), top-k ablation
+  acquires a dose axis, and the paper's §3.1 projection swap goes from 0%
+  (raw) to 46–69% (centered) on GPT-2 two-hops.
+- Interventions along *differences* of lens vectors (the coordinate swap
+  moves along `v_s − v_t`, where `v̄` cancels) are gauge-invariant already —
+  which is why swaps always worked on GPT-2 while decompositions failed.
+
+`experiments/10_cone.py` reproduces the diagnosis; readout invariance to
+centering is verified numerically there and in `00_validate.py`.
+
+## Experiments
+
+| file | measures |
+|---|---|
+| 00_validate | exact-readout + intervention semantics vs the reference implementation |
+| 10_cone | the gauge diagnosis above |
+| 20_capability | pre-lens capability filter for every task pool |
+| 30_report | C1: report↔lens correlation; swap-to-report; injected "thought" |
+| 31_c1c | C1 privilege: matched-norm J vs non-J probe-component swaps on the report |
+| 40_modulation | C2: think-about-X / don't-think / base, rank-sensitive |
+| 41_c2_privilege | C2 privilege, word form (negative result by design: mention contaminates) |
+| 42_imagine | C2 privilege, property form (claim-is-French vs real French, J-orth probe) |
+| 43_demand | C2: demand-loading (hold a word during copying if it will be asked for) |
+| 50_reasoning | C3: two-hop readout / intermediate swap / cross-function / probe split |
+| 60_flexibility | C4: one argument swap redirects multiple functions |
+| 70_selectivity | C5a: same-latent flexible-vs-automatic dissociation |
+| 71_ablation | C5b: top-k centered ablation with protection + matched controls |
+| 80–82 | structure: occupancy/band; lens vs logit lens; MLP gain |

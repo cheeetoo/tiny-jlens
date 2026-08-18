@@ -1,15 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  75%|███████▌  | 219/292 [00:00<00:00, 2172.91it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 2832.93it/s]
-5 capability-passing cells: [('countries', 'capital', 6), ('countries', 'language', 9), ('countries', 'continent', 10), ('months', 'season', 3), ('numbers', 'first_letter', 3)]
-  countries: 14 pairs x 3 functions
-  months: 6 pairs x 1 functions
-  numbers: 6 pairs x 1 functions
-
-overall (target not already top-10): 26/40 (65%)
-  countries  capital      12/14
-  countries  language     12/14
-  countries  continent     2/2
-  months     season        0/4
-  numbers    first_letter  0/6
-same-pair-swaps evaluated on >=2 functions: 14; redirect ALL functions: 11 (79%)
-mean loading: hits 0.156 vs misses 0.118

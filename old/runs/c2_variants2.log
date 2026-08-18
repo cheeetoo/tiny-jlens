@@ -1,49 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:   4%|▎         | 10/272 [00:00<00:02, 99.88it/s]Loading weights:   8%|▊         | 21/272 [00:00<00:02, 105.81it/s]Loading weights:  76%|███████▌  | 207/272 [00:00<00:00, 906.41it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 901.37it/s]
-V1 animal: answer='Lion' best rank during copying = 10
-V1 animal: answer='cat' best rank during copying = 6
-V1 animal: answer='cat' best rank during copying = 171
-V1 color: answer='blue' best rank during copying = 1
-V1 color: answer='blue' best rank during copying = 3
-V1 color: answer='blue' best rank during copying = 25
-V1 fruit: answer='lemon' best rank during copying = 6
-V1 fruit: answer='banana' best rank during copying = 6
-V1 fruit: answer='banana' best rank during copying = 164
-V1 sport: answer='basketball' best rank during copying = 0
-V1 sport: answer='basketball' best rank during copying = 5
-V1 sport: answer='basketball' best rank during copying = 64
-V1 country: answer='United' best rank during copying = 4
-V1 country: answer='United' best rank during copying = 3
-V1 country: answer='United' best rank during copying = 10
-
-V3 focus-minus-baseline mean target logprob by layer:
-  L 0: +0.010
-  L 1: +0.005
-  L 2: +0.008
-  L 3: -0.015
-  L 4: +0.022
-  L 5: +0.111
-  L 6: +0.063
-  L 7: +0.036
-  L 8: +0.083
-  L 9: -0.085
-  L10: -0.044
-  L11: +0.036
-  L12: +0.047
-  L13: -0.007
-  L14: -0.015
-  L15: -0.102
-  L16: +0.025
-  L17: -0.089
-  L18: -0.562
-  L19: -0.554
-  L20: -0.406
-  L21: -0.088
-  L22: +0.039
-  L23: +0.787
-  L24: +0.179
-  L25: +0.336
-  L26: +0.217
-  L27: +0.517
-  L28: +0.499
-saved runs/c2_variants2.json

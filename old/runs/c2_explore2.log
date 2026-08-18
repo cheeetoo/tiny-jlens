@@ -1,12 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 6092.14it/s]
-phrasing groups: {'focus': 5, 'dismissal': 6, 'negated-think': 7, 'mention': 6} | group_kind: {'focus': 'focus', 'mention': 'control', 'dismissal': 'suppress', 'negated-think': 'suppress'}
-math/baseline {'n': 32, 'hits': 0, 'hits10': 0, 'median_rank': 1198, 'hit_rate': 0.0, 'hit10_rate': 0.0, 'mean_lp': -23.032}
-math/control {'n': 64, 'hits': 0, 'hits10': 0, 'median_rank': 876, 'hit_rate': 0.0, 'hit10_rate': 0.0, 'mean_lp': -23.122}
-math/focus {'n': 64, 'hits': 0, 'hits10': 0, 'median_rank': 1186, 'hit_rate': 0.0, 'hit10_rate': 0.0, 'mean_lp': -23.067}
-math/suppress {'n': 128, 'hits': 0, 'hits10': 0, 'median_rank': 1165, 'hit_rate': 0.0, 'hit10_rate': 0.0, 'mean_lp': -23.685}
-topic/baseline {'n': 40, 'hits': 1, 'hits10': 3, 'median_rank': 148, 'hit_rate': 0.025, 'hit10_rate': 0.075, 'mean_lp': -19.253}
-topic/control {'n': 80, 'hits': 2, 'hits10': 6, 'median_rank': 95, 'hit_rate': 0.025, 'hit10_rate': 0.075, 'mean_lp': -18.773}
-topic/focus {'n': 80, 'hits': 2, 'hits10': 6, 'median_rank': 102, 'hit_rate': 0.025, 'hit10_rate': 0.075, 'mean_lp': -18.735}
-topic/suppress {'n': 160, 'hits': 4, 'hits10': 13, 'median_rank': 116, 'hit_rate': 0.025, 'hit10_rate': 0.081, 'mean_lp': -19.311}
-saved runs/c2_explore2.json

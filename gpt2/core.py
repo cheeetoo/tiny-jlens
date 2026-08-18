@@ -47,8 +47,6 @@ LENS_DIR = "/tiny-jlens/lenses"
 
 LENS_FILES = {
     "gpt2": f"{LENS_DIR}/gpt2-small/gpt2_jacobian_lens.pt",  # authors' release
-    "gpt2-medium": f"{LENS_DIR}/gpt2-medium/lens.pt",         # our fit, same recipe
-    "gpt2-large": f"{LENS_DIR}/gpt2-large/lens.pt",           # our fit, same recipe
 }
 
 

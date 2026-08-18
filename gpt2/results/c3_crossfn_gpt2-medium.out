@@ -1,30 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  88%|████████▊ | 257/292 [00:00<00:00, 2569.45it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 2880.17it/s]
-93 items after capability filter + partner assignment (16 from the paper's sets)
-lang_capital + lang_continent: both-flip 7/11  any-flip 11/11
-lang_capital + city_language: both-flip 8/11  any-flip 11/11
-lang_continent + city_language: both-flip 8/18  any-flip 17/18
-city_language + city_continent: both-flip 14/19  any-flip 19/19
-
-TOTAL both-flip 37/59  any-flip 58/59
-  partial Finland->Korea: lang_continent got ' Korea' want Asia
-  partial Italy->Korea: lang_continent got ' Korea' want Asia
-  partial Poland->Korea: lang_continent got ' Korea' want Asia
-  partial Portugal->Korea: lang_continent got ' Korea' want Asia
-  partial Denmark->Israel: lang_capital got ' Tel' want Jerusalem
-  partial Israel->Finland: lang_capital got ' Prague' want Helsinki
-  partial Korea->Finland: lang_capital got ' K' want Helsinki
-  partial Finland->Korea: lang_continent got ' Korea' want Asia
-  partial Germany->Japan: lang_continent got ' Japan' want Asia
-  partial Greece->Vietnam: lang_continent got ' Vietnam' want Asia
-  partial Italy->Korea: lang_continent got ' Korea' want Asia
-  partial Poland->Iran: lang_continent got ' Iran' want Asia
-  partial Portugal->Iran: lang_continent got ' Iran' want Asia
-  partial Russia->Thailand: lang_continent got ' Thailand' want Asia
-  partial Spain->Japan: lang_continent got ' Japan' want Asia
-  partial Sweden->Iran: lang_continent got ' Europe' want Asia
-  partial Finland->Egypt: city_language got ' Egyptian' want Arabic
-  partial Poland->Vietnam: city_continent got ' Vietnam' want Asia
-  partial Portugal->Korea: city_continent got ' Korea' want Asia
-  partial Spain->India: city_continent got ' India' want Asia
-  partial Vietnam->Finland: city_language got ' French' want Finnish

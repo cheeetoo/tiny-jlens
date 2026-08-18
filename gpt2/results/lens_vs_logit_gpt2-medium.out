@@ -1,27 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 37110.99it/s]
-gpt2-medium: intermediate rank at answer position, J-lens vs logit lens (n=94)
-  L   J med  J<10%  logit med  logit<10%
-  0    3234     0%       3511         0%
-  1    6752     0%       2444         0%
-  2    6865     0%       2318         0%
-  3    7208     0%       1884         0%
-  4    9813     0%       1586         0%
-  5   18823     0%       1720         1%
-  6   17214     0%       1168         1%
-  7    9359     0%       1571         0%
-  8   12706     0%       1510         0%
-  9    9174     0%       1483         0%
- 10    4835     0%       1416         1%
- 11    3098     0%       1309         1%
- 12    2570     0%       1025         0%
- 13    1955     0%        995         0%
- 14     652     0%        591         0%
- 15     161     2%        133         2%
- 16      34    23%         28        35%
- 17      23    34%         16        45%
- 18      30    35%         15        46%
- 19      25    38%         14        46%
- 20       9    53%          7        55%
- 21       5    57%          4        67%
- 22       8    54%          6        55%

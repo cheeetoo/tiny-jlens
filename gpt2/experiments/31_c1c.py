@@ -1,19 +1,16 @@
-"""C1c — report-privilege addendum (frozen protocol, LOG.md "ADDENDUM 2").
+"""C1c — privilege test for the report channel (matched-norm probe split).
 
-For each confirm top1-valid report category: build member concept probes
-(3 "about the {m}" frames, last position, member-centered within category),
-split each probe into its J-span part (centered gradient pursuit, k=16) and
-the complement, then matched-norm swap source->target along each part at the
+For each top1-valid report category: build member concept probes (3 "about
+the {m}" frames, last position, member-centered within category), split each
+probe into its J-span part (centered gradient pursuit, k=16) and the
+complement, then matched-norm swap source->target along each part at the
 report anchor. Conditions: full / J / nonJ / nonJ with the union of the two
 members' GP atoms (plus their own coordinates) clamped. Success = target in
-graded top-5, best over alpha in {1,2}. Bars (BRIEF): J >= 3x nonJ; clamping
-J-coordinates cuts nonJ by >= half.
+graded top-5, best over alpha in {1,2}. Privilege = J-component swaps flip
+the report far more than matched-norm non-J swaps, and clamping the J
+coordinates kills what the non-J swaps achieve.
 
-This file is the checked-in form of the script that produced
-results/c1c_addendum_gpt2{,-medium}.json (recovered from the session log;
-identical logic and seed — rerunning at medium must reproduce 9/9/3/0 of 12).
-
-Run:  TJL_CONFIRM=1 python experiments/31_c1c.py [model]
+Run:  python experiments/31_c1c.py [model]
 """
 
 import json
@@ -27,15 +24,15 @@ import torch
 import core
 import pools
 
-MODEL = sys.argv[1] if len(sys.argv) > 1 else "gpt2-medium"
+MODEL = sys.argv[1] if len(sys.argv) > 1 else "gpt2"
 kit = core.Kit(MODEL)
 tok = kit.tokenizer
 rng = random.Random(1234)
 
-cap = json.load(open(f"results/capability_{MODEL}{pools.SUFFIX}.json"))
+cap = json.load(open(f"results/capability_{MODEL}.json"))
 cats_all = pools.report_categories(tok)
 valid = [c for c, r in cap["report"].items() if r["valid"]]
-print(f"{MODEL}{pools.SUFFIX} top1-valid cats:", valid)
+print(f"{MODEL} top1-valid cats:", valid)
 
 FRAMES = ["She told me all about the {m}.",
           "The article was mainly about the {m}.",
@@ -116,7 +113,7 @@ for cat in valid:
     print(".", end="", flush=True)
 
 n = len(res["full"])
-print(f"\nC1c at {MODEL} (confirm cats, frozen addendum protocol) n={n}:")
+print(f"\nC1c at {MODEL} n={n}:")
 for c, v in res.items():
     print(f"  {c:14s} {sum(v)}/{n}")
 json.dump({k: [bool(x) for x in v] for k, v in res.items()},

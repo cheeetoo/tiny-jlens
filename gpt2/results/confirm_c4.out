@@ -1,10 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  16%|█▌        | 23/148 [00:00<00:00, 228.98it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1344.49it/s]
-2 capability-passing cells: [('countries', 'capital', 7), ('countries', 'language', 10)]
-  countries: 42 pairs x 2 functions
-
-overall (target not already top-10): 77/81 (95%)
-  countries  capital      38/41
-  countries  language     39/40
-same-pair-swaps evaluated on >=2 functions: 40; redirect ALL functions: 37 (92%)
-mean loading: hits 0.177 vs misses 0.183

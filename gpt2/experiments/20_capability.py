@@ -1,7 +1,7 @@
 """Capability survey: which task items can this GPT-2 actually do?
 
 Applied before and independently of any lens measurement (the capability
-filter of BRIEF §3). For two-hop items we also grade the two halves
+filter: graded before any lens is consulted, same rule for all conditions). For two-hop items we also grade the two halves
 separately (first hop: cue -> intermediate; one hop: intermediate -> answer)
 to see where capability walls are.
 
@@ -143,6 +143,6 @@ for p in passages:
           f"country {'Y' if ctry_ok else 'n'}({tok.decode([t2]).strip()!r})")
 results["c5a"] = c5
 
-with open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json", "w") as f:
+with open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json", "w") as f:
     json.dump(results, f, indent=2)
 print(f"\nsaved results/capability_{MODEL}.json")

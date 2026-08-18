@@ -1,18 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 8009.23it/s]
-{'light': (23, 24), 'medium': (23, 26), 'heavy': (23, 28)}
-task sentiment: 17/20 clean-correct
-task analogy: 12/16 clean-correct
-task lang_country: 8/10 clean-correct
-task twohop: 36/56 clean-correct
-task passage_report: 20/20 clean-correct
-task passage_country: 17/20 clean-correct
-task onehop_recall: 16/64 clean-correct
-protection-overlap (frac positions with concept in protected set): {'twohop': 0.016666666666666666, 'lang_country': 0.0909090909090909, 'passage_report': 0.022568979723076307}
-none {'sentiment': '17/17', 'analogy': '12/12', 'lang_country': '8/8', 'twohop': '36/36', 'passage_report': '20/20', 'passage_country': '17/17', 'onehop_recall': '16/16', 'copy_forced': '46/52', 'wikitext_agree': '452/452'}
-ablate_light {'sentiment': '8/17', 'analogy': '10/12', 'lang_country': '6/8', 'twohop': '25/36', 'passage_report': '20/20', 'passage_country': '17/17', 'onehop_recall': '15/16', 'copy_forced': '45/52', 'wikitext_agree': '381/452'}
-ablate_medium {'sentiment': '9/17', 'analogy': '9/12', 'lang_country': '5/8', 'twohop': '24/36', 'passage_report': '20/20', 'passage_country': '17/17', 'onehop_recall': '15/16', 'copy_forced': '44/52', 'wikitext_agree': '374/452'}
-ablate_heavy {'sentiment': '9/17', 'analogy': '9/12', 'lang_country': '1/8', 'twohop': '20/36', 'passage_report': '20/20', 'passage_country': '15/17', 'onehop_recall': '12/16', 'copy_forced': '44/52', 'wikitext_agree': '347/452'}
-random_dirs {'sentiment': '4/17', 'analogy': '11/12', 'lang_country': '7/8', 'twohop': '26/36', 'passage_report': '20/20', 'passage_country': '13/17', 'onehop_recall': '13/16', 'copy_forced': '43/52', 'wikitext_agree': '297/452'}
-noise_matched {'sentiment': '13/17', 'analogy': '11/12', 'lang_country': '4/8', 'twohop': '19/36', 'passage_report': '20/20', 'passage_country': '15/17', 'onehop_recall': '16/16', 'copy_forced': '46/52', 'wikitext_agree': '371/452'}
-saved runs/c5b_late.json

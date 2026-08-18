@@ -25,7 +25,7 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "gpt2"
 kit = core.Kit(MODEL)
 tok = kit.tokenizer
 
-# 3-shot (1-shot was too weak a format cue for base GPT-2 — see LOG.md);
+# 3-shot (1-shot was too weak a format cue for base GPT-2);
 # measured over the SECOND HALF of the copy span, where maintenance-vs-decay
 # differentiates.
 SHOTS_D = ('Remember the word "lamp". Copy: "The road was wet." -> "The road was wet." The word was "lamp".\n'
@@ -74,4 +74,4 @@ print(f"n={n}: word's best lens rank over the copy span")
 print(f"  with recall demand:    median {med('demand')}")
 print(f"  without recall demand: median {med('nodemand')}")
 print(f"  demand < no-demand: {wins}/{n}")
-json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_demand_{MODEL}{pools.SUFFIX}.json", "w"))
+json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_demand_{MODEL}.json", "w"))

@@ -30,7 +30,7 @@ def variant_ids(word):
     return out
 
 
-cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json"))
+cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
 passed = {r["prompt"] for r in cap["twohop"] if r["twohop"]}
 items = [it for it in pools.twohop_items(tok) if it.prompt in passed]
 
@@ -58,4 +58,4 @@ for l in kit.layers:
                   logit_med=med(g), logit_top10=sum(r < 10 for r in g) / len(g))
     print(f"{l:>3} {out[l]['j_med']:>7} {100*out[l]['j_top10']:>5.0f}% "
           f"{out[l]['logit_med']:>10} {100*out[l]['logit_top10']:>9.0f}%")
-json.dump(out, open(f"/tiny-jlens/gpt2/results/lens_vs_logit_{MODEL}{pools.SUFFIX}.json", "w"))
+json.dump(out, open(f"/tiny-jlens/gpt2/results/lens_vs_logit_{MODEL}.json", "w"))
