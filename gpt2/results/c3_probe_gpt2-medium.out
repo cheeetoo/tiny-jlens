@@ -1,0 +1,10 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 94/292 [00:00<00:00, 939.86it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 2801.39it/s]
+93 items after capability filter + partner assignment (16 from the paper's sets)
+probe J-component variance share (centered GP k=16): median 41.2%, IQR [36.5%, 43.8%]
+.............................................................................
+n=77 items; matched-norm swap along probe components:
+  full         22/77  (29%)
+  J            16/77  (21%)
+  nonJ         13/77  (17%)
+  nonJ_clamped  1/77  (1%)

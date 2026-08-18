@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1476.51it/s]
+cf1  French   presence r/c/cont  70/ 71/ 52  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+cf2  French   presence r/c/cont  43/ 39/ 27  report ok->English  country ok->FLIP  cont Fr->Fr
+cf3  French   presence r/c/cont  28/ 26/ 31  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+cg1  German   presence r/c/cont  34/ 40/ 47  report --->English  country ok->FLIP  cont Ge->Ge
+cg2  German   presence r/c/cont 117/ 88/ 23  report --->English  country ok->FLIP  cont Ge->Ge
+cg3  German   presence r/c/cont  47/ 50/ 43  report --->English  country ok->FLIP  cont Ge->Ge
+cs1  Spanish  presence r/c/cont 190/181/ 64  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+cs2  Spanish  presence r/c/cont  43/ 41/ 25  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+cs3  Spanish  presence r/c/cont  95/102/ 49  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+ci1  Italian  presence r/c/cont  14/ 11/  4  report ok->FLIP  country ok->FLIP  cont It->It
+ci2  Italian  presence r/c/cont  39/ 28/  8  report --->English  country ok->FLIP  cont It->It
+ci3  Italian  presence r/c/cont  26/ 21/  6  report --->FLIP  country ok->FLIP  cont It->It
+
+flexible follows swap: 18/19 (report 6/7, country 12/12)
+automatic continuation changed: 0/12 (true redirects to alt language: 0; other changes: [])
+presence (language name in lens, best rank over last-10 passage positions): median 41

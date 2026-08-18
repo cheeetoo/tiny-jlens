@@ -72,22 +72,28 @@ unfitted block.
 
 ### C1 — Report
 - [E] Report↔lens Spearman rises monotonically 0.0 → **+0.61** at L10 over 9
-  categories (the paper's signature shape). [C: pending]
+  categories (the paper's signature shape). [C: +0.40 at L10 over the 4
+  held-out categories within 124M capability, all positive, same rising
+  shape.]
 - [E] Swap-to-report: target into graded top-5 in **69%** (α=2, centered;
-  58% top-1) [paper: 88% top-5]. [C at 124M: not evaluable — held-out
-  categories exceed capability; C from medium pending]
+  58% top-1) [paper: 88% top-5]. [C at 124M: not evaluable — no held-out
+  category yields a valid spontaneous report (capability filter, logged
+  before results); confirmed number to come from gpt2-medium.]
 - [E] Injected thought (base-model port): steering a concept's centered lens
   vector at L7–10 (never at the readout position) makes it the completion of
   "the word I am thinking about is": 24/24 top-5 at s=0.25 vs 5/24 blurt on a
   matched control prompt; dose-responsive; early-layer injection is
-  unselective and degrades at strength. [C: pending]
+  unselective and degrades at strength. [C: **13/20 report top-5 vs 2/20
+  blurt** at s=0.25 on fresh concepts — bar (≥40% and ≥2× blurt) met.]
 
 ### C2 — Directed modulation
 - [E] Focus/ignore/base (paper condition types; rank-sensitive metric):
   median best rank **14 / 26–36 / 657**; think<base 36/36; focus<ignore
-  33/36; ordering holds among non-blurt trials. White-bear: suppression
-  instructions install the concept nearly as strongly as focus (the paper's
-  own finding, amplified at 124M). [C: pending]
+  33/36. [C — held-out words and sentences, all four frozen bars met:
+  **focus 13 / ignore 115 / base 337**; focus<base 32/36 (p≈1e-6);
+  focus<ignore **35/36**; ignore<base 28/36 (white-bear: mention-priming
+  survives suppression); ordering intact among non-blurt trials
+  (47/269/350, n=22; blurt rate 14/36 reported).]
 - [E] Demand variant (3-shot): remembered word held in the lens during
   copying more when the format will ask for it later — 28/36, median 343 vs
   462. Present but much weaker than 135M-instruct (23/24) — the
@@ -107,20 +113,28 @@ unfitted block.
   *refuses* to show intermediates for the family the model solves by surface
   shortcut (city→language: 0/21 despite passing capability; its capital→
   country first hop is ~0) — readout content tracks intermediate *use*, not
-  item labels. [C: pending, pooled + family-resolved]
+  item labels. [C: the frozen POOLED bar misses — 5/15 unspoken items (33%)
+  vs the 50% bar — because the held-out pool that survives 124M capability is
+  dominated by the shortcut family, which the lens (correctly) reads as
+  empty; the dilution was predicted and logged before results. Family-resolved
+  and medium confirmatory numbers reported alongside.]
 - [E] Swap: intermediate coordinate swap flips the answer to the
   counterfactual in **77%** (α=1, L7–10; 91% on the clean family; n=35)
   [paper: Haiku 54%, Sonnet/Opus 70%]. Present without the last layer
-  (L5–9: 66–71%). [C: pending]
+  (L5–9: 66–71%). [C: 50% on held-out items (n=12; bar 30% ✓); mid-window
+  33%. gpt2-medium exploration, richer pool: 79–81% (n=47).]
 - [E] Anti-smuggling: one identical country swap under two different
   questions flips both answers to their respective counterfactuals 14/27
   (8/10 on the best function pairing) — impossible for a smuggled answer
-  vector. [C: pending]
+  vector. [C at 124M: zero held-out countries pass two functions (capability;
+  logged pre-results) — not evaluable; confirmed number from gpt2-medium.]
 - [E] Privilege (probe split, centered gauge): matched-norm swaps along
   components of independently-derived country probes: full **69%** /
   J-component **58%** / non-J **27%** / non-J with J-coordinates clamped
   **4%** (n=45). The paper's numbers: 60 / 61 / 28 / 6. **The pattern
-  replicates at GPT-2 scale.** [C: pending]
+  replicates at GPT-2 scale.** [C — held-out countries (harder, absolute
+  rates lower, same structure): full 39% / J 22% / non-J 9% / clamped 0%;
+  J = 2.4× non-J ✓, clamp kills the remainder ✓ — both privilege bars met.]
 
 ### C4 — Flexible generalization
 - [E] One identical argument swap redirects capital and language functions at
@@ -133,9 +147,11 @@ unfitted block.
 ### C5 — Selectivity
 - [E] Same-latent design: with the passage's language in the lens at
   comparable ranks in all conditions, the same swap flips country-inference
-  **12/12** and report 3/6 (the 3 failures suppress the true language without
-  installing the target), while automatic continuation **never** truly
-  redirects (0/12; langid classification). [paper: ~100% vs ~0%]. [C: pending]
+  **12/12** and report 3/6, while automatic continuation never truly
+  redirects (0/12). [C — twelve fresh passages: **flexible follows the swap
+  18/19 (report 6/7, country 12/12); automatic continuation 0/12**; latent
+  presence median rank 41 across all conditions. Paper: ~100% vs ~0%. Both
+  bars met with margin.]
 - [E] Whole-J-space ablation (centered; protection = clean top-10): flexible
   tasks collapse at every dose (k=1: 0.00–0.29 retention) to fluent,
   type-correct, content-wrong answers ("St. John's" as the French capital),
