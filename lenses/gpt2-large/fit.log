@@ -399,3 +399,4 @@ W0818 05:40:54.372000 140793 torch/_dynamo/convert_frame.py:1016] [0/8] To diagn
 [  5h15m + 45.99s]   prompt 390/1000  seq_len=128 n_valid=111  46s  max||J||/sqrt(d)=1.216  max_d_mean=4.74e-03
 [  5h16m + 45.20s]   prompt 391/1000  seq_len=63 n_valid=46  45s  max||J||/sqrt(d)=1.169  max_d_mean=6.92e-03
 [  5h16m + 47.40s]   prompt 392/1000  seq_len=72 n_valid=55  47s  max||J||/sqrt(d)=1.166  max_d_mean=3.18e-03
+[  5h17m + 54.00s]   prompt 393/1000  seq_len=128 n_valid=111  54s  max||J||/sqrt(d)=1.155  max_d_mean=4.31e-03

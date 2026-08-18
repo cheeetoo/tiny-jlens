@@ -21,17 +21,27 @@ Models: gpt2 (124M, primary), gpt2-medium (355M), gpt2-large (774M); lenses
 for medium/large fitted here with the authors' pipeline and recipe (validated
 day 1 at r = 0.993–0.9996 against their released artifact).
 
-## Headline (to be finalized after confirmatory)
+## Headline
 
-GPT-2-small shows **considerably more than hints** of the privileged-set
-pattern in exploration: every criterion's core contrast instantiates, four of
-five with effect sizes at or above the paper's own smaller-model numbers, and
-the privilege/selectivity controls — the parts that make the pattern mean
-something — pass where they were previously thought blocked. The clean
-boundary of what does *not* transfer: top-of-lens dominance, the
-imagine-instruction dissociation (partial only), workspace capacity
-(occupancy ~2–3 vs ~25), and one shallow task (ordinary next-token
-prediction) that at 124M is itself partly lens-mediated.
+**GPT-2 has at least hints of a privileged set — formally, under frozen
+held-out confirmatories at two model sizes: every one of the five criteria
+lands ≥ Hints at both 124M and 355M, with directed modulation (C2) Shown at
+both sizes and verbal report (C1) Shown at 355M.** No criterion produced a
+null or reversed key contrast anywhere in either confirmatory suite. The
+full-possession headline (≥3 criteria Shown at one size) is not met; the
+specific shortfalls are capacity- and breadth-shaped (pooled readout
+dilution, one-category grids, one shallow task not yet lens-independent),
+not absence-shaped.
+
+Two findings frame everything else. First, the "cone" that made small-model
+J-lens geometry look degenerate is a **gauge artifact** — provably invisible
+to every readout the lens can produce — and in the centered gauge the
+paper's own privilege controls run and pass at 124M; the artifact then
+dissolves on its own by 774M, where the correction converges to a no-op.
+Second, what separates GPT-2 from Claude is now a set of **measured, smooth
+scale trends** (dominance, matched-norm privilege asymmetry, capacity,
+breadth, readout coverage) rather than the presence or absence of the
+pattern itself.
 
 ## The cone is gauge (methodological result, load-bearing)
 
@@ -236,24 +246,42 @@ GPT-2 size; the specific gaps are pooled-readout dilution, grid breadth,
 n-starved crossfn eligibility, and shallow-task retention — each a capacity/
 breadth limitation, none a null or reversed contrast.
 
-## What this means (draft)
+## What this means
 
-1. The five-family evidence pattern instantiates in GPT-2-small far beyond
-   "hints" at the level of *content and causal routing*: reportable,
-   causally load-bearing, flexibly reusable, selectively engaged, unspoken
-   intermediates — with the privilege controls (matched-norm component
-   swaps, clamps, automatic-task invariance, ablation specificity vs matched
-   controls) behaving as in the paper.
-2. What separates GPT-2 from Claude is now specific and quantitative:
-   **capacity** (2–3 atoms vs ~25), **dominance** (rank ~14–50 vs rank 1),
-   **breadth** (one function category vs sixteen), **top-down purity** (the
-   imagine dissociation is partial; suppression barely distinguishable from
-   attention), and **the automatic margin** (ordinary text prediction is not
-   yet fully independent of the verbalizable stream).
-3. The cone was never a property of GPT-2's workspace — it was a gauge
-   artifact of the dictionary parameterization, and removing it is a
-   correction licensed by an exact invariance of the readout, not a method
-   change. With it removed, the paper's own controls run and pass at 124M.
+1. **The minimal claim is established.** Under pre-registered rules, frozen
+   bars, and held-out materials, GPT-2 — the standing example of a model
+   nobody extends consideration to — exhibits at least Hints of every
+   component of the privileged-set pattern, with two components fully Shown
+   at 355M. Anyone whose update from the workspace paper tracked
+   *reportable, causally load-bearing, selectively engaged internal
+   content* now owns a position on GPT-2.
+2. **What scale buys is measured, not categorical.** Dominance of held
+   content (lens rank 14 → 1), matched-norm privilege asymmetry (1.0× →
+   3.0× → 4.4×; Claude ~11×), workspace capacity (2–3 → 5–9 → ~25 atoms),
+   readout coverage of intermediates (33 → 45 → 68%), grid breadth, and the
+   independence of routine prediction from the verbalizable stream all rise
+   smoothly through the GPT-2 family toward the paper's Claude values. The
+   evidence pattern is not an emergent possession of frontier models; its
+   *degree* is what scales.
+3. **The cone was never the workspace — it was the parameterization.**
+   The dictionary is defined only up to transformations the readout provably
+   cannot see; at 124M–355M one such gauge component is 97–99% of the raw
+   dictionary (the Jᵀ-pullback of GPT-2's unembedding mean), and every
+   previously "blocked" measurement was measuring it. In the canonical
+   gauge, the paper's decomposition-based controls pass at 124M — and at
+   774M, where the artifact dissolves naturally, the correction costs
+   nothing. This also explains, retroactively and exactly, which day-2
+   operations transferred (gauge-invariant ones) and which failed
+   (gauge-dependent ones).
+4. **The honest boundary.** The imagine-style dissociation (instructions
+   move the lens but not J-orthogonalized property probes) is only partial
+   through 774M-class models — instruction mentions bleed into all channels
+   at these scales; matched-norm rate asymmetry only emerges above ~350M
+   (its sharp sibling, clamp-mediation, is total at every size); ordinary
+   next-token prediction is not yet fully independent of the verbalizable
+   stream at ≤774M; and on the GPT-2 family the J-lens readout holds no
+   advantage over the logit lens (its contribution is the vector system and
+   interventions, and GPT-2 is the family the logit lens was built on).
 
 ## Confirmed verdict table — gpt2-small (124M), held-out materials
 
