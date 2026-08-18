@@ -117,4 +117,4 @@ print(f"n={len(rows)} paired (word, sentence) trials; z vs base "
 for cond in ("think", "dont", "real"):
     zl, zp = paired_z(cond)
     print(f"  {cond:6s} lens z {zl:+6.1f}    orth-probe z {zp:+6.1f}")
-json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_privilege_{MODEL}.json", "w"))
+json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_privilege_{MODEL}{pools.SUFFIX}.json", "w"))

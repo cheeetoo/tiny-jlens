@@ -17,6 +17,7 @@ import torch
 
 import core
 import pools
+import pools_confirm
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "gpt2"
 kit = core.Kit(MODEL)
@@ -39,6 +40,10 @@ FRENCH = [
     "Le dernier train a quitté la gare avant la nuit.",
     "Son frère a réparé la clôture derrière la grange.",
 ]
+if pools.CONFIRM:
+    ENGLISH = pools_confirm.ENGLISH_CONFIRM
+    FRENCH = pools_confirm.FRENCH_CONFIRM
+
 NEUTRAL = "Here is a sentence: {s}"
 CLAIM = "The following sentence is written in French: {s}"
 
@@ -103,4 +108,4 @@ print(f"\nn={len(rows)} sentences; paired z vs neutral header "
 for cond in ("claim", "real"):
     print(f"  {cond:6s} lens z {paired_z(cond, 0):+6.1f}   "
           f"orth-probe z {paired_z(cond, 1):+6.1f}   full-probe z {paired_z(cond, 2):+6.1f}")
-json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_imagine_{MODEL}.json", "w"))
+json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_imagine_{MODEL}{pools.SUFFIX}.json", "w"))

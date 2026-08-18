@@ -59,7 +59,7 @@ def graded_top1(ids: torch.Tensor, edits=()):
 
 # ---------------- items: capability-passing, with swap partners ----------------
 
-cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
+cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json"))
 passed = {r["prompt"] for r in cap["twohop"] if r["twohop"]}
 passed_by_fam: dict[str, set] = {}
 for r in cap["twohop"]:
@@ -94,8 +94,10 @@ def window(lo_frac: float, hi_frac: float) -> list[int]:
 
 # ---------------- readout ----------------
 
+TABLE = pools.pools_confirm.NEW_COUNTRIES if pools.CONFIRM else pools.COUNTRIES
+
 if PHASE == "readout":
-    all_countries = list(pools.COUNTRIES)
+    all_countries = list(TABLE)
     rows = []
     for it in items:
         ids = kit.encode(it.prompt)
@@ -142,7 +144,7 @@ if PHASE == "readout":
     bu = [min(r["ranks"]["intermediate"].values()) for r in uns]
     print(f"UNSPOKEN items (intermediate not in output top-10): {len(uns)}/{len(rows)}; "
           f"of these, in lens top-10 at some layer: {sum(b < 10 for b in bu)}/{len(uns)}")
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_readout_{MODEL}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_readout_{MODEL}{pools.SUFFIX}.json", "w"))
 
 # ---------------- probe (privilege) ----------------
 # Independently-derived intermediate probes (mean residual over cue prompts
@@ -164,7 +166,7 @@ if PHASE == "probe":
     countries = sorted({it.intermediate for it in items if it.source == "ours"})
     resid_by_c = {}
     for c in countries:
-        f = pools.COUNTRIES[c]
+        f = TABLE[c]
         hs = {l: [] for l in lays}
         for cue in CUES:
             ids = kit.encode(cue.format(capital=f["capital"], language=f["language"]))
@@ -221,7 +223,7 @@ if PHASE == "probe":
     for cond in ("full", "J", "nonJ", "nonJ_clamped"):
         n = sum(r["conds"][cond]["hit"] for r in rows)
         print(f"  {cond:12s} {n:2d}/{len(rows)}  ({100*n/len(rows):.0f}%)")
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_probe_{MODEL}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_probe_{MODEL}{pools.SUFFIX}.json", "w"))
 
 # ---------------- crossfn (anti-smuggling) ----------------
 # One identical intermediate swap (country A -> B) applied under two
@@ -272,18 +274,23 @@ if PHASE == "crossfn":
             bad = {f: v for f, v in r["flips"].items() if not v["hit"]}
             print(f"  partial {r['A']}->{r['B']}: " +
                   "; ".join(f"{f} got {v['got']!r} want {v['want']}" for f, v in bad.items()))
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_crossfn_{MODEL}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_crossfn_{MODEL}{pools.SUFFIX}.json", "w"))
 
 # ---------------- swap ----------------
 
 if PHASE == "swap":
-    WINDOWS = {
-        "all": (0.0, 1.0), "mid+": (0.35, 1.0), "late": (0.55, 1.0),
-        "later": (0.65, 1.0), "last3": (0.75, 1.0),
-        "late-nomotor": (0.55, 0.87), "mid": (0.35, 0.75),
-    }
-    FLAVORS = [("coord", False), ("coord", True), ("proj", False), ("proj", True)]
-    ALPHAS = [1.0, 2.0]
+    if pools.CONFIRM:  # frozen primary + pre-declared sensitivity window
+        WINDOWS = {"late": (0.55, 1.0), "mid": (0.35, 0.75)}
+        FLAVORS = [("coord", True)]
+        ALPHAS = [1.0]
+    else:
+        WINDOWS = {
+            "all": (0.0, 1.0), "mid+": (0.35, 1.0), "late": (0.55, 1.0),
+            "later": (0.65, 1.0), "last3": (0.75, 1.0),
+            "late-nomotor": (0.55, 0.87), "mid": (0.35, 0.75),
+        }
+        FLAVORS = [("coord", False), ("coord", True), ("proj", False), ("proj", True)]
+        ALPHAS = [1.0, 2.0]
 
     rows = []
     for it in items:
@@ -326,4 +333,4 @@ if PHASE == "swap":
                        and r["centered"] == c and r["alpha"] == a]
                 cells.append(f"{100 * sum(r['hit'] for r in sel) / max(len(sel), 1):>4.0f}")
         print(f"{wname:12s} " + " ".join(cells))
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_swap_{MODEL}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_swap_{MODEL}{pools.SUFFIX}.json", "w"))

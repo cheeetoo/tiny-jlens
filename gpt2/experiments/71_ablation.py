@@ -125,7 +125,7 @@ def graded_top1(ids, edits=()):
 
 # ---------------- task definitions ----------------
 
-cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
+cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json"))
 ds = datasets.load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split="validation")
 wiki = [r["text"].strip() for r in ds if len(r["text"].strip()) > 600][:6]
 
@@ -233,4 +233,4 @@ for name, fn, kind in TASKS:
     for m in ("ablate", "randproj", "noise"):
         line += f" {results[m][name] / c if c else float('nan'):>7.2f}" if c else "    n/a"
     print(line)
-json.dump(results, open(f"/tiny-jlens/gpt2/results/c5b_{MODEL}_k{K}.json", "w"))
+json.dump(results, open(f"/tiny-jlens/gpt2/results/c5b_{MODEL}{pools.SUFFIX}_k{K}.json", "w"))

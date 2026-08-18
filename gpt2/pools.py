@@ -17,9 +17,17 @@ single-token leading-space form.
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass, field
 
 REF = "/tiny-jlens/ref/jacobian-lens"
+
+# TJL_CONFIRM=1 swaps every material for its HELD-OUT counterpart from
+# pools_confirm.py (same code paths, same protocol; items differ). Set by the
+# confirmatory runner only.
+CONFIRM = os.environ.get("TJL_CONFIRM") == "1"
+if CONFIRM:
+    import pools_confirm
 
 # --------------------------------------------------------------------------
 # Country facts: country -> (language, capital, continent)
@@ -136,10 +144,11 @@ def _single(tokenizer, word: str) -> int | None:
 
 
 def twohop_items(tokenizer) -> list[TwoHop]:
+    table = pools_confirm.NEW_COUNTRIES if CONFIRM else COUNTRIES
     items: list[TwoHop] = []
     for fam, argf, ansf, tmpl in TWOHOP_FAMILIES:
         pool = []
-        for country, f in COUNTRIES.items():
+        for country, f in table.items():
             if argf == "language" and not f["language_unique"]:
                 continue
             arg, ans = f[argf], f[ansf]
@@ -152,7 +161,7 @@ def twohop_items(tokenizer) -> list[TwoHop]:
                                 swap_pool=partners,
                                 onehop=ONEHOP_TEMPLATES[fam].format(country=country),
                                 firsthop=FIRSTHOP_TEMPLATES[fam].format(arg=arg)))
-    for r in RIDDLES:
+    for r in ([] if CONFIRM else RIDDLES):
         if None in (_single(tokenizer, r["intermediate"]), _single(tokenizer, r["answer"]),
                     _single(tokenizer, r["alts"]["intermediate"]), _single(tokenizer, r["alts"]["answer"])):
             continue
@@ -160,8 +169,10 @@ def twohop_items(tokenizer) -> list[TwoHop]:
                             r["intermediate"], r["answer"],
                             swap_pool=[(r["alts"]["intermediate"], r["alts"]["answer"])],
                             onehop=r["onehop"]))
-    # the paper's own two-hop sets
+    # the paper's own two-hop sets (exploration only; burned for confirm)
     with open(f"{REF}/data/experiments/probe-swap.json") as f:
+        if CONFIRM:
+            return items
         for it in json.load(f)["items"]:
             if None in (_single(tokenizer, it["intermediate"]), _single(tokenizer, it["answer"]),
                         _single(tokenizer, it["swap_to"]), _single(tokenizer, it["swap_answer"])):
@@ -212,9 +223,12 @@ def report_categories(tokenizer, with_additions: bool = False) -> dict[str, dict
     """{category: {member: leading-space token id}} with >=6 members.
     with_additions=True widens the member lists for *grading* validity
     (swap targets should still come from the curated lists)."""
-    with open(f"{REF}/data/experiments/verbal-report.json") as f:
-        cats = json.load(f)["candidates"]
-    cats = {**cats, **EXTRA_CATEGORIES}
+    if CONFIRM:
+        cats = dict(pools_confirm.NEW_CATEGORIES)
+    else:
+        with open(f"{REF}/data/experiments/verbal-report.json") as f:
+            cats = json.load(f)["candidates"]
+        cats = {**cats, **EXTRA_CATEGORIES}
     if with_additions:
         cats = {c: list(ms) + MEMBER_ADDITIONS.get(c, []) for c, ms in cats.items()}
     out = {}
@@ -242,9 +256,10 @@ C4_COUNTRY_FUNCS = [
 def c4_grid(tokenizer):
     """[(category, func_name, template, {arg: answer})]"""
     grid = []
-    args = [c for c in ["France", "Germany", "Spain", "Italy", "Poland", "China",
-                        "Japan", "Egypt", "India", "Sweden"]
-            if _single(tokenizer, c) is not None]
+    arg_list = (pools_confirm.C4_CONFIRM_ARGS if CONFIRM else
+                ["France", "Germany", "Spain", "Italy", "Poland", "China",
+                 "Japan", "Egypt", "India", "Sweden"])
+    args = [c for c in arg_list if _single(tokenizer, c) is not None]
     for fname, tmpl in C4_COUNTRY_FUNCS:
         answers = {}
         for c in args:
@@ -270,6 +285,8 @@ def c4_grid(tokenizer):
 # --------------------------------------------------------------------------
 
 def c5_passages():
+    if CONFIRM:
+        return list(pools_confirm.C5_CONFIRM_PASSAGES)
     with open(f"{REF}/data/experiments/selectivity-language.json") as f:
         d = json.load(f)
     return d["passages"]  # [{category, key, text}]
@@ -321,8 +338,29 @@ C2_SENTENCES = [
     "A cold wind blew across the empty station platform.",
     "The children played quietly in the garden after lunch.",
 ]
+# Template roles: think = attend instruction, dont = suppress instruction.
+# The confirmatory texts are the focus/ignore pair chosen by the phrasing
+# bake-off (focus<ignore 33/36; think<dont was only 24/36) — both are the
+# paper's own condition types (focus and ignore).
 C2_TEMPLATES = {
     "think":  'Write "{s}" Think about {w} while you write the sentence. "{s_open}',
     "dont":   'Write "{s}" Don\'t think about {w} while you write the sentence. "{s_open}',
     "base":   'Write "{s}" "{s_open}',
 }
+C2_TEMPLATES_CONFIRM = {
+    "think":  'Write "{s}" Focus on {w} the whole time you write. "{s_open}',
+    "dont":   'Write "{s}" Ignore {w}, it is irrelevant to this task. "{s_open}',
+    "base":   'Write "{s}" "{s_open}',
+}
+INJECT_CONCEPTS = ["ocean", "fire", "music", "winter", "horses", "coffee",
+                   "gold", "rain", "chess", "bread", "anger", "ships",
+                   "glass", "honey", "wolves", "silk", "thunder", "cotton",
+                   "iron", "roses", "salt", "dreams", "mirrors", "wheat"]
+SUFFIX = ""
+if CONFIRM:
+    C2_WORDS = pools_confirm.C2_CONFIRM_WORDS
+    C2_SENTENCES = pools_confirm.C2_CONFIRM_SENTENCES
+    C2_TEMPLATES = C2_TEMPLATES_CONFIRM
+    INJECT_CONCEPTS = pools_confirm.INJECT_CONFIRM
+    EXTRA_PASSAGES = []
+    SUFFIX = "_confirm"

@@ -143,6 +143,6 @@ for p in passages:
           f"country {'Y' if ctry_ok else 'n'}({tok.decode([t2]).strip()!r})")
 results["c5a"] = c5
 
-with open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json", "w") as f:
+with open(f"/tiny-jlens/gpt2/results/capability_{MODEL}{pools.SUFFIX}.json", "w") as f:
     json.dump(results, f, indent=2)
 print(f"\nsaved results/capability_{MODEL}.json")

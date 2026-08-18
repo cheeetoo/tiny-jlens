@@ -155,4 +155,4 @@ if PHASE == "same_latent":
                 for t in ("report", "country", "continuation")]
     print(f"presence (language name in lens, best rank over last-10 passage "
           f"positions): median {sorted(pres_all)[len(pres_all)//2]}")
-    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c5a_{MODEL}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c5a_{MODEL}{pools.SUFFIX}.json", "w"))
