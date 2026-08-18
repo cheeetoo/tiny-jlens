@@ -209,3 +209,10 @@ are exploration unless marked.
   (source = spontaneous report, targets outside output top-10, seed 1234,
   alpha chosen per C1b addendum = best of {1,2}), BRIEF bars: J >= 3x nonJ
   top-5 rate; clamping J-coords reduces the nonJ rate by >= half.
+
+- C1c-ADDENDUM RESULT [C]: full 7/8, J 5/8, nonJ 5/8 (3x asymmetry FAILS —
+  no matched-norm rate asymmetry, as at 135M day-2), clamp 5/8 -> 0/8
+  (mediation total — clamp clause passes). C1 = Hints at small: a✓ b✓(88%)
+  c-half(clamp✓/3x✗) d✓. Final small verdicts: C2 Shown; C1/C3/C4/C5 Hints;
+  0 nulls/reversals anywhere; misses = matched-norm asymmetry, pooled-readout
+  dilution, wikitext shallow (pre-declared), breadth caps.

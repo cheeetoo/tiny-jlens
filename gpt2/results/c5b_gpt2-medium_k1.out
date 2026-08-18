@@ -10,3 +10,4 @@ ablate    wikitext   (shallow ) 0.55
 ablate    copy       (shallow ) 0.61
 ablate    cont_lang  (shallow ) 0.92
 ablate    twohop     (flexible) 0.00
+ablate    country    (flexible) 0.08

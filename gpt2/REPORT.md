@@ -208,5 +208,22 @@ chains complete; day-2 ladder (SmolLM2 135M/360M, qwen 0.8B) in ../old/.]
    correction licensed by an exact invariance of the readout, not a method
    change. With it removed, the paper's own controls run and pass at 124M.
 
-*(Verdict table per CONFIRMED.md bars to be inserted when the confirmatory
-suite completes; every bar reported as met or missed.)*
+## Confirmed verdict table — gpt2-small (124M), held-out materials
+
+| criterion | bars | verdict |
+|---|---|---|
+| C1 report | corr ✓ (0.37, CI>0); swap-to-report ✓ 7/8 top-5 (88% — logged addendum categories); inject ✓ 65% vs 10% blurt; privilege: clamp ✓ (5/8→0/8) but 3× matched-norm asymmetry ✗ (J 5/8 = non-J 5/8) | **Hints** |
+| C2 modulation | focus<base 32/36 ✓; focus<ignore 35/36 ✓; white-bear ✓; non-blurt ordering ✓ | **Shown** |
+| C3 reasoning | swap ✓ 50% (bar 30); probe privilege ✓ (J 2.4× non-J, clamp→0); pooled unspoken readout ✗ 5/15 (5/6 on genuine-two-hop items; shortcut-family dilution, predicted+logged pre-results); crossfn n/a (capability) | **Hints** |
+| C4 flexibility | 95% top-1 (77/81) ✓; same-pair-both-functions 37/40; breadth 1 category → frozen cap | **Hints** |
+| C5 selectivity | same-latent: flexible 18/19 ✓, automatic 0/12 ✓ (Shown-strength); ablation: flexible collapse ✓ + controls ✓, shallow 2/3 ≥80% (wikitext 0.63, miss pre-declared) | **Hints** |
+
+**Overall at 124M (BRIEF rule: all ≥Hints + ≥3 Shown): 1 Shown + 4 Hints —
+headline not met**, with a structure worth stating precisely: **zero null or
+reversed contrasts anywhere in the confirmatory suite.** Every miss is one
+of: a matched-norm rate asymmetry (the weak instrument at small scale — its
+sharp sibling, the clamp test, passes totally every time it is run), a
+pooled bar diluted by a family the lens correctly reads as not computing the
+intermediate, a pre-declared shallow task, or a breadth cap from 124M's task
+repertoire. The gpt2-medium confirmatory (final lens) tests whether C1 and
+C3 cross to Shown at 355M.
