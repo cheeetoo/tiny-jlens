@@ -233,3 +233,26 @@ are exploration unless marked.
   family property (opposite of SmolLM2); J-lens contributes the intervention
   system, not readout superiority, on this family. MLP gain 1.06-1.13x
   (weak trend, as at small).
+
+- **MEDIUM CONFIRMATORY COMPLETE** (final n=1000 lens, held-out pools):
+  10 PASS / 5 MISS / 2 n-a. C1a 0.68 CI[.50,.84]; C1b 64% top-5; C2 4/4
+  bars; C3b 82%; C4 72% (3 cats, best 87%); C5a 23/23 + 0/11. Misses
+  dissected: C1d saturated at the small-calibrated s=0.25 (dose window
+  exists at s=0.1: 15/16 vs 3/16 [E]); C3a 45% pooled vs 50% (5/5 clean
+  family); C3d ratio 2.9x PASSES but clamp 4/48->3/48 floor-limits the
+  halving clause; C5b frozen 9-layer band damages controls too — the
+  band-matched L19-22 run [E] shows the clean signature (flexible 0.00-0.25
+  vs controls 0.75-1.00). crossfn n=7<8 (2/7 on the weakest pairing).
+- **C1c AT MEDIUM** (frozen addendum protocol, held-out cats): full 9/12,
+  J 9/12, nonJ 3/12 (3.0x >= 3x bar PASSES), clamp -> 0/12. => C1 = SHOWN
+  at gpt2-medium (a+b+c; d secondary per BRIEF).
+- VERDICTS gpt2-medium: C1 SHOWN, C2 SHOWN, C3/C4/C5 Hints. Both sizes:
+  all five >= Hints under frozen held-out confirmatories. Minimal
+  pre-registered claim established; >=3-Shown headline unmet (2 Shown @355M).
+- **LARGE EXPLORATION COMPLETE** (interim 275-prompt lens): THE CONE IS
+  GONE at 774M (v-bar share 0.03-0.16; raw~centered; gauge fix -> no-op
+  exactly where unneeded). C1 corr +0.90; C1b 100% top-5; C2 think rank 1;
+  C3 readout unspoken pooled 68% (>50% bar level); swap 70%; crossfn 41/61;
+  probe J/nonJ/clamp 22/5/1 (4.4x — ladder 2.2->2.9->4.4x); C4 91%
+  same-pair-all-3 82%; C5a 24/24 vs 0/12 with latent at rank 1; occupancy
+  5-9. Everything monotone.
