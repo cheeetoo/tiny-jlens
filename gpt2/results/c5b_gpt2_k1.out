@@ -1,0 +1,36 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15213.51it/s]
+clean     wikitext   (shallow ) 1.00
+clean     copy       (shallow ) 0.97
+clean     cont_lang  (shallow ) 1.00
+clean     twohop     (flexible) 1.00
+clean     country    (flexible) 1.00
+clean     report     (flexible) 1.00
+ablate    wikitext   (shallow ) 0.63
+ablate    copy       (shallow ) 0.86
+ablate    cont_lang  (shallow ) 1.00
+ablate    twohop     (flexible) 0.18
+ablate    country    (flexible) 0.00
+ablate    report     (flexible) 0.29
+   [ablation removed 11.0% of residual norm on average]
+randproj  wikitext   (shallow ) 0.92
+randproj  copy       (shallow ) 0.97
+randproj  cont_lang  (shallow ) 1.00
+randproj  twohop     (flexible) 0.91
+randproj  country    (flexible) 0.92
+randproj  report     (flexible) 0.86
+noise     wikitext   (shallow ) 0.79
+noise     copy       (shallow ) 0.89
+noise     cont_lang  (shallow ) 1.00
+noise     twohop     (flexible) 0.73
+noise     country    (flexible) 0.75
+noise     report     (flexible) 0.57
+
+retention vs clean (k=1, layers [7, 8, 9, 10], centered):
+task       kind      ablate  randproj   noise
+wikitext   shallow     0.63    0.92    0.79
+copy       shallow     0.89    1.00    0.91
+cont_lang  shallow     1.00    1.00    1.00
+twohop     flexible    0.18    0.91    0.73
+country    flexible    0.00    0.92    0.75
+report     flexible    0.29    0.86    0.57

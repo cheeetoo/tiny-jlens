@@ -123,3 +123,19 @@ are exploration unless marked.
   overall (paper overall 40-53%; their countries cell "almost perfect");
   identical pair-swap redirects BOTH functions 21/30 (70%). Breadth capped
   at 1 category (capability wall) — medium adds continent/months/numbers.
+
+- **71 dose sweep** [E] k=1,2,3,5,10 (centered, L7-10, protection on):
+  flexible collapses at EVERY dose (k=1: twohop 0.18 / country 0.00 / report
+  0.29; k>=2: all 0.00) while shallow orders cont_lang(1.00) > copy(0.89) >
+  wikitext(0.63) at k=1; randproj/noise controls leave flexible 0.55-0.92.
+  Qualitative: ablated answers are TYPE-correct but content-wrong ("St.
+  John's" for the French capital) — the paper's generic-prior signature, not
+  degradation. Dose axis exists (raw gauge had none). wikitext misses the
+  0.8 shallow bar at all k: ordinary next-token prediction at 124M is partly
+  lens-mediated (upcoming words are verbalizable content beyond the
+  protected imminent top-10).
+- **80 occupancy** [E] centered gauge: median 2-3 atoms at content layers
+  (L9 peak 3, IQR to 5) — a real capacity number now (raw-gauge "1" was
+  artifact; paper ~25). Small workspace, honestly measured.
+- Materialized interim gpt2-medium lens (275 prompts = released-lens
+  convergence class); full medium chain launched in background.
