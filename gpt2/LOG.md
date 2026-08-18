@@ -226,3 +226,10 @@ are exploration unless marked.
   countries, same-pair-redirects-ALL-3 11/14 (79%); months/numbers cells
   pass capability but never swap (0/10) — breadth still countries.
   Occupancy 2-3 (same as small; capacity does not grow 124M->355M).
+
+- Medium follow-ups [E]: demand variant DECISIVE at 355M (14 vs 147,
+  33/36 — vs 28/36 weak at 124M; ladder in demand-loading). Lens-vs-logit:
+  logit lens >= J-lens readout at medium too (67% vs 57% at L21) — a GPT-2
+  family property (opposite of SmolLM2); J-lens contributes the intervention
+  system, not readout superiority, on this family. MLP gain 1.06-1.13x
+  (weak trend, as at small).

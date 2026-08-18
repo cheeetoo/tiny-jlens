@@ -33,7 +33,11 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "gpt2"
 K = int(sys.argv[2]) if len(sys.argv) > 2 else 10
 kit = core.Kit(MODEL)
 tok = kit.tokenizer
-LAYS = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
+if len(sys.argv) > 3:  # explicit band "lo:hi" (band-matched comparisons)
+    _lo, _hi = map(int, sys.argv[3].split(":"))
+    LAYS = [l for l in kit.layers if _lo <= l <= _hi]
+else:
+    LAYS = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
 ARTICLES = {"a", "an", "the", "called", '"', "'", ""}
 torch.manual_seed(0)
 
@@ -237,4 +241,5 @@ for name, fn, kind in TASKS:
     for m in ("ablate", "randproj", "noise"):
         line += f" {results[m][name] / c if c else float('nan'):>7.2f}" if c else "    n/a"
     print(line)
-json.dump(results, open(f"/tiny-jlens/gpt2/results/c5b_{MODEL}{pools.SUFFIX}_k{K}.json", "w"))
+suffix2 = f"_L{LAYS[0]}-{LAYS[-1]}" if len(sys.argv) > 3 else ""
+json.dump(results, open(f"/tiny-jlens/gpt2/results/c5b_{MODEL}{pools.SUFFIX}_k{K}{suffix2}.json", "w"))

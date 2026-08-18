@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 198/292 [00:00<00:00, 1749.21it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 2406.84it/s]
+n=36: word's best lens rank over the copy span
+  with recall demand:    median 14
+  without recall demand: median 147
+  demand < no-demand: 33/36
