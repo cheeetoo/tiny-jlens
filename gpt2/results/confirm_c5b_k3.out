@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 11735.87it/s]
+clean     wikitext   (shallow ) 1.00
+clean     copy       (shallow ) 1.00
+clean     cont_lang  (shallow ) 1.00
+clean     twohop     (flexible) 1.00
+clean     country    (flexible) 1.00
+clean     report     (flexible) nan
+ablate    wikitext   (shallow ) 0.49
+ablate    copy       (shallow ) 0.62
+ablate    cont_lang  (shallow ) 0.92
+ablate    twohop     (flexible) 0.00
