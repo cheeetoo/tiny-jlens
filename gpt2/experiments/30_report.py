@@ -15,6 +15,7 @@ Phases:
 Run:  python experiments/30_report.py corr|swap|inject [model]
 """
 
+import os
 import json
 import random
 import sys
@@ -146,6 +147,8 @@ if PHASE == "inject":
     CONCEPTS = pools.INJECT_CONCEPTS
     lays = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
     STRENGTHS = (0.0, 0.25) if pools.CONFIRM else (0.0, 0.25, 0.5, 1.0, 2.0)
+    if os.environ.get("TJL_STRENGTHS"):  # post-hoc dose diagnostics only
+        STRENGTHS = tuple(float(s) for s in os.environ["TJL_STRENGTHS"].split(","))
     # inject at every position EXCEPT the last 3 (the readout anchor is never
     # steered directly — the report must be carried there by the model), as in
     # the paper's inject-on-the-user-turn protocol

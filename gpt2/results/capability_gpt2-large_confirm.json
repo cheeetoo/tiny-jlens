@@ -1,0 +1,1450 @@
+{
+  "model": "gpt2-large",
+  "twohop": [
+    {
+      "family": "lang_capital",
+      "arg": "Ukrainian",
+      "intermediate": "Ukraine",
+      "answer": "Kiev",
+      "prompt": "The capital of the country where Ukrainian is spoken is the city of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Kh",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Indonesian",
+      "intermediate": "Indonesia",
+      "answer": "Jakarta",
+      "prompt": "The capital of the country where Indonesian is spoken is the city of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Sur",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Malay",
+      "intermediate": "Malaysia",
+      "answer": "Kuala",
+      "prompt": "The capital of the country where Malay is spoken is the city of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Kuala",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Urdu",
+      "intermediate": "Pakistan",
+      "answer": "Islamabad",
+      "prompt": "The capital of the country where Urdu is spoken is the city of",
+      "twohop": false,
+      "answer_rank": 6,
+      "got": " Hyder",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Pashto",
+      "intermediate": "Afghanistan",
+      "answer": "Kabul",
+      "prompt": "The capital of the country where Pashto is spoken is the city of",
+      "twohop": false,
+      "answer_rank": 12,
+      "got": " Pesh",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Ukrainian",
+      "intermediate": "Ukraine",
+      "answer": "Europe",
+      "prompt": "The country where Ukrainian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Romanian",
+      "intermediate": "Romania",
+      "answer": "Europe",
+      "prompt": "The country where Romanian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Bulgarian",
+      "intermediate": "Bulgaria",
+      "answer": "Europe",
+      "prompt": "The country where Bulgarian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Serbian",
+      "intermediate": "Serbia",
+      "answer": "Europe",
+      "prompt": "The country where Serbian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Croatian",
+      "intermediate": "Croatia",
+      "answer": "Europe",
+      "prompt": "The country where Croatian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Indonesian",
+      "intermediate": "Indonesia",
+      "answer": "Asia",
+      "prompt": "The country where Indonesian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Malay",
+      "intermediate": "Malaysia",
+      "answer": "Asia",
+      "prompt": "The country where Malay is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Urdu",
+      "intermediate": "Pakistan",
+      "answer": "Asia",
+      "prompt": "The country where Urdu is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " India",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Yoruba",
+      "intermediate": "Nigeria",
+      "answer": "Africa",
+      "prompt": "The country where Yoruba is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Amharic",
+      "intermediate": "Ethiopia",
+      "answer": "Africa",
+      "prompt": "The country where Amharic is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Pashto",
+      "intermediate": "Afghanistan",
+      "answer": "Asia",
+      "prompt": "The country where Pashto is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Afghanistan",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Khmer",
+      "intermediate": "Cambodia",
+      "answer": "Asia",
+      "prompt": "The country where Khmer is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Southeast",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Mongolian",
+      "intermediate": "Mongolia",
+      "answer": "Asia",
+      "prompt": "The country where Mongolian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Armenian",
+      "intermediate": "Armenia",
+      "answer": "Asia",
+      "prompt": "The country where Armenian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Georgian",
+      "intermediate": "Georgia",
+      "answer": "Asia",
+      "prompt": "The country where Georgian is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Europe",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Albanian",
+      "intermediate": "Albania",
+      "answer": "Europe",
+      "prompt": "The country where Albanian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Slovak",
+      "intermediate": "Slovakia",
+      "answer": "Europe",
+      "prompt": "The country where Slovak is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Icelandic",
+      "intermediate": "Iceland",
+      "answer": "Europe",
+      "prompt": "The country where Icelandic is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Kiev",
+      "intermediate": "Ukraine",
+      "answer": "Ukrainian",
+      "prompt": "In the country whose capital city is Kiev, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Ukrainian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Bucharest",
+      "intermediate": "Romania",
+      "answer": "Romanian",
+      "prompt": "In the country whose capital city is Bucharest, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Romanian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Sofia",
+      "intermediate": "Bulgaria",
+      "answer": "Bulgarian",
+      "prompt": "In the country whose capital city is Sofia, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Bulgarian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Belgrade",
+      "intermediate": "Serbia",
+      "answer": "Serbian",
+      "prompt": "In the country whose capital city is Belgrade, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Serbian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Zagreb",
+      "intermediate": "Croatia",
+      "answer": "Croatian",
+      "prompt": "In the country whose capital city is Zagreb, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Croatian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Jakarta",
+      "intermediate": "Indonesia",
+      "answer": "Indonesian",
+      "prompt": "In the country whose capital city is Jakarta, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Indonesian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Rabat",
+      "intermediate": "Morocco",
+      "answer": "Arabic",
+      "prompt": "In the country whose capital city is Rabat, the primary language is",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " French",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Havana",
+      "intermediate": "Cuba",
+      "answer": "Spanish",
+      "prompt": "In the country whose capital city is Havana, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Santiago",
+      "intermediate": "Chile",
+      "answer": "Spanish",
+      "prompt": "In the country whose capital city is Santiago, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Lima",
+      "intermediate": "Peru",
+      "answer": "Spanish",
+      "prompt": "In the country whose capital city is Lima, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Bogota",
+      "intermediate": "Colombia",
+      "answer": "Spanish",
+      "prompt": "In the country whose capital city is Bogota, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Baghdad",
+      "intermediate": "Iraq",
+      "answer": "Arabic",
+      "prompt": "In the country whose capital city is Baghdad, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Arabic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Amman",
+      "intermediate": "Jordan",
+      "answer": "Arabic",
+      "prompt": "In the country whose capital city is Amman, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Arabic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Beirut",
+      "intermediate": "Lebanon",
+      "answer": "Arabic",
+      "prompt": "In the country whose capital city is Beirut, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Arabic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Yerevan",
+      "intermediate": "Armenia",
+      "answer": "Armenian",
+      "prompt": "In the country whose capital city is Yerevan, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Armenian",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Tbilisi",
+      "intermediate": "Georgia",
+      "answer": "Georgian",
+      "prompt": "In the country whose capital city is Tbilisi, the primary language is",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Russian",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Reykjavik",
+      "intermediate": "Iceland",
+      "answer": "Icelandic",
+      "prompt": "In the country whose capital city is Reykjavik, the primary language is",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Icelandic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Kiev",
+      "intermediate": "Ukraine",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Kiev is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Bucharest",
+      "intermediate": "Romania",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Bucharest is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Sofia",
+      "intermediate": "Bulgaria",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Sofia is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Belgrade",
+      "intermediate": "Serbia",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Belgrade is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Zagreb",
+      "intermediate": "Croatia",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Zagreb is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Jakarta",
+      "intermediate": "Indonesia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Jakarta is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Kuala",
+      "intermediate": "Malaysia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Kuala is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Islamabad",
+      "intermediate": "Pakistan",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Islamabad is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Abuja",
+      "intermediate": "Nigeria",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Abuja is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Addis",
+      "intermediate": "Ethiopia",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Addis is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Rabat",
+      "intermediate": "Morocco",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Rabat is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Havana",
+      "intermediate": "Cuba",
+      "answer": "America",
+      "prompt": "The country whose capital is Havana is located on the continent of",
+      "twohop": false,
+      "answer_rank": 7,
+      "got": " South",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Santiago",
+      "intermediate": "Chile",
+      "answer": "America",
+      "prompt": "The country whose capital is Santiago is located on the continent of",
+      "twohop": false,
+      "answer_rank": 12,
+      "got": " South",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Lima",
+      "intermediate": "Peru",
+      "answer": "America",
+      "prompt": "The country whose capital is Lima is located on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " South",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Bogota",
+      "intermediate": "Colombia",
+      "answer": "America",
+      "prompt": "The country whose capital is Bogota is located on the continent of",
+      "twohop": false,
+      "answer_rank": 12,
+      "got": " South",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Baghdad",
+      "intermediate": "Iraq",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Baghdad is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Amman",
+      "intermediate": "Jordan",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Amman is located on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Jordan",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Beirut",
+      "intermediate": "Lebanon",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Beirut is located on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Kabul",
+      "intermediate": "Afghanistan",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Kabul is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Phnom",
+      "intermediate": "Cambodia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Phnom is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Ulan",
+      "intermediate": "Mongolia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Ulan is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Yerevan",
+      "intermediate": "Armenia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Yerevan is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Tbilisi",
+      "intermediate": "Georgia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Tbilisi is located on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Europe",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Tirana",
+      "intermediate": "Albania",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Tirana is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Bratislava",
+      "intermediate": "Slovakia",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Bratislava is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Reykjavik",
+      "intermediate": "Iceland",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Reykjavik is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    }
+  ],
+  "report": {
+    "vegetable": {
+      "valid": false,
+      "member_top5": true,
+      "got": " tomato"
+    },
+    "insect": {
+      "valid": true,
+      "member_top5": true,
+      "got": " beetle"
+    },
+    "gem": {
+      "valid": true,
+      "member_top5": true,
+      "got": " diamond"
+    },
+    "weather condition": {
+      "valid": false,
+      "member_top5": true,
+      "got": " sunny"
+    },
+    "body part": {
+      "valid": false,
+      "member_top5": true,
+      "got": " head"
+    },
+    "fish": {
+      "valid": false,
+      "member_top5": true,
+      "got": " fish"
+    },
+    "fabric": {
+      "valid": false,
+      "member_top5": true,
+      "got": " fabric"
+    }
+  },
+  "c4": [
+    {
+      "category": "countries",
+      "func": "capital",
+      "template": "The capital of {arg} is the city of",
+      "n_ok": 9,
+      "n": 10,
+      "cell": {
+        "Portugal": {
+          "ok": true,
+          "got": " Lisbon"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Athens"
+        },
+        "Turkey": {
+          "ok": true,
+          "got": " Ankara"
+        },
+        "Norway": {
+          "ok": true,
+          "got": " Oslo"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Copenhagen"
+        },
+        "Finland": {
+          "ok": false,
+          "got": " Tam"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Budapest"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Seoul"
+        },
+        "Thailand": {
+          "ok": true,
+          "got": " Bangkok"
+        },
+        "Russia": {
+          "ok": true,
+          "got": " Moscow"
+        }
+      }
+    },
+    {
+      "category": "countries",
+      "func": "language",
+      "template": "The primary language spoken in {arg} is",
+      "n_ok": 10,
+      "n": 10,
+      "cell": {
+        "Portugal": {
+          "ok": true,
+          "got": " Portuguese"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Greek"
+        },
+        "Turkey": {
+          "ok": true,
+          "got": " Turkish"
+        },
+        "Norway": {
+          "ok": true,
+          "got": " Norwegian"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Danish"
+        },
+        "Finland": {
+          "ok": true,
+          "got": " Finnish"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Hungarian"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Korean"
+        },
+        "Thailand": {
+          "ok": true,
+          "got": " Thai"
+        },
+        "Russia": {
+          "ok": true,
+          "got": " Russian"
+        }
+      }
+    },
+    {
+      "category": "countries",
+      "func": "continent",
+      "template": "{arg} is located on the continent of",
+      "n_ok": 8,
+      "n": 10,
+      "cell": {
+        "Portugal": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Turkey": {
+          "ok": false,
+          "got": " Europe"
+        },
+        "Norway": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Finland": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Asia"
+        },
+        "Thailand": {
+          "ok": true,
+          "got": " Asia"
+        },
+        "Russia": {
+          "ok": false,
+          "got": " Euras"
+        }
+      }
+    },
+    {
+      "category": "months",
+      "func": "season",
+      "template": "In the northern hemisphere, {arg} is in the season of",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "February": {
+          "ok": false,
+          "got": " Northern"
+        },
+        "April": {
+          "ok": false,
+          "got": " sun"
+        },
+        "July": {
+          "ok": false,
+          "got": " Northern"
+        },
+        "October": {
+          "ok": false,
+          "got": " Northern"
+        }
+      }
+    },
+    {
+      "category": "months",
+      "func": "number",
+      "template": "Counting from January, {arg} is month number",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "February": {
+          "ok": false,
+          "got": " one"
+        },
+        "April": {
+          "ok": false,
+          "got": " one"
+        },
+        "July": {
+          "ok": false,
+          "got": " one"
+        },
+        "October": {
+          "ok": false,
+          "got": " one"
+        }
+      }
+    },
+    {
+      "category": "months",
+      "func": "holiday",
+      "template": "The biggest holiday in {arg} is",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "February": {
+          "ok": false,
+          "got": " here"
+        },
+        "April": {
+          "ok": false,
+          "got": " almost"
+        },
+        "July": {
+          "ok": false,
+          "got": " almost"
+        },
+        "October": {
+          "ok": false,
+          "got": " here"
+        }
+      }
+    },
+    {
+      "category": "months",
+      "func": "next_month",
+      "template": "The month right after {arg} is",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "February": {
+          "ok": false,
+          "got": " month"
+        },
+        "April": {
+          "ok": false,
+          "got": " month"
+        },
+        "July": {
+          "ok": false,
+          "got": " month"
+        },
+        "October": {
+          "ok": false,
+          "got": " month"
+        }
+      }
+    },
+    {
+      "category": "animals",
+      "func": "habitat",
+      "template": "The natural habitat of a {arg} is the",
+      "n_ok": 1,
+      "n": 3,
+      "cell": {
+        "eagle": {
+          "ok": false,
+          "got": " open"
+        },
+        "shark": {
+          "ok": true,
+          "got": " ocean"
+        },
+        "spider": {
+          "ok": false,
+          "got": " web"
+        }
+      }
+    },
+    {
+      "category": "animals",
+      "func": "legs",
+      "template": "How many legs does a {arg} have? In one word:",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "lion": {
+          "ok": false,
+          "got": " lot"
+        },
+        "eagle": {
+          "ok": false,
+          "got": " lot"
+        },
+        "shark": {
+          "ok": false,
+          "got": "many"
+        },
+        "spider": {
+          "ok": false,
+          "got": " lot"
+        }
+      }
+    },
+    {
+      "category": "animals",
+      "func": "class",
+      "template": "Biologically, a {arg} is a type of",
+      "n_ok": 1,
+      "n": 3,
+      "cell": {
+        "lion": {
+          "ok": false,
+          "got": " carniv"
+        },
+        "eagle": {
+          "ok": false,
+          "got": " rapt"
+        },
+        "shark": {
+          "ok": true,
+          "got": " fish"
+        }
+      }
+    },
+    {
+      "category": "numbers",
+      "func": "double",
+      "template": "Two times {arg} equals",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "three": {
+          "ok": false,
+          "got": " four"
+        },
+        "five": {
+          "ok": false,
+          "got": " five"
+        },
+        "seven": {
+          "ok": false,
+          "got": " seven"
+        },
+        "nine": {
+          "ok": false,
+          "got": " one"
+        }
+      }
+    },
+    {
+      "category": "numbers",
+      "func": "square",
+      "template": "{arg} squared equals",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "three": {
+          "ok": false,
+          "got": " three"
+        },
+        "five": {
+          "ok": false,
+          "got": " five"
+        },
+        "seven": {
+          "ok": false,
+          "got": " seven"
+        },
+        "nine": {
+          "ok": false,
+          "got": " one"
+        }
+      }
+    },
+    {
+      "category": "numbers",
+      "func": "successor",
+      "template": "The number that comes right after {arg} is",
+      "n_ok": 0,
+      "n": 4,
+      "cell": {
+        "three": {
+          "ok": false,
+          "got": " number"
+        },
+        "five": {
+          "ok": false,
+          "got": " number"
+        },
+        "seven": {
+          "ok": false,
+          "got": " number"
+        },
+        "nine": {
+          "ok": false,
+          "got": " number"
+        }
+      }
+    },
+    {
+      "category": "numbers",
+      "func": "first_letter",
+      "template": "The word '{arg}' begins with the letter",
+      "n_ok": 4,
+      "n": 4,
+      "cell": {
+        "three": {
+          "ok": true,
+          "got": "T"
+        },
+        "five": {
+          "ok": true,
+          "got": "F"
+        },
+        "seven": {
+          "ok": true,
+          "got": "s"
+        },
+        "nine": {
+          "ok": true,
+          "got": "n"
+        }
+      }
+    }
+  ],
+  "c5a": [
+    {
+      "key": "cf1",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et les pommes les plus rouges, et les pommes les"
+    },
+    {
+      "key": "cf2",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et il s'\u00e9tait enfin un \u00e9p\u00e9e de la bibli"
+    },
+    {
+      "key": "cf3",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et l'on ne s'en aucune pas de vous."
+    },
+    {
+      "key": "cg1",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die sich die Tage zu erfahren.\n\nAm"
+    },
+    {
+      "key": "cg2",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " und das ist ein B\u00e4ckerei an der Ec"
+    },
+    {
+      "key": "cg3",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die sich die Nachbar bei der Haus zu erf"
+    },
+    {
+      "key": "cs1",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " y el mercado del pueblo abr\u00eda temprano, y"
+    },
+    {
+      "key": "cs2",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " y en la ciudad de la ciudad de la c"
+    },
+    {
+      "key": "cs3",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " y la pescadora de la pescadora de la pesc"
+    },
+    {
+      "key": "ci1",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " e la piazza del paese si riempiva di gente"
+    },
+    {
+      "key": "ci2",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " e la cosa di una cosa di una cosa di un"
+    },
+    {
+      "key": "ci3",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " la cioccolata, la cioccolata di ci"
+    }
+  ]
+}

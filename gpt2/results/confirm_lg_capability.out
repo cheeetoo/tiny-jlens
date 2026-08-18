@@ -1,0 +1,49 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 7740.37it/s]
+
+== two-hop (gpt2-large) ==
+  city_continent     twohop 16/26   onehop 18/26   firsthop  1/26
+  city_language      twohop 15/17   onehop 16/17   firsthop  1/17
+  lang_capital       twohop  1/ 5   onehop  5/ 5   firsthop  4/ 5
+  lang_continent     twohop 14/18   onehop 16/18   firsthop 16/18
+  TOTAL two-hop pass: 46/66
+
+== category report ==  top1-valid 2/7: ['insect', 'gem']
+   member-in-top5 7/7: ['vegetable', 'insect', 'gem', 'weather condition', 'body part', 'fish', 'fabric']
+   miss vegetable        -> ' tomato'
+   miss weather condition -> ' sunny'
+   miss body part        -> ' head'
+   miss fish             -> ' fish'
+   miss fabric           -> ' fabric'
+
+== C4 grid (cells need >=3 correct args) ==
+  countries    capital          9/10
+  countries    language         10/10
+  countries    continent        8/10
+  months       season           0/4
+  months       number           0/4
+  months       holiday          0/4
+  months       next_month       0/4
+  animals      habitat          1/3
+  animals      legs             0/4
+  animals      class            1/3
+  numbers      double           0/4
+  numbers      square           0/4
+  numbers      successor        0/4
+  numbers      first_letter     4/4
+
+== C5a language tasks ==
+  cf1  French   cont->French   report Y('French'    ) country Y('France')
+  cf2  French   cont->French   report Y('French'    ) country Y('France')
+  cf3  French   cont->French   report Y('French'    ) country Y('France')
+  cg1  German   cont->German   report Y('German'    ) country Y('Germany')
+  cg2  German   cont->German   report Y('German'    ) country Y('Germany')
+  cg3  German   cont->German   report Y('German'    ) country Y('Germany')
+  cs1  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  cs2  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  cs3  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  ci1  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ci2  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ci3  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+
+saved results/capability_gpt2-large.json

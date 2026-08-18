@@ -260,3 +260,59 @@ are exploration unless marked.
   frozen 0.55-fraction C5b band, a band-matched 4-layer column (L31-34) is
   recorded as a sensitivity analysis — same rationale as the medium
   band-matched run; the frozen-band number remains the bar-graded one.
+
+## Large confirmatory landed + post-hoc diagnostics (2026-08-18 evening)
+
+- LARGE CONFIRMATORY [C] (final n=1000 lens, held-out pools, frozen suite):
+  15/18 bars PASS. C1a 0.78 CI[.68,.87]; C1b 100% (7/7); C2 4/4 bars
+  (36/36 focus<base p=2.9e-11, 31/36, 34/36, 22/22; think median 7 vs base
+  420); C3a pooled unspoken 12/18 = 67% — FIRST size to clear the 50% pooled
+  bar (3/3 excl. shortcut family); C3b swap 59%; C3c crossfn 5/16 = 31%
+  n>=8 — FIRST confirmed crossfn pass; C4 83% (best cat 98%); C5a 24/24 vs
+  0/12. MISSES: C1d inject 100% vs 95% blurt (ceiling at frozen s=.25);
+  C3d probe floor (full 16%, J 2/45, nonJ 5/45, clamp 4/45 — splits
+  uninformative at floor; numerically J<nonJ, Fisher p~0.43 vs noise);
+  C5b shallow retention (cont_lang 0.83 only; copy 0.56, wikitext 0.48
+  [pre-declared miss]; flexible 0.00-0.17 with controls 0.79-1.00 —
+  discriminating half full-strength). Band-matched L31-34 pre-declared
+  column: cont_lang 1.00, copy 0.65, wikitext 0.58, flexible 0.00-0.50;
+  one blemish: randproj kills twohop (0.00) at the 4-layer band.
+- C4 negative space (both 355M and 774M confirm): the coordinate swap
+  redirects semantic functions (capital/language/continent 44/45 at large)
+  but NEVER the surface-form function (first_letter 0/8 large, 0/6 medium —
+  output is always the CLEAN word's letter). The J-coordinate carries
+  semantic identity, not orthography. Consistent with workspace framing;
+  reported as descriptive.
+- 42/43 AT LARGE (interim lens, exploration pool, ran pre-confirm):
+  demand-loading 32/36 (median 82 vs 162) — ladder 28/36 -> 33/36 -> 32/36.
+  Imagine-dissociation NEAR-CLEAN at 774M on exploration items: claim lens
+  z+28.6 / orth-probe z+3.0 vs real orth z+22.5 (bleed 13% of real effect;
+  was 35% at 124M). Held-out confirm side (final lens): claim lens +11.6 /
+  orth +7.2 vs real orth +24.4 (bleed 30%) — medium confirm equivalent:
+  +15.8 / +6.7 vs +33.5 (20%). Partial on held-out at every size; the
+  boundary paragraph gets the numbers, not a trend claim.
+- POST-HOC DIAGNOSTIC 1 (declared then run): rerun 50 probe at large on the
+  EXPLORATION pool with the FINAL lens, to separate pool-vs-lens as cause of
+  the C3d confirm floor. RESULT: full 21/79, J 17/79 (22%), nonJ 8/79
+  (10%), clamp 1/79 — the interim-lens exploration split replicates under
+  the final lens (interim was 21/17/4/1). CAUSE ISOLATED: the C3d confirm
+  floor is held-out-pool transfer failure (exotic-country probe directions
+  don't install), not a lens artifact. Note the final-lens exploration
+  ratio is 2.2x (17 vs 8), weaker than the interim 4.4x (17 vs 4) —
+  the ladder row is corrected to quote the final-lens number.
+- POST-HOC DIAGNOSTIC 2 (declared then run): inject dose sweep at large,
+  TJL_STRENGTHS=0,0.03,0.05,0.1 (env override added to 30_report.py, logged).
+  RESULT: s<=0.05 nothing (0/24 report), s=0.1 both channels rise together
+  (report 15/24 = 63% vs blurt 10/24 = 42%, fails 2x). NO clean selective
+  window at 774M under this protocol (small had s=.25: 65%/10%; medium
+  s=.1: 15/16 vs 3/16). C1d at large = genuine protocol-scaling failure,
+  not excusable saturation; stands as MISS. No further dose fishing.
+- C1c ADDENDUM AT LARGE (frozen NOW, before the run, per the small/medium
+  addendum precedent): protocol VERBATIM from the medium addendum (3
+  "about the {m}" frames member-centered, centered-GP k=16 split,
+  matched-norm component swaps at the report anchor, targets outside output
+  top-10, alpha best of {1,2}, seed 1234, cats = large-confirm top1-valid),
+  now checked in as experiments/31_c1c.py (recovered from session log;
+  validation = rerun at medium must reproduce 9/9/3/0 of 12 exactly).
+  Bars unchanged: J >= 3x nonJ; clamp cuts nonJ >= half. Run follows this
+  entry.
