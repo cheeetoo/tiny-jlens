@@ -200,3 +200,12 @@ are exploration unless marked.
   (centered swap, alpha<=2, targets outside output top-10, top-5 criterion,
   bar >=40%) on exactly these two categories, seed 1234. No other criterion
   touched (C1a's result stands as scored on the original seven).
+
+- C1b-ADDENDUM RESULT [C]: 7/8 top-5 (88% — the paper's own number), 7/8
+  top-1, on European-city + farm-animal held-out categories. C1b bar met.
+- ADDENDUM 2 (frozen before run): C1c on the same two held-out categories —
+  concept vectors per member (3 "about the {m}" frames, member-centered),
+  centered-GP k=16 split, matched-norm component swaps on the report prompt
+  (source = spontaneous report, targets outside output top-10, seed 1234,
+  alpha chosen per C1b addendum = best of {1,2}), BRIEF bars: J >= 3x nonJ
+  top-5 rate; clamping J-coords reduces the nonJ rate by >= half.

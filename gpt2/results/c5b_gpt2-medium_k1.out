@@ -6,3 +6,7 @@ clean     cont_lang  (shallow ) 1.00
 clean     twohop     (flexible) 1.00
 clean     country    (flexible) 0.92
 clean     report     (flexible) 1.00
+ablate    wikitext   (shallow ) 0.55
+ablate    copy       (shallow ) 0.61
+ablate    cont_lang  (shallow ) 0.92
+ablate    twohop     (flexible) 0.00
