@@ -1,0 +1,4 @@
+Vendored from https://github.com/anthropics/jacobian-lens.git
+commit 581d398 (Initial release), cloned 2026-08-17.
+Vendored verbatim so the reference implementation travels with the repo;
+remove before publishing.
