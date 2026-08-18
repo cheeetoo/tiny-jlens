@@ -162,6 +162,14 @@ unfitted block.
   prediction is itself partly lens-mediated (upcoming words are verbalizable
   content beyond the protected imminent top-10). [C: pending]
 
+### Presence predicts causal efficacy
+Stratifying C3 swaps by the intermediate's lens rank: **rank <10 → 92%
+flips; rank 10–99 → 75%; rank ≥100 → 0%** [E]. Loading in the lens predicts
+whether the lens-coordinate swap redirects behavior (the paper's
+workspace-loading correlation, visible within C3) — and it reframes the
+shortcut family: city→language items hold the country at rank ~40–120, and
+flip at the intermediate rate.
+
 ### Structure (descriptive)
 - Occupancy (centered): median **2–3** atoms at content layers (paper: ~25).
   The raw-gauge "≈1" was artifact; 2–3 is the model. A small workspace,
@@ -170,6 +178,9 @@ unfitted block.
   as well as the J-lens (L9: 52% vs 38% top-10) — unlike SmolLM2 (1/44 vs
   30/44). GPT-2 is the model the logit lens was built on; here the J-lens's
   contribution is the intervention system, not readout superiority.
+- MLP gain: centered lens directions amplified 1.11–1.32× by the next MLP
+  block at L7–10 (controls ~1.0) — the paper's ~10× broadcast signature
+  exists only in trend at 124M.
 - All task content in the last quarter of depth; no clean workspace *band*,
   a cliff at L9.
 

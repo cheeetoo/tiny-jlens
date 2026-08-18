@@ -185,3 +185,9 @@ are exploration unless marked.
   OVERALL at 124M: 1 Shown + 4 Hints -> BRIEF headline not met at small;
   no null/reversed contrast anywhere; every miss is capability-dilution or
   pre-declared. Medium confirmatory (final lens) is the test of 3-Shown.
+
+- Presence-vs-causality [E]: swap success stratified by the intermediate's
+  best lens rank: <10 -> 92% (12/13), 10-99 -> 75% (15/20), >=100 -> 0%
+  (0/2). Lens loading predicts causal efficacy (the paper's C4 loading
+  correlation, visible inside C3) — and explains city_language: mid-rank
+  presence, mid-rate causality.

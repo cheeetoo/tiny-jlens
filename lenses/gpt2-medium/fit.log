@@ -379,3 +379,5 @@ W0817 22:16:33.270000 99484 torch/_dynamo/convert_frame.py:1016] [0/8] To diagno
 [  2h47m + 34.81s]   prompt 370/1000  seq_len=68 n_valid=51  35s  max||J||/sqrt(d)=1.271  max_d_mean=3.53e-03
 [  2h47m + 28.99s]   prompt 371/1000  seq_len=86 n_valid=69  29s  max||J||/sqrt(d)=1.410  max_d_mean=4.56e-03
 [  2h48m + 29.69s]   prompt 372/1000  seq_len=87 n_valid=70  30s  max||J||/sqrt(d)=1.352  max_d_mean=4.94e-03
+[  2h48m + 27.91s]   prompt 373/1000  seq_len=112 n_valid=95  28s  max||J||/sqrt(d)=1.501  max_d_mean=4.75e-03
+[  2h49m + 27.79s]   prompt 374/1000  seq_len=87 n_valid=70  28s  max||J||/sqrt(d)=1.530  max_d_mean=6.28e-03
