@@ -1,0 +1,9 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 7071.71it/s]
+gpt2-large_confirm top1-valid cats: ['insect', 'gem']
+..
+C1c at gpt2-large (confirm cats, frozen addendum protocol) n=6:
+  full           5/6
+  J              5/6
+  nonJ           2/6
+  nonJ_clamped   0/6

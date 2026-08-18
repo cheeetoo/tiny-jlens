@@ -316,3 +316,22 @@ are exploration unless marked.
   validation = rerun at medium must reproduce 9/9/3/0 of 12 exactly).
   Bars unchanged: J >= 3x nonJ; clamp cuts nonJ >= half. Run follows this
   entry.
+
+- C1c REVALIDATION (31_c1c.py vs the original session-script results at
+  medium): 47/48 item booleans identical — 9/12, 9/12, 3/12 exact; one
+  borderline nonJ_clamped item flips 0/12 -> 1/12 (GPU-nondeterminism at a
+  rank-5 boundary; halving clause passes either way). Script faithful;
+  original JSON kept as c1c_addendum_gpt2-medium.orig.json.
+- C1c-ADDENDUM RESULT AT LARGE [C] (frozen above, run after): cats = insect,
+  gem (n=6). full 5/6, J 5/6, nonJ 2/6, clamp 0/6. Clamp clause PASSES
+  (mediation total). 3x rate bar MISSES at 2.5x (5/6 vs 2/6; one item spans
+  the bar at this n; Fisher p~0.24). C1 at large = Hints (a 0.78 CI>0 ✓,
+  b 100% ✓, c half: clamp✓/3x✗, d ✗ no window).
+- **FINAL VERDICTS gpt2-large: C2 SHOWN; C1/C3/C4/C5 Hints** (1 Shown + 4
+  Hints). Cross-size: 124M 1+4, 355M 2+3, 774M 1+4; all five >= Hints at
+  ALL THREE sizes; C2 Shown at all three; C1 Shown at 355M. Minimal
+  pre-registered claim established at every size tested; >=3-Shown headline
+  unmet at every size. No significant null/reversed key contrast anywhere
+  (the C3d 774M numerical reversal is floor-noise, cause isolated to
+  held-out-pool transfer). REPORT.md updated to FINAL; ladder + large
+  verdict table filled.

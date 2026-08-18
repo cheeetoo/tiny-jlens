@@ -83,3 +83,9 @@ A short report (REPORT.md) with the per-criterion table for GPT-2 (each number
 labeled by model size), the cone/gauge section, and the honest boundary:
 what shows, what only hints, what does not appear. Old SmolLM2 results remain
 as supporting evidence in old/.
+
+**Status (2026-08-18): REACHED.** All three confirmatory suites complete
+(124M / 355M / 774M, held-out, frozen bars). Verdicts: all five criteria
+≥ Hints at every size; C2 Shown at all three; C1 Shown at 355M; ≥3-Shown
+unmet everywhere. REPORT.md is final; LOG.md carries the full search
+history including every post-hoc diagnostic.
