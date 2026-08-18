@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 6880.74it/s]
+48 items after capability filter + partner assignment (0 from the paper's sets)
+city_language + city_continent: both-flip 2/7  any-flip 7/7
+
+TOTAL both-flip 2/7  any-flip 7/7
+  partial Iceland->Morocco: city_continent got ' Europe' want Africa
+  partial Morocco->Croatia: city_continent got ' Croatia' want Europe
+  partial Romania->Morocco: city_language got ' French' want Arabic
+  partial Serbia->Morocco: city_continent got ' Morocco' want Africa
+  partial Ukraine->Morocco: city_continent got ' Morocco' want Africa

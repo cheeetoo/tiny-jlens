@@ -1,0 +1,47 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 36276.14it/s]
+n=36 (word x sentence) trials
+median best lens rank:  think 1   dont 2   base 69
+  think < base:  36/36
+  think < dont:  25/36
+  dont < base:  36/36
+blurt (word in output top-10 somewhere in span, think cond): 32/36
+non-blurt trials only (n=4): think 11  dont 45  base 417
+
+per-layer median rank under think / base:
+  L 0  think    399   base    947
+  L 1  think    731   base    973
+  L 2  think    499   base    988
+  L 3  think    767   base    859
+  L 4  think    647   base    774
+  L 5  think    689   base    812
+  L 6  think   1085   base   1088
+  L 7  think    735   base    990
+  L 8  think   1136   base   1095
+  L 9  think   1222   base   1335
+  L10  think   1091   base    998
+  L11  think   1213   base   1539
+  L12  think    907   base   1166
+  L13  think    865   base    993
+  L14  think    750   base    847
+  L15  think   1075   base   1074
+  L16  think    857   base    717
+  L17  think    802   base    809
+  L18  think    263   base   1111
+  L19  think     96   base    827
+  L20  think    140   base    594
+  L21  think    136   base    560
+  L22  think     95   base    583
+  L23  think     25   base    521
+  L24  think     14   base    444
+  L25  think     12   base    636
+  L26  think     13   base    658
+  L27  think      9   base    483
+  L28  think      4   base    497
+  L29  think      3   base    532
+  L30  think      2   base    542
+  L31  think      1   base    600
+  L32  think      1   base    524
+  L33  think      1   base    407
+  L34  think      1   base    392
+saved results/c2_gpt2-large.json

@@ -1,0 +1,10 @@
+{
+  "model": "gpt2-medium",
+  "n_prompts": 1000,
+  "dim_batch": 128,
+  "target_layer": null,
+  "skip_first": 16,
+  "corpus": "Salesforce/wikitext:wikitext-103-raw-v1:train (min200/max2000 chars, non-header)",
+  "dtype": "bfloat16",
+  "wall_seconds": 26193.4
+}

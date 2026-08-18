@@ -1,0 +1,44 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights:  98%|█████████▊| 427/436 [00:00<00:00, 4268.84it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 4333.47it/s]
+95 items after capability filter + partner assignment (16 from the paper's sets)
+
+per-layer: median rank of each probe word at the answer position (n=95), and % items with intermediate in top-10
+  L  interm  top10%  answer     arg    null
+  0     527      6%     855     496    2199
+  1    4213      1%    3172    3189    6245
+  2    7589      1%    3270    8580    9458
+  3   11604      1%    4254   11089   12938
+  4   10501      1%    4624   11439   11689
+  5    7698      1%    4364   11064    9027
+  6    6306      0%    3375   11579    7104
+  7    5900      0%    3098   10609    5915
+  8    6485      0%    2192   11445    6278
+  9    3966      0%     977   10620    4381
+ 10    6060      1%    1699   14319    5410
+ 11    5241      1%     607   13651    4331
+ 12    3195      1%     153   13874    3364
+ 13    2409      1%     215   12729    2296
+ 14    2072      0%     176   10475    1839
+ 15    2180      0%      81   11546    1761
+ 16    1715      0%      51   11910    1479
+ 17     773      0%      28    8640     893
+ 18     945      0%       9   10937     836
+ 19     466      2%       8    6946     878
+ 20     464      1%      12    4328     935
+ 21     225      2%       9    3171     563
+ 22     261      2%       9    2873     505
+ 23     153      3%       5    1692     455
+ 24     130      5%       6    1272     392
+ 25      51     11%       3     309     345
+ 26      22     26%       2      94     353
+ 27      12     41%       0      58     324
+ 28      11     46%       0      55     294
+ 29      11     44%       0      64     337
+ 30       7     66%       0      44     300
+ 31       6     69%       0      33     348
+ 32       5     69%       0      42     365
+ 33       5     68%       0      42     573
+ 34       5     62%       0      47     743
+
+intermediate in top-10 at SOME layer: 79/95
+UNSPOKEN items (intermediate not in output top-10): 50/95; of these, in lens top-10 at some layer: 34/50

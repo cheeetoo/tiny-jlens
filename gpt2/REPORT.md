@@ -184,10 +184,57 @@ flip at the intermediate rate.
 - All task content in the last quarter of depth; no clean workspace *band*,
   a cliff at L9.
 
-## The scale ladder
+## The scale ladder (GPT-2 family)
 
-[gpt2-small → medium → large table lands when the medium/large confirmatory
-chains complete; day-2 ladder (SmolLM2 135M/360M, qwen 0.8B) in ../old/.]
+Same code, same materials, same frozen protocol; [C] = held-out confirmatory
+(small: authors' lens; medium: our n=1000 lens; large: interim lens,
+exploration only — its confirmatory runs when the n=1000 fit lands).
+
+| | gpt2 124M | gpt2-medium 355M | gpt2-large 774M | Claude (paper) |
+|---|---|---|---|---|
+| dictionary mean-share (the cone) | 0.97–0.99 | 0.98–0.99 | **0.03–0.16** (gauge fix → no-op) | healthy |
+| C1 corr (top layer) | +0.61 [C +0.40] | +0.78 [C **+0.68**] | **+0.90** | "highly correlated" |
+| C1b swap-to-report top-5 | 69% [C 88%] | 92% [C 64%] | **100%** | 88% |
+| C1c privilege (J:non-J, clamp) | 1.0×, clamp→0 [C] | **3.0×, clamp→0 [C]** | — | 59% vs 5% |
+| C2 focus vs base (median rank) | 13 vs 337 [C] | 1 vs 207 | 1 vs ~500 | — |
+| C2 demand-loading | 28/36 | **33/36** | — | — |
+| C3 readout, unspoken pooled | 33% [C] (5/6 clean-family) | 45% [C] (5/5 clean) | **68%** | routine |
+| C3 swap top-1 | 77% [C 50%] | 81% [C **82%**] | 70% | 54–70% |
+| C3 crossfn both-flip | 14/27 | **37/59** | 41/61 | — |
+| C3d probe: J / non-J / clamp | 58/27/4 [C 22/9/0] | [C 23/8/6] | **22/5/1 (4.4×)** | 61/28/6 |
+| C4 within-category top-1 | 85% [C 95%] | 87% [C 72%, 3 cats] | 91%; same-pair-all-3 82% | 40–53% |
+| C5a flexible vs automatic | 15/18 vs 0/12 [C 18/19 vs 0/12] | 23/23 vs 0/12 [C 23/23 vs 0/11] | **24/24 vs 0/12**, latent at rank 1 | ~100% vs ~0% |
+| C5b flexible collapse w/ controls | ✓ (wikitext 0.63 miss) | ✓ band-matched | ✓ (0.00–0.42 vs 0.82–1.00) | clean dissociation |
+| occupancy (centered) | 2–3 | 2–3 | **5–9** | ~25 |
+| inject selective window | s≈0.25 (24/24 vs 5/24) | s≈0.1 (15/16 vs 3/16) | — | — |
+
+What arrives with scale, quantitatively: dominance (instructed content rank
+14 → 1), matched-norm privilege asymmetry (1.0× → 3.0× → 4.4×; the clamp
+test is total at every size), pooled readout coverage (33 → 45 → 68%),
+capacity (2–3 → 5–9), demand-loading strength, and the natural health of the
+dictionary itself (the cone dissolves by 774M). What is present at every
+size: reportability, causal routing through lens coordinates, cross-function
+reuse, demand- and instruction-driven loading, and the flexible/automatic
+selectivity dissociation.
+
+## Confirmed verdicts — gpt2-medium (355M, final n=1000 lens, held-out)
+
+| criterion | bars | verdict |
+|---|---|---|
+| C1 | corr ✓ 0.68 CI[0.50,0.84]; swap ✓ 64% top-5; privilege ✓ J 3.0× non-J + clamp→0 (frozen addendum protocol); inject missed only by saturation at the small-calibrated strength (dose window shown at s=0.1: 15/16 vs 3/16) — a secondary clause per BRIEF | **Shown** |
+| C2 | 34/36, 35/36, 31/36, 17/19 — all four bars | **Shown** |
+| C3 | swap ✓ 82%; probe ratio ✓ 2.9× (clamp clause floor-limited: 4/48→3/48 misses the halving bar); pooled readout 45% vs 50% bar (5/5 excluding the shortcut family); crossfn n=7 < 8 | **Hints** |
+| C4 | 72% top-1 over 3 categories (best 87%) ✓; breadth cap (grid spec) | **Hints** |
+| C5 | same-latent 23/23 vs 0/11 ✓✓; ablation battery misses at the frozen 9-layer band (controls degrade too); band-matched exploration (L19–22) shows the clean small-model signature | **Hints** |
+
+**gpt2-medium: 2 Shown + 3 Hints. gpt2-small: 1 Shown + 4 Hints. At both
+sizes, all five criteria ≥ Hints under frozen, held-out confirmatories —
+the pre-registered minimal claim ("GPT-2 has at least hints of a privileged
+set") is formally established, with C2 Shown at both sizes and C1 Shown at
+355M.** The ≥3-Shown headline for full possession is not met at any single
+GPT-2 size; the specific gaps are pooled-readout dilution, grid breadth,
+n-starved crossfn eligibility, and shallow-task retention — each a capacity/
+breadth limitation, none a null or reversed contrast.
 
 ## What this means (draft)
 

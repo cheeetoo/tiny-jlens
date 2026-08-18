@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 251/436 [00:00<00:00, 2509.56it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 2244.65it/s]
+95 items after capability filter + partner assignment (16 from the paper's sets)
+lang_capital + lang_continent: both-flip 8/11  any-flip 11/11
+lang_capital + city_language: both-flip 10/10  any-flip 10/10
+lang_continent + city_language: both-flip 12/19  any-flip 18/19
+city_language + city_continent: both-flip 11/21  any-flip 18/21
+
+TOTAL both-flip 41/61  any-flip 57/61
+  partial China->Norway: lang_continent got ' Norway' want Europe
+  partial Hungary->China: lang_capital got ' Cheng' want Beijing
+  partial Korea->Portugal: lang_capital got ' Port' want Lisbon
+  partial India->Finland: lang_continent got ' Finland' want Europe
+  partial Iran->Spain: lang_continent got ' Asia' want Europe
+  partial Italy->Vietnam: lang_continent got ' Vietnam' want Asia
+  partial Portugal->Iran: city_language got ' English' want Persian
+  partial Russia->Vietnam: lang_continent got ' Vietnam' want Asia
+  partial Vietnam->Finland: lang_continent got ' Asia' want Europe
+  partial Finland->Egypt: city_continent got ' Asia' want Africa
+  partial France->Israel: city_continent got ' Africa' want Asia
+  partial India->Ireland: city_continent got ' Ireland' want Europe
+  partial Italy->Vietnam: city_continent got ' Vietnam' want Asia
+  partial Norway->Israel: city_continent got ' Israel' want Asia
+  partial Poland->Israel: city_continent got ' Europe' want Asia
+  partial Vietnam->Spain: city_continent got ' Africa' want Europe

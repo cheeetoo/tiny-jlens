@@ -74,3 +74,17 @@ anti-directional behavior on GPT-2; the centered form is the meaningful one.
 At Claude scale the correction is presumably negligible (the spread dwarfs
 the mean); at GPT-2 scale it is 99% of the dictionary. Every experiment
 downstream reports raw-gauge numbers alongside where they differ.
+
+## Addendum: the cone across the GPT-2 family (2026-08-18)
+
+gpt2-medium (d=1024): identical structure to small — v̄ share 0.98–0.99,
+cos(axis, v̄)=1.000, uniformity ~0.02, centered |cos| 0.09–0.18.
+
+gpt2-large (d=1280): **the cone is gone** — v̄ share 0.03–0.16 across layers,
+J no longer amplifies the ū pullback (0.4–0.9× vs random ~1×), raw ≈ centered
+on every measure (pairwise cos, PC shares, pursuit variance). The gauge
+correction converges to a no-op exactly where the artifact disappears, which
+is the behavior one wants from a principled fix: it makes 124M–355M
+commensurable with 774M+ and costs nothing where it is not needed. With real
+geometry at large, occupancy becomes 5–9 atoms (vs 2–3 at small/medium),
+extending the capacity ladder toward the paper's ~25.
