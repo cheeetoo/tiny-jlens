@@ -155,7 +155,8 @@ unfitted block.
   cell "almost perfect"); the same (A,B) swap redirects **both** functions in
   21/30 pairs. Breadth is one category at 124M (capability wall — the
   paper's own months/animals/numbers cells were near-zero too); medium adds
-  cells. [C: pending]
+  cells. [C: **95% top-1 (77/81)**, same-pair-redirects-both 37/40 — bar met
+  with margin; breadth cap stands.]
 
 ### C5 — Selectivity
 - [E] Same-latent design: with the passage's language in the lens at
@@ -173,7 +174,9 @@ unfitted block.
   flexible tasks at 0.55–0.92. The pre-declared miss: wikitext agreement
   stays below the paper's 80% bar at all doses — at 124M, ordinary text
   prediction is itself partly lens-mediated (upcoming words are verbalizable
-  content beyond the protected imminent top-10). [C: pending]
+  content beyond the protected imminent top-10). [C: flexible collapse ✓
+  with clean controls ✓; shallow 2/3 ≥80% (wikitext 0.63 = the pre-declared
+  miss) — see the verdict table.]
 
 ### Presence predicts causal efficacy
 Stratifying C3 swaps by the intermediate's lens rank: **rank <10 → 92%
