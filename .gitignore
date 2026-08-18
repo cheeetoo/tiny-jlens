@@ -1,4 +1,4 @@
-# large binary artifacts — regenerable via scripts/fit_lens.py or downloadable
+# large binary artifacts — the authors' released lens, downloadable
 # from neuronpedia/jacobian-lens on HF (see lenses/*/config.yaml)
 *.pt
 __pycache__/
