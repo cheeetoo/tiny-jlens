@@ -1,4 +1,14 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  70%|██████▉   | 203/292 [00:00<00:00, 2029.33it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1482.54it/s]
 93 items after capability filter + partner assignment (16 from the paper's sets)
-...................
+...............................................
+
+swap success (target answer graded top-1), n=47 items
+window       cra1 cra2 cca1 cca2 pra1 pra2 pca1 pca2 
+all            79   72   81   57    0    0   13    2
+mid+           79   72   81   60    0    0   13    2
+late           81   70   79   62    0    0   13    2
+later          77   62   74   57    0    0   17    4
+last3          72   57   68   62    0    0   28    6
+late-nomotor   72   77   66   70    0    0   30    9
+mid            68   81   68   83    0    0   45   13

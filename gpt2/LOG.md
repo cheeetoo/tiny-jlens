@@ -150,3 +150,25 @@ are exploration unless marked.
   claims ride on gpt2-medium/large confirmatories (their capability is
   sufficient). No material unfreezing. Guarded two nan-cases in 71 (empty
   task pools) — robustness fix, no analysis change.
+
+- **81 lens-vs-logit** [E] gpt2-small: logit lens reads the two-hop
+  intermediate as well as the J-lens at 124M (L9: 52% vs 38% top-10) —
+  UNLIKE SmolLM2 (1/44 vs 30/44). GPT-2 is logit-lens-native; the J-lens's
+  contribution here is the intervention system + gauge-corrected geometry,
+  not readout superiority. Honest report item.
+- **43 demand** [E]: 1-shot format cue too weak (6/36 reversed); 3-shot +
+  second-half-of-span works: demand<nodemand 28/36 (median 343 vs 462).
+  Present but weak vs 135M-instruct (23/24) — the instruction channel
+  matters for demand loading.
+- **82 mlp gain** [E]: centered lens directions amplified 1.11-1.32x by the
+  next MLP at L7-10 (mlp-row controls 0.92-1.05; random=1). The paper's
+  Claude effect is ~10x: the depth-broadcast structural signature exists in
+  trend, tiny in magnitude — structure is what scale buys.
+- CONFIRM early (gpt2-small, held-out pools): C3b swap 50% (bar 30% ✓, n=12);
+  C3d probe split full 39 / J 22 / nonJ 9 / clamp 0 (J=2.4x nonJ ✓, clamp ✓);
+  C3a pooled unspoken 5/15=33% (bar 50% ✗ — shortcut-family dilution as
+  predicted+logged pre-results); C3c 0 eligible pairs (not evaluable at
+  124M); C1a mean rho +0.395 at L10 over 4 usable categories (all positive).
+- Medium exploration swap (interim lens, n=47): coord 79-81% a=1; mid-window
+  (no late layers) 68->83% at a=2 — content less last-layer-bound at 355M.
+  Projection-centered weaker at medium (13-45%); coordinate is the robust form.
