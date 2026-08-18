@@ -148,24 +148,34 @@ if PHASE == "inject":
                 "wolves", "silk", "thunder", "cotton", "iron", "roses",
                 "salt", "dreams", "mirrors", "wheat"]
     lays = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
+    STRENGTHS = (0.0, 0.25, 0.5, 1.0, 2.0)
+    # inject at every position EXCEPT the last 3 (the readout anchor is never
+    # steered directly — the report must be carried there by the model), as in
+    # the paper's inject-on-the-user-turn protocol
+    n_prompt = kit.encode(PROMPT).shape[1]
+    n_ctrl = kit.encode(CONTROL).shape[1]
     rows = []
     for w in CONCEPTS:
         vids = variant_ids(w)
         if not vids:
             continue
-        for strength in (0.0, 2.0, 4.0, 8.0):
-            edits = [core.steer(kit, l, vids[0], strength, positions=None,
+        for strength in STRENGTHS:
+            edits = [core.steer(kit, l, vids[0], strength,
+                                positions=list(range(n_prompt - 3)),
                                 centered=True) for l in lays] if strength else []
             _, lg = anchor_state(PROMPT, edits)
             rrank = min(int((lg > lg[v]).sum()) for v in vids)
-            _, lgc = anchor_state(CONTROL, edits)
+            edits_c = [core.steer(kit, l, vids[0], strength,
+                                  positions=list(range(n_ctrl - 3)),
+                                  centered=True) for l in lays] if strength else []
+            _, lgc = anchor_state(CONTROL, edits_c)
             crank = min(int((lgc > lgc[v]).sum()) for v in vids)
             rows.append(dict(word=w, strength=strength, report_rank=rrank,
                              control_rank=crank))
     print(f"{len({r['word'] for r in rows})} concepts; steering centered lens "
-          f"vector at layers {lays} (all positions)")
+          f"vector at layers {lays} (all positions except the last 3)")
     print("strength   report top-1   report top-5   median rank   control top-5 (blurt)")
-    for s in (0.0, 2.0, 4.0, 8.0):
+    for s in STRENGTHS:
         sel = [r for r in rows if r["strength"] == s]
         print(f"  {s:4.0f}    {sum(r['report_rank']==0 for r in sel):>6}/{len(sel)}"
               f"       {sum(r['report_rank']<5 for r in sel):>6}/{len(sel)}"

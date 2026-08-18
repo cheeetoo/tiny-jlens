@@ -294,34 +294,21 @@ LANG_COUNTRY_FEWSHOT = (
     'Text: "{passage}"\nCountry where this language is spoken:'
 )
 
-# language classification of generated continuations: stopword sets made
-# DISJOINT across languages by construction (shared words like la/de/un
-# removed), plus accented characters as a tie-breaker signal
-LANG_MARKERS = {
-    "French":  dict(words={"le", "les", "et", "dans", "une", "qui", "est", "au", "ses", "cette"},
-                    chars="êçœù"),
-    "German":  dict(words={"der", "die", "das", "und", "ist", "den", "von", "mit", "sich", "nicht", "im", "zu"},
-                    chars="ßäöü"),
-    "Spanish": dict(words={"el", "los", "las", "y", "del", "por", "más", "pero", "como", "está"},
-                    chars="ñ¿¡"),
-    "Italian": dict(words={"il", "che", "di", "della", "per", "sono", "nel", "gli", "anche"},
-                    chars="ò"),
-    "English": dict(words={"the", "and", "of", "to", "is", "was", "that", "he", "she", "his", "her"},
-                    chars=""),
-}
+# language classification of generated continuations: langid restricted to
+# the five relevant languages (hand-rolled stopword sets could not separate
+# Romance languages on 16-token snippets — see LOG.md)
+_LANGID_NAMES = {"fr": "French", "de": "German", "es": "Spanish",
+                 "it": "Italian", "en": "English"}
 
 
 def classify_language(text: str) -> str:
-    padded = " " + text.lower()
-    for p in ".,;:!?'\"":
-        padded = padded.replace(p, " ")
-    scores = {}
-    for lang, m in LANG_MARKERS.items():
-        s = sum(padded.count(f" {w} ") for w in m["words"])
-        s += sum(text.count(c) for c in m["chars"]) * 2
-        scores[lang] = s
-    best = max(scores, key=scores.get)
-    return best if scores[best] > 0 else "unknown"
+    import langid
+
+    langid.set_languages(list(_LANGID_NAMES))
+    if len(text.strip()) < 8:
+        return "unknown"
+    code, _ = langid.classify(text)
+    return _LANGID_NAMES[code]
 
 # --------------------------------------------------------------------------
 # C2: think/don't-think materials (exploration set; held-out reserved later)

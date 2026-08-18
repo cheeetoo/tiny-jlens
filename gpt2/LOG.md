@@ -88,3 +88,38 @@ are exploration unless marked.
 - Capability v2, medium/large: two-hop pool 52→94/96 (continent families
   come alive); report 8/16 top1-valid, 12–14/16 member-top5; C4 non-country
   categories still mostly dead at large (as in the paper's own weak cells).
+
+## 2026-08-18 (day 4)
+
+- **30 swap** [E]: C1b swap-to-report 69% top-5 / 58% top-1 (centered α=2
+  best; raw α=2 58/58; α=1 both ~35-42/54) over 26 (cat,target) swaps.
+- **30 inject** [E]: dose-response with selectivity at s=0.25, L7-10:
+  report-top5 24/24 vs blurt 5/24; early-layer injection is unselective at
+  matched report rates and DEGRADES at higher strength (L0-3 s=0.5: 7/24
+  report) — installing a reportable concept works via the late/content
+  layers. First grid saturated (s>=2 forces token everywhere) — refined.
+- **70 same_latent** [E]: with centered α=1 swaps + langid classifier:
+  country flips 12/12, report 3/6 (French install-failures degrade to
+  'English'; source suppressed 6/6), automatic continuation 0/12 changed.
+  Presence comparable across conditions (median rank 59). The paper's
+  selectivity dissociation, near-clean at gpt2-small.
+- **41 privilege (word form)** [E]: FAILS by design at this scale — the
+  instruction mentions w, and mention contaminates every channel (think
+  moves the J-orth word-probe z=+6.7 vs real +10.6). Diagnosis: word-level
+  materials can't separate label-in-workspace from stimulus-content; the
+  paper used property probes for exactly this reason.
+- **42 imagine (property form)** [E]: claim-is-French header: lens z +10.4,
+  J-orth French-probe z +6.8 vs real-French +19.6 — a PARTIAL dissociation
+  (leakage 3x smaller than real stimulus, but not <1 SD as in the paper).
+  Consistent with day-2 ladder (this control absent through 800M): the
+  genuine boundary of what transfers at small scale.
+- **71 ablation k=10** [E]: flexible tasks collapse to 0.00 (controls
+  0.45-0.71) — but wikitext 0.40 / copy 0.34 also fall (cont_lang holds
+  0.83). 17.9% norm removed. Copy damage despite protection suggests
+  transcription is itself lens-planned at this scale (upcoming words are
+  verbalizable content beyond the protected imminent top-10). Dose sweep
+  k=2,3,5 running.
+- **60 flexibility** [E]: countries grid (2 funcs at small): 85% top-1
+  overall (paper overall 40-53%; their countries cell "almost perfect");
+  identical pair-swap redirects BOTH functions 21/30 (70%). Breadth capped
+  at 1 category (capability wall) — medium adds continent/months/numbers.
