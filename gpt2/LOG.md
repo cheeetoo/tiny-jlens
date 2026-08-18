@@ -216,3 +216,13 @@ are exploration unless marked.
   c-half(clamp✓/3x✗) d✓. Final small verdicts: C2 Shown; C1/C3/C4/C5 Hints;
   0 nulls/reversals anywhere; misses = matched-norm asymmetry, pooled-readout
   dilution, wikitext shallow (pre-declared), breadth caps.
+
+- **Medium exploration chain COMPLETE** (interim 275-prompt lens). Adds to
+  earlier entries: C2 think median rank 1 vs base 207 (dominance at 355M;
+  span-max blurt flag saturates 34/36 as day-2 predicted); C5a flexible
+  23/23 vs automatic 0/12 (perfect); C5b k=1 flexible 0.00-0.09 with
+  controls 0.67-1.00, shallow weaker than small (band is 9 layers vs 4 —
+  band-matched variant queued); C4: 3 country functions, 26/30 within
+  countries, same-pair-redirects-ALL-3 11/14 (79%); months/numbers cells
+  pass capability but never swap (0/10) — breadth still countries.
+  Occupancy 2-3 (same as small; capacity does not grow 124M->355M).
