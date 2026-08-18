@@ -172,3 +172,16 @@ are exploration unless marked.
 - Medium exploration swap (interim lens, n=47): coord 79-81% a=1; mid-window
   (no late layers) 68->83% at a=2 — content less last-layer-bound at 355M.
   Projection-centered weaker at medium (13-45%); coordinate is the robust form.
+
+- **CONFIRMATORY SUITE COMPLETE (gpt2-small, held-out pools)** [C]:
+  12 PASS / 2 MISS / 3 n-a. Full checks in 99_verdicts output.
+  C4: 95% (77/81) overall, same-pair-redirects-both 37/40 (92%) — breadth
+  1 category (frozen cap → Hints). C5b k=3 confirms k=1 shape.
+  VERDICTS (BRIEF rules): C1 Hints (a✓ d✓; b not evaluable at 124M);
+  C2 SHOWN (4/4 bars); C3 Hints (b✓ d✓ incl. privilege; a pooled missed
+  by shortcut-family dilution — 5/6 on genuine-two-hop items; c n/a);
+  C4 Hints (rate bars smashed; breadth-capped); C5 Hints (a decisively
+  Shown-strength; b = the pre-declared wikitext miss, everything else ✓).
+  OVERALL at 124M: 1 Shown + 4 Hints -> BRIEF headline not met at small;
+  no null/reversed contrast anywhere; every miss is capability-dilution or
+  pre-declared. Medium confirmatory (final lens) is the test of 3-Shown.

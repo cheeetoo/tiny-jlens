@@ -10,3 +10,27 @@ ablate    wikitext   (shallow ) 0.49
 ablate    copy       (shallow ) 0.62
 ablate    cont_lang  (shallow ) 0.92
 ablate    twohop     (flexible) 0.00
+ablate    country    (flexible) 0.00
+ablate    report     (flexible) nan
+   [ablation removed 15.5% of residual norm on average]
+randproj  wikitext   (shallow ) 0.85
+randproj  copy       (shallow ) 1.00
+randproj  cont_lang  (shallow ) 1.00
+randproj  twohop     (flexible) 1.00
+randproj  country    (flexible) 1.00
+randproj  report     (flexible) nan
+noise     wikitext   (shallow ) 0.68
+noise     copy       (shallow ) 0.97
+noise     cont_lang  (shallow ) 0.92
+noise     twohop     (flexible) 1.00
+noise     country    (flexible) 0.83
+noise     report     (flexible) nan
+
+retention vs clean (k=3, layers [7, 8, 9, 10], centered):
+task       kind      ablate  randproj   noise
+wikitext   shallow     0.49    0.85    0.68
+copy       shallow     0.62    1.00    0.97
+cont_lang  shallow     0.92    1.00    0.92
+twohop     flexible    0.00    1.00    1.00
+country    flexible    0.00    1.00    0.83
+report     flexible     nan     nan     nan

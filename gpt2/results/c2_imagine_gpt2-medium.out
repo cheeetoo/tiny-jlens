@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  28%|██▊       | 82/292 [00:00<00:00, 819.70it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1485.83it/s]
+L14: French-probe J-share 20.0%
+L15: French-probe J-share 23.3%
+L16: French-probe J-share 26.8%
+L17: French-probe J-share 29.2%
+L18: French-probe J-share 28.3%
+L19: French-probe J-share 28.8%
+L20: French-probe J-share 26.9%
+L21: French-probe J-share 28.5%
+L22: French-probe J-share 31.8%
+
+n=6 sentences; paired z vs neutral header (lens 'French' | J-orth property probe | full probe):
+  claim  lens z  +12.6   orth-probe z   +4.3   full-probe z   +5.9
+  real   lens z   +7.3   orth-probe z  +25.4   full-probe z  +32.6
