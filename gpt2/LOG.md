@@ -191,3 +191,12 @@ are exploration unless marked.
   (0/2). Lens loading predicts causal efficacy (the paper's C4 loading
   correlation, visible inside C3) — and explains city_language: mid-rank
   presence, mid-rate causality.
+
+- ADDENDUM (frozen before its run, day-2 precedent): C1b at 124M was
+  not-evaluable on the original held-out categories (capability). A pre-lens
+  capability probe found two additional held-out categories within 124M
+  reach: "European city" (top1 Berlin; 6 eligible targets) and "farm animal"
+  (top1 sheep; 3 eligible targets). C1b-addendum = the frozen C1b protocol
+  (centered swap, alpha<=2, targets outside output top-10, top-5 criterion,
+  bar >=40%) on exactly these two categories, seed 1234. No other criterion
+  touched (C1a's result stands as scored on the original seven).

@@ -9,3 +9,10 @@ es2  Spanish  presence r/c/cont   4/  5/  4  report ok->FLIP  country --->FLIP  
 it1  Italian  presence r/c/cont  10/ 11/  4  report ok->FLIP  country ok->FLIP  cont It->It
 it2  Italian  presence r/c/cont   0/  0/  0  report ok->FLIP  country ok->FLIP  cont It->It
 fx1  French   presence r/c/cont   6/  6/  8  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+gx1  German   presence r/c/cont  13/ 13/  8  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+sx1  Spanish  presence r/c/cont  11/ 11/ 12  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+ix1  Italian  presence r/c/cont   0/  0/  0  report ok->FLIP  country ok->FLIP  cont It->It
+
+flexible follows swap: 23/23 (report 12/12, country 11/11)
+automatic continuation changed: 0/12 (true redirects to alt language: 0; other changes: [])
+presence (language name in lens, best rank over last-10 passage positions): median 7
