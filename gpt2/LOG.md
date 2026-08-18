@@ -139,3 +139,14 @@ are exploration unless marked.
   artifact; paper ~25). Small workspace, honestly measured.
 - Materialized interim gpt2-medium lens (275 prompts = released-lens
   convergence class); full medium chain launched in background.
+
+- CONFIRM capability (held-out pools, gpt2-small) [C-stage]: two-hop 24/66
+  (lang_capital 1/5 — exotic held-out countries exceed 124M knowledge;
+  city_language 10/17, lang_continent 9/18); report 0/7 top-1-valid, 4/7
+  member-top5. NOTED BEFORE ANY LENS RESULT: the small-model confirmatory
+  runs exactly as frozen on these pools; where n collapses (C1b sources = 0;
+  clean-family C3 n=1), the criterion is reported "not evaluable at 124M on
+  held-out materials (capability filter)" and the family-resolved confirmed
+  claims ride on gpt2-medium/large confirmatories (their capability is
+  sufficient). No material unfreezing. Guarded two nan-cases in 71 (empty
+  task pools) — robustness fix, no analysis change.

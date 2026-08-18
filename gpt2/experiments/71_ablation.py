@@ -178,6 +178,8 @@ def task_twohop(mode):
     items = [it for it in pools.twohop_items(tok)
              if it.family == "lang_capital"
              and it.prompt in {r["prompt"] for r in cap["twohop"] if r["twohop"]}]
+    if not items:
+        return float("nan")
     ok = 0
     for it in items:
         ids = kit.encode(it.prompt)
@@ -201,6 +203,8 @@ def task_country(mode):
 def task_report(mode):
     cats = pools.report_categories(tok, with_additions=True)
     usable = [c for c, r in cap["report"].items() if r["valid"]]
+    if not usable:
+        return float("nan")
     ok = 0
     for cat in usable:
         ids = kit.encode(pools.REPORT_FEWSHOT.format(cat=cat))
