@@ -1,7 +1,9 @@
 """C2 demand variant: is a remembered word maintained in the lens during an
 unrelated copying task ONLY when the (few-shot-established) format will ask
-for it afterward? The paper's implicit-task-demand experiment, few-shot form
-(day 2 found this decisive at 135M: median rank 6.5 vs 64).
+for it afterward? A variant of the paper's implicit-task-demand design, not
+a replication: the paper's version never names the tracked property, while
+here the word is named in BOTH conditions and only the format-implied later
+question differs (day 2 found this decisive at 135M: median rank 6.5 vs 64).
 
 The one-shot example establishes whether recall follows the copy. The word,
 sentence, and copy span are identical across conditions; only the example's
@@ -12,6 +14,7 @@ Run:  python experiments/43_demand.py [model]
 """
 
 import json
+import statistics
 import sys
 
 sys.path.insert(0, "/tiny-jlens/gpt2")
@@ -27,15 +30,10 @@ tok = kit.tokenizer
 
 # 3-shot (1-shot was too weak a format cue for base GPT-2);
 # measured over the SECOND HALF of the copy span, where maintenance-vs-decay
-# differentiates.
-SHOTS_D = ('Remember the word "lamp". Copy: "The road was wet." -> "The road was wet." The word was "lamp".\n'
-           'Remember the word "kite". Copy: "Dinner is at six." -> "Dinner is at six." The word was "kite".\n'
-           'Remember the word "moss". Copy: "He lost his keys." -> "He lost his keys." The word was "moss".\n')
-SHOTS_N = SHOTS_D.replace(' The word was "lamp".', ' Done.').replace(
-    ' The word was "kite".', ' Done.').replace(' The word was "moss".', ' Done.')
+# differentiates. Frame diversity: pools.DEMAND_VARIANTS supplies three
+# shot-set variants (variant 0 = the original lamp/kite/moss set).
 TAIL = 'Remember the word "{w}". Copy: "{s}" -> "{s_open}'
-DEMAND = SHOTS_D + TAIL
-NODEMAND = SHOTS_N + TAIL
+VARIANTS = [pools.demand_shots(v) for v in pools.DEMAND_VARIANTS]
 
 
 def word_ids(w):
@@ -62,16 +60,26 @@ def span_rank(text, sentence, w):
 
 rows = []
 for w in pools.C2_WORDS:
+    if not word_ids(w):
+        continue  # single-token filter, as everywhere else
     for s in pools.C2_SENTENCES:
-        rd = span_rank(DEMAND.format(w=w, s=s, s_open=s), s, w)
-        rn = span_rank(NODEMAND.format(w=w, s=s, s_open=s), s, w)
-        rows.append(dict(word=w, sentence=s, demand=rd, nodemand=rn))
+        for vi, (shots_d, shots_n) in enumerate(VARIANTS):
+            rd = span_rank((shots_d + TAIL).format(w=w, s=s, s_open=s), s, w)
+            rn = span_rank((shots_n + TAIL).format(w=w, s=s, s_open=s), s, w)
+            rows.append(dict(word=w, sentence=s, variant=vi, demand=rd, nodemand=rn))
+    print(".", end="", flush=True)
+print()
 
 n = len(rows)
-med = lambda k: sorted(r[k] for r in rows)[n // 2]
-wins = sum(r["demand"] < r["nodemand"] for r in rows)
-print(f"n={n}: word's best lens rank over the copy span")
-print(f"  with recall demand:    median {med('demand')}")
-print(f"  without recall demand: median {med('nodemand')}")
-print(f"  demand < no-demand: {wins}/{n}")
+med = statistics.median
+print(f"n={n} (word x sentence x {len(VARIANTS)} shot variants): "
+      f"word's best lens rank over the copy span")
+print(f"  with recall demand:    median {med([r['demand'] for r in rows])}")
+print(f"  without recall demand: median {med([r['nodemand'] for r in rows])}")
+print(f"  demand < no-demand: {sum(r['demand'] < r['nodemand'] for r in rows)}/{n}")
+for vi in range(len(VARIANTS)):
+    sel = [r for r in rows if r["variant"] == vi]
+    print(f"  variant {vi}: medians {med([r['demand'] for r in sel])} vs "
+          f"{med([r['nodemand'] for r in sel])}, wins "
+          f"{sum(r['demand'] < r['nodemand'] for r in sel)}/{len(sel)}")
 json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_demand_{MODEL}.json", "w"))

@@ -13,8 +13,13 @@ validated in experiments/00_validate.py):
   with v_tau = J_L^T C (g * w_tau)   (w_tau = unembedding row,
        g = ln_f gain, C = mean-centering over dims — LN's mu subtraction),
   sigma = ln_f's per-position std, and beta_tau = <w_tau, ln_f.bias>.
-  v_tau is "the J-lens vector of token tau at layer L" (paper: rows of
-  W_U J_L). Rankings are always computed from the exact logits.
+  v_tau is "the J-lens vector of token tau at layer L". NOTE: the paper's
+  text defines these as literal rows of W_U J_L; we fold the final-LN gain
+  and mean-centering into the row so the inner product reproduces the exact
+  logit (the paper concedes its form is only approximate). The two
+  definitions differ substantially in direction (mean cos ~0.57 at L9),
+  so this is a disclosed choice, not an equivalence.
+  Rankings are always computed from the exact logits.
 
 - The dictionary {v_tau} is used in two flavors:
     raw:      v_tau
@@ -26,10 +31,11 @@ validated in experiments/00_validate.py):
   at GPT-2 scale.
 
 - Interventions are forward hooks on blocks, applied at absolute token
-  positions (KV-cache safe, batch 1). Swaps use the paper's CLAMPED
-  semantics: coordinates are held at (swapped) clean-pass values at every
-  edited layer, not re-swapped per layer (re-swapping oscillates — the
-  swap permutation is an involution).
+  positions (KV-cache safe, batch 1). Swaps use CLAMPED semantics:
+  coordinates are held at (swapped) clean-pass values at every edited
+  layer, not re-swapped per layer (re-swapping oscillates — the swap
+  permutation is an involution). "Clamped" is our reading of the paper's
+  figure captions; the paper's text never specifies multi-layer behavior.
 """
 
 from __future__ import annotations

@@ -17,6 +17,7 @@ Run:  python experiments/30_report.py corr|swap|inject [model]
 
 import json
 import random
+import statistics
 import sys
 
 sys.path.insert(0, "/tiny-jlens/gpt2")
@@ -61,8 +62,12 @@ def anchor_state(prompt: str, edits=()):
 
 cap = json.load(open(f"/tiny-jlens/gpt2/results/capability_{MODEL}.json"))
 cats_all = pools.report_categories(tok)          # curated members (swap targets)
-usable = {c for c, r in cap["report"].items() if r["member_top5"]}
-top1_valid = {c for c, r in cap["report"].items() if r["valid"]}
+# capability per few-shot format (format-frame diversity); back-compat with
+# capability files that predate report_formats
+fmt_cap = cap.get("report_formats", {"0": cap["report"]})
+FORMATS = [(int(i), pools.REPORT_FEWSHOTS[int(i)]) for i in sorted(fmt_cap)]
+usable = {int(i): {c for c, r in fmt_cap[i].items() if r["member_top5"]} for i in fmt_cap}
+top1_valid = {int(i): {c for c, r in fmt_cap[i].items() if r["valid"]} for i in fmt_cap}
 
 
 def spearman(a: list[float], b: list[float]) -> float:
@@ -74,25 +79,27 @@ def spearman(a: list[float], b: list[float]) -> float:
 # ---------------- corr ----------------
 
 if PHASE == "corr":
-    per_layer: dict[int, list[float]] = {l: [] for l in kit.layers}
-    for cat in sorted(usable):
-        members = cats_all[cat]
-        ids, lg = anchor_state(pools.REPORT_FEWSHOT.format(cat=cat))
-        resid = kit.residuals(ids)
-        mem_ids = [min(variant_ids(m), key=lambda v: int((lg > lg[v]).sum()))
-                   for m in members]  # best surface form of each member
-        out_ranks = [int((lg > lg[v]).sum()) for v in mem_ids]
-        for l in kit.layers:
-            lr = kit.ranks(resid[l][-1:], l, mem_ids)[0].tolist()
-            per_layer[l].append(spearman([-r for r in out_ranks], [-r for r in lr]))
-    print(f"categories: {len(per_layer[kit.layers[0]])} "
-          f"(usable = member in output top-5)")
+    rows = []
+    for fi, fmt in FORMATS:
+        for cat in sorted(usable[fi]):
+            members = cats_all[cat]
+            ids, lg = anchor_state(fmt.format(cat=cat))
+            resid = kit.residuals(ids)
+            mem_ids = [min(variant_ids(m), key=lambda v: int((lg > lg[v]).sum()))
+                       for m in members]  # best surface form of each member
+            out_ranks = [int((lg > lg[v]).sum()) for v in mem_ids]
+            per_layer = {}
+            for l in kit.layers:
+                lr = kit.ranks(resid[l][-1:], l, mem_ids)[0].tolist()
+                per_layer[l] = spearman([-r for r in out_ranks], [-r for r in lr])
+            rows.append(dict(fmt=fi, cat=cat, per_layer=per_layer))
+    print(f"{len(rows)} (format, category) cells "
+          f"(usable = member in output top-5 under that format)")
     print("per-layer mean Spearman (lens ranks vs output ranks of members):")
     for l in kit.layers:
-        vals = torch.tensor(per_layer[l])
+        vals = torch.tensor([r["per_layer"][l] for r in rows])
         print(f"  L{l:2d}  {vals.mean():+.3f}  (min {vals.min():+.2f}, max {vals.max():+.2f})")
-    json.dump({l: per_layer[l] for l in kit.layers},
-              open(f"/tiny-jlens/gpt2/results/c1_corr_{MODEL}.json", "w"))
+    json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_corr_{MODEL}.json", "w"))
 
 # ---------------- swap ----------------
 
@@ -102,32 +109,33 @@ if PHASE == "swap":
     lays = [l for l in kit.layers if lo * kit.n_layers <= l <= hi * kit.n_layers]
     print(f"swap layers: {lays}")
     rows = []
-    for cat in sorted(top1_valid):
-        members = cats_all[cat]
-        ids, lg = anchor_state(pools.REPORT_FEWSHOT.format(cat=cat))
-        src_tok = int(lg.argmax())
-        src_name = next((m for m in members if src_tok in variant_ids(m)), None)
-        if src_name is None:
-            continue
-        # eligible targets: members whose every variant is outside output top-10
-        eligible = [m for m in members if m != src_name
-                    and min(int((lg > lg[v]).sum()) for v in variant_ids(m)) >= 10]
-        for tgt_name in rng.sample(eligible, min(5, len(eligible))):
-            tgt_tok = min(variant_ids(tgt_name), key=lambda v: int((lg > lg[v]).sum()))
-            for centered in (False, True):
-                for alpha in (1.0, 2.0):
-                    edits = core.swap_clamped(kit, ids, lays, [src_tok], [tgt_tok],
-                                              alpha=alpha, centered=centered)
-                    lg2 = core.logits_with(kit, ids, edits)[-1]
-                    tr = min(int((lg2 > lg2[v]).sum()) for v in variant_ids(tgt_name))
-                    rows.append(dict(cat=cat, src=src_name, tgt=tgt_name,
-                                     centered=centered, alpha=alpha,
-                                     tgt_rank_post=tr,
-                                     top1=tr == 0, top5=tr < 5))
-        print(".", end="", flush=True)
+    for fi, fmt in FORMATS:
+        for cat in sorted(top1_valid[fi]):
+            members = cats_all[cat]
+            ids, lg = anchor_state(fmt.format(cat=cat))
+            src_tok = int(lg.argmax())
+            src_name = next((m for m in members if src_tok in variant_ids(m)), None)
+            if src_name is None:
+                continue
+            # eligible targets: members whose every variant is outside output top-10
+            eligible = [m for m in members if m != src_name
+                        and min(int((lg > lg[v]).sum()) for v in variant_ids(m)) >= 10]
+            for tgt_name in rng.sample(eligible, min(8, len(eligible))):
+                tgt_tok = min(variant_ids(tgt_name), key=lambda v: int((lg > lg[v]).sum()))
+                for centered in (False, True):
+                    for alpha in (1.0, 2.0):
+                        edits = core.swap_clamped(kit, ids, lays, [src_tok], [tgt_tok],
+                                                  alpha=alpha, centered=centered)
+                        lg2 = core.logits_with(kit, ids, edits)[-1]
+                        tr = min(int((lg2 > lg2[v]).sum()) for v in variant_ids(tgt_name))
+                        rows.append(dict(fmt=fi, cat=cat, src=src_name, tgt=tgt_name,
+                                         centered=centered, alpha=alpha,
+                                         tgt_rank_post=tr,
+                                         top1=tr == 0, top5=tr < 5))
+            print(".", end="", flush=True)
     print()
-    n_pairs = len({(r["cat"], r["tgt"]) for r in rows})
-    print(f"{n_pairs} (category, target) swaps")
+    n_pairs = len({(r["fmt"], r["cat"], r["tgt"]) for r in rows})
+    print(f"{n_pairs} (format, category, target) swaps")
     for centered in (False, True):
         for alpha in (1.0, 2.0):
             sel = [r for r in rows if r["centered"] == centered and r["alpha"] == alpha]
@@ -135,47 +143,59 @@ if PHASE == "swap":
                 print(f"  {'centered' if centered else 'raw     '} a={alpha}: "
                       f"top-1 {100*sum(r['top1'] for r in sel)/len(sel):.0f}%  "
                       f"top-5 {100*sum(r['top5'] for r in sel)/len(sel):.0f}%  "
-                      f"median post rank {sorted(r['tgt_rank_post'] for r in sel)[len(sel)//2]}")
+                      f"median post rank {statistics.median(r['tgt_rank_post'] for r in sel)}")
     json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_swap_{MODEL}.json", "w"))
 
 # ---------------- inject ----------------
 
 if PHASE == "inject":
-    PROMPT = "The word that best describes what I am thinking about right now is"
-    CONTROL = "The weather report for tomorrow morning said it would be"
+    # Frame diversity: multiple report-eliciting frames and multiple
+    # noun-expecting control frames (pools.INJECT_*_FRAMES; index 0 = the
+    # original pair). Same injection protocol for both kinds.
     CONCEPTS = pools.INJECT_CONCEPTS
     lays = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
-    STRENGTHS = (0.0, 0.25, 0.5, 1.0, 2.0)
+    # the low end (0.15-0.25) is where report and control frames separate;
+    # by 0.5 every noun-licensing frame blurts the injected concept
+    STRENGTHS = (0.0, 0.15, 0.175, 0.25, 0.5, 1.0, 2.0)
+    FRAME_SETS = [("report", pools.INJECT_REPORT_FRAMES),
+                  ("control", pools.INJECT_CONTROL_FRAMES)]
     # inject at every position EXCEPT the last 3 (the readout anchor is never
     # steered directly — the report must be carried there by the model), as in
     # the paper's inject-on-the-user-turn protocol
-    n_prompt = kit.encode(PROMPT).shape[1]
-    n_ctrl = kit.encode(CONTROL).shape[1]
+    n_by_frame = {(kind, i): kit.encode(f).shape[1]
+                  for kind, frames in FRAME_SETS for i, f in enumerate(frames)}
     rows = []
     for w in CONCEPTS:
         vids = variant_ids(w)
         if not vids:
             continue
         for strength in STRENGTHS:
-            edits = [core.steer(kit, l, vids[0], strength,
-                                positions=list(range(n_prompt - 3)),
-                                centered=True) for l in lays] if strength else []
-            _, lg = anchor_state(PROMPT, edits)
-            rrank = min(int((lg > lg[v]).sum()) for v in vids)
-            edits_c = [core.steer(kit, l, vids[0], strength,
-                                  positions=list(range(n_ctrl - 3)),
-                                  centered=True) for l in lays] if strength else []
-            _, lgc = anchor_state(CONTROL, edits_c)
-            crank = min(int((lgc > lgc[v]).sum()) for v in vids)
-            rows.append(dict(word=w, strength=strength, report_rank=rrank,
-                             control_rank=crank))
-    print(f"{len({r['word'] for r in rows})} concepts; steering centered lens "
-          f"vector at layers {lays} (all positions except the last 3)")
-    print("strength   report top-1   report top-5   median rank   control top-5 (blurt)")
+            for kind, frames in FRAME_SETS:
+                for i, frame in enumerate(frames):
+                    n = n_by_frame[(kind, i)]
+                    edits = [core.steer(kit, l, vids[0], strength,
+                                        positions=list(range(n - 3)),
+                                        centered=True) for l in lays] if strength else []
+                    _, lg = anchor_state(frame, edits)
+                    rank = min(int((lg > lg[v]).sum()) for v in vids)
+                    rows.append(dict(word=w, strength=strength, kind=kind,
+                                     frame=i, rank=rank))
+        print(".", end="", flush=True)
+    print()
+    n_words = len({r["word"] for r in rows})
+    n_rep = len(pools.INJECT_REPORT_FRAMES)
+    n_ctl = len(pools.INJECT_CONTROL_FRAMES)
+    print(f"{n_words} concepts x {n_rep} report frames + {n_ctl} controls; "
+          f"steering centered lens vector at layers {lays} "
+          f"(all positions except the last 3)")
+    print("strength   report top-5 (pooled)   control top-5 (pooled)   per-report-frame top-5")
     for s in STRENGTHS:
-        sel = [r for r in rows if r["strength"] == s]
-        print(f"  {s:4.0f}    {sum(r['report_rank']==0 for r in sel):>6}/{len(sel)}"
-              f"       {sum(r['report_rank']<5 for r in sel):>6}/{len(sel)}"
-              f"        {sorted(r['report_rank'] for r in sel)[len(sel)//2]:>6}"
-              f"       {sum(r['control_rank']<5 for r in sel):>4}/{len(sel)}")
+        rep = [r for r in rows if r["strength"] == s and r["kind"] == "report"]
+        ctl = [r for r in rows if r["strength"] == s and r["kind"] == "control"]
+        per_frame = " ".join(
+            f"{sum(r['rank'] < 5 for r in rep if r['frame'] == i):>3}/{n_words}"
+            for i in range(n_rep))
+        print(f"  {s:4.2f}     {sum(r['rank']<5 for r in rep):>4}/{len(rep)}"
+              f"                 {sum(r['rank']<5 for r in ctl):>4}/{len(ctl)}"
+              f"              {per_frame}")
     json.dump(rows, open(f"/tiny-jlens/gpt2/results/c1_inject_{MODEL}.json", "w"))

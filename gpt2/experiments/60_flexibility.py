@@ -72,13 +72,28 @@ for c in cells:
 
 rows = []
 for cat, cs in by_cat.items():
-    args = sorted(set.intersection(*[set(c["answers"]) for c in cs]))
-    pairs = [(a, b) for a, b in itertools.permutations(args, 2)
-             if all(not (variant_ids(c["answers"][a]) & variant_ids(c["answers"][b]))
-                    for c in cs)]
-    for A, B in pairs:
+    # A pair is usable with a function iff both args pass that cell AND the
+    # function's answers differ for them (a France<->Germany swap is not
+    # evaluable on `continent`, both Europe, but is on capital/language).
+    # Keep pairs evaluable on >=2 functions so the broadcast question (same
+    # swap, many functions) stays answerable; requiring distinct answers in
+    # EVERY cell dies at scale, since most country pairs share a continent.
+    args = sorted(set.union(*[set(c["answers"]) for c in cs]))
+
+    def evaluable(a, b):
+        # Second guard: the swap injects b's own token, so a cell whose
+        # answer for b IS b's token (Mexico -> capital "Mexico") would score
+        # a hit on pure token echo rather than function application.
+        return [c for c in cs
+                if a in c["answers"] and b in c["answers"]
+                and not (variant_ids(c["answers"][a]) & variant_ids(c["answers"][b]))
+                and not (variant_ids(c["answers"][b]) & variant_ids(b))]
+
+    pairs = [(a, b, evaluable(a, b)) for a, b in itertools.permutations(args, 2)]
+    pairs = [(a, b, ev) for a, b, ev in pairs if len(ev) >= 2]
+    for A, B, ev_cells in pairs:
         src, tgt = [kit.tok_id(" " + A)], [kit.tok_id(" " + B)]
-        for c in cs:
+        for c in ev_cells:
             text = c["template"].format(arg=A)
             ids = kit.encode(text)
             clean_lg = kit.model_logits(ids)[-1]
@@ -95,7 +110,7 @@ for cat, cs in by_cat.items():
                              hit=t in variant_ids(c["answers"][B]),
                              got=tok.decode([t]), tgt_pre=tgt_pre,
                              loading=loading))
-    print(f"  {cat}: {len(pairs)} pairs x {len(cs)} functions")
+    print(f"  {cat}: {len(pairs)} pairs (evaluable on >=2 of {len(cs)} functions)")
 
 ok = [r for r in rows if r["tgt_pre"] >= 10]  # paper guard
 print(f"\noverall (target not already top-10): "
@@ -107,14 +122,19 @@ for cat, cs in by_cat.items():
         if sel:
             print(f"  {cat:10s} {c['func']:12s} {sum(r['hit'] for r in sel):2d}/{len(sel)}")
 
-# broadcast: same (A,B) pair across functions
-pair_stats = {}
+# broadcast: same (A,B) pair across DISTINCT BASE functions (capital and
+# capital2 are the same downstream operation in different phrasings, so a
+# pair spanning only those does not count as broadcast)
+base_fn = lambda f: f.rstrip("0123456789")
+pair_stats, pair_bases = {}, {}
 for r in ok:
-    pair_stats.setdefault((r["category"], r["A"], r["B"]), []).append(r["hit"])
-multi = {k: v for k, v in pair_stats.items() if len(v) >= 2}
+    key = (r["category"], r["A"], r["B"])
+    pair_stats.setdefault(key, []).append(r["hit"])
+    pair_bases.setdefault(key, set()).add(base_fn(r["func"]))
+multi = {k: v for k, v in pair_stats.items() if len(pair_bases[k]) >= 2}
 both = sum(all(v) for v in multi.values())
-print(f"same-pair-swaps evaluated on >=2 functions: {len(multi)}; "
-      f"redirect ALL functions: {both} ({100 * both / max(1, len(multi)):.0f}%)")
+print(f"same-pair-swaps evaluated on >=2 distinct base functions: {len(multi)}; "
+      f"redirect ALL evaluated functions: {both} ({100 * both / max(1, len(multi)):.0f}%)")
 
 # loading predicts success?
 if ok:

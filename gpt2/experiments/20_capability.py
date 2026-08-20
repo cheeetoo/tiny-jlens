@@ -87,23 +87,31 @@ for fam, rs in sorted(by_fam.items()):
 passing = [r for r in rows if r["twohop"]]
 print(f"  TOTAL two-hop pass: {len(passing)}/{len(rows)}")
 
-# ---------------- category report ----------------
+# ---------------- category report (graded per few-shot format) ----------------
 cats = pools.report_categories(tok, with_additions=True)
-rep = {}
-for cat, members in cats.items():
-    t, lg = graded_top1(pools.REPORT_FEWSHOT.format(cat=cat))
-    mem_ids = {v for m in members for v in variant_ids(m)}
-    valid = t in mem_ids
-    top5 = any(int((lg > lg[v]).sum()) < 5 for v in mem_ids)
-    rep[cat] = dict(valid=valid, member_top5=top5, got=tok.decode([t]))
-results["report"] = rep
-ok_cats = [c for c, r in rep.items() if r["valid"]]
-t5_cats = [c for c, r in rep.items() if r["member_top5"]]
-print(f"\n== category report ==  top1-valid {len(ok_cats)}/{len(rep)}: {ok_cats}")
-print(f"   member-in-top5 {len(t5_cats)}/{len(rep)}: {t5_cats}")
-for c, r in rep.items():
-    if not r["valid"]:
-        print(f"   miss {c:16s} -> {r['got']!r}")
+rep_by_fmt = {}
+for fi, fmt in enumerate(pools.REPORT_FEWSHOTS):
+    rep = {}
+    fixed = fmt.replace("{cat}", "").lower()
+    for cat, members in cats.items():
+        # shot-collision guard: a category is not gradable under a format
+        # whose fixed text (the shots) names the category or one of its
+        # members — the report could be echoed from the prompt.
+        if cat.lower() in fixed or any(m.lower() in fixed for m in members):
+            continue
+        t, lg = graded_top1(fmt.format(cat=cat))
+        mem_ids = {v for m in members for v in variant_ids(m)}
+        valid = t in mem_ids
+        top5 = any(int((lg > lg[v]).sum()) < 5 for v in mem_ids)
+        rep[cat] = dict(valid=valid, member_top5=top5, got=tok.decode([t]))
+    rep_by_fmt[str(fi)] = rep
+    ok_cats = [c for c, r in rep.items() if r["valid"]]
+    t5_cats = [c for c, r in rep.items() if r["member_top5"]]
+    print(f"\n== category report, format {fi} ==  "
+          f"top1-valid {len(ok_cats)}/{len(rep)}: {ok_cats}")
+    print(f"   member-in-top5 {len(t5_cats)}/{len(rep)}: {t5_cats}")
+results["report"] = rep_by_fmt["0"]  # back-compat: downstream battery uses format 0
+results["report_formats"] = rep_by_fmt
 
 # ---------------- C4 grid ----------------
 grid = pools.c4_grid(tok)

@@ -9,13 +9,15 @@ interventions intact.
 
 The gauge argument. The exact readout is
     logit_tau(h) = <v_tau, h>/sigma(Jh) + beta_tau.
-Replacing every v_tau by a*v_tau + u (any fixed u, a>0) shifts all logits by
-the same per-position constant and rescales them — the softmax readout is
-EXACTLY invariant (checked in 00_validate.py). So the dictionary is only
-defined up to this gauge, and any geometric quantity that changes under it
-(pairwise cosines, spans, pseudoinverse coordinates, projections) is not a
-property of the lens until a gauge is fixed. Centering (u = -vbar) is the
-canonical choice. The empirical question this script answers: how much of the
+Replacing every v_tau by v_tau + u (any fixed u) shifts all logits by the
+same per-position constant <u,h>/sigma — the softmax readout is EXACTLY
+invariant (checked in 00_validate.py). The invariance group is translations
+only: a shared rescale a*v_tau is NOT softmax-invisible, because beta_tau
+and sigma do not transform with it. So the dictionary is only defined up to
+translation, and any geometric quantity that changes under it (pairwise
+cosines, spans, pseudoinverse coordinates, projections) is not a property
+of the lens until a gauge is fixed. Centering (u = -vbar) is the canonical
+translate: the minimum-total-norm representative of the gauge class. The empirical question this script answers: how much of the
 raw dictionary's geometry is gauge artifact (shared component vbar), and is
 the shared component token-discriminative at all?
 
@@ -54,6 +56,14 @@ PROMPTS = [
     "When Mary and John went to the store, John gave a drink to",
     "The Eiffel Tower is located in the city of",
     "In 1969, the first humans landed on the",
+    "The primary language spoken in Portugal is",
+    "The scientist mixed the two chemicals and watched the solution turn",
+    "After the long drought, the farmers finally saw clouds and hoped for",
+    "The largest planet in the solar system is called",
+    "She opened the letter slowly, afraid of what it might",
+    "The recipe said to add two cups of flour and one cup of",
+    "The team celebrated loudly after scoring the winning",
+    "On the first day of school, the teacher asked everyone to say their",
 ]
 resids = {p: kit.residuals(kit.encode(p)) for p in PROMPTS}
 

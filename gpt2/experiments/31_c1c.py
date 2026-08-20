@@ -36,7 +36,10 @@ print(f"{MODEL} top1-valid cats:", valid)
 
 FRAMES = ["She told me all about the {m}.",
           "The article was mainly about the {m}.",
-          "He wrote a story about the {m}."]
+          "He wrote a story about the {m}.",
+          "The lecture yesterday was all about the {m}.",
+          "Their conversation kept returning to the {m}.",
+          "The documentary focused mostly on the {m}."]
 LAYS = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
 ART = {"a", "an", "the", "called", '"', "'", ""}
 
@@ -89,7 +92,7 @@ for cat in valid:
         continue
     elig = [m for m in members if m != src and variant_ids(m)
             and min(int((lg > lg[v]).sum()) for v in variant_ids(m)) >= 10]
-    for tgt in rng.sample(elig, min(4, len(elig))):
+    for tgt in rng.sample(elig, min(8, len(elig))):
         for cond in res:
             best = 99999
             for alpha in (1.0, 2.0):

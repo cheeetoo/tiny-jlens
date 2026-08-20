@@ -32,10 +32,12 @@ FRAMES = [
     "She painted a picture of the {w} last summer.",
     "Everyone stopped to look at the {w} near the road.",
     "His favorite photograph showed a {w} in the evening light.",
+    "The postcard on the shelf showed a {w} at sunset.",
+    "The children drew a {w} on the classroom whiteboard.",
+    "An old book on the table had a {w} on its cover.",
 ]
 REAL_FRAME = "The {w} appeared suddenly at the edge of town."
 LAYS = [l for l in kit.layers if 0.55 * kit.n_layers <= l <= 1.0 * kit.n_layers]
-WORDS = pools.C2_WORDS
 
 
 def word_ids(w):
@@ -46,6 +48,11 @@ def word_ids(w):
             if len(ids) == 1 and ids[0] not in out:
                 out.append(ids[0])
     return out
+
+
+# single-token filter, as everywhere else (a word with no single-token form
+# has no lens readout — its logsumexp would be -inf)
+WORDS = [w for w in pools.C2_WORDS if word_ids(w)]
 
 
 # ---- probes ----
@@ -74,8 +81,12 @@ print(f"probe J-component share: median {sorted(jshare)[len(jshare)//2]:.1%}")
 
 
 def span_measures(text: str, sentence: str, w: str):
-    """(lens_logprob, orth_proj) of w averaged over the transcription span,
-    best layer for the lens measure, mean over layers for the probe."""
+    """(lens_logprob, orth_proj) of w over the transcription span: the lens
+    measure is best-POSITION best-layer (a held word occupies specific slots,
+    so span-averaging dilutes it — measured 2026-08-19: mean-over-span deltas
+    are ~0/slightly negative on long sentences while best-position deltas are
+    uniformly positive, matching 40's rank measure); the probe measure stays
+    mean over span and layers (a property probe is diffuse)."""
     start = text.find(sentence, text.find(sentence) + 1)
     if start < 0:
         start = text.find(sentence)  # real condition: sentence appears once
@@ -87,7 +98,7 @@ def span_measures(text: str, sentence: str, w: str):
     vids = word_ids(w)
     lens_lp = max(
         torch.logsumexp(kit.lens_logits(resid[l][span], l).log_softmax(-1)[:, vids],
-                        dim=-1).mean().item()
+                        dim=-1).max().item()
         for l in LAYS)
     orth = sum(float((resid[l][span] @ probes_orth[w][l]).mean())
                for l in LAYS) / len(LAYS)
@@ -112,9 +123,10 @@ def paired_z(cond):
     n = len(rows) ** 0.5
     return (d.mean() / (d.std() / n)).item(), (dz.mean() / (dz.std() / n)).item()
 
-print(f"n={len(rows)} paired (word, sentence) trials; z vs base "
+print(f"n={len(rows)} paired (word, sentence) trials; paired t vs base "
+      f"(mean/(sd/sqrt n) — NOT a baseline-SD z; magnitudes in analyze.py) "
       f"(lens log-prob | J-orthogonalized probe):")
 for cond in ("think", "dont", "real"):
     zl, zp = paired_z(cond)
-    print(f"  {cond:6s} lens z {zl:+6.1f}    orth-probe z {zp:+6.1f}")
+    print(f"  {cond:6s} lens t {zl:+6.1f}    orth-probe t {zp:+6.1f}")
 json.dump(rows, open(f"/tiny-jlens/gpt2/results/c2_privilege_{MODEL}.json", "w"))

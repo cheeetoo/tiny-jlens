@@ -1,11 +1,13 @@
 """Is the Jacobian transport doing the work? J-lens vs logit lens on the
-two-hop readout: rank of the unspoken intermediate at the answer position,
-J_l @ h vs h (identity transport), same unembedding.
+two-hop readout: rank of the intermediate at the answer position,
+J_l @ h vs h (identity transport), same unembedding. (Capability-filtered
+items only — no unspokenness filter here, unlike 50_reasoning readout.)
 
 Run:  python experiments/81_lens_vs_logit.py [model]
 """
 
 import json
+import statistics
 import sys
 
 sys.path.insert(0, "/tiny-jlens/gpt2")
@@ -53,7 +55,7 @@ print(f"{'L':>3} {'J med':>7} {'J<10%':>6} {'logit med':>10} {'logit<10%':>10}")
 out = {}
 for l in kit.layers:
     j, g = stats[l]["j"], stats[l]["logit"]
-    med = lambda x: sorted(x)[len(x) // 2]
+    med = statistics.median
     out[l] = dict(j_med=med(j), j_top10=sum(r < 10 for r in j) / len(j),
                   logit_med=med(g), logit_top10=sum(r < 10 for r in g) / len(g))
     print(f"{l:>3} {out[l]['j_med']:>7} {100*out[l]['j_top10']:>5.0f}% "

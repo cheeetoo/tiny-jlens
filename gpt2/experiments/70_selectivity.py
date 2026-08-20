@@ -85,10 +85,13 @@ if PHASE == "same_latent":
         src, tgt = [kit.tok_id(" " + lang)], [kit.tok_id(" " + alt)]
         rec = dict(key=p["key"], lang=lang, alt=alt, tasks={})
 
-        # ---- report & country (question tokens carry the swap)
+        # ---- report & country (question tokens carry the swap); the *2
+        # tasks are frame-diversity variants of the same few-shot formats
         for task, tmpl, true_ans, alt_ans in [
             ("report", pools.LANG_REPORT_FEWSHOT, lang, alt),
             ("country", pools.LANG_COUNTRY_FEWSHOT, COUNTRY[lang], COUNTRY[alt]),
+            ("report2", pools.LANG_REPORT_FEWSHOT2, lang, alt),
+            ("country2", pools.LANG_COUNTRY_FEWSHOT2, COUNTRY[lang], COUNTRY[alt]),
         ]:
             text = tmpl.format(passage=p["text"])
             ids = kit.encode(text)
@@ -137,14 +140,15 @@ if PHASE == "same_latent":
               f"cont {t['continuation']['clean_lang'][:2]}->{t['continuation']['swap_lang'][:2]}")
 
     # aggregate over capability-passing trials per task
-    rep = [r for r in rows if r["tasks"]["report"]["clean_ok"]]
-    ctry = [r for r in rows if r["tasks"]["country"]["clean_ok"]]
     cont = [r for r in rows if r["tasks"]["continuation"]["clean_lang"] == r["lang"]]
-    n_flex = sum(r["tasks"]["report"]["swap_flipped"] for r in rep) + \
-        sum(r["tasks"]["country"]["swap_flipped"] for r in ctry)
-    print(f"\nflexible follows swap: {n_flex}/{len(rep) + len(ctry)} "
-          f"(report {sum(r['tasks']['report']['swap_flipped'] for r in rep)}/{len(rep)}, "
-          f"country {sum(r['tasks']['country']['swap_flipped'] for r in ctry)}/{len(ctry)})")
+    flex_parts, n_flex, n_flex_tot = [], 0, 0
+    for task in ("report", "country", "report2", "country2"):
+        sel = [r for r in rows if r["tasks"][task]["clean_ok"]]
+        k = sum(r["tasks"][task]["swap_flipped"] for r in sel)
+        n_flex, n_flex_tot = n_flex + k, n_flex_tot + len(sel)
+        flex_parts.append(f"{task} {k}/{len(sel)}")
+    print(f"\nflexible follows swap: {n_flex}/{n_flex_tot} "
+          f"({', '.join(flex_parts)})")
     changed = [r for r in cont if r["tasks"]["continuation"]["swap_lang"] != r["lang"]]
     to_alt = [r for r in changed
               if r["tasks"]["continuation"]["swap_lang"] == r["alt"]]

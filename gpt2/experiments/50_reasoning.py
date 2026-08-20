@@ -154,42 +154,72 @@ if PHASE == "readout":
 # and the remainder's effect should die when the J coordinates are clamped.
 
 if PHASE == "probe":
-    CUES = [
-        "{capital} is the capital of a country called",
-        "The {language} language is spoken mainly in the country called",
-        "{language} is the official language of",
-        "People who live in {capital} are citizens of",
-    ]
+    # Two probe constructions (audit 2026-08-19):
+    #   naming   — cues end right before the country NAME would be said. This
+    #              loads the probe on the country's output direction (high
+    #              J-share) and favors J-mediation; kept for continuity with
+    #              earlier receipts. GP k=16 (repo historical).
+    #   implying — paper-faithful (§3.3): cues imply the country through
+    #              varied surface cues and ask about different ATTRIBUTES
+    #              (language/capital/continent); the country name is never
+    #              the next token. GP k=25 (the paper's sparsity).
+    # Each runs at matched norm (perturbation rescaled to the full-probe
+    # delta, the paper's §3.1 convention) AND at natural magnitudes
+    # (components as-is — matched norm inflates the J component, which
+    # naturally carries only ~sqrt(J-share) of the norm).
+    CUE_SETS = {
+        "naming": (16, [
+            "{capital} is the capital of a country called",
+            "The {language} language is spoken mainly in the country called",
+            "{language} is the official language of",
+            "People who live in {capital} are citizens of",
+            "The city of {capital} is the seat of government of",
+            "A tourist who wants to hear {language} spoken everywhere should visit",
+        ]),
+        "implying": (25, [
+            "People in the country whose capital is {capital} usually greet each other in",
+            "A traveler flying into {capital} has landed on the continent of",
+            "The homeland of the {language} language lies on the continent of",
+            "The national anthem sung in {capital} is written in the language called",
+            "Most newspapers printed in {capital} are written in",
+            "The {language}-speaking country has its capital at",
+        ]),
+    }
     lays = window(0.55, 1.0)
-    K = 16
-
     countries = sorted({it.intermediate for it in items if it.source == "ours"})
-    resid_by_c = {}
-    for c in countries:
-        f = TABLE[c]
-        hs = {l: [] for l in lays}
-        for cue in CUES:
-            ids = kit.encode(cue.format(capital=f["capital"], language=f["language"]))
-            r = kit.residuals(ids, lays)
-            for l in lays:
-                hs[l].append(r[l][-1])
-        resid_by_c[c] = {l: torch.stack(v).mean(0) for l, v in hs.items()}
-    grand = {l: torch.stack([resid_by_c[c][l] for c in countries]).mean(0) for l in lays}
-    probes = {c: {l: resid_by_c[c][l] - grand[l] for l in lays} for c in countries}
 
-    def split(c, l):
-        p = probes[c][l]
-        ids_sel, _, recon = core.gradient_pursuit(kit, p, l, K, centered=True)
-        return recon, p - recon, ids_sel.tolist()
+    probes_by, splits_by = {}, {}
+    for cs_name, (K, cues) in CUE_SETS.items():
+        resid_by_c = {}
+        for c in countries:
+            f = TABLE[c]
+            hs = {l: [] for l in lays}
+            for cue in cues:
+                ids = kit.encode(cue.format(capital=f["capital"], language=f["language"]))
+                r = kit.residuals(ids, lays)
+                for l in lays:
+                    hs[l].append(r[l][-1])
+            resid_by_c[c] = {l: torch.stack(v).mean(0) for l, v in hs.items()}
+        grand = {l: torch.stack([resid_by_c[c][l] for c in countries]).mean(0) for l in lays}
+        probes = {c: {l: resid_by_c[c][l] - grand[l] for l in lays} for c in countries}
 
-    splits = {c: {l: split(c, l) for l in lays} for c in countries}
-    var_share = torch.tensor([
-        (splits[c][l][0].norm() ** 2 / probes[c][l].norm() ** 2).item()
-        for c in countries for l in lays])
-    print(f"probe J-component variance share (centered GP k={K}): "
-          f"median {var_share.median():.1%}, IQR "
-          f"[{var_share.quantile(0.25):.1%}, {var_share.quantile(0.75):.1%}]")
+        def split(c, l, K=K, probes=probes):
+            p = probes[c][l]
+            ids_sel, _, recon = core.gradient_pursuit(kit, p, l, K, centered=True)
+            return recon, p - recon, ids_sel.tolist()
 
+        splits = {c: {l: split(c, l) for l in lays} for c in countries}
+        var_share = torch.tensor([
+            (splits[c][l][0].norm() ** 2 / probes[c][l].norm() ** 2).item()
+            for c in countries for l in lays])
+        print(f"[{cs_name}] probe J-component variance share (centered GP k={K}): "
+              f"median {var_share.median():.1%}, IQR "
+              f"[{var_share.quantile(0.25):.1%}, {var_share.quantile(0.75):.1%}]",
+              flush=True)
+        probes_by[cs_name], splits_by[cs_name] = probes, splits
+
+    VARIANTS = [("naming", "matched"), ("naming", "natural"),
+                ("implying", "matched"), ("implying", "natural")]
     rows = []
     for it in items:
         if it.source != "ours" or it.intermediate not in countries:
@@ -200,70 +230,170 @@ if PHASE == "probe":
         if B not in countries:
             continue
         ids = kit.encode(it.prompt)
-        conds = {}
-        for cond in ("full", "J", "nonJ", "nonJ_clamped"):
-            edits = []
-            for l in lays:
-                full_d = probes[B][l] - probes[A][l]
-                jA, nA, selA = splits[A][l]
-                jB, nB, selB = splits[B][l]
-                d = dict(full=full_d, J=jB - jA, nonJ=nB - nA,
-                         nonJ_clamped=nB - nA)[cond]
-                d = d * (full_d.norm() / d.norm().clamp_min(1e-8))  # matched norm
-                edits.append(core.add_delta(d, l, None))
-            if cond == "nonJ_clamped":
-                clamp_toks = sorted(set(selA) | set(selB)
-                                    | {kit.tok_id(" " + A), kit.tok_id(" " + B)})
-                edits += core.clamp_coords(kit, ids, lays, clamp_toks, centered=True)
-            t, lg = graded_top1(ids, edits)
-            conds[cond] = dict(hit=t in variant_ids(tgt_ans), got=tok.decode([t]))
-        rows.append(dict(family=it.family, A=A, B=B, want=tgt_ans, conds=conds))
+        conds_all = {}
+        for cs_name, scale in VARIANTS:
+            probes, splits = probes_by[cs_name], splits_by[cs_name]
+            conds = {}
+            for cond in ("full", "J", "nonJ", "nonJ_clamped"):
+                edits = []
+                for l in lays:
+                    full_d = probes[B][l] - probes[A][l]
+                    jA, nA, selA = splits[A][l]
+                    jB, nB, selB = splits[B][l]
+                    d = dict(full=full_d, J=jB - jA, nonJ=nB - nA,
+                             nonJ_clamped=nB - nA)[cond]
+                    if scale == "matched":
+                        d = d * (full_d.norm() / d.norm().clamp_min(1e-8))
+                    edits.append(core.add_delta(d, l, None))
+                if cond == "nonJ_clamped":
+                    clamp_toks = sorted(set(selA) | set(selB)
+                                        | {kit.tok_id(" " + A), kit.tok_id(" " + B)})
+                    edits += core.clamp_coords(kit, ids, lays, clamp_toks, centered=True)
+                t, lg = graded_top1(ids, edits)
+                conds[cond] = dict(hit=t in variant_ids(tgt_ans), got=tok.decode([t]))
+            conds_all[f"{cs_name}_{scale}"] = conds
+        rows.append(dict(family=it.family, A=A, B=B, want=tgt_ans, conds=conds_all))
         print(".", end="", flush=True)
-    print(f"\nn={len(rows)} items; matched-norm swap along probe components:")
-    for cond in ("full", "J", "nonJ", "nonJ_clamped"):
-        n = sum(r["conds"][cond]["hit"] for r in rows)
-        print(f"  {cond:12s} {n:2d}/{len(rows)}  ({100*n/len(rows):.0f}%)")
+    print(f"\nn={len(rows)} items; swap along probe components "
+          f"(rows = cue set x scaling):")
+    for cs_name, scale in VARIANTS:
+        key = f"{cs_name}_{scale}"
+        line = f"  {key:18s}"
+        for cond in ("full", "J", "nonJ", "nonJ_clamped"):
+            k = sum(r["conds"][key][cond]["hit"] for r in rows)
+            line += f"  {cond} {k:3d}/{len(rows)}"
+        print(line)
     json.dump(rows, open(f"/tiny-jlens/gpt2/results/c3_probe_{MODEL}.json", "w"))
 
 # ---------------- crossfn (anti-smuggling) ----------------
 # One identical intermediate swap (country A -> B) applied under two
 # different questions must flip each answer to ITS correct counterfactual.
 # A vector that merely smuggles one answer cannot flip both.
+#
+# Question prompts are two-shot analogy templates with per-item DYNAMIC
+# shots: the shot countries are chosen disjoint from the item's countries,
+# args, and answers, so no answer can be echoed from the prompt. (Static
+# shots would leak: with only 4-6 continents/languages in play, a fixed
+# shot's answer collides with some item's.) Continent families need >=4
+# continents in the shot pool — two shots plus the item's two continents
+# exhaust a 3-continent pool.
 
 if PHASE == "crossfn":
-    FAM_PAIRS = [("lang_capital", "lang_continent"),
-                 ("lang_capital", "city_language"),
-                 ("lang_continent", "city_language"),
-                 ("city_language", "city_continent")]
-    by_fam: dict[str, dict[str, "pools.TwoHop"]] = {}
-    for it in pools.twohop_items(tok):
-        if it.prompt in passed and it.source == "ours":
-            by_fam.setdefault(it.family, {})[it.intermediate] = it
+    import itertools
+
+    CROSSFN_TEMPLATES = {
+        "lang_capital": (
+            "The capital of the country where {shot_arg} is spoken is the city "
+            "of {shot_ans}. The capital of the country where {shot2_arg} is "
+            "spoken is the city of {shot2_ans}. The capital of the country "
+            "where {arg} is spoken is the city of"),
+        "lang_continent": (
+            "The country where {shot_arg} is spoken is a country on the "
+            "continent of {shot_ans}. The country where {shot2_arg} is spoken "
+            "is a country on the continent of {shot2_ans}. The country where "
+            "{arg} is spoken is a country on the continent of"),
+        "city_language": (
+            "In the country whose capital city is {shot_arg}, the primary "
+            "language is {shot_ans}. In the country whose capital city is "
+            "{shot2_arg}, the primary language is {shot2_ans}. In the country "
+            "whose capital city is {arg}, the primary language is"),
+        "city_continent": (
+            "The country whose capital is {shot_arg} is located on the "
+            "continent of {shot_ans}. The country whose capital is {shot2_arg} "
+            "is located on the continent of {shot2_ans}. The country whose "
+            "capital is {arg} is located on the continent of"),
+    }
+    # preference-ordered shot countries (Nairobi as a capital-answer shot
+    # primed ' N' completions, so capital-answer families lead elsewhere)
+    SHOT_POOL_BY_FAM = {
+        "lang_capital": ["Portugal", "Egypt", "Thailand", "Finland", "Kenya"],
+        "city_language": ["Kenya", "Portugal", "Thailand", "Egypt", "Finland"],
+        "lang_continent": ["Kenya", "Thailand", "Cuba", "Portugal", "Egypt", "Finland"],
+        "city_continent": ["Kenya", "Thailand", "Cuba", "Portugal", "Egypt", "Finland"],
+    }
+    ARGF = {"lang_capital": "language", "lang_continent": "language",
+            "city_language": "capital", "city_continent": "capital"}
+    ANSF = {"lang_capital": "capital", "lang_continent": "continent",
+            "city_language": "language", "city_continent": "continent"}
+
+    BASE = {}
+    for fam in CROSSFN_TEMPLATES:
+        BASE[fam] = {}
+        for c, f in pools.COUNTRIES.items():
+            if ARGF[fam] == "language" and not f["language_unique"]:
+                continue
+            if not (variant_ids(c) and variant_ids(f[ANSF[fam]])):
+                continue
+            BASE[fam][c] = dict(arg=f[ARGF[fam]], answer=f[ANSF[fam]])
+
+    def pick_shot(fam, avoid_countries, avoid_answers):
+        for c in SHOT_POOL_BY_FAM[fam]:
+            row = pools.COUNTRIES[c]
+            s_arg, s_ans = row[ARGF[fam]], row[ANSF[fam]]
+            if c in avoid_countries:
+                continue
+            if any(variant_ids(s_ans) & variant_ids(a) for a in avoid_answers):
+                continue
+            if any(variant_ids(s_arg) & variant_ids(pools.COUNTRIES[c2][ARGF[fam]])
+                   for c2 in avoid_countries if c2 in pools.COUNTRIES):
+                continue
+            return s_arg, s_ans
+        return None
+
+    def build_prompt(fam, country, partner=None):
+        avoid_c = {country} | ({partner} if partner else set())
+        avoid_a = {BASE[fam][c]["answer"] for c in avoid_c if c in BASE[fam]}
+        s1 = pick_shot(fam, avoid_c, avoid_a)
+        if s1 is None:
+            return None
+        s2 = pick_shot(fam, avoid_c | {c for c in SHOT_POOL_BY_FAM[fam]
+                                       if pools.COUNTRIES[c][ARGF[fam]] == s1[0]},
+                       avoid_a | {s1[1]})
+        if s2 is None:
+            return None
+        return CROSSFN_TEMPLATES[fam].format(
+            shot_arg=s1[0], shot_ans=s1[1], shot2_arg=s2[0], shot2_ans=s2[1],
+            arg=BASE[fam][country]["arg"])
+
+    def capable(fam, country, partner=None):
+        p = build_prompt(fam, country, partner)
+        if p is None:
+            return False
+        t, _ = graded_top1(kit.encode(p))
+        return t in variant_ids(BASE[fam][country]["answer"])
+
     lays = window(0.55, 1.0)
     rows = []
-    for f1, f2 in FAM_PAIRS:
-        both = sorted(set(by_fam.get(f1, {})) & set(by_fam.get(f2, {})))
+    for f1, f2 in itertools.combinations(CROSSFN_TEMPLATES, 2):
+        pool1 = {c for c in BASE[f1] if capable(f1, c)}
+        pool2 = {c for c in BASE[f2] if capable(f2, c)}
+        both = sorted(pool1 & pool2)
         for A in both:
             partners = [B for B in both if B != A
-                        and by_fam[f1][B].answer != by_fam[f1][A].answer
-                        and by_fam[f2][B].answer != by_fam[f2][A].answer]
+                        and BASE[f1][B]["answer"] != BASE[f1][A]["answer"]
+                        and BASE[f2][B]["answer"] != BASE[f2][A]["answer"]]
             if not partners:
                 continue
             B = rng.choice(partners)
             src, tgt = [kit.tok_id(" " + A)], [kit.tok_id(" " + B)]
-            flips = {}
+            flips, skip = {}, False
             for fam in (f1, f2):
-                it = by_fam[fam][A]
-                ids = kit.encode(it.prompt)
+                prompt = build_prompt(fam, A, B)
+                if prompt is None:
+                    skip = True
+                    break
+                ids = kit.encode(prompt)
                 edits = core.swap_clamped(kit, ids, lays, src, tgt, alpha=1.0)
                 t, lg = graded_top1(ids, edits)
-                tgt_ans = by_fam[fam][B].answer
+                tgt_ans = BASE[fam][B]["answer"]
                 flips[fam] = dict(hit=t in variant_ids(tgt_ans),
                                   got=tok.decode([t]), want=tgt_ans)
+            if skip:
+                continue
             rows.append(dict(pair=(f1, f2), A=A, B=B, flips=flips,
                              both=all(v["hit"] for v in flips.values()),
                              any=any(v["hit"] for v in flips.values())))
-        sel = [r for r in rows if r["pair"] == (f1, f2)]
+        sel = [r for r in rows if tuple(r["pair"]) == (f1, f2)]
         if sel:
             print(f"{f1} + {f2}: both-flip {sum(r['both'] for r in sel)}/{len(sel)}"
                   f"  any-flip {sum(r['any'] for r in sel)}/{len(sel)}")
@@ -282,7 +412,10 @@ if PHASE == "swap":
     WINDOWS = {
         "all": (0.0, 1.0), "mid+": (0.35, 1.0), "late": (0.55, 1.0),
         "later": (0.65, 1.0), "last3": (0.75, 1.0),
-        "late-nomotor": (0.55, 0.87), "mid": (0.35, 0.75),
+        # nomotor hi must exclude the top fitted layer: 0.87*12 = 10.44 kept
+        # L10 and made this window identical to "late" (audit fix; 0.80*12
+        # = 9.6 -> L7-9)
+        "late-nomotor": (0.55, 0.80), "mid": (0.35, 0.75),
     }
     FLAVORS = [("coord", False), ("coord", True), ("proj", False), ("proj", True)]
     ALPHAS = [1.0, 2.0]

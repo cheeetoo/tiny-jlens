@@ -28,7 +28,7 @@ kit = core.Kit(MODEL)
 
 ds = datasets.load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1",
                            split="validation")
-texts = [r["text"].strip() for r in ds if len(r["text"].strip()) > 600][:16]
+texts = [r["text"].strip() for r in ds if len(r["text"].strip()) > 600][:48]
 
 if PHASE == "band":
     stats = {l: dict(top1=0, top10=0, n=0, auto=0, auto_null=0, npairs=0)
@@ -74,7 +74,7 @@ if PHASE == "occupancy":
     # gain exceeds the matched random-dictionary gain at the same step.
     torch.manual_seed(0)
     K = 40
-    N_POS = 40
+    N_POS = 96
     results = {}
     for l in kit.layers:
         gains_lens, gains_rand = [], []
