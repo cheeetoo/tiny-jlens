@@ -1,0 +1,117 @@
+===== gpt2: expanded-pool battery with uncertainty =====
+
+C1a report correlation (67 (format, category) cells over 4 formats; mean Spearman, cluster-boot 95% CI over categories):
+  L 7  +0.387 [+0.260, +0.521]   (f0:+0.46  f1:+0.41  f2:+0.30  f3:+0.33)
+  L 8  +0.339 [+0.211, +0.474]   (f0:+0.39  f1:+0.38  f2:+0.22  f3:+0.32)
+  L 9  +0.417 [+0.281, +0.561]   (f0:+0.46  f1:+0.47  f2:+0.29  f3:+0.40)
+  L10  +0.602 [+0.488, +0.712]   (f0:+0.62  f1:+0.66  f2:+0.49  f3:+0.61)
+
+C1b report swap over 4 few-shot formats (success = target in graded top-5):
+  raw      a=1.0: top5 124/221 = 56% [50, 62]   (cluster 56% [41, 74] over 15 clusters); top1 93/221 = 42% [36, 49]   [f0:55/85 f1:21/37 f2:25/52 f3:23/47]
+  raw      a=2.0: top5 155/221 = 70% [64, 76]   (cluster 70% [52, 89] over 15 clusters); top1 142/221 = 64% [58, 70]   [f0:69/85 f1:28/37 f2:30/52 f3:28/47]
+  centered a=1.0: top5 171/221 = 77% [71, 82]   (cluster 77% [60, 93] over 15 clusters); top1 143/221 = 65% [58, 71]   [f0:77/85 f1:31/37 f2:30/52 f3:33/47]
+  centered a=2.0: top5 189/221 = 86% [80, 90]   (cluster 86% [69, 99] over 15 clusters); top1 180/221 = 81% [76, 86]   [f0:84/85 f1:32/37 f2:37/52 f3:36/47]
+
+C1d inject (6 report frames, 6 noun-expecting controls; success = injected concept in top-5):
+  strength 0.00: report 0/480 = 0% [0, 1]   control 0/480 = 0% [0, 1]   [f0:0/80 f1:0/80 f2:0/80 f3:0/80 f4:0/80 f5:0/80]
+  strength 0.15: report 115/480 = 24% [20, 28]   control 68/480 = 14% [11, 18]   [f0:69/80 f1:29/80 f2:4/80 f3:2/80 f4:2/80 f5:9/80]
+  strength 0.17: report 166/480 = 35% [30, 39]   control 91/480 = 19% [16, 23]   [f0:77/80 f1:41/80 f2:5/80 f3:4/80 f4:3/80 f5:36/80]
+  strength 0.25: report 308/480 = 64% [60, 68]   control 179/480 = 37% [33, 42]   [f0:80/80 f1:64/80 f2:48/80 f3:30/80 f4:17/80 f5:69/80]
+  strength 0.50: report 453/480 = 94% [92, 96]   control 400/480 = 83% [80, 86]   [f0:80/80 f1:80/80 f2:80/80 f3:69/80 f4:67/80 f5:77/80]
+  strength 1.00: report 479/480 = 100% [99, 100]   control 479/480 = 100% [99, 100]   [f0:80/80 f1:80/80 f2:80/80 f3:79/80 f4:80/80 f5:80/80]
+  strength 2.00: report 480/480 = 100% [99, 100]   control 480/480 = 100% [99, 100]   [f0:80/80 f1:80/80 f2:80/80 f3:80/80 f4:80/80 f5:80/80]
+
+C1c report privilege (matched-norm probe-component swaps, n=85):
+  full           65/85 = 76% [66, 84]
+  J              71/85 = 84% [74, 90]
+  nonJ           24/85 = 28% [20, 39]
+  nonJ_clamped   4/85 = 5% [2, 11]
+
+C2 directed modulation (n=644 word x sentence trials x 5/5 think/dont phrasings; best lens rank over transcription span; base median 396.0):
+  think: pooled median 41.0, beats base 3049/3194 (cluster 95% [93, 96] over 46 clusters)   [per-phrasing medians p0:45.5 p1:47.0 p2:27.5 p3:93.0 p4:15.0]
+  dont: pooled median 100.0, beats base 2801/3177 (cluster 87% [84, 90] over 46 clusters)   [per-phrasing medians p0:66.0 p1:79.5 p2:56.0 p3:85.0 p4:288.5]
+  think < dont (same phrasing index): 2244/3052, p = 1.08e-154
+
+C2 privilege, word form (n=644; negative-by-design: the instruction MENTIONS the word, contaminating all channels):
+  think  lens delta +1.83 (+16% of real; up 541/644)   J-orth probe delta +1.117 (+34% of real; up 577/644)
+  dont   lens delta +1.40 (+12% of real; up 522/644)   J-orth probe delta +1.003 (+31% of real; up 589/644)
+  real   lens delta +11.29 (+100% of real; up 644/644)   J-orth probe delta +3.260 (+100% of real; up 517/644)
+
+C2 privilege, property form (n=30 sentences x 4 claim / 3 neutral headers; deltas vs mean-neutral, as % of the real-French-stimulus delta):
+  claim[0] lens'French' +120% (up 30/30)   J-orth probe +4% (up 30/30)
+  claim[1] lens'French' +81% (up 30/30)   J-orth probe +5% (up 30/30)
+  claim[2] lens'French' +62% (up 30/30)   J-orth probe +4% (up 30/30)
+  claim[3] lens'French' +58% (up 30/30)   J-orth probe +7% (up 30/30)
+  real[0] lens'French' +104% (up 28/30)   J-orth probe +98% (up 30/30)
+  real[1] lens'French' +95% (up 28/30)   J-orth probe +101% (up 30/30)
+  real[2] lens'French' +101% (up 28/30)   J-orth probe +101% (up 30/30)
+
+C2 privilege, property form, PAST TENSE category (n=12; deltas vs mean-neutral, as % of the real-past-tense delta; real lens delta raw +0.47):
+  claim[0] lens'past' +124% (up 11/12)   J-orth probe -17% (up 1/12)
+  claim[1] lens'past' +58% (up 7/12)   J-orth probe -5% (up 3/12)
+  claim[2] lens'past' +310% (up 11/12)   J-orth probe -39% (up 0/12)
+  real[0] lens'past' +84% (up 9/12)   J-orth probe +92% (up 12/12)
+  real[1] lens'past' +109% (up 10/12)   J-orth probe +105% (up 12/12)
+  real[2] lens'past' +107% (up 10/12)   J-orth probe +104% (up 12/12)
+
+C2 demand-loading (n=1932 over 3 shot variants): median rank demand 356.0 vs no-demand 472.0; demand<nodemand 1212/1866, p=1.35e-38   (cluster 63% [56, 69] over 46 clusters)   [v0:401/620 v1:440/631 v2:371/615]
+
+C3a intermediate readout: in lens top-10 at some layer 77/90 = 86% [77, 91]   unspoken-only 43/56 = 77% [64, 86]   null control 2/90 = 2% [1, 8]
+
+C3b intermediate swap (n=63 items; success = counterfactual answer graded top-1):
+  late  coord raw a=1.0: 45/63 = 71% [59, 81]   (cluster 71% [58, 83] over 42 clusters)
+  late  coord cen a=1.0: 48/63 = 76% [64, 85]   (cluster 76% [65, 86] over 42 clusters)
+  late  coord raw a=2.0: 44/63 = 70% [58, 80]   (cluster 70% [58, 80] over 42 clusters)
+  mid+  coord raw a=1.0: 46/63 = 73% [61, 82]   (cluster 73% [61, 84] over 42 clusters)
+  mid+  coord cen a=1.0: 49/63 = 78% [66, 86]   (cluster 78% [66, 87] over 42 clusters)
+  mid+  coord raw a=2.0: 39/63 = 62% [50, 73]   (cluster 62% [51, 73] over 42 clusters)
+  all   coord raw a=1.0: 45/63 = 71% [59, 81]   (cluster 71% [59, 83] over 42 clusters)
+  all   coord cen a=1.0: 50/63 = 79% [68, 88]   (cluster 79% [68, 88] over 42 clusters)
+  all   coord raw a=2.0: 39/63 = 62% [50, 73]   (cluster 62% [50, 73] over 42 clusters)
+  late proj raw a=1 (gauge check, expect ~0): 0/63 = 0% [0, 6]
+
+C3d probe privilege (n=83; naming = country-name cues k=16 [legacy, favors J], implying = paper-faithful attribute cues k=25; matched = norm-matched perturbations, natural = raw component magnitudes):
+  implying_matched   full 54/83 = 65% [54, 74]   J 54/83 = 65% [54, 74]   nonJ 18/83 = 22% [14, 32]   nonJ_clamped 3/83 = 4% [1, 10]
+  implying_natural   full 54/83 = 65% [54, 74]   J 55/83 = 66% [56, 76]   nonJ 14/83 = 17% [10, 26]   nonJ_clamped 2/83 = 2% [1, 8]
+  naming_matched     full 51/83 = 61% [51, 71]   J 41/83 = 49% [39, 60]   nonJ 29/83 = 35% [26, 46]   nonJ_clamped 4/83 = 5% [2, 12]
+  naming_natural     full 51/83 = 61% [51, 71]   J 53/83 = 64% [53, 73]   nonJ 30/83 = 36% [27, 47]   nonJ_clamped 5/83 = 6% [3, 13]
+
+C3c cross-function (one swap must flip BOTH questions, n=87): both 55/87 = 63% [53, 73]   any 80/87 = 92% [84, 96]
+
+C4 flexible generalization (target not already top-10): 1085/1352 = 80% [78, 82]   (cluster 80% [78, 83] over 599 clusters)
+  countries  capital      226/281 = 80% [75, 85]
+  countries  capital2     201/259 = 78% [72, 82]
+  countries  continent    2/8 = 25% [7, 59]
+  countries  language     462/515 = 90% [87, 92]
+  countries  language2    194/289 = 67% [62, 72]
+  broadcast: same swap redirects ALL functions, over pairs spanning >=2 distinct base functions: 202/341 = 59% [54, 64]
+  workspace loading: hits 0.169 vs misses 0.167
+
+C5a same-latent dissociation (capability-passing trials; *2 = frame-diversity variant formats):
+  report    flips 45/49 = 92% [81, 97]   changed 46/49   by lang: French 10/13, German 12/13, Italian 10/10, Spanish 13/13
+  country   flips 49/51 = 96% [87, 99]   changed 49/51   by lang: French 11/13, German 13/13, Italian 13/13, Spanish 12/12
+  report2   flips 0/6 = 0% [0, 39]   changed 6/6   by lang: French 0/6
+  country2  flips 15/28 = 54% [36, 70]   changed 28/28   by lang: French 13/13, German 0/13, Spanish 2/2
+  continuation changed:   2/51 = 4% [1, 13] (automatic task; prediction: ~0)
+  presence rank (median over all conditions): 53.0
+
+C5b whole-J-space ablation (score = correct/n; [95% Wilson]):
+        k1 S: wikitext 0.61 [0.59,0.63] (ctl 0.91)  copy 0.91 [0.84,0.96] (ctl 0.99)  cont_lang 0.98 [0.89,1.01] (ctl 1.02)  seq_formulaic 0.42 [0.19,0.68] (ctl 1.00)  idiom 0.88 [0.53,0.98] (ctl 1.00)  collocation 0.71 [0.36,0.92] (ctl 1.00)  func_cloze 0.89 [0.56,0.98] (ctl 1.00)  punct 1.00 [0.68,1.00] (ctl 1.00)  agreement 0.33 [0.06,0.79] (ctl 1.00)
+        k1 F: twohop 0.00 [0.00,0.15] (ctl 0.95)  country 0.00 [0.00,0.07] (ctl 0.98)  report 0.38 [0.18,0.64] (ctl 1.00)
+           class excess damage (ctl - ablate): content +0.49  function +0.11  punct +0.16
+        k2 S: wikitext 0.52 [0.50,0.55] (ctl 0.89)  copy 0.79 [0.71,0.85] (ctl 0.99)  cont_lang 0.92 [0.81,0.98] (ctl 1.02)  seq_formulaic 0.17 [0.05,0.45] (ctl 1.00)  idiom 0.50 [0.22,0.78] (ctl 1.00)  collocation 0.43 [0.16,0.75] (ctl 1.00)  func_cloze 0.78 [0.45,0.94] (ctl 1.00)  punct 1.00 [0.68,1.00] (ctl 1.00)  agreement 0.33 [0.06,0.79] (ctl 1.00)
+        k2 F: twohop 0.00 [0.00,0.15] (ctl 0.90)  country 0.00 [0.00,0.07] (ctl 0.96)  report 0.15 [0.04,0.42] (ctl 1.00)
+           class excess damage (ctl - ablate): content +0.60  function +0.15  punct +0.19
+        k3 S: wikitext 0.49 [0.46,0.51] (ctl 0.86)  copy 0.65 [0.57,0.73] (ctl 0.98)  cont_lang 0.94 [0.83,0.99] (ctl 1.00)  seq_formulaic 0.25 [0.09,0.53] (ctl 0.92)  idiom 0.50 [0.22,0.78] (ctl 1.00)  collocation 0.00 [0.00,0.35] (ctl 1.00)  func_cloze 0.78 [0.45,0.94] (ctl 1.00)  punct 1.00 [0.68,1.00] (ctl 1.00)  agreement 0.33 [0.06,0.79] (ctl 1.00)
+        k3 F: twohop 0.00 [0.00,0.15] (ctl 0.90)  country 0.00 [0.00,0.07] (ctl 0.86)  report 0.15 [0.04,0.42] (ctl 1.00)
+           class excess damage (ctl - ablate): content +0.63  function +0.16  punct +0.19
+        k5 S: wikitext 0.45 [0.43,0.47] (ctl 0.81)  copy 0.53 [0.45,0.61] (ctl 0.99)  cont_lang 0.84 [0.72,0.92] (ctl 1.02)  seq_formulaic 0.08 [0.01,0.35] (ctl 1.00)  idiom 0.25 [0.07,0.59] (ctl 1.00)  collocation 0.14 [0.03,0.51] (ctl 1.00)  func_cloze 0.78 [0.45,0.94] (ctl 1.00)  punct 1.00 [0.68,1.00] (ctl 1.00)  agreement 0.33 [0.06,0.79] (ctl 1.00)
+        k5 F: twohop 0.00 [0.00,0.15] (ctl 0.76)  country 0.00 [0.00,0.07] (ctl 0.82)  report 0.08 [0.01,0.33] (ctl 0.92)
+           class excess damage (ctl - ablate): content +0.60  function +0.18  punct +0.21
+       k10 S: wikitext 0.42 [0.40,0.44] (ctl 0.74)  copy 0.44 [0.36,0.52] (ctl 0.99)  cont_lang 0.71 [0.57,0.82] (ctl 1.02)  seq_formulaic 0.00 [0.00,0.24] (ctl 0.92)  idiom 0.25 [0.07,0.59] (ctl 0.88)  collocation 0.14 [0.03,0.51] (ctl 0.86)  func_cloze 0.78 [0.45,0.94] (ctl 1.00)  punct 1.00 [0.68,1.00] (ctl 1.00)  agreement 0.33 [0.06,0.79] (ctl 1.00)
+       k10 F: twohop 0.00 [0.00,0.15] (ctl 0.62)  country 0.00 [0.00,0.07] (ctl 0.71)  report 0.15 [0.04,0.42] (ctl 0.85)
+           class excess damage (ctl - ablate): content +0.52  function +0.21  punct +0.20
+  k3_L9-10 S: wikitext 0.53 [0.51,0.56] (ctl 0.91)  copy 0.77 [0.69,0.84] (ctl 0.99)  cont_lang 0.96 [0.86,1.00] (ctl 1.00)  seq_formulaic 0.25 [0.09,0.53] (ctl 1.00)  idiom 0.88 [0.53,0.98] (ctl 1.00)  collocation 0.57 [0.25,0.84] (ctl 1.00)  func_cloze 0.89 [0.56,0.98] (ctl 1.00)  punct 1.00 [0.68,1.00] (ctl 1.00)  agreement 0.67 [0.21,0.94] (ctl 1.00)
+  k3_L9-10 F: twohop 0.00 [0.00,0.15] (ctl 0.95)  country 0.00 [0.00,0.07] (ctl 0.94)  report 0.08 [0.01,0.33] (ctl 1.00)
+           class excess damage (ctl - ablate): content +0.59  function +0.16  punct +0.25
+  (S = shallow/automatic, F = flexible; entries are retention vs clean, ctl = random-projection control; k3_L9-10 = the light-dose narrow-band corner)

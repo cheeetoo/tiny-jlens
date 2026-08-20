@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13856.80it/s]
+L7: French-probe J-share 23.3%
+L8: French-probe J-share 27.8%
+L9: French-probe J-share 30.2%
+L10: French-probe J-share 34.9%
+..............................
+
+n=30 sentences; paired t vs mean-of-neutral-headers (mean/(sd/sqrt n) — NOT a baseline-SD z; mean-shift ratios are the honest magnitude readout, see analyze.py) (lens 'French' | J-orth property probe | full probe):
+  claim[0] lens t  +37.3   orth-probe t  +11.6   full-probe t  +16.3
+  claim[1] lens t  +29.0   orth-probe t  +18.1   full-probe t  +24.9
+  claim[2] lens t  +26.2   orth-probe t  +13.7   full-probe t  +18.2
+  claim[3] lens t  +21.2   orth-probe t  +18.3   full-probe t  +20.0
+  real[0] lens t  +11.3   orth-probe t  +53.9   full-probe t  +60.9
+  real[1] lens t  +10.4   orth-probe t  +59.2   full-probe t  +68.3
+  real[2] lens t  +10.9   orth-probe t  +55.7   full-probe t  +62.9
+............
+
+past tense (n=12; deltas vs mean-neutral, % of real-past delta; real lens delta raw +0.47):
+  claim[0] lens'past' +124% (up 11/12)   J-orth probe -17% (up 1/12)
+  claim[1] lens'past' +58% (up 7/12)   J-orth probe -5% (up 3/12)
+  claim[2] lens'past' +310% (up 11/12)   J-orth probe -39% (up 0/12)
+  real[0] lens'past' +84% (up 9/12)   J-orth probe +92% (up 12/12)
+  real[1] lens'past' +109% (up 10/12)   J-orth probe +105% (up 12/12)
+  real[2] lens'past' +107% (up 10/12)   J-orth probe +104% (up 12/12)

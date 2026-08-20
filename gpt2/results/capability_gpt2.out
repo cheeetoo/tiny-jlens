@@ -1,11 +1,11 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 34696.61it/s]
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15513.50it/s]
 
 == two-hop (gpt2) ==
-  city_continent     twohop  3/28   onehop 15/28   firsthop  1/28
-  city_language      twohop 21/28   onehop 26/28   firsthop  1/28
-  lang_capital       twohop 11/21   onehop 19/21   firsthop 15/21
-  lang_continent     twohop 10/22   onehop 12/22   firsthop 16/22
+  city_continent     twohop 10/67   onehop 27/67   firsthop  4/67
+  city_language      twohop 34/44   onehop 33/44   firsthop  2/44
+  lang_capital       twohop 21/25   onehop 24/25   firsthop 17/25
+  lang_continent     twohop 18/45   onehop 18/45   firsthop 25/45
   paper_animal-cover twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
   paper_animal-legs  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
   paper_animal-nose  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
@@ -37,25 +37,28 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   paper_season-next  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
   paper_sport-equip  twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
   paper_vehicle-power twohop  0/ 1   onehop  0/ 0   firsthop  0/ 0
-  riddle             twohop  0/ 5   onehop  0/ 5   firsthop  0/ 0
-  TOTAL two-hop pass: 52/183
+  riddle             twohop  0/ 9   onehop  0/ 9   firsthop  0/ 0
+  TOTAL two-hop pass: 90/269
 
-== category report ==  top1-valid 7/16: ['country', 'color', 'fruit', 'instrument', 'language', 'beverage', 'day of the week']
-   member-in-top5 9/16: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'language', 'beverage', 'day of the week']
-   miss sport            -> ' horse'
-   miss planet           -> ' planet'
-   miss tree             -> ' tree'
-   miss bird             -> ' bird'
-   miss profession       -> ' gardening'
-   miss organ            -> ' hat'
-   miss city             -> ' city'
-   miss river            -> ' river'
-   miss metal            -> ' leather'
+== category report, format 0 ==  top1-valid 13/27: ['color', 'fruit', 'sport', 'instrument', 'language', 'profession', 'beverage', 'animal', 'gem', 'furniture', 'vehicle', 'clothing', 'tool']
+   member-in-top5 23/27: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'bird', 'language', 'profession', 'beverage', 'metal', 'day of the week', 'month', 'animal', 'body part', 'vegetable', 'insect', 'gem', 'furniture', 'vehicle', 'clothing', 'flower', 'tool']
+
+== category report, format 1 ==  top1-valid 5/22: ['color', 'sport', 'instrument', 'beverage', 'animal']
+   member-in-top5 15/22: ['color', 'fruit', 'sport', 'instrument', 'planet', 'bird', 'language', 'profession', 'beverage', 'metal', 'day of the week', 'animal', 'body part', 'insect', 'gem']
+
+== category report, format 2 ==  top1-valid 9/22: ['country', 'color', 'fruit', 'instrument', 'language', 'beverage', 'day of the week', 'month', 'animal']
+   member-in-top5 13/22: ['country', 'color', 'fruit', 'sport', 'instrument', 'planet', 'language', 'beverage', 'day of the week', 'month', 'animal', 'body part', 'insect']
+
+== category report, format 3 ==  top1-valid 7/24: ['country', 'color', 'language', 'animal', 'vehicle', 'clothing', 'tool']
+   member-in-top5 16/24: ['country', 'color', 'sport', 'instrument', 'planet', 'language', 'profession', 'beverage', 'metal', 'month', 'animal', 'insect', 'gem', 'vehicle', 'clothing', 'tool']
 
 == C4 grid (cells need >=3 correct args) ==
-  countries    capital          6/10
-  countries    language         9/10
-  countries    continent        2/10
+  countries    capital          20/34
+  countries    language         30/38
+  countries    continent        8/39
+  countries    capital2         19/34
+  countries    language2        21/38
+  countries    continent2       0/39
   months       season           0/4
   months       number           0/4
   months       holiday          0/4
@@ -71,15 +74,55 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 == C5a language tasks ==
   fr1  French   cont->French   report Y('French'    ) country Y('France')
   fr2  French   cont->French   report Y('French'    ) country Y('France')
-  de1  German   cont->German   report n('English'   ) country Y('Germany')
-  de2  German   cont->German   report n('English'   ) country Y('Germany')
+  de1  German   cont->German   report Y('German'    ) country Y('Germany')
+  de2  German   cont->German   report Y('German'    ) country Y('Germany')
   es1  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
   es2  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
-  it1  Italian  cont->unknown  report n('English'   ) country Y('Italy')
-  it2  Italian  cont->unknown  report n('English'   ) country Y('Italy')
+  it1  Italian  cont->Italian  report n('Spanish'   ) country Y('Italy')
+  it2  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
   fx1  French   cont->French   report Y('French'    ) country Y('France')
-  gx1  German   cont->German   report n('English'   ) country Y('Germany')
-  sx1  Spanish  cont->unknown  report n('English'   ) country Y('Spain')
-  ix1  Italian  cont->French   report Y('Italian'   ) country Y('Italy')
+  gx1  German   cont->German   report Y('German'    ) country Y('Germany')
+  sx1  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  ix1  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  fx2  French   cont->French   report Y('French'    ) country Y('France')
+  fx3  French   cont->French   report Y('French'    ) country Y('France')
+  fx4  French   cont->French   report Y('French'    ) country Y('France')
+  fx5  French   cont->French   report Y('French'    ) country Y('France')
+  fx6  French   cont->French   report Y('French'    ) country Y('France')
+  fx7  French   cont->French   report Y('French'    ) country Y('France')
+  fx8  French   cont->French   report Y('French'    ) country Y('France')
+  gx2  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx3  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx4  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx5  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx6  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx7  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx8  German   cont->German   report Y('German'    ) country Y('Germany')
+  sx2  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx3  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx4  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx5  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx6  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx7  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx8  Spanish  cont->Spanish  report Y('Spanish'   ) country n('Mexico')
+  ix2  Italian  cont->Spanish  report n('Spanish'   ) country Y('Italy')
+  ix3  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix4  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix5  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix6  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix7  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix8  Italian  cont->Italian  report n('Spanish'   ) country Y('Italy')
+  fx9  French   cont->French   report Y('French'    ) country Y('France')
+  fx10 French   cont->French   report Y('French'    ) country Y('France')
+  fx11 French   cont->French   report Y('French'    ) country Y('France')
+  gx9  German   cont->German   report Y('German'    ) country Y('Germany')
+  gx10 German   cont->German   report Y('German'    ) country Y('Germany')
+  gx11 German   cont->German   report Y('German'    ) country Y('Germany')
+  sx9  Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx10 Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  sx11 Spanish  cont->Spanish  report Y('Spanish'   ) country Y('Spain')
+  ix9  Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix10 Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
+  ix11 Italian  cont->Italian  report Y('Italian'   ) country Y('Italy')
 
 saved results/capability_gpt2.json

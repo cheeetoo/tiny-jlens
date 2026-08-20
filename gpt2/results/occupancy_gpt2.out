@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15762.05it/s]
+L 0  occupancy median   1  IQR [0, 2]
+L 1  occupancy median   1  IQR [0, 2]
+L 2  occupancy median   2  IQR [0, 2]
+L 3  occupancy median   1  IQR [0, 2]
+L 4  occupancy median   1  IQR [0, 3]
+L 5  occupancy median   1  IQR [0, 2]
+L 6  occupancy median   1  IQR [0, 2]
+L 7  occupancy median   1  IQR [1, 2]
+L 8  occupancy median   2  IQR [1, 4]
+L 9  occupancy median   3  IQR [2, 5]
+L10  occupancy median   2  IQR [1, 2]

@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 12526.37it/s]
+..............................................
+n=644 (word x sentence) trials x 5 think / 5 dont phrasings
+think: pooled median best rank 41.0 (base 396.0)
+  phrasing 0: median  45.5   beats base 612/644
+  phrasing 1: median  47.0   beats base 607/644
+  phrasing 2: median  27.5   beats base 617/644
+  phrasing 3: median  93.0   beats base 587/644
+  phrasing 4: median  15.0   beats base 626/644
+dont: pooled median best rank 100.0 (base 396.0)
+  phrasing 0: median  66.0   beats base 600/644
+  phrasing 1: median  79.5   beats base 594/644
+  phrasing 2: median  56.0   beats base 579/644
+  phrasing 3: median  85.0   beats base 586/644
+  phrasing 4: median 288.5   beats base 442/644
+blurt (canonical think phrasing): 180/644
+saved results/c2_gpt2.json

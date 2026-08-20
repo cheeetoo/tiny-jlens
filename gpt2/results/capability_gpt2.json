@@ -6,7 +6,7 @@
       "arg": "French",
       "intermediate": "France",
       "answer": "Paris",
-      "prompt": "The capital of the country where French is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak French, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Paris",
@@ -19,10 +19,10 @@
       "arg": "German",
       "intermediate": "Germany",
       "answer": "Berlin",
-      "prompt": "The capital of the country where German is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 2,
-      "got": " Cologne",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak German, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Berlin",
       "onehop": true,
       "firsthop": true,
       "source": "ours"
@@ -32,10 +32,10 @@
       "arg": "Spanish",
       "intermediate": "Spain",
       "answer": "Madrid",
-      "prompt": "The capital of the country where Spanish is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Spanish, the capital city is called",
       "twohop": false,
-      "answer_rank": 2,
-      "got": " Valencia",
+      "answer_rank": 3,
+      "got": " San",
       "onehop": true,
       "firsthop": true,
       "source": "ours"
@@ -45,10 +45,10 @@
       "arg": "Italian",
       "intermediate": "Italy",
       "answer": "Rome",
-      "prompt": "The capital of the country where Italian is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " Milan",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Italian, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Rome",
       "onehop": true,
       "firsthop": true,
       "source": "ours"
@@ -58,7 +58,7 @@
       "arg": "Polish",
       "intermediate": "Poland",
       "answer": "Warsaw",
-      "prompt": "The capital of the country where Polish is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Polish, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Warsaw",
@@ -71,10 +71,10 @@
       "arg": "Russian",
       "intermediate": "Russia",
       "answer": "Moscow",
-      "prompt": "The capital of the country where Russian is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 10,
-      "got": " Sochi",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Russian, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Moscow",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -84,10 +84,10 @@
       "arg": "Chinese",
       "intermediate": "China",
       "answer": "Beijing",
-      "prompt": "The capital of the country where Chinese is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 4,
-      "got": " Guang",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Chinese, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Beijing",
       "onehop": true,
       "firsthop": true,
       "source": "ours"
@@ -97,7 +97,7 @@
       "arg": "Japanese",
       "intermediate": "Japan",
       "answer": "Tokyo",
-      "prompt": "The capital of the country where Japanese is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Japanese, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Tokyo",
@@ -110,7 +110,7 @@
       "arg": "Portuguese",
       "intermediate": "Portugal",
       "answer": "Lisbon",
-      "prompt": "The capital of the country where Portuguese is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Portuguese, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Lisbon",
@@ -123,7 +123,7 @@
       "arg": "Greek",
       "intermediate": "Greece",
       "answer": "Athens",
-      "prompt": "The capital of the country where Greek is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Greek, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Athens",
@@ -136,7 +136,7 @@
       "arg": "Hindi",
       "intermediate": "India",
       "answer": "Delhi",
-      "prompt": "The capital of the country where Hindi is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Hindi, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Delhi",
@@ -149,10 +149,10 @@
       "arg": "Turkish",
       "intermediate": "Turkey",
       "answer": "Ankara",
-      "prompt": "The capital of the country where Turkish is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Turkish, the capital city is called",
       "twohop": false,
-      "answer_rank": 4,
-      "got": " Iz",
+      "answer_rank": 1,
+      "got": " Istanbul",
       "onehop": true,
       "firsthop": true,
       "source": "ours"
@@ -162,10 +162,10 @@
       "arg": "Swedish",
       "intermediate": "Sweden",
       "answer": "Stockholm",
-      "prompt": "The capital of the country where Swedish is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " Got",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Swedish, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Stockholm",
       "onehop": true,
       "firsthop": true,
       "source": "ours"
@@ -175,7 +175,7 @@
       "arg": "Norwegian",
       "intermediate": "Norway",
       "answer": "Oslo",
-      "prompt": "The capital of the country where Norwegian is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Norwegian, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Oslo",
@@ -188,7 +188,7 @@
       "arg": "Danish",
       "intermediate": "Denmark",
       "answer": "Copenhagen",
-      "prompt": "The capital of the country where Danish is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Danish, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Copenhagen",
@@ -201,7 +201,7 @@
       "arg": "Finnish",
       "intermediate": "Finland",
       "answer": "Helsinki",
-      "prompt": "The capital of the country where Finnish is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Finnish, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Helsinki",
@@ -214,25 +214,12 @@
       "arg": "Hungarian",
       "intermediate": "Hungary",
       "answer": "Budapest",
-      "prompt": "The capital of the country where Hungarian is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " Sz",
-      "onehop": true,
-      "firsthop": true,
-      "source": "ours"
-    },
-    {
-      "family": "lang_capital",
-      "arg": "Hebrew",
-      "intermediate": "Israel",
-      "answer": "Jerusalem",
-      "prompt": "The capital of the country where Hebrew is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Hungarian, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
-      "got": " Jerusalem",
-      "onehop": false,
-      "firsthop": false,
+      "got": " Budapest",
+      "onehop": true,
+      "firsthop": true,
       "source": "ours"
     },
     {
@@ -240,10 +227,10 @@
       "arg": "Persian",
       "intermediate": "Iran",
       "answer": "Tehran",
-      "prompt": "The capital of the country where Persian is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 6,
-      "got": " Kh",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Persian, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Tehran",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -253,7 +240,7 @@
       "arg": "Korean",
       "intermediate": "Korea",
       "answer": "Seoul",
-      "prompt": "The capital of the country where Korean is spoken is the city of",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Korean, the capital city is called",
       "twohop": true,
       "answer_rank": 0,
       "got": " Seoul",
@@ -266,12 +253,77 @@
       "arg": "Thai",
       "intermediate": "Thailand",
       "answer": "Bangkok",
-      "prompt": "The capital of the country where Thai is spoken is the city of",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " Ph",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Thai, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Bangkok",
       "onehop": true,
       "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Dutch",
+      "intermediate": "Netherlands",
+      "answer": "Amsterdam",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Dutch, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Amsterdam",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Ukrainian",
+      "intermediate": "Ukraine",
+      "answer": "Kiev",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Ukrainian, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Kiev",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Indonesian",
+      "intermediate": "Indonesia",
+      "answer": "Jakarta",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Indonesian, the capital city is called",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Jakarta",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Tagalog",
+      "intermediate": "Philippines",
+      "answer": "Manila",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Tagalog, the capital city is called",
+      "twohop": false,
+      "answer_rank": 13,
+      "got": " B",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_capital",
+      "arg": "Urdu",
+      "intermediate": "Pakistan",
+      "answer": "Islamabad",
+      "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Urdu, the capital city is called",
+      "twohop": false,
+      "answer_rank": 27,
+      "got": " K",
+      "onehop": true,
+      "firsthop": false,
       "source": "ours"
     },
     {
@@ -561,11 +613,310 @@
       "source": "ours"
     },
     {
+      "family": "lang_continent",
+      "arg": "Dutch",
+      "intermediate": "Netherlands",
+      "answer": "Europe",
+      "prompt": "The country where Dutch is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Ukrainian",
+      "intermediate": "Ukraine",
+      "answer": "Europe",
+      "prompt": "The country where Ukrainian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Romanian",
+      "intermediate": "Romania",
+      "answer": "Europe",
+      "prompt": "The country where Romanian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Bulgarian",
+      "intermediate": "Bulgaria",
+      "answer": "Europe",
+      "prompt": "The country where Bulgarian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Serbian",
+      "intermediate": "Serbia",
+      "answer": "Europe",
+      "prompt": "The country where Serbian is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Croatian",
+      "intermediate": "Croatia",
+      "answer": "Europe",
+      "prompt": "The country where Croatian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Icelandic",
+      "intermediate": "Iceland",
+      "answer": "Europe",
+      "prompt": "The country where Icelandic is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Iceland",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Albanian",
+      "intermediate": "Albania",
+      "answer": "Europe",
+      "prompt": "The country where Albanian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Europe",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Belarusian",
+      "intermediate": "Belarus",
+      "answer": "Europe",
+      "prompt": "The country where Belarusian is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 636,
+      "got": " former",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Indonesian",
+      "intermediate": "Indonesia",
+      "answer": "Asia",
+      "prompt": "The country where Indonesian is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Tagalog",
+      "intermediate": "Philippines",
+      "answer": "Asia",
+      "prompt": "The country where Tagalog is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Urdu",
+      "intermediate": "Pakistan",
+      "answer": "Asia",
+      "prompt": "The country where Urdu is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Bengali",
+      "intermediate": "Bangladesh",
+      "answer": "Asia",
+      "prompt": "The country where Bengali is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Nepali",
+      "intermediate": "Nepal",
+      "answer": "Asia",
+      "prompt": "The country where Nepali is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Lao",
+      "intermediate": "Laos",
+      "answer": "Asia",
+      "prompt": "The country where Lao is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Burmese",
+      "intermediate": "Myanmar",
+      "answer": "Asia",
+      "prompt": "The country where Burmese is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Khmer",
+      "intermediate": "Cambodia",
+      "answer": "Asia",
+      "prompt": "The country where Khmer is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 352,
+      "got": " Middle",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Mongolian",
+      "intermediate": "Mongolia",
+      "answer": "Asia",
+      "prompt": "The country where Mongolian is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Asia",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Malay",
+      "intermediate": "Malaysia",
+      "answer": "Asia",
+      "prompt": "The country where Malay is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Armenian",
+      "intermediate": "Armenia",
+      "answer": "Asia",
+      "prompt": "The country where Armenian is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 163,
+      "got": " Caucasus",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Georgian",
+      "intermediate": "Georgia",
+      "answer": "Asia",
+      "prompt": "The country where Georgian is spoken is a country on the continent of",
+      "twohop": false,
+      "answer_rank": 5,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Amharic",
+      "intermediate": "Ethiopia",
+      "answer": "Africa",
+      "prompt": "The country where Amharic is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "lang_continent",
+      "arg": "Somali",
+      "intermediate": "Somalia",
+      "answer": "Africa",
+      "prompt": "The country where Somali is spoken is a country on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
       "family": "city_language",
       "arg": "Paris",
       "intermediate": "France",
       "answer": "French",
-      "prompt": "In the country whose capital city is Paris, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Paris has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " French",
@@ -578,7 +929,7 @@
       "arg": "Berlin",
       "intermediate": "Germany",
       "answer": "German",
-      "prompt": "In the country whose capital city is Berlin, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Berlin has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " German",
@@ -591,7 +942,7 @@
       "arg": "Madrid",
       "intermediate": "Spain",
       "answer": "Spanish",
-      "prompt": "In the country whose capital city is Madrid, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Madrid has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Spanish",
@@ -604,10 +955,10 @@
       "arg": "Rome",
       "intermediate": "Italy",
       "answer": "Italian",
-      "prompt": "In the country whose capital city is Rome, the primary language is",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " English",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Rome has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Italian",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -617,7 +968,7 @@
       "arg": "Warsaw",
       "intermediate": "Poland",
       "answer": "Polish",
-      "prompt": "In the country whose capital city is Warsaw, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Warsaw has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Polish",
@@ -630,7 +981,7 @@
       "arg": "Moscow",
       "intermediate": "Russia",
       "answer": "Russian",
-      "prompt": "In the country whose capital city is Moscow, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Moscow has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Russian",
@@ -643,7 +994,7 @@
       "arg": "Beijing",
       "intermediate": "China",
       "answer": "Chinese",
-      "prompt": "In the country whose capital city is Beijing, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Beijing has an official language, namely",
       "twohop": false,
       "answer_rank": 1,
       "got": " Mandarin",
@@ -656,10 +1007,10 @@
       "arg": "Tokyo",
       "intermediate": "Japan",
       "answer": "Japanese",
-      "prompt": "In the country whose capital city is Tokyo, the primary language is",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " English",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Tokyo has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Japanese",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -669,7 +1020,7 @@
       "arg": "Lisbon",
       "intermediate": "Portugal",
       "answer": "Portuguese",
-      "prompt": "In the country whose capital city is Lisbon, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Lisbon has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Portuguese",
@@ -682,7 +1033,7 @@
       "arg": "Athens",
       "intermediate": "Greece",
       "answer": "Greek",
-      "prompt": "In the country whose capital city is Athens, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Athens has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Greek",
@@ -692,23 +1043,10 @@
     },
     {
       "family": "city_language",
-      "arg": "Cairo",
-      "intermediate": "Egypt",
-      "answer": "Arabic",
-      "prompt": "In the country whose capital city is Cairo, the primary language is",
-      "twohop": true,
-      "answer_rank": 0,
-      "got": " Arabic",
-      "onehop": true,
-      "firsthop": false,
-      "source": "ours"
-    },
-    {
-      "family": "city_language",
       "arg": "Delhi",
       "intermediate": "India",
       "answer": "Hindi",
-      "prompt": "In the country whose capital city is Delhi, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Delhi has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Hindi",
@@ -721,7 +1059,7 @@
       "arg": "Ankara",
       "intermediate": "Turkey",
       "answer": "Turkish",
-      "prompt": "In the country whose capital city is Ankara, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Ankara has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Turkish",
@@ -734,7 +1072,7 @@
       "arg": "Stockholm",
       "intermediate": "Sweden",
       "answer": "Swedish",
-      "prompt": "In the country whose capital city is Stockholm, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Stockholm has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Swedish",
@@ -747,7 +1085,7 @@
       "arg": "Oslo",
       "intermediate": "Norway",
       "answer": "Norwegian",
-      "prompt": "In the country whose capital city is Oslo, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Oslo has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Norwegian",
@@ -760,7 +1098,7 @@
       "arg": "Copenhagen",
       "intermediate": "Denmark",
       "answer": "Danish",
-      "prompt": "In the country whose capital city is Copenhagen, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Copenhagen has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Danish",
@@ -773,7 +1111,7 @@
       "arg": "Helsinki",
       "intermediate": "Finland",
       "answer": "Finnish",
-      "prompt": "In the country whose capital city is Helsinki, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Helsinki has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Finnish",
@@ -786,7 +1124,7 @@
       "arg": "Budapest",
       "intermediate": "Hungary",
       "answer": "Hungarian",
-      "prompt": "In the country whose capital city is Budapest, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Budapest has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Hungarian",
@@ -799,7 +1137,7 @@
       "arg": "Vienna",
       "intermediate": "Austria",
       "answer": "German",
-      "prompt": "In the country whose capital city is Vienna, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Vienna has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " German",
@@ -812,23 +1150,10 @@
       "arg": "Dublin",
       "intermediate": "Ireland",
       "answer": "English",
-      "prompt": "In the country whose capital city is Dublin, the primary language is",
-      "twohop": true,
-      "answer_rank": 0,
-      "got": " English",
-      "onehop": true,
-      "firsthop": false,
-      "source": "ours"
-    },
-    {
-      "family": "city_language",
-      "arg": "Jerusalem",
-      "intermediate": "Israel",
-      "answer": "Hebrew",
-      "prompt": "In the country whose capital city is Jerusalem, the primary language is",
-      "twohop": true,
-      "answer_rank": 0,
-      "got": " Hebrew",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Dublin has an official language, namely",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Irish",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -838,10 +1163,10 @@
       "arg": "Tehran",
       "intermediate": "Iran",
       "answer": "Persian",
-      "prompt": "In the country whose capital city is Tehran, the primary language is",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " English",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Tehran has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Persian",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -851,7 +1176,7 @@
       "arg": "Seoul",
       "intermediate": "Korea",
       "answer": "Korean",
-      "prompt": "In the country whose capital city is Seoul, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Seoul has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Korean",
@@ -864,10 +1189,10 @@
       "arg": "Hanoi",
       "intermediate": "Vietnam",
       "answer": "Vietnamese",
-      "prompt": "In the country whose capital city is Hanoi, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Hanoi has an official language, namely",
       "twohop": false,
-      "answer_rank": 2,
-      "got": " spoken",
+      "answer_rank": 1,
+      "got": " Arabic",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -877,7 +1202,7 @@
       "arg": "Bangkok",
       "intermediate": "Thailand",
       "answer": "Thai",
-      "prompt": "In the country whose capital city is Bangkok, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Bangkok has an official language, namely",
       "twohop": true,
       "answer_rank": 0,
       "got": " Thai",
@@ -890,10 +1215,10 @@
       "arg": "Ottawa",
       "intermediate": "Canada",
       "answer": "English",
-      "prompt": "In the country whose capital city is Ottawa, the primary language is",
-      "twohop": true,
-      "answer_rank": 0,
-      "got": " English",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Ottawa has an official language, namely",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " French",
       "onehop": true,
       "firsthop": false,
       "source": "ours"
@@ -903,10 +1228,10 @@
       "arg": "Mexico",
       "intermediate": "Mexico",
       "answer": "Spanish",
-      "prompt": "In the country whose capital city is Mexico, the primary language is",
-      "twohop": false,
-      "answer_rank": 1,
-      "got": " English",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Mexico has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
       "onehop": false,
       "firsthop": true,
       "source": "ours"
@@ -916,11 +1241,245 @@
       "arg": "Bras",
       "intermediate": "Brazil",
       "answer": "Portuguese",
-      "prompt": "In the country whose capital city is Bras, the primary language is",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Bras has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Portuguese",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Amsterdam",
+      "intermediate": "Netherlands",
+      "answer": "Dutch",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Amsterdam has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Dutch",
+      "onehop": true,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Kiev",
+      "intermediate": "Ukraine",
+      "answer": "Ukrainian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Kiev has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Ukrainian",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Bucharest",
+      "intermediate": "Romania",
+      "answer": "Romanian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Bucharest has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Romanian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Sofia",
+      "intermediate": "Bulgaria",
+      "answer": "Bulgarian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Sofia has an official language, namely",
+      "twohop": false,
+      "answer_rank": 4,
+      "got": " Arabic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Belgrade",
+      "intermediate": "Serbia",
+      "answer": "Serbian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Belgrade has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Serbian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Zagreb",
+      "intermediate": "Croatia",
+      "answer": "Croatian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Zagreb has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Croatian",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Reykjavik",
+      "intermediate": "Iceland",
+      "answer": "Icelandic",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Reykjavik has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Icelandic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Jakarta",
+      "intermediate": "Indonesia",
+      "answer": "Indonesian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Jakarta has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Indonesian",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Yerevan",
+      "intermediate": "Armenia",
+      "answer": "Armenian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Yerevan has an official language, namely",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Arabic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Tbilisi",
+      "intermediate": "Georgia",
+      "answer": "Georgian",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Tbilisi has an official language, namely",
+      "twohop": false,
+      "answer_rank": 6,
+      "got": " Ur",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Abuja",
+      "intermediate": "Nigeria",
+      "answer": "English",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Abuja has an official language, namely",
       "twohop": false,
       "answer_rank": 1,
-      "got": " English",
+      "got": " Arabic",
       "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Mogadishu",
+      "intermediate": "Somalia",
+      "answer": "Somali",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Mogadishu has an official language, namely",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Arabic",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Havana",
+      "intermediate": "Cuba",
+      "answer": "Spanish",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Havana has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Santiago",
+      "intermediate": "Chile",
+      "answer": "Spanish",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Santiago has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Lima",
+      "intermediate": "Peru",
+      "answer": "Spanish",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Lima has an official language, namely",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Arabic",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Buenos Aires",
+      "intermediate": "Argentina",
+      "answer": "Spanish",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Buenos Aires has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Bogota",
+      "intermediate": "Colombia",
+      "answer": "Spanish",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Bogota has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_language",
+      "arg": "Caracas",
+      "intermediate": "Venezuela",
+      "answer": "Spanish",
+      "prompt": "The country governed from Cairo has an official language, namely Arabic. The country governed from Nairobi has an official language, namely Swahili. The country governed from Jerusalem has an official language, namely Hebrew. The country governed from Caracas has an official language, namely",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Spanish",
+      "onehop": false,
       "firsthop": false,
       "source": "ours"
     },
@@ -1139,7 +1698,7 @@
       "answer": "Europe",
       "prompt": "The country whose capital is Helsinki is located on the continent of",
       "twohop": false,
-      "answer_rank": 1187,
+      "answer_rank": 1188,
       "got": " Baltic",
       "onehop": true,
       "firsthop": false,
@@ -1289,6 +1848,513 @@
       "source": "ours"
     },
     {
+      "family": "city_continent",
+      "arg": "Amsterdam",
+      "intermediate": "Netherlands",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Amsterdam is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Kiev",
+      "intermediate": "Ukraine",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Kiev is located on the continent of",
+      "twohop": false,
+      "answer_rank": 793,
+      "got": " Black",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Bucharest",
+      "intermediate": "Romania",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Bucharest is located on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Sofia",
+      "intermediate": "Bulgaria",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Sofia is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1127,
+      "got": " Black",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Belgrade",
+      "intermediate": "Serbia",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Belgrade is located on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Zagreb",
+      "intermediate": "Croatia",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Zagreb is located on the continent of",
+      "twohop": false,
+      "answer_rank": 4,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Reykjavik",
+      "intermediate": "Iceland",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Reykjavik is located on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Iceland",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Tirana",
+      "intermediate": "Albania",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Tirana is located on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Minsk",
+      "intermediate": "Belarus",
+      "answer": "Europe",
+      "prompt": "The country whose capital is Minsk is located on the continent of",
+      "twohop": false,
+      "answer_rank": 4,
+      "got": " Belarus",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Jakarta",
+      "intermediate": "Indonesia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Jakarta is located on the continent of",
+      "twohop": false,
+      "answer_rank": 5,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Manila",
+      "intermediate": "Philippines",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Manila is located on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Islamabad",
+      "intermediate": "Pakistan",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Islamabad is located on the continent of",
+      "twohop": false,
+      "answer_rank": 4,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Dhaka",
+      "intermediate": "Bangladesh",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Dhaka is located on the continent of",
+      "twohop": false,
+      "answer_rank": 3,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Kathmandu",
+      "intermediate": "Nepal",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Kathmandu is located on the continent of",
+      "twohop": false,
+      "answer_rank": 9,
+      "got": " India",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Vientiane",
+      "intermediate": "Laos",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Vientiane is located on the continent of",
+      "twohop": false,
+      "answer_rank": 12,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Naypyidaw",
+      "intermediate": "Myanmar",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Naypyidaw is located on the continent of",
+      "twohop": false,
+      "answer_rank": 7,
+      "got": " South",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Phnom Penh",
+      "intermediate": "Cambodia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Phnom Penh is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Cambodia",
+      "onehop": false,
+      "firsthop": true,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Ulaanbaatar",
+      "intermediate": "Mongolia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Ulaanbaatar is located on the continent of",
+      "twohop": false,
+      "answer_rank": 26,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Kuala Lumpur",
+      "intermediate": "Malaysia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Kuala Lumpur is located on the continent of",
+      "twohop": false,
+      "answer_rank": 2,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Yerevan",
+      "intermediate": "Armenia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Yerevan is located on the continent of",
+      "twohop": false,
+      "answer_rank": 469,
+      "got": " Caucasus",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Tbilisi",
+      "intermediate": "Georgia",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Tbilisi is located on the continent of",
+      "twohop": false,
+      "answer_rank": 10,
+      "got": " Georgia",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Baghdad",
+      "intermediate": "Iraq",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Baghdad is located on the continent of",
+      "twohop": false,
+      "answer_rank": 8,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Damascus",
+      "intermediate": "Syria",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Damascus is located on the continent of",
+      "twohop": false,
+      "answer_rank": 8,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Beirut",
+      "intermediate": "Lebanon",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Beirut is located on the continent of",
+      "twohop": false,
+      "answer_rank": 6,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Amman",
+      "intermediate": "Jordan",
+      "answer": "Asia",
+      "prompt": "The country whose capital is Amman is located on the continent of",
+      "twohop": false,
+      "answer_rank": 858,
+      "got": " Middle",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Tripoli",
+      "intermediate": "Libya",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Tripoli is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Rabat",
+      "intermediate": "Morocco",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Rabat is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Algiers",
+      "intermediate": "Algeria",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Algiers is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Khartoum",
+      "intermediate": "Sudan",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Khartoum is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Abuja",
+      "intermediate": "Nigeria",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Abuja is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Nairobi",
+      "intermediate": "Kenya",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Nairobi is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Addis Ababa",
+      "intermediate": "Ethiopia",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Addis Ababa is located on the continent of",
+      "twohop": true,
+      "answer_rank": 0,
+      "got": " Africa",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Mogadishu",
+      "intermediate": "Somalia",
+      "answer": "Africa",
+      "prompt": "The country whose capital is Mogadishu is located on the continent of",
+      "twohop": false,
+      "answer_rank": 1,
+      "got": " Somalia",
+      "onehop": true,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Havana",
+      "intermediate": "Cuba",
+      "answer": "America",
+      "prompt": "The country whose capital is Havana is located on the continent of",
+      "twohop": false,
+      "answer_rank": 29,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Santiago",
+      "intermediate": "Chile",
+      "answer": "America",
+      "prompt": "The country whose capital is Santiago is located on the continent of",
+      "twohop": false,
+      "answer_rank": 33,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Lima",
+      "intermediate": "Peru",
+      "answer": "America",
+      "prompt": "The country whose capital is Lima is located on the continent of",
+      "twohop": false,
+      "answer_rank": 65,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Buenos Aires",
+      "intermediate": "Argentina",
+      "answer": "America",
+      "prompt": "The country whose capital is Buenos Aires is located on the continent of",
+      "twohop": false,
+      "answer_rank": 23,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Bogota",
+      "intermediate": "Colombia",
+      "answer": "America",
+      "prompt": "The country whose capital is Bogota is located on the continent of",
+      "twohop": false,
+      "answer_rank": 70,
+      "got": " Africa",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
+      "family": "city_continent",
+      "arg": "Caracas",
+      "intermediate": "Venezuela",
+      "answer": "America",
+      "prompt": "The country whose capital is Caracas is located on the continent of",
+      "twohop": false,
+      "answer_rank": 22,
+      "got": " Latin",
+      "onehop": false,
+      "firsthop": false,
+      "source": "ours"
+    },
+    {
       "family": "riddle",
       "arg": "spins",
       "intermediate": "spider",
@@ -1349,6 +2415,58 @@
       "twohop": false,
       "answer_rank": 1,
       "got": " blue",
+      "onehop": false,
+      "firsthop": null,
+      "source": "ours"
+    },
+    {
+      "family": "riddle",
+      "arg": "that",
+      "intermediate": "dog",
+      "answer": "four",
+      "prompt": "The number of legs on the animal that barks is",
+      "twohop": false,
+      "answer_rank": 233,
+      "got": " increasing",
+      "onehop": false,
+      "firsthop": null,
+      "source": "ours"
+    },
+    {
+      "family": "riddle",
+      "arg": "says",
+      "intermediate": "cat",
+      "answer": "four",
+      "prompt": "The number of legs on the animal that says meow is",
+      "twohop": false,
+      "answer_rank": 146,
+      "got": " growing",
+      "onehop": false,
+      "firsthop": null,
+      "source": "ours"
+    },
+    {
+      "family": "riddle",
+      "arg": "makes",
+      "intermediate": "bee",
+      "answer": "six",
+      "prompt": "The number of legs on the insect that makes honey is",
+      "twohop": false,
+      "answer_rank": 224,
+      "got": " increasing",
+      "onehop": false,
+      "firsthop": null,
+      "source": "ours"
+    },
+    {
+      "family": "riddle",
+      "arg": "doctor",
+      "intermediate": "apple",
+      "answer": "red",
+      "prompt": "The color of the fruit that famously keeps the doctor away is",
+      "twohop": false,
+      "answer_rank": 6,
+      "got": " bright",
       "onehop": false,
       "firsthop": null,
       "source": "ours"
@@ -1633,7 +2751,7 @@
       "answer": "Rome",
       "prompt": "Fact: The capital of the country where Naples is located is",
       "twohop": false,
-      "answer_rank": 500,
+      "answer_rank": 499,
       "got": " capital",
       "onehop": null,
       "firsthop": null,
@@ -2383,14 +3501,14 @@
   ],
   "report": {
     "country": {
-      "valid": true,
+      "valid": false,
       "member_top5": true,
-      "got": " USA"
+      "got": " country"
     },
     "color": {
       "valid": true,
       "member_top5": true,
-      "got": " red"
+      "got": " blue"
     },
     "fruit": {
       "valid": true,
@@ -2398,9 +3516,9 @@
       "got": " apple"
     },
     "sport": {
-      "valid": false,
+      "valid": true,
       "member_top5": true,
-      "got": " horse"
+      "got": " soccer"
     },
     "instrument": {
       "valid": true,
@@ -2419,7 +3537,7 @@
     },
     "bird": {
       "valid": false,
-      "member_top5": false,
+      "member_top5": true,
       "got": " bird"
     },
     "language": {
@@ -2428,19 +3546,19 @@
       "got": " English"
     },
     "profession": {
-      "valid": false,
-      "member_top5": false,
-      "got": " gardening"
+      "valid": true,
+      "member_top5": true,
+      "got": " doctor"
     },
     "beverage": {
       "valid": true,
       "member_top5": true,
-      "got": " water"
+      "got": " soda"
     },
     "organ": {
       "valid": false,
       "member_top5": false,
-      "got": " hat"
+      "got": " organ"
     },
     "city": {
       "valid": false,
@@ -2454,13 +3572,553 @@
     },
     "metal": {
       "valid": false,
-      "member_top5": false,
-      "got": " leather"
+      "member_top5": true,
+      "got": " metal"
     },
     "day of the week": {
+      "valid": false,
+      "member_top5": true,
+      "got": " day"
+    },
+    "month": {
+      "valid": false,
+      "member_top5": true,
+      "got": " month"
+    },
+    "animal": {
       "valid": true,
       "member_top5": true,
-      "got": " Sunday"
+      "got": " dog"
+    },
+    "body part": {
+      "valid": false,
+      "member_top5": true,
+      "got": " body"
+    },
+    "vegetable": {
+      "valid": false,
+      "member_top5": true,
+      "got": " cuc"
+    },
+    "insect": {
+      "valid": false,
+      "member_top5": true,
+      "got": " insect"
+    },
+    "gem": {
+      "valid": true,
+      "member_top5": true,
+      "got": " diamond"
+    },
+    "furniture": {
+      "valid": true,
+      "member_top5": true,
+      "got": " sofa"
+    },
+    "vehicle": {
+      "valid": true,
+      "member_top5": true,
+      "got": " car"
+    },
+    "clothing": {
+      "valid": true,
+      "member_top5": true,
+      "got": " dress"
+    },
+    "flower": {
+      "valid": false,
+      "member_top5": true,
+      "got": " flower"
+    },
+    "tool": {
+      "valid": true,
+      "member_top5": true,
+      "got": " knife"
+    }
+  },
+  "report_formats": {
+    "0": {
+      "country": {
+        "valid": false,
+        "member_top5": true,
+        "got": " country"
+      },
+      "color": {
+        "valid": true,
+        "member_top5": true,
+        "got": " blue"
+      },
+      "fruit": {
+        "valid": true,
+        "member_top5": true,
+        "got": " apple"
+      },
+      "sport": {
+        "valid": true,
+        "member_top5": true,
+        "got": " soccer"
+      },
+      "instrument": {
+        "valid": true,
+        "member_top5": true,
+        "got": " guitar"
+      },
+      "planet": {
+        "valid": false,
+        "member_top5": true,
+        "got": " planet"
+      },
+      "tree": {
+        "valid": false,
+        "member_top5": false,
+        "got": " tree"
+      },
+      "bird": {
+        "valid": false,
+        "member_top5": true,
+        "got": " bird"
+      },
+      "language": {
+        "valid": true,
+        "member_top5": true,
+        "got": " English"
+      },
+      "profession": {
+        "valid": true,
+        "member_top5": true,
+        "got": " doctor"
+      },
+      "beverage": {
+        "valid": true,
+        "member_top5": true,
+        "got": " soda"
+      },
+      "organ": {
+        "valid": false,
+        "member_top5": false,
+        "got": " organ"
+      },
+      "city": {
+        "valid": false,
+        "member_top5": false,
+        "got": " city"
+      },
+      "river": {
+        "valid": false,
+        "member_top5": false,
+        "got": " river"
+      },
+      "metal": {
+        "valid": false,
+        "member_top5": true,
+        "got": " metal"
+      },
+      "day of the week": {
+        "valid": false,
+        "member_top5": true,
+        "got": " day"
+      },
+      "month": {
+        "valid": false,
+        "member_top5": true,
+        "got": " month"
+      },
+      "animal": {
+        "valid": true,
+        "member_top5": true,
+        "got": " dog"
+      },
+      "body part": {
+        "valid": false,
+        "member_top5": true,
+        "got": " body"
+      },
+      "vegetable": {
+        "valid": false,
+        "member_top5": true,
+        "got": " cuc"
+      },
+      "insect": {
+        "valid": false,
+        "member_top5": true,
+        "got": " insect"
+      },
+      "gem": {
+        "valid": true,
+        "member_top5": true,
+        "got": " diamond"
+      },
+      "furniture": {
+        "valid": true,
+        "member_top5": true,
+        "got": " sofa"
+      },
+      "vehicle": {
+        "valid": true,
+        "member_top5": true,
+        "got": " car"
+      },
+      "clothing": {
+        "valid": true,
+        "member_top5": true,
+        "got": " dress"
+      },
+      "flower": {
+        "valid": false,
+        "member_top5": true,
+        "got": " flower"
+      },
+      "tool": {
+        "valid": true,
+        "member_top5": true,
+        "got": " knife"
+      }
+    },
+    "1": {
+      "country": {
+        "valid": false,
+        "member_top5": false,
+        "got": " country"
+      },
+      "color": {
+        "valid": true,
+        "member_top5": true,
+        "got": " blue"
+      },
+      "fruit": {
+        "valid": false,
+        "member_top5": true,
+        "got": " fruit"
+      },
+      "sport": {
+        "valid": true,
+        "member_top5": true,
+        "got": " basketball"
+      },
+      "instrument": {
+        "valid": true,
+        "member_top5": true,
+        "got": " guitar"
+      },
+      "planet": {
+        "valid": false,
+        "member_top5": true,
+        "got": " planet"
+      },
+      "tree": {
+        "valid": false,
+        "member_top5": false,
+        "got": " tree"
+      },
+      "bird": {
+        "valid": false,
+        "member_top5": true,
+        "got": " bird"
+      },
+      "language": {
+        "valid": false,
+        "member_top5": true,
+        "got": " language"
+      },
+      "profession": {
+        "valid": false,
+        "member_top5": true,
+        "got": " profession"
+      },
+      "beverage": {
+        "valid": true,
+        "member_top5": true,
+        "got": " wine"
+      },
+      "organ": {
+        "valid": false,
+        "member_top5": false,
+        "got": " organ"
+      },
+      "city": {
+        "valid": false,
+        "member_top5": false,
+        "got": " city"
+      },
+      "river": {
+        "valid": false,
+        "member_top5": false,
+        "got": " river"
+      },
+      "metal": {
+        "valid": false,
+        "member_top5": true,
+        "got": " metal"
+      },
+      "day of the week": {
+        "valid": false,
+        "member_top5": true,
+        "got": " day"
+      },
+      "month": {
+        "valid": false,
+        "member_top5": false,
+        "got": " month"
+      },
+      "animal": {
+        "valid": true,
+        "member_top5": true,
+        "got": " dog"
+      },
+      "body part": {
+        "valid": false,
+        "member_top5": true,
+        "got": " body"
+      },
+      "vegetable": {
+        "valid": false,
+        "member_top5": false,
+        "got": " fruit"
+      },
+      "insect": {
+        "valid": false,
+        "member_top5": true,
+        "got": " insect"
+      },
+      "gem": {
+        "valid": false,
+        "member_top5": true,
+        "got": " gem"
+      }
+    },
+    "2": {
+      "country": {
+        "valid": true,
+        "member_top5": true,
+        "got": " USA"
+      },
+      "color": {
+        "valid": true,
+        "member_top5": true,
+        "got": " red"
+      },
+      "fruit": {
+        "valid": true,
+        "member_top5": true,
+        "got": " apple"
+      },
+      "sport": {
+        "valid": false,
+        "member_top5": true,
+        "got": " horse"
+      },
+      "instrument": {
+        "valid": true,
+        "member_top5": true,
+        "got": " guitar"
+      },
+      "planet": {
+        "valid": false,
+        "member_top5": true,
+        "got": " planet"
+      },
+      "tree": {
+        "valid": false,
+        "member_top5": false,
+        "got": " tree"
+      },
+      "bird": {
+        "valid": false,
+        "member_top5": false,
+        "got": " bird"
+      },
+      "language": {
+        "valid": true,
+        "member_top5": true,
+        "got": " English"
+      },
+      "profession": {
+        "valid": false,
+        "member_top5": false,
+        "got": " gardening"
+      },
+      "beverage": {
+        "valid": true,
+        "member_top5": true,
+        "got": " water"
+      },
+      "organ": {
+        "valid": false,
+        "member_top5": false,
+        "got": " hat"
+      },
+      "city": {
+        "valid": false,
+        "member_top5": false,
+        "got": " city"
+      },
+      "river": {
+        "valid": false,
+        "member_top5": false,
+        "got": " river"
+      },
+      "metal": {
+        "valid": false,
+        "member_top5": false,
+        "got": " leather"
+      },
+      "day of the week": {
+        "valid": true,
+        "member_top5": true,
+        "got": " Sunday"
+      },
+      "month": {
+        "valid": true,
+        "member_top5": true,
+        "got": " January"
+      },
+      "animal": {
+        "valid": true,
+        "member_top5": true,
+        "got": " dog"
+      },
+      "body part": {
+        "valid": false,
+        "member_top5": true,
+        "got": " body"
+      },
+      "vegetable": {
+        "valid": false,
+        "member_top5": false,
+        "got": " blanket"
+      },
+      "insect": {
+        "valid": false,
+        "member_top5": true,
+        "got": " m"
+      },
+      "gem": {
+        "valid": false,
+        "member_top5": false,
+        "got": " hat"
+      }
+    },
+    "3": {
+      "country": {
+        "valid": true,
+        "member_top5": true,
+        "got": " USA"
+      },
+      "color": {
+        "valid": true,
+        "member_top5": true,
+        "got": " red"
+      },
+      "sport": {
+        "valid": false,
+        "member_top5": true,
+        "got": " beach"
+      },
+      "instrument": {
+        "valid": false,
+        "member_top5": true,
+        "got": " knife"
+      },
+      "planet": {
+        "valid": false,
+        "member_top5": true,
+        "got": " planet"
+      },
+      "tree": {
+        "valid": false,
+        "member_top5": false,
+        "got": " tree"
+      },
+      "bird": {
+        "valid": false,
+        "member_top5": false,
+        "got": " bird"
+      },
+      "language": {
+        "valid": true,
+        "member_top5": true,
+        "got": " english"
+      },
+      "profession": {
+        "valid": false,
+        "member_top5": true,
+        "got": " baking"
+      },
+      "beverage": {
+        "valid": false,
+        "member_top5": true,
+        "got": " cake"
+      },
+      "city": {
+        "valid": false,
+        "member_top5": false,
+        "got": " city"
+      },
+      "river": {
+        "valid": false,
+        "member_top5": false,
+        "got": " river"
+      },
+      "metal": {
+        "valid": false,
+        "member_top5": true,
+        "got": " metal"
+      },
+      "day of the week": {
+        "valid": false,
+        "member_top5": false,
+        "got": "day"
+      },
+      "month": {
+        "valid": false,
+        "member_top5": true,
+        "got": " month"
+      },
+      "animal": {
+        "valid": true,
+        "member_top5": true,
+        "got": " dog"
+      },
+      "vegetable": {
+        "valid": false,
+        "member_top5": false,
+        "got": " fruit"
+      },
+      "insect": {
+        "valid": false,
+        "member_top5": true,
+        "got": " insect"
+      },
+      "gem": {
+        "valid": false,
+        "member_top5": true,
+        "got": " apple"
+      },
+      "furniture": {
+        "valid": false,
+        "member_top5": false,
+        "got": "f"
+      },
+      "vehicle": {
+        "valid": true,
+        "member_top5": true,
+        "got": " car"
+      },
+      "clothing": {
+        "valid": true,
+        "member_top5": true,
+        "got": " dress"
+      },
+      "flower": {
+        "valid": false,
+        "member_top5": false,
+        "got": " flower"
+      },
+      "tool": {
+        "valid": true,
+        "member_top5": true,
+        "got": " knife"
+      }
     }
   },
   "c4": [
@@ -2468,8 +4126,8 @@
       "category": "countries",
       "func": "capital",
       "template": "The capital of {arg} is the city of",
-      "n_ok": 6,
-      "n": 10,
+      "n_ok": 20,
+      "n": 34,
       "cell": {
         "France": {
           "ok": true,
@@ -2510,6 +4168,102 @@
         "Sweden": {
           "ok": true,
           "got": " Stockholm"
+        },
+        "Russia": {
+          "ok": false,
+          "got": " St"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Athens"
+        },
+        "Portugal": {
+          "ok": true,
+          "got": " Lisbon"
+        },
+        "Turkey": {
+          "ok": false,
+          "got": " Iz"
+        },
+        "Norway": {
+          "ok": true,
+          "got": " Oslo"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Copenhagen"
+        },
+        "Finland": {
+          "ok": true,
+          "got": " Helsinki"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Budapest"
+        },
+        "Austria": {
+          "ok": false,
+          "got": " St"
+        },
+        "Ireland": {
+          "ok": true,
+          "got": " Dublin"
+        },
+        "Israel": {
+          "ok": true,
+          "got": " Jerusalem"
+        },
+        "Iran": {
+          "ok": false,
+          "got": " Q"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Seoul"
+        },
+        "Thailand": {
+          "ok": false,
+          "got": " Ph"
+        },
+        "Canada": {
+          "ok": false,
+          "got": " Toronto"
+        },
+        "Mexico": {
+          "ok": false,
+          "got": " San"
+        },
+        "Brazil": {
+          "ok": false,
+          "got": " Rio"
+        },
+        "Netherlands": {
+          "ok": true,
+          "got": " Amsterdam"
+        },
+        "Ukraine": {
+          "ok": false,
+          "got": " Donetsk"
+        },
+        "Indonesia": {
+          "ok": true,
+          "got": " Jakarta"
+        },
+        "Chile": {
+          "ok": true,
+          "got": " Santiago"
+        },
+        "Peru": {
+          "ok": true,
+          "got": " Lima"
+        },
+        "Cuba": {
+          "ok": true,
+          "got": " Havana"
+        },
+        "Iraq": {
+          "ok": false,
+          "got": " Tik"
         }
       }
     },
@@ -2517,8 +4271,8 @@
       "category": "countries",
       "func": "language",
       "template": "The primary language spoken in {arg} is",
-      "n_ok": 9,
-      "n": 10,
+      "n_ok": 30,
+      "n": 38,
       "cell": {
         "France": {
           "ok": true,
@@ -2559,6 +4313,118 @@
         "Sweden": {
           "ok": true,
           "got": " Swedish"
+        },
+        "Russia": {
+          "ok": true,
+          "got": " Russian"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Greek"
+        },
+        "Portugal": {
+          "ok": true,
+          "got": " Portuguese"
+        },
+        "Turkey": {
+          "ok": true,
+          "got": " Turkish"
+        },
+        "Norway": {
+          "ok": true,
+          "got": " Norwegian"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Danish"
+        },
+        "Finland": {
+          "ok": true,
+          "got": " Finnish"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Hungarian"
+        },
+        "Austria": {
+          "ok": true,
+          "got": " German"
+        },
+        "Ireland": {
+          "ok": true,
+          "got": " English"
+        },
+        "Israel": {
+          "ok": true,
+          "got": " Hebrew"
+        },
+        "Iran": {
+          "ok": true,
+          "got": " Persian"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Korean"
+        },
+        "Vietnam": {
+          "ok": true,
+          "got": " Vietnamese"
+        },
+        "Thailand": {
+          "ok": true,
+          "got": " Thai"
+        },
+        "Canada": {
+          "ok": true,
+          "got": " English"
+        },
+        "Mexico": {
+          "ok": false,
+          "got": " language"
+        },
+        "Brazil": {
+          "ok": true,
+          "got": " Portuguese"
+        },
+        "Netherlands": {
+          "ok": true,
+          "got": " Dutch"
+        },
+        "Ukraine": {
+          "ok": false,
+          "got": " Russian"
+        },
+        "Indonesia": {
+          "ok": false,
+          "got": " Pun"
+        },
+        "Argentina": {
+          "ok": false,
+          "got": " language"
+        },
+        "Chile": {
+          "ok": false,
+          "got": " language"
+        },
+        "Peru": {
+          "ok": false,
+          "got": " language"
+        },
+        "Cuba": {
+          "ok": false,
+          "got": " language"
+        },
+        "Nigeria": {
+          "ok": true,
+          "got": " English"
+        },
+        "Morocco": {
+          "ok": true,
+          "got": " Arabic"
+        },
+        "Iraq": {
+          "ok": true,
+          "got": " Arabic"
         }
       }
     },
@@ -2566,8 +4432,8 @@
       "category": "countries",
       "func": "continent",
       "template": "{arg} is located on the continent of",
-      "n_ok": 2,
-      "n": 10,
+      "n_ok": 8,
+      "n": 39,
       "cell": {
         "France": {
           "ok": false,
@@ -2608,6 +4474,593 @@
         "Sweden": {
           "ok": false,
           "got": " Baltic"
+        },
+        "Russia": {
+          "ok": false,
+          "got": " Caucasus"
+        },
+        "Greece": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Portugal": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Turkey": {
+          "ok": false,
+          "got": " Middle"
+        },
+        "Norway": {
+          "ok": false,
+          "got": " Baltic"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Finland": {
+          "ok": false,
+          "got": " Baltic"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Austria": {
+          "ok": true,
+          "got": " Europe"
+        },
+        "Ireland": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Israel": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Iran": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Korea": {
+          "ok": false,
+          "got": " South"
+        },
+        "Vietnam": {
+          "ok": false,
+          "got": " Pacific"
+        },
+        "Thailand": {
+          "ok": false,
+          "got": " Pacific"
+        },
+        "Canada": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Mexico": {
+          "ok": false,
+          "got": " Americas"
+        },
+        "Brazil": {
+          "ok": false,
+          "got": " Americas"
+        },
+        "Netherlands": {
+          "ok": false,
+          "got": " Pacific"
+        },
+        "Ukraine": {
+          "ok": false,
+          "got": " Caucasus"
+        },
+        "Indonesia": {
+          "ok": false,
+          "got": " Indonesia"
+        },
+        "Argentina": {
+          "ok": false,
+          "got": " South"
+        },
+        "Chile": {
+          "ok": false,
+          "got": " Americas"
+        },
+        "Peru": {
+          "ok": false,
+          "got": " Peru"
+        },
+        "Cuba": {
+          "ok": false,
+          "got": " Africa"
+        },
+        "Nigeria": {
+          "ok": true,
+          "got": " Africa"
+        },
+        "Kenya": {
+          "ok": true,
+          "got": " Africa"
+        },
+        "Morocco": {
+          "ok": true,
+          "got": " Africa"
+        },
+        "Iraq": {
+          "ok": false,
+          "got": " Africa"
+        }
+      }
+    },
+    {
+      "category": "countries",
+      "func": "capital2",
+      "template": "{arg}'s capital city is called",
+      "n_ok": 19,
+      "n": 34,
+      "cell": {
+        "France": {
+          "ok": true,
+          "got": " Paris"
+        },
+        "Germany": {
+          "ok": true,
+          "got": " Berlin"
+        },
+        "Spain": {
+          "ok": false,
+          "got": " Barcelona"
+        },
+        "Italy": {
+          "ok": true,
+          "got": " Rome"
+        },
+        "Poland": {
+          "ok": false,
+          "got": " capital"
+        },
+        "China": {
+          "ok": true,
+          "got": " Beijing"
+        },
+        "Japan": {
+          "ok": true,
+          "got": " Tokyo"
+        },
+        "Egypt": {
+          "ok": true,
+          "got": " Cairo"
+        },
+        "India": {
+          "ok": false,
+          "got": " Mumbai"
+        },
+        "Sweden": {
+          "ok": true,
+          "got": " Stockholm"
+        },
+        "Russia": {
+          "ok": true,
+          "got": " Moscow"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Athens"
+        },
+        "Portugal": {
+          "ok": false,
+          "got": " capital"
+        },
+        "Turkey": {
+          "ok": false,
+          "got": " Istanbul"
+        },
+        "Norway": {
+          "ok": true,
+          "got": " Oslo"
+        },
+        "Denmark": {
+          "ok": true,
+          "got": " Copenhagen"
+        },
+        "Finland": {
+          "ok": false,
+          "got": " capital"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Budapest"
+        },
+        "Austria": {
+          "ok": false,
+          "got": " capital"
+        },
+        "Ireland": {
+          "ok": true,
+          "got": " Dublin"
+        },
+        "Israel": {
+          "ok": false,
+          "got": " Tel"
+        },
+        "Iran": {
+          "ok": true,
+          "got": " Tehran"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Seoul"
+        },
+        "Thailand": {
+          "ok": true,
+          "got": " Bangkok"
+        },
+        "Canada": {
+          "ok": false,
+          "got": " Toronto"
+        },
+        "Mexico": {
+          "ok": true,
+          "got": "Mexico"
+        },
+        "Brazil": {
+          "ok": false,
+          "got": " Sao"
+        },
+        "Netherlands": {
+          "ok": false,
+          "got": " capital"
+        },
+        "Ukraine": {
+          "ok": false,
+          "got": " Donetsk"
+        },
+        "Indonesia": {
+          "ok": true,
+          "got": " Jakarta"
+        },
+        "Chile": {
+          "ok": false,
+          "got": " Ch"
+        },
+        "Peru": {
+          "ok": false,
+          "got": " capital"
+        },
+        "Cuba": {
+          "ok": true,
+          "got": " Havana"
+        },
+        "Iraq": {
+          "ok": false,
+          "got": "capital"
+        }
+      }
+    },
+    {
+      "category": "countries",
+      "func": "language2",
+      "template": "The people of {arg} mostly speak",
+      "n_ok": 21,
+      "n": 38,
+      "cell": {
+        "France": {
+          "ok": true,
+          "got": " French"
+        },
+        "Germany": {
+          "ok": true,
+          "got": " German"
+        },
+        "Spain": {
+          "ok": true,
+          "got": " Spanish"
+        },
+        "Italy": {
+          "ok": true,
+          "got": " Italian"
+        },
+        "Poland": {
+          "ok": true,
+          "got": " Polish"
+        },
+        "China": {
+          "ok": false,
+          "got": " English"
+        },
+        "Japan": {
+          "ok": false,
+          "got": " English"
+        },
+        "Egypt": {
+          "ok": true,
+          "got": " Arabic"
+        },
+        "India": {
+          "ok": false,
+          "got": " English"
+        },
+        "Sweden": {
+          "ok": false,
+          "got": " English"
+        },
+        "Russia": {
+          "ok": true,
+          "got": " Russian"
+        },
+        "Greece": {
+          "ok": true,
+          "got": " Greek"
+        },
+        "Portugal": {
+          "ok": true,
+          "got": " Portuguese"
+        },
+        "Turkey": {
+          "ok": false,
+          "got": " English"
+        },
+        "Norway": {
+          "ok": false,
+          "got": " English"
+        },
+        "Denmark": {
+          "ok": false,
+          "got": " English"
+        },
+        "Finland": {
+          "ok": true,
+          "got": " Finnish"
+        },
+        "Hungary": {
+          "ok": true,
+          "got": " Hungarian"
+        },
+        "Austria": {
+          "ok": true,
+          "got": " German"
+        },
+        "Ireland": {
+          "ok": true,
+          "got": " English"
+        },
+        "Israel": {
+          "ok": false,
+          "got": " English"
+        },
+        "Iran": {
+          "ok": false,
+          "got": " English"
+        },
+        "Korea": {
+          "ok": true,
+          "got": " Korean"
+        },
+        "Vietnam": {
+          "ok": true,
+          "got": " Vietnamese"
+        },
+        "Thailand": {
+          "ok": false,
+          "got": " English"
+        },
+        "Canada": {
+          "ok": true,
+          "got": " English"
+        },
+        "Mexico": {
+          "ok": true,
+          "got": " Spanish"
+        },
+        "Brazil": {
+          "ok": true,
+          "got": " Portuguese"
+        },
+        "Netherlands": {
+          "ok": true,
+          "got": " Dutch"
+        },
+        "Ukraine": {
+          "ok": false,
+          "got": " Russian"
+        },
+        "Indonesia": {
+          "ok": false,
+          "got": " English"
+        },
+        "Argentina": {
+          "ok": false,
+          "got": " English"
+        },
+        "Chile": {
+          "ok": false,
+          "got": " English"
+        },
+        "Peru": {
+          "ok": false,
+          "got": " English"
+        },
+        "Cuba": {
+          "ok": false,
+          "got": " English"
+        },
+        "Nigeria": {
+          "ok": true,
+          "got": " English"
+        },
+        "Morocco": {
+          "ok": true,
+          "got": " Arabic"
+        },
+        "Iraq": {
+          "ok": false,
+          "got": " English"
+        }
+      }
+    },
+    {
+      "category": "countries",
+      "func": "continent2",
+      "template": "{arg} is part of the continent called",
+      "n_ok": 0,
+      "n": 39,
+      "cell": {
+        "France": {
+          "ok": false,
+          "got": "Great"
+        },
+        "Germany": {
+          "ok": false,
+          "got": " European"
+        },
+        "Spain": {
+          "ok": false,
+          "got": "G"
+        },
+        "Italy": {
+          "ok": false,
+          "got": "G"
+        },
+        "Poland": {
+          "ok": false,
+          "got": " European"
+        },
+        "China": {
+          "ok": false,
+          "got": "Great"
+        },
+        "Japan": {
+          "ok": false,
+          "got": " Pacific"
+        },
+        "Egypt": {
+          "ok": false,
+          "got": " Middle"
+        },
+        "India": {
+          "ok": false,
+          "got": "G"
+        },
+        "Sweden": {
+          "ok": false,
+          "got": " Nordic"
+        },
+        "Russia": {
+          "ok": false,
+          "got": "Middle"
+        },
+        "Greece": {
+          "ok": false,
+          "got": " Euro"
+        },
+        "Portugal": {
+          "ok": false,
+          "got": "Great"
+        },
+        "Turkey": {
+          "ok": false,
+          "got": " Middle"
+        },
+        "Norway": {
+          "ok": false,
+          "got": " Nordic"
+        },
+        "Denmark": {
+          "ok": false,
+          "got": " Nordic"
+        },
+        "Finland": {
+          "ok": false,
+          "got": " Nordic"
+        },
+        "Hungary": {
+          "ok": false,
+          "got": " European"
+        },
+        "Austria": {
+          "ok": false,
+          "got": "Aust"
+        },
+        "Ireland": {
+          "ok": false,
+          "got": " European"
+        },
+        "Israel": {
+          "ok": false,
+          "got": " Middle"
+        },
+        "Iran": {
+          "ok": false,
+          "got": " Middle"
+        },
+        "Korea": {
+          "ok": false,
+          "got": " South"
+        },
+        "Vietnam": {
+          "ok": false,
+          "got": "Great"
+        },
+        "Thailand": {
+          "ok": false,
+          "got": " Republic"
+        },
+        "Canada": {
+          "ok": false,
+          "got": "Great"
+        },
+        "Mexico": {
+          "ok": false,
+          "got": "G"
+        },
+        "Brazil": {
+          "ok": false,
+          "got": "Brazil"
+        },
+        "Netherlands": {
+          "ok": false,
+          "got": " Netherlands"
+        },
+        "Ukraine": {
+          "ok": false,
+          "got": "Don"
+        },
+        "Indonesia": {
+          "ok": false,
+          "got": " Indonesia"
+        },
+        "Argentina": {
+          "ok": false,
+          "got": " South"
+        },
+        "Chile": {
+          "ok": false,
+          "got": "Great"
+        },
+        "Peru": {
+          "ok": false,
+          "got": " Pacific"
+        },
+        "Cuba": {
+          "ok": false,
+          "got": " Caribbean"
+        },
+        "Nigeria": {
+          "ok": false,
+          "got": "Middle"
+        },
+        "Kenya": {
+          "ok": false,
+          "got": " Democratic"
+        },
+        "Morocco": {
+          "ok": false,
+          "got": "Middle"
+        },
+        "Iraq": {
+          "ok": false,
+          "got": " Iraq"
         }
       }
     },
@@ -2907,8 +5360,8 @@
       "category": "German",
       "cont_lang": "German",
       "cont_ok": true,
-      "report_ok": false,
-      "report_got": " English",
+      "report_ok": true,
+      "report_got": " German",
       "country_ok": true,
       "country_got": " Germany",
       "cont": " die Sonne gegen.\n\nDie Sonne ging hinter"
@@ -2918,8 +5371,8 @@
       "category": "German",
       "cont_lang": "German",
       "cont_ok": true,
-      "report_ok": false,
-      "report_got": " English",
+      "report_ok": true,
+      "report_got": " German",
       "country_ok": true,
       "country_got": " Germany",
       "cont": " die Wiese zu ein.\n\nWie einmal"
@@ -2949,10 +5402,10 @@
     {
       "key": "it1",
       "category": "Italian",
-      "cont_lang": "unknown",
-      "cont_ok": false,
+      "cont_lang": "Italian",
+      "cont_ok": true,
       "report_ok": false,
-      "report_got": " English",
+      "report_got": " Spanish",
       "country_ok": true,
       "country_got": " Italy",
       "cont": ", e una luce dorata illuminava i campi."
@@ -2960,10 +5413,10 @@
     {
       "key": "it2",
       "category": "Italian",
-      "cont_lang": "unknown",
-      "cont_ok": false,
-      "report_ok": false,
-      "report_got": " English",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
       "country_ok": true,
       "country_got": " Italy",
       "cont": " una volta una volta una piccolo villaggio in"
@@ -2984,8 +5437,8 @@
       "category": "German",
       "cont_lang": "German",
       "cont_ok": true,
-      "report_ok": false,
-      "report_got": " English",
+      "report_ok": true,
+      "report_got": " German",
       "country_ok": true,
       "country_got": " Germany",
       "cont": " das Welt.\n\nWelt, das Welt, d"
@@ -2993,10 +5446,10 @@
     {
       "key": "sx1",
       "category": "Spanish",
-      "cont_lang": "unknown",
-      "cont_ok": false,
-      "report_ok": false,
-      "report_got": " English",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
       "country_ok": true,
       "country_got": " Spain",
       "cont": " con la ciudad despertaba, con la ciudad"
@@ -3004,13 +5457,453 @@
     {
       "key": "ix1",
       "category": "Italian",
-      "cont_lang": "French",
-      "cont_ok": false,
+      "cont_lang": "Italian",
+      "cont_ok": true,
       "report_ok": true,
       "report_got": " Italian",
       "country_ok": true,
       "country_got": " Italy",
       "cont": " il mare era calmo quella mattina, e le barche de"
+    },
+    {
+      "key": "fx2",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et la rue de la rue, et la rue de la r"
+    },
+    {
+      "key": "fx3",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " la nuit tombait doucement sur la village, la nuit tomb"
+    },
+    {
+      "key": "fx4",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et les champs de l'\u00e9cole de l'\u00e9cole"
+    },
+    {
+      "key": "fx5",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " il est une vieux de l'\u00e9quipe, il est une"
+    },
+    {
+      "key": "fx6",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et la pluie comme d'une fen\u00eatre.\n"
+    },
+    {
+      "key": "fx7",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " et le vassal d'une vassal de la vassal"
+    },
+    {
+      "key": "fx8",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " de la porte de sa boutique, de la recette de la journ"
+    },
+    {
+      "key": "gx2",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " werden.\n\nWerden, werden, wer"
+    },
+    {
+      "key": "gx3",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die kleinen Kirche, die kleinen Kirche,"
+    },
+    {
+      "key": "gx4",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die ein einem einige Erfte, die ein e"
+    },
+    {
+      "key": "gx5",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die ein zu ein Zweig zu ein Zwe"
+    },
+    {
+      "key": "gx6",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die ein Hund, die ein Hund, die ein H"
+    },
+    {
+      "key": "gx7",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die kleine Buchhandlung am Markt geh\u00f6rte se"
+    },
+    {
+      "key": "gx8",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " das Welt und Welt und Welt und Welt und Welt"
+    },
+    {
+      "key": "sx2",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " en el tren sali\u00f3 de la estaci\u00f3n con veinte"
+    },
+    {
+      "key": "sx3",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " la sombra de la sombra, la sombra de la"
+    },
+    {
+      "key": "sx4",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " el pueblo se reflejaban en el agua oscura"
+    },
+    {
+      "key": "sx5",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " con la vida de la vida de la vida.\n\nLa"
+    },
+    {
+      "key": "sx6",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " y el puede de la noche, y el puede de"
+    },
+    {
+      "key": "sx7",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " y a la caja de la caja de la caja de la c"
+    },
+    {
+      "key": "sx8",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": false,
+      "country_got": " Mexico",
+      "cont": " el pueblo de la monta\u00f1a, el pueblo de la"
+    },
+    {
+      "key": "ix2",
+      "category": "Italian",
+      "cont_lang": "Spanish",
+      "cont_ok": false,
+      "report_ok": false,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " a la vida a la vida a la vida a la vida"
+    },
+    {
+      "key": "ix3",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " per la citt\u00e0 che si accendevano, per la citt"
+    },
+    {
+      "key": "ix4",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " il pomeriggio raccoglievamo i pomodori ne"
+    },
+    {
+      "key": "ix5",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " il negozio di alimentari chiudeva a mezzogi"
+    },
+    {
+      "key": "ix6",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " aspettando la fine del turno, aspettando la fine"
+    },
+    {
+      "key": "ix7",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " e il scendeva dietro le colline, e il scendeva"
+    },
+    {
+      "key": "ix8",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": false,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " il cesto e il cesto e il cesto e il"
+    },
+    {
+      "key": "fx9",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " il est un peuvent de l'esprit de la voisine."
+    },
+    {
+      "key": "fx10",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " les pages tourner et les conversations \u00e0 voix parc.\n\nA"
+    },
+    {
+      "key": "fx11",
+      "category": "French",
+      "cont_lang": "French",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " French",
+      "country_ok": true,
+      "country_got": " France",
+      "cont": " le moteur tournait enfin sans faire de bruit, le"
+    },
+    {
+      "key": "gx9",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " wenn eine Welt und die Welt und die Welt und die"
+    },
+    {
+      "key": "gx10",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " werden die einem einige Welt des B\u00e4cker."
+    },
+    {
+      "key": "gx11",
+      "category": "German",
+      "cont_lang": "German",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " German",
+      "country_ok": true,
+      "country_got": " Germany",
+      "cont": " die ein Fluss darunter war zugefroren,"
+    },
+    {
+      "key": "sx9",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " que el jardinero regaba las plantas antes de que sal"
+    },
+    {
+      "key": "sx10",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " que segundo de la ciudad de la ciudad"
+    },
+    {
+      "key": "sx11",
+      "category": "Spanish",
+      "cont_lang": "Spanish",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Spanish",
+      "country_ok": true,
+      "country_got": " Spain",
+      "cont": " el brazo, el brazo, el brazo, el"
+    },
+    {
+      "key": "ix9",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " il sei, il sei, il sei, il sei,"
+    },
+    {
+      "key": "ix10",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " il nel nel nel nel nel nel nel n"
+    },
+    {
+      "key": "ix11",
+      "category": "Italian",
+      "cont_lang": "Italian",
+      "cont_ok": true,
+      "report_ok": true,
+      "report_got": " Italian",
+      "country_ok": true,
+      "country_got": " Italy",
+      "cont": " il giardiniere tagliava l'erba del parco o"
     }
   ]
 }

@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15247.52it/s]
+................................................................................
+80 concepts x 6 report frames + 6 controls; steering centered lens vector at layers [7, 8, 9, 10] (all positions except the last 3)
+strength   report top-5 (pooled)   control top-5 (pooled)   per-report-frame top-5
+  0.00        0/480                    0/480                0/80   0/80   0/80   0/80   0/80   0/80
+  0.15      115/480                   68/480               69/80  29/80   4/80   2/80   2/80   9/80
+  0.17      166/480                   91/480               77/80  41/80   5/80   4/80   3/80  36/80
+  0.25      308/480                  179/480               80/80  64/80  48/80  30/80  17/80  69/80
+  0.50      453/480                  400/480               80/80  80/80  80/80  69/80  67/80  77/80
+  1.00      479/480                  479/480               80/80  80/80  80/80  79/80  80/80  80/80
+  2.00      480/480                  480/480               80/80  80/80  80/80  80/80  80/80  80/80

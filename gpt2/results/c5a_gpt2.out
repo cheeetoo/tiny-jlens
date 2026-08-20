@@ -1,0 +1,58 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 17721.23it/s]
+fr1  French   presence r/c/cont  68/ 67/ 68  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fr2  French   presence r/c/cont 105/ 70/ 59  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+de1  German   presence r/c/cont  54/ 69/ 34  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+de2  German   presence r/c/cont  21/ 23/ 19  report ok->English  country ok->FLIP  cont Ge->Ge
+es1  Spanish  presence r/c/cont  20/ 16/ 25  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+es2  Spanish  presence r/c/cont  36/ 29/ 33  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+it1  Italian  presence r/c/cont 191/156/ 56  report --->FLIP  country ok->FLIP  cont It->It
+it2  Italian  presence r/c/cont  77/ 88/  7  report ok->FLIP  country ok->FLIP  cont It->It
+fx1  French   presence r/c/cont  93/ 61/ 39  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+gx1  German   presence r/c/cont  42/ 46/ 35  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+sx1  Spanish  presence r/c/cont  61/ 51/ 62  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+ix1  Italian  presence r/c/cont  56/ 60/  8  report ok->FLIP  country ok->FLIP  cont It->It
+fx2  French   presence r/c/cont  82/ 62/ 41  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fx3  French   presence r/c/cont  98/103/ 78  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fx4  French   presence r/c/cont   7/  7/  7  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fx5  French   presence r/c/cont  81/ 68/ 50  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fx6  French   presence r/c/cont  90/ 69/ 55  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fx7  French   presence r/c/cont  13/ 13/ 15  report ok->FLIP  country ok->FLIP  cont Fr->Fr
+fx8  French   presence r/c/cont 191/159/ 67  report ok->French  country ok->France  cont Fr->Fr
+gx2  German   presence r/c/cont  28/ 35/ 20  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx3  German   presence r/c/cont  31/ 31/ 26  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx4  German   presence r/c/cont  54/ 54/ 30  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx5  German   presence r/c/cont 119/111/ 51  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx6  German   presence r/c/cont 105/123/ 82  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx7  German   presence r/c/cont  45/ 47/ 45  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx8  German   presence r/c/cont  40/ 47/ 37  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+sx2  Spanish  presence r/c/cont  41/ 36/ 25  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx3  Spanish  presence r/c/cont 113/121/ 84  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx4  Spanish  presence r/c/cont  40/ 34/ 19  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx5  Spanish  presence r/c/cont  26/ 24/ 24  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx6  Spanish  presence r/c/cont 141/129/ 50  report ok->FLIP  country ok->FLIP  cont Sp->It
+sx7  Spanish  presence r/c/cont 104/ 90/ 65  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx8  Spanish  presence r/c/cont  29/ 28/ 18  report ok->FLIP  country --->FLIP  cont Sp->Sp
+ix2  Italian  presence r/c/cont 352/350/162  report --->FLIP  country ok->FLIP  cont Sp->It
+ix3  Italian  presence r/c/cont  62/ 53/ 17  report ok->FLIP  country ok->FLIP  cont It->It
+ix4  Italian  presence r/c/cont  57/ 65/ 20  report ok->FLIP  country ok->FLIP  cont It->It
+ix5  Italian  presence r/c/cont  13/ 11/  2  report ok->FLIP  country ok->FLIP  cont It->It
+ix6  Italian  presence r/c/cont 147/132/ 43  report ok->FLIP  country ok->FLIP  cont It->It
+ix7  Italian  presence r/c/cont 787/322/ 53  report ok->FLIP  country ok->FLIP  cont It->It
+ix8  Italian  presence r/c/cont 203/ 69/ 16  report --->FLIP  country ok->FLIP  cont It->It
+fx9  French   presence r/c/cont  42/ 39/ 26  report ok->FLIP  country ok->France  cont Fr->Fr
+fx10 French   presence r/c/cont  53/ 50/ 56  report ok->French  country ok->FLIP  cont Fr->Fr
+fx11 French   presence r/c/cont  58/ 53/ 63  report ok->French  country ok->FLIP  cont Fr->Fr
+gx9  German   presence r/c/cont  78/ 88/ 62  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx10 German   presence r/c/cont  31/ 32/ 18  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+gx11 German   presence r/c/cont  34/ 38/ 39  report ok->FLIP  country ok->FLIP  cont Ge->Ge
+sx9  Spanish  presence r/c/cont  23/ 22/ 22  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx10 Spanish  presence r/c/cont 153/128/ 90  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+sx11 Spanish  presence r/c/cont  40/ 32/ 43  report ok->FLIP  country ok->FLIP  cont Sp->Sp
+ix9  Italian  presence r/c/cont 277/252/ 86  report ok->FLIP  country ok->FLIP  cont It->Sp
+ix10 Italian  presence r/c/cont 246/233/ 52  report ok->FLIP  country ok->FLIP  cont It->It
+ix11 Italian  presence r/c/cont 998/828/ 57  report ok->FLIP  country ok->FLIP  cont It->It
+
+flexible follows swap: 109/134 (report 45/49, country 49/51, report2 0/6, country2 15/28)
+automatic continuation changed: 2/51 (true redirects to alt language: 0; other changes: ['Italian', 'Spanish'])
+presence (language name in lens, best rank over last-10 passage positions): median 53

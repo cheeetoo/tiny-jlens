@@ -1,36 +1,79 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1538.37it/s]
-clean     wikitext   (shallow ) 1.00
-clean     copy       (shallow ) 0.97
-clean     cont_lang  (shallow ) 1.00
-clean     twohop     (flexible) 1.00
-clean     country    (flexible) 1.00
-clean     report     (flexible) 1.00
-ablate    wikitext   (shallow ) 0.53
-ablate    copy       (shallow ) 0.75
-ablate    cont_lang  (shallow ) 1.00
-ablate    twohop     (flexible) 0.00
-ablate    country    (flexible) 0.00
-ablate    report     (flexible) 0.00
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15872.08it/s]
+clean     wikitext   (shallow ) 1.00  (1896/1896)
+clean     copy       (shallow ) 0.96  (143/149)
+clean     cont_lang  (shallow ) 0.98  (51/52)
+clean     seq_formulaic (shallow ) 1.00  (12/12)
+clean     idiom      (shallow ) 1.00  (8/8)
+clean     collocation (shallow ) 1.00  (7/7)
+clean     func_cloze (shallow ) 1.00  (9/9)
+clean     punct      (shallow ) 1.00  (8/8)
+clean     agreement  (shallow ) 1.00  (3/3)
+clean     twohop     (flexible) 1.00  (21/21)
+clean     country    (flexible) 0.98  (51/52)
+clean     report     (flexible) 1.00  (13/13)
+ablate    wikitext   (shallow ) 0.52  (994/1896)
+ablate    copy       (shallow ) 0.76  (113/149)
+ablate    cont_lang  (shallow ) 0.90  (47/52)
+ablate    seq_formulaic (shallow ) 0.17  (2/12)
+ablate    idiom      (shallow ) 0.50  (4/8)
+ablate    collocation (shallow ) 0.43  (3/7)
+ablate    func_cloze (shallow ) 0.78  (7/9)
+ablate    punct      (shallow ) 1.00  (8/8)
+ablate    agreement  (shallow ) 0.33  (1/3)
+ablate    twohop     (flexible) 0.00  (0/21)
+ablate    country    (flexible) 0.00  (0/52)
+ablate    report     (flexible) 0.15  (2/13)
    [ablation removed 13.2% of residual norm on average]
-randproj  wikitext   (shallow ) 0.88
-randproj  copy       (shallow ) 0.97
-randproj  cont_lang  (shallow ) 0.92
-randproj  twohop     (flexible) 0.73
-randproj  country    (flexible) 0.92
-randproj  report     (flexible) 0.86
-noise     wikitext   (shallow ) 0.74
-noise     copy       (shallow ) 0.86
-noise     cont_lang  (shallow ) 1.00
-noise     twohop     (flexible) 0.64
-noise     country    (flexible) 0.75
-noise     report     (flexible) 0.57
+randproj  wikitext   (shallow ) 0.89  (1681/1896)
+randproj  copy       (shallow ) 0.95  (141/149)
+randproj  cont_lang  (shallow ) 1.00  (52/52)
+randproj  seq_formulaic (shallow ) 1.00  (12/12)
+randproj  idiom      (shallow ) 1.00  (8/8)
+randproj  collocation (shallow ) 1.00  (7/7)
+randproj  func_cloze (shallow ) 1.00  (9/9)
+randproj  punct      (shallow ) 1.00  (8/8)
+randproj  agreement  (shallow ) 1.00  (3/3)
+randproj  twohop     (flexible) 0.90  (19/21)
+randproj  country    (flexible) 0.94  (49/52)
+randproj  report     (flexible) 1.00  (13/13)
+noise     wikitext   (shallow ) 0.73  (1386/1896)
+noise     copy       (shallow ) 0.93  (139/149)
+noise     cont_lang  (shallow ) 0.94  (49/52)
+noise     seq_formulaic (shallow ) 0.83  (10/12)
+noise     idiom      (shallow ) 1.00  (8/8)
+noise     collocation (shallow ) 0.86  (6/7)
+noise     func_cloze (shallow ) 0.89  (8/9)
+noise     punct      (shallow ) 1.00  (8/8)
+noise     agreement  (shallow ) 0.33  (1/3)
+noise     twohop     (flexible) 0.67  (14/21)
+noise     country    (flexible) 0.69  (36/52)
+noise     report     (flexible) 0.69  (9/13)
+
+wikitext accuracy by answer-token class (ablate / randproj):
+  content   ablate 0.20 (158/803)   ctl 0.83   excess damage +0.63
+  function  ablate 0.79 (611/776)   ctl 0.94   excess damage +0.15
+  punct     ablate 0.71 (225/317)   ctl 0.90   excess damage +0.19
+
+copy accuracy by answer-token class (ablate / randproj):
+  content   ablate 0.67 (62/93)   ctl 0.98   excess damage +0.31
+  function  ablate 0.91 (51/56)   ctl 0.89   excess damage -0.02
+
+suite accuracy by answer-token class (ablate / randproj):
+  content   ablate 0.47 (16/34)   ctl 1.00   excess damage +0.53
+  function  ablate 0.69 (9/13)   ctl 1.00   excess damage +0.31
 
 retention vs clean (k=2, layers [7, 8, 9, 10], centered):
 task       kind      ablate  randproj   noise
-wikitext   shallow     0.53    0.88    0.74
-copy       shallow     0.77    1.00    0.89
-cont_lang  shallow     1.00    0.92    1.00
-twohop     flexible    0.00    0.73    0.64
-country    flexible    0.00    0.92    0.75
-report     flexible    0.00    0.86    0.57
+wikitext   shallow     0.52    0.89    0.73
+copy       shallow     0.79    0.99    0.97
+cont_lang  shallow     0.92    1.02    0.96
+seq_formulaic shallow     0.17    1.00    0.83
+idiom      shallow     0.50    1.00    1.00
+collocation shallow     0.43    1.00    0.86
+func_cloze shallow     0.78    1.00    0.89
+punct      shallow     1.00    1.00    1.00
+agreement  shallow     0.33    1.00    0.33
+twohop     flexible    0.00    0.90    0.67
+country    flexible    0.00    0.96    0.71
+report     flexible    0.15    1.00    0.69

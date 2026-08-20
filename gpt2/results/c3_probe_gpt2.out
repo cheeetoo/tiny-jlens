@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 14537.97it/s]
+90 items after capability filter + partner assignment (7 from the paper's sets)
+[naming] probe J-component variance share (centered GP k=16): median 41.1%, IQR [27.2%, 48.1%]
+[implying] probe J-component variance share (centered GP k=25): median 48.6%, IQR [33.1%, 56.9%]
+...................................................................................
+n=83 items; swap along probe components (rows = cue set x scaling):
+  naming_matched      full  51/83  J  41/83  nonJ  29/83  nonJ_clamped   4/83
+  naming_natural      full  51/83  J  53/83  nonJ  30/83  nonJ_clamped   5/83
+  implying_matched    full  54/83  J  54/83  nonJ  18/83  nonJ_clamped   3/83
+  implying_natural    full  54/83  J  55/83  nonJ  14/83  nonJ_clamped   2/83

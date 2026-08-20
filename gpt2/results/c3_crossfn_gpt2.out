@@ -1,0 +1,36 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13821.94it/s]
+90 items after capability filter + partner assignment (7 from the paper's sets)
+lang_capital + lang_continent: both-flip 7/13  any-flip 10/13
+lang_capital + city_language: both-flip 15/20  any-flip 18/20
+lang_capital + city_continent: both-flip 4/7  any-flip 7/7
+lang_continent + city_language: both-flip 15/19  any-flip 19/19
+lang_continent + city_continent: both-flip 6/12  any-flip 10/12
+city_language + city_continent: both-flip 8/16  any-flip 16/16
+
+TOTAL both-flip 55/87  any-flip 80/87
+  partial France->Indonesia: lang_capital got ' Lisbon' want Jakarta
+  partial Germany->Israel: lang_continent got ' Africa' want Asia
+  partial Korea->Finland: lang_continent got ' Asia' want Europe
+  partial Israel->France: lang_capital got ' Lisbon' want Paris
+  partial Japan->Poland: lang_capital got ' Kiev' want Warsaw
+  partial Portugal->Israel: lang_capital got ' Tel' want Jerusalem
+  partial France->Thailand: lang_capital got ' Lisbon' want Bangkok
+  partial Germany->Thailand: lang_capital got ' Lisbon' want Bangkok
+  partial Thailand->Denmark: city_continent got ' Denmark' want Europe
+  partial Indonesia->Sweden: lang_continent got ' Sweden' want Europe
+  partial Iran->Poland: lang_continent got ' Asia' want Europe
+  partial Israel->France: lang_continent got ' Africa' want Europe
+  partial Vietnam->Norway: city_language got ' French' want Norwegian
+  partial Cambodia->Finland: lang_continent got ' Asia' want Europe
+  partial Somalia->Denmark: city_continent got ' Denmark' want Europe
+  partial Thailand->France: city_continent got ' France' want Europe
+  partial Vietnam->Denmark: city_continent got ' Asia' want Europe
+  partial Denmark->Iraq: city_continent got ' Iraq' want Asia
+  partial France->Egypt: city_continent got ' Asia' want Africa
+  partial Iraq->Sweden: city_continent got ' Asia' want Europe
+  partial Libya->Sweden: city_continent got ' Sweden' want Europe
+  partial Morocco->France: city_continent got ' France' want Europe
+  partial Somalia->Vietnam: city_continent got ' Vietnam' want Asia
+  partial Sudan->Thailand: city_continent got ' Africa' want Asia
+  partial Thailand->Somalia: city_continent got ' Somalia' want Africa

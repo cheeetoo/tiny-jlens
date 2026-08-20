@@ -1,0 +1,9 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 11887.34it/s]
+swap layers: [7, 8, 9, 10]
+................................
+221 (format, category, target) swaps
+  raw      a=1.0: top-1 42%  top-5 56%  median post rank 3
+  raw      a=2.0: top-1 64%  top-5 70%  median post rank 0
+  centered a=1.0: top-1 65%  top-5 77%  median post rank 0
+  centered a=2.0: top-1 81%  top-5 86%  median post rank 0
