@@ -1,0 +1,48 @@
+Criterion 3 — internal reasoning — gpt2-small
+
+capability gate: 48/53 two-hop items answered correctly
+
+E1 readout — median lens rank at the answer position, per layer (n=48)
+     intermediate  answer     arg    null   | %% intermediate in top-10
+  L0        25249   21582   25400   35055       0%
+  L1        20605   15543   18174   23230       0%
+  L2        21927   18117   20269   28840       0%
+  L3        14634   10808   12169   17332       0%
+  L4        17552   13508   14735   22833       0%
+  L5        12608    5628   10376   15694       0%
+  L6         2635    1675    2565    4078       0%
+  L7          836     133    2381    1379       0%  <- band
+  L8           13       1      49     645      40%  <- band
+  L9            4       1       7     424      85%  <- band
+  L10          18       1      17     873      31%
+  unspoken items (intermediate output-rank>=10): 43/48; of these, in lens top-10 at some band layer: 36/43
+
+E2 case study — France->China (Paris->Beijing)
+  clean   top-5: [' Paris', ' Marse', ' Lyon', ' Nice', ' Saint']
+  swapped top-5: [' Beijing', ' New', ' Tel', ' Shanghai', ' D']
+
+E3 swap — coordinate swap; swap_answer reaches output top-1 (targets starting rank>=10)
+  all families    70.6% [68%,73%] (n=999), median rank 88->1
+  cap_language    70.8% [67%,74%] (n=626), median rank 42->1
+  lang_capital    70.2% [65%,75%] (n=373), median rank 465->1
+
+E4 depth — onset layer (half-max) of the swap effect, intermediate vs answer (n=32)
+  median onset: intermediate L4   answer L8   (intermediate earlier by 4.0 layers = 33% of depth)
+  mean effect (log-prob pushed onto swap_answer) by layer:
+    L4  intermediate  +2.79   answer  +0.67
+    L5  intermediate  +1.19   answer  -2.48
+    L6  intermediate  +1.92   answer  -1.42
+    L7  intermediate  +2.78   answer  +0.04
+    L8  intermediate  +4.25   answer  +3.72
+    L9  intermediate  +5.06   answer  +5.33
+    L10 intermediate  +5.05   answer  +5.12
+
+E5 privileging — swap_answer top-1, per condition (matched magnitude; n=999)
+  raw_lens    70.6% [68%,73%]  (705/999)
+  full        88.3% [86%,90%]  (882/999)
+  jpart       95.4% [94%,97%]  (953/999)
+  nonj         1.5% [ 1%, 2%]  (15/999)
+  nonj_clamp   0.0% [ 0%, 0%]  (0/999)
+  J-space share of probe variance (median): L7 27%, L8 40%, L9 57%
+
+floor — paper's probe-swap.json verbatim (no frame): capability 9/90; coordinate swap on usable items 3/6

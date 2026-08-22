@@ -1,0 +1,290 @@
+[
+ {
+  "family": "lang_capital",
+  "intermediate": "France",
+  "answer": "Paris",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak French, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Germany",
+  "answer": "Berlin",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak German, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Italy",
+  "answer": "Rome",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Italian, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Poland",
+  "answer": "Warsaw",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Polish, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Russia",
+  "answer": "Moscow",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Russian, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "China",
+  "answer": "Beijing",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Chinese, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Portugal",
+  "answer": "Lisbon",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Portuguese, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Greece",
+  "answer": "Athens",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Greek, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "India",
+  "answer": "Delhi",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Hindi, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Sweden",
+  "answer": "Stockholm",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Swedish, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Norway",
+  "answer": "Oslo",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Norwegian, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Finland",
+  "answer": "Helsinki",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Finnish, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Hungary",
+  "answer": "Budapest",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Hungarian, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Iran",
+  "answer": "Tehran",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Persian, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Korea",
+  "answer": "Seoul",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Korean, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Thailand",
+  "answer": "Bangkok",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Thai, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Netherlands",
+  "answer": "Amsterdam",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Dutch, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Ukraine",
+  "answer": "Kiev",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Ukrainian, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Denmark",
+  "answer": "Copenhagen",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Danish, the capital city is called"
+ },
+ {
+  "family": "lang_capital",
+  "intermediate": "Indonesia",
+  "answer": "Jakarta",
+  "prompt": "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Indonesian, the capital city is called"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "France",
+  "answer": "French",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Paris has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Germany",
+  "answer": "German",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Berlin has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Spain",
+  "answer": "Spanish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Madrid has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Italy",
+  "answer": "Italian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Rome has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Poland",
+  "answer": "Polish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Warsaw has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Russia",
+  "answer": "Russian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Moscow has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "China",
+  "answer": "Chinese",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Beijing has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Portugal",
+  "answer": "Portuguese",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Lisbon has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Greece",
+  "answer": "Greek",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Athens has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "India",
+  "answer": "Hindi",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Delhi has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Turkey",
+  "answer": "Turkish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Ankara has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Sweden",
+  "answer": "Swedish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Stockholm has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Norway",
+  "answer": "Norwegian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Oslo has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Finland",
+  "answer": "Finnish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Helsinki has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Hungary",
+  "answer": "Hungarian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Budapest has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Iran",
+  "answer": "Persian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Tehran has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Korea",
+  "answer": "Korean",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Seoul has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Vietnam",
+  "answer": "Vietnamese",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Hanoi has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Thailand",
+  "answer": "Thai",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Bangkok has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Netherlands",
+  "answer": "Dutch",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Amsterdam has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Ukraine",
+  "answer": "Ukrainian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Kiev has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Denmark",
+  "answer": "Danish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Copenhagen has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Romania",
+  "answer": "Romanian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Bucharest has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Serbia",
+  "answer": "Serbian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Belgrade has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Indonesia",
+  "answer": "Indonesian",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Jakarta has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Iceland",
+  "answer": "Icelandic",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Reykjavik has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Cuba",
+  "answer": "Spanish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Havana has one main language, namely"
+ },
+ {
+  "family": "cap_language",
+  "intermediate": "Argentina",
+  "answer": "Spanish",
+  "prompt": "The country governed from Cairo has one main language, namely Arabic. The country governed from Tokyo has one main language, namely Japanese. The country governed from Buenos has one main language, namely"
+ }
+]

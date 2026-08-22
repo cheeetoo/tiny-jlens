@@ -1,0 +1,58 @@
+[
+ {
+  "cat": "country",
+  "prompt": "Name a color: Blue\nName a fruit: Apple\nName a sport: Basketball\nName a instrument: Piano\nName a planet: Neptune\nName a tree: Oak\nName a bird: Robin\nName a language: Japanese\nName a country:"
+ },
+ {
+  "cat": "color",
+  "prompt": "Name a fruit: Apple\nName a sport: Basketball\nName a instrument: Piano\nName a planet: Neptune\nName a tree: Oak\nName a bird: Robin\nName a language: Japanese\nName a profession: Teacher\nName a color:"
+ },
+ {
+  "cat": "fruit",
+  "prompt": "Name a sport: Basketball\nName a instrument: Piano\nName a planet: Neptune\nName a tree: Oak\nName a bird: Robin\nName a language: Japanese\nName a profession: Teacher\nName a beverage: Coffee\nName a fruit:"
+ },
+ {
+  "cat": "sport",
+  "prompt": "Name a instrument: Piano\nName a planet: Neptune\nName a tree: Oak\nName a bird: Robin\nName a language: Japanese\nName a profession: Teacher\nName a beverage: Coffee\nName a organ: Heart\nName a sport:"
+ },
+ {
+  "cat": "instrument",
+  "prompt": "Name a planet: Neptune\nName a tree: Oak\nName a bird: Robin\nName a language: Japanese\nName a profession: Teacher\nName a beverage: Coffee\nName a organ: Heart\nName a city: Tokyo\nName a instrument:"
+ },
+ {
+  "cat": "planet",
+  "prompt": "Name a tree: Oak\nName a bird: Robin\nName a language: Japanese\nName a profession: Teacher\nName a beverage: Coffee\nName a organ: Heart\nName a city: Tokyo\nName a river: Amazon\nName a planet:"
+ },
+ {
+  "cat": "tree",
+  "prompt": "Name a bird: Robin\nName a language: Japanese\nName a profession: Teacher\nName a beverage: Coffee\nName a organ: Heart\nName a city: Tokyo\nName a river: Amazon\nName a country: Japan\nName a tree:"
+ },
+ {
+  "cat": "bird",
+  "prompt": "Name a language: Japanese\nName a profession: Teacher\nName a beverage: Coffee\nName a organ: Heart\nName a city: Tokyo\nName a river: Amazon\nName a country: Japan\nName a color: Blue\nName a bird:"
+ },
+ {
+  "cat": "language",
+  "prompt": "Name a profession: Teacher\nName a beverage: Coffee\nName a organ: Heart\nName a city: Tokyo\nName a river: Amazon\nName a country: Japan\nName a color: Blue\nName a fruit: Apple\nName a language:"
+ },
+ {
+  "cat": "profession",
+  "prompt": "Name a beverage: Coffee\nName a organ: Heart\nName a city: Tokyo\nName a river: Amazon\nName a country: Japan\nName a color: Blue\nName a fruit: Apple\nName a sport: Basketball\nName a profession:"
+ },
+ {
+  "cat": "beverage",
+  "prompt": "Name a organ: Heart\nName a city: Tokyo\nName a river: Amazon\nName a country: Japan\nName a color: Blue\nName a fruit: Apple\nName a sport: Basketball\nName a instrument: Piano\nName a beverage:"
+ },
+ {
+  "cat": "organ",
+  "prompt": "Name a city: Tokyo\nName a river: Amazon\nName a country: Japan\nName a color: Blue\nName a fruit: Apple\nName a sport: Basketball\nName a instrument: Piano\nName a planet: Neptune\nName a organ:"
+ },
+ {
+  "cat": "city",
+  "prompt": "Name a river: Amazon\nName a country: Japan\nName a color: Blue\nName a fruit: Apple\nName a sport: Basketball\nName a instrument: Piano\nName a planet: Neptune\nName a tree: Oak\nName a city:"
+ },
+ {
+  "cat": "river",
+  "prompt": "Name a country: Japan\nName a color: Blue\nName a fruit: Apple\nName a sport: Basketball\nName a instrument: Piano\nName a planet: Neptune\nName a tree: Oak\nName a bird: Robin\nName a river:"
+ }
+]

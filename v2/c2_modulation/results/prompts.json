@@ -1,0 +1,42 @@
+[
+ {
+  "exp": "2a",
+  "cond": "baseline",
+  "word": "orange",
+  "prompt": "Write \"The old painting hung crookedly on the wall.\" \"The old painting hung crookedly on the wall.",
+  "copy_span_text": "The old painting hung crookedly on the wall."
+ },
+ {
+  "exp": "2a",
+  "cond": "mention",
+  "word": "orange",
+  "prompt": "Write \"The old painting hung crookedly on the wall.\" orange. \"The old painting hung crookedly on the wall.",
+  "copy_span_text": "The old painting hung crookedly on the wall."
+ },
+ {
+  "exp": "2a",
+  "cond": "focus",
+  "word": "orange",
+  "prompt": "Write \"The old painting hung crookedly on the wall.\" Think about orange while you write. \"The old painting hung crookedly on the wall.",
+  "copy_span_text": "The old painting hung crookedly on the wall."
+ },
+ {
+  "exp": "2a",
+  "cond": "dismissal",
+  "word": "orange",
+  "prompt": "Write \"The old painting hung crookedly on the wall.\" orange is irrelevant \u2014 ignore it. \"The old painting hung crookedly on the wall.",
+  "copy_span_text": "The old painting hung crookedly on the wall."
+ },
+ {
+  "exp": "2a",
+  "cond": "negated",
+  "word": "orange",
+  "prompt": "Write \"The old painting hung crookedly on the wall.\" Don't think about orange. \"The old painting hung crookedly on the wall.",
+  "copy_span_text": "The old painting hung crookedly on the wall."
+ },
+ {
+  "exp": "2d",
+  "cond": "claim",
+  "prompt": "Imagine that the following sentence is written in French: The kitchen window was open all afternoon."
+ }
+]

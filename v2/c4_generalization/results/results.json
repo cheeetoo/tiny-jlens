@@ -1,0 +1,8553 @@
+{
+ "band": [
+  7,
+  8,
+  9
+ ],
+ "n_gate": 20,
+ "n_cells": 64,
+ "gate": [
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "France",
+   "answer": "Paris",
+   "gate": true,
+   "greedy": " Paris"
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "Canada",
+   "answer": "Ottawa",
+   "gate": false,
+   "greedy": " Toronto"
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "China",
+   "answer": "Beijing",
+   "gate": false,
+   "greedy": " Shanghai"
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "Egypt",
+   "answer": "Cairo",
+   "gate": false,
+   "greedy": " Alexandria"
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "France",
+   "answer": "French",
+   "gate": true,
+   "greedy": " French"
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "Canada",
+   "answer": "English",
+   "gate": true,
+   "greedy": " English"
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "China",
+   "answer": "Chinese",
+   "gate": true,
+   "greedy": " Chinese"
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "Egypt",
+   "answer": "Arabic",
+   "gate": false,
+   "greedy": " Egyptian"
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "France",
+   "answer": "Europe",
+   "gate": false,
+   "greedy": " France"
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "Canada",
+   "answer": "North",
+   "gate": false,
+   "greedy": " Canada"
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "China",
+   "answer": "Asia",
+   "gate": false,
+   "greedy": " South"
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "Egypt",
+   "answer": "Africa",
+   "gate": false,
+   "greedy": " Central"
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "France",
+   "answer": "Euro",
+   "gate": false,
+   "greedy": " Franc"
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "Canada",
+   "answer": "Dollar",
+   "gate": false,
+   "greedy": " Canadian"
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "China",
+   "answer": "Yuan",
+   "gate": true,
+   "greedy": " Yuan"
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "Egypt",
+   "answer": "Pound",
+   "gate": false,
+   "greedy": " Z"
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "February",
+   "answer": "winter",
+   "gate": true,
+   "greedy": " winter"
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "April",
+   "answer": "spring",
+   "gate": false,
+   "greedy": " winter"
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "July",
+   "answer": "summer",
+   "gate": false,
+   "greedy": " fall"
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "October",
+   "answer": "autumn",
+   "gate": false,
+   "greedy": " winter"
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "February",
+   "answer": "two",
+   "gate": false,
+   "greedy": " seven"
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "April",
+   "answer": "four",
+   "gate": false,
+   "greedy": " seven"
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "July",
+   "answer": "seven",
+   "gate": true,
+   "greedy": " seven"
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "October",
+   "answer": "ten",
+   "gate": false,
+   "greedy": " seven"
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "February",
+   "answer": "Valentine",
+   "gate": false,
+   "greedy": " Christmas"
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "April",
+   "answer": "Easter",
+   "gate": false,
+   "greedy": " Christmas"
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "July",
+   "answer": "Independence",
+   "gate": false,
+   "greedy": " Christmas"
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "October",
+   "answer": "Halloween",
+   "gate": false,
+   "greedy": " Christmas"
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "February",
+   "answer": "March",
+   "gate": true,
+   "greedy": " March"
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "April",
+   "answer": "May",
+   "gate": true,
+   "greedy": " May"
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "July",
+   "answer": "August",
+   "gate": true,
+   "greedy": " August"
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "October",
+   "answer": "November",
+   "gate": true,
+   "greedy": " November"
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "lion",
+   "answer": "savanna",
+   "gate": false,
+   "greedy": " forest"
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "eagle",
+   "answer": "sky",
+   "gate": false,
+   "greedy": " lake"
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "shark",
+   "answer": "ocean",
+   "gate": false,
+   "greedy": " bay"
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "spider",
+   "answer": "outdoors",
+   "gate": false,
+   "greedy": " forest"
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "lion",
+   "answer": "four",
+   "gate": false,
+   "greedy": " twenty"
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "eagle",
+   "answer": "two",
+   "gate": false,
+   "greedy": " twenty"
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "shark",
+   "answer": "none",
+   "gate": false,
+   "greedy": " twenty"
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "spider",
+   "answer": "eight",
+   "gate": false,
+   "greedy": " twenty"
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "lion",
+   "answer": "cat",
+   "gate": false,
+   "greedy": " lion"
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "eagle",
+   "answer": "bird",
+   "gate": true,
+   "greedy": " bird"
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "shark",
+   "answer": "fish",
+   "gate": false,
+   "greedy": " shark"
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "spider",
+   "answer": "arachnid",
+   "gate": false,
+   "greedy": " rept"
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "lion",
+   "answer": "pride",
+   "gate": false,
+   "greedy": " herd"
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "eagle",
+   "answer": "convocation",
+   "gate": false,
+   "greedy": " herd"
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "shark",
+   "answer": "shiver",
+   "gate": false,
+   "greedy": " shark"
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "spider",
+   "answer": "cluster",
+   "gate": false,
+   "greedy": " spider"
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "three",
+   "answer": "six",
+   "gate": false,
+   "greedy": " four"
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "five",
+   "answer": "ten",
+   "gate": false,
+   "greedy": " five"
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "seven",
+   "answer": "fourteen",
+   "gate": false,
+   "greedy": " seven"
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "nine",
+   "answer": "eighteen",
+   "gate": false,
+   "greedy": " ten"
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "three",
+   "answer": "nine",
+   "gate": false,
+   "greedy": " forty"
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "five",
+   "answer": "twenty",
+   "gate": true,
+   "greedy": " twenty"
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "seven",
+   "answer": "forty",
+   "gate": true,
+   "greedy": " forty"
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "nine",
+   "answer": "eighty",
+   "gate": false,
+   "greedy": " twenty"
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "three",
+   "answer": "four",
+   "gate": true,
+   "greedy": " four"
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "five",
+   "answer": "six",
+   "gate": true,
+   "greedy": " six"
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "seven",
+   "answer": "eight",
+   "gate": true,
+   "greedy": " eight"
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "nine",
+   "answer": "ten",
+   "gate": true,
+   "greedy": " ten"
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "three",
+   "answer": "t",
+   "gate": false,
+   "greedy": " f"
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "five",
+   "answer": "f",
+   "gate": true,
+   "greedy": " f"
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "seven",
+   "answer": "s",
+   "gate": false,
+   "greedy": " f"
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "nine",
+   "answer": "n",
+   "gate": true,
+   "greedy": " n"
+  }
+ ],
+ "case": [
+  {
+   "function": "capital",
+   "template": "The capital of {arg} is the city of",
+   "source": "France",
+   "target": "China",
+   "source_answer": "Paris",
+   "target_answer": "Beijing",
+   "source_gated": true,
+   "target_gated": false,
+   "clean_top1": " Paris",
+   "swapped_top1": " Beijing",
+   "follows": true,
+   "target_rank_clean": 595,
+   "target_rank_swapped": 1
+  },
+  {
+   "function": "language",
+   "template": "Most people in {arg} speak",
+   "source": "France",
+   "target": "China",
+   "source_answer": "French",
+   "target_answer": "Chinese",
+   "source_gated": true,
+   "target_gated": true,
+   "clean_top1": " French",
+   "swapped_top1": " Chinese",
+   "follows": true,
+   "target_rank_clean": 53,
+   "target_rank_swapped": 1
+  },
+  {
+   "function": "continent",
+   "template": "{arg} is a country on the continent of",
+   "source": "France",
+   "target": "China",
+   "source_answer": "Europe",
+   "target_answer": "Asia",
+   "source_gated": false,
+   "target_gated": false,
+   "clean_top1": " France",
+   "swapped_top1": " China",
+   "follows": false,
+   "target_rank_clean": 10,
+   "target_rank_swapped": 5
+  },
+  {
+   "function": "currency",
+   "template": "The single-word name for the currency now used in {arg} is the",
+   "source": "France",
+   "target": "China",
+   "source_answer": "Euro",
+   "target_answer": "Yuan",
+   "source_gated": false,
+   "target_gated": true,
+   "clean_top1": " Franc",
+   "swapped_top1": " Yuan",
+   "follows": true,
+   "target_rank_clean": 1366,
+   "target_rank_swapped": 1
+  }
+ ],
+ "swap": [
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "France",
+   "target": "Canada",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "Paris",
+   "target_answer": "Ottawa",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 463,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " Toronto"
+    },
+    "2.0": {
+     "after": 16,
+     "hit": false,
+     "got": " Vancouver"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Toronto"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "France",
+   "target": "China",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "Paris",
+   "target_answer": "Beijing",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 595,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Beijing"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Beijing"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Shanghai"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Beijing"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "France",
+   "target": "Egypt",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "Paris",
+   "target_answer": "Cairo",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 788,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Egypt"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Alexandria"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Alexandria"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "Canada",
+   "target": "France",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "Ottawa",
+   "target_answer": "Paris",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 138,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Paris"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Paris"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Paris"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Paris"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "Canada",
+   "target": "China",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "Ottawa",
+   "target_answer": "Beijing",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1112,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Beijing"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Beijing"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Shanghai"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Shanghai"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "Canada",
+   "target": "Egypt",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "Ottawa",
+   "target_answer": "Cairo",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3776,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Cairo"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Alexandria"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Alexandria"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "China",
+   "target": "France",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "Beijing",
+   "target_answer": "Paris",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 612,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Paris"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Marse"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Stras"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "China",
+   "target": "Canada",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "Beijing",
+   "target_answer": "Ottawa",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 2573,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Toronto"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Toronto"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "China",
+   "target": "Egypt",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "Beijing",
+   "target_answer": "Cairo",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1335,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egypt"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Shanghai"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Alexandria"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "Egypt",
+   "target": "France",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "Cairo",
+   "target_answer": "Paris",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 759,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Paris"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "Egypt",
+   "target": "Canada",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "Cairo",
+   "target_answer": "Ottawa",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1284,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Ottawa"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "source": "Egypt",
+   "target": "China",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "Cairo",
+   "target_answer": "Beijing",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1167,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Beijing"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " the"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " China"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " China"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "France",
+   "target": "Canada",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "French",
+   "target_answer": "English",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canadian"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Canadian"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " English"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canadian"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "France",
+   "target": "China",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "French",
+   "target_answer": "Chinese",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 53,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "France",
+   "target": "Egypt",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "French",
+   "target_answer": "Arabic",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 20,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 103,
+     "hit": false,
+     "got": " Egyptian"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egyptian"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "Canada",
+   "target": "France",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "English",
+   "target_answer": "French",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "Canada",
+   "target": "China",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "English",
+   "target_answer": "Chinese",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 8,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "Canada",
+   "target": "Egypt",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "English",
+   "target_answer": "Arabic",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 29,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 13,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Egyptian"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "China",
+   "target": "France",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "Chinese",
+   "target_answer": "French",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "China",
+   "target": "Canada",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "Chinese",
+   "target_answer": "English",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 3,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canadian"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Canadian"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " French"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "China",
+   "target": "Egypt",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "Chinese",
+   "target_answer": "Arabic",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 85,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 24,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egyptian"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "Egypt",
+   "target": "France",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "Arabic",
+   "target_answer": "French",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " French"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "Egypt",
+   "target": "Canada",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "Arabic",
+   "target_answer": "English",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 3,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " English"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " English"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " English"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "source": "Egypt",
+   "target": "China",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "Arabic",
+   "target_answer": "Chinese",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Japanese"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Chinese"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "France",
+   "target": "Canada",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "Europe",
+   "target_answer": "North",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " Canada"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "France",
+   "target": "China",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "Europe",
+   "target_answer": "Asia",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " China"
+    },
+    "2.0": {
+     "after": 14,
+     "hit": false,
+     "got": " China"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " China"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " China"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "France",
+   "target": "Egypt",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "Europe",
+   "target_answer": "Africa",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 464,
+     "hit": false,
+     "got": " Egypt"
+    },
+    "2.0": {
+     "after": 1107,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Central"
+    },
+    "2.0": {
+     "after": 115,
+     "hit": false,
+     "got": " Central"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "Canada",
+   "target": "France",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "North",
+   "target_answer": "Europe",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 17,
+   "subadd": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " France"
+    },
+    "2.0": {
+     "after": 91,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Europe"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "Canada",
+   "target": "China",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "North",
+   "target_answer": "Asia",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 14,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " China"
+    },
+    "2.0": {
+     "after": 64,
+     "hit": false,
+     "got": " China"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Asia"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " China"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "Canada",
+   "target": "Egypt",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "North",
+   "target_answer": "Africa",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 25,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " Egypt"
+    },
+    "2.0": {
+     "after": 158,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Central"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Egypt"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "China",
+   "target": "France",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "Asia",
+   "target_answer": "Europe",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 46,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " France"
+    },
+    "2.0": {
+     "after": 23,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "China",
+   "target": "Canada",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "Asia",
+   "target_answer": "North",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Canada"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "China",
+   "target": "Egypt",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "Asia",
+   "target_answer": "Africa",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 47,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " Egypt"
+    },
+    "2.0": {
+     "after": 63,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " East"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " Egypt"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "Egypt",
+   "target": "France",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "Africa",
+   "target_answer": "Europe",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 46,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " France"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " France"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " France"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "Egypt",
+   "target": "Canada",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "Africa",
+   "target_answer": "North",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Canada"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Canada"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "source": "Egypt",
+   "target": "China",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "Africa",
+   "target_answer": "Asia",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " China"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " China"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " China"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " China"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "France",
+   "target": "Canada",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "Euro",
+   "target_answer": "Dollar",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 207,
+   "subadd": {
+    "1.0": {
+     "after": 15,
+     "hit": false,
+     "got": " Canadian"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " B"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " Canadian"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " Yen"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "France",
+   "target": "China",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "Euro",
+   "target_answer": "Yuan",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1366,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Yuan"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Yuan"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Yen"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "France",
+   "target": "Egypt",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "Euro",
+   "target_answer": "Pound",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 26,
+   "subadd": {
+    "1.0": {
+     "after": 425,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 2111,
+     "hit": false,
+     "got": " Ob"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 23,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 376,
+     "hit": false,
+     "got": " Ob"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "Canada",
+   "target": "France",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "Dollar",
+   "target_answer": "Euro",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 66,
+   "subadd": {
+    "1.0": {
+     "after": 23,
+     "hit": false,
+     "got": " French"
+    },
+    "2.0": {
+     "after": 362,
+     "hit": false,
+     "got": " F"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Franc"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " C"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "Canada",
+   "target": "China",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "Dollar",
+   "target_answer": "Yuan",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 527,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Yuan"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Yen"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "Canada",
+   "target": "Egypt",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "Dollar",
+   "target_answer": "Pound",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 44,
+   "subadd": {
+    "1.0": {
+     "after": 389,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 2617,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 977,
+     "hit": false,
+     "got": " Egyptian"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "China",
+   "target": "France",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "Yuan",
+   "target_answer": "Euro",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 167,
+   "subadd": {
+    "1.0": {
+     "after": 67,
+     "hit": false,
+     "got": " Franc"
+    },
+    "2.0": {
+     "after": 742,
+     "hit": false,
+     "got": " France"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " Franc"
+    },
+    "2.0": {
+     "after": 490,
+     "hit": false,
+     "got": " F"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "China",
+   "target": "Canada",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "Yuan",
+   "target_answer": "Dollar",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 199,
+   "subadd": {
+    "1.0": {
+     "after": 191,
+     "hit": false,
+     "got": " Canadian"
+    },
+    "2.0": {
+     "after": 520,
+     "hit": false,
+     "got": " Canadian"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 52,
+     "hit": false,
+     "got": " Canadian"
+    },
+    "2.0": {
+     "after": 581,
+     "hit": false,
+     "got": " Canada"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "China",
+   "target": "Egypt",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "Yuan",
+   "target_answer": "Pound",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 432,
+   "subadd": {
+    "1.0": {
+     "after": 2339,
+     "hit": false,
+     "got": " Egypt"
+    },
+    "2.0": {
+     "after": 4433,
+     "hit": false,
+     "got": " Egypt"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 76,
+     "hit": false,
+     "got": " Egyptian"
+    },
+    "2.0": {
+     "after": 3239,
+     "hit": false,
+     "got": " S"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "Egypt",
+   "target": "France",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "Pound",
+   "target_answer": "Euro",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 59,
+   "subadd": {
+    "1.0": {
+     "after": 69,
+     "hit": false,
+     "got": " Franc"
+    },
+    "2.0": {
+     "after": 131,
+     "hit": false,
+     "got": " D"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 27,
+     "hit": false,
+     "got": " Franc"
+    },
+    "2.0": {
+     "after": 79,
+     "hit": false,
+     "got": " Franc"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "Egypt",
+   "target": "Canada",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "Pound",
+   "target_answer": "Dollar",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 152,
+   "subadd": {
+    "1.0": {
+     "after": 20,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 30,
+     "hit": false,
+     "got": " Kron"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 14,
+     "hit": false,
+     "got": " Canadian"
+    }
+   }
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "source": "Egypt",
+   "target": "China",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "Pound",
+   "target_answer": "Yuan",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 99,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 34,
+     "hit": false,
+     "got": " Yen"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Yen"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Yen"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "February",
+   "target": "April",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "winter",
+   "target_answer": "spring",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "February",
+   "target": "July",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "winter",
+   "target_answer": "summer",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": true,
+   "before": 3,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " summer"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " summer"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " summer"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "February",
+   "target": "October",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "winter",
+   "target_answer": "autumn",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " autumn"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " autumn"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " autumn"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "April",
+   "target": "February",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "spring",
+   "target_answer": "winter",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": true,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " spring"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "April",
+   "target": "July",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "spring",
+   "target_answer": "summer",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": true,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " July"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " spring"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "April",
+   "target": "October",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "spring",
+   "target_answer": "autumn",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " fall"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " October"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " winter"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "July",
+   "target": "February",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "summer",
+   "target_answer": "winter",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": true,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " fall"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " fall"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " spring"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "July",
+   "target": "April",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "summer",
+   "target_answer": "spring",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " fall"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "July",
+   "target": "October",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "summer",
+   "target_answer": "autumn",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " fall"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " October"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " fall"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " autumn"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "October",
+   "target": "February",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "autumn",
+   "target_answer": "winter",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": true,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " winter"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "October",
+   "target": "April",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "autumn",
+   "target_answer": "spring",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " spring"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "source": "October",
+   "target": "July",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "autumn",
+   "target_answer": "summer",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": true,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " summer"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " winter"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " summer"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "February",
+   "target": "April",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "two",
+   "target_answer": "four",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "February",
+   "target": "July",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "two",
+   "target_answer": "seven",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " ten"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "February",
+   "target": "October",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "two",
+   "target_answer": "ten",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "April",
+   "target": "February",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "four",
+   "target_answer": "two",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 13,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 12,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 12,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " nine"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "April",
+   "target": "July",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "four",
+   "target_answer": "seven",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " nine"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "April",
+   "target": "October",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "four",
+   "target_answer": "ten",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "July",
+   "target": "February",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "seven",
+   "target_answer": "two",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 13,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 14,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 15,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " ten"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "July",
+   "target": "April",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "seven",
+   "target_answer": "four",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 11,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " nine"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "July",
+   "target": "October",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "seven",
+   "target_answer": "ten",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ten"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "October",
+   "target": "February",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "ten",
+   "target_answer": "two",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "October",
+   "target": "April",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "ten",
+   "target_answer": "four",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "source": "October",
+   "target": "July",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "ten",
+   "target_answer": "seven",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " ten"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "February",
+   "target": "April",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "Valentine",
+   "target_answer": "Easter",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " the"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "February",
+   "target": "July",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "Valentine",
+   "target_answer": "Independence",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 15,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " the"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "February",
+   "target": "October",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "Valentine",
+   "target_answer": "Halloween",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 13,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "April",
+   "target": "February",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "Easter",
+   "target_answer": "Valentine",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "April",
+   "target": "July",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "Easter",
+   "target_answer": "Independence",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 14,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " July"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 11,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "April",
+   "target": "October",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "Easter",
+   "target_answer": "Halloween",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "July",
+   "target": "February",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "Independence",
+   "target_answer": "Valentine",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 12,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "July",
+   "target": "April",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "Independence",
+   "target_answer": "Easter",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Easter"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Easter"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "July",
+   "target": "October",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "Independence",
+   "target_answer": "Halloween",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 8,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "October",
+   "target": "February",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "Halloween",
+   "target_answer": "Valentine",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 13,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "October",
+   "target": "April",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "Halloween",
+   "target_answer": "Easter",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " Easter"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "source": "October",
+   "target": "July",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "Halloween",
+   "target_answer": "Independence",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 12,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " Christmas"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " Christmas"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " Christmas"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "February",
+   "target": "April",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "March",
+   "target_answer": "May",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " March"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " April"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " April"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " April"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "February",
+   "target": "July",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "March",
+   "target_answer": "August",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 12,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " March"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " July"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " July"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " July"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "February",
+   "target": "October",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "March",
+   "target_answer": "November",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 11,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " March"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " October"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " September"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " October"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "April",
+   "target": "February",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "May",
+   "target_answer": "March",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " May"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " May"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " May"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "April",
+   "target": "July",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "May",
+   "target_answer": "August",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " July"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " July"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " May"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " July"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "April",
+   "target": "October",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "May",
+   "target_answer": "November",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " May"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " October"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " May"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " November"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "July",
+   "target": "February",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "August",
+   "target_answer": "March",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 27,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " August"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " August"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " August"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "July",
+   "target": "April",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "August",
+   "target_answer": "May",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 97,
+   "subadd": {
+    "1.0": {
+     "after": 47,
+     "hit": false,
+     "got": " August"
+    },
+    "2.0": {
+     "after": 29,
+     "hit": false,
+     "got": " August"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 11,
+     "hit": false,
+     "got": " August"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " April"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "July",
+   "target": "October",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "August",
+   "target_answer": "November",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " August"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " October"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " August"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " August"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "October",
+   "target": "February",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "November",
+   "target_answer": "March",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " November"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " February"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " November"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " March"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "October",
+   "target": "April",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "November",
+   "target_answer": "May",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 12,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " November"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " April"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " April"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " April"
+    }
+   }
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "source": "October",
+   "target": "July",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "November",
+   "target_answer": "August",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 13,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " November"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " July"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " July"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " July"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "lion",
+   "target": "eagle",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "savanna",
+   "target_answer": "sky",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 144,
+   "subadd": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 16,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "lion",
+   "target": "shark",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "savanna",
+   "target_answer": "ocean",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 40,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " lake"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " shark"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "lion",
+   "target": "spider",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "savanna",
+   "target_answer": "outdoors",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1057,
+   "subadd": {
+    "1.0": {
+     "after": 945,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 2450,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 572,
+     "hit": false,
+     "got": " forest"
+    },
+    "2.0": {
+     "after": 455,
+     "hit": false,
+     "got": " forest"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "eagle",
+   "target": "lion",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "sky",
+   "target_answer": "savanna",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 350,
+   "subadd": {
+    "1.0": {
+     "after": 45,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 68,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 164,
+     "hit": false,
+     "got": " forest"
+    },
+    "2.0": {
+     "after": 114,
+     "hit": false,
+     "got": " forest"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "eagle",
+   "target": "shark",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "sky",
+   "target_answer": "ocean",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 17,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " lake"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " lake"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "eagle",
+   "target": "spider",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "sky",
+   "target_answer": "outdoors",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 551,
+   "subadd": {
+    "1.0": {
+     "after": 1069,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 3297,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 457,
+     "hit": false,
+     "got": " forest"
+    },
+    "2.0": {
+     "after": 464,
+     "hit": false,
+     "got": " forest"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "shark",
+   "target": "lion",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "ocean",
+   "target_answer": "savanna",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 370,
+   "subadd": {
+    "1.0": {
+     "after": 183,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 660,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 43,
+     "hit": false,
+     "got": " forest"
+    },
+    "2.0": {
+     "after": 70,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "shark",
+   "target": "eagle",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "ocean",
+   "target_answer": "sky",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 204,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "shark",
+   "target": "spider",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "ocean",
+   "target_answer": "outdoors",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3021,
+   "subadd": {
+    "1.0": {
+     "after": 571,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 735,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 778,
+     "hit": false,
+     "got": " forest"
+    },
+    "2.0": {
+     "after": 431,
+     "hit": false,
+     "got": " forest"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "spider",
+   "target": "lion",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "outdoors",
+   "target_answer": "savanna",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 293,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 30,
+     "hit": false,
+     "got": " forest"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "spider",
+   "target": "eagle",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "outdoors",
+   "target_answer": "sky",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 32,
+   "subadd": {
+    "1.0": {
+     "after": 14,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 86,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "source": "spider",
+   "target": "shark",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "outdoors",
+   "target_answer": "ocean",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 18,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ocean"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " shark"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "lion",
+   "target": "eagle",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "four",
+   "target_answer": "two",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 20,
+   "subadd": {
+    "1.0": {
+     "after": 18,
+     "hit": false,
+     "got": " twelve"
+    },
+    "2.0": {
+     "after": 12,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 21,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 21,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "lion",
+   "target": "shark",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "four",
+   "target_answer": "none",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 89,
+   "subadd": {
+    "1.0": {
+     "after": 171,
+     "hit": false,
+     "got": " fifteen"
+    },
+    "2.0": {
+     "after": 374,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 94,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 103,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "lion",
+   "target": "spider",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "four",
+   "target_answer": "eight",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 22,
+   "subadd": {
+    "1.0": {
+     "after": 21,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 36,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 23,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 23,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "eagle",
+   "target": "lion",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "two",
+   "target_answer": "four",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 11,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 12,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "eagle",
+   "target": "shark",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "two",
+   "target_answer": "none",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 87,
+   "subadd": {
+    "1.0": {
+     "after": 123,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 186,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 94,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 101,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "eagle",
+   "target": "spider",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "two",
+   "target_answer": "eight",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 21,
+   "subadd": {
+    "1.0": {
+     "after": 20,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 21,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 17,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 13,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "shark",
+   "target": "lion",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "none",
+   "target_answer": "four",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 11,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "shark",
+   "target": "eagle",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "none",
+   "target_answer": "two",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 20,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 21,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 21,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "shark",
+   "target": "spider",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "none",
+   "target_answer": "eight",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 21,
+   "subadd": {
+    "1.0": {
+     "after": 17,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 20,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 19,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "spider",
+   "target": "lion",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "eight",
+   "target_answer": "four",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "spider",
+   "target": "eagle",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "eight",
+   "target_answer": "two",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 19,
+   "subadd": {
+    "1.0": {
+     "after": 14,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 18,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 17,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "source": "spider",
+   "target": "shark",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "eight",
+   "target_answer": "none",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 88,
+   "subadd": {
+    "1.0": {
+     "after": 101,
+     "hit": false,
+     "got": " 20"
+    },
+    "2.0": {
+     "after": 131,
+     "hit": false,
+     "got": " 12"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 78,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 73,
+     "hit": false,
+     "got": " twenty"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "lion",
+   "target": "eagle",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "cat",
+   "target_answer": "bird",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 12,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "lion",
+   "target": "shark",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "cat",
+   "target_answer": "fish",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " mammal"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " shark"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "lion",
+   "target": "spider",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "cat",
+   "target_answer": "arachnid",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 89,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 36,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 52,
+     "hit": false,
+     "got": " snake"
+    },
+    "2.0": {
+     "after": 27,
+     "hit": false,
+     "got": " spider"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "eagle",
+   "target": "lion",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "bird",
+   "target_answer": "cat",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " bird"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "eagle",
+   "target": "shark",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "bird",
+   "target_answer": "fish",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " fish"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " fish"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "eagle",
+   "target": "spider",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "bird",
+   "target_answer": "arachnid",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 57,
+   "subadd": {
+    "1.0": {
+     "after": 29,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 66,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 50,
+     "hit": false,
+     "got": " bird"
+    },
+    "2.0": {
+     "after": 48,
+     "hit": false,
+     "got": " bird"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "shark",
+   "target": "lion",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "fish",
+   "target_answer": "cat",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 12,
+   "subadd": {
+    "1.0": {
+     "after": 23,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 226,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "shark",
+   "target": "eagle",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "fish",
+   "target_answer": "bird",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 8,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "shark",
+   "target": "spider",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "fish",
+   "target_answer": "arachnid",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 90,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 16,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 39,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 24,
+     "hit": false,
+     "got": " spider"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "spider",
+   "target": "lion",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "arachnid",
+   "target_answer": "cat",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 17,
+   "subadd": {
+    "1.0": {
+     "after": 12,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 90,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "spider",
+   "target": "eagle",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "arachnid",
+   "target_answer": "bird",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "source": "spider",
+   "target": "shark",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "arachnid",
+   "target_answer": "fish",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 13,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " fish"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " shark"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "lion",
+   "target": "eagle",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "pride",
+   "target_answer": "convocation",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 4769,
+   "subadd": {
+    "1.0": {
+     "after": 19826,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 18184,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10604,
+     "hit": false,
+     "got": " pack"
+    },
+    "2.0": {
+     "after": 14283,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "lion",
+   "target": "shark",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "pride",
+   "target_answer": "shiver",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 226,
+   "subadd": {
+    "1.0": {
+     "after": 124,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 358,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 160,
+     "hit": false,
+     "got": " school"
+    },
+    "2.0": {
+     "after": 104,
+     "hit": false,
+     "got": " shark"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "lion",
+   "target": "spider",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "pride",
+   "target_answer": "cluster",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1154,
+   "subadd": {
+    "1.0": {
+     "after": 186,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 570,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 468,
+     "hit": false,
+     "got": " herd"
+    },
+    "2.0": {
+     "after": 239,
+     "hit": false,
+     "got": " spider"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "eagle",
+   "target": "lion",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "convocation",
+   "target_answer": "pride",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1062,
+   "subadd": {
+    "1.0": {
+     "after": 852,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 1280,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 939,
+     "hit": false,
+     "got": " herd"
+    },
+    "2.0": {
+     "after": 872,
+     "hit": false,
+     "got": " herd"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "eagle",
+   "target": "shark",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "convocation",
+   "target_answer": "shiver",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 316,
+   "subadd": {
+    "1.0": {
+     "after": 39,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 22,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 285,
+     "hit": false,
+     "got": " herd"
+    },
+    "2.0": {
+     "after": 221,
+     "hit": false,
+     "got": " herd"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "eagle",
+   "target": "spider",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "convocation",
+   "target_answer": "cluster",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 970,
+   "subadd": {
+    "1.0": {
+     "after": 65,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 45,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 815,
+     "hit": false,
+     "got": " herd"
+    },
+    "2.0": {
+     "after": 658,
+     "hit": false,
+     "got": " herd"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "shark",
+   "target": "lion",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "shiver",
+   "target_answer": "pride",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1378,
+   "subadd": {
+    "1.0": {
+     "after": 45,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 18,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 462,
+     "hit": false,
+     "got": " school"
+    },
+    "2.0": {
+     "after": 238,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "shark",
+   "target": "eagle",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "shiver",
+   "target_answer": "convocation",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3236,
+   "subadd": {
+    "1.0": {
+     "after": 25033,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 19268,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9162,
+     "hit": false,
+     "got": " flock"
+    },
+    "2.0": {
+     "after": 15068,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "shark",
+   "target": "spider",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "shiver",
+   "target_answer": "cluster",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 772,
+   "subadd": {
+    "1.0": {
+     "after": 295,
+     "hit": false,
+     "got": " spider"
+    },
+    "2.0": {
+     "after": 554,
+     "hit": false,
+     "got": " spider"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 338,
+     "hit": false,
+     "got": " school"
+    },
+    "2.0": {
+     "after": 213,
+     "hit": false,
+     "got": " spider"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "spider",
+   "target": "lion",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "cluster",
+   "target_answer": "pride",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3208,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " lion"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 634,
+     "hit": false,
+     "got": " lion"
+    },
+    "2.0": {
+     "after": 139,
+     "hit": false,
+     "got": " lion"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "spider",
+   "target": "eagle",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "cluster",
+   "target_answer": "convocation",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3338,
+   "subadd": {
+    "1.0": {
+     "after": 15744,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 12405,
+     "hit": false,
+     "got": " eagle"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7486,
+     "hit": false,
+     "got": " eagle"
+    },
+    "2.0": {
+     "after": 10390,
+     "hit": false,
+     "got": " eagle"
+    }
+   }
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "source": "spider",
+   "target": "shark",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "cluster",
+   "target_answer": "shiver",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 183,
+   "subadd": {
+    "1.0": {
+     "after": 40,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 33,
+     "hit": false,
+     "got": " shark"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 83,
+     "hit": false,
+     "got": " shark"
+    },
+    "2.0": {
+     "after": 45,
+     "hit": false,
+     "got": " shark"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "three",
+   "target": "five",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "six",
+   "target_answer": "ten",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " four"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " three"
+    },
+    "2.0": {
+     "after": 16,
+     "hit": false,
+     "got": " three"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "three",
+   "target": "seven",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "six",
+   "target_answer": "fourteen",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 17,
+   "subadd": {
+    "1.0": {
+     "after": 14,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 13,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 51,
+     "hit": false,
+     "got": " three"
+    },
+    "2.0": {
+     "after": 107,
+     "hit": false,
+     "got": " a"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "three",
+   "target": "nine",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "six",
+   "target_answer": "eighteen",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 26,
+   "subadd": {
+    "1.0": {
+     "after": 19,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 16,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 237,
+     "hit": false,
+     "got": " three"
+    },
+    "2.0": {
+     "after": 770,
+     "hit": false,
+     "got": " a"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "five",
+   "target": "three",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "ten",
+   "target_answer": "six",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " four"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " two"
+    },
+    "2.0": {
+     "after": 179,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "five",
+   "target": "seven",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "ten",
+   "target_answer": "fourteen",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 19,
+   "subadd": {
+    "1.0": {
+     "after": 15,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 14,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 23,
+     "hit": false,
+     "got": " five"
+    },
+    "2.0": {
+     "after": 44,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "five",
+   "target": "nine",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "ten",
+   "target_answer": "eighteen",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 20,
+   "subadd": {
+    "1.0": {
+     "after": 16,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 48,
+     "hit": false,
+     "got": " five"
+    },
+    "2.0": {
+     "after": 191,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "seven",
+   "target": "three",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "fourteen",
+   "target_answer": "six",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 3,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " two"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 54,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 613,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "seven",
+   "target": "five",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "fourteen",
+   "target_answer": "ten",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " five"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " five"
+    },
+    "2.0": {
+     "after": 16,
+     "hit": false,
+     "got": " a"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "seven",
+   "target": "nine",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "fourteen",
+   "target_answer": "eighteen",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 23,
+   "subadd": {
+    "1.0": {
+     "after": 18,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 17,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 20,
+     "hit": false,
+     "got": " nine"
+    },
+    "2.0": {
+     "after": 12,
+     "hit": false,
+     "got": " nine"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "nine",
+   "target": "three",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "eighteen",
+   "target_answer": "six",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 17,
+   "subadd": {
+    "1.0": {
+     "after": 24,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 51,
+     "hit": false,
+     "got": " 10"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 55,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 504,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "nine",
+   "target": "five",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "eighteen",
+   "target_answer": "ten",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 31,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "source": "nine",
+   "target": "seven",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "eighteen",
+   "target_answer": "fourteen",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 16,
+   "subadd": {
+    "1.0": {
+     "after": 18,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 23,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 18,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 53,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "three",
+   "target": "five",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "nine",
+   "target_answer": "twenty",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " three"
+    },
+    "2.0": {
+     "after": 20,
+     "hit": false,
+     "got": " two"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "three",
+   "target": "seven",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "nine",
+   "target_answer": "forty",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 11,
+     "hit": false,
+     "got": " two"
+    },
+    "2.0": {
+     "after": 278,
+     "hit": false,
+     "got": " a"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "three",
+   "target": "nine",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "nine",
+   "target_answer": "eighty",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 13,
+   "subadd": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 54,
+     "hit": false,
+     "got": " two"
+    },
+    "2.0": {
+     "after": 160,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "five",
+   "target": "three",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "twenty",
+   "target_answer": "nine",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 21,
+   "subadd": {
+    "1.0": {
+     "after": 22,
+     "hit": false,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 21,
+     "hit": false,
+     "got": " forty"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 21,
+     "hit": false,
+     "got": " two"
+    },
+    "2.0": {
+     "after": 91,
+     "hit": false,
+     "got": " two"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "five",
+   "target": "seven",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "twenty",
+   "target_answer": "forty",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "five",
+   "target": "nine",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "twenty",
+   "target_answer": "eighty",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 15,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 19,
+     "hit": false,
+     "got": " five"
+    },
+    "2.0": {
+     "after": 78,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "seven",
+   "target": "three",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "forty",
+   "target_answer": "nine",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 20,
+   "subadd": {
+    "1.0": {
+     "after": 22,
+     "hit": false,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 24,
+     "hit": false,
+     "got": " two"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 37,
+     "hit": false,
+     "got": " two"
+    },
+    "2.0": {
+     "after": 487,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "seven",
+   "target": "five",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "forty",
+   "target_answer": "twenty",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "seven",
+   "target": "nine",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "forty",
+   "target_answer": "eighty",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 8,
+   "subadd": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " ninety"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 11,
+     "hit": false,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 16,
+     "hit": false,
+     "got": " forty"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "nine",
+   "target": "three",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "eighty",
+   "target_answer": "nine",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": true,
+   "before": 21,
+   "subadd": {
+    "1.0": {
+     "after": 29,
+     "hit": false,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 223,
+     "hit": false,
+     "got": " two"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 98,
+     "hit": false,
+     "got": " two"
+    },
+    "2.0": {
+     "after": 1721,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "nine",
+   "target": "five",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "eighty",
+   "target_answer": "twenty",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " five"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " twenty"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " a"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "source": "nine",
+   "target": "seven",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "eighty",
+   "target_answer": "forty",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " forty"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "three",
+   "target": "five",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "four",
+   "target_answer": "six",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " four"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 27,
+     "hit": false,
+     "got": " three"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "three",
+   "target": "seven",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "four",
+   "target_answer": "eight",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 11,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " four"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 35,
+     "hit": false,
+     "got": " three"
+    },
+    "2.0": {
+     "after": 195,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "three",
+   "target": "nine",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "four",
+   "target_answer": "ten",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 15,
+   "subadd": {
+    "1.0": {
+     "after": 13,
+     "hit": false,
+     "got": " four"
+    },
+    "2.0": {
+     "after": 13,
+     "hit": false,
+     "got": " four"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 18,
+     "hit": false,
+     "got": " three"
+    },
+    "2.0": {
+     "after": 101,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "five",
+   "target": "three",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "six",
+   "target_answer": "four",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " six"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " six"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 59,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "five",
+   "target": "seven",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "six",
+   "target_answer": "eight",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " six"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " seven"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " five"
+    },
+    "2.0": {
+     "after": 15,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "five",
+   "target": "nine",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "six",
+   "target_answer": "ten",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 4,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " six"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " six"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " six"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " five"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "seven",
+   "target": "three",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "eight",
+   "target_answer": "four",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 10,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " eight"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eight"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 14,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 111,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "seven",
+   "target": "five",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "eight",
+   "target_answer": "six",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 14,
+   "subadd": {
+    "1.0": {
+     "after": 10,
+     "hit": false,
+     "got": " eight"
+    },
+    "2.0": {
+     "after": 11,
+     "hit": false,
+     "got": " eight"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " five"
+    },
+    "2.0": {
+     "after": 66,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "seven",
+   "target": "nine",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "eight",
+   "target_answer": "ten",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " eight"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " nine"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " eight"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " eight"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "nine",
+   "target": "three",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "ten",
+   "target_answer": "four",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 20,
+   "subadd": {
+    "1.0": {
+     "after": 14,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 15,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 96,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "nine",
+   "target": "five",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "ten",
+   "target_answer": "six",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 18,
+   "subadd": {
+    "1.0": {
+     "after": 17,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 12,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " the"
+    },
+    "2.0": {
+     "after": 53,
+     "hit": false,
+     "got": " the"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "source": "nine",
+   "target": "seven",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "ten",
+   "target_answer": "eight",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " ten"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " ten"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 3,
+     "hit": false,
+     "got": " seven"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " seven"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "three",
+   "target": "five",
+   "source_i": 0,
+   "target_i": 1,
+   "source_answer": "t",
+   "target_answer": "f",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "three",
+   "target": "seven",
+   "source_i": 0,
+   "target_i": 2,
+   "source_answer": "t",
+   "target_answer": "s",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 6,
+   "subadd": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 10,
+     "hit": false,
+     "got": " f"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "three",
+   "target": "nine",
+   "source_i": 0,
+   "target_i": 3,
+   "source_answer": "t",
+   "target_answer": "n",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " n"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " n"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 5,
+     "hit": false,
+     "got": " d"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "five",
+   "target": "three",
+   "source_i": 1,
+   "target_i": 0,
+   "source_answer": "f",
+   "target_answer": "t",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 9,
+   "subadd": {
+    "1.0": {
+     "after": 8,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " z"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "five",
+   "target": "seven",
+   "source_i": 1,
+   "target_i": 2,
+   "source_answer": "f",
+   "target_answer": "s",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 7,
+   "subadd": {
+    "1.0": {
+     "after": 6,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 7,
+     "hit": false,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 9,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " f"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "five",
+   "target": "nine",
+   "source_i": 1,
+   "target_i": 3,
+   "source_answer": "f",
+   "target_answer": "n",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 4,
+     "hit": false,
+     "got": " f"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "seven",
+   "target": "three",
+   "source_i": 2,
+   "target_i": 0,
+   "source_answer": "s",
+   "target_answer": "t",
+   "source_gated": false,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 8,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " z"
+    },
+    "2.0": {
+     "after": 3,
+     "hit": false,
+     "got": " z"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "seven",
+   "target": "five",
+   "source_i": 2,
+   "target_i": 1,
+   "source_answer": "s",
+   "target_answer": "f",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 1,
+   "subadd": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "seven",
+   "target": "nine",
+   "source_i": 2,
+   "target_i": 3,
+   "source_answer": "s",
+   "target_answer": "n",
+   "source_gated": false,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " f"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "nine",
+   "target": "three",
+   "source_i": 3,
+   "target_i": 0,
+   "source_answer": "n",
+   "target_answer": "t",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 8,
+   "subadd": {
+    "1.0": {
+     "after": 7,
+     "hit": false,
+     "got": " n"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " n"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " z"
+    },
+    "2.0": {
+     "after": 9,
+     "hit": false,
+     "got": " z"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "nine",
+   "target": "five",
+   "source_i": 3,
+   "target_i": 1,
+   "source_answer": "n",
+   "target_answer": "f",
+   "source_gated": true,
+   "target_gated": true,
+   "distinct": true,
+   "echo": false,
+   "before": 2,
+   "subadd": {
+    "1.0": {
+     "after": 2,
+     "hit": false,
+     "got": " n"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " n"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 1,
+     "hit": true,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 2,
+     "hit": false,
+     "got": " z"
+    }
+   }
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "source": "nine",
+   "target": "seven",
+   "source_i": 3,
+   "target_i": 2,
+   "source_answer": "n",
+   "target_answer": "s",
+   "source_gated": true,
+   "target_gated": false,
+   "distinct": true,
+   "echo": false,
+   "before": 5,
+   "subadd": {
+    "1.0": {
+     "after": 5,
+     "hit": false,
+     "got": " n"
+    },
+    "2.0": {
+     "after": 6,
+     "hit": false,
+     "got": " n"
+    }
+   },
+   "coord": {
+    "1.0": {
+     "after": 4,
+     "hit": false,
+     "got": " f"
+    },
+    "2.0": {
+     "after": 8,
+     "hit": false,
+     "got": " f"
+    }
+   }
+  }
+ ],
+ "loading": [
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "France",
+   "loading": 0.15871000538269678,
+   "gated": true
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "Canada",
+   "loading": 0.1373849759499232,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "China",
+   "loading": 0.1456104318300883,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "capital",
+   "arg": "Egypt",
+   "loading": 0.19276317457358041,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "France",
+   "loading": 0.15282485634088516,
+   "gated": true
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "Canada",
+   "loading": 0.12917370473345122,
+   "gated": true
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "China",
+   "loading": 0.14257647842168808,
+   "gated": true
+  },
+  {
+   "category": "countries",
+   "function": "language",
+   "arg": "Egypt",
+   "loading": 0.16571366538604101,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "France",
+   "loading": 0.18321051448583603,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "Canada",
+   "loading": 0.14719917128483453,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "China",
+   "loading": 0.1474465144177278,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "continent",
+   "arg": "Egypt",
+   "loading": 0.1832466945052147,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "France",
+   "loading": 0.1466264675060908,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "Canada",
+   "loading": 0.11503712522486846,
+   "gated": false
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "China",
+   "loading": 0.13935556262731552,
+   "gated": true
+  },
+  {
+   "category": "countries",
+   "function": "currency",
+   "arg": "Egypt",
+   "loading": 0.15295069416364035,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "February",
+   "loading": 0.11417916665474574,
+   "gated": true
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "April",
+   "loading": 0.08447058623035748,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "July",
+   "loading": 0.10124865670998891,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "season",
+   "arg": "October",
+   "loading": 0.10618123039603233,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "February",
+   "loading": 0.05787299666553736,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "April",
+   "loading": 0.05044423726697763,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "July",
+   "loading": 0.06659497506916523,
+   "gated": true
+  },
+  {
+   "category": "months",
+   "function": "number",
+   "arg": "October",
+   "loading": 0.06822810259958108,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "February",
+   "loading": 0.08298857758442561,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "April",
+   "loading": 0.07372689122955005,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "July",
+   "loading": 0.07687540103991826,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "holiday",
+   "arg": "October",
+   "loading": 0.07834128414591153,
+   "gated": false
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "February",
+   "loading": 0.11642991999785106,
+   "gated": true
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "April",
+   "loading": 0.09373462696870168,
+   "gated": true
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "July",
+   "loading": 0.09594014907876651,
+   "gated": true
+  },
+  {
+   "category": "months",
+   "function": "next_month",
+   "arg": "October",
+   "loading": 0.10681047042210896,
+   "gated": true
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "lion",
+   "loading": 0.15451004107793173,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "eagle",
+   "loading": 0.15311489005883536,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "shark",
+   "loading": 0.1920842081308365,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "habitat",
+   "arg": "spider",
+   "loading": 0.18417742475867271,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "lion",
+   "loading": 0.10790575916568439,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "eagle",
+   "loading": 0.12803384537498155,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "shark",
+   "loading": 0.12876189282784858,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "legs",
+   "arg": "spider",
+   "loading": 0.11910624980616073,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "lion",
+   "loading": 0.1630482686062654,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "eagle",
+   "loading": 0.1639106348156929,
+   "gated": true
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "shark",
+   "loading": 0.20734421412150064,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "class",
+   "arg": "spider",
+   "loading": 0.1880568154156208,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "lion",
+   "loading": 0.1354062631726265,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "eagle",
+   "loading": 0.08591236049930255,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "shark",
+   "loading": 0.16102363169193268,
+   "gated": false
+  },
+  {
+   "category": "animals",
+   "function": "group",
+   "arg": "spider",
+   "loading": 0.1402509113152822,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "three",
+   "loading": 0.03709738701581955,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "five",
+   "loading": 0.055263579823076725,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "seven",
+   "loading": 0.08468213801582654,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "double",
+   "arg": "nine",
+   "loading": 0.09241460030898452,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "three",
+   "loading": 0.06202516394356886,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "five",
+   "loading": 0.0727980537340045,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "seven",
+   "loading": 0.09216063097119331,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "square",
+   "arg": "nine",
+   "loading": 0.10652905888855457,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "three",
+   "loading": 0.053215752355754375,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "five",
+   "loading": 0.0644659794246157,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "seven",
+   "loading": 0.08295406835774581,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "successor",
+   "arg": "nine",
+   "loading": 0.09538234956562519,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "three",
+   "loading": 0.028941121883690357,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "five",
+   "loading": 0.03409824256474773,
+   "gated": true
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "seven",
+   "loading": 0.045529563600818314,
+   "gated": false
+  },
+  {
+   "category": "numbers",
+   "function": "first_letter",
+   "arg": "nine",
+   "loading": 0.05865534426023563,
+   "gated": true
+  }
+ ],
+ "floor": {
+  "n": 64,
+  "cap": 9,
+  "per_cat": {
+   "countries": {
+    "cap": 7,
+    "n": 16
+   },
+   "months": {
+    "cap": 0,
+    "n": 16
+   },
+   "animals": {
+    "cap": 2,
+    "n": 16
+   },
+   "numbers": {
+    "cap": 0,
+    "n": 16
+   }
+  },
+  "swap_n": 27,
+  "swap_hit": 3
+ },
+ "alphas": [
+  1.0,
+  2.0
+ ]
+}

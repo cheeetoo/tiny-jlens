@@ -1,0 +1,70 @@
+Criterion 2 -- directed modulation -- gpt2-small
+band [7, 8, 9]; 30 concept words x 12 carriers; phrasings pooled per condition
+
+2a  the tracked word's best lens rank over the copied (unrelated) sentence
+    cond       kind       hit@1  hit@5 hit@10 hit@25  medRank  medRank(held)  blurt@10
+    baseline   baseline   0.00   0.00  0.01  0.02      721         721       0.00
+    mention    control    0.00   0.01  0.03  0.06      454         532       0.28
+    focus      focus      0.01   0.04  0.07  0.13      303         394       0.26
+    dismissal  suppress   0.00   0.02  0.03  0.07      420         498       0.28
+    negated    suppress   0.01   0.07  0.11  0.18      204         378       0.35
+    (n=360 word x carrier pairs per condition)
+
+2a  paired contrasts (per word x carrier; median-over-phrasings best rank)
+    mention   < baseline :   86%  (n=358, p=1.0e-41)   median 454 vs 721
+    focus     < mention  :   76%  (n=359, p=1.6e-22)   median 303 vs 454
+    dismissal < mention  :   50%  (n=351, p=9.6e-01)   median 420 vs 454
+    negated   < mention  :   84%  (n=358, p=1.9e-37)   median 204 vs 454
+    negated   < dismissal:   84%  (n=358, p=1.2e-38)   median 204 vs 420
+    reading: mention<baseline = priming; focus<mention = instructed activation;
+    dismissal not < mention = no downward control; negated<mention = white-bear.
+
+2a  per-layer median best rank (band is 7-9; 6 and 10 flank it)
+    cond       L6 L7 L8 L9 L10
+    baseline   1394 1373 1330 1226 1132
+    mention    1202 1064  912  479  110
+    focus      1148 1032  754  386   98
+    dismissal  1253 1055  974  477  121
+    negated    1073  872  618  267   51
+    caveat: the effect strengthens monotonically toward the motor layer L10 (lens ~= output
+    there), so it is strongest OUTSIDE the workspace band. Headline metrics use band 7-9 only,
+    and the held-not-spoken column (above) shows the band effect survives excluding positions
+    where the model is about to output the word -- but the word reaches the workspace proper
+    (top-25) on only a minority of trials.
+
+2a  main-text form (name the CATEGORY, track its unnamed MEMBERS): any member's
+    best band rank; paired per category x carrier (absolute rates not comparable
+    to the single-word form -- many targets per trial).
+    mention   < baseline :   80%  (n=259, p=2.0e-21)   median 116 vs 178
+    focus     < baseline :   79%  (n=260, p=1.4e-20)   median 76 vs 178
+    focus     < mention  :   67%  (n=259, p=6.4e-08)   median 76 vs 116
+
+2b  math (silent computation) -- capability-gated
+    direct '{expr} =': 0/24 greedy-correct; median answer rank 8 (the answer is near-but-not-produced when asked directly)
+    answer-in-lens during copy, baseline: hit@25 0.00  medRank 4397
+    answer-in-lens during copy, compute : hit@25 0.00  medRank 4358
+    answer-in-lens during copy, mention : hit@25 0.00  medRank 3891
+    -> the model cannot reliably compute (0 greedy-correct), and the answer never enters
+       the J-space during silent copying (capability floor; the paper's effect grows with model size).
+
+2c  implicit task-demand (paired questions)
+    predict-next-word (q1) works: 7/7 items hit q1_expect in output top-5
+       (so the property IS used automatically -- the model just isn't asked to name it)
+    item        q2 hit@10  q1 hit@10   (stimulus positions with an expected label in band lens top-10)
+    spelling      0/29       0/29     best rank q2 63 / q1 51
+    register      0/35       0/35     best rank q2 112 / q1 153
+    tense         0/26       0/26     best rank q2 175 / q1 194
+    number        0/21       0/21     best rank q2 21 / q1 16
+    pos           0/20       0/20     best rank q2 29 / q1 96
+    pos_tense     0/20       0/20     best rank q2 89 / q1 104
+    tone          0/34       0/34     best rank q2 21 / q1 37
+    -> the automatic task succeeds, but the property LABEL never enters the workspace under
+       either question: GPT-2 uses properties implicitly but cannot summon their names on demand.
+
+2d  privileging: an 'imagine this is French' header vs a real French sentence
+    French probe J-space share: L7 22%, L8 27%, L9 30%
+                  lens 'French' (delta vs neutral)   J-orth probe (delta vs neutral)
+    claim          +2.32  (up 36/36)              +2.83  (up 36/36)
+    real           +6.06  (up 36/36)             +35.58  (up 36/36)
+    dissociation: the claim gets 38% of real's lens effect but only 8% of its probe effect
+    -> the instruction writes 'French' to the J-space without making the text French-like as a real one does.

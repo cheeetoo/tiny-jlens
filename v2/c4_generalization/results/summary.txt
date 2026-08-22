@@ -1,0 +1,61 @@
+Criterion 4 — flexible generalization — gpt2-small
+
+capability gate: 20/64 (category,function,argument) cells answered correctly under the 2-shot frame
+
+gate — cells answered correctly, by category / function (of 4 args each)
+  countries  5/16   capital:1/4  language:3/4  continent:0/4  currency:1/4
+  months     6/16   season:1/4  number:1/4  holiday:0/4  next_month:4/4
+  animals    1/16   habitat:0/4  legs:0/4  class:1/4  group:0/4
+  numbers    8/16   double:0/4  square:2/4  successor:4/4  first_letter:2/4
+
+E1 case study (Fig 18) — one argument read by many functions: France -> China, ONE fixed swap  (3/4 functions follow)
+  capital     clean=' Paris'    -> swapped=' Beijing'   want China's 'Beijing'  (rank  595->1  ) [FOLLOWS]
+  language    clean=' French'   -> swapped=' Chinese'   want China's 'Chinese'  (rank   53->1  ) [FOLLOWS]
+  continent   clean=' France'   -> swapped=' China'     want China's 'Asia'     (rank   10->5  ) [no     ]
+  currency    clean=' Franc'    -> swapped=' Yuan'      want China's 'Yuan'     (rank 1366->1  ) [FOLLOWS]
+
+E2 swap — all 192 ordered pairs, ungated (paper: 76/192 a=1, 101/192 a=2)  (n=192 pairs)   <- capability-penalized: 44/64 cells fail the gate
+     operation      alpha=1              alpha=2
+     subadd     34/192 17.7% [13%,24%]    31/192 16.1% [12%,22%]  (paper's op)
+     coord      28/192 14.6% [10%,20%]    24/192 12.5% [ 9%,18%]  (comparison)
+
+E2 swap — capable subset: target function gated (distinct, no echo)  (n=57 pairs)   <- the clean broadcast rate
+     operation      alpha=1              alpha=2
+     subadd     22/57  38.6% [27%,52%]    18/57  31.6% [21%,44%]  (paper's op)
+     coord      16/57  28.1% [18%,41%]    13/57  22.8% [14%,35%]  (comparison)
+
+E2 swap — strictest: source AND target gated (distinct, no echo)  (n=34 pairs)
+     operation      alpha=1              alpha=2
+     subadd      6/34  17.6% [ 8%,34%]     4/34  11.8% [ 5%,27%]  (paper's op)
+     coord       7/34  20.6% [10%,37%]     6/34  17.6% [ 8%,34%]  (comparison)
+
+  by category, capable subset (target gated, distinct, no echo; subtract-and-add a=1):
+     countries 10/15   67%   median target rank 9 -> 1
+     months     3/15   20%   median target rank 9 -> 3
+     animals    0/3     0%   median target rank 9 -> 2
+     numbers    9/24   38%   median target rank 4 -> 3
+
+  by function, capable subset (a=1) — lookup functions follow, relational ones do not:
+     months   /number        3/3 
+     numbers  /square        6/6 
+     countries/language      7/9 
+     countries/capital       2/3 
+     numbers  /first_letter  3/6 
+     countries/currency      1/3 
+     months   /next_month    0/12
+     animals  /class         0/3 
+     numbers  /successor     0/12
+
+  alpha=2 overshoot: the swap emits the injected ARGUMENT word (not f(argument)) on 56/185 pairs at a=1 but 98/185 at a=2,
+  so a=2 does not help here (opposite to the paper's 76->101); double strength names the argument.
+
+E3 workspace loading (Fig 19 right) — cos(residual, arg lens vector), band mean
+     countries loading +0.152
+     animals   loading +0.151
+     months    loading +0.086
+     numbers   loading +0.067
+  category ordering matches the paper (countries/animals high, number words lowest);
+  but the cell-level loading->success link is weak: Spearman = -0.41 over 32 source cells (paper: loading predicts success well).
+
+floor — paper's bare templates, no frame: capability 9/64; subtract-and-add swap on gated bare cells 3/27
+  per category (bare capability): countries 7/16  months 0/16  animals 2/16  numbers 0/16

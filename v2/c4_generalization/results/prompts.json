@@ -1,0 +1,514 @@
+[
+ {
+  "category": "countries",
+  "function": "capital",
+  "arg": "France",
+  "answer": "Paris",
+  "gated": true,
+  "prompt": "The capital of Japan is the city of Tokyo. The capital of Italy is the city of Rome. The capital of France is the city of"
+ },
+ {
+  "category": "countries",
+  "function": "capital",
+  "arg": "Canada",
+  "answer": "Ottawa",
+  "gated": false,
+  "prompt": "The capital of Japan is the city of Tokyo. The capital of Italy is the city of Rome. The capital of Canada is the city of"
+ },
+ {
+  "category": "countries",
+  "function": "capital",
+  "arg": "China",
+  "answer": "Beijing",
+  "gated": false,
+  "prompt": "The capital of Japan is the city of Tokyo. The capital of Italy is the city of Rome. The capital of China is the city of"
+ },
+ {
+  "category": "countries",
+  "function": "capital",
+  "arg": "Egypt",
+  "answer": "Cairo",
+  "gated": false,
+  "prompt": "The capital of Japan is the city of Tokyo. The capital of Italy is the city of Rome. The capital of Egypt is the city of"
+ },
+ {
+  "category": "countries",
+  "function": "language",
+  "arg": "France",
+  "answer": "French",
+  "gated": true,
+  "prompt": "Most people in Japan speak Japanese. Most people in Italy speak Italian. Most people in France speak"
+ },
+ {
+  "category": "countries",
+  "function": "language",
+  "arg": "Canada",
+  "answer": "English",
+  "gated": true,
+  "prompt": "Most people in Japan speak Japanese. Most people in Italy speak Italian. Most people in Canada speak"
+ },
+ {
+  "category": "countries",
+  "function": "language",
+  "arg": "China",
+  "answer": "Chinese",
+  "gated": true,
+  "prompt": "Most people in Japan speak Japanese. Most people in Italy speak Italian. Most people in China speak"
+ },
+ {
+  "category": "countries",
+  "function": "language",
+  "arg": "Egypt",
+  "answer": "Arabic",
+  "gated": false,
+  "prompt": "Most people in Japan speak Japanese. Most people in Italy speak Italian. Most people in Egypt speak"
+ },
+ {
+  "category": "countries",
+  "function": "continent",
+  "arg": "France",
+  "answer": "Europe",
+  "gated": false,
+  "prompt": "Australia is a country on the continent of Oceania. Brazil is a country on the continent of South. France is a country on the continent of"
+ },
+ {
+  "category": "countries",
+  "function": "continent",
+  "arg": "Canada",
+  "answer": "North",
+  "gated": false,
+  "prompt": "Australia is a country on the continent of Oceania. Brazil is a country on the continent of South. Canada is a country on the continent of"
+ },
+ {
+  "category": "countries",
+  "function": "continent",
+  "arg": "China",
+  "answer": "Asia",
+  "gated": false,
+  "prompt": "Australia is a country on the continent of Oceania. Brazil is a country on the continent of South. China is a country on the continent of"
+ },
+ {
+  "category": "countries",
+  "function": "continent",
+  "arg": "Egypt",
+  "answer": "Africa",
+  "gated": false,
+  "prompt": "Australia is a country on the continent of Oceania. Brazil is a country on the continent of South. Egypt is a country on the continent of"
+ },
+ {
+  "category": "countries",
+  "function": "currency",
+  "arg": "France",
+  "answer": "Euro",
+  "gated": false,
+  "prompt": "The single-word name for the currency now used in Japan is the Yen. The single-word name for the currency now used in Sweden is the Krona. The single-word name for the currency now used in France is the"
+ },
+ {
+  "category": "countries",
+  "function": "currency",
+  "arg": "Canada",
+  "answer": "Dollar",
+  "gated": false,
+  "prompt": "The single-word name for the currency now used in Japan is the Yen. The single-word name for the currency now used in Sweden is the Krona. The single-word name for the currency now used in Canada is the"
+ },
+ {
+  "category": "countries",
+  "function": "currency",
+  "arg": "China",
+  "answer": "Yuan",
+  "gated": true,
+  "prompt": "The single-word name for the currency now used in Japan is the Yen. The single-word name for the currency now used in Sweden is the Krona. The single-word name for the currency now used in China is the"
+ },
+ {
+  "category": "countries",
+  "function": "currency",
+  "arg": "Egypt",
+  "answer": "Pound",
+  "gated": false,
+  "prompt": "The single-word name for the currency now used in Japan is the Yen. The single-word name for the currency now used in Sweden is the Krona. The single-word name for the currency now used in Egypt is the"
+ },
+ {
+  "category": "months",
+  "function": "season",
+  "arg": "February",
+  "answer": "winter",
+  "gated": true,
+  "prompt": "In the northern hemisphere, January is in the season of winter. In the northern hemisphere, June is in the season of summer. In the northern hemisphere, February is in the season of"
+ },
+ {
+  "category": "months",
+  "function": "season",
+  "arg": "April",
+  "answer": "spring",
+  "gated": false,
+  "prompt": "In the northern hemisphere, January is in the season of winter. In the northern hemisphere, June is in the season of summer. In the northern hemisphere, April is in the season of"
+ },
+ {
+  "category": "months",
+  "function": "season",
+  "arg": "July",
+  "answer": "summer",
+  "gated": false,
+  "prompt": "In the northern hemisphere, January is in the season of winter. In the northern hemisphere, June is in the season of summer. In the northern hemisphere, July is in the season of"
+ },
+ {
+  "category": "months",
+  "function": "season",
+  "arg": "October",
+  "answer": "autumn",
+  "gated": false,
+  "prompt": "In the northern hemisphere, January is in the season of winter. In the northern hemisphere, June is in the season of summer. In the northern hemisphere, October is in the season of"
+ },
+ {
+  "category": "months",
+  "function": "number",
+  "arg": "February",
+  "answer": "two",
+  "gated": false,
+  "prompt": "Counting from January, March is month number three. Counting from January, June is month number six. Counting from January, February is month number"
+ },
+ {
+  "category": "months",
+  "function": "number",
+  "arg": "April",
+  "answer": "four",
+  "gated": false,
+  "prompt": "Counting from January, March is month number three. Counting from January, June is month number six. Counting from January, April is month number"
+ },
+ {
+  "category": "months",
+  "function": "number",
+  "arg": "July",
+  "answer": "seven",
+  "gated": true,
+  "prompt": "Counting from January, March is month number three. Counting from January, June is month number six. Counting from January, July is month number"
+ },
+ {
+  "category": "months",
+  "function": "number",
+  "arg": "October",
+  "answer": "ten",
+  "gated": false,
+  "prompt": "Counting from January, March is month number three. Counting from January, June is month number six. Counting from January, October is month number"
+ },
+ {
+  "category": "months",
+  "function": "holiday",
+  "arg": "February",
+  "answer": "Valentine",
+  "gated": false,
+  "prompt": "The biggest holiday in December is Christmas. The biggest holiday in November is Thanksgiving. The biggest holiday in February is"
+ },
+ {
+  "category": "months",
+  "function": "holiday",
+  "arg": "April",
+  "answer": "Easter",
+  "gated": false,
+  "prompt": "The biggest holiday in December is Christmas. The biggest holiday in November is Thanksgiving. The biggest holiday in April is"
+ },
+ {
+  "category": "months",
+  "function": "holiday",
+  "arg": "July",
+  "answer": "Independence",
+  "gated": false,
+  "prompt": "The biggest holiday in December is Christmas. The biggest holiday in November is Thanksgiving. The biggest holiday in July is"
+ },
+ {
+  "category": "months",
+  "function": "holiday",
+  "arg": "October",
+  "answer": "Halloween",
+  "gated": false,
+  "prompt": "The biggest holiday in December is Christmas. The biggest holiday in November is Thanksgiving. The biggest holiday in October is"
+ },
+ {
+  "category": "months",
+  "function": "next_month",
+  "arg": "February",
+  "answer": "March",
+  "gated": true,
+  "prompt": "The month right after January is February. The month right after June is July. The month right after February is"
+ },
+ {
+  "category": "months",
+  "function": "next_month",
+  "arg": "April",
+  "answer": "May",
+  "gated": true,
+  "prompt": "The month right after January is February. The month right after June is July. The month right after April is"
+ },
+ {
+  "category": "months",
+  "function": "next_month",
+  "arg": "July",
+  "answer": "August",
+  "gated": true,
+  "prompt": "The month right after January is February. The month right after June is July. The month right after July is"
+ },
+ {
+  "category": "months",
+  "function": "next_month",
+  "arg": "October",
+  "answer": "November",
+  "gated": true,
+  "prompt": "The month right after January is February. The month right after June is July. The month right after October is"
+ },
+ {
+  "category": "animals",
+  "function": "habitat",
+  "arg": "lion",
+  "answer": "savanna",
+  "gated": false,
+  "prompt": "The natural habitat of a camel is the desert. The natural habitat of a frog is the pond. The natural habitat of a lion is the"
+ },
+ {
+  "category": "animals",
+  "function": "habitat",
+  "arg": "eagle",
+  "answer": "sky",
+  "gated": false,
+  "prompt": "The natural habitat of a camel is the desert. The natural habitat of a frog is the pond. The natural habitat of a eagle is the"
+ },
+ {
+  "category": "animals",
+  "function": "habitat",
+  "arg": "shark",
+  "answer": "ocean",
+  "gated": false,
+  "prompt": "The natural habitat of a camel is the desert. The natural habitat of a frog is the pond. The natural habitat of a shark is the"
+ },
+ {
+  "category": "animals",
+  "function": "habitat",
+  "arg": "spider",
+  "answer": "outdoors",
+  "gated": false,
+  "prompt": "The natural habitat of a camel is the desert. The natural habitat of a frog is the pond. The natural habitat of a spider is the"
+ },
+ {
+  "category": "animals",
+  "function": "legs",
+  "arg": "lion",
+  "answer": "four",
+  "gated": false,
+  "prompt": "How many legs does an ant have? In one word: six. How many legs does a crab have? In one word: ten. How many legs does a lion have? In one word:"
+ },
+ {
+  "category": "animals",
+  "function": "legs",
+  "arg": "eagle",
+  "answer": "two",
+  "gated": false,
+  "prompt": "How many legs does an ant have? In one word: six. How many legs does a crab have? In one word: ten. How many legs does a eagle have? In one word:"
+ },
+ {
+  "category": "animals",
+  "function": "legs",
+  "arg": "shark",
+  "answer": "none",
+  "gated": false,
+  "prompt": "How many legs does an ant have? In one word: six. How many legs does a crab have? In one word: ten. How many legs does a shark have? In one word:"
+ },
+ {
+  "category": "animals",
+  "function": "legs",
+  "arg": "spider",
+  "answer": "eight",
+  "gated": false,
+  "prompt": "How many legs does an ant have? In one word: six. How many legs does a crab have? In one word: ten. How many legs does a spider have? In one word:"
+ },
+ {
+  "category": "animals",
+  "function": "class",
+  "arg": "lion",
+  "answer": "cat",
+  "gated": false,
+  "prompt": "Biologically, a dog is a type of mammal. Biologically, a snake is a type of reptile. Biologically, a lion is a type of"
+ },
+ {
+  "category": "animals",
+  "function": "class",
+  "arg": "eagle",
+  "answer": "bird",
+  "gated": true,
+  "prompt": "Biologically, a dog is a type of mammal. Biologically, a snake is a type of reptile. Biologically, a eagle is a type of"
+ },
+ {
+  "category": "animals",
+  "function": "class",
+  "arg": "shark",
+  "answer": "fish",
+  "gated": false,
+  "prompt": "Biologically, a dog is a type of mammal. Biologically, a snake is a type of reptile. Biologically, a shark is a type of"
+ },
+ {
+  "category": "animals",
+  "function": "class",
+  "arg": "spider",
+  "answer": "arachnid",
+  "gated": false,
+  "prompt": "Biologically, a dog is a type of mammal. Biologically, a snake is a type of reptile. Biologically, a spider is a type of"
+ },
+ {
+  "category": "animals",
+  "function": "group",
+  "arg": "lion",
+  "answer": "pride",
+  "gated": false,
+  "prompt": "A group of wolves is called a pack. A group of fish is called a school. A group of lions is called a"
+ },
+ {
+  "category": "animals",
+  "function": "group",
+  "arg": "eagle",
+  "answer": "convocation",
+  "gated": false,
+  "prompt": "A group of wolves is called a pack. A group of fish is called a school. A group of eagles is called a"
+ },
+ {
+  "category": "animals",
+  "function": "group",
+  "arg": "shark",
+  "answer": "shiver",
+  "gated": false,
+  "prompt": "A group of wolves is called a pack. A group of fish is called a school. A group of sharks is called a"
+ },
+ {
+  "category": "animals",
+  "function": "group",
+  "arg": "spider",
+  "answer": "cluster",
+  "gated": false,
+  "prompt": "A group of wolves is called a pack. A group of fish is called a school. A group of spiders is called a"
+ },
+ {
+  "category": "numbers",
+  "function": "double",
+  "arg": "three",
+  "answer": "six",
+  "gated": false,
+  "prompt": "Two times one equals two. Two times four equals eight. Two times three equals"
+ },
+ {
+  "category": "numbers",
+  "function": "double",
+  "arg": "five",
+  "answer": "ten",
+  "gated": false,
+  "prompt": "Two times one equals two. Two times four equals eight. Two times five equals"
+ },
+ {
+  "category": "numbers",
+  "function": "double",
+  "arg": "seven",
+  "answer": "fourteen",
+  "gated": false,
+  "prompt": "Two times one equals two. Two times four equals eight. Two times seven equals"
+ },
+ {
+  "category": "numbers",
+  "function": "double",
+  "arg": "nine",
+  "answer": "eighteen",
+  "gated": false,
+  "prompt": "Two times one equals two. Two times four equals eight. Two times nine equals"
+ },
+ {
+  "category": "numbers",
+  "function": "square",
+  "arg": "three",
+  "answer": "nine",
+  "gated": false,
+  "prompt": "Two squared equals four. Six squared equals thirty. three squared equals"
+ },
+ {
+  "category": "numbers",
+  "function": "square",
+  "arg": "five",
+  "answer": "twenty",
+  "gated": true,
+  "prompt": "Two squared equals four. Six squared equals thirty. five squared equals"
+ },
+ {
+  "category": "numbers",
+  "function": "square",
+  "arg": "seven",
+  "answer": "forty",
+  "gated": true,
+  "prompt": "Two squared equals four. Six squared equals thirty. seven squared equals"
+ },
+ {
+  "category": "numbers",
+  "function": "square",
+  "arg": "nine",
+  "answer": "eighty",
+  "gated": false,
+  "prompt": "Two squared equals four. Six squared equals thirty. nine squared equals"
+ },
+ {
+  "category": "numbers",
+  "function": "successor",
+  "arg": "three",
+  "answer": "four",
+  "gated": true,
+  "prompt": "The number that comes right after one is two. The number that comes right after twelve is thirteen. The number that comes right after three is"
+ },
+ {
+  "category": "numbers",
+  "function": "successor",
+  "arg": "five",
+  "answer": "six",
+  "gated": true,
+  "prompt": "The number that comes right after one is two. The number that comes right after twelve is thirteen. The number that comes right after five is"
+ },
+ {
+  "category": "numbers",
+  "function": "successor",
+  "arg": "seven",
+  "answer": "eight",
+  "gated": true,
+  "prompt": "The number that comes right after one is two. The number that comes right after twelve is thirteen. The number that comes right after seven is"
+ },
+ {
+  "category": "numbers",
+  "function": "successor",
+  "arg": "nine",
+  "answer": "ten",
+  "gated": true,
+  "prompt": "The number that comes right after one is two. The number that comes right after twelve is thirteen. The number that comes right after nine is"
+ },
+ {
+  "category": "numbers",
+  "function": "first_letter",
+  "arg": "three",
+  "answer": "t",
+  "gated": false,
+  "prompt": "The word 'zero' begins with the letter z. The word 'eight' begins with the letter e. The word 'three' begins with the letter"
+ },
+ {
+  "category": "numbers",
+  "function": "first_letter",
+  "arg": "five",
+  "answer": "f",
+  "gated": true,
+  "prompt": "The word 'zero' begins with the letter z. The word 'eight' begins with the letter e. The word 'five' begins with the letter"
+ },
+ {
+  "category": "numbers",
+  "function": "first_letter",
+  "arg": "seven",
+  "answer": "s",
+  "gated": false,
+  "prompt": "The word 'zero' begins with the letter z. The word 'eight' begins with the letter e. The word 'seven' begins with the letter"
+ },
+ {
+  "category": "numbers",
+  "function": "first_letter",
+  "arg": "nine",
+  "answer": "n",
+  "gated": true,
+  "prompt": "The word 'zero' begins with the letter z. The word 'eight' begins with the letter e. The word 'nine' begins with the letter"
+ }
+]

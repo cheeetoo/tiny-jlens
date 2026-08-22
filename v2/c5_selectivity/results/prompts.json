@@ -1,0 +1,18 @@
+{
+ "two_hop": [
+  "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak French, the capital city is called",
+  "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak German, the capital city is called",
+  "In the country where people speak Arabic, the capital city is called Cairo. In the country where people speak Hebrew, the capital city is called Jerusalem. In the country where people speak Italian, the capital city is called"
+ ],
+ "one_hop": [
+  "The capital of Egypt is Cairo. The capital of Japan is Tokyo. The capital of France is",
+  "The capital of Egypt is Cairo. The capital of Japan is Tokyo. The capital of Germany is",
+  "The capital of Egypt is Cairo. The capital of Japan is Tokyo. The capital of Spain is"
+ ],
+ "induction": [
+  " harbor road The quick brown fox jumps over the lazy dog. harbor",
+  " cloud glass The quick brown fox jumps over the lazy dog. cloud",
+  " iron tiger The quick brown fox jumps over the lazy dog. iron"
+ ],
+ "pretrain": "Robert Boulter is an English film , television and theatre actor . He had a guest @-@ starring role on the television series The Bill in 2000 . This was followed by a starring role in the play Herons "
+}

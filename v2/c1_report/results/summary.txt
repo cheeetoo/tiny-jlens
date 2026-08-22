@@ -1,0 +1,45 @@
+gate (does the model answer with a candidate?)
+  country     pass  greedy ' Japan'     source ' Japan'     top-5 [' Japan', ' China', ' United', ' Brazil', ' Australia']
+  color       pass  greedy ' Blue'      source ' Blue'      top-5 [' Blue', ' Green', ' Black', ' White', ' Red']
+  fruit       FAIL  greedy ' Fruit'     source ' Peach'     top-5 [' Fruit', ' Strawberry', ' Green', ' Peach', ' Orange']
+  sport       pass  greedy ' Running'   source ' Running'   top-5 [' Running', ' Tennis', ' Basketball', ' Football', ' Golf']
+  instrument  pass  greedy ' Guitar'    source ' Guitar'    top-5 [' Guitar', ' Piano', ' Music', ' Drum', ' Instrument']
+  planet      pass  greedy ' Mars'      source ' Mars'      top-5 [' Mars', ' Venus', ' Jupiter', ' Earth', ' Saturn']
+  tree        FAIL  greedy ' N'         source ' Pine'      top-5 [' N', ' Japan', ' Tree', ' A', ' K']
+  bird        FAIL  greedy ' Blue'      source ' Dove'      top-5 [' Blue', ' Bird', ' Black', ' Yellow', ' Red']
+  language    pass  greedy ' English'   source ' English'   top-5 [' English', ' Japanese', ' Chinese', ' Spanish', ' French']
+  profession  FAIL  greedy ' Sports'    source ' Farmer'    top-5 [' Sports', ' Golf', ' Tennis', ' Fishing', ' Football']
+  beverage    pass  greedy ' Beer'      source ' Beer'      top-5 [' Beer', ' Coke', ' Wine', ' Tea', ' Soda']
+  organ       FAIL  greedy ' Piano'     source ' Heart'     top-5 [' Piano', ' Guitar', ' Organ', ' Drum', ' Horse']
+  city        pass  greedy ' Tokyo'     source ' Tokyo'     top-5 [' Tokyo', ' Japan', ' New', ' Seattle', ' China']
+  river       pass  greedy ' Nile'      source ' Nile'      top-5 [' Nile', ' Lake', ' Snake', ' The', ' River']
+  9/14 categories pass
+
+1a  Spearman(lens, output) over the 10 candidates at ':', mean over categories (all | gate-passed)
+  L0  +0.054 | +0.053
+  L1  +0.042 | +0.053
+  L2  +0.046 | +0.094
+  L3  +0.130 | +0.172
+  L4  +0.089 | +0.111
+  L5  +0.222 | +0.305
+  L6  +0.359 | +0.429
+  L7  +0.436 | +0.424   <- band
+  L8  +0.471 | +0.468   <- band
+  L9  +0.568 | +0.532   <- band
+  L10 +0.628 | +0.599
+
+1b  swap: target reaches top-5 (top-1); targets starting at output rank >= 11
+  gate-passed                n= 38  100.0% [ 91%, 100%]  (100%)  median rank 37 -> 1
+  all categories             n= 78  100.0% [ 95%, 100%]  (100%)  median rank 95 -> 1
+
+1d/1e  same, swapping along each component at the same magnitude
+  gate-passed    lens        n= 38  100.0% [ 91%, 100%]  (100%)  median rank 37 -> 1
+  gate-passed    jpart       n= 38  97.4% [ 87%, 100%]  ( 84%)  median rank 37 -> 1
+  gate-passed    nonj        n= 38   0.0% [  0%,   9%]  (  0%)  median rank 37 -> 38
+  gate-passed    nonj_clamp  n= 38   2.6% [  0%,  13%]  (  0%)  median rank 37 -> 38
+  all categories lens        n= 78  100.0% [ 95%, 100%]  (100%)  median rank 95 -> 1
+  all categories jpart       n= 78  76.9% [ 66%,  85%]  ( 68%)  median rank 95 -> 1
+  all categories nonj        n= 78   0.0% [  0%,   5%]  (  0%)  median rank 95 -> 119
+  all categories nonj_clamp  n= 78   1.3% [  0%,   7%]  (  0%)  median rank 95 -> 104
+
+J-space component's share of concept-vector variance (median): L7 22.6%, L8 25.6%, L9 33.4%
