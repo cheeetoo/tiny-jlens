@@ -121,9 +121,13 @@ half the paper's 76/192 (40%). The gap is capability: 44 of the 64 cells fail th
 those 192 pairs are asking the model to produce an answer it cannot produce for any argument. On the
 **capable subset** — pairs whose target function the model can actually compute (target cell gated,
 distinct, no echo) — the swap lands the target answer on **22/57 (39%)**, essentially the paper's
-40%. (Restricting further to source-AND-target gated gives 6/34, but that filter is too strict: it
-discards the capital/currency case-study successes above, where the *source* fact was one gpt2 gets
-wrong; target-gating is the faithful "the function is computable" condition.)
+40%. Restricting further to source-AND-target gated gives 6/34 (18%), but that is composition, not
+gating: 24 of those 34 pairs are the two successor functions (next_month, successor), which go 0/24
+under every gating. On the other functions gating barely matters — both-gated 6/10 (60%),
+target-gated 22/33 (67%), ungated 32/161 (20%) — and all 22 target-gated hits are on non-successor
+functions (`gating_breakdown.py`). The case-study pairs above are themselves mixed-gating (capital:
+source gated, target not; currency: the reverse), which is the argument for target-gating: the
+function consumes the swapped-in argument even when gpt2 cannot answer one of the cells on its own.
 
 **By category** (capable subset, α=1): countries **10/15 (67%)**, months 3/15, numbers 9/24, animals
 0/3. Countries are the most reliable, matching the paper. Number words are **not** the worst here,

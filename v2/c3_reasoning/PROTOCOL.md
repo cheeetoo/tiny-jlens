@@ -62,8 +62,10 @@ paper's Fig 6 rule, reused), and evaluate every valid same-family swap partner p
 **Lens / swap.** See `../README.md` for the lens and the vocabulary-mean centering. The swap is
 the paper's **coordinate swap** (Methods "patching in lens coordinates", Fig 4C), clamped to the
 swapped clean-pass values across the band — the operation §3.3 names (`swaps.py`). This is
-*not* the subtract-and-add form used for criterion 1: for this experiment the subtract-and-add
-form drives the answer flip on ≈0% of trials here, while the coordinate swap gives 71%.
+*not* the subtract-and-add form used for criterion 1. Both operations work here (`swap_ops.py`,
+same 999 trials): coordinate swap 705/999 = 70.6%, subtract-and-add 854/999 = 85.5%. We report
+the coordinate swap because §3.3 names it and it is the more conservative number. (An earlier
+note here said subtract-and-add gave ≈0%; that was the raw, uncentered gauge — see `../README.md`.)
 
 ## E1 — the unspoken intermediate surfaces in the band
 
@@ -152,7 +154,7 @@ are the paper's and are **not** deviations. These are:
 |---|---|
 | base model: **few-shot two-hop frame** | gpt2-small answers **7–9/90** of the paper's own two-hop prompts; the frame teaches the relation (as criterion 1's list frame taught the report format), and the intermediate is still unspoken (E1) and computed (`null` control) |
 | **country families only**; the paper's riddle phrasings (spider→legs) dropped | 0/6 capability on the bare riddles — the capability floor |
-| **coordinate swap** (Fig 4C), not the subtract-and-add of criterion 1 | §3.3 names the coordinate swap; on gpt2-small subtract-and-add flips ≈0% here while the coordinate swap gives 71% (the reverse of criterion 1) |
+| **coordinate swap** (Fig 4C), not the subtract-and-add of criterion 1 | §3.3 names the coordinate swap; it is also the more conservative of the two on gpt2-small (70.6% vs 85.5% for subtract-and-add, `swap_ops.py`) |
 | swap graded over **all** valid same-family partners per item (n = trials) | statistical power, as criterion 1 did with its 10 candidates; the paper uses one random partner |
 | **probe cues authored** for the base model; our non-negative pursuit stands in for "gradient pursuit" | the paper's probe-construction prompts are not released; cues imply the country and ask a different attribute, name never next token |
 | J-space share of probe variance 27–57% vs paper 10–15% | GPT-2's 768-dim residual + k=25 lens directions capture more; same scale effect as criterion 1 (23–33% vs 6–7%) |

@@ -17,7 +17,8 @@ concept cannot be re-derived downstream.
 
 This is the operation §3.3 names; unlike the subtract-and-add form used for
 criterion 1's verbal report, it does not assume the target is absent before the
-swap.  (On gpt2-small the subtract-and-add form gives ~0% here; see PROTOCOL.md.)
+swap.  (On gpt2-small both forms work: 70.6% coordinate vs 85.5% subtract-and-add over the
+same 999 trials, `swap_ops.py`; the coordinate swap is reported as the more conservative.)
 
 Component swap (§3.3 privileging, Fig. 16).  A probe direction is not a single
 lens vector, so its swap is an additive delta along the component difference,

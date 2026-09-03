@@ -55,5 +55,7 @@ c5_selectivity/      criterion 5: selectivity  (same layout)
 * **J-lens vector** of token t at layer L: the rows of W_U J_L, as in the paper (v_t = J_Lᵀ w_t).
 * **centering**: v_t ← v_t − mean_t' v_t'.  Raw GPT-2 J-lens vectors have mean pairwise cosine
   0.99 (a cone inherited from the unembedding); centered, 0.00.  Readouts are unchanged.
-* **workspace band** = layers 7–9.  **ranks** are 1-indexed.  **prompts** get `<|endoftext|>`
+* **workspace band** = layers 7–9 (`explore/band/`: lens top-1 autocorrelation above the shuffled
+  null from layer 6, top-1 agreement with the output <15% through layer 9; the paper's other band
+  signatures — a kurtosis rise, CKA blocks — do not appear in gpt2-small).  **ranks** are 1-indexed.  **prompts** get `<|endoftext|>`
   prepended.
