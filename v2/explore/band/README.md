@@ -48,3 +48,22 @@ Similarity decays with layer distance at every depth and, if anything, decays fa
 Band = layers **7–9**: autocorrelation above the null from L6, top-1 agreement with the output still
 <15% at L9, L10 clearly motor.  L6 and L10 are both arguable; nothing in the structural statistics
 picks out 7–9 sharply, and the post should say so rather than present the band as given.
+
+## MLP gain (`mlp_gain.py`, `mlp_gain.json`)
+
+Paper Fig 32: output norm of block L+1's MLP on a unit direction, normalized by the median over
+random unit directions.  2000 J-lens vectors per layer.
+
+| L | centered J-lens | raw J-lens | neuron output dirs |
+|---|---|---|---|
+| 0 | 1.05 | 6.01 | 1.04 |
+| 3 | 0.68 | 1.43 | 0.96 |
+| 6 | 1.32 | 3.04 | 1.07 |
+| 7 | 1.23 | 2.78 | 1.03 |
+| 8 | 1.32 | 2.16 | 0.97 |
+| 9 | 1.36 | 1.64 | 0.91 |
+| 10 | 1.54 | 0.46 | 0.93 |
+
+Centered J-lens directions are amplified 1.2–1.5× in L6–10 (neuron directions ≈1.0×); the paper
+reports ≈10× through Claude's workspace band.  The raw-vector column is the cone direction and is
+not meaningful.
