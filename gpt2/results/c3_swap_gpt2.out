@@ -1,14 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15723.73it/s]
-90 items after capability filter + partner assignment (7 from the paper's sets)
-...............................................................
-
-swap success (target answer graded top-1), n=63 items
-window       cra1 cra2 cca1 cca2 pra1 pra2 pca1 pca2 
-all            71   62   79   60    0    0   32    5
-mid+           73   62   78   68    0    0   40    5
-late           71   70   76   67    0    0   48    3
-later          68   67   71   68    0    2   59   13
-last3          63   59   65   62    0    0   70   33
-late-nomotor   73   70   73   76    0    0   68   33
-mid            71   62   78   71    0    0   59   17

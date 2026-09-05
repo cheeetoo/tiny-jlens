@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 *.egg-info/
 .claude/worktrees/
+.ruff_cache/
+PROTOCOL.md
