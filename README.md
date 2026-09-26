@@ -23,7 +23,15 @@ jl/                     the library
   c4_generalization.py  criterion 4: flexible generalization
   c5_selectivity.py     criterion 5: selectivity
   band.py               the structural statistics behind the choice of band
+  followups.py          follow-up experiments: protection rule, ignition, lists, heads, neurons,
+                        lens variants, band sensitivity, linear check, injected thought, seeds
+  qwen_control.py       the tests GPT-2 fails, on Qwen3-1.7B (instruct) with its Neuronpedia lens
+  introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)
 results/<criterion>/    results.json, prompts.json, summary.txt from the runs behind PROTOCOL.md
+results/followups/      one JSON per follow-up experiment
+post/                   the blog post draft (post.md), figures, and NOTES.md
+commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
+                        (local copies of the paper and commentary texts are gitignored)
 lenses/gpt2-small/      the released lens: fit config and convergence (the .pt is not in git)
 ref/jacobian-lens/      Anthropic's reference implementation (installed editable; the backend)
 ```
@@ -44,7 +52,8 @@ python -m jl.c5_selectivity
 ```
 
 Each writes `results/<criterion>/{results.json, prompts.json, summary.txt}` and prints the
-summary. Two secondary analyses can be run with:
+summary. The follow-ups run with `python -m jl.followups [name ...]` and
+`python -m jl.qwen_control [name ...]`, and `python -m jl.introspect_probs [gpt2|qwen]`. Two secondary analyses can be run with:
 
 ```
 python -m jl.c3_reasoning swap_ops       # E3 under both swap operations
@@ -52,7 +61,8 @@ python -m jl.c4_generalization gating    # E2 swap rates by gating class
 python -m jl.band [stats|cka|mlp_gain]   # the band statistics
 ```
 
-Setup: `pip install -e ref/jacobian-lens`, plus torch, transformers, datasets and scipy. The
+Setup: `pip install -e ref/jacobian-lens`, plus torch, transformers, datasets and scipy. (A working
+environment is in `.venv/`: `source .venv/bin/activate`.) The
 lens file itself is a large binary and is not in git: download the authors' released gpt2-small
 lens (Neuronpedia, `neuronpedia/jacobian-lens`) to
 `lenses/_hf/gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt`, or point `JLENS_LENS` at

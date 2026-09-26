@@ -7,3 +7,12 @@ __pycache__/
 .claude/worktrees/
 .ruff_cache/
 PROTOCOL.md
+.venv/
+.DS_Store
+# local reading copies of third-party texts (links are in commentary/README.md);
+# not redistributed in this public repo
+paper.md
+commentary/*
+!commentary/README.md
+# generated preview of the post
+post/post.html

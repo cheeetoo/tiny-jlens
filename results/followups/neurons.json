@@ -1,0 +1,90 @@
+[
+ {
+  "layer": 0,
+  "frac_J": 0.078125,
+  "frac_J_vs_random": 0.3597005307674408,
+  "median_best_cos_J": 0.12109386175870895,
+  "median_best_cos_neuron": 0.19590745866298676,
+  "median_best_cos_random": 0.13271933794021606
+ },
+ {
+  "layer": 1,
+  "frac_J": 0.02278645895421505,
+  "frac_J_vs_random": 0.2272135466337204,
+  "median_best_cos_J": 0.11104992032051086,
+  "median_best_cos_neuron": 0.197571262717247,
+  "median_best_cos_random": 0.13261182606220245
+ },
+ {
+  "layer": 2,
+  "frac_J": 0.014322916977107525,
+  "frac_J_vs_random": 0.1279296875,
+  "median_best_cos_J": 0.10537168383598328,
+  "median_best_cos_neuron": 0.17917370796203613,
+  "median_best_cos_random": 0.1327088475227356
+ },
+ {
+  "layer": 3,
+  "frac_J": 0.021484375,
+  "frac_J_vs_random": 0.1357421875,
+  "median_best_cos_J": 0.10660901665687561,
+  "median_best_cos_neuron": 0.1765526831150055,
+  "median_best_cos_random": 0.13300497829914093
+ },
+ {
+  "layer": 4,
+  "frac_J": 0.0413411445915699,
+  "frac_J_vs_random": 0.2874349057674408,
+  "median_best_cos_J": 0.11827386915683746,
+  "median_best_cos_neuron": 0.18732571601867676,
+  "median_best_cos_random": 0.13267681002616882
+ },
+ {
+  "layer": 5,
+  "frac_J": 0.1315104216337204,
+  "frac_J_vs_random": 0.462890625,
+  "median_best_cos_J": 0.12970110774040222,
+  "median_best_cos_neuron": 0.18291358649730682,
+  "median_best_cos_random": 0.1325622797012329
+ },
+ {
+  "layer": 6,
+  "frac_J": 0.212890625,
+  "frac_J_vs_random": 0.5686848759651184,
+  "median_best_cos_J": 0.13805292546749115,
+  "median_best_cos_neuron": 0.17272724211215973,
+  "median_best_cos_random": 0.132929727435112
+ },
+ {
+  "layer": 7,
+  "frac_J": 0.2880859375,
+  "frac_J_vs_random": 0.6318359375,
+  "median_best_cos_J": 0.14412465691566467,
+  "median_best_cos_neuron": 0.1661665141582489,
+  "median_best_cos_random": 0.1330125480890274
+ },
+ {
+  "layer": 8,
+  "frac_J": 0.3447265625,
+  "frac_J_vs_random": 0.693359375,
+  "median_best_cos_J": 0.1486235409975052,
+  "median_best_cos_neuron": 0.16243372857570648,
+  "median_best_cos_random": 0.133003830909729
+ },
+ {
+  "layer": 9,
+  "frac_J": 0.423828125,
+  "frac_J_vs_random": 0.7942708134651184,
+  "median_best_cos_J": 0.1588510125875473,
+  "median_best_cos_neuron": 0.1630685031414032,
+  "median_best_cos_random": 0.13258129358291626
+ },
+ {
+  "layer": 10,
+  "frac_J": 0.6106770634651184,
+  "frac_J_vs_random": 0.8323567509651184,
+  "median_best_cos_J": 0.16260658204555511,
+  "median_best_cos_neuron": 0.14528429508209229,
+  "median_best_cos_random": 0.13349328935146332
+ }
+]

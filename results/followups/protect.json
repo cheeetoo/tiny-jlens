@@ -1,0 +1,448 @@
+{
+ "strengths": {
+  "light": [
+   8
+  ],
+  "medium": [
+   7,
+   8,
+   9
+  ]
+ },
+ "rows": [
+  {
+   "task": "two_hop",
+   "strength": "light",
+   "n": 48,
+   "J_protect10": 0.20833333333333334,
+   "R_protect10": 0.9166666666666666,
+   "J_protect0": 0.10416666666666667,
+   "R_protect0": 0.9166666666666666
+  },
+  {
+   "task": "two_hop",
+   "strength": "medium",
+   "n": 48,
+   "J_protect10": 0.0,
+   "R_protect10": 0.75,
+   "J_protect0": 0.0,
+   "R_protect0": 0.7291666666666666
+  },
+  {
+   "task": "one_hop",
+   "strength": "light",
+   "n": 52,
+   "J_protect10": 0.7307692307692307,
+   "R_protect10": 0.9807692307692307,
+   "J_protect0": 0.4807692307692308,
+   "R_protect0": 0.9807692307692307
+  },
+  {
+   "task": "one_hop",
+   "strength": "medium",
+   "n": 52,
+   "J_protect10": 0.057692307692307696,
+   "R_protect10": 0.9615384615384616,
+   "J_protect0": 0.057692307692307696,
+   "R_protect0": 0.9615384615384616
+  },
+  {
+   "task": "induction",
+   "strength": "light",
+   "n": 40,
+   "J_protect10": 0.95,
+   "R_protect10": 1.0,
+   "J_protect0": 0.925,
+   "R_protect0": 1.0
+  },
+  {
+   "task": "induction",
+   "strength": "medium",
+   "n": 40,
+   "J_protect10": 0.65,
+   "R_protect10": 0.95,
+   "J_protect0": 0.25,
+   "R_protect0": 0.9
+  },
+  {
+   "task": "pretrain_match",
+   "strength": "light",
+   "n": 16,
+   "J_protect10": 0.7084249084249085,
+   "R_protect10": 0.8153846153846154,
+   "J_protect0": 0.6747252747252748,
+   "R_protect0": 0.8131868131868132
+  },
+  {
+   "task": "pretrain_match",
+   "strength": "medium",
+   "n": 16,
+   "J_protect10": 0.5384615384615384,
+   "R_protect10": 0.671062271062271,
+   "J_protect0": 0.5054945054945055,
+   "R_protect0": 0.6659340659340659
+  }
+ ],
+ "overlap": [
+  {
+   "task": "two_hop",
+   "layer": 0,
+   "n": 48,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 21582
+  },
+  {
+   "task": "two_hop",
+   "layer": 1,
+   "n": 48,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 15766
+  },
+  {
+   "task": "two_hop",
+   "layer": 2,
+   "n": 48,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 18432
+  },
+  {
+   "task": "two_hop",
+   "layer": 3,
+   "n": 48,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 10808
+  },
+  {
+   "task": "two_hop",
+   "layer": 4,
+   "n": 48,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 13508
+  },
+  {
+   "task": "two_hop",
+   "layer": 5,
+   "n": 48,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 5628
+  },
+  {
+   "task": "two_hop",
+   "layer": 6,
+   "n": 48,
+   "fires": 0.020833333333333332,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 1675
+  },
+  {
+   "task": "two_hop",
+   "layer": 7,
+   "n": 48,
+   "fires": 0.3958333333333333,
+   "answer_in_lens_top10": 0.14583333333333334,
+   "answer_lens_rank_median": 133
+  },
+  {
+   "task": "two_hop",
+   "layer": 8,
+   "n": 48,
+   "fires": 1.0,
+   "answer_in_lens_top10": 0.9583333333333334,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "two_hop",
+   "layer": 9,
+   "n": 48,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "two_hop",
+   "layer": 10,
+   "n": 48,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "two_hop",
+   "layer": 11,
+   "n": 48,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "one_hop",
+   "layer": 0,
+   "n": 52,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 29864
+  },
+  {
+   "task": "one_hop",
+   "layer": 1,
+   "n": 52,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 23680
+  },
+  {
+   "task": "one_hop",
+   "layer": 2,
+   "n": 52,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 30750
+  },
+  {
+   "task": "one_hop",
+   "layer": 3,
+   "n": 52,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 10927
+  },
+  {
+   "task": "one_hop",
+   "layer": 4,
+   "n": 52,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 5875
+  },
+  {
+   "task": "one_hop",
+   "layer": 5,
+   "n": 52,
+   "fires": 0.0,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 808
+  },
+  {
+   "task": "one_hop",
+   "layer": 6,
+   "n": 52,
+   "fires": 0.1346153846153846,
+   "answer_in_lens_top10": 0.057692307692307696,
+   "answer_lens_rank_median": 309
+  },
+  {
+   "task": "one_hop",
+   "layer": 7,
+   "n": 52,
+   "fires": 0.6346153846153846,
+   "answer_in_lens_top10": 0.40384615384615385,
+   "answer_lens_rank_median": 37
+  },
+  {
+   "task": "one_hop",
+   "layer": 8,
+   "n": 52,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "one_hop",
+   "layer": 9,
+   "n": 52,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "one_hop",
+   "layer": 10,
+   "n": 52,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "one_hop",
+   "layer": 11,
+   "n": 52,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "induction",
+   "layer": 0,
+   "n": 40,
+   "fires": 0.4,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 8708
+  },
+  {
+   "task": "induction",
+   "layer": 1,
+   "n": 40,
+   "fires": 0.425,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 11812
+  },
+  {
+   "task": "induction",
+   "layer": 2,
+   "n": 40,
+   "fires": 0.425,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 8101
+  },
+  {
+   "task": "induction",
+   "layer": 3,
+   "n": 40,
+   "fires": 0.425,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 7819
+  },
+  {
+   "task": "induction",
+   "layer": 4,
+   "n": 40,
+   "fires": 0.4,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 10457
+  },
+  {
+   "task": "induction",
+   "layer": 5,
+   "n": 40,
+   "fires": 0.4,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 5061
+  },
+  {
+   "task": "induction",
+   "layer": 6,
+   "n": 40,
+   "fires": 0.4,
+   "answer_in_lens_top10": 0.0,
+   "answer_lens_rank_median": 1744
+  },
+  {
+   "task": "induction",
+   "layer": 7,
+   "n": 40,
+   "fires": 0.45,
+   "answer_in_lens_top10": 0.025,
+   "answer_lens_rank_median": 420
+  },
+  {
+   "task": "induction",
+   "layer": 8,
+   "n": 40,
+   "fires": 0.475,
+   "answer_in_lens_top10": 0.05,
+   "answer_lens_rank_median": 211
+  },
+  {
+   "task": "induction",
+   "layer": 9,
+   "n": 40,
+   "fires": 0.9,
+   "answer_in_lens_top10": 0.65,
+   "answer_lens_rank_median": 7
+  },
+  {
+   "task": "induction",
+   "layer": 10,
+   "n": 40,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "induction",
+   "layer": 11,
+   "n": 40,
+   "fires": 1.0,
+   "answer_in_lens_top10": 1.0,
+   "answer_lens_rank_median": 1
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 0,
+   "n": 1365,
+   "fires": 0.034432234432234435
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 1,
+   "n": 1365,
+   "fires": 0.0336996336996337
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 2,
+   "n": 1365,
+   "fires": 0.04468864468864469
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 3,
+   "n": 1365,
+   "fires": 0.07545787545787545
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 4,
+   "n": 1365,
+   "fires": 0.073992673992674
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 5,
+   "n": 1365,
+   "fires": 0.10256410256410256
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 6,
+   "n": 1365,
+   "fires": 0.15824175824175823
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 7,
+   "n": 1365,
+   "fires": 0.3362637362637363
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 8,
+   "n": 1365,
+   "fires": 0.4227106227106227
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 9,
+   "n": 1365,
+   "fires": 0.6923076923076923
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 10,
+   "n": 1365,
+   "fires": 0.906959706959707
+  },
+  {
+   "task": "pretrain_match",
+   "layer": 11,
+   "n": 1365,
+   "fires": 1.0
+  }
+ ]
+}

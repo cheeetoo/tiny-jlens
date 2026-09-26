@@ -1,0 +1,1028 @@
+[
+ {
+  "cat": "country",
+  "target": "France",
+  "layer": 7,
+  "cos_lens": 0.9970466494560242,
+  "cos_j": 0.12168797850608826,
+  "cos_nonj": 0.10008491575717926,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "France",
+  "layer": 8,
+  "cos_lens": 0.997398853302002,
+  "cos_j": 0.31344348192214966,
+  "cos_nonj": 0.0074752019718289375,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "France",
+  "layer": 9,
+  "cos_lens": 0.9978139400482178,
+  "cos_j": 0.5941327810287476,
+  "cos_nonj": 0.06058703362941742,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "Spain",
+  "layer": 7,
+  "cos_lens": 0.9785811901092529,
+  "cos_j": 0.2725658416748047,
+  "cos_nonj": -0.028990967199206352,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "Spain",
+  "layer": 8,
+  "cos_lens": 0.9823895692825317,
+  "cos_j": 0.33027011156082153,
+  "cos_nonj": -0.05484600365161896,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "Spain",
+  "layer": 9,
+  "cos_lens": 0.9810572862625122,
+  "cos_j": 0.5753518342971802,
+  "cos_nonj": 0.03565535694360733,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "Italy",
+  "layer": 7,
+  "cos_lens": 0.979813814163208,
+  "cos_j": 0.21581381559371948,
+  "cos_nonj": 0.012490550056099892,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Italy",
+  "layer": 8,
+  "cos_lens": 0.9816064834594727,
+  "cos_j": 0.2822836935520172,
+  "cos_nonj": -0.021898142993450165,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "Italy",
+  "layer": 9,
+  "cos_lens": 0.980140745639801,
+  "cos_j": 0.5443798899650574,
+  "cos_nonj": 0.05176115781068802,
+  "own_in_support": true
+ },
+ {
+  "cat": "country",
+  "target": "Germany",
+  "layer": 7,
+  "cos_lens": 0.9926563501358032,
+  "cos_j": 0.12898147106170654,
+  "cos_nonj": 0.07800620049238205,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Germany",
+  "layer": 8,
+  "cos_lens": 0.9923059940338135,
+  "cos_j": 0.22637313604354858,
+  "cos_nonj": 0.06709249317646027,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Germany",
+  "layer": 9,
+  "cos_lens": 0.9942342042922974,
+  "cos_j": 0.6001503467559814,
+  "cos_nonj": 0.1161806657910347,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Canada",
+  "layer": 7,
+  "cos_lens": 0.9980366826057434,
+  "cos_j": 0.21538454294204712,
+  "cos_nonj": 0.011268776841461658,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Canada",
+  "layer": 8,
+  "cos_lens": 0.9957523345947266,
+  "cos_j": 0.21225658059120178,
+  "cos_nonj": 0.054990991950035095,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Canada",
+  "layer": 9,
+  "cos_lens": 0.9922378659248352,
+  "cos_j": 0.5139259696006775,
+  "cos_nonj": 0.08769837021827698,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Mexico",
+  "layer": 7,
+  "cos_lens": 0.9907197952270508,
+  "cos_j": 0.17418844997882843,
+  "cos_nonj": 0.04806044325232506,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Mexico",
+  "layer": 8,
+  "cos_lens": 0.992862343788147,
+  "cos_j": 0.2466733604669571,
+  "cos_nonj": 0.023619595915079117,
+  "own_in_support": false
+ },
+ {
+  "cat": "country",
+  "target": "Mexico",
+  "layer": 9,
+  "cos_lens": 0.9939606189727783,
+  "cos_j": 0.5478804111480713,
+  "cos_nonj": 0.07789918780326843,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Hockey",
+  "layer": 7,
+  "cos_lens": 0.9996890425682068,
+  "cos_j": 0.2184026688337326,
+  "cos_nonj": -0.02927442267537117,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Hockey",
+  "layer": 8,
+  "cos_lens": 0.9993686676025391,
+  "cos_j": 0.13432011008262634,
+  "cos_nonj": 0.03108609840273857,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Hockey",
+  "layer": 9,
+  "cos_lens": 0.9999617338180542,
+  "cos_j": 0.36822745203971863,
+  "cos_nonj": -0.014326967298984528,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Rugby",
+  "layer": 7,
+  "cos_lens": 0.9995035529136658,
+  "cos_j": 0.2001044899225235,
+  "cos_nonj": -0.019861828535795212,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Rugby",
+  "layer": 8,
+  "cos_lens": 0.9996720552444458,
+  "cos_j": 0.2038208544254303,
+  "cos_nonj": -0.004535803571343422,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Rugby",
+  "layer": 9,
+  "cos_lens": 0.9999993443489075,
+  "cos_j": 0.33175620436668396,
+  "cos_nonj": -0.030165472999215126,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Cricket",
+  "layer": 7,
+  "cos_lens": 0.9985750913619995,
+  "cos_j": 0.201133131980896,
+  "cos_nonj": -0.00922883115708828,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Cricket",
+  "layer": 8,
+  "cos_lens": 0.9979397058486938,
+  "cos_j": 0.15654955804347992,
+  "cos_nonj": 0.03304775804281235,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Cricket",
+  "layer": 9,
+  "cos_lens": 0.9998294115066528,
+  "cos_j": 0.3895672559738159,
+  "cos_nonj": -0.003468906506896019,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Chess",
+  "layer": 7,
+  "cos_lens": 0.9999867677688599,
+  "cos_j": 0.2534344792366028,
+  "cos_nonj": -0.0020826226100325584,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Chess",
+  "layer": 8,
+  "cos_lens": 0.9999051094055176,
+  "cos_j": 0.23324111104011536,
+  "cos_nonj": 0.02874564193189144,
+  "own_in_support": true
+ },
+ {
+  "cat": "sport",
+  "target": "Chess",
+  "layer": 9,
+  "cos_lens": 0.9999616146087646,
+  "cos_j": 0.4714896082878113,
+  "cos_nonj": -0.03162183240056038,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Bass",
+  "layer": 7,
+  "cos_lens": 0.9997278451919556,
+  "cos_j": 0.23033598065376282,
+  "cos_nonj": 0.022437099367380142,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Bass",
+  "layer": 8,
+  "cos_lens": 0.999894380569458,
+  "cos_j": 0.2690221071243286,
+  "cos_nonj": -0.011976303532719612,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Bass",
+  "layer": 9,
+  "cos_lens": 0.999843955039978,
+  "cos_j": 0.373357892036438,
+  "cos_nonj": -0.02058999054133892,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Organ",
+  "layer": 7,
+  "cos_lens": 0.9963314533233643,
+  "cos_j": 0.2367487996816635,
+  "cos_nonj": 0.013731087557971478,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Organ",
+  "layer": 8,
+  "cos_lens": 0.9977748394012451,
+  "cos_j": 0.2328132688999176,
+  "cos_nonj": 0.019689058884978294,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Organ",
+  "layer": 9,
+  "cos_lens": 0.9977997541427612,
+  "cos_j": 0.2872278094291687,
+  "cos_nonj": 0.0674692690372467,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Horn",
+  "layer": 7,
+  "cos_lens": 0.9979690313339233,
+  "cos_j": 0.2835804224014282,
+  "cos_nonj": 0.04675289988517761,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Horn",
+  "layer": 8,
+  "cos_lens": 0.9985184073448181,
+  "cos_j": 0.34477055072784424,
+  "cos_nonj": 0.024641603231430054,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Horn",
+  "layer": 9,
+  "cos_lens": 0.9981440305709839,
+  "cos_j": 0.5337440371513367,
+  "cos_nonj": -0.0005783038213849068,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Sax",
+  "layer": 7,
+  "cos_lens": 0.9997525215148926,
+  "cos_j": 0.3681432902812958,
+  "cos_nonj": 0.02054072916507721,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Sax",
+  "layer": 8,
+  "cos_lens": 0.9999877214431763,
+  "cos_j": 0.41565123200416565,
+  "cos_nonj": -0.022228708490729332,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Sax",
+  "layer": 9,
+  "cos_lens": 0.9999641180038452,
+  "cos_j": 0.5818658471107483,
+  "cos_nonj": 0.008809693157672882,
+  "own_in_support": true
+ },
+ {
+  "cat": "instrument",
+  "target": "Bell",
+  "layer": 7,
+  "cos_lens": 0.9897657036781311,
+  "cos_j": 0.31385666131973267,
+  "cos_nonj": 0.004259985405951738,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Bell",
+  "layer": 8,
+  "cos_lens": 0.9917601943016052,
+  "cos_j": 0.2740549147129059,
+  "cos_nonj": 0.03132893517613411,
+  "own_in_support": false
+ },
+ {
+  "cat": "instrument",
+  "target": "Bell",
+  "layer": 9,
+  "cos_lens": 0.9916168451309204,
+  "cos_j": 0.3991050720214844,
+  "cos_nonj": 0.06524858623743057,
+  "own_in_support": false
+ },
+ {
+  "cat": "planet",
+  "target": "Moon",
+  "layer": 7,
+  "cos_lens": 0.9999225735664368,
+  "cos_j": 0.22690579295158386,
+  "cos_nonj": 0.0512610599398613,
+  "own_in_support": false
+ },
+ {
+  "cat": "planet",
+  "target": "Moon",
+  "layer": 8,
+  "cos_lens": 0.9999645352363586,
+  "cos_j": 0.28006991744041443,
+  "cos_nonj": 0.023610949516296387,
+  "own_in_support": false
+ },
+ {
+  "cat": "planet",
+  "target": "Moon",
+  "layer": 9,
+  "cos_lens": 0.9998288154602051,
+  "cos_j": 0.49736809730529785,
+  "cos_nonj": 0.011807974427938461,
+  "own_in_support": true
+ },
+ {
+  "cat": "planet",
+  "target": "Titan",
+  "layer": 7,
+  "cos_lens": 0.9966244101524353,
+  "cos_j": 0.333351194858551,
+  "cos_nonj": 0.048870544880628586,
+  "own_in_support": true
+ },
+ {
+  "cat": "planet",
+  "target": "Titan",
+  "layer": 8,
+  "cos_lens": 0.9976661205291748,
+  "cos_j": 0.4090876877307892,
+  "cos_nonj": 0.026728708297014236,
+  "own_in_support": true
+ },
+ {
+  "cat": "planet",
+  "target": "Titan",
+  "layer": 9,
+  "cos_lens": 0.99708092212677,
+  "cos_j": 0.5678666830062866,
+  "cos_nonj": 0.04637113958597183,
+  "own_in_support": true
+ },
+ {
+  "cat": "language",
+  "target": "German",
+  "layer": 7,
+  "cos_lens": 0.9914031028747559,
+  "cos_j": 0.2151636928319931,
+  "cos_nonj": 0.01742401346564293,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "German",
+  "layer": 8,
+  "cos_lens": 0.992853045463562,
+  "cos_j": 0.2213212251663208,
+  "cos_nonj": 0.05196721851825714,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "German",
+  "layer": 9,
+  "cos_lens": 0.9900994300842285,
+  "cos_j": 0.4816613793373108,
+  "cos_nonj": 0.051310498267412186,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "Russian",
+  "layer": 7,
+  "cos_lens": 0.988639235496521,
+  "cos_j": 0.3051462769508362,
+  "cos_nonj": -0.01629744842648506,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "Russian",
+  "layer": 8,
+  "cos_lens": 0.9936092495918274,
+  "cos_j": 0.28154081106185913,
+  "cos_nonj": 0.013052321970462799,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "Russian",
+  "layer": 9,
+  "cos_lens": 0.9908938407897949,
+  "cos_j": 0.5117435455322266,
+  "cos_nonj": 0.028015242889523506,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "Italian",
+  "layer": 7,
+  "cos_lens": 0.9433434009552002,
+  "cos_j": 0.25833505392074585,
+  "cos_nonj": -0.017844274640083313,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "Italian",
+  "layer": 8,
+  "cos_lens": 0.9479392170906067,
+  "cos_j": 0.2663677930831909,
+  "cos_nonj": 0.007871178910136223,
+  "own_in_support": false
+ },
+ {
+  "cat": "language",
+  "target": "Italian",
+  "layer": 9,
+  "cos_lens": 0.9353539943695068,
+  "cos_j": 0.41422224044799805,
+  "cos_nonj": 0.04995669424533844,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Juice",
+  "layer": 7,
+  "cos_lens": 0.9984675645828247,
+  "cos_j": 0.19863228499889374,
+  "cos_nonj": 0.03793926537036896,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Juice",
+  "layer": 8,
+  "cos_lens": 0.9984288215637207,
+  "cos_j": 0.3421969413757324,
+  "cos_nonj": -0.02529703453183174,
+  "own_in_support": true
+ },
+ {
+  "cat": "beverage",
+  "target": "Juice",
+  "layer": 9,
+  "cos_lens": 0.9993089437484741,
+  "cos_j": 0.4189305305480957,
+  "cos_nonj": 0.04095590114593506,
+  "own_in_support": true
+ },
+ {
+  "cat": "beverage",
+  "target": "Milk",
+  "layer": 7,
+  "cos_lens": 0.9991999864578247,
+  "cos_j": 0.3792155981063843,
+  "cos_nonj": -0.0323406383395195,
+  "own_in_support": true
+ },
+ {
+  "cat": "beverage",
+  "target": "Milk",
+  "layer": 8,
+  "cos_lens": 0.9996384382247925,
+  "cos_j": 0.3231654763221741,
+  "cos_nonj": 0.023299140855669975,
+  "own_in_support": true
+ },
+ {
+  "cat": "beverage",
+  "target": "Milk",
+  "layer": 9,
+  "cos_lens": 0.999552845954895,
+  "cos_j": 0.46046707034111023,
+  "cos_nonj": 0.029028868302702904,
+  "own_in_support": true
+ },
+ {
+  "cat": "beverage",
+  "target": "Rum",
+  "layer": 7,
+  "cos_lens": 0.9977846741676331,
+  "cos_j": 0.29000478982925415,
+  "cos_nonj": 0.008408033289015293,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Rum",
+  "layer": 8,
+  "cos_lens": 0.9966316223144531,
+  "cos_j": 0.2470790445804596,
+  "cos_nonj": 0.039928704500198364,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Rum",
+  "layer": 9,
+  "cos_lens": 0.9983541369438171,
+  "cos_j": 0.3062940239906311,
+  "cos_nonj": 0.06602096557617188,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Gin",
+  "layer": 7,
+  "cos_lens": 0.9981838464736938,
+  "cos_j": 0.2414010465145111,
+  "cos_nonj": 0.01638483628630638,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Gin",
+  "layer": 8,
+  "cos_lens": 0.9992942214012146,
+  "cos_j": 0.25996965169906616,
+  "cos_nonj": 0.02611575461924076,
+  "own_in_support": false
+ },
+ {
+  "cat": "beverage",
+  "target": "Gin",
+  "layer": 9,
+  "cos_lens": 0.9997482299804688,
+  "cos_j": 0.37809044122695923,
+  "cos_nonj": 0.04241705685853958,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Paris",
+  "layer": 7,
+  "cos_lens": 0.9890585541725159,
+  "cos_j": 0.3895150423049927,
+  "cos_nonj": -0.04528532177209854,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Paris",
+  "layer": 8,
+  "cos_lens": 0.9894128441810608,
+  "cos_j": 0.3012048006057739,
+  "cos_nonj": 0.04447534680366516,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Paris",
+  "layer": 9,
+  "cos_lens": 0.9872955679893494,
+  "cos_j": 0.5450596213340759,
+  "cos_nonj": 0.0552949421107769,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Rome",
+  "layer": 7,
+  "cos_lens": 0.9981045126914978,
+  "cos_j": 0.48874950408935547,
+  "cos_nonj": -0.09334946423768997,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Rome",
+  "layer": 8,
+  "cos_lens": 0.9991121292114258,
+  "cos_j": 0.4495943486690521,
+  "cos_nonj": -0.05359514057636261,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Rome",
+  "layer": 9,
+  "cos_lens": 0.9994282722473145,
+  "cos_j": 0.6486293077468872,
+  "cos_nonj": 0.03230234235525131,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Berlin",
+  "layer": 7,
+  "cos_lens": 0.999687910079956,
+  "cos_j": 0.419575035572052,
+  "cos_nonj": -0.08484892547130585,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Berlin",
+  "layer": 8,
+  "cos_lens": 0.9996427297592163,
+  "cos_j": 0.39840030670166016,
+  "cos_nonj": 0.03792688250541687,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Berlin",
+  "layer": 9,
+  "cos_lens": 0.9995471835136414,
+  "cos_j": 0.6792753338813782,
+  "cos_nonj": 0.02490447834134102,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Madrid",
+  "layer": 7,
+  "cos_lens": 0.9980373978614807,
+  "cos_j": 0.3887018859386444,
+  "cos_nonj": -0.06522351503372192,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Madrid",
+  "layer": 8,
+  "cos_lens": 0.9986626505851746,
+  "cos_j": 0.4051455557346344,
+  "cos_nonj": -0.03963538259267807,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Madrid",
+  "layer": 9,
+  "cos_lens": 0.9979928731918335,
+  "cos_j": 0.639935314655304,
+  "cos_nonj": 0.08589959144592285,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Moscow",
+  "layer": 7,
+  "cos_lens": 0.9999039769172668,
+  "cos_j": 0.31302645802497864,
+  "cos_nonj": -0.013490312732756138,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Moscow",
+  "layer": 8,
+  "cos_lens": 0.9998505115509033,
+  "cos_j": 0.41728511452674866,
+  "cos_nonj": -0.027162866666913033,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Moscow",
+  "layer": 9,
+  "cos_lens": 0.9999611973762512,
+  "cos_j": 0.6898097991943359,
+  "cos_nonj": 0.03522597998380661,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Beijing",
+  "layer": 7,
+  "cos_lens": 0.9998505115509033,
+  "cos_j": 0.24010781943798065,
+  "cos_nonj": 0.03463734686374664,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Beijing",
+  "layer": 8,
+  "cos_lens": 0.9996703863143921,
+  "cos_j": 0.3828173279762268,
+  "cos_nonj": -0.023098263889551163,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Beijing",
+  "layer": 9,
+  "cos_lens": 0.9996141195297241,
+  "cos_j": 0.6620401740074158,
+  "cos_nonj": 0.02581598237156868,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Cairo",
+  "layer": 7,
+  "cos_lens": 0.9999202489852905,
+  "cos_j": 0.31180670857429504,
+  "cos_nonj": 0.01229984313249588,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Cairo",
+  "layer": 8,
+  "cos_lens": 0.9999991059303284,
+  "cos_j": 0.38790175318717957,
+  "cos_nonj": 0.007769376505166292,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Cairo",
+  "layer": 9,
+  "cos_lens": 0.9999250769615173,
+  "cos_j": 0.6488844156265259,
+  "cos_nonj": 0.061648253351449966,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Sydney",
+  "layer": 7,
+  "cos_lens": 0.998981773853302,
+  "cos_j": 0.3010767698287964,
+  "cos_nonj": 0.02003643661737442,
+  "own_in_support": true
+ },
+ {
+  "cat": "city",
+  "target": "Sydney",
+  "layer": 8,
+  "cos_lens": 0.9991890788078308,
+  "cos_j": 0.36423325538635254,
+  "cos_nonj": 0.019588865339756012,
+  "own_in_support": false
+ },
+ {
+  "cat": "city",
+  "target": "Sydney",
+  "layer": 9,
+  "cos_lens": 0.9998762607574463,
+  "cos_j": 0.6385334134101868,
+  "cos_nonj": 0.0410810261964798,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Amazon",
+  "layer": 7,
+  "cos_lens": 0.9984173774719238,
+  "cos_j": 0.14310821890830994,
+  "cos_nonj": -0.02203354239463806,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Amazon",
+  "layer": 8,
+  "cos_lens": 0.9988852739334106,
+  "cos_j": 0.10229386389255524,
+  "cos_nonj": 0.011899154633283615,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Amazon",
+  "layer": 9,
+  "cos_lens": 0.9987425804138184,
+  "cos_j": 0.26143133640289307,
+  "cos_nonj": 0.016525739803910255,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Thames",
+  "layer": 7,
+  "cos_lens": 0.9986047744750977,
+  "cos_j": 0.29499754309654236,
+  "cos_nonj": 0.019878268241882324,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Thames",
+  "layer": 8,
+  "cos_lens": 0.9997878074645996,
+  "cos_j": 0.33618175983428955,
+  "cos_nonj": 0.05122857540845871,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Thames",
+  "layer": 9,
+  "cos_lens": 0.9998090267181396,
+  "cos_j": 0.5583162903785706,
+  "cos_nonj": 0.050191283226013184,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Congo",
+  "layer": 7,
+  "cos_lens": 0.9999690651893616,
+  "cos_j": 0.17283011972904205,
+  "cos_nonj": 0.04341889172792435,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Congo",
+  "layer": 8,
+  "cos_lens": 0.9996897578239441,
+  "cos_j": 0.20911718904972076,
+  "cos_nonj": 0.019440514966845512,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Congo",
+  "layer": 9,
+  "cos_lens": 0.9990057349205017,
+  "cos_j": 0.5064288377761841,
+  "cos_nonj": -8.652452379465103e-05,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Jordan",
+  "layer": 7,
+  "cos_lens": 0.999482274055481,
+  "cos_j": 0.15370997786521912,
+  "cos_nonj": -3.808364272117615e-05,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Jordan",
+  "layer": 8,
+  "cos_lens": 0.9995986223220825,
+  "cos_j": 0.13066637516021729,
+  "cos_nonj": 0.06216415762901306,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Jordan",
+  "layer": 9,
+  "cos_lens": 0.9992275238037109,
+  "cos_j": 0.43509918451309204,
+  "cos_nonj": 0.00487692654132843,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Ohio",
+  "layer": 7,
+  "cos_lens": 0.9999998211860657,
+  "cos_j": 0.21125125885009766,
+  "cos_nonj": 0.009610846638679504,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Ohio",
+  "layer": 8,
+  "cos_lens": 0.999714732170105,
+  "cos_j": 0.18419891595840454,
+  "cos_nonj": 0.07319217920303345,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Ohio",
+  "layer": 9,
+  "cos_lens": 0.9996367692947388,
+  "cos_j": 0.5386690497398376,
+  "cos_nonj": 0.009923969395458698,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Mississippi",
+  "layer": 7,
+  "cos_lens": 0.9993185997009277,
+  "cos_j": 0.2521595060825348,
+  "cos_nonj": 0.03687422722578049,
+  "own_in_support": false
+ },
+ {
+  "cat": "river",
+  "target": "Mississippi",
+  "layer": 8,
+  "cos_lens": 0.9964891672134399,
+  "cos_j": 0.293718159198761,
+  "cos_nonj": 0.04926832765340805,
+  "own_in_support": true
+ },
+ {
+  "cat": "river",
+  "target": "Mississippi",
+  "layer": 9,
+  "cos_lens": 0.996727466583252,
+  "cos_j": 0.5442553758621216,
+  "cos_nonj": -0.033421002328395844,
+  "own_in_support": true
+ }
+]

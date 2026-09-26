@@ -1,0 +1,2751 @@
+{
+ "n_concepts": 57,
+ "strengths": [
+  0.0,
+  0.05,
+  0.1,
+  0.15,
+  0.25,
+  0.5,
+  1.0,
+  2.0
+ ],
+ "rows": [
+  {
+   "strength": 0.0,
+   "word": "cook",
+   "report_rank": 1374,
+   "other_best_rank": 2977
+  },
+  {
+   "strength": 0.0,
+   "word": "summary",
+   "report_rank": 5538,
+   "other_best_rank": 1418
+  },
+  {
+   "strength": 0.0,
+   "word": "ox",
+   "report_rank": 2624,
+   "other_best_rank": 2096
+  },
+  {
+   "strength": 0.0,
+   "word": "rust",
+   "report_rank": 1817,
+   "other_best_rank": 6834
+  },
+  {
+   "strength": 0.0,
+   "word": "weight",
+   "report_rank": 565,
+   "other_best_rank": 1058
+  },
+  {
+   "strength": 0.0,
+   "word": "ear",
+   "report_rank": 1696,
+   "other_best_rank": 502
+  },
+  {
+   "strength": 0.0,
+   "word": "case",
+   "report_rank": 1797,
+   "other_best_rank": 180
+  },
+  {
+   "strength": 0.0,
+   "word": "line",
+   "report_rank": 1557,
+   "other_best_rank": 85
+  },
+  {
+   "strength": 0.0,
+   "word": "picture",
+   "report_rank": 1793,
+   "other_best_rank": 81
+  },
+  {
+   "strength": 0.0,
+   "word": "scene",
+   "report_rank": 3494,
+   "other_best_rank": 582
+  },
+  {
+   "strength": 0.0,
+   "word": "race",
+   "report_rank": 410,
+   "other_best_rank": 1503
+  },
+  {
+   "strength": 0.0,
+   "word": "trade",
+   "report_rank": 1223,
+   "other_best_rank": 2100
+  },
+  {
+   "strength": 0.0,
+   "word": "custom",
+   "report_rank": 1422,
+   "other_best_rank": 2392
+  },
+  {
+   "strength": 0.0,
+   "word": "path",
+   "report_rank": 1079,
+   "other_best_rank": 366
+  },
+  {
+   "strength": 0.0,
+   "word": "chin",
+   "report_rank": 5288,
+   "other_best_rank": 8459
+  },
+  {
+   "strength": 0.0,
+   "word": "pool",
+   "report_rank": 4497,
+   "other_best_rank": 1648
+  },
+  {
+   "strength": 0.0,
+   "word": "plane",
+   "report_rank": 4285,
+   "other_best_rank": 2660
+  },
+  {
+   "strength": 0.0,
+   "word": "gel",
+   "report_rank": 9650,
+   "other_best_rank": 4357
+  },
+  {
+   "strength": 0.0,
+   "word": "board",
+   "report_rank": 4138,
+   "other_best_rank": 2868
+  },
+  {
+   "strength": 0.0,
+   "word": "photo",
+   "report_rank": 4820,
+   "other_best_rank": 715
+  },
+  {
+   "strength": 0.0,
+   "word": "profit",
+   "report_rank": 1057,
+   "other_best_rank": 5533
+  },
+  {
+   "strength": 0.0,
+   "word": "free",
+   "report_rank": 169,
+   "other_best_rank": 287
+  },
+  {
+   "strength": 0.0,
+   "word": "bomb",
+   "report_rank": 5264,
+   "other_best_rank": 2885
+  },
+  {
+   "strength": 0.0,
+   "word": "union",
+   "report_rank": 1504,
+   "other_best_rank": 1922
+  },
+  {
+   "strength": 0.0,
+   "word": "amber",
+   "report_rank": 8134,
+   "other_best_rank": 3987
+  },
+  {
+   "strength": 0.0,
+   "word": "time",
+   "report_rank": 60,
+   "other_best_rank": 91
+  },
+  {
+   "strength": 0.0,
+   "word": "frame",
+   "report_rank": 2253,
+   "other_best_rank": 562
+  },
+  {
+   "strength": 0.0,
+   "word": "sin",
+   "report_rank": 522,
+   "other_best_rank": 580
+  },
+  {
+   "strength": 0.0,
+   "word": "bowl",
+   "report_rank": 8277,
+   "other_best_rank": 3541
+  },
+  {
+   "strength": 0.0,
+   "word": "gray",
+   "report_rank": 3324,
+   "other_best_rank": 1880
+  },
+  {
+   "strength": 0.0,
+   "word": "review",
+   "report_rank": 3502,
+   "other_best_rank": 1305
+  },
+  {
+   "strength": 0.0,
+   "word": "ship",
+   "report_rank": 2635,
+   "other_best_rank": 1340
+  },
+  {
+   "strength": 0.0,
+   "word": "hair",
+   "report_rank": 2030,
+   "other_best_rank": 1725
+  },
+  {
+   "strength": 0.0,
+   "word": "earth",
+   "report_rank": 1234,
+   "other_best_rank": 1878
+  },
+  {
+   "strength": 0.0,
+   "word": "stand",
+   "report_rank": 1738,
+   "other_best_rank": 309
+  },
+  {
+   "strength": 0.0,
+   "word": "enemy",
+   "report_rank": 1583,
+   "other_best_rank": 648
+  },
+  {
+   "strength": 0.0,
+   "word": "method",
+   "report_rank": 1861,
+   "other_best_rank": 210
+  },
+  {
+   "strength": 0.0,
+   "word": "box",
+   "report_rank": 2535,
+   "other_best_rank": 607
+  },
+  {
+   "strength": 0.0,
+   "word": "friend",
+   "report_rank": 899,
+   "other_best_rank": 498
+  },
+  {
+   "strength": 0.0,
+   "word": "hat",
+   "report_rank": 1755,
+   "other_best_rank": 3610
+  },
+  {
+   "strength": 0.0,
+   "word": "ash",
+   "report_rank": 4569,
+   "other_best_rank": 5771
+  },
+  {
+   "strength": 0.0,
+   "word": "bags",
+   "report_rank": 7000,
+   "other_best_rank": 8074
+  },
+  {
+   "strength": 0.0,
+   "word": "sheet",
+   "report_rank": 6464,
+   "other_best_rank": 1457
+  },
+  {
+   "strength": 0.0,
+   "word": "role",
+   "report_rank": 2303,
+   "other_best_rank": 353
+  },
+  {
+   "strength": 0.0,
+   "word": "information",
+   "report_rank": 53,
+   "other_best_rank": 54
+  },
+  {
+   "strength": 0.0,
+   "word": "loss",
+   "report_rank": 1024,
+   "other_best_rank": 2445
+  },
+  {
+   "strength": 0.0,
+   "word": "bolt",
+   "report_rank": 7435,
+   "other_best_rank": 4131
+  },
+  {
+   "strength": 0.0,
+   "word": "dog",
+   "report_rank": 590,
+   "other_best_rank": 430
+  },
+  {
+   "strength": 0.0,
+   "word": "shore",
+   "report_rank": 6374,
+   "other_best_rank": 9834
+  },
+  {
+   "strength": 0.0,
+   "word": "wage",
+   "report_rank": 2431,
+   "other_best_rank": 3237
+  },
+  {
+   "strength": 0.0,
+   "word": "gin",
+   "report_rank": 5250,
+   "other_best_rank": 7233
+  },
+  {
+   "strength": 0.0,
+   "word": "fortune",
+   "report_rank": 2609,
+   "other_best_rank": 5670
+  },
+  {
+   "strength": 0.0,
+   "word": "steel",
+   "report_rank": 4006,
+   "other_best_rank": 5514
+  },
+  {
+   "strength": 0.0,
+   "word": "process",
+   "report_rank": 656,
+   "other_best_rank": 38
+  },
+  {
+   "strength": 0.0,
+   "word": "storm",
+   "report_rank": 4803,
+   "other_best_rank": 4951
+  },
+  {
+   "strength": 0.0,
+   "word": "skin",
+   "report_rank": 670,
+   "other_best_rank": 586
+  },
+  {
+   "strength": 0.0,
+   "word": "tap",
+   "report_rank": 3565,
+   "other_best_rank": 334
+  },
+  {
+   "strength": 0.05,
+   "word": "cook",
+   "report_rank": 265,
+   "other_best_rank": 245
+  },
+  {
+   "strength": 0.05,
+   "word": "summary",
+   "report_rank": 4022,
+   "other_best_rank": 220
+  },
+  {
+   "strength": 0.05,
+   "word": "ox",
+   "report_rank": 1479,
+   "other_best_rank": 11
+  },
+  {
+   "strength": 0.05,
+   "word": "rust",
+   "report_rank": 768,
+   "other_best_rank": 234
+  },
+  {
+   "strength": 0.05,
+   "word": "weight",
+   "report_rank": 150,
+   "other_best_rank": 153
+  },
+  {
+   "strength": 0.05,
+   "word": "ear",
+   "report_rank": 906,
+   "other_best_rank": 15
+  },
+  {
+   "strength": 0.05,
+   "word": "case",
+   "report_rank": 896,
+   "other_best_rank": 66
+  },
+  {
+   "strength": 0.05,
+   "word": "line",
+   "report_rank": 735,
+   "other_best_rank": 31
+  },
+  {
+   "strength": 0.05,
+   "word": "picture",
+   "report_rank": 1000,
+   "other_best_rank": 16
+  },
+  {
+   "strength": 0.05,
+   "word": "scene",
+   "report_rank": 1696,
+   "other_best_rank": 68
+  },
+  {
+   "strength": 0.05,
+   "word": "race",
+   "report_rank": 107,
+   "other_best_rank": 201
+  },
+  {
+   "strength": 0.05,
+   "word": "trade",
+   "report_rank": 328,
+   "other_best_rank": 430
+  },
+  {
+   "strength": 0.05,
+   "word": "custom",
+   "report_rank": 871,
+   "other_best_rank": 512
+  },
+  {
+   "strength": 0.05,
+   "word": "path",
+   "report_rank": 532,
+   "other_best_rank": 58
+  },
+  {
+   "strength": 0.05,
+   "word": "chin",
+   "report_rank": 3269,
+   "other_best_rank": 186
+  },
+  {
+   "strength": 0.05,
+   "word": "pool",
+   "report_rank": 1046,
+   "other_best_rank": 265
+  },
+  {
+   "strength": 0.05,
+   "word": "plane",
+   "report_rank": 760,
+   "other_best_rank": 164
+  },
+  {
+   "strength": 0.05,
+   "word": "gel",
+   "report_rank": 3246,
+   "other_best_rank": 212
+  },
+  {
+   "strength": 0.05,
+   "word": "board",
+   "report_rank": 2759,
+   "other_best_rank": 1080
+  },
+  {
+   "strength": 0.05,
+   "word": "photo",
+   "report_rank": 1892,
+   "other_best_rank": 67
+  },
+  {
+   "strength": 0.05,
+   "word": "profit",
+   "report_rank": 118,
+   "other_best_rank": 587
+  },
+  {
+   "strength": 0.05,
+   "word": "free",
+   "report_rank": 117,
+   "other_best_rank": 112
+  },
+  {
+   "strength": 0.05,
+   "word": "bomb",
+   "report_rank": 1484,
+   "other_best_rank": 286
+  },
+  {
+   "strength": 0.05,
+   "word": "union",
+   "report_rank": 488,
+   "other_best_rank": 161
+  },
+  {
+   "strength": 0.05,
+   "word": "amber",
+   "report_rank": 3459,
+   "other_best_rank": 83
+  },
+  {
+   "strength": 0.05,
+   "word": "time",
+   "report_rank": 38,
+   "other_best_rank": 48
+  },
+  {
+   "strength": 0.05,
+   "word": "frame",
+   "report_rank": 627,
+   "other_best_rank": 47
+  },
+  {
+   "strength": 0.05,
+   "word": "sin",
+   "report_rank": 94,
+   "other_best_rank": 32
+  },
+  {
+   "strength": 0.05,
+   "word": "bowl",
+   "report_rank": 2472,
+   "other_best_rank": 93
+  },
+  {
+   "strength": 0.05,
+   "word": "gray",
+   "report_rank": 1126,
+   "other_best_rank": 93
+  },
+  {
+   "strength": 0.05,
+   "word": "review",
+   "report_rank": 2165,
+   "other_best_rank": 371
+  },
+  {
+   "strength": 0.05,
+   "word": "ship",
+   "report_rank": 467,
+   "other_best_rank": 204
+  },
+  {
+   "strength": 0.05,
+   "word": "hair",
+   "report_rank": 578,
+   "other_best_rank": 178
+  },
+  {
+   "strength": 0.05,
+   "word": "earth",
+   "report_rank": 193,
+   "other_best_rank": 238
+  },
+  {
+   "strength": 0.05,
+   "word": "stand",
+   "report_rank": 1349,
+   "other_best_rank": 137
+  },
+  {
+   "strength": 0.05,
+   "word": "enemy",
+   "report_rank": 271,
+   "other_best_rank": 44
+  },
+  {
+   "strength": 0.05,
+   "word": "method",
+   "report_rank": 815,
+   "other_best_rank": 62
+  },
+  {
+   "strength": 0.05,
+   "word": "box",
+   "report_rank": 1466,
+   "other_best_rank": 92
+  },
+  {
+   "strength": 0.05,
+   "word": "friend",
+   "report_rank": 501,
+   "other_best_rank": 148
+  },
+  {
+   "strength": 0.05,
+   "word": "hat",
+   "report_rank": 950,
+   "other_best_rank": 409
+  },
+  {
+   "strength": 0.05,
+   "word": "ash",
+   "report_rank": 2022,
+   "other_best_rank": 160
+  },
+  {
+   "strength": 0.05,
+   "word": "bags",
+   "report_rank": 4606,
+   "other_best_rank": 646
+  },
+  {
+   "strength": 0.05,
+   "word": "sheet",
+   "report_rank": 3913,
+   "other_best_rank": 165
+  },
+  {
+   "strength": 0.05,
+   "word": "role",
+   "report_rank": 1183,
+   "other_best_rank": 82
+  },
+  {
+   "strength": 0.05,
+   "word": "information",
+   "report_rank": 37,
+   "other_best_rank": 31
+  },
+  {
+   "strength": 0.05,
+   "word": "loss",
+   "report_rank": 388,
+   "other_best_rank": 569
+  },
+  {
+   "strength": 0.05,
+   "word": "bolt",
+   "report_rank": 4559,
+   "other_best_rank": 144
+  },
+  {
+   "strength": 0.05,
+   "word": "dog",
+   "report_rank": 194,
+   "other_best_rank": 43
+  },
+  {
+   "strength": 0.05,
+   "word": "shore",
+   "report_rank": 826,
+   "other_best_rank": 836
+  },
+  {
+   "strength": 0.05,
+   "word": "wage",
+   "report_rank": 444,
+   "other_best_rank": 145
+  },
+  {
+   "strength": 0.05,
+   "word": "gin",
+   "report_rank": 1595,
+   "other_best_rank": 520
+  },
+  {
+   "strength": 0.05,
+   "word": "fortune",
+   "report_rank": 338,
+   "other_best_rank": 371
+  },
+  {
+   "strength": 0.05,
+   "word": "steel",
+   "report_rank": 683,
+   "other_best_rank": 793
+  },
+  {
+   "strength": 0.05,
+   "word": "process",
+   "report_rank": 279,
+   "other_best_rank": 9
+  },
+  {
+   "strength": 0.05,
+   "word": "storm",
+   "report_rank": 2695,
+   "other_best_rank": 661
+  },
+  {
+   "strength": 0.05,
+   "word": "skin",
+   "report_rank": 206,
+   "other_best_rank": 67
+  },
+  {
+   "strength": 0.05,
+   "word": "tap",
+   "report_rank": 1629,
+   "other_best_rank": 43
+  },
+  {
+   "strength": 0.1,
+   "word": "cook",
+   "report_rank": 41,
+   "other_best_rank": 27
+  },
+  {
+   "strength": 0.1,
+   "word": "summary",
+   "report_rank": 1638,
+   "other_best_rank": 22
+  },
+  {
+   "strength": 0.1,
+   "word": "ox",
+   "report_rank": 121,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.1,
+   "word": "rust",
+   "report_rank": 159,
+   "other_best_rank": 18
+  },
+  {
+   "strength": 0.1,
+   "word": "weight",
+   "report_rank": 41,
+   "other_best_rank": 25
+  },
+  {
+   "strength": 0.1,
+   "word": "ear",
+   "report_rank": 240,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.1,
+   "word": "case",
+   "report_rank": 394,
+   "other_best_rank": 28
+  },
+  {
+   "strength": 0.1,
+   "word": "line",
+   "report_rank": 301,
+   "other_best_rank": 7
+  },
+  {
+   "strength": 0.1,
+   "word": "picture",
+   "report_rank": 544,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.1,
+   "word": "scene",
+   "report_rank": 402,
+   "other_best_rank": 5
+  },
+  {
+   "strength": 0.1,
+   "word": "race",
+   "report_rank": 27,
+   "other_best_rank": 17
+  },
+  {
+   "strength": 0.1,
+   "word": "trade",
+   "report_rank": 85,
+   "other_best_rank": 56
+  },
+  {
+   "strength": 0.1,
+   "word": "custom",
+   "report_rank": 232,
+   "other_best_rank": 83
+  },
+  {
+   "strength": 0.1,
+   "word": "path",
+   "report_rank": 130,
+   "other_best_rank": 6
+  },
+  {
+   "strength": 0.1,
+   "word": "chin",
+   "report_rank": 1202,
+   "other_best_rank": 14
+  },
+  {
+   "strength": 0.1,
+   "word": "pool",
+   "report_rank": 125,
+   "other_best_rank": 6
+  },
+  {
+   "strength": 0.1,
+   "word": "plane",
+   "report_rank": 124,
+   "other_best_rank": 10
+  },
+  {
+   "strength": 0.1,
+   "word": "gel",
+   "report_rank": 545,
+   "other_best_rank": 12
+  },
+  {
+   "strength": 0.1,
+   "word": "board",
+   "report_rank": 809,
+   "other_best_rank": 140
+  },
+  {
+   "strength": 0.1,
+   "word": "photo",
+   "report_rank": 396,
+   "other_best_rank": 11
+  },
+  {
+   "strength": 0.1,
+   "word": "profit",
+   "report_rank": 19,
+   "other_best_rank": 19
+  },
+  {
+   "strength": 0.1,
+   "word": "free",
+   "report_rank": 100,
+   "other_best_rank": 53
+  },
+  {
+   "strength": 0.1,
+   "word": "bomb",
+   "report_rank": 179,
+   "other_best_rank": 21
+  },
+  {
+   "strength": 0.1,
+   "word": "union",
+   "report_rank": 72,
+   "other_best_rank": 10
+  },
+  {
+   "strength": 0.1,
+   "word": "amber",
+   "report_rank": 573,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.1,
+   "word": "time",
+   "report_rank": 26,
+   "other_best_rank": 28
+  },
+  {
+   "strength": 0.1,
+   "word": "frame",
+   "report_rank": 126,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.1,
+   "word": "sin",
+   "report_rank": 20,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.1,
+   "word": "bowl",
+   "report_rank": 175,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.1,
+   "word": "gray",
+   "report_rank": 201,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.1,
+   "word": "review",
+   "report_rank": 1379,
+   "other_best_rank": 54
+  },
+  {
+   "strength": 0.1,
+   "word": "ship",
+   "report_rank": 71,
+   "other_best_rank": 9
+  },
+  {
+   "strength": 0.1,
+   "word": "hair",
+   "report_rank": 131,
+   "other_best_rank": 31
+  },
+  {
+   "strength": 0.1,
+   "word": "earth",
+   "report_rank": 40,
+   "other_best_rank": 13
+  },
+  {
+   "strength": 0.1,
+   "word": "stand",
+   "report_rank": 972,
+   "other_best_rank": 61
+  },
+  {
+   "strength": 0.1,
+   "word": "enemy",
+   "report_rank": 54,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.1,
+   "word": "method",
+   "report_rank": 288,
+   "other_best_rank": 14
+  },
+  {
+   "strength": 0.1,
+   "word": "box",
+   "report_rank": 510,
+   "other_best_rank": 15
+  },
+  {
+   "strength": 0.1,
+   "word": "friend",
+   "report_rank": 260,
+   "other_best_rank": 41
+  },
+  {
+   "strength": 0.1,
+   "word": "hat",
+   "report_rank": 449,
+   "other_best_rank": 28
+  },
+  {
+   "strength": 0.1,
+   "word": "ash",
+   "report_rank": 131,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.1,
+   "word": "bags",
+   "report_rank": 842,
+   "other_best_rank": 41
+  },
+  {
+   "strength": 0.1,
+   "word": "sheet",
+   "report_rank": 855,
+   "other_best_rank": 9
+  },
+  {
+   "strength": 0.1,
+   "word": "role",
+   "report_rank": 368,
+   "other_best_rank": 24
+  },
+  {
+   "strength": 0.1,
+   "word": "information",
+   "report_rank": 28,
+   "other_best_rank": 14
+  },
+  {
+   "strength": 0.1,
+   "word": "loss",
+   "report_rank": 138,
+   "other_best_rank": 105
+  },
+  {
+   "strength": 0.1,
+   "word": "bolt",
+   "report_rank": 529,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.1,
+   "word": "dog",
+   "report_rank": 75,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.1,
+   "word": "shore",
+   "report_rank": 68,
+   "other_best_rank": 41
+  },
+  {
+   "strength": 0.1,
+   "word": "wage",
+   "report_rank": 32,
+   "other_best_rank": 5
+  },
+  {
+   "strength": 0.1,
+   "word": "gin",
+   "report_rank": 220,
+   "other_best_rank": 18
+  },
+  {
+   "strength": 0.1,
+   "word": "fortune",
+   "report_rank": 35,
+   "other_best_rank": 8
+  },
+  {
+   "strength": 0.1,
+   "word": "steel",
+   "report_rank": 97,
+   "other_best_rank": 68
+  },
+  {
+   "strength": 0.1,
+   "word": "process",
+   "report_rank": 121,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.1,
+   "word": "storm",
+   "report_rank": 395,
+   "other_best_rank": 31
+  },
+  {
+   "strength": 0.1,
+   "word": "skin",
+   "report_rank": 50,
+   "other_best_rank": 5
+  },
+  {
+   "strength": 0.1,
+   "word": "tap",
+   "report_rank": 327,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "cook",
+   "report_rank": 11,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "summary",
+   "report_rank": 835,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "ox",
+   "report_rank": 17,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "rust",
+   "report_rank": 38,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.15,
+   "word": "weight",
+   "report_rank": 18,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "ear",
+   "report_rank": 57,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "case",
+   "report_rank": 182,
+   "other_best_rank": 10
+  },
+  {
+   "strength": 0.15,
+   "word": "line",
+   "report_rank": 148,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "picture",
+   "report_rank": 200,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "scene",
+   "report_rank": 124,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "race",
+   "report_rank": 15,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "trade",
+   "report_rank": 25,
+   "other_best_rank": 11
+  },
+  {
+   "strength": 0.15,
+   "word": "custom",
+   "report_rank": 73,
+   "other_best_rank": 14
+  },
+  {
+   "strength": 0.15,
+   "word": "path",
+   "report_rank": 38,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "chin",
+   "report_rank": 206,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "pool",
+   "report_rank": 23,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "plane",
+   "report_rank": 32,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "gel",
+   "report_rank": 137,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "board",
+   "report_rank": 218,
+   "other_best_rank": 25
+  },
+  {
+   "strength": 0.15,
+   "word": "photo",
+   "report_rank": 125,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "profit",
+   "report_rank": 6,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "free",
+   "report_rank": 66,
+   "other_best_rank": 30
+  },
+  {
+   "strength": 0.15,
+   "word": "bomb",
+   "report_rank": 47,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "union",
+   "report_rank": 18,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.15,
+   "word": "amber",
+   "report_rank": 142,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "time",
+   "report_rank": 21,
+   "other_best_rank": 9
+  },
+  {
+   "strength": 0.15,
+   "word": "frame",
+   "report_rank": 39,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "sin",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "bowl",
+   "report_rank": 31,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "gray",
+   "report_rank": 64,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "review",
+   "report_rank": 590,
+   "other_best_rank": 6
+  },
+  {
+   "strength": 0.15,
+   "word": "ship",
+   "report_rank": 27,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "hair",
+   "report_rank": 44,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "earth",
+   "report_rank": 13,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "stand",
+   "report_rank": 679,
+   "other_best_rank": 26
+  },
+  {
+   "strength": 0.15,
+   "word": "enemy",
+   "report_rank": 19,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "method",
+   "report_rank": 119,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "box",
+   "report_rank": 147,
+   "other_best_rank": 3
+  },
+  {
+   "strength": 0.15,
+   "word": "friend",
+   "report_rank": 142,
+   "other_best_rank": 14
+  },
+  {
+   "strength": 0.15,
+   "word": "hat",
+   "report_rank": 165,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "ash",
+   "report_rank": 21,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "bags",
+   "report_rank": 167,
+   "other_best_rank": 9
+  },
+  {
+   "strength": 0.15,
+   "word": "sheet",
+   "report_rank": 187,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "role",
+   "report_rank": 127,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "information",
+   "report_rank": 23,
+   "other_best_rank": 6
+  },
+  {
+   "strength": 0.15,
+   "word": "loss",
+   "report_rank": 52,
+   "other_best_rank": 26
+  },
+  {
+   "strength": 0.15,
+   "word": "bolt",
+   "report_rank": 58,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "dog",
+   "report_rank": 23,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "shore",
+   "report_rank": 25,
+   "other_best_rank": 5
+  },
+  {
+   "strength": 0.15,
+   "word": "wage",
+   "report_rank": 6,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "gin",
+   "report_rank": 63,
+   "other_best_rank": 4
+  },
+  {
+   "strength": 0.15,
+   "word": "fortune",
+   "report_rank": 10,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "steel",
+   "report_rank": 21,
+   "other_best_rank": 7
+  },
+  {
+   "strength": 0.15,
+   "word": "process",
+   "report_rank": 57,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "storm",
+   "report_rank": 64,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.15,
+   "word": "skin",
+   "report_rank": 18,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.15,
+   "word": "tap",
+   "report_rank": 77,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "cook",
+   "report_rank": 6,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "summary",
+   "report_rank": 407,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "ox",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "rust",
+   "report_rank": 16,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "weight",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "ear",
+   "report_rank": 13,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "case",
+   "report_rank": 67,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "line",
+   "report_rank": 52,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "picture",
+   "report_rank": 36,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "scene",
+   "report_rank": 25,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "race",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "trade",
+   "report_rank": 7,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "custom",
+   "report_rank": 20,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "path",
+   "report_rank": 12,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "chin",
+   "report_rank": 25,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "pool",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "plane",
+   "report_rank": 9,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "gel",
+   "report_rank": 33,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "board",
+   "report_rank": 33,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "photo",
+   "report_rank": 29,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "profit",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "free",
+   "report_rank": 29,
+   "other_best_rank": 8
+  },
+  {
+   "strength": 0.25,
+   "word": "bomb",
+   "report_rank": 13,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "union",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "amber",
+   "report_rank": 45,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "time",
+   "report_rank": 14,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "frame",
+   "report_rank": 12,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "sin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "bowl",
+   "report_rank": 7,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "gray",
+   "report_rank": 17,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "review",
+   "report_rank": 148,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "ship",
+   "report_rank": 13,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "hair",
+   "report_rank": 16,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "earth",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "stand",
+   "report_rank": 214,
+   "other_best_rank": 6
+  },
+  {
+   "strength": 0.25,
+   "word": "enemy",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "method",
+   "report_rank": 32,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "box",
+   "report_rank": 28,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "friend",
+   "report_rank": 40,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.25,
+   "word": "hat",
+   "report_rank": 16,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "ash",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "bags",
+   "report_rank": 33,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 0.25,
+   "word": "sheet",
+   "report_rank": 47,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "role",
+   "report_rank": 32,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "information",
+   "report_rank": 22,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "loss",
+   "report_rank": 17,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "bolt",
+   "report_rank": 7,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "dog",
+   "report_rank": 6,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "shore",
+   "report_rank": 9,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "wage",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "gin",
+   "report_rank": 22,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "fortune",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "steel",
+   "report_rank": 8,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "process",
+   "report_rank": 21,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "storm",
+   "report_rank": 12,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "skin",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.25,
+   "word": "tap",
+   "report_rank": 17,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "cook",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "summary",
+   "report_rank": 260,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "ox",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "rust",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "weight",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "ear",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "case",
+   "report_rank": 28,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "line",
+   "report_rank": 21,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "picture",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "scene",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "race",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "trade",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "custom",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "path",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "chin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "pool",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "plane",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "gel",
+   "report_rank": 9,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "board",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "photo",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "profit",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "free",
+   "report_rank": 16,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "bomb",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "union",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "amber",
+   "report_rank": 22,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "time",
+   "report_rank": 7,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "frame",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "sin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "bowl",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "gray",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "review",
+   "report_rank": 28,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "ship",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "hair",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "earth",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "stand",
+   "report_rank": 45,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "enemy",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "method",
+   "report_rank": 7,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "box",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "friend",
+   "report_rank": 9,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "hat",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "ash",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "bags",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "sheet",
+   "report_rank": 17,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "role",
+   "report_rank": 8,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "information",
+   "report_rank": 19,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "loss",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "bolt",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "dog",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "shore",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "wage",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "gin",
+   "report_rank": 10,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "fortune",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "steel",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "process",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "storm",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "skin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 0.5,
+   "word": "tap",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "cook",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "summary",
+   "report_rank": 43,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "ox",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "rust",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "weight",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "ear",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "case",
+   "report_rank": 17,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "line",
+   "report_rank": 9,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "picture",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "scene",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "race",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "trade",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "custom",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "path",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "chin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "pool",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "plane",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "gel",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "board",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "photo",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "profit",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "free",
+   "report_rank": 10,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "bomb",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "union",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "amber",
+   "report_rank": 8,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "time",
+   "report_rank": 7,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "frame",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "sin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "bowl",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "gray",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "review",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "ship",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "hair",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "earth",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "stand",
+   "report_rank": 12,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "enemy",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "method",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "box",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "friend",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "hat",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "ash",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "bags",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "sheet",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "role",
+   "report_rank": 4,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "information",
+   "report_rank": 14,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 1.0,
+   "word": "loss",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "bolt",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "dog",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "shore",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "wage",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "gin",
+   "report_rank": 2,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "fortune",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "steel",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "process",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "storm",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "skin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 1.0,
+   "word": "tap",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "cook",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "summary",
+   "report_rank": 3,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "ox",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "rust",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "weight",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "ear",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "case",
+   "report_rank": 13,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "line",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "picture",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "scene",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "race",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "trade",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "custom",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "path",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "chin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "pool",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "plane",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "gel",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "board",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "photo",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "profit",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "free",
+   "report_rank": 6,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "bomb",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "union",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "amber",
+   "report_rank": 6,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "time",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "frame",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "sin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "bowl",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "gray",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "review",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "ship",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "hair",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "earth",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "stand",
+   "report_rank": 5,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "enemy",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "method",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "box",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "friend",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "hat",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "ash",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "bags",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "sheet",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "role",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "information",
+   "report_rank": 11,
+   "other_best_rank": 2
+  },
+  {
+   "strength": 2.0,
+   "word": "loss",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "bolt",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "dog",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "shore",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "wage",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "gin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "fortune",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "steel",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "process",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "storm",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "skin",
+   "report_rank": 1,
+   "other_best_rank": 1
+  },
+  {
+   "strength": 2.0,
+   "word": "tap",
+   "report_rank": 1,
+   "other_best_rank": 1
+  }
+ ]
+}
