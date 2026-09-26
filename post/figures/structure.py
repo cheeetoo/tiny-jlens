@@ -1,4 +1,4 @@
-"""Figure 3: the structural signatures in gpt2-small.
+"""Figure 4: the structural signatures in gpt2-small.
 
 Reads results/band/{band,cka,mlp_gain}.json and results/followups/{ignition,lists}.json.
 Run from the repo root:  python post/figures/structure.py
@@ -102,5 +102,5 @@ for a in axes.flat:
     if a is not axes[0, 2]:
         a.grid(False)
 fig.tight_layout()
-fig.savefig(OUT / "fig3_structure.png", dpi=200)
-print("saved", OUT / "fig3_structure.png")
+fig.savefig(OUT / "fig4_structure.png", dpi=200)
+print("saved", OUT / "fig4_structure.png")

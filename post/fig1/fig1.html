@@ -21,12 +21,7 @@
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); }
-  #fig { width: 1200px; padding: 26px 28px 24px; }
-  h1 { font-size: 24px; font-weight: 650; margin: 0 0 6px; letter-spacing: -0.2px; }
-  .sub { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
-  .legend { display: inline-flex; gap: 18px; margin-left: 14px; vertical-align: 1px; }
-  .legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--muted); }
-  .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  #fig { width: 1200px; padding: 24px 28px 24px; }
 
   .row { display: grid; gap: 16px; margin-bottom: 16px; }
   .row3 { grid-template-columns: repeat(3, 1fr); }
@@ -34,8 +29,8 @@
 
   .card { border: 1.5px solid var(--line); border-radius: 12px; padding: 13px 14px 13px; background: #fff; position: relative; }
   .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-  .title { font-size: 18px; font-weight: 650; }
-  .tag { font-size: 12px; font-weight: 650; color: #fff; border-radius: 20px; padding: 3px 11px; letter-spacing: 0.3px; }
+  .title { font-size: 19px; font-weight: 650; }
+  .tag { font-size: 12.5px; font-weight: 700; color: #fff; border-radius: 20px; padding: 4px 12px; letter-spacing: 0.4px; }
   .tag.works { background: var(--works); }
   .tag.partly { background: var(--partly); }
   .tag.no { background: var(--no); }
@@ -45,7 +40,7 @@
 
   .scene { display: flex; align-items: flex-end; gap: 8px; margin-top: 26px; }
   .col { display: flex; flex-direction: column; align-items: center; }
-  .thought { position: relative; border: 2px dashed var(--slate); background: var(--slate-soft); border-radius: 50%; padding: 10px 18px; text-align: center; font-family: var(--mono); font-size: 14.5px; line-height: 1.3; min-width: 130px; }
+  .thought { position: relative; border: 2px dashed var(--slate); background: var(--slate-soft); border-radius: 50%; padding: 10px 16px; text-align: center; font-family: var(--mono); font-size: 14.5px; line-height: 1.3; min-width: 118px; }
   .thought .op { position: absolute; top: -19px; left: 0; right: 0; font-family: var(--sans); font-size: 12.5px; font-weight: 700; letter-spacing: 1.2px; color: var(--muted); }
   .old { color: #a19c95; text-decoration: line-through; }
   .new { color: var(--maroon); }
@@ -57,36 +52,25 @@
   .say .lab { font-family: var(--sans); font-size: 11.5px; font-weight: 650; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 3px; }
   .ok { color: var(--works); font-family: var(--sans); font-weight: 700; }
   .x { color: #b04a3a; font-family: var(--sans); font-weight: 700; }
-  table.map { border-collapse: collapse; width: 100%; }
-  table.map td { padding: 1px 4px; white-space: nowrap; }
+  .tilde { color: var(--partly); font-family: var(--sans); font-weight: 700; }
+  table.map { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  table.map td { padding: 1px 3px; white-space: nowrap; }
   table.map td.f { color: #666; text-align: right; }
-  table.map td.arrow { color: #aaa; }
-  .note { font-family: var(--sans); font-size: 12.5px; color: #5f5a54; margin-top: 7px; line-height: 1.35; }
+  .note { font-family: var(--sans); font-size: 12.5px; color: #5f5a54; margin-top: 8px; line-height: 1.35; }
 
-  .struct { border: 1.5px solid var(--line); border-radius: 12px; background: #fff; padding: 14px 18px 16px; }
-  .struct .stitle { font-size: 16.5px; font-weight: 650; margin-bottom: 10px; }
-  .struct .stitle span { font-weight: 400; color: var(--muted); font-size: 15.5px; }
-  .chips { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; }
-  .chip { background: var(--box); border-radius: 9px; padding: 8px 10px; border-left: 5px solid var(--no); }
-  .chip.works { border-left-color: var(--works); }
-  .chip.partly { border-left-color: var(--partly); }
-  .chip .cn { font-weight: 650; font-size: 13.5px; margin-bottom: 3px; }
-  .chip .cd { font-size: 12.5px; color: #555; line-height: 1.35; }
-  .chip .cs { font-size: 11.5px; font-weight: 700; letter-spacing: 0.6px; margin-top: 5px; }
-  .chip.works .cs { color: var(--works); } .chip.partly .cs { color: var(--partly); } .chip.no .cs { color: var(--no); }
-  .foot { font-size: 13.5px; color: var(--muted); margin-top: 14px; }
+  .struct { border: 1.5px solid var(--line); border-radius: 12px; background: #fff; padding: 13px 16px 12px; }
+  .struct .head { margin-bottom: 8px; }
+  .panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .panel { background: var(--box); border-radius: 9px; padding: 9px 12px 8px; }
+  .panel .pn { font-weight: 650; font-size: 14px; margin-bottom: 4px; }
+  .panel svg { display: block; }
+  .snote { font-size: 12.5px; color: #5f5a54; margin-top: 9px; }
+  .who { font-family: var(--sans); font-size: 12px; fill: #444; }
+  .small { font-family: var(--sans); font-size: 10.5px; fill: #6f6a64; }
 </style>
 </head>
 <body>
 <div id="fig">
-  <h1>GPT-2 small (124M, 2019) on the global workspace tests</h1>
-  <p class="sub">The five functional tests from Gurnee et al. (2026), and the structural signatures, on GPT-2 small with its released J-lens.
-    <span class="legend">
-      <span><i class="dot" style="background:var(--works)"></i>works</span>
-      <span><i class="dot" style="background:var(--partly)"></i>partly</span>
-      <span><i class="dot" style="background:var(--no)"></i>weak or absent</span>
-    </span>
-  </p>
 
   <div class="row row3">
     <!-- verbal report -->
@@ -104,7 +88,7 @@ Name a sport:</div>
         </div>
         <div class="say"><div class="lab">GPT-2 SAYS</div><span class="old">Running</span> <span class="new">Rugby</span></div>
       </div>
-      <div class="note"><span class="x">✗</span> Harder version: an injected word gets blurted out before GPT-2 is asked about it.</div>
+      <div class="note"><span class="x">✗</span> The injected-thought version fails: GPT-2 says the injected word at the start of its reply, not when asked.</div>
     </div>
 
     <!-- internal reasoning -->
@@ -119,33 +103,15 @@ Name a sport:</div>
         </div>
         <div class="say"><div class="lab">GPT-2 SAYS</div><span class="old">Paris</span> <span class="new">Beijing</span></div>
       </div>
-      <div class="note"><span class="ok">✓</span> Works on 71% of swaps, the same rate the paper reports for Sonnet 4.5 and Opus 4.5 (70%).</div>
+      <div class="note">Works on 71% of swaps (Claude: 70%, on harder questions).</div>
     </div>
 
-    <!-- selectivity -->
-    <div class="card">
-      <div class="head"><div class="title">Selectivity</div><div class="tag works">MOSTLY</div></div>
-      <div class="prompt"><span class="dim">(two-hop questions, one-hop recall, copying, ordinary text)</span></div>
-      <div class="scene">
-        <div class="col">
-          <div class="thought"><div class="op">ABLATE</div><span class="old">France</span><br><span class="old">Geneva Tripoli</span></div>
-          <div class="bubbles"><i style="width:14px;height:14px;left:18px;top:4px"></i><i style="width:8px;height:8px;left:8px;top:20px"></i></div>
-          ROBOT
-        </div>
-        <div class="say"><div class="lab">AFTER REMOVING THE TOP J-LENS DIRECTIONS</div>
-          <span class="ok">✓</span> copying<br>
-          <span style="color:var(--partly);font-family:var(--sans);font-weight:700">~</span> ordinary text<br>
-          <span class="x">✗</span> two-hop questions</div>
-      </div>
-      <div class="note">~ Also changes 29% of next-word predictions on ordinary text (random directions: about 19%).</div>
-    </div>
-  </div>
-
-  <div class="row row2">
     <!-- flexible generalization -->
     <div class="card">
-      <div class="head"><div class="title">Flexible generalization</div><div class="tag partly">PARTLY</div></div>
-      <div class="prompt">The capital of France is the city of…   Most people in France speak…   The currency used in France is the…</div>
+      <div class="head"><div class="title">Flexible generalization</div><div class="tag works">WORKS</div></div>
+      <div class="prompt">The capital of France is…
+Most people in France speak…
+The currency used in France is…</div>
       <div class="scene">
         <div class="col">
           <div class="thought"><div class="op">SWAP</div><span class="old">France</span><br><span class="new">China</span></div>
@@ -154,18 +120,37 @@ Name a sport:</div>
         </div>
         <div class="say"><div class="lab">GPT-2 SAYS</div>
           <table class="map">
-            <tr><td class="f">capital</td><td class="arrow">→</td><td><span class="old">Paris</span></td><td><span class="new">Beijing</span></td><td class="ok">✓</td></tr>
-            <tr><td class="f">language</td><td class="arrow">→</td><td><span class="old">French</span></td><td><span class="new">Chinese</span></td><td class="ok">✓</td></tr>
-            <tr><td class="f">currency</td><td class="arrow">→</td><td><span class="old">Franc</span></td><td><span class="new">Yuan</span></td><td class="ok">✓</td></tr>
-            <tr><td class="f">next month</td><td class="arrow">→</td><td colspan="2"><span style="color:#555">swap ignored</span></td><td class="x">✗</td></tr>
+            <tr><td><span class="old">Paris</span></td><td><span class="new">Beijing</span></td></tr>
+            <tr><td><span class="old">French</span></td><td><span class="new">Chinese</span></td></tr>
+            <tr><td><span class="old">Franc</span></td><td><span class="new">Yuan</span></td></tr>
           </table>
         </div>
+      </div>
+      <div class="note">Works about as often as in Claude (35% vs. 40% of swaps). Both fail on one kind of function.</div>
+    </div>
+  </div>
+
+  <div class="row row2">
+    <!-- selectivity -->
+    <div class="card">
+      <div class="head"><div class="title">Selectivity</div><div class="tag partly">PARTLY</div></div>
+      <div class="prompt"><span class="dim">(two-hop questions, one-hop recall, copying, ordinary text)</span></div>
+      <div class="scene">
+        <div class="col">
+          <div class="thought"><div class="op">ABLATE</div><span class="old">France</span><br><span class="old">Geneva Tripoli</span></div>
+          <div class="bubbles"><i style="width:14px;height:14px;left:18px;top:4px"></i><i style="width:8px;height:8px;left:8px;top:20px"></i></div>
+          ROBOT
+        </div>
+        <div class="say"><div class="lab">AFTER REMOVING THE TOP J-LENS DIRECTIONS</div>
+          <span class="ok">✓</span> copying still works<br>
+          <span class="x">✗</span> two-hop questions break<br>
+          <span class="tilde">~</span> 29% of ordinary next-word predictions change too</div>
       </div>
     </div>
 
     <!-- directed modulation -->
     <div class="card">
-      <div class="head"><div class="title">Directed modulation</div><div class="tag no">WEAK</div></div>
+      <div class="head"><div class="title">Directed modulation</div><div class="tag partly">PARTLY</div></div>
       <div class="prompt">Write "The old painting hung crookedly on the wall." <b>Think about lemon while you write.</b> "The old painting hung…</div>
       <div class="scene">
         <div class="col">
@@ -175,22 +160,67 @@ Name a sport:</div>
         </div>
         <div class="say"><div class="lab">IN THE J-LENS WHILE COPYING</div>
           <span class="ok">✓</span> "think about lemon": rises a bit<br>
-          <span class="x">✗</span> "ignore lemon": no drop<br>
-          <span class="x">✗</span> "work out 3² − 2": can't</div>
+          <span class="x">✗</span> "ignore lemon": no drop (Claude drops it)</div>
       </div>
-      <div class="note">A small chat model (Qwen3-1.7B) passes this test, including "ignore".</div>
+      <div class="note">A small chat model (Qwen3-1.7B) passes, including "ignore".</div>
     </div>
   </div>
 
   <div class="struct">
-    <div class="stitle">Structural signatures <span>(paper §4)</span></div>
-    <div class="chips">
-      <div class="chip no"><div class="cn">A distinct band of layers</div><div class="cd">Lens statistics change smoothly with depth; no block in layer-to-layer similarity</div><div class="cs">ABSENT</div></div>
-      <div class="chip no"><div class="cn">Ignition</div><div class="cd">A half-France, half-Germany input stays a blend at every layer</div><div class="cs">ABSENT</div></div>
-      <div class="chip no"><div class="cn">MLPs amplify J-lens directions</div><div class="cd">1.2–1.5× vs random directions (Claude: ~10×)</div><div class="cs">WEAK</div></div>
-      <div class="chip partly"><div class="cn">Heads that copy J-lens directions</div><div class="cd">Present, but at every depth; they look like ordinary copying heads</div><div class="cs">PARTLY</div></div>
-      <div class="chip works"><div class="cn">Limited capacity</div><div class="cd">Holds about one unrelated word at a time (Claude: about six); a new list category pushes the old one out, as in Claude</div><div class="cs">PRESENT</div></div>
+    <div class="head"><div class="title">The structure</div><div class="tag no">MISSING</div></div>
+    <div class="panels">
+      <!-- band -->
+      <div class="panel">
+        <div class="pn">A distinct band of workspace layers</div>
+        <svg width="330" height="100" viewBox="0 0 330 100">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#ead8d6"/><stop offset="1" stop-color="#800000"/>
+            </linearGradient>
+          </defs>
+          <text class="who" x="0" y="27">Claude</text>
+          <rect x="78" y="12" width="82" height="22" fill="#c9d6e2"/>
+          <rect x="160" y="12" width="146" height="22" fill="#33658a"/>
+          <rect x="306" y="12" width="20" height="22" fill="#1f3f57"/>
+          <text class="small" x="119" y="47" text-anchor="middle">sensory</text>
+          <text class="small" x="233" y="47" text-anchor="middle">workspace</text>
+          <text class="small" x="316" y="47" text-anchor="middle">motor</text>
+          <text class="who" x="0" y="75">GPT-2 small</text>
+          <rect x="78" y="60" width="248" height="22" fill="url(#g2)"/>
+          <text class="small" x="202" y="96" text-anchor="middle">changes smoothly with depth</text>
+        </svg>
+      </div>
+      <!-- ignition -->
+      <div class="panel">
+        <div class="pn">Ignition</div>
+        <svg width="330" height="100" viewBox="0 0 330 100">
+          <text class="who" x="0" y="27">Claude</text>
+          <line x1="78" y1="34" x2="200" y2="34" stroke="#bbb"/>
+          <path d="M78 33 L135 33 L143 13 L200 13" fill="none" stroke="#33658a" stroke-width="2.5"/>
+          <text class="small" x="210" y="27">snaps to one</text>
+          <text class="who" x="0" y="75">GPT-2 small</text>
+          <line x1="78" y1="82" x2="200" y2="82" stroke="#bbb"/>
+          <path d="M78 81 L200 61" fill="none" stroke="#800000" stroke-width="2.5"/>
+          <text class="small" x="210" y="75">stays a blend</text>
+          <text class="small" x="139" y="96" text-anchor="middle">input: France → Germany mix</text>
+        </svg>
+      </div>
+      <!-- MLP gain -->
+      <div class="panel">
+        <div class="pn">MLPs amplify J-lens directions</div>
+        <svg width="330" height="100" viewBox="0 0 330 100">
+          <text class="who" x="0" y="27">Claude</text>
+          <rect x="78" y="12" width="200" height="22" fill="#33658a"/>
+          <text class="small" x="284" y="27">~10×</text>
+          <text class="who" x="0" y="75">GPT-2 small</text>
+          <rect x="78" y="60" width="26" height="22" fill="#800000"/>
+          <text class="small" x="110" y="75">1.2–1.5×</text>
+          <line x1="98" y1="6" x2="98" y2="86" stroke="#6f6a64" stroke-dasharray="3 3"/>
+          <text class="small" x="98" y="96" text-anchor="middle">random = 1×</text>
+        </svg>
+      </div>
     </div>
+    <div class="snote">Claude's panels are stylized from the paper. GPT-2 does have a small J-space capacity and attention heads that copy J-lens directions, but both have simple explanations that don't need a workspace.</div>
   </div>
 </div>
 <script>
