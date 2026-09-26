@@ -421,15 +421,15 @@
   "arg": "three",
   "answer": "nine",
   "gated": false,
-  "prompt": "Two squared equals four. Six squared equals thirty. three squared equals"
+  "prompt": "Two squared equals four. Six squared equals thirty-six. three squared equals"
  },
  {
   "category": "numbers",
   "function": "square",
   "arg": "five",
   "answer": "twenty",
-  "gated": true,
-  "prompt": "Two squared equals four. Six squared equals thirty. five squared equals"
+  "gated": false,
+  "prompt": "Two squared equals four. Six squared equals thirty-six. five squared equals"
  },
  {
   "category": "numbers",
@@ -437,7 +437,7 @@
   "arg": "seven",
   "answer": "forty",
   "gated": true,
-  "prompt": "Two squared equals four. Six squared equals thirty. seven squared equals"
+  "prompt": "Two squared equals four. Six squared equals thirty-six. seven squared equals"
  },
  {
   "category": "numbers",
@@ -445,7 +445,7 @@
   "arg": "nine",
   "answer": "eighty",
   "gated": false,
-  "prompt": "Two squared equals four. Six squared equals thirty. nine squared equals"
+  "prompt": "Two squared equals four. Six squared equals thirty-six. nine squared equals"
  },
  {
   "category": "numbers",

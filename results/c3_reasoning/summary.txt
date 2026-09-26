@@ -4,12 +4,12 @@ capability gate: 48/53 two-hop items answered correctly
 
 E1 readout — median lens rank at the answer position, per layer (n=48)
      intermediate  answer     arg    null   | %% intermediate in top-10
-  L0        25249   21582   25400   35055       0%
+  L0        25249   21582   25399   35055       0%
   L1        20605   15543   18174   23230       0%
   L2        21927   18117   20269   28840       0%
   L3        14634   10808   12169   17332       0%
-  L4        17552   13508   14735   22833       0%
-  L5        12608    5628   10376   15694       0%
+  L4        17552   13508   14735   22832       0%
+  L5        12609    5628   10376   15694       0%
   L6         2635    1675    2565    4078       0%
   L7          836     133    2381    1379       0%  <- band
   L8           13       1      49     645      40%  <- band

@@ -41,7 +41,7 @@ band [7, 8, 9]; 30 concept words x 12 carriers; phrasings pooled per condition
 
 2b  math (silent computation) -- capability-gated
     direct '{expr} =': 0/24 greedy-correct; median answer rank 8 (the answer is near-but-not-produced when asked directly)
-    answer-in-lens during copy, baseline: hit@25 0.00  medRank 4397
+    answer-in-lens during copy, baseline: hit@25 0.00  medRank 4396
     answer-in-lens during copy, compute : hit@25 0.00  medRank 4358
     answer-in-lens during copy, mention : hit@25 0.00  medRank 3891
     -> the model cannot reliably compute (0 greedy-correct), and the answer never enters

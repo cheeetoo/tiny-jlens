@@ -98,7 +98,7 @@ FRAMES: dict[tuple[str, str], str] = {
     ("animals", "group"):       "A group of wolves is called a pack. A group of fish is called a school. ",
     # numbers — demos: one, four, two, six, twelve, zero, eight (not three/five/seven/nine)
     ("numbers", "double"):      "Two times one equals two. Two times four equals eight. ",
-    ("numbers", "square"):      "Two squared equals four. Six squared equals thirty. ",
+    ("numbers", "square"):      "Two squared equals four. Six squared equals thirty-six. ",
     ("numbers", "successor"):   "The number that comes right after one is two. The number that comes right after twelve is thirteen. ",
     ("numbers", "first_letter"):"The word 'zero' begins with the letter z. The word 'eight' begins with the letter e. ",
 }
