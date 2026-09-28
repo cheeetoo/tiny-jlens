@@ -37,12 +37,21 @@ E4 depth — onset layer (half-max) of the swap effect, intermediate vs answer (
     L9  intermediate  +5.06   answer  +5.33
     L10 intermediate  +5.05   answer  +5.12
 
-E5 privileging — swap_answer top-1, per condition (matched magnitude; n=999)
-  raw_lens    70.6% [68%,73%]  (705/999)
-  full        88.3% [86%,90%]  (882/999)
-  jpart       95.4% [94%,97%]  (953/999)
-  nonj         1.5% [ 1%, 2%]  (15/999)
-  nonj_clamp   0.0% [ 0%, 0%]  (0/999)
-  J-space share of probe variance (median): L7 27%, L8 40%, L9 57%
+E5 privileging — swap_answer top-1, per condition (matched magnitude; n=999; k = pursuit atoms; rpart/rrest = the split against a random dictionary)
+  raw_lens        70.6% [68%,73%]  (705/999)
+  full            88.3% [86%,90%]  (882/999)
+  jpart_k3        94.2% [93%,95%]  (941/999)
+  nonj_k3         14.6% [13%,17%]  (146/999)
+  nonj_clamp_k3    0.3% [ 0%, 1%]  (3/999)
+  rpart_k3         1.3% [ 1%, 2%]  (13/999)
+  rrest_k3        86.4% [84%,88%]  (863/999)
+  jpart_k25       95.4% [94%,97%]  (953/999)
+  nonj_k25         1.5% [ 1%, 2%]  (15/999)
+  nonj_clamp_k25   0.0% [ 0%, 0%]  (0/999)
+  rpart_k25       32.0% [29%,35%]  (320/999)
+  rrest_k25       65.2% [62%,68%]  (651/999)
+  share of probe variance in the k-atom part (median), J-lens | random dictionary:
+    k= 3: L7 6% | 6%,  L8 15% | 6%,  L9 32% | 6%
+    k=25: L7 27% | 37%,  L8 40% | 37%,  L9 57% | 37%
 
 floor — paper's probe-swap.json verbatim (no frame): capability 9/90; coordinate swap on usable items 3/6

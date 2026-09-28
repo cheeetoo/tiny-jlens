@@ -28,7 +28,8 @@ from jl.stats import median, sign_test
 LAYERS_REPORTED = [6, 7, 8, 9, 10]     # band is 7-9; 6 and 10 flank it to show localization
 N_WORDS = 30
 N_CARRIERS = 12
-K_PURSUIT = 16
+K_PURSUIT_PAPER = 16                      # the J-space part of a probe, sized for Claude (§3.1)
+K_PURSUIT = jl.scaled_k(K_PURSUIT_PAPER)  # 2: scaled to GPT-2 small's occupancy (jl/model.py)
 
 
 # =============================================================================== prompt material
@@ -308,14 +309,16 @@ def main():
         return {L: torch.stack(v).mean(0) for L, v in d.items()}
 
     mf, me = mean_final(IMAGINE["fr_probe"]), mean_final(IMAGINE["en_probe"])
-    probe, orth, jshare = {}, {}, {}
+    # J-orthogonal probe with the scaled k ("orth") and with the paper's k ("orth_paper")
+    probe, orth, jshare = {}, {"orth": {}, "orth_paper": {}}, {"orth": {}, "orth_paper": {}}
     for L in jl.BAND:
         p = mf[L] - me[L]
-        _, recon = jl.pursuit(p, lm.V(L), K_PURSUIT)
         probe[L] = p / p.norm()
-        q = p - recon
-        orth[L] = q / q.norm()
-        jshare[L] = float(recon.norm() ** 2 / p.norm() ** 2)
+        for key, k in (("orth", K_PURSUIT), ("orth_paper", K_PURSUIT_PAPER)):
+            _, recon = jl.pursuit(p, lm.V(L), k)
+            q = p - recon
+            orth[key][L] = q / q.norm()
+            jshare[key][L] = float(recon.norm() ** 2 / p.norm() ** 2)
     fr_ids = [lm.tid(" " + IMAGINE_LABEL)]
     if lm.is_single(" " + IMAGINE_LABEL.lower()):
         fr_ids.append(lm.tid(" " + IMAGINE_LABEL.lower()))
@@ -330,8 +333,9 @@ def main():
         res = lm.residuals(ids, jl.BAND)
         lens = max(torch.logsumexp(lm.lens_logits(res[L][span], L).log_softmax(-1)[:, fr_ids],
                                    dim=-1).mean().item() for L in jl.BAND)
-        proj = sum(float((res[L][span] @ orth[L]).mean()) for L in jl.BAND) / len(jl.BAND)
-        return dict(lens=lens, orth=proj)
+        proj = {key: sum(float((res[L][span] @ o[L]).mean()) for L in jl.BAND) / len(jl.BAND)
+                for key, o in orth.items()}
+        return dict(lens=lens, **proj)
 
     for se, sf in zip(IMAGINE["en"], IMAGINE["fr"]):
         rec = dict(jshare=jshare)
@@ -465,7 +469,10 @@ def summarize(out, words, carriers):
     IM = out["imagine"]
     js = IM[0]["jshare"]
     L.append("\n2d  privileging: an 'imagine this is French' header vs a real French sentence")
-    L.append("    French probe J-space share: " + ", ".join(f"L{k} {v:.0%}" for k, v in js.items()))
+    L.append(f"    J-orth probe = the probe minus its k-atom J-space part; 'orth' k={K_PURSUIT} (scaled), "
+             f"'orth_paper' k={K_PURSUIT_PAPER} (the paper's)")
+    for key in ("orth", "orth_paper"):
+        L.append(f"    French probe J-space share ({key}): " + ", ".join(f"L{k} {v:.0%}" for k, v in js[key].items()))
 
     def cond_delta(cond, ch):
         ds = []
@@ -473,16 +480,17 @@ def summarize(out, words, carriers):
             base = sum(m[ch] for m in r["neutral"]) / len(r["neutral"])
             ds += [m[ch] - base for m in r[cond]]
         return sum(ds) / len(ds), sum(x > 0 for x in ds), len(ds)
-    L.append(f"    {'':12s}  lens 'French' (delta vs neutral)   J-orth probe (delta vs neutral)")
-    for cond in ("claim", "real"):
-        dl, ul, nl = cond_delta(cond, "lens")
-        do, uo, no = cond_delta(cond, "orth")
-        L.append(f"    {cond:12s}  {dl:+6.2f}  (up {ul}/{nl})            {do:+7.2f}  (up {uo}/{no})")
-    cl, _, _ = cond_delta("claim", "lens")
-    rl, _, _ = cond_delta("real", "lens")
-    co, _, _ = cond_delta("claim", "orth")
-    ro, _, _ = cond_delta("real", "orth")
-    L.append(f"    dissociation: the claim gets {cl/rl:.0%} of real's lens effect but only {co/ro:.0%} of its probe effect")
+    for key in ("orth", "orth_paper"):
+        L.append(f"    [{key}]  {'':3s}  lens 'French' (delta vs neutral)   J-orth probe (delta vs neutral)")
+        for cond in ("claim", "real"):
+            dl, ul, nl = cond_delta(cond, "lens")
+            do, uo, no = cond_delta(cond, key)
+            L.append(f"    {cond:12s}  {dl:+6.2f}  (up {ul}/{nl})            {do:+7.2f}  (up {uo}/{no})")
+        cl, _, _ = cond_delta("claim", "lens")
+        rl, _, _ = cond_delta("real", "lens")
+        co, _, _ = cond_delta("claim", key)
+        ro, _, _ = cond_delta("real", key)
+        L.append(f"    dissociation: the claim gets {cl/rl:.0%} of real's lens effect but only {co/ro:.0%} of its probe effect")
     L.append("    -> the instruction writes 'French' to the J-space without making the text French-like as a real one does.")
     return "\n".join(L)
 

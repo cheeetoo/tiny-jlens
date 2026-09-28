@@ -3,17 +3,41 @@
 ## Reading and rebuilding
 
 - `post/post.md` is the source. `post/post.html` is a local preview made from it, with the figures inline. After editing the Markdown, run `post/build.sh` (needs pandoc) and open `post/post.html` in a browser.
-- Figure 1 is `post/fig1/fig1.html`. Render it to `fig1.png` with:
+- Figure 1 is built from `post/fig1/template.html` and the data in `post/fig1/data/` by `python post/fig1/build.py` (run from the repo root), which writes `fig1.html` and renders `fig1.png` with headless Chromium.
 
-  ```
-  cd post/fig1 && /Applications/Chromium.app/Contents/MacOS/Chromium --headless=new --disable-gpu --hide-scrollbars \
-    --force-device-scale-factor=2 --window-size=1200,965 --screenshot=fig1.png "file://$PWD/fig1.html"
-  ```
-
-- Figures 2 to 4 come from `post/figures/centering.py`, `introspect.py`, and `structure.py` (run them from the repo root with `.venv/bin/python`). I renamed the outputs so the numbers match the order in the post: `fig3_introspect.png` and `fig4_structure.png`. The old `fig3_structure.png` and `fig4_introspect.png` are deleted.
+- Figures 2 to 5 come from `post/figures/centering.py`, `introspect.py`, `structure.py`, and `band_stats.py` (run them from the repo root with `PYTHONPATH=. .venv/bin/python`). I renamed the outputs so the numbers match the order in the post: `fig3_introspect.png` and `fig4_structure.png`. The old `fig3_structure.png` and `fig4_introspect.png` are deleted.
 - `paper.md` (local only) is the paper. `commentary/` (local only, except `README.md`) has the commentaries. `commentary/README.md` is a sourced summary of what's online.
 
-## What changed in this pass
+## Numbers of J-lens vectors (latest pass)
+
+The paper fixes a number of J-lens vectors in three places:
+- 16 for a concept vector's J-space part (verbal report privilege);
+- 25 for a reasoning probe's J-space part;
+- 10 for the selectivity ablation.
+
+It chose these for Claude, whose occupancy is about 25. GPT-2's is about 3 in our band. So the main runs now scale each number by 3/25: 16 becomes 2, 25 becomes 3, and 10 becomes 1. Every module also runs the paper's number, and the appendix reports both (A.3 has the summary table). The rule lives in `jl/model.py` (`scaled_k`, `OCCUPANCY_GPT2 = 3`).
+
+What changed:
+- **Privilege tests hold either way.**
+  - Verbal report: J part 97% / rest 18% with 2 vectors, against 97% / 0% with 16.
+  - Two-hop: 94% / 15% with 3 vectors, against 95% / 1.5% with 25.
+  - At the scaled numbers the rest carries a little, like Claude's 5–9% and 28%. The "0%" was an artifact of using 16 vectors in a 768-dimensional model.
+  - A random-dictionary split reverses the result: the random part does almost nothing and the random rest works (87%). What matters is which part points toward the word's J-lens direction.
+- **The variance-share comparison ("23–33% vs Claude's 6–7%") is gone.** It was mostly width: 16 random directions capture 26% of a GPT-2 concept vector, about as much as 16 J-lens vectors. At the scaled numbers the shares are 6–15% for concept vectors (random: 4%) and 6–32% for probes (random: 6%).
+- **Selectivity now counts as "works".** With 1 direction, GPT-2 matches the ablation table in the paper's Figure 22 closely. One layer gives 69% two-hop and 82% ordinary text unchanged (Claude light: 68% / 87%). Three layers give 21% / 72% (Claude medium: 26% / 75%). Five layers give 0% / 59% (Claude heavy: 6% / 65%). Remaining differences:
+  - GPT-2's random control does more damage.
+  - One-hop recall breaks at three layers, though Claude's TriviaQA halves too.
+  - Copying breaks over five layers.
+  - The language test is weaker than Claude's.
+- **"Less targeted than Claude" and the Qwen3-4B citation are removed.** Claude's own medium ablation changes 25% of ordinary predictions, so neither supported the claim.
+- **The "small part of the representation" check now uses the paper's method** (K = median occupancy, excess over random).
+- **Occupancy is per position**, as in the paper, at every layer.
+- **Claude's numbers are the paper's published ones.** Where the text gives a number, the post uses it: 59% / 5% for the verbal-report decomposition, "never exceeding 10%" for the excess variance. Otherwise it uses the numbers shown in the paper's figures: Figure 22 for the ablation table, and Figure 24 for TriviaQA.
+  - The data behind those figures is at transformer-circuits.pub/2026/workspace/data/ (ablation-strength/table.json, ablation-bars/bars.json, capacity-fve-occupancy/data.json).
+  - Note that the data behind Figure 8 gives 55% / 9%, not the text's 59% / 5%. We follow the text.
+- **Removed `jl.followups.randseeds`.** c5 now runs 5 random seeds itself, at every strength.
+
+## What changed in the previous pass
 
 - The TL;DR is three bullets, with the interpretation in one: the tests are cheap, so passing them should count for little. It links Rob Long's post.
 - New order: TL;DR, Figure 1, background, "How each test went" (a reader can stop there), a short setup, the tests in detail, the structure, why the tests are cheap, what this means, limitations, appendix.
@@ -26,25 +50,24 @@
   - Centering is one paragraph.
   - The band is one short paragraph.
 - Qwen is folded into verbal report and directed modulation (details in Appendix E), not given its own section.
-- The structure section explains kurtosis, occupancy (2 to 5 J-lens vectors in GPT-2, against about 25 in Claude), and how we chose the heads.
+- The structure section explains kurtosis and occupancy (2 to 4 J-lens vectors in GPT-2's band, against about 25 in Claude).
 - Limitations are plain sentences.
 - Leech's "near-analytic" point is now cited in "Why the tests are cheap".
 - The appendix has no file or repo references. The experiments table and the "Reproducing" section are gone.
 - Length: the body is about 6,100 words (it was about 8,000) and the appendix about 6,200. If it needs to be shorter:
   - The per-test detail sections could each lose a paragraph.
-  - The heads subsection could go to the appendix.
 
 ## Verdicts
 
 - **Verbal report: works.** The swap works on all 38 trials. The injected-thought version fails. That is said in the same bullet, not framed as "the harder version".
 - **Internal reasoning: works.** 71% against Claude's 70%. See the caveat below.
 - **Flexible generalization: works.** You were right to doubt "partly". GPT-2 gets 35% on the swaps whose target function it can compute, and Claude gets 40% on the full grid. Both fail one kind of function: Claude fails number words (0 of 48), and GPT-2 fails the two successor functions. Doubling the strength hurts GPT-2 because the swap then makes it output the swapped-in argument itself. The post mentions this in one sentence and doesn't lean on it.
-- **Selectivity: partly.** The pattern matches the paper (two-hop breaks, copying survives). But the ablation also changes 29% of ordinary next-token predictions (random: about 19%) and wipes out one-hop recall at three layers. Part of the pattern comes from the rule that skips the model's likely next tokens.
+- **Selectivity: works** (was "partly"). With the ablation scaled to GPT-2's occupancy (1 direction instead of 10), the numbers match Claude's in the paper's Figure 22 closely. The caveats are in the post: the random control does more damage, one-hop recall breaks at three layers, copying breaks at five, and the language test is weaker. With the paper's 10 directions the ablation is much blunter (29% of ordinary predictions change at one layer), which is what the earlier "partly" was based on.
 - **Directed modulation: partly.**
   - "Think about" beats a bare mention in 76% of pairs, but the effect is small.
   - "Ignore" doesn't lower the word. I frame that as a difference from Claude rather than a clear failure. The criterion as stated asks only for bringing a concept in, and there is the white-bear point.
   - Qwen3-1.7B passes in both directions.
-- **Structure: "almost none".** You said "none of the structure is there at all". I kept "almost" because GPT-2 does have a limited capacity, the category-block effect in lists, and heads that copy J-lens directions. The post gives the simple explanations for each.
+- **Structure: "almost none".** You said "none of the structure is there at all". I kept "almost" because GPT-2 does have a limited capacity and the category-block effect in lists. The post gives the simple explanations for each.
 
 ## Checks in this pass
 
@@ -103,15 +126,15 @@
 
 ## Slack message draft
 
-> New draft: we ran the tests from Anthropic's global workspace paper on GPT-2 small (124M, 2019). It passes verbal report, internal reasoning, and flexible generalization about as well as Claude, partly passes selectivity and directed modulation, and has almost none of the structure (no band of workspace layers, no ignition, little MLP amplification). Our take is that the five functional tests are cheap, so passing them is weak evidence for a workspace, and the case for Claude rests on the structural results. Draft: [link]. Comments welcome, especially on the injected-thought test and the internal-reasoning comparison.
+> New draft: we ran the tests from Anthropic's global workspace paper on GPT-2 small (124M, 2019). It passes verbal report, internal reasoning, flexible generalization, and selectivity about as well as Claude, partly passes directed modulation, and has almost none of the structure (no band of workspace layers, no ignition, little MLP amplification). Our take is that the five functional tests are cheap, so passing them is weak evidence for a workspace, and the case for Claude rests on the structural results. Draft: [link]. Comments welcome, especially on the injected-thought test and the internal-reasoning comparison.
 
 ## Tweet thread draft
 
 > 1/ Anthropic's global workspace paper found that Claude's "J-space" passes five functional tests of a global workspace. We ran the same tests on GPT-2 small, a 124M model from 2019. It mostly passes them. [Figure 1]
 
-> 2/ Verbal report, internal reasoning, and flexible generalization work about as well as in Claude. Swapping France for China in GPT-2's J-space turns "Paris" into "Beijing" on 71% of swaps (Claude: 70%, on harder questions).
+> 2/ Verbal report, internal reasoning, flexible generalization, and selectivity work about as well as in Claude. Swapping France for China in GPT-2's J-space turns "Paris" into "Beijing" on 71% of swaps (Claude: 70%, on harder questions). Ablating the J-space breaks two-hop questions but not copying, with numbers close to Claude's.
 
-> 3/ Selectivity and directed modulation partly work. Told to "ignore lemon", GPT-2 doesn't push "lemon" down the way Claude does. A small chat model, Qwen3-1.7B, does, so that part seems to come with instruction tuning.
+> 3/ Directed modulation partly works. Told to "ignore lemon", GPT-2 doesn't push "lemon" down the way Claude does. A small chat model, Qwen3-1.7B, does, so that part seems to come with instruction tuning.
 
 > 4/ What GPT-2 lacks is the structure: no distinct band of workspace layers, no "ignition" (a France/Germany blend stays a blend), and MLPs amplify J-lens directions 1.2–1.5x, against ~10x in Claude.
 

@@ -40,9 +40,9 @@ generalization, and selectivity. Using a new tool, the Jacobian lens, it
 finds representations in Claude that pass all five. It also finds
 structure in Claude that global workspace theory predicts.</li>
 <li>We ran the same tests on GPT-2 small, a 124M-parameter base model
-from 2019. It passes verbal report, internal reasoning, and flexible
-generalization about as well as Claude does, and it partly passes
-selectivity and directed modulation. It has almost none of the
+from 2019. It passes verbal report, internal reasoning, flexible
+generalization, and selectivity about as well as Claude does, and it
+partly passes directed modulation. It has almost none of the
 structure.</li>
 <li>We think these functional tests are cheap, so passing them should
 count for little. A functional global workspace would be a big deal, as
@@ -53,10 +53,14 @@ mostly passes the tests. The case for a workspace in Claude has to rest
 on the structure.</li>
 </ul>
 <p><img src="fig1/fig1.png" alt="Figure 1" /></p>
-<p><em>Figure 1: The paper's five functional tests and its structural
-signatures, run on GPT-2 small. The examples are real outputs from our
-runs. The Claude panels in the structure row are stylized from the
-paper.</em></p>
+<p><em>Figure 1: The paper's five functional tests and two of its
+structural signatures, run on GPT-2 small. The examples are real outputs
+from our runs. Structure row: Claude Sonnet 4.5 is the paper's released
+figure data. Left, similarity between every pair of layers' J-lens
+vectors (CKA; for GPT-2, with the top 5 principal components removed,
+since one component dominates every layer). Right, where the activation
+for a 50/50 mix of two countries' embeddings sits between the two pure
+countries, from pure B (blue) to pure A (red), across layers.</em></p>
 <h2 id="background">Background</h2>
 <p>Global workspace theory is a theory of conscious access in humans. On
 this theory, most processing in the brain happens in specialized
@@ -133,12 +137,14 @@ France for China makes GPT-2 give China's capital, language, and
 currency. Across the paper's grid of swaps, it works about as often as
 it does in Claude, on the functions GPT-2 can compute (35%, against
 Claude's 40%). Both models fail on one kind of function.</li>
-<li><strong>Selectivity partly works.</strong> Removing the most active
-J-lens directions breaks two-hop questions and leaves copying intact,
-the same pattern the paper reports. It also changes GPT-2's next-word
-prediction on 29% of ordinary text, against about 19% for removing
-random directions. Removing them across three layers breaks simple fact
-recall ("The capital of France is") too.</li>
+<li><strong>Selectivity works.</strong> Removing the most active J-lens
+direction at each position in one layer drops GPT-2's accuracy on
+two-hop questions from 100% to 69%. The paper's lightest ablation takes
+Claude from 98% to 68%. Copying still works (98%), and GPT-2's next-word
+prediction stays the same on 82% of ordinary text (Claude: 87%). The
+paper removes 10 directions at a time. We scale this and other such
+numbers to GPT-2's smaller J-space (see below). With 10 directions, the
+removal is much blunter in GPT-2.</li>
 <li><strong>Directed modulation partly works.</strong> Told to think
 about "lemon" while copying an unrelated sentence, GPT-2 has "lemon" a
 bit higher in its J-space than when "lemon" is only mentioned. Unlike
@@ -148,14 +154,16 @@ instructions. Asking GPT-2 about a property of a passage, like its
 tense, doesn't bring the property's name into its J-space.</li>
 <li><strong>Almost none of the structure is there.</strong> In Claude,
 the paper finds a distinct band of middle layers where the J-space acts
-like a workspace. In GPT-2, the statistics it uses to find that band
-change smoothly with depth, so there is no band. In Claude, an input
-made halfway between "France" and "Germany" snaps to one of the two at
-the start of the band. In GPT-2 it stays halfway at every layer.
-Claude's MLP layers amplify J-lens directions about 10 times as much as
-random directions, and GPT-2's amplify them 1.2 to 1.5 times as much.
-GPT-2 does have a limited J-space capacity and attention heads that copy
-J-lens directions, but both have simple explanations that don't need a
+like a workspace. In GPT-2, most of the statistics it uses to find that
+band change smoothly with depth. The exception is how long the J-lens's
+top token lasts at later positions. This peaks in GPT-2's middle layers
+too, but it is gone 16 tokens later, while in Claude it is still strong
+32 tokens later. In Claude, an input made halfway between "France" and
+"Germany" snaps to one of the two at the start of the band. In GPT-2 it
+stays halfway at every layer. Claude's MLP layers amplify J-lens
+directions about 10 times as much as random directions, and GPT-2's
+amplify them 1.2 to 1.5 times as much. GPT-2 does have a limited J-space
+capacity, but it has a simple explanation that doesn't need a
 workspace.</li>
 </ul>
 <h2 id="what-we-did">What we did</h2>
@@ -174,6 +182,20 @@ Name a sport:</code></pre>
 those about the Assistant persona. GPT-2 also can't do many of the
 paper's tasks, so we scored each test only on items it gets right
 without any intervention. The appendix has every prompt format.</p>
+<h3 id="scaling-the-number-of-j-lens-vectors">Scaling the number of
+J-lens vectors</h3>
+<p>Some of the paper's methods use a fixed number of J-lens vectors. The
+selectivity test removes the 10 most active ones, and two of the other
+tests split a concept's representation into a part made of 16 or 25
+J-lens vectors and the rest. The paper chose these numbers for Claude,
+whose J-space holds about 25 J-lens vectors at a time. GPT-2's holds
+about 3 (see the structure section). In GPT-2, most of 16 or 25 J-lens
+vectors would do no better than random directions, and removing 10
+directions takes out much more of its 768-dimensional residual stream.
+So we scale each number by the same ratio: 10 becomes 1, 16 becomes 2,
+and 25 becomes 3. The appendix also gives every result with the paper's
+numbers. The only conclusion that changes is selectivity, which looks
+worse with the paper's numbers.</p>
 <h3 id="centering-the-j-lens-vectors">Centering the J-lens vectors</h3>
 <p><img src="figures/fig2_centering.png" alt="Figure 2" /></p>
 <p><em>Figure 2: (a) Schematic. Each raw J-lens vector is a large shared
@@ -199,13 +221,13 @@ doesn't discuss this, and we don't know whether Claude's J-lens vectors
 have the same problem.</p>
 <h3 id="the-band-of-workspace-layers">The band of workspace layers</h3>
 <p>The paper chooses its band of workspace layers from several
-statistics computed at each layer. In GPT-2 these statistics change
-smoothly with depth and don't mark out a band (see the structure
-section). We used layers 7 to 9, out of 0 to 11. Around layer 6 the lens
-starts to show content that persists across nearby tokens, and from
-layer 10 it mostly shows the next token. This is a judgment call, but
-the main results come out about the same for any band that starts at
-layer 6 or later.</p>
+statistics computed at each layer. In GPT-2 most of these statistics
+change smoothly with depth and don't mark out a band (see the structure
+section). We used layers 7 to 9, out of 0 to 11. From layer 6 the lens's
+content persists more and more across nearby tokens, peaking at layer 9,
+and from layer 10 it mostly shows the next token. This is a judgment
+call, but the main results come out about the same for any band that
+starts at layer 6 or later.</p>
 <h2 id="the-five-tests-in-more-detail">The five tests in more
 detail</h2>
 <h3 id="verbal-report">Verbal report</h3>
@@ -222,12 +244,13 @@ target reaches Claude's top 5 on 88% of trials.</p>
 <p>The paper also checks that the report is carried by the J-space part
 of a concept's representation. It builds a vector for each concept from
 the model's activations on "Tell me about {concept}", splits it into a
-J-space part and the rest, and repeats the swap with each part. In
-GPT-2, swapping the J-space part works on 97% of trials and swapping the
-rest works on 0%, as in the paper (59% and 5%). There is one difference.
-In Claude the J-space part holds only 6–7% of each concept vector's
-variance, so a small part of the representation carries the report. In
-GPT-2 it holds 23–33%.</p>
+J-space part made of a few J-lens vectors and the rest, and repeats the
+swap with each part. In GPT-2, with the J-space part made of 2 J-lens
+vectors, swapping it works on 97% of trials and swapping the rest on
+18%, the same pattern as in Claude (59% and 5%). As in Claude, the
+J-space part is a small slice of the concept vector, a median of 6–15%
+of its variance across our band (Claude: 6–7%). With the paper's 16
+J-lens vectors, the numbers are 97% and 0%.</p>
 <p>The injected-thought test is different. In the paper, a concept's
 J-lens vector is added to the user's message, and the model, asked
 whether it detects an injected thought, names the concept. The paper
@@ -318,11 +341,12 @@ Claude on the paper's questions.</p>
 single layer already works at layer 4, while swapping the answer (Paris
 for Beijing) works only from layer 8, so the swap isn't just slipping in
 the answer. And for a vector built from prompts that imply the country
-without naming it, the J-space part does the work. Swapping it changes
-the answer on 95% of trials, and swapping the rest does on 1.5% (the
-paper: 61% and 28%). As with verbal report, the J-space part is a much
-larger share of this vector in GPT-2 than in Claude (27–57% of its
-variance, against 10–15%).</p>
+without naming it, the J-space part does the work. With the J-space part
+made of 3 J-lens vectors, swapping it changes the answer on 94% of
+trials, and swapping the rest does on 15% (the paper: 61% and 28%). The
+J-space part is 6–32% of the vector's variance across our band (the
+paper: 10–15%). With the paper's 25 J-lens vectors, the numbers are 95%
+and 1.5%.</p>
 <h3 id="flexible-generalization">Flexible generalization</h3>
 <p>The paper swaps one argument, such as France for China, across
 prompts that apply different functions to it: "the capital of", "most
@@ -341,29 +365,95 @@ hold in GPT-2. Doubling the swap strength helps Claude but makes GPT-2
 worse, and how strongly an argument is present in the J-space beforehand
 doesn't predict which of its swaps succeed.</p>
 <h3 id="selectivity">Selectivity</h3>
-<p>The paper's main selectivity test removes the 10 most active J-lens
-directions at each position and compares this with removing random
-directions. It skips any token that is among the model's 10 most likely
-next tokens. We removed them at one layer (layer 8) and at three layers
-(7 to 9), on four tasks: our two-hop questions, one-hop recall ("The
-capital of France is"), copying a word from earlier in the text, and
-ordinary Wikipedia text.</p>
-<p>At one layer, the pattern matches the paper. Two-hop accuracy drops
-from 100% to 21%, against 83–92% for removing random directions. Copying
-is barely touched (95%). One-hop recall is in between (73%). On ordinary
-text, the model's top prediction stays the same at 71% of positions.</p>
-<p>The removal is less targeted than in Claude. Even at one layer, it
-changes 29% of GPT-2's predictions on ordinary text, against about 19%
-for random directions. At three layers it wipes out one-hop recall (6%
-correct), which the paper lists among the automatic skills. An <a
-href="https://github.com/pgrindehollevik-harvard/jspace-4b">independent
-replication on Qwen3-4B</a> found the same: the ablation changed 34–42%
-of ordinary next-token predictions.</p>
+<p>The paper's main selectivity test removes the most active J-lens
+directions at each position, over a band of layers, and compares this
+with removing random directions that take out the same amount of the
+residual stream. It skips any token that is among the model's 10 most
+likely next tokens. The paper removes 10 directions, over three bands of
+layers of increasing size. We removed 1 direction, the paper's 10 scaled
+to GPT-2 as described above. We did this over one, three, and five
+layers (8; 7 to 9; 6 to 10), which cover about the same share of the
+network as the paper's three bands. We used four tasks: our two-hop
+questions, one-hop recall ("The capital of France is"), copying a word
+from earlier in the text, and ordinary Wikipedia text.</p>
+<p>The results are close to Claude's, which we take from the paper's
+Figure 22:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>layers ablated</th>
+<th>share of depth</th>
+<th>two-hop accuracy</th>
+<th>ordinary text, top prediction unchanged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-2 small</td>
+<td>8</td>
+<td>8%</td>
+<td>69%</td>
+<td>82%</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.5</td>
+<td>"light"</td>
+<td>10%</td>
+<td>68%</td>
+<td>87%</td>
+</tr>
+<tr>
+<td>GPT-2 small</td>
+<td>7–9</td>
+<td>25%</td>
+<td>21%</td>
+<td>72%</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.5</td>
+<td>"medium"</td>
+<td>26%</td>
+<td>26%</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>GPT-2 small</td>
+<td>6–10</td>
+<td>42%</td>
+<td>0%</td>
+<td>59%</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.5</td>
+<td>"heavy"</td>
+<td>47%</td>
+<td>6%</td>
+<td>65%</td>
+</tr>
+</tbody>
+</table>
+<p>Removing random directions instead leaves GPT-2's two-hop accuracy at
+90–96% at one layer, and 75–90% at three. Copying is barely affected at
+one or three layers (98% and 95%).</p>
+<p>Three things differ from Claude. First, GPT-2 is more fragile in
+general. Removing random directions over three layers changes 19–21% of
+its predictions on ordinary text, while the paper's random control over
+the same share of Claude's layers changes 4%. Second, one-hop recall
+survives at one layer (96%) but not at three (31%). The paper lists
+one-step factual recall among the automatic skills, but in its larger
+battery of tasks the same ablation also cuts Claude's TriviaQA score
+roughly in half. Third, over five layers copying breaks too (42%,
+against 93–100% for random directions). In Claude, extractive tasks like
+SQuAD survive even the heaviest ablation.</p>
+<p>With the paper's 10 directions, GPT-2 shows the same pattern, but the
+removal is much blunter. At one layer it changes 29% of GPT-2's
+predictions on ordinary text (random directions: about 19%), and at
+three layers it wipes out one-hop recall (6% correct).</p>
 <p>Part of the pattern comes from the rule that skips the model's likely
 next tokens. Copying and one-hop recall need exactly those tokens, and
 the rule protects them. Without the rule, one-hop recall at one layer
-falls from 73% to 48%, and copying at three layers falls from 65% to
-25%.</p>
+falls from 96% to 75%, and two-hop accuracy from 69% to 46%.</p>
 <p>The paper's second test uses one piece of information, a passage's
 language, in a deliberate task (naming the language) and a routine one
 (continuing the passage). Swapping the language's J-lens direction
@@ -374,42 +464,57 @@ In Claude the continuation is largely unaffected. Part of the difference
 may come from our setup. A base model has no separate question, so we
 had to apply the swap over the passage itself.</p>
 <p>Finally, the J-space is a small part of GPT-2's representation, as
-the definition requires: 25 J-lens directions capture about 30% of the
-variance of its activations. This is true of any small set of
-directions, though. 25 directions picked from a random set of the same
-size capture slightly more.</p>
+the definition requires. The paper measures this by taking as many
+J-lens vectors as are active at a position and asking how much more of
+the activation's variance they capture than the same number of random
+directions. In GPT-2's band the excess is 3–6%. The paper reports that
+in Claude it never exceeds 10%. This part of the definition is close to
+automatic, since the J-space is defined as a few vectors at a time.</p>
 <h2 id="the-structure">The structure</h2>
 <p>GPT-2 small has almost none of the structure the paper reports in
 Claude.</p>
 <p><img src="figures/fig4_structure.png" alt="Figure 4" /></p>
 <p><em>Figure 4: Structure in GPT-2 small. The shaded region is our
 band, layers 7 to 9. (a) How often the J-lens's top token is the model's
-next-token prediction. (b) How often the lens's top token stays the same
-at nearby positions, above a shuffled baseline. (c) Similarity between
-the J-lens vectors of different layers. The paper finds three blocks
-here in Claude. GPT-2 has none. (d) For an input embedding mixed between
-two countries, how much of the mixing range it takes to move from 10% to
-90% of the way between them. A sharp switch would give a small number.
-(e) How much the next MLP amplifies a direction, relative to random
-directions. (f) How many words of an 80-word list are in the J-lens top
-25 as the model reads it.</em></p>
-<h3 id="no-band-of-workspace-layers">No band of workspace layers</h3>
+next-token prediction. (b) How long the lens's top token lasts, measured
+as in the paper: the log-probability the lens gives it Δ positions
+later, minus the same for the top token of a random position. (c)
+Similarity between the J-lens vectors of different layers. The paper
+finds three blocks here in Claude. GPT-2 has none. (d) For an input
+embedding mixed between two countries, how much of the mixing range it
+takes to move from 10% to 90% of the way between them. A sharp switch
+would give a small number. (e) How much the next MLP amplifies a
+direction, relative to random directions. (f) How many words of an
+80-word list are in the J-lens top 25 as the model reads it.</em></p>
+<h3 id="no-distinct-band-of-workspace-layers">No distinct band of
+workspace layers</h3>
 <p>The paper finds its band with a few statistics computed at each
 layer. One is the excess kurtosis of the lens readout. Kurtosis measures
 how heavy the tails of a distribution are. Here it is high when a few
 tokens score far above the rest of the vocabulary, which the paper reads
 as the J-space holding a few definite concepts. In Claude it rises at
 the start of the band and falls at the end. Two other statistics track
-whether the lens's top token stays the same across nearby positions, and
-how many directions the J-lens vectors spread across. The paper also
-compares the J-lens vectors of every pair of layers, and finds three
-clear blocks of similar layers, which it calls sensory, workspace, and
-motor.</p>
-<p>In GPT-2 none of these mark out a band. Kurtosis is flat across
-layers. The top token's persistence rises gradually from layer 6 to
-layer 9. The J-lens vectors spread out steadily with depth. And the
-similarity between layers falls off smoothly with the distance between
-them, with no blocks.</p>
+how long the lens's top token lasts at later positions, and how many
+directions the J-lens vectors spread across. In Claude both jump at the
+start of the band. The paper also compares the J-lens vectors of every
+pair of layers, and finds three clear blocks of similar layers, which it
+calls sensory, workspace, and motor.</p>
+<p>In GPT-2 only persistence comes close to marking out a band. Kurtosis
+is flat across layers. The J-lens vectors spread out steadily with
+depth, while in Claude they sit in a small subspace before the band and
+fan out at its start. And the similarity between layers falls off
+smoothly with the distance between them, with no blocks.</p>
+<p>Persistence does peak in the middle. The lens's top token is most
+likely to still be there a token later at layers 8 and 9, and much less
+likely at the last layer, as in Claude. But in GPT-2 it doesn't last.
+The effect roughly halves each time the distance doubles, and it is gone
+16 tokens later. In Claude, 32 tokens later it keeps between half and
+70% of its strength across the band. This isn't the lens repeating words
+from the text: counting only top tokens that never appear in the input
+gives the same result. So GPT-2's middle layers carry content over the
+next few tokens, but not the lasting content Claude's band holds.
+Qwen3-1.7B's persistence is short-lived in the same way (Appendix E).
+Figure 5 in the appendix puts all four statistics next to Claude's.</p>
 <h3 id="no-ignition">No ignition</h3>
 <p>The paper replaces a country's input embedding with a blend of two
 countries' embeddings, such as 60% France and 40% Germany. It then
@@ -432,45 +537,22 @@ each position, it rebuilds the activation from J-lens vectors, adding
 one at a time. It counts how many it can add before adding another
 J-lens vector helps the fit less than adding a random direction would.
 It calls this number occupancy. In Claude it is about 25. In GPT-2 it is
-2 to 5, so only a handful of J-lens vectors are clearly active at any
-position. When GPT-2 reads a long list of unrelated words, its J-space
-holds about one of them at a time, where Claude holds about six. When a
-list switches from one category of words to another, the old category
-drops out of GPT-2's J-space, as the paper reports for Claude.</p>
+2 to 4 in our band, so only a handful of J-lens vectors are clearly
+active at any position. Part of this gap may come from GPT-2's small
+width rather than from its J-space. In 768 dimensions a random direction
+captures more of an activation than in a wider model, so J-lens vectors
+have a higher bar to clear. Sixteen random directions capture 26% of a
+random vector in 768 dimensions, and 3% in a space eight times as wide.
+When GPT-2 reads a long list of unrelated words, its J-space holds about
+one of them at a time, where Claude holds about six. When a list
+switches from one category of words to another, the old category drops
+out of GPT-2's J-space, as the paper reports for Claude.</p>
 <p>None of this needs a workspace. As David Chalmers <a
 href="https://philpapers.org/rec/CHAITJ-2">points out</a>, the J-space
 is defined as combinations of a few vectors, so its capacity is limited
 by construction. And in a list, the model expects the next words to come
 from the current category. The J-lens reads what the model expects to
 say, so the old category drops out when the list moves on.</p>
-<h3
-id="attention-heads-that-copy-j-lens-directions-but-everywhere">Attention
-heads that copy J-lens directions, but everywhere</h3>
-<p>The paper looks for "broadcast heads": attention heads that pass
-J-lens directions from one position to another. For each head and each
-set of directions, it measures how much the head amplifies the
-directions, and how faithfully it maps each direction onto itself rather
-than onto other directions in the set. Heads that score high on both for
-J-lens vectors are its broadcast heads, and it checks that no similar
-group of heads exists for other sets of directions. We did the same,
-taking the top three heads in the layers that read our band. GPT-2 has
-36 heads there, so the paper's top 1% would be less than one head.</p>
-<p>GPT-2 has heads like this. Many heads map J-lens directions
-faithfully onto themselves, and almost none do this for the same
-directions after a random rotation. But these heads aren't concentrated
-near the band. They are most common in block 3, well before it. They
-include the three "name mover" heads from the indirect-object circuit in
-GPT-2 (<a href="https://arxiv.org/abs/2211.00593">Wang et al.,
-2022</a>), whose known job is to copy a name from earlier in the text.
-Removing the top three heads changes the J-space a little more than
-removing random heads does: at layer 10, 84% of the top 25 J-lens tokens
-survive, against 91% for random heads. In Claude the difference is
-larger (67% against 86%).</p>
-<p>We think these are ordinary copying heads. Language models have many
-heads that copy tokens from earlier in the text (<a
-href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">Olsson
-et al., 2022</a>). A head that copies tokens preserves directions tied
-to tokens, and a random rotation breaks that tie.</p>
 <h2 id="why-the-tests-are-cheap">Why the tests are cheap</h2>
 <p>GPT-2 small mostly passes the functional tests while having almost
 none of the structure, and we don't think it has a global workspace. We
@@ -494,11 +576,16 @@ model more likely to say "Rugby", and the swap adds it where the model
 is about to answer. The paper says as much: "by construction, we should
 expect there to be some relationship between Jacobian lens readouts and
 verbalization." The check that the J-space part carries the report adds
-less than it seems. The rest of the concept vector is what's left after
-removing the J-lens directions that best match it, so it ends up nearly
-at right angles to the direction that separates "Rugby" from "Running"
-(median cosine 0.02, against 0.31 for the J-space part). The J-lens
-itself predicts that swapping the rest will barely change the answer.
+less than it seems. The swap is rescaled to the same strength whichever
+part is used, so only the direction of each part matters. The J-space
+part is built from J-lens vectors, so it points along the direction that
+separates "Rugby" from "Running" (median cosine 0.47). The rest is
+what's left after removing those vectors, so it ends up nearly at right
+angles to that direction (median cosine 0.06). Splitting the concept
+vector with random directions instead reverses the result. The random
+part barely moves the answer (5% of trials), and the rest, which keeps
+the "Rugby" direction, works (87%). So the test mostly checks which part
+points toward the word, and the J-lens is built so that its part does.
 The injected-thought test is the part of verbal report that isn't built
 in, and GPT-2 fails it.</p>
 <p>For internal reasoning, the result follows from computing in two
@@ -552,9 +639,8 @@ lemons. The downward part, "ignore lemon", shows up in Qwen3-1.7B, and
 the same logic covers it. A model that follows instructions is less
 likely to mention something it was told to ignore.</p>
 <p>The structure GPT-2 does have also has simple explanations. Capacity
-is limited by construction, the category effect in lists comes from what
-the model expects to say next, and the heads that copy J-lens directions
-look like ordinary copying heads. The structure that would set a
+is limited by construction, and the category effect in lists comes from
+what the model expects to say next. The structure that would set a
 workspace apart, a distinct band, ignition, and strong amplification, is
 missing.</p>
 <p>Taken together, the functional tests show that a model keeps
@@ -618,6 +704,10 @@ tasks it can do, it shows the same signatures as Claude.</li>
 <li>Centering the J-lens vectors isn't in the paper. It changes no
 readout, but without it the verbal report swap and the selectivity
 ablation stop working.</li>
+<li>We scaled the paper's numbers of J-lens vectors to GPT-2's
+occupancy. With the paper's numbers, the selectivity ablation is much
+blunter in GPT-2, so the selectivity result depends on this choice
+(Appendix A.3).</li>
 <li>We picked the band of layers ourselves, since GPT-2 has no distinct
 band. The main results hold for any band from layer 6 on, but we didn't
 rerun every experiment with every band.</li>
@@ -684,13 +774,15 @@ parts), rescaled to the size of the plain lens swap.</li>
 their clean-pass values.</li>
 <li><em>Pursuit</em>: the paper's "gradient pursuit" is not specified
 further. We use a greedy non-negative pursuit over the whole dictionary,
-refitting the coefficients by non-negative least squares at each
-step.</li>
-<li><em>Top-k ablation</em>: at each position and band layer, take the
-10 highest lens tokens that are not in the clean output top 10, and
-remove the residual stream's component in their span. The random control
-removes a random 10-dimensional span, rescaled at each position to
-remove the same norm.</li>
+refitting the coefficients by non-negative least squares at each step.
+The J-space part of a vector is its pursuit reconstruction with k J-lens
+vectors (k = 2 for concept vectors and 3 for reasoning probes;
+A.3).</li>
+<li><em>Top-k ablation</em>: at each position and band layer, take the k
+highest lens tokens that are not in the clean output top 10 (k = 1;
+A.3), and remove the residual stream's component in their span. The
+random control removes a random k-dimensional span, rescaled at each
+position to remove the same norm.</li>
 </ul></li>
 </ul>
 <h3 id="a2-centering">A.2 Centering</h3>
@@ -730,30 +822,96 @@ mean.</p>
 <td>45%</td>
 </tr>
 <tr>
-<td>Two-hop accuracy after ablation at layer 8 (J / random, one
-draw)</td>
-<td>21% / 92%</td>
-<td>81% / 92%</td>
-<td>4% / 44%</td>
+<td>Two-hop accuracy after ablating 1 direction at layer 8 (J / random,
+one draw)</td>
+<td>69% / 92%</td>
+<td>90% / 96%</td>
+<td>52% / 83%</td>
 </tr>
 <tr>
-<td>Ordinary text, top-1 unchanged after ablation at layer 8 (J /
-random, one draw)</td>
-<td>71% / 82%</td>
-<td>77% / 87%</td>
-<td>34% / 61%</td>
+<td>Ordinary text, top-1 unchanged after the same ablation (J / random,
+one draw)</td>
+<td>82% / 89%</td>
+<td>83% / 92%</td>
+<td>64% / 72%</td>
 </tr>
 </tbody>
 </table>
-<p>The subtract-and-add swap and the ablation depend on centering. The
-coordinate swap doesn't, because it reads coordinates through a
-pseudoinverse, which already separates out the shared direction. With
-plain logit-lens directions, the verbal report swap works as well as
-with J-lens directions, since the band is close to the output. But the
-two-hop swap works less often, and the ablation is much less selective.
-So for interventions, the J-lens adds something over the logit lens even
-in GPT-2 small.</p>
-<h3 id="a3-band-choice-and-sensitivity">A.3 Band choice and
+<p>With the paper's 10 directions, the ablation rows are 21% / 92%, 81%
+/ 92%, and 4% / 44% for two-hop, and 71% / 82%, 77% / 87%, and 34% / 61%
+for ordinary text. The subtract-and-add swap and the ablation depend on
+centering. The coordinate swap doesn't, because it reads coordinates
+through a pseudoinverse, which already separates out the shared
+direction. With plain logit-lens directions, the verbal report swap
+works as well as with J-lens directions, since the band is close to the
+output. But the two-hop swap works less often, and the ablation is much
+less selective. So for interventions, the J-lens adds something over the
+logit lens even in GPT-2 small.</p>
+<h3 id="a3-numbers-of-j-lens-vectors">A.3 Numbers of J-lens vectors</h3>
+<p>The paper uses a fixed number of J-lens vectors in three places: the
+J-space part of a concept vector (16), the J-space part of a reasoning
+probe (25), and the selectivity ablation (10). The paper reports an
+occupancy of about 25 in Claude's band. GPT-2's median occupancy is 2,
+2, and 4 at layers 7, 8, and 9, and 3 over all band positions pooled
+(C.5). We multiply each of the paper's numbers by 3/25 and round, which
+gives 2, 3, and 1. The main text uses these. With the paper's
+numbers:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>paper's number</th>
+<th>ours</th>
+<th>with ours</th>
+<th>with the paper's</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verbal report: swap the J-space part / the rest, target reaches the
+top 5 (38 trials)</td>
+<td>16</td>
+<td>2</td>
+<td>97% / 18%</td>
+<td>97% / 0%</td>
+</tr>
+<tr>
+<td>Two-hop: swap the probe's J-space part / the rest, answer flips (999
+trials)</td>
+<td>25</td>
+<td>3</td>
+<td>94% / 15%</td>
+<td>95% / 1.5%</td>
+</tr>
+<tr>
+<td>Selectivity, one layer: two-hop accuracy / ordinary text
+unchanged</td>
+<td>10</td>
+<td>1</td>
+<td>69% / 82%</td>
+<td>21% / 71%</td>
+</tr>
+<tr>
+<td>Selectivity, three layers: two-hop accuracy / ordinary text
+unchanged</td>
+<td>10</td>
+<td>1</td>
+<td>21% / 72%</td>
+<td>0% / 54%</td>
+</tr>
+</tbody>
+</table>
+<p>The privilege results hold either way, but with the paper's numbers
+the J-space part is no longer a small slice. Sixteen J-lens vectors
+capture 23–33% of a GPT-2 concept vector's variance, and sixteen vectors
+from a random dictionary of the same size capture 26%. In 768
+dimensions, any 16 directions chosen to fit a vector capture about a
+quarter of it. With 2 J-lens vectors the share is 6–15%, against 4% for
+random directions. For the reasoning probes, 25 J-lens vectors capture
+27–57% and 25 random ones 37%; 3 J-lens vectors capture 6–32% and 3
+random ones 6%. Claude's small shares at the paper's numbers (6–7% and
+10–15%) reflect a much wider residual stream.</p>
+<h3 id="a4-band-choice-and-sensitivity">A.4 Band choice and
 sensitivity</h3>
 <p>We chose layers 7 to 9 from the layer statistics in section D, before
 running the follow-up experiments. The same interventions with other
@@ -773,44 +931,44 @@ bands:</p>
 <td>5–7</td>
 <td>71%</td>
 <td>53%</td>
-<td>10% / 73%</td>
-<td>56% / 80%</td>
+<td>50% / 83%</td>
+<td>68% / 87%</td>
 </tr>
 <tr>
 <td>6–8</td>
 <td>87%</td>
 <td>64%</td>
-<td>23% / 90%</td>
-<td>65% / 81%</td>
+<td>69% / 92%</td>
+<td>80% / 89%</td>
 </tr>
 <tr>
 <td><strong>7–9</strong></td>
 <td><strong>100%</strong></td>
 <td><strong>71%</strong></td>
-<td><strong>21% / 92%</strong></td>
-<td><strong>71% / 82%</strong></td>
+<td><strong>69% / 92%</strong></td>
+<td><strong>82% / 89%</strong></td>
 </tr>
 <tr>
 <td>8–10</td>
 <td>100%</td>
 <td>66%</td>
-<td>8% / 92%</td>
-<td>65% / 83%</td>
+<td>44% / 96%</td>
+<td>83% / 90%</td>
 </tr>
 <tr>
 <td>6–10</td>
 <td>100%</td>
 <td>68%</td>
-<td>21% / 92%</td>
-<td>71% / 82%</td>
+<td>69% / 92%</td>
+<td>82% / 89%</td>
 </tr>
 </tbody>
 </table>
-<p>The ablation columns use the band's middle layer (6, 7, 8, 9, and 8)
-and one random draw. The results hold for any band that starts at layer
-6 or later. Moving the band earlier, to 5–7, weakens every
-intervention.</p>
-<h3 id="a4-scoring">A.4 Scoring</h3>
+<p>The ablation columns remove 1 direction at the band's middle layer
+(6, 7, 8, 9, and 8), with one random draw. The results hold for any band
+that starts at layer 6 or later. Moving the band earlier, to 5–7,
+weakens both swaps and makes the ablation less selective.</p>
+<h3 id="a5-scoring">A.5 Scoring</h3>
 <ul>
 <li>An item counts only if GPT-2 gets it right with no intervention
 (greedy next token).</li>
@@ -914,7 +1072,7 @@ to the moment of telling? Answer in one word."</p>
 neutral headers (<code>Here is a sentence: {s}</code>) and with real
 French sentences under neutral headers. The probe is the difference
 between the mean final-token activations on 6 French and 6 English
-passages, with its top-16 J-lens component removed.</p>
+passages, with its J-space part (2 J-lens vectors; A.3) removed.</p>
 <h3 id="b3-internal-reasoning">B.3 Internal reasoning</h3>
 <p>Two kinds of question, each with two worked examples that use
 countries outside the test set:</p>
@@ -1019,47 +1177,76 @@ the 10 candidates at the colon, averaged over categories (all categories
 </tbody>
 </table>
 <p>Swaps, for targets starting at output rank 11 or worse. Rates are for
-reaching the top 5, with reaching the top 1 in parentheses. The paper's
-numbers for Sonnet 4.5 are 88% (lens swap), 59% (J-space part), 5% (the
-rest), and 0% (the rest, clamped).</p>
+reaching the top 5, with reaching the top 1 in parentheses. The J-space
+part is made of k J-lens vectors: 2 (ours, A.3) or 16 (the paper's). As
+a control, we also split each concept vector the same way with a random
+dictionary of the same size, into a "random part" and its rest. The
+paper's numbers for Sonnet 4.5 are 88% (lens swap), 59% (J-space part),
+5% (the rest), and 0% (the rest, clamped).</p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>answered categories (38 trials)</th>
-<th>all categories (78 trials)</th>
+<th>answered categories (38 trials), k = 2</th>
+<th>k = 16</th>
+<th>all categories (78 trials), k = 2</th>
+<th>k = 16</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>lens swap</td>
 <td>100% [91, 100] (100%); median rank 37 → 1</td>
+<td></td>
 <td>100% (100%); median rank 95 → 1</td>
+<td></td>
 </tr>
 <tr>
 <td>J-space part</td>
+<td>97% [87, 100] (89%)</td>
 <td>97% [87, 100] (84%)</td>
+<td>88% (73%)</td>
 <td>77% (68%)</td>
 </tr>
 <tr>
 <td>the rest</td>
+<td>18% [9, 33] (3%)</td>
 <td>0% [0, 9] (0%)</td>
+<td>10% (3%)</td>
 <td>0% (0%)</td>
 </tr>
 <tr>
 <td>the rest, J-lens coordinates clamped</td>
+<td>0% [0, 9] (0%)</td>
 <td>3% [0, 13] (0%)</td>
+<td>0% (0%)</td>
 <td>1% (0%)</td>
+</tr>
+<tr>
+<td>random part</td>
+<td>5% [1, 17] (0%)</td>
+<td>26% [15, 42] (5%)</td>
+<td>3% (0%)</td>
+<td>14% (3%)</td>
+</tr>
+<tr>
+<td>the rest of the random split</td>
+<td>87% [73, 94] (61%)</td>
+<td>79% [64, 89] (55%)</td>
+<td>64% (37%)</td>
+<td>50% (32%)</td>
 </tr>
 </tbody>
 </table>
-<p>The J-space part holds a median 23% (layer 7), 26% (layer 8), and 33%
-(layer 9) of each concept vector's variance. The paper reports 6–7% for
-Claude.</p>
+<p>Median share of each concept vector's variance in the J-space part,
+at layers 7, 8, and 9: 6%, 7%, and 15% with 2 J-lens vectors, and 23%,
+26%, and 33% with 16. The random part holds 4% with 2 vectors and 26%
+with 16. The paper reports 6–7% for Claude, with 16.</p>
 <p>Median cosine between each swap direction and v_t − v_s, over 114
-trials and layers: 1.00 for the lens swap, 0.31 for the J-space part,
-and 0.02 for the rest. The target's own J-lens vector is among the 16
-vectors picked for its concept vector in 61 of 114 cases.</p>
+trials and layers: 1.00 for the lens swap, 0.47 for the J-space part,
+and 0.06 for the rest with 2 J-lens vectors (0.31 and 0.02 with 16). The
+target's own J-lens vector is among the 2 vectors picked for its concept
+vector in 56 of 114 cases (61 of 114 with 16).</p>
 <p>Injected thought, 57 concepts. The table gives the probability of the
 injected word as the next token (its two surface forms summed), and how
 many concepts have it as the top prediction. "Report" means the better
@@ -1323,11 +1510,12 @@ the naming question and the next-word question: spelling 63 and 51,
 register 112 and 153, tense 175 and 194, number 21 and 16, part of
 speech 29 and 96, tense of the part-of-speech passage 89 and 104, tone
 21 and 37.</p>
-<p>Imagine test: the French probe's J-space part holds 22–30% of its
+<p>Imagine test: the French probe's J-space part holds 7–14% of its
 variance. Compared with a neutral header, the claim header raises the
-lens score of "French" by 2.32 and the J-orthogonal probe by 2.83. Real
-French text raises them by 6.06 and 35.6. So the claim gets 38% of real
-French's effect on the lens and 8% of its effect on the probe. The paper
+lens score of "French" by 2.32 and the J-orthogonal probe by 3.39. Real
+French text raises them by 6.06 and 40.6. So the claim gets 38% of real
+French's effect on the lens and 8% of its effect on the probe. With the
+paper's 16 J-lens vectors the split is the same (38% and 8%). The paper
 reports the same kind of split in Claude. The claim header contains the
 word "French", though, so priming alone would produce it.</p>
 <h3 id="c3-internal-reasoning">C.3 Internal reasoning</h3>
@@ -1453,12 +1641,61 @@ to the target answer):</p>
 middle step and layer 8 for the answer. The paper reports that the
 middle-step swap takes effect about 17% of the model's depth earlier
 than the answer swap.</p>
-<p>Privilege test (999 trials, top-1): plain lens swap 70.6%, full
-vector 88.3%, J-space part 95.4%, the rest 1.5%, the rest with J-lens
-coordinates clamped 0.0%. The paper reports 60% for the plain lens swap,
-61% for the J-space part, 28% for the rest, and 6% for the rest with
-coordinates clamped. The J-space part holds 27%, 40%, and 57% of the
-vector's variance at layers 7, 8, and 9. The paper reports 10–15%.</p>
+<p>Privilege test (999 trials, top-1). The J-space part is made of 3
+J-lens vectors (ours, A.3) or 25 (the paper's), and the random split is
+the control described in C.1:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>k = 3</th>
+<th>k = 25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain lens swap</td>
+<td>70.6%</td>
+<td></td>
+</tr>
+<tr>
+<td>full probe</td>
+<td>88.3%</td>
+<td></td>
+</tr>
+<tr>
+<td>J-space part</td>
+<td>94.2%</td>
+<td>95.4%</td>
+</tr>
+<tr>
+<td>the rest</td>
+<td>14.6%</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td>the rest, J-lens coordinates clamped</td>
+<td>0.3%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>random part</td>
+<td>1.3%</td>
+<td>32.0%</td>
+</tr>
+<tr>
+<td>the rest of the random split</td>
+<td>86.4%</td>
+<td>65.2%</td>
+</tr>
+</tbody>
+</table>
+<p>The paper reports 60% for the plain lens swap, 61% for the J-space
+part, 28% for the rest, and 6% for the rest with coordinates clamped,
+with 25 J-lens vectors. Median share of the probe's variance in the
+J-space part at layers 7, 8, and 9: 6%, 15%, and 32% with 3 J-lens
+vectors (random part: 6%), and 27%, 40%, and 57% with 25 (random part:
+37%). The paper reports 10–15% for Claude.</p>
 <h3 id="c4-flexible-generalization">C.4 Flexible generalization</h3>
 <p>Prompts GPT-2 answers correctly, out of 4 arguments each (with worked
 examples):</p>
@@ -1583,57 +1820,93 @@ across the 31 prompts, loading doesn't predict swap success (Spearman
 <h3 id="c5-selectivity">C.5 Selectivity</h3>
 <p>Task scores (fraction correct, or for ordinary text, the fraction of
 positions whose top-1 prediction doesn't change) under J-space ablation
-and the matched random control. The random control is a single random
-draw per position, and single draws vary a lot at the stronger settings.
-For one and three layers we give the range over five draws.</p>
+and the matched random control. Every item scores 1.00 with no ablation.
+The random control is a random draw per position, and draws vary, so we
+give the range over five draws. Items: 48 two-hop, 52 one-hop, 40
+copying, and 16 paragraphs of ordinary text.</p>
+<p>Ablating 1 direction (ours, A.3):</p>
 <table>
 <thead>
 <tr>
 <th>task</th>
-<th>items</th>
-<th>no ablation</th>
-<th>one layer (8): J / random, 5 draws</th>
-<th>three layers (7–9): J / random, 5 draws</th>
-<th>five layers (6–10): J / random, 1 draw</th>
+<th>one layer (8): J / random</th>
+<th>three layers (7–9): J / random</th>
+<th>five layers (6–10): J / random</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>two-hop</td>
-<td>48</td>
-<td>1.00</td>
-<td>0.21 / 0.83–0.92</td>
-<td>0.00 / 0.58–0.75</td>
-<td>0.00 / 0.12</td>
+<td>0.69 / 0.90–0.96</td>
+<td>0.21 / 0.75–0.90</td>
+<td>0.00 / 0.50–0.69</td>
 </tr>
 <tr>
 <td>one-hop</td>
-<td>52</td>
-<td>1.00</td>
-<td>0.73 / 0.96–1.00</td>
-<td>0.06 / 0.88–0.96</td>
-<td>0.00 / 0.69</td>
+<td>0.96 / 0.94–1.00</td>
+<td>0.31 / 0.90–1.00</td>
+<td>0.02 / 0.63–0.92</td>
 </tr>
 <tr>
 <td>copying</td>
-<td>40</td>
-<td>1.00</td>
-<td>0.95 / 1.00–1.00</td>
-<td>0.65 / 0.53–0.95</td>
-<td>0.00 / 0.80</td>
+<td>0.98 / 1.00–1.00</td>
+<td>0.95 / 0.82–1.00</td>
+<td>0.42 / 0.93–1.00</td>
 </tr>
 <tr>
 <td>ordinary text</td>
-<td>16 paragraphs</td>
-<td>1.00</td>
-<td>0.71 / 0.80–0.82</td>
-<td>0.54 / 0.67–0.68</td>
-<td>0.41 / 0.58</td>
+<td>0.82 / 0.87–0.89</td>
+<td>0.72 / 0.79–0.81</td>
+<td>0.59 / 0.72–0.75</td>
 </tr>
 </tbody>
 </table>
+<p>Ablating 10 directions (the paper's number):</p>
+<table>
+<thead>
+<tr>
+<th>task</th>
+<th>one layer (8): J / random</th>
+<th>three layers (7–9): J / random</th>
+<th>five layers (6–10): J / random</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>two-hop</td>
+<td>0.21 / 0.83–0.92</td>
+<td>0.00 / 0.58–0.75</td>
+<td>0.00 / 0.12–0.58</td>
+</tr>
+<tr>
+<td>one-hop</td>
+<td>0.73 / 0.96–1.00</td>
+<td>0.06 / 0.88–0.96</td>
+<td>0.00 / 0.38–0.85</td>
+</tr>
+<tr>
+<td>copying</td>
+<td>0.95 / 1.00–1.00</td>
+<td>0.65 / 0.53–0.95</td>
+<td>0.00 / 0.07–0.80</td>
+</tr>
+<tr>
+<td>ordinary text</td>
+<td>0.71 / 0.80–0.82</td>
+<td>0.54 / 0.67–0.68</td>
+<td>0.41 / 0.57–0.58</td>
+</tr>
+</tbody>
+</table>
+<p>Claude Sonnet 4.5, 10 directions, from the paper's Figure 22 (two-hop
+accuracy on the paper's 50 questions / ordinary text unchanged): layers
+62–71 of 100, 0.68 / 0.87; layers 54–79, 0.26 / 0.75; layers 42–88, 0.06
+/ 0.65; random directions at layers 54–79, 0.98 / 0.96. In the paper's
+14-task battery (its Figure 24), the middle setting leaves
+classification and extractive tasks near their clean scores and lowers
+TriviaQA to 0.53 of its clean score.</p>
 <p>With and without the rule that skips tokens in the clean output top
-10:</p>
+10, ablating 1 direction (one random draw):</p>
 <table>
 <thead>
 <tr>
@@ -1649,69 +1922,72 @@ For one and three layers we give the range over five draws.</p>
 <tr>
 <td>two-hop</td>
 <td>one</td>
-<td>0.21</td>
-<td>0.10</td>
+<td>0.69</td>
+<td>0.46</td>
 <td>0.92</td>
 <td>0.92</td>
 </tr>
 <tr>
 <td>two-hop</td>
 <td>three</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.21</td>
+<td>0.08</td>
 <td>0.75</td>
 <td>0.73</td>
 </tr>
 <tr>
 <td>one-hop</td>
 <td>one</td>
-<td>0.73</td>
-<td>0.48</td>
-<td>0.98</td>
-<td>0.98</td>
+<td>0.96</td>
+<td>0.75</td>
+<td>1.00</td>
+<td>1.00</td>
 </tr>
 <tr>
 <td>one-hop</td>
 <td>three</td>
-<td>0.06</td>
-<td>0.06</td>
+<td>0.31</td>
+<td>0.21</td>
 <td>0.96</td>
-<td>0.96</td>
+<td>0.94</td>
 </tr>
 <tr>
 <td>copying</td>
 <td>one</td>
-<td>0.95</td>
-<td>0.93</td>
+<td>0.98</td>
+<td>0.98</td>
 <td>1.00</td>
 <td>1.00</td>
 </tr>
 <tr>
 <td>copying</td>
 <td>three</td>
-<td>0.65</td>
-<td>0.25</td>
 <td>0.95</td>
-<td>0.90</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>1.00</td>
 </tr>
 <tr>
 <td>ordinary text</td>
 <td>one</td>
-<td>0.71</td>
-<td>0.67</td>
 <td>0.82</td>
 <td>0.81</td>
+<td>0.89</td>
+<td>0.89</td>
 </tr>
 <tr>
 <td>ordinary text</td>
 <td>three</td>
-<td>0.54</td>
-<td>0.51</td>
-<td>0.67</td>
-<td>0.67</td>
+<td>0.72</td>
+<td>0.69</td>
+<td>0.80</td>
+<td>0.80</td>
 </tr>
 </tbody>
 </table>
+<p>With the paper's 10 directions, the rule matters more. Without it,
+one-hop recall at one layer falls from 0.73 to 0.48, and copying at
+three layers from 0.65 to 0.25.</p>
 <p>How often the rule changes what is removed at the scored position
 (the lens top 10 overlaps the output top 10): at layer 8, 100% for
 two-hop and one-hop, 47% for copying, and 42% for ordinary text. At
@@ -1759,15 +2035,36 @@ passages; 21 passage and alternative-language swaps per strength):</p>
 <p>The passage's language is in the band J-lens over the passage at
 similar ranks in both prompts (median best rank 22 and 21), so the
 difference is in how the model uses it, not in whether it is there.</p>
-<p>Small part of the representation (40 WikiText activations per layer):
-variance captured by a 25-vector non-negative pursuit over the J-lens
-dictionary, against a random dictionary of the same size, is 29.2% vs.
-37.4% (layer 7), 31.8% vs. 37.1% (layer 8), and 35.1% vs. 37.5% (layer
-9). Occupancy, the number of vectors after which adding a J-lens vector
-helps less than adding a random one, is 2, 4, and 5.</p>
+<p>Small part of the representation, and occupancy (150 WikiText
+activations per layer, mean-centred). At each position we pursue the
+activation with up to 30 J-lens vectors, and separately with vectors
+from a random dictionary of the same size. Occupancy is the number of
+J-lens vectors before the next one helps the fit less than the next
+random vector does. Its median over positions is 2, 2, and 4 at layers
+7, 8, and 9, 3 over the band's positions pooled, 1 or 2 at every earlier
+layer, and 5 at layer 10. As in the paper, we then take K equal to each
+layer's median occupancy and compare the variance captured by K J-lens
+vectors with that captured by K random ones: 7.9% against 4.4% at layer
+7 (K = 2), 7.8% against 4.4% at layer 8 (K = 2), and 14.1% against 8.1%
+at layer 9 (K = 4), an excess of 3–6%. The paper reports that for Claude
+the excess never exceeds 10%. With the paper's K = 25 instead, the
+J-lens vectors capture less than random ones (29.8%, 31.3%, and 36.2%,
+against about 37%).</p>
 <p>Line counting: GPT-2 answers "been", "a", or "the". A count reaches
 the band lens top 25 on at most 1 of 11 passages in any condition.</p>
 <h2 id="d-structure">D. Structure</h2>
+<p><img src="figures/fig5_band_stats.png" alt="Figure 5" /></p>
+<p><em>Figure 5: The paper's four layer statistics (its Figure 28) for
+Claude Sonnet 4.5, from the paper's released data, and for GPT-2 small,
+computed the same way. The paper numbers Claude's layers by percent of
+depth. The shaded region is the paper's band in Claude (L38 to L92) and
+ours in GPT-2 (layers 7 to 9). (a) How often the model's top next-token
+prediction is in the lens's top k. (b) Excess kurtosis of the lens
+readout, as percentiles over positions. (c) Persistence: the
+log-probability the lens gives its top token from Δ positions earlier,
+minus the same for the top token of a random position. (d) The fraction
+of dimensions needed to capture a given share of the variance of the
+J-lens vectors.</em></p>
 <p>Layer statistics (48 WikiText-103 validation sequences of 128
 tokens):</p>
 <table>
@@ -1777,7 +2074,9 @@ tokens):</p>
 <th>lens top-1 = model top-1</th>
 <th>model top-1 in lens top 10</th>
 <th>excess kurtosis</th>
-<th>top-1 persistence minus shuffled</th>
+<th>persistence, Δ = 1 (nats)</th>
+<th>persistence, Δ = 4</th>
+<th>persistence, Δ = 16</th>
 <th>effective dimensionality (90% of variance)</th>
 </tr>
 </thead>
@@ -1787,7 +2086,9 @@ tokens):</p>
 <td>0.00</td>
 <td>0.00</td>
 <td>0.5</td>
-<td>+0.001</td>
+<td>0.6</td>
+<td>0.1</td>
+<td>0.0</td>
 <td>0.13</td>
 </tr>
 <tr>
@@ -1795,7 +2096,9 @@ tokens):</p>
 <td>0.00</td>
 <td>0.01</td>
 <td>0.6</td>
-<td>−0.000</td>
+<td>0.8</td>
+<td>0.2</td>
+<td>−0.1</td>
 <td>0.16</td>
 </tr>
 <tr>
@@ -1803,7 +2106,9 @@ tokens):</p>
 <td>0.00</td>
 <td>0.01</td>
 <td>0.6</td>
-<td>+0.000</td>
+<td>1.2</td>
+<td>0.0</td>
+<td>−0.2</td>
 <td>0.19</td>
 </tr>
 <tr>
@@ -1811,15 +2116,19 @@ tokens):</p>
 <td>0.00</td>
 <td>0.01</td>
 <td>0.4</td>
-<td>+0.002</td>
-<td>0.20</td>
+<td>1.9</td>
+<td>0.3</td>
+<td>−0.1</td>
+<td>0.21</td>
 </tr>
 <tr>
 <td>4</td>
 <td>0.00</td>
 <td>0.02</td>
 <td>0.5</td>
-<td>+0.004</td>
+<td>2.4</td>
+<td>0.3</td>
+<td>−0.2</td>
 <td>0.22</td>
 </tr>
 <tr>
@@ -1827,59 +2136,89 @@ tokens):</p>
 <td>0.00</td>
 <td>0.03</td>
 <td>0.4</td>
-<td>+0.002</td>
-<td>0.22</td>
+<td>2.8</td>
+<td>0.3</td>
+<td>−0.2</td>
+<td>0.23</td>
 </tr>
 <tr>
 <td>6</td>
 <td>0.01</td>
 <td>0.04</td>
 <td>0.4</td>
-<td>+0.007</td>
-<td>0.26</td>
+<td>3.9</td>
+<td>0.9</td>
+<td>0.1</td>
+<td>0.27</td>
 </tr>
 <tr>
 <td>7</td>
 <td>0.02</td>
 <td>0.10</td>
 <td>0.4</td>
-<td>+0.014</td>
-<td>0.30</td>
+<td>5.6</td>
+<td>1.1</td>
+<td>0.0</td>
+<td>0.32</td>
 </tr>
 <tr>
 <td>8</td>
 <td>0.04</td>
 <td>0.13</td>
 <td>0.5</td>
-<td>+0.021</td>
-<td>0.35</td>
+<td>7.1</td>
+<td>1.8</td>
+<td>0.2</td>
+<td>0.38</td>
 </tr>
 <tr>
 <td>9</td>
 <td>0.11</td>
 <td>0.29</td>
 <td>0.6</td>
-<td>+0.023</td>
-<td>0.43</td>
+<td>7.4</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>0.47</td>
 </tr>
 <tr>
 <td>10</td>
 <td>0.24</td>
 <td>0.51</td>
 <td>0.5</td>
-<td>+0.020</td>
-<td>0.50</td>
+<td>5.3</td>
+<td>1.6</td>
+<td>0.2</td>
+<td>0.55</td>
 </tr>
 <tr>
 <td>11</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>0.4</td>
-<td>+0.008</td>
-<td>0.66</td>
+<td>1.0</td>
+<td>0.2</td>
+<td>0.0</td>
+<td>0.73</td>
 </tr>
 </tbody>
 </table>
+<p>Kurtosis is the mean over positions. The median is between 0.28 and
+0.55 at every layer, and no percentile rises in the middle layers
+(Figure 5b). Persistence is the paper's measure: the mean
+log-probability the lens gives, at position t + Δ, to its top token at
+position t, minus the same for the top token of a random position in the
+same sequence. Effective dimensionality uses the centered J-lens vectors
+of the whole vocabulary.</p>
+<p>Persistence counting only top tokens that never appear in the
+sequence's input, for the random positions too: at layer 9 it is 7.6,
+4.3, 2.0, 1.1, 0.1, and −0.3 nats at Δ = 1, 2, 4, 8, 16, and 32. With
+all top tokens it is 7.4, 4.0, 2.0, 0.9, 0.0, and −0.2. Between 24% and
+38% of the lens's top tokens at layers 0 to 10 appear somewhere in the
+input. At Δ = 32, persistence is slightly below zero at every layer,
+probably because the random position is sometimes a nearby one. In
+Claude, at the peak of the band, it is 6.0 at Δ = 1 and 4.2 at Δ =
+32.</p>
 <p>Similarity between layers: plain linear CKA between the layers'
 J-lens dictionaries is 0.94 or higher for every pair of layers 0 to 10,
 because one principal component carries 26–37% of each dictionary's
@@ -1983,33 +2322,18 @@ ones.</p>
 name, surname, country, and city pools, in shuffled order): averaged
 over commas 6 to 19 of a block, 21% of that block's words are present
 during the block and 0.8% during the next block.</p>
-<p>Attention heads: for each head, we measure gain (the mean output norm
-on a set of directions, relative to random directions) and label
-preservation (the mean reciprocal rank of cos(OV v_i, v_i) among cos(OV
-v_i, v_j), minus the same for random directions), with the head's
-LayerNorm gain folded in. Median label preservation over the 12 heads of
-each block, for J-lens vectors, is 0.01, 0.16, 0.47, 0.16, 0.16, 0.17,
-0.09, 0.11, 0.11, 0.30, and 0.06 (blocks 1 to 11). The largest value in
-any block is 0.016 for rotated J-lens vectors and 0.35 for MLP neuron
-directions. The paper's selection rule (the worse of the two ranks,
-among the heads in blocks 8 to 10) picks heads 9.8, 10.4, and 10.0, with
-gain 1.23–1.38 and label preservation 0.36–0.49. The highest label
-preservation anywhere is in heads 2.9, 2.4, 2.2, 9.6, 3.7, and 9.9
-(0.76–0.83). Zeroing heads 9.8, 10.4, and 10.0 at every position leaves
-90% of the top 25 J-lens tokens at layer 9 and 84% at layer 10. Five
-sets of random heads from the same blocks leave 96% and 91% on average
-(lowest 95% and 89%). The top-1 prediction changes at 7.9% of positions,
-against 6.3% for random heads. The paper reports 67% against 86% for the
-J-space, and 5% against 2% for the top-1 prediction.</p>
 <h2 id="e-qwen3-17b">E. Qwen3-1.7B</h2>
 <p>Model: Qwen3-1.7B (28 layers, instruction-tuned), fp32, with its chat
 template and thinking turned off. Lens: Neuronpedia's Qwen3-1.7B J-lens,
 fit the same way as the GPT-2 one. J-lens vectors are centered the same
-way. Band: layers 12, 14, 16, 18, and 20. On 16 WikiText sequences, the
-lens's top token persists across positions above a shuffled baseline
-from about layer 9, most strongly at layers 16 to 20. Its agreement with
-the model's top-1 prediction is under 5% through layer 18, 10% at layer
-20, and 18% at layer 21.</p>
+way. Band: layers 12, 14, 16, 18, and 20. On 16 WikiText sequences,
+persistence (measured as in the paper, at Δ = 1) is about 4 nats at
+layers 8 to 14, rises to a peak of 7.2 at layer 20, and falls to 2.3 at
+layer 26. As in GPT-2, it is short-lived: at the band layers it is 0.3
+to 0.6 at Δ = 8, and within 0.25 of zero at Δ = 16. Counting only top
+tokens that never appear in the input changes little. The lens's
+agreement with the model's top-1 prediction is under 5% through layer
+18, 10% at layer 20, and 18% at layer 21.</p>
 <p>Verbal report
 (<code>Think of a {category}. Answer in one word.</code>,
 subtract-and-add swap at the band layers, targets starting at rank 11 or

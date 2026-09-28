@@ -1,6 +1,6 @@
 """Figure 4: the structural signatures in gpt2-small.
 
-Reads results/band/{band,cka,mlp_gain}.json and results/followups/{ignition,lists}.json.
+Reads results/band/{band,cka,mlp_gain,fig28}.json and results/followups/{ignition,lists}.json.
 Run from the repo root:  python post/figures/structure.py
 """
 import json
@@ -8,6 +8,7 @@ import pathlib
 
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.colors import LinearSegmentedColormap
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 R = ROOT / "results"
@@ -19,6 +20,7 @@ plt.rcParams.update({"figure.facecolor": BG, "axes.facecolor": BG, "savefig.face
 band = json.load(open(R / "band/band.json"))
 cka = json.load(open(R / "band/cka.json"))
 mlp = json.load(open(R / "band/mlp_gain.json"))
+f28 = json.load(open(R / "band/fig28.json"))
 ign = json.load(open(R / "followups/ignition.json"))
 lists = json.load(open(R / "followups/lists.json"))
 L12 = list(range(12))
@@ -41,12 +43,16 @@ ax.set_title("(a) J-lens agrees with the model's next token")
 ax.legend(frameon=False)
 
 ax = axes[0, 1]
-ax.plot(L12, [st[str(L)]["auto"] - st[str(L)]["null"] for L in L12], "o-", color=MAROON)
+ramp = LinearSegmentedColormap.from_list("ramp", [MAROON, ORANGE, GOLD])
+offs = list(f28["autocorr"])
+for i, d in enumerate(offs):
+    ax.plot(L12, f28["autocorr"][d], "o-", ms=4, color=ramp(i / (len(offs) - 1)), label=d)
 shade(ax)
 ax.axhline(0, color=GRAY, lw=1)
 ax.set_xlabel("Layer")
-ax.set_ylabel("Same top-1 token at nearby positions\n(minus shuffled baseline)")
-ax.set_title("(b) J-lens content persists across positions")
+ax.set_ylabel("Log-prob of top-1 token from Δ positions\nearlier, minus shuffled baseline (nats)")
+ax.set_title("(b) J-lens content persists, but only briefly")
+ax.legend(title="Δ", frameon=False, fontsize=9, ncol=2)
 
 ax = axes[0, 2]
 M = np.array(cka["mean_cca_r50"])

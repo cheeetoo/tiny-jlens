@@ -13,6 +13,7 @@ import numpy as np
 import torch
 
 import jl
+from jl.c5_selectivity import K_ABLATE
 
 OUT = pathlib.Path(__file__).resolve().parent
 MAROON, SLATE, GRAY = "#800000", "#33658a", "#8a8580"
@@ -85,7 +86,7 @@ if var:
     ax = axes[2]
     rows = [("Verbal report swap\n(target becomes top-1)", "c1b_top1", None),
             ("Two-hop swap\n(target answer top-1)", "c3_top1", None),
-            ("Two-hop accuracy after\nJ-space ablation", "c5_twohop_J", "c5_twohop_R")]
+            ("Two-hop accuracy after\nJ-space ablation", f"c5_twohop_J_k{K_ABLATE}", f"c5_twohop_R_k{K_ABLATE}")]
     x = np.arange(len(rows))
     w = 0.36
     ax.bar(x - w / 2, [var["raw"][k] for _, k, _ in rows], w, color=MAROON, label="raw")

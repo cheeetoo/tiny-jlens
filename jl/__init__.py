@@ -11,13 +11,13 @@
     jl.c5_selectivity
     jl.band              the structural statistics behind the choice of band
 """
-from .model import BAND, LENS_PATH, REF_DATA, RESULTS, Lensed, ranks_of, results_dir
+from .model import BAND, LENS_PATH, REF_DATA, RESULTS, Lensed, ranks_of, results_dir, scaled_k
 from .hooks import Edit, Session
 from .interventions import (ablation_edits, ablation_select, clamp_edits, coord_swap_edits,
                             delta_edits, loading, pursuit, swap_edits, unit)
 from .stats import median, sign_test, spearman, wilson
 
-__all__ = ["BAND", "LENS_PATH", "REF_DATA", "RESULTS", "Lensed", "ranks_of", "results_dir",
+__all__ = ["BAND", "LENS_PATH", "REF_DATA", "RESULTS", "Lensed", "ranks_of", "results_dir", "scaled_k",
            "Edit", "Session",
            "ablation_edits", "ablation_select", "clamp_edits", "coord_swap_edits", "delta_edits",
            "loading", "pursuit", "swap_edits", "unit",

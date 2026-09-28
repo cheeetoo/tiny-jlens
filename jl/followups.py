@@ -9,16 +9,12 @@
             is the switch bimodal across carrier sentences at the most ambiguous mixture?
   lists     §4.2 (Fig 31): comma-separated word lists, single-category vs unrelated words; at each
             comma, how many list words already read sit in the band J-lens top-25?
-  heads     §4.3 (Fig 33-34): per attention head, OV gain and label preservation on J-lens vectors
-            vs controls (rotated J-lens vectors, MLP neuron output directions); the heads selected
-            for the J-lens vectors are then ablated and J-lens recall@25 measured against
-            layer-matched random heads.
   neurons   App Fig 77: for each MLP neuron, is its input-weight direction's best match a J-lens
             vector or an adjacent-layer neuron direction?  (Paper: ~15% before the workspace,
             60-65% within it.)
 
 Writes results/followups/{name}.json and prints a summary.
-Run:  python -m jl.followups [protect|ignition|lists|heads|neurons]   (default: all)
+Run:  python -m jl.followups [protect|ignition|lists|neurons]   (default: all)
 """
 from __future__ import annotations
 
@@ -51,14 +47,14 @@ def protect():
     Also records, per task and layer, how often the protection rule changes which directions are
     ablated: the fraction of items whose lens top-10 (at the scored position) contains a token from
     the clean output top-10, and the lens rank of the answer token itself."""
-    from jl.c5_selectivity import (K_ABLATE, induction_items, one_hop_items, pretraining_paragraphs,
+    from jl.c5_selectivity import (KS_ABLATE, induction_items, one_hop_items, pretraining_paragraphs,
                                    two_hop_items)
     lm = jl.Lensed()
     strengths = {"light": [8], "medium": [7, 8, 9]}
     tasks = [("two_hop", two_hop_items(lm)), ("one_hop", one_hop_items(lm)),
              ("induction", induction_items(lm))]
     paras = pretraining_paragraphs()
-    out = dict(strengths=strengths, rows=[], overlap=[])
+    out = dict(strengths=strengths, ks=list(KS_ABLATE), rows=[], overlap=[])
 
     for name, items in tasks:
         # how often the rule fires at the scored (final) position, and where the answer sits
@@ -76,18 +72,19 @@ def protect():
                                        answer_in_lens_top10=ans_in_lens / len(items),
                                        answer_lens_rank_median=median(ranks)))
         for sname, layers in strengths.items():
-            row = dict(task=name, strength=sname, n=len(items))
-            for prot in (10, 0):
-                jh = rh = 0
-                for it in items:
-                    cl = lm.residuals(it["ids"], layers)
-                    sel = ablation_select(lm, it["ids"], layers, k=K_ABLATE, exclude_output_top=prot, clean=cl)
-                    jh += int(lm.logits(it["ids"], ablation_edits(sel, lm))[-1].argmax()) == it["ans_id"]
-                    rh += int(lm.logits(it["ids"], ablation_edits(sel, lm, random=True))[-1].argmax()) == it["ans_id"]
-                row[f"J_protect{prot}"] = jh / len(items)
-                row[f"R_protect{prot}"] = rh / len(items)
-            out["rows"].append(row)
-            print(row, flush=True)
+            for k in KS_ABLATE:
+                row = dict(task=name, strength=sname, k=k, n=len(items))
+                for prot in (10, 0):
+                    jh = rh = 0
+                    for it in items:
+                        cl = lm.residuals(it["ids"], layers)
+                        sel = ablation_select(lm, it["ids"], layers, k=k, exclude_output_top=prot, clean=cl)
+                        jh += int(lm.logits(it["ids"], ablation_edits(sel, lm))[-1].argmax()) == it["ans_id"]
+                        rh += int(lm.logits(it["ids"], ablation_edits(sel, lm, random=True))[-1].argmax()) == it["ans_id"]
+                    row[f"J_protect{prot}"] = jh / len(items)
+                    row[f"R_protect{prot}"] = rh / len(items)
+                out["rows"].append(row)
+                print(row, flush=True)
 
     # wikitext next-token top-1 match
     for L in range(12):
@@ -102,28 +99,29 @@ def protect():
                 n += 1
         out["overlap"].append(dict(task="pretrain_match", layer=L, n=n, fires=fires / n))
     for sname, layers in strengths.items():
-        row = dict(task="pretrain_match", strength=sname, n=len(paras))
-        for prot in (10, 0):
-            jm = rm = tot = 0
-            for para in paras:
-                ids = lm.encode(para)[:, :96]
-                base = lm.logits(ids).argmax(-1)
-                pos = list(range(5, ids.shape[1]))
-                cl = lm.residuals(ids, layers)
-                sel = ablation_select(lm, ids, layers, k=K_ABLATE, exclude_output_top=prot, clean=cl)
-                jm += int((lm.logits(ids, ablation_edits(sel, lm)).argmax(-1)[pos] == base[pos]).sum())
-                rm += int((lm.logits(ids, ablation_edits(sel, lm, random=True)).argmax(-1)[pos] == base[pos]).sum())
-                tot += len(pos)
-            row[f"J_protect{prot}"] = jm / tot
-            row[f"R_protect{prot}"] = rm / tot
-        out["rows"].append(row)
-        print(row, flush=True)
+        for k in KS_ABLATE:
+            row = dict(task="pretrain_match", strength=sname, k=k, n=len(paras))
+            for prot in (10, 0):
+                jm = rm = tot = 0
+                for para in paras:
+                    ids = lm.encode(para)[:, :96]
+                    base = lm.logits(ids).argmax(-1)
+                    pos = list(range(5, ids.shape[1]))
+                    cl = lm.residuals(ids, layers)
+                    sel = ablation_select(lm, ids, layers, k=k, exclude_output_top=prot, clean=cl)
+                    jm += int((lm.logits(ids, ablation_edits(sel, lm)).argmax(-1)[pos] == base[pos]).sum())
+                    rm += int((lm.logits(ids, ablation_edits(sel, lm, random=True)).argmax(-1)[pos] == base[pos]).sum())
+                    tot += len(pos)
+                row[f"J_protect{prot}"] = jm / tot
+                row[f"R_protect{prot}"] = rm / tot
+            out["rows"].append(row)
+            print(row, flush=True)
 
     _save("protect", out)
     lines = ["protect: task score under J-space ablation, with / without the output-top-10 rule",
-             f"  {'task':15s}{'strength':8s}{'n':>4s}   J(rule) R(rule)   J(none) R(none)"]
+             f"  {'task':15s}{'strength':8s}{'k':>3s}{'n':>4s}   J(rule) R(rule)   J(none) R(none)"]
     for r in out["rows"]:
-        lines.append(f"  {r['task']:15s}{r['strength']:8s}{r['n']:4d}   {r['J_protect10']:.2f}    {r['R_protect10']:.2f}      "
+        lines.append(f"  {r['task']:15s}{r['strength']:8s}{r['k']:3d}{r['n']:4d}   {r['J_protect10']:.2f}    {r['R_protect10']:.2f}      "
                      f"{r['J_protect0']:.2f}    {r['R_protect0']:.2f}")
     lines.append("  how often the rule fires (lens top-10 meets output top-10) at the scored position:")
     for task in ("two_hop", "one_hop", "induction", "pretrain_match"):
@@ -342,151 +340,6 @@ def blocks():
           f"{sum(during)/len(during):.3f}, during the next block {sum(after)/len(after):.3f}")
 
 
-# =============================================================================== heads
-N_DIRS = 1000
-N_BROADCAST = 3
-
-
-def _ov(lm, L):
-    """Per-head OV maps of block L as [H, d, d] (x -> OV x), with ln_1's gain folded in and the
-    LayerNorm mean-centering applied to the input direction."""
-    blk = lm.m.layers[L]
-    d = lm.d
-    H = blk.attn.num_heads if hasattr(blk.attn, "num_heads") else 12
-    dh = d // H
-    Wv = blk.attn.c_attn.weight[:, 2 * d:3 * d].float()      # [d, d]  (x @ W)
-    Wo = blk.attn.c_proj.weight.float()                       # [d, d]
-    g = blk.ln_1.weight.float()
-    C = torch.eye(d, device=lm.device) - 1.0 / d              # mean-centering
-    maps = []
-    for h in range(H):
-        M = (C * g[None, :]) @ Wv[:, h * dh:(h + 1) * dh] @ Wo[h * dh:(h + 1) * dh, :]   # row-vector map
-        maps.append(M)
-    return torch.stack(maps), H
-
-
-def _populations(lm, L, gen):
-    """Unit directions at residual layer L (the input to block L+1)."""
-    idx = torch.randperm(lm.vocab, generator=gen)[:N_DIRS]
-    J = jl.unit(lm.V(L)[idx.to(lm.device)])
-    Q, _ = torch.linalg.qr(torch.randn(lm.d, lm.d, generator=gen).to(lm.device))
-    Jrot = J @ Q
-    W = lm.m.layers[L].mlp.c_proj.weight.float()              # [d_ff, d] neuron output dirs
-    Wn = jl.unit(W[torch.randperm(W.shape[0], generator=gen)[:N_DIRS].to(lm.device)])
-    R = jl.unit(torch.randn(N_DIRS, lm.d, generator=gen).to(lm.device))
-    return dict(J=J, J_rot=Jrot, neuron=Wn, random=R)
-
-
-def _head_metrics(M, P, R):
-    """gain = mean ||P M|| / mean ||R M||; label preservation = MRR of the diagonal of
-    cos(P_i M, P_j) minus the same statistic for the random population R."""
-    def mrr(X):
-        Y = jl.unit(X @ M)                                     # [n, d]
-        S = Y @ jl.unit(X).T                                   # [n, n]  cos(OV x_i, x_j)
-        diag = S.diagonal()[:, None]
-        rank = (S > diag).sum(1) + 1
-        return float((1.0 / rank.float()).mean())
-    gain = float((P @ M).norm(dim=-1).mean() / (R @ M).norm(dim=-1).mean())
-    return gain, mrr(P) - mrr(R)
-
-
-@torch.no_grad()
-def heads():
-    """Paper §4.3 Fig 33-34 in gpt2-small.  Heads of block L+1 read residual layer L; for every head
-    and each population (J-lens vectors, the same vectors under a fixed random rotation, MLP neuron
-    output directions), OV gain and label preservation.  Broadcast heads for a population = the top
-    N_BROADCAST heads in the band's blocks (8-10, reading layers 7-9) by worse-of-two ranks.  Then
-    ablate the J broadcast heads (zero their output at every position) and measure, on wikitext,
-    J-lens recall@25 per layer and next-token top-1 change, against 5 layer-matched random head sets."""
-    lm = jl.Lensed()
-    gen = torch.Generator().manual_seed(0)
-    metrics = {}   # (block, head, pop) -> (gain, lp)
-    for L in range(11):                                        # residual layer L -> block L+1
-        M, H = _ov(lm, L + 1)
-        pops = _populations(lm, L, gen)
-        for h in range(H):
-            for pop in ("J", "J_rot", "neuron"):
-                metrics[(L + 1, h, pop)] = _head_metrics(M[h], pops[pop], pops["random"])
-    blocks = [b + 1 for b in jl.BAND]                          # blocks 8, 9, 10 read layers 7, 8, 9
-    sel, summary = {}, {}
-    for pop in ("J", "J_rot", "neuron"):
-        cand = [(b, h) for b in blocks for h in range(12)]
-        g_rank = {c: r for r, c in enumerate(sorted(cand, key=lambda c: -metrics[(*c, pop)][0]))}
-        l_rank = {c: r for r, c in enumerate(sorted(cand, key=lambda c: -metrics[(*c, pop)][1]))}
-        best = sorted(cand, key=lambda c: max(g_rank[c], l_rank[c]))[:N_BROADCAST]
-        sel[pop] = best
-        summary[pop] = dict(heads=best, gain=[metrics[(*c, pop)][0] for c in best],
-                            label_pres=[metrics[(*c, pop)][1] for c in best])
-    # all-heads distribution, per population, over band blocks
-    dist = {pop: dict(gain=[metrics[(b, h, pop)][0] for b in blocks for h in range(12)],
-                      label_pres=[metrics[(b, h, pop)][1] for b in blocks for h in range(12)])
-            for pop in ("J", "J_rot", "neuron")}
-    print("broadcast heads (block.head), gain, label preservation")
-    for pop, s in summary.items():
-        print(f"  {pop:7s} {s['heads']}  gain {[round(x, 2) for x in s['gain']]}  lp {[round(x, 3) for x in s['label_pres']]}")
-    for pop in dist:
-        print(f"  all band heads {pop:7s} median gain {median(dist[pop]['gain']):.2f}  median lp {median(dist[pop]['label_pres']):.3f}"
-              f"  max lp {max(dist[pop]['label_pres']):.3f}")
-
-    # ablation: zero the selected heads' outputs (pre-hook on c_proj input)
-    from jl.c5_selectivity import pretraining_paragraphs
-    paras = pretraining_paragraphs(n=12)
-
-    def ablate_hooks(head_set):
-        handles = []
-        by_block = {}
-        for b, h in head_set:
-            by_block.setdefault(b, []).append(h)
-        for b, hs in by_block.items():
-            def pre(module, args, hs=hs):
-                x = args[0].clone()
-                for h in hs:
-                    x[..., h * 64:(h + 1) * 64] = 0
-                return (x,)
-            handles.append(lm.m.layers[b].attn.c_proj.register_forward_pre_hook(pre))
-        return handles
-
-    def measure(head_set):
-        rec = {L: [] for L in range(11)}
-        flips = tot = 0
-        for para in paras:
-            ids = lm.encode(para)[:, :96]
-            clean = lm.residuals(ids, list(range(11)))
-            clean_top1 = lm.logits(ids).argmax(-1)
-            hs = ablate_hooks(head_set)
-            try:
-                abl = lm.residuals(ids, list(range(11)))
-                abl_top1 = lm.logits(ids).argmax(-1)
-            finally:
-                for x in hs:
-                    x.remove()
-            for L in range(11):
-                a = lm.lens_logits(clean[L][5:], L).topk(25).indices
-                b = lm.lens_logits(abl[L][5:], L).topk(25).indices
-                inter = (a[:, :, None] == b[:, None, :]).any(-1).float().mean(-1)
-                rec[L].append(float(inter.mean()))
-            flips += int((abl_top1[5:] != clean_top1[5:]).sum())
-            tot += len(clean_top1) - 5
-        return {L: sum(v) / len(v) for L, v in rec.items()}, flips / tot
-
-    rJ, fJ = measure(sel["J"])
-    rng = random.Random(1)
-    rand = []
-    for seed in range(5):
-        hs = [(b, rng.randrange(12)) for b, _ in sel["J"]]
-        rand.append(measure(hs))
-    out = dict(selected=summary, dist=dist,
-               ablation=dict(J=dict(recall=rJ, top1_change=fJ),
-                             random=[dict(recall=r, top1_change=f) for r, f in rand]),
-               metrics={f"{b}.{h}.{p}": v for (b, h, p), v in metrics.items()})
-    _save("heads", out)
-    print("ablating J broadcast heads vs layer-matched random heads: J-lens recall@25 by layer, top-1 change")
-    for L in range(11):
-        rr = [r[L] for r, _ in rand]
-        print(f"  L{L:<2d}  J-heads {rJ[L]:.3f}   random {sum(rr)/len(rr):.3f} (min {min(rr):.3f})")
-    print(f"  top-1 change: J-heads {fJ:.3f}   random {sum(f for _, f in rand)/len(rand):.3f}")
-
-
 # =============================================================================== neurons
 @torch.no_grad()
 def neurons():
@@ -542,11 +395,12 @@ def variants(configs=None, name="variants"):
     every criterion module uses), the raw J-lens (no vocabulary-mean subtraction), and the centered
     logit lens (J = I).  C1b subtract-and-add swap (gate-passed categories, targets starting at
     rank >= 11; top-5 and top-1), C3 E3 coordinate swap (top-1), and C5 S2a ablation at the band's
-    middle layer on two-hop and wikitext next-token match, J vs matched-norm random.
+    middle layer on two-hop and wikitext next-token match, J vs matched-norm random, at the scaled
+    k (c5's K_ABLATE) and the paper's k = 10.
     `configs` = [(label, variant, band)]; the default compares lens variants on band 7-9."""
     from jl import c1_report as c1
     from jl.c3_reasoning import COUNTRIES, FAMILIES
-    from jl.c5_selectivity import K_ABLATE, pretraining_paragraphs, two_hop_items
+    from jl.c5_selectivity import KS_ABLATE, pretraining_paragraphs, two_hop_items
     configs = configs or [(v, v, jl.BAND) for v in ("centered", "raw", "logit")]
     out = {}
     for label, variant, band in configs:
@@ -601,22 +455,24 @@ def variants(configs=None, name="variants"):
         # C5 S2a light: the band's middle layer
         L8 = [band[len(band) // 2]]
         two = two_hop_items(lm)
-        jh = rh = 0
-        for it in two:
-            sel = ablation_select(lm, it["ids"], L8, k=K_ABLATE)
-            jh += int(lm.logits(it["ids"], ablation_edits(sel, lm))[-1].argmax()) == it["ans_id"]
-            rh += int(lm.logits(it["ids"], ablation_edits(sel, lm, random=True))[-1].argmax()) == it["ans_id"]
-        row["c5_twohop_J"], row["c5_twohop_R"] = jh / len(two), rh / len(two)
-        jm = rm = tot = 0
-        for para in pretraining_paragraphs():
-            ids = lm.encode(para)[:, :96]
-            base = lm.logits(ids).argmax(-1)
-            pos = list(range(5, ids.shape[1]))
-            sel = ablation_select(lm, ids, L8, k=K_ABLATE)
-            jm += int((lm.logits(ids, ablation_edits(sel, lm)).argmax(-1)[pos] == base[pos]).sum())
-            rm += int((lm.logits(ids, ablation_edits(sel, lm, random=True)).argmax(-1)[pos] == base[pos]).sum())
-            tot += len(pos)
-        row["c5_pretrain_J"], row["c5_pretrain_R"] = jm / tot, rm / tot
+        paras = pretraining_paragraphs()
+        for k in KS_ABLATE:
+            jh = rh = 0
+            for it in two:
+                sel = ablation_select(lm, it["ids"], L8, k=k)
+                jh += int(lm.logits(it["ids"], ablation_edits(sel, lm))[-1].argmax()) == it["ans_id"]
+                rh += int(lm.logits(it["ids"], ablation_edits(sel, lm, random=True))[-1].argmax()) == it["ans_id"]
+            row[f"c5_twohop_J_k{k}"], row[f"c5_twohop_R_k{k}"] = jh / len(two), rh / len(two)
+            jm = rm = tot = 0
+            for para in paras:
+                ids = lm.encode(para)[:, :96]
+                base = lm.logits(ids).argmax(-1)
+                pos = list(range(5, ids.shape[1]))
+                sel = ablation_select(lm, ids, L8, k=k)
+                jm += int((lm.logits(ids, ablation_edits(sel, lm)).argmax(-1)[pos] == base[pos]).sum())
+                rm += int((lm.logits(ids, ablation_edits(sel, lm, random=True)).argmax(-1)[pos] == base[pos]).sum())
+                tot += len(pos)
+            row[f"c5_pretrain_J_k{k}"], row[f"c5_pretrain_R_k{k}"] = jm / tot, rm / tot
         out[label] = row
         print(label, row, flush=True)
     _save(name, out)
@@ -668,7 +524,7 @@ def linear():
     for key in ("cos_lens", "cos_j", "cos_nonj"):
         vals = [r[key] for r in rows]
         print(f"  {key:9s} median {median(vals):+.3f}   (n={len(vals)} trial x layer)")
-    print(f"  target token's own J-lens vector in its concept vector's k=16 support: "
+    print(f"  target token's own J-lens vector in its concept vector's k={c1.K_PURSUIT} support: "
           f"{sum(r['own_in_support'] for r in rows)}/{len(rows)}")
 
 
@@ -719,41 +575,6 @@ def introspect():
     _save("introspect", out)
 
 
-@torch.no_grad()
-def randseeds(seeds=(0, 1, 2, 3, 4)):
-    """The matched-norm random control of criterion 5's ablation battery is one random draw per
-    position; this repeats it over several seeds (light and medium strength) to show its spread."""
-    from jl.c5_selectivity import (K_ABLATE, induction_items, one_hop_items, pretraining_paragraphs,
-                                   two_hop_items)
-    lm = jl.Lensed()
-    strengths = {"light": [8], "medium": [7, 8, 9]}
-    tasks = [("two_hop", two_hop_items(lm)), ("one_hop", one_hop_items(lm)), ("induction", induction_items(lm))]
-    paras = [lm.encode(p)[:, :96] for p in pretraining_paragraphs()]
-    out = []
-    for sname, layers in strengths.items():
-        for name, items in tasks:
-            sels = [ablation_select(lm, it["ids"], layers, k=K_ABLATE) for it in items]
-            J = sum(int(lm.logits(it["ids"], ablation_edits(s, lm))[-1].argmax()) == it["ans_id"]
-                    for it, s in zip(items, sels)) / len(items)
-            R = [sum(int(lm.logits(it["ids"], ablation_edits(s, lm, random=True, seed=sd))[-1].argmax()) == it["ans_id"]
-                     for it, s in zip(items, sels)) / len(items) for sd in seeds]
-            out.append(dict(task=name, strength=sname, J=J, R=R))
-            print(out[-1], flush=True)
-        sels = [ablation_select(lm, ids, layers, k=K_ABLATE) for ids in paras]
-        bases = [lm.logits(ids).argmax(-1) for ids in paras]
-
-        def match(random, sd=0):
-            m = t = 0
-            for ids, s, b in zip(paras, sels, bases):
-                pos = list(range(5, ids.shape[1]))
-                m += int((lm.logits(ids, ablation_edits(s, lm, random=random, seed=sd)).argmax(-1)[pos] == b[pos]).sum())
-                t += len(pos)
-            return m / t
-        out.append(dict(task="pretrain_match", strength=sname, J=match(False), R=[match(True, sd) for sd in seeds]))
-        print(out[-1], flush=True)
-    _save("randseeds", out)
-
-
 def bands():
     """The same headline interventions (centered J-lens) under other choices of band."""
     variants([(f"band{b[0]}-{b[-1]}", "centered", b) for b in ([6, 7, 8], [7, 8, 9], [8, 9, 10], [6, 7, 8, 9, 10], [5, 6, 7])],
@@ -761,8 +582,8 @@ def bands():
 
 
 if __name__ == "__main__":
-    which = sys.argv[1:] or ["protect", "ignition", "lists", "heads", "neurons", "variants", "bands"]
+    which = sys.argv[1:] or ["protect", "ignition", "lists", "neurons", "variants", "bands"]
     for name in which:
         print(f"===== {name}", flush=True)
-        {"protect": protect, "ignition": ignition, "lists": lists, "heads": heads, "neurons": neurons,
-         "variants": variants, "bands": bands, "linear": linear, "introspect": introspect, "randseeds": randseeds, "blocks": blocks}[name]()
+        {"protect": protect, "ignition": ignition, "lists": lists, "neurons": neurons,
+         "variants": variants, "bands": bands, "linear": linear, "introspect": introspect, "blocks": blocks}[name]()

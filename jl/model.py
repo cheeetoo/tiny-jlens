@@ -44,6 +44,23 @@ LENS_PATH = pathlib.Path(os.environ.get(
 MODEL_ID = "openai-community/gpt2"
 BAND = [7, 8, 9]  # workspace band for gpt2-small (see README.md and PROTOCOL.md)
 
+# Numbers of J-lens vectors.  Several of the paper's methods pick a number of J-lens vectors (16
+# for a concept vector's J-space part, 25 for a reasoning probe's, 10 for the selectivity
+# ablation).  Those numbers are sized for Claude, whose J-space holds about 25 J-lens vectors at a
+# time in its workspace band (occupancy, paper §4.2).  GPT-2 small's holds about 3 in our band
+# (per-position median occupancy 2, 2.5 and 4 at layers 7, 8 and 9; jl.c5_selectivity S1).  Using
+# Claude's numbers in GPT-2 fills most of each "J-space part" with vectors that do no better than
+# random directions, and ablates a much larger share of GPT-2's 768-dimensional residual stream.
+# So the main runs scale each of the paper's numbers by the ratio of occupancies, and every module
+# that uses one also runs the paper's number.  scaled_k(16) = 2, scaled_k(25) = 3, scaled_k(10) = 1.
+OCCUPANCY_CLAUDE = 25
+OCCUPANCY_GPT2 = 3
+
+
+def scaled_k(k_paper: int) -> int:
+    """The paper's number of J-lens vectors, scaled to GPT-2 small's occupancy."""
+    return max(1, round(k_paper * OCCUPANCY_GPT2 / OCCUPANCY_CLAUDE))
+
 
 def results_dir(name: str) -> pathlib.Path:
     """`results/{name}/`, created on demand."""

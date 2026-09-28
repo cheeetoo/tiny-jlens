@@ -62,8 +62,14 @@ band [7, 8, 9]; 30 concept words x 12 carriers; phrasings pooled per condition
        either question: GPT-2 uses properties implicitly but cannot summon their names on demand.
 
 2d  privileging: an 'imagine this is French' header vs a real French sentence
-    French probe J-space share: L7 22%, L8 27%, L9 30%
-                  lens 'French' (delta vs neutral)   J-orth probe (delta vs neutral)
+    J-orth probe = the probe minus its k-atom J-space part; 'orth' k=2 (scaled), 'orth_paper' k=16 (the paper's)
+    French probe J-space share (orth): L7 7%, L8 12%, L9 14%
+    French probe J-space share (orth_paper): L7 22%, L8 27%, L9 30%
+    [orth]       lens 'French' (delta vs neutral)   J-orth probe (delta vs neutral)
+    claim          +2.32  (up 36/36)              +3.39  (up 36/36)
+    real           +6.06  (up 36/36)             +40.61  (up 36/36)
+    dissociation: the claim gets 38% of real's lens effect but only 8% of its probe effect
+    [orth_paper]       lens 'French' (delta vs neutral)   J-orth probe (delta vs neutral)
     claim          +2.32  (up 36/36)              +2.83  (up 36/36)
     real           +6.06  (up 36/36)             +35.58  (up 36/36)
     dissociation: the claim gets 38% of real's lens effect but only 8% of its probe effect

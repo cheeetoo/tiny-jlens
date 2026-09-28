@@ -7,8 +7,10 @@ See PROTOCOL.md.
   E2 case  one clean example: clean vs swapped top-5 next-token log-probs (Fig 13)
   E3 swap  coordinate swap intermediate->alt across the band; swap_answer's output rank
   E4 depth intermediate-swap vs answer-swap at each single layer; onset depth (Fig 15 right)
-  E5 priv  probe -> J-space (k=25 pursuit) + remainder; swap along each at matched
-           magnitude; remainder also with the J coordinates clamped to clean (Fig 16)
+  E5 priv  probe -> J-space (k-atom pursuit) + remainder; swap along each at matched
+           magnitude; remainder also with the J coordinates clamped to clean (Fig 16).  Run at
+           k = 3 (the paper's 25 scaled to GPT-2's occupancy; see jl/model.py) and at k = 25.
+           Control: the same split against a same-size random dictionary.
   floor    the paper's own probe-swap.json, verbatim: capability + swap (the deviation cost)
 
 Writes results/c3_reasoning/{results.json, prompts.json, summary.txt}.
@@ -29,7 +31,9 @@ from jl import coord_swap_edits, delta_edits, swap_edits
 from jl.stats import median, wilson
 
 REF_PROBE_SWAP = jl.REF_DATA / "probe-swap.json"
-K_PURSUIT = 25          # §3.3 privileging sparsity
+K_PURSUIT_PAPER = 25                      # §3.3 privileging sparsity, sized for Claude
+K_PURSUIT = jl.scaled_k(K_PURSUIT_PAPER)  # 3: scaled to GPT-2 small's occupancy (jl/model.py)
+KS = (K_PURSUIT, K_PURSUIT_PAPER)
 DEPTH_LAYERS = [4, 5, 6, 7, 8, 9, 10]  # E4 single-layer sweep
 
 
@@ -285,7 +289,8 @@ def main():
 
     # ------------------------------------------------------------------ E5 privileging
     # probe per country from PROBE_CUES (imply country, ask other attribute), minus
-    # grand mean; split by pursuit into J-space (k=25) + remainder at every layer.
+    # grand mean; split by pursuit into J-space (k atoms) + remainder at every layer, for each k
+    # in KS; and, as a control, against a same-size random dictionary at the band layers.
     probe = {}
     for c in sorted(countries_pass):
         f = COUNTRIES[c]
@@ -296,17 +301,25 @@ def main():
                 stacks[L].append(r[L][-1])
         probe[c] = {L: torch.stack(v).mean(0) for L, v in stacks.items()}
     grand = {L: torch.stack([probe[c][L] for c in probe]).mean(0) for L in lm.layers}
-    part = {}                                   # part[c][L] = dict(j, n, support)
+    rdict = {L: torch.randn(lm.V(L).shape, generator=torch.Generator().manual_seed(L)).to(lm.device) for L in band}
+    part = {k: {} for k in KS}                  # part[k][c][L] = dict(j, n, support)
+    rpart = {k: {} for k in KS}                 # the same split with the random dictionary
     for c in probe:
-        part[c] = {}
         for L in lm.layers:
-            u = probe[c][L] - grand[L]
-            probe[c][L] = u                     # store centered probe
-            support, recon = jl.pursuit(u, lm.V(L), K_PURSUIT)
-            part[c][L] = dict(j=recon, n=u - recon, support=support)
-            if L in band:
-                out["variance_fraction"].append(dict(country=c, layer=L,
-                                                     frac=float(recon.norm() ** 2 / u.norm() ** 2)))
+            probe[c][L] = probe[c][L] - grand[L]  # store centered probe
+    for c in probe:
+        for k in KS:
+            part[k][c], rpart[k][c] = {}, {}
+            for L in lm.layers:
+                u = probe[c][L]
+                support, recon = jl.pursuit(u, lm.V(L), k)
+                part[k][c][L] = dict(j=recon, n=u - recon, support=support)
+                if L in band:
+                    _, rrec = jl.pursuit(u, rdict[L], k)
+                    rpart[k][c][L] = dict(j=rrec, n=u - rrec)
+                    for name, rec in (("jlens", recon), ("random", rrec)):
+                        out["variance_fraction"].append(dict(country=c, layer=L, k=k, dictionary=name,
+                                                             frac=float(rec.norm() ** 2 / u.norm() ** 2)))
 
     def matched(d, ref):                         # rescale d to ||ref||
         return d * (ref.norm() / d.norm().clamp_min(1e-8))
@@ -322,17 +335,21 @@ def main():
                 continue
             t = lm.tid(" " + B)
             full = {L: probe[B][L] - probe[A][L] for L in band}
-            jdel = {L: matched(part[B][L]["j"] - part[A][L]["j"], full[L]) for L in band}
-            ndel = {L: matched(part[B][L]["n"] - part[A][L]["n"], full[L]) for L in band}
-            clamp_dirs = {L: torch.stack([lm.v(L, i) for i in sorted(
-                {s, t} | set(part[A][L]["support"]) | set(part[B][L]["support"]))]) for L in lm.layers}
             conds = {
                 "raw_lens": coord_swap_edits(lm, it["ids"], s, t, band, clean=it["clean"]),
                 "full": delta_edits(full),
-                "jpart": delta_edits(jdel),
-                "nonj": delta_edits(ndel),
-                "nonj_clamp": delta_edits(ndel) + jl.clamp_edits(lm, it["ids"], clamp_dirs, clean=it["clean"]),
             }
+            for k in KS:
+                P, Rp = part[k], rpart[k]
+                jdel = {L: matched(P[B][L]["j"] - P[A][L]["j"], full[L]) for L in band}
+                ndel = {L: matched(P[B][L]["n"] - P[A][L]["n"], full[L]) for L in band}
+                clamp_dirs = {L: torch.stack([lm.v(L, i) for i in sorted(
+                    {s, t} | set(P[A][L]["support"]) | set(P[B][L]["support"]))]) for L in lm.layers}
+                conds[f"jpart_k{k}"] = delta_edits(jdel)
+                conds[f"nonj_k{k}"] = delta_edits(ndel)
+                conds[f"nonj_clamp_k{k}"] = delta_edits(ndel) + jl.clamp_edits(lm, it["ids"], clamp_dirs, clean=it["clean"])
+                conds[f"rpart_k{k}"] = delta_edits({L: matched(Rp[B][L]["j"] - Rp[A][L]["j"], full[L]) for L in band})
+                conds[f"rrest_k{k}"] = delta_edits({L: matched(Rp[B][L]["n"] - Rp[A][L]["n"], full[L]) for L in band})
             rec = dict(family=it["family"], intermediate=A, target=B, swap_answer=p["answer"])
             for name, edits in conds.items():
                 lg = lm.logits(it["ids"], edits)[-1]
@@ -437,14 +454,20 @@ def summarize(out, lm) -> str:
             L.append(f"    L{l:<2d} intermediate {mi:+6.2f}   answer {ma:+6.2f}")
 
     # E5
-    L.append("\nE5 privileging — swap_answer top-1, per condition (matched magnitude; n=%d)" % len(out["privilege"]))
-    for cond in ("raw_lens", "full", "jpart", "nonj", "nonj_clamp"):
+    L.append("\nE5 privileging — swap_answer top-1, per condition (matched magnitude; n=%d; "
+             "k = pursuit atoms; rpart/rrest = the split against a random dictionary)" % len(out["privilege"]))
+    conds = ["raw_lens", "full"] + [f"{c}_k{k}" for k in KS for c in ("jpart", "nonj", "nonj_clamp", "rpart", "rrest")]
+    for cond in conds:
         k = sum(r[cond] for r in out["privilege"]); n = len(out["privilege"])
         p, lo, hi = wilson(k, n)
-        L.append(f"  {cond:11s} {p:5.1%} [{lo:3.0%},{hi:3.0%}]  ({k}/{n})")
+        L.append(f"  {cond:15s} {p:5.1%} [{lo:3.0%},{hi:3.0%}]  ({k}/{n})")
     vf = out["variance_fraction"]
-    L.append("  J-space share of probe variance (median): " +
-             ", ".join(f"L{l} {median([x['frac'] for x in vf if x['layer'] == l]):.0%}" for l in band))
+    L.append("  share of probe variance in the k-atom part (median), J-lens | random dictionary:")
+    for k in KS:
+        L.append(f"    k={k:2d}: " + ",  ".join(
+            f"L{l} {median([x['frac'] for x in vf if x['layer'] == l and x['k'] == k and x['dictionary'] == 'jlens']):.0%}"
+            f" | {median([x['frac'] for x in vf if x['layer'] == l and x['k'] == k and x['dictionary'] == 'random']):.0%}"
+            for l in band))
 
     # floor
     fl = out["floor"]
