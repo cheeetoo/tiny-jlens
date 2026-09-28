@@ -123,7 +123,7 @@ The paper's full grid has 4 kinds of argument, 4 functions for each, and 12 swap
 
 The paper's main selectivity test removes the most active J-lens directions at each position, over a band of layers, and compares this with removing random directions that take out the same amount of the residual stream. It skips any token that is among the model's 10 most likely next tokens. The paper removes 10 directions, over three bands of layers of increasing size. We removed 1 direction, the paper's 10 scaled to GPT-2 as described above. We did this over one, three, and five layers (8; 7 to 9; 6 to 10), which cover about the same share of the network as the paper's three bands. We used four tasks: our two-hop questions, one-hop recall ("The capital of France is"), copying a word from earlier in the text, and ordinary Wikipedia text.
 
-The results are close to Claude's, which we take from the paper's released figure data:
+The results are close to Claude's, which we take from the paper's Figure 22:
 
 | | layers ablated | share of depth | two-hop accuracy | ordinary text, top prediction unchanged |
 |---|---|---|---|---|
@@ -144,7 +144,7 @@ Part of the pattern comes from the rule that skips the model's likely next token
 
 The paper's second test uses one piece of information, a passage's language, in a deliberate task (naming the language) and a routine one (continuing the passage). Swapping the language's J-lens direction changes GPT-2's answer about the language more easily than it changes the language of its continuation. At one and a half times the base strength, the answer changes 90% of the time and the continuation 38%. In Claude the continuation is largely unaffected. Part of the difference may come from our setup. A base model has no separate question, so we had to apply the swap over the passage itself.
 
-Finally, the J-space is a small part of GPT-2's representation, as the definition requires. The paper measures this by taking as many J-lens vectors as are active at a position and asking how much more of the activation's variance they capture than the same number of random directions. In GPT-2's band the excess is 3–6%, against 3–9% for Claude. This part of the definition is close to automatic, since the J-space is defined as a few vectors at a time.
+Finally, the J-space is a small part of GPT-2's representation, as the definition requires. The paper measures this by taking as many J-lens vectors as are active at a position and asking how much more of the activation's variance they capture than the same number of random directions. In GPT-2's band the excess is 3–6%. The paper reports that in Claude it never exceeds 10%. This part of the definition is close to automatic, since the J-space is defined as a few vectors at a time.
 
 ## The structure
 
@@ -403,7 +403,7 @@ Spearman correlation between the lens scores and the output scores of the 10 can
 | all | .05 | .04 | .05 | .13 | .09 | .22 | .36 | **.44** | **.47** | **.57** | .63 |
 | answered | .05 | .05 | .09 | .17 | .11 | .30 | .43 | **.42** | **.47** | **.53** | .60 |
 
-Swaps, for targets starting at output rank 11 or worse. Rates are for reaching the top 5, with reaching the top 1 in parentheses. The J-space part is made of k J-lens vectors: 2 (ours, A.3) or 16 (the paper's). As a control, we also split each concept vector the same way with a random dictionary of the same size, into a "random part" and its rest. The paper's numbers for Sonnet 4.5 are 88% (lens swap), 59% (J-space part), 5% (the rest), and 0% (the rest, clamped). Its released figure data gives 55% and 9% for the J-space part and the rest.
+Swaps, for targets starting at output rank 11 or worse. Rates are for reaching the top 5, with reaching the top 1 in parentheses. The J-space part is made of k J-lens vectors: 2 (ours, A.3) or 16 (the paper's). As a control, we also split each concept vector the same way with a random dictionary of the same size, into a "random part" and its rest. The paper's numbers for Sonnet 4.5 are 88% (lens swap), 59% (J-space part), 5% (the rest), and 0% (the rest, clamped).
 
 | | answered categories (38 trials), k = 2 | k = 16 | all categories (78 trials), k = 2 | k = 16 |
 |---|---|---|---|---|
@@ -574,7 +574,7 @@ Ablating 10 directions (the paper's number):
 | copying | 0.95 / 1.00–1.00 | 0.65 / 0.53–0.95 | 0.00 / 0.07–0.80 |
 | ordinary text | 0.71 / 0.80–0.82 | 0.54 / 0.67–0.68 | 0.41 / 0.57–0.58 |
 
-Claude Sonnet 4.5, 10 directions, from the paper's released data for its Figure 22 (two-hop accuracy on the paper's 50 questions / ordinary text unchanged): layers 62–71 of 100, 0.68 / 0.87; layers 54–79, 0.26 / 0.75; layers 42–88, 0.06 / 0.65; random directions at layers 54–79, 0.98 / 0.96. In the paper's 14-task battery, the middle setting leaves classification and extractive tasks near their clean scores and lowers TriviaQA to 0.53 of its clean score.
+Claude Sonnet 4.5, 10 directions, from the paper's Figure 22 (two-hop accuracy on the paper's 50 questions / ordinary text unchanged): layers 62–71 of 100, 0.68 / 0.87; layers 54–79, 0.26 / 0.75; layers 42–88, 0.06 / 0.65; random directions at layers 54–79, 0.98 / 0.96. In the paper's 14-task battery (its Figure 24), the middle setting leaves classification and extractive tasks near their clean scores and lowers TriviaQA to 0.53 of its clean score.
 
 With and without the rule that skips tokens in the clean output top 10, ablating 1 direction (one random draw):
 
@@ -605,7 +605,7 @@ Language test (GPT-2 names the language correctly for 7 of 8 passages; 21 passag
 
 The passage's language is in the band J-lens over the passage at similar ranks in both prompts (median best rank 22 and 21), so the difference is in how the model uses it, not in whether it is there.
 
-Small part of the representation, and occupancy (150 WikiText activations per layer, mean-centred). At each position we pursue the activation with up to 30 J-lens vectors, and separately with vectors from a random dictionary of the same size. Occupancy is the number of J-lens vectors before the next one helps the fit less than the next random vector does. Its median over positions is 2, 2, and 4 at layers 7, 8, and 9, 3 over the band's positions pooled, 1 or 2 at every earlier layer, and 5 at layer 10. As in the paper, we then take K equal to each layer's median occupancy and compare the variance captured by K J-lens vectors with that captured by K random ones: 7.9% against 4.4% at layer 7 (K = 2), 7.8% against 4.4% at layer 8 (K = 2), and 14.1% against 8.1% at layer 9 (K = 4), an excess of 3–6%. The paper reports an excess of 3–9% for Claude. With the paper's K = 25 instead, the J-lens vectors capture less than random ones (29.8%, 31.3%, and 36.2%, against about 37%).
+Small part of the representation, and occupancy (150 WikiText activations per layer, mean-centred). At each position we pursue the activation with up to 30 J-lens vectors, and separately with vectors from a random dictionary of the same size. Occupancy is the number of J-lens vectors before the next one helps the fit less than the next random vector does. Its median over positions is 2, 2, and 4 at layers 7, 8, and 9, 3 over the band's positions pooled, 1 or 2 at every earlier layer, and 5 at layer 10. As in the paper, we then take K equal to each layer's median occupancy and compare the variance captured by K J-lens vectors with that captured by K random ones: 7.9% against 4.4% at layer 7 (K = 2), 7.8% against 4.4% at layer 8 (K = 2), and 14.1% against 8.1% at layer 9 (K = 4), an excess of 3–6%. The paper reports that for Claude the excess never exceeds 10%. With the paper's K = 25 instead, the J-lens vectors capture less than random ones (29.8%, 31.3%, and 36.2%, against about 37%).
 
 Line counting: GPT-2 answers "been", "a", or "the". A count reaches the band lens top 25 on at most 1 of 11 passages in any condition.
 

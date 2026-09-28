@@ -24,7 +24,7 @@ What changed:
   - At the scaled numbers the rest carries a little, like Claude's 5–9% and 28%. The "0%" was an artifact of using 16 vectors in a 768-dimensional model.
   - A random-dictionary split reverses the result: the random part does almost nothing and the random rest works (87%). What matters is which part points toward the word's J-lens direction.
 - **The variance-share comparison ("23–33% vs Claude's 6–7%") is gone.** It was mostly width: 16 random directions capture 26% of a GPT-2 concept vector, about as much as 16 J-lens vectors. At the scaled numbers the shares are 6–15% for concept vectors (random: 4%) and 6–32% for probes (random: 6%).
-- **Selectivity now counts as "works".** With 1 direction, GPT-2 matches Claude's released ablation table closely. One layer gives 69% two-hop and 82% ordinary text unchanged (Claude light: 68% / 87%). Three layers give 21% / 72% (Claude medium: 26% / 75%). Five layers give 0% / 59% (Claude heavy: 6% / 65%). Remaining differences:
+- **Selectivity now counts as "works".** With 1 direction, GPT-2 matches the ablation table in the paper's Figure 22 closely. One layer gives 69% two-hop and 82% ordinary text unchanged (Claude light: 68% / 87%). Three layers give 21% / 72% (Claude medium: 26% / 75%). Five layers give 0% / 59% (Claude heavy: 6% / 65%). Remaining differences:
   - GPT-2's random control does more damage.
   - One-hop recall breaks at three layers, though Claude's TriviaQA halves too.
   - Copying breaks over five layers.
@@ -32,7 +32,9 @@ What changed:
 - **"Less targeted than Claude" and the Qwen3-4B citation are removed.** Claude's own medium ablation changes 25% of ordinary predictions, so neither supported the claim.
 - **The "small part of the representation" check now uses the paper's method** (K = median occupancy, excess over random).
 - **Occupancy is per position**, as in the paper, at every layer.
-- **Claude's numbers come from the paper's released figure data** (transformer-circuits.pub/2026/workspace/data/ablation-strength/table.json, capacity-fve-occupancy/data.json, verbal-report-decomposition-merged/data.json, probe-swap/data.json). The released verbal-report decomposition gives 55% / 9% where the paper's text says 59% / 5%. The post quotes the text and mentions the data once (C.1).
+- **Claude's numbers are the paper's published ones.** Where the text gives a number, the post uses it: 59% / 5% for the verbal-report decomposition, "never exceeding 10%" for the excess variance. Otherwise it uses the numbers shown in the paper's figures: Figure 22 for the ablation table, and Figure 24 for TriviaQA.
+  - The data behind those figures is at transformer-circuits.pub/2026/workspace/data/ (ablation-strength/table.json, ablation-bars/bars.json, capacity-fve-occupancy/data.json).
+  - Note that the data behind Figure 8 gives 55% / 9%, not the text's 59% / 5%. We follow the text.
 - **Removed `jl.followups.randseeds`.** c5 now runs 5 random seeds itself, at every strength.
 
 ## What changed in the previous pass
@@ -60,7 +62,7 @@ What changed:
 - **Verbal report: works.** The swap works on all 38 trials. The injected-thought version fails. That is said in the same bullet, not framed as "the harder version".
 - **Internal reasoning: works.** 71% against Claude's 70%. See the caveat below.
 - **Flexible generalization: works.** You were right to doubt "partly". GPT-2 gets 35% on the swaps whose target function it can compute, and Claude gets 40% on the full grid. Both fail one kind of function: Claude fails number words (0 of 48), and GPT-2 fails the two successor functions. Doubling the strength hurts GPT-2 because the swap then makes it output the swapped-in argument itself. The post mentions this in one sentence and doesn't lean on it.
-- **Selectivity: works** (was "partly"). With the ablation scaled to GPT-2's occupancy (1 direction instead of 10), the numbers match Claude's released table closely. The caveats are in the post: the random control does more damage, one-hop recall breaks at three layers, copying breaks at five, and the language test is weaker. With the paper's 10 directions the ablation is much blunter (29% of ordinary predictions change at one layer), which is what the earlier "partly" was based on.
+- **Selectivity: works** (was "partly"). With the ablation scaled to GPT-2's occupancy (1 direction instead of 10), the numbers match Claude's in the paper's Figure 22 closely. The caveats are in the post: the random control does more damage, one-hop recall breaks at three layers, copying breaks at five, and the language test is weaker. With the paper's 10 directions the ablation is much blunter (29% of ordinary predictions change at one layer), which is what the earlier "partly" was based on.
 - **Directed modulation: partly.**
   - "Think about" beats a bare mention in 76% of pairs, but the effect is small.
   - "Ignore" doesn't lower the word. I frame that as a difference from Claude rather than a clear failure. The criterion as stated asks only for bringing a concept in, and there is the white-bear point.
