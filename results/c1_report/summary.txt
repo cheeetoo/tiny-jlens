@@ -29,17 +29,33 @@ gate (does the model answer with a candidate?)
   L10 +0.628 | +0.599
 
 1b  swap: target reaches top-5 (top-1); targets starting at output rank >= 11
-  gate-passed                n= 38  100.0% [ 91%, 100%]  (100%)  median rank 37 -> 1
-  all categories             n= 78  100.0% [ 95%, 100%]  (100%)  median rank 95 -> 1
+  gate-passed                      n= 38  100.0% [ 91%, 100%]  (100%)  median rank 37 -> 1
+  all categories                   n= 78  100.0% [ 95%, 100%]  (100%)  median rank 95 -> 1
 
-1d/1e  same, swapping along each component at the same magnitude
-  gate-passed    lens        n= 38  100.0% [ 91%, 100%]  (100%)  median rank 37 -> 1
-  gate-passed    jpart       n= 38  97.4% [ 87%, 100%]  ( 84%)  median rank 37 -> 1
-  gate-passed    nonj        n= 38   0.0% [  0%,   9%]  (  0%)  median rank 37 -> 38
-  gate-passed    nonj_clamp  n= 38   2.6% [  0%,  13%]  (  0%)  median rank 37 -> 38
-  all categories lens        n= 78  100.0% [ 95%, 100%]  (100%)  median rank 95 -> 1
-  all categories jpart       n= 78  76.9% [ 66%,  85%]  ( 68%)  median rank 95 -> 1
-  all categories nonj        n= 78   0.0% [  0%,   5%]  (  0%)  median rank 95 -> 119
-  all categories nonj_clamp  n= 78   1.3% [  0%,   7%]  (  0%)  median rank 95 -> 104
+1d/1e  same, swapping along each component at the same magnitude (k = pursuit atoms; rpart/rrest = the split against a random dictionary)
+  gate-passed    lens              n= 38  100.0% [ 91%, 100%]  (100%)  median rank 37 -> 1
+  gate-passed    jpart k=2         n= 38  97.4% [ 87%, 100%]  ( 89%)  median rank 37 -> 1
+  gate-passed    nonj k=2          n= 38  18.4% [  9%,  33%]  (  3%)  median rank 37 -> 31
+  gate-passed    nonj_clamp k=2    n= 38   0.0% [  0%,   9%]  (  0%)  median rank 37 -> 44
+  gate-passed    rpart k=2         n= 38   5.3% [  1%,  17%]  (  0%)  median rank 37 -> 31
+  gate-passed    rrest k=2         n= 38  86.8% [ 73%,  94%]  ( 61%)  median rank 37 -> 1
+  gate-passed    jpart k=16        n= 38  97.4% [ 87%, 100%]  ( 84%)  median rank 37 -> 1
+  gate-passed    nonj k=16         n= 38   0.0% [  0%,   9%]  (  0%)  median rank 37 -> 38
+  gate-passed    nonj_clamp k=16   n= 38   2.6% [  0%,  13%]  (  0%)  median rank 37 -> 38
+  gate-passed    rpart k=16        n= 38  26.3% [ 15%,  42%]  (  5%)  median rank 37 -> 10
+  gate-passed    rrest k=16        n= 38  78.9% [ 64%,  89%]  ( 55%)  median rank 37 -> 1
+  all categories lens              n= 78  100.0% [ 95%, 100%]  (100%)  median rank 95 -> 1
+  all categories jpart k=2         n= 78  88.5% [ 80%,  94%]  ( 73%)  median rank 95 -> 1
+  all categories nonj k=2          n= 78  10.3% [  5%,  19%]  (  3%)  median rank 95 -> 89
+  all categories nonj_clamp k=2    n= 78   0.0% [  0%,   5%]  (  0%)  median rank 95 -> 95
+  all categories rpart k=2         n= 78   2.6% [  1%,   9%]  (  0%)  median rank 95 -> 72
+  all categories rrest k=2         n= 78  64.1% [ 53%,  74%]  ( 37%)  median rank 95 -> 3
+  all categories jpart k=16        n= 78  76.9% [ 66%,  85%]  ( 68%)  median rank 95 -> 1
+  all categories nonj k=16         n= 78   0.0% [  0%,   5%]  (  0%)  median rank 95 -> 119
+  all categories nonj_clamp k=16   n= 78   1.3% [  0%,   7%]  (  0%)  median rank 95 -> 104
+  all categories rpart k=16        n= 78  14.1% [  8%,  24%]  (  3%)  median rank 95 -> 24
+  all categories rrest k=16        n= 78  50.0% [ 39%,  61%]  ( 32%)  median rank 95 -> 6
 
-J-space component's share of concept-vector variance (median): L7 22.6%, L8 25.6%, L9 33.4%
+share of concept-vector variance in the k-atom part (median over concepts), J-lens | random dictionary:
+  k= 2: L7 5.8% | 4.4%,  L8 6.7% | 4.3%,  L9 14.7% | 4.3%
+  k=16: L7 22.6% | 26.3%,  L8 25.6% | 26.4%,  L9 33.4% | 26.4%

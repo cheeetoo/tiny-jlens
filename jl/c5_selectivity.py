@@ -1,11 +1,15 @@
 """Criterion 5 (selectivity) in gpt2-small -- the paper's §3.5 (and §4.2 for the definition's
 "small subset" clause), in one run.  See PROTOCOL.md.
 
-  S1  small subset      variance captured by the top-K J-lens directions vs a same-size random
-                        dictionary, on wikitext activations; occupancy K (paper §4.2, Fig 30)
-  S2a ablation battery  project out the top-10 J-space directions across a widening band
-                        (light/medium/heavy) vs a matched-norm random subspace; a battery of
-                        tasks ordered by dependence on inferred content (paper §3.5.2, Fig 22/24)
+  S1  small subset      per-position occupancy at every lens layer (paper §4.2, Fig 30a), and the
+                        variance captured by the top-K J-lens directions in excess of a same-size
+                        random dictionary at K = the layer's median occupancy (Fig 30b); also at
+                        the paper's K = 25, and how much K random directions capture as width grows
+  S2a ablation battery  project out the top-k J-space directions across a widening band
+                        (light/medium/heavy) vs a matched-norm random subspace (5 seeds); a battery
+                        of tasks ordered by dependence on inferred content (paper §3.5.2, Fig
+                        22/24).  k = 1 (the paper's 10 scaled to GPT-2's occupancy; jl/model.py)
+                        and the paper's k = 10.
   S2b language          one passage, one latent (its language); the SAME language-label swap
                         redirects the deliberate report but not the automatic continuation
                         (paper §3.5.1, Fig 20)
@@ -28,9 +32,13 @@ from jl.c3_reasoning import COUNTRIES, FAMILIES  # the two-hop task is criterion
 from jl.stats import median
 
 STRENGTHS = {"light": [8], "medium": [7, 8, 9], "heavy": [6, 7, 8, 9, 10]}
-K_ABLATE = 10           # §3.5.2 top-k
+K_ABLATE_PAPER = 10                     # §3.5.2 top-k, sized for Claude
+K_ABLATE = jl.scaled_k(K_ABLATE_PAPER)  # 1: scaled to GPT-2 small's occupancy (jl/model.py)
+KS_ABLATE = (K_ABLATE, K_ABLATE_PAPER)
+SEEDS = (0, 1, 2, 3, 4)                 # draws of the matched-norm random control
 S1_KMAX = 30            # §4.2 occupancy sweep
-S1_N = 40              # activations sampled for the capacity analysis
+S1_N = 150              # activations sampled per layer for the capacity analysis
+S1_WIDTHS = (768, 1536, 3072, 6144)     # synthetic: K random directions vs a random vector
 
 
 # =============================================================================== prompt material
@@ -236,36 +244,44 @@ def battery(lm):
     out = {"counts": {"two_hop": len(two), "one_hop": len(one), "induction": len(ind),
                       "paras": len(paras)}, "acc": [], "pretrain": []}
 
+    # row[f"{strength}_J_k{k}"] = score under the J ablation; row[f"{strength}_R_k{k}"] = the
+    # matched-norm random control's score, one per seed
     for name, items, kind in tasks:
         clean = sum(int(lm.logits(it["ids"])[-1].argmax()) == it["ans_id"] for it in items) / len(items)
         row = dict(task=name, kind=kind, n=len(items), clean=clean)
         for sname, layers in STRENGTHS.items():
-            jh = rh = 0
-            for it in items:
-                cl = lm.residuals(it["ids"], layers)
-                sel = ablation_select(lm, it["ids"], layers, k=K_ABLATE, clean=cl)
-                jh += int(lm.logits(it["ids"], ablation_edits(sel, lm))[-1].argmax()) == it["ans_id"]
-                rh += int(lm.logits(it["ids"], ablation_edits(sel, lm, random=True))[-1].argmax()) == it["ans_id"]
-            row[f"{sname}_J"] = jh / len(items)
-            row[f"{sname}_R"] = rh / len(items)
+            for k in KS_ABLATE:
+                jh, rh = 0, [0] * len(SEEDS)
+                for it in items:
+                    cl = lm.residuals(it["ids"], layers)
+                    sel = ablation_select(lm, it["ids"], layers, k=k, clean=cl)
+                    jh += int(lm.logits(it["ids"], ablation_edits(sel, lm))[-1].argmax()) == it["ans_id"]
+                    for i, sd in enumerate(SEEDS):
+                        rh[i] += int(lm.logits(it["ids"], ablation_edits(sel, lm, random=True, seed=sd))[-1].argmax()) == it["ans_id"]
+                row[f"{sname}_J_k{k}"] = jh / len(items)
+                row[f"{sname}_R_k{k}"] = [x / len(items) for x in rh]
         out["acc"].append(row)
+        print(row, flush=True)
 
     # next-token top-1 match on wikitext (automatic; the paper's Fig 22 collateral-damage axis)
     prow = dict(task="pretrain_match", kind="automatic", n=len(paras), clean=1.0)
     for sname, layers in STRENGTHS.items():
-        jm = rm = tot = 0
-        for para in paras:
-            ids = lm.encode(para)[:, : 96]
-            base = lm.logits(ids).argmax(-1)                       # clean top-1 per position
-            pos = list(range(5, ids.shape[1]))                      # skip warm-up
-            cl = lm.residuals(ids, layers)
-            sel = ablation_select(lm, ids, layers, k=K_ABLATE, clean=cl)
-            jm += int((lm.logits(ids, ablation_edits(sel, lm)).argmax(-1)[pos] == base[pos]).sum())
-            rm += int((lm.logits(ids, ablation_edits(sel, lm, random=True)).argmax(-1)[pos] == base[pos]).sum())
-            tot += len(pos)
-        prow[f"{sname}_J"] = jm / tot
-        prow[f"{sname}_R"] = rm / tot
+        for k in KS_ABLATE:
+            jm, rm, tot = 0, [0] * len(SEEDS), 0
+            for para in paras:
+                ids = lm.encode(para)[:, : 96]
+                base = lm.logits(ids).argmax(-1)                       # clean top-1 per position
+                pos = list(range(5, ids.shape[1]))                      # skip warm-up
+                cl = lm.residuals(ids, layers)
+                sel = ablation_select(lm, ids, layers, k=k, clean=cl)
+                jm += int((lm.logits(ids, ablation_edits(sel, lm)).argmax(-1)[pos] == base[pos]).sum())
+                for i, sd in enumerate(SEEDS):
+                    rm[i] += int((lm.logits(ids, ablation_edits(sel, lm, random=True, seed=sd)).argmax(-1)[pos] == base[pos]).sum())
+                tot += len(pos)
+            prow[f"{sname}_J_k{k}"] = jm / tot
+            prow[f"{sname}_R_k{k}"] = [x / tot for x in rm]
     out["pretrain"] = prow
+    print(prow, flush=True)
     return out, {"two_hop": [it["text"] for it in two[:3]], "one_hop": [it["text"] for it in one[:3]],
                  "induction": [it["text"] for it in ind[:3]], "pretrain": paras[0][:200]}
 
@@ -337,44 +353,62 @@ def language_dissociation(lm):
 
 
 # =============================================================================== S1 capacity
+def occupancy(fj, fr):
+    """Paper §4.2: the number of J-lens atoms before the next one's marginal gain in variance
+    explained falls below that of the next atom from a same-size random dictionary."""
+    for i in range(len(fj)):
+        gj = fj[i] - (fj[i - 1] if i else 0.0)
+        gr = fr[i] - (fr[i - 1] if i else 0.0)
+        if gj < gr:
+            return i
+    return len(fj)
+
+
 @torch.no_grad()
 def capacity(lm):
-    """Fraction of activation variance captured by the top-K J-lens directions vs a same-size
-    random dictionary, on wikitext activations (paper §4.2, Fig 30)."""
-    band = jl.BAND
+    """Occupancy and the J-space's share of activation variance, done as in the paper (§4.2,
+    Fig 30): per position, pursue the (mean-centred) activation with up to S1_KMAX J-lens vectors
+    and, separately, with vectors from a same-size random dictionary.  Occupancy is computed per
+    position; the variance share is reported at K = the layer's median occupancy, as the excess of
+    the J-lens decomposition over the random one (the paper's Fig 30b), and also at the paper's
+    K = 25.  Every lens layer.  Finally, a synthetic check of how much K random directions (out of
+    50,257) capture of a random vector as the residual-stream width grows."""
+    layers = list(lm.layers)
     paras = pretraining_paragraphs(n=8)
-    # collect activations at band layers, then mean-subtract per layer (variance about the mean)
-    acts = {L: [] for L in band}
+    acts = {L: [] for L in layers}
     for para in paras:
         ids = lm.encode(para)[:, : 64]
-        res = lm.residuals(ids, band)
-        for L in band:
+        res = lm.residuals(ids, layers)
+        for L in layers:
             for p in range(5, ids.shape[1]):
                 acts[L].append(res[L][p])
-    out = {"kmax": S1_KMAX, "per_layer": []}
-    gen = torch.Generator(device=lm.device).manual_seed(0)
-    for L in band:
+    out = {"kmax": S1_KMAX, "n": S1_N, "per_layer": [], "width": []}
+    gen = torch.Generator().manual_seed(0)
+    for L in layers:
         H = torch.stack(acts[L])
         H = H - H.mean(0, keepdim=True)                        # variance about the mean
-        idx = torch.randperm(H.shape[0], generator=gen, device=lm.device)[:S1_N]
+        idx = torch.randperm(H.shape[0], generator=gen)[:S1_N].tolist()
         Vj = lm.V(L)                                           # centered J-lens dictionary
-        Rd = torch.randn(Vj.shape, generator=gen, device=lm.device)  # same-size random dict
-        fj = torch.zeros(S1_KMAX)
-        fr = torch.zeros(S1_KMAX)
-        for i in idx.tolist():
-            fj += torch.tensor(pursuit_curve(H[i], Vj, S1_KMAX))
-            fr += torch.tensor(pursuit_curve(H[i], Rd, S1_KMAX))
-        fj /= len(idx)
-        fr /= len(idx)
-        # occupancy: first K where the J marginal gain drops below the random marginal gain
-        occ = S1_KMAX
-        for K in range(1, S1_KMAX):
-            if (fj[K] - fj[K - 1]) < (fr[K] - fr[K - 1]):
-                occ = K
-                break
-        out["per_layer"].append(dict(layer=L, frac_J=fj.tolist(), frac_R=fr.tolist(),
-                                     occupancy=occ, var_at_25_J=float(fj[24]),
-                                     var_at_25_R=float(fr[24])))
+        Rd = torch.randn(Vj.shape, generator=gen).to(lm.device)  # same-size random dictionary
+        FJ = torch.tensor([pursuit_curve(H[i], Vj, S1_KMAX) for i in idx])   # [n, K]
+        FR = torch.tensor([pursuit_curve(H[i], Rd, S1_KMAX) for i in idx])
+        occ = torch.tensor([occupancy(fj.tolist(), fr.tolist()) for fj, fr in zip(FJ, FR)], dtype=torch.float)
+        med = int(occ.median())
+        fj, fr = FJ.mean(0), FR.mean(0)
+        at = lambda f, K: float(f[K - 1]) if K >= 1 else 0.0
+        out["per_layer"].append(dict(
+            layer=L, occupancy_pct={q: float(occ.quantile(q / 100)) for q in (10, 25, 50, 75, 90)},
+            occupancy_median=med, occupancy_values=occ.tolist(),
+            frac_J=fj.tolist(), frac_R=fr.tolist(),
+            var_at_occ_J=at(fj, med), var_at_occ_R=at(fr, med),
+            var_at_25_J=at(fj, 25), var_at_25_R=at(fr, 25)))
+        print(f"  S1 L{L}: median occupancy {med}", flush=True)
+    for d in S1_WIDTHS:
+        g = torch.Generator().manual_seed(d)
+        D = torch.randn(lm.vocab, d, generator=g)
+        xs = torch.randn(8, d, generator=g)
+        out["width"].append(dict(d=d, frac=torch.tensor([pursuit_curve(x, D, S1_KMAX) for x in xs]).mean(0).tolist()))
+        del D
     return out
 
 
@@ -427,17 +461,14 @@ def summarize(out) -> str:
     c = b["counts"]
     L.append(f"\nS2a ablation battery  (n: two-hop {c['two_hop']}, one-hop {c['one_hop']}, "
              f"induction {c['induction']}, wikitext paras {c['paras']})")
-    L.append("  task score: no ablation | J-space ablation (matched-norm random control), per strength")
-    L.append(f"  {'task':16s}{'kind':10s}{'clean':6s}   " +
-             "   ".join(f"{s+'_J':>6s} {s+'_R':>6s}" for s in STRENGTHS))
-    for row in b["acc"] + [b["pretrain"]]:
-        cells = "   ".join(f"{row[s+'_J']:6.2f} {row[s+'_R']:6.2f}" for s in STRENGTHS)
-        L.append(f"  {row['task']:16s}{row['kind']:10s}{row['clean']:5.2f}    {cells}")
-    L.append("  selective damage = random_score - J_score (how much the J-SUBSPACE removes "
-             "beyond matched norm):")
-    for row in b["acc"] + [b["pretrain"]]:
-        sd = "  ".join(f"{s} {row[s+'_R']-row[s+'_J']:+.2f}" for s in STRENGTHS)
-        L.append(f"    {row['task']:16s} {sd}")
+    for k in KS_ABLATE:
+        L.append(f"  k = {k} ({'scaled to GPT-2 occupancy' if k == K_ABLATE else 'the paper'}): task score, "
+                 f"no ablation | J-space ablation (matched-norm random control, min-max over {len(SEEDS)} seeds), per strength")
+        L.append(f"  {'task':16s}{'kind':10s}{'clean':6s}   " + "   ".join(f"{s:>17s}" for s in STRENGTHS))
+        for row in b["acc"] + [b["pretrain"]]:
+            cells = "   ".join(f"{row[f'{s}_J_k{k}']:5.2f} ({min(row[f'{s}_R_k{k}']):.2f}-{max(row[f'{s}_R_k{k}']):.2f})"
+                               for s in STRENGTHS)
+            L.append(f"  {row['task']:16s}{row['kind']:10s}{row['clean']:5.2f}    {cells}")
 
     lg = out["language"]
     npass = sum(g["gate"] for g in lg["report_gate"])
@@ -462,11 +493,21 @@ def summarize(out) -> str:
                  "language: the same latent is causal for the deliberate task, less so for the automatic one.")
 
     cap = out["capacity"]
-    L.append(f"\nS1 small subset  (wikitext activations, {S1_N} per layer; top-{cap['kmax']} pursuit)")
-    L.append("  fraction of activation variance captured at K=25 (J-lens | random dict | excess); occupancy K")
+    L.append(f"\nS1 small subset  (wikitext activations, {cap['n']} positions per layer; pursuit up to K={cap['kmax']})")
+    L.append("  per-position occupancy (percentiles 10/25/50/75/90) | variance captured at K = median occupancy,"
+             " J-lens | random | excess | the same at the paper's K = 25")
     for pl in cap["per_layer"]:
-        L.append(f"    L{pl['layer']}  {pl['var_at_25_J']:.1%} | {pl['var_at_25_R']:.1%} | "
-                 f"{pl['var_at_25_J']-pl['var_at_25_R']:+.1%}   occupancy K={pl['occupancy']}")
+        pc = pl["occupancy_pct"]
+        pcs = "/".join(f"{pc[q]:g}" for q in (10, 25, 50, 75, 90))
+        L.append(f"    L{pl['layer']:<2d} {pcs:>16s} | K={pl['occupancy_median']}: {pl['var_at_occ_J']:.1%} | {pl['var_at_occ_R']:.1%} | "
+                 f"{pl['var_at_occ_J']-pl['var_at_occ_R']:+.1%}   | K=25: {pl['var_at_25_J']:.1%} | {pl['var_at_25_R']:.1%} | "
+                 f"{pl['var_at_25_J']-pl['var_at_25_R']:+.1%}" + ("   <- band" if pl["layer"] in out["band"] else ""))
+    band_occ = sorted(v for pl in cap["per_layer"] if pl["layer"] in out["band"] for v in pl["occupancy_values"])
+    L.append(f"  band occupancy, all positions pooled: median {band_occ[len(band_occ)//2]:g}  "
+             f"(jl.model.OCCUPANCY_GPT2 = {jl.model.OCCUPANCY_GPT2})")
+    L.append("  share of a random vector captured by K random directions (of 50,257), by width d:")
+    for w in cap["width"]:
+        L.append(f"    d={w['d']:5d}: K=1 {w['frac'][0]:.1%}  K=3 {w['frac'][2]:.1%}  K=16 {w['frac'][15]:.1%}  K=25 {w['frac'][24]:.1%}")
 
     fl = out["floor"]
     L.append("\nfloor  line-length counting (§3.5.1 Fig 21) -- base-model capability floor")
