@@ -1,7 +1,8 @@
 """The tests GPT-2 small fails, run on a small instruction-tuned model: Qwen3-1.7B with the
 Neuronpedia J-lens (qwen3-1.7b/jlens/Salesforce-wikitext).  Chat format, thinking disabled.
 
-  stats       layer statistics (lens-vs-output top-1 agreement, top-1 persistence), to pick a band
+  stats       layer statistics (lens-vs-output top-1 agreement, top-1 persistence, and persistence
+              measured as in the paper's Fig 28, as in jl.band.fig28), to pick a band
   report      verbal report swap: "Think of a {category}. Answer in one word." (paper §3.1)
   modulation  directed modulation: instruction about X in the user turn, the assistant copies an
               unrelated sentence; X's J-lens rank over the copy, by condition (paper §3.2, App Fig 65)
@@ -113,14 +114,20 @@ def stats():
     ds = load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split="validation")
     texts = [t for t in ds["text"] if len(t) > 600][:16]
     layers = q.layers
+    DS = [1, 2, 4, 8, 16, 32]
     st = {L: dict(top1=0, n=0, auto=0, null=0, m=0) for L in layers}
+    # paper Fig 28 persistence (see jl.band.fig28): sums of [real, null] log-probs and pair counts per
+    # offset, for all top-1 tokens and for those that occur nowhere in the sequence's input
+    lg_st = {L: {w: {d: [0.0, 0.0, 0, 0] for d in DS} for w in ("all", "not_input")} for L in layers}
     g = torch.Generator().manual_seed(0)
+    g2 = torch.Generator().manual_seed(1)   # separate stream, so the older statistics are unchanged
     for t in texts:
         ids = q.ids(t)[:, :128]
         res = q.residuals(ids, layers + [q.n_layers - 1])
         out1 = q.m.unembed(res[q.n_layers - 1]).argmax(-1)
         for L in layers:
-            t1 = q.lens_logits(res[L], L).argmax(-1)
+            lg = q.lens_logits(res[L], L)
+            t1 = lg.argmax(-1)
             st[L]["top1"] += int((t1[16:-1] == out1[16:-1]).sum())
             st[L]["n"] += len(t1[16:-1])
             a = t1[16:]
@@ -128,9 +135,28 @@ def stats():
             perm = a[torch.randperm(len(a), generator=g)]
             st[L]["null"] += int((perm[:-1] == perm[1:]).sum())
             st[L]["m"] += len(a) - 1
-    out = [dict(layer=L, top1=s["top1"] / s["n"], persistence=(s["auto"] - s["null"]) / s["m"]) for L, s in st.items()]
+            lp = torch.log_softmax(lg[16:], -1)
+            for d in DS:
+                tok_real = a[:-d]
+                tok_null = a[torch.randint(len(a), (len(a) - d,), generator=g2).to(a.device)]
+                real = lp[d:].gather(1, tok_real[:, None])[:, 0]
+                null = lp[d:].gather(1, tok_null[:, None])[:, 0]
+                keep_r, keep_n = ~torch.isin(tok_real, ids[0]), ~torch.isin(tok_null, ids[0])
+                for w, (kr, kn) in {"all": (slice(None), slice(None)), "not_input": (keep_r, keep_n)}.items():
+                    s = lg_st[L][w][d]
+                    s[0] += float(real[kr].sum())
+                    s[1] += float(null[kn].sum())
+                    s[2] += int(real[kr].numel())
+                    s[3] += int(null[kn].numel())
+    gain = lambda s: s[0] / s[2] - s[1] / s[3]
+    out = [dict(layer=L, top1=s["top1"] / s["n"], persistence=(s["auto"] - s["null"]) / s["m"],
+                logp_gain={d: gain(lg_st[L]["all"][d]) for d in DS},
+                logp_gain_not_input={d: gain(lg_st[L]["not_input"][d]) for d in DS})
+           for L, s in st.items()]
     for r in out:
-        print(f"  L{r['layer']:2d}  lens top-1 = output top-1: {r['top1']:.3f}   persistence above shuffled: {r['persistence']:+.3f}")
+        print(f"  L{r['layer']:2d}  lens top-1 = output top-1: {r['top1']:.3f}   persistence above shuffled: {r['persistence']:+.3f}"
+              f"   log-p gain at Δ={DS}: " + " ".join(f"{v:5.2f}" for v in r["logp_gain"].values())
+              + "   (not in input: " + " ".join(f"{v:5.2f}" for v in r["logp_gain_not_input"].values()) + ")")
     _save("stats", out)
 
 

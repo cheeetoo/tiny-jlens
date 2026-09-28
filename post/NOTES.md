@@ -10,7 +10,7 @@
     --force-device-scale-factor=2 --window-size=1200,965 --screenshot=fig1.png "file://$PWD/fig1.html"
   ```
 
-- Figures 2 to 4 come from `post/figures/centering.py`, `introspect.py`, and `structure.py` (run them from the repo root with `.venv/bin/python`). I renamed the outputs so the numbers match the order in the post: `fig3_introspect.png` and `fig4_structure.png`. The old `fig3_structure.png` and `fig4_introspect.png` are deleted.
+- Figures 2 to 5 come from `post/figures/centering.py`, `introspect.py`, `structure.py`, and `band_stats.py` (run them from the repo root with `.venv/bin/python`). I renamed the outputs so the numbers match the order in the post: `fig3_introspect.png` and `fig4_structure.png`. The old `fig3_structure.png` and `fig4_introspect.png` are deleted.
 - `paper.md` (local only) is the paper. `commentary/` (local only, except `README.md`) has the commentaries. `commentary/README.md` is a sourced summary of what's online.
 
 ## What changed in this pass
@@ -26,13 +26,12 @@
   - Centering is one paragraph.
   - The band is one short paragraph.
 - Qwen is folded into verbal report and directed modulation (details in Appendix E), not given its own section.
-- The structure section explains kurtosis, occupancy (2 to 5 J-lens vectors in GPT-2, against about 25 in Claude), and how we chose the heads.
+- The structure section explains kurtosis and occupancy (2 to 5 J-lens vectors in GPT-2, against about 25 in Claude).
 - Limitations are plain sentences.
 - Leech's "near-analytic" point is now cited in "Why the tests are cheap".
 - The appendix has no file or repo references. The experiments table and the "Reproducing" section are gone.
 - Length: the body is about 6,100 words (it was about 8,000) and the appendix about 6,200. If it needs to be shorter:
   - The per-test detail sections could each lose a paragraph.
-  - The heads subsection could go to the appendix.
 
 ## Verdicts
 
@@ -44,7 +43,7 @@
   - "Think about" beats a bare mention in 76% of pairs, but the effect is small.
   - "Ignore" doesn't lower the word. I frame that as a difference from Claude rather than a clear failure. The criterion as stated asks only for bringing a concept in, and there is the white-bear point.
   - Qwen3-1.7B passes in both directions.
-- **Structure: "almost none".** You said "none of the structure is there at all". I kept "almost" because GPT-2 does have a limited capacity, the category-block effect in lists, and heads that copy J-lens directions. The post gives the simple explanations for each.
+- **Structure: "almost none".** You said "none of the structure is there at all". I kept "almost" because GPT-2 does have a limited capacity and the category-block effect in lists. The post gives the simple explanations for each.
 
 ## Checks in this pass
 

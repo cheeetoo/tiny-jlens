@@ -23,7 +23,7 @@ jl/                     the library
   c4_generalization.py  criterion 4: flexible generalization
   c5_selectivity.py     criterion 5: selectivity
   band.py               the structural statistics behind the choice of band
-  followups.py          follow-up experiments: protection rule, ignition, lists, heads, neurons,
+  followups.py          follow-up experiments: protection rule, ignition, lists, neurons,
                         lens variants, band sensitivity, linear check, injected thought, seeds
   qwen_control.py       the tests GPT-2 fails, on Qwen3-1.7B (instruct) with its Neuronpedia lens
   introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)

@@ -8,7 +8,7 @@
 
 ![Figure 1](fig1/fig1.png)
 
-*Figure 1: The paper's five functional tests and its structural signatures, run on GPT-2 small. The examples are real outputs from our runs. The Claude panels in the structure row are stylized from the paper.*
+*Figure 1: The paper's five functional tests and two of its structural signatures, run on GPT-2 small. The examples are real outputs from our runs. Structure row: Claude Sonnet 4.5 is the paper's released figure data. Left, similarity between every pair of layers' J-lens vectors (CKA; for GPT-2, with the top 5 principal components removed, since one component dominates every layer). Right, where the activation for a 50/50 mix of two countries' embeddings sits between the two pure countries, from pure B (blue) to pure A (red), across layers.*
 
 ## Background
 
@@ -35,7 +35,7 @@ People took the results seriously. The Eleos AI commentary called them "the most
 - **Flexible generalization works.** A single swap of France for China makes GPT-2 give China's capital, language, and currency. Across the paper's grid of swaps, it works about as often as it does in Claude, on the functions GPT-2 can compute (35%, against Claude's 40%). Both models fail on one kind of function.
 - **Selectivity partly works.** Removing the most active J-lens directions breaks two-hop questions and leaves copying intact, the same pattern the paper reports. It also changes GPT-2's next-word prediction on 29% of ordinary text, against about 19% for removing random directions. Removing them across three layers breaks simple fact recall ("The capital of France is") too.
 - **Directed modulation partly works.** Told to think about "lemon" while copying an unrelated sentence, GPT-2 has "lemon" a bit higher in its J-space than when "lemon" is only mentioned. Unlike Claude, it doesn't push "lemon" down when told to ignore it. Qwen3-1.7B does both, which suggests this part of the test comes with following instructions. Asking GPT-2 about a property of a passage, like its tense, doesn't bring the property's name into its J-space.
-- **Almost none of the structure is there.** In Claude, the paper finds a distinct band of middle layers where the J-space acts like a workspace. In GPT-2, the statistics it uses to find that band change smoothly with depth, so there is no band. In Claude, an input made halfway between "France" and "Germany" snaps to one of the two at the start of the band. In GPT-2 it stays halfway at every layer. Claude's MLP layers amplify J-lens directions about 10 times as much as random directions, and GPT-2's amplify them 1.2 to 1.5 times as much. GPT-2 does have a limited J-space capacity and attention heads that copy J-lens directions, but both have simple explanations that don't need a workspace.
+- **Almost none of the structure is there.** In Claude, the paper finds a distinct band of middle layers where the J-space acts like a workspace. In GPT-2, most of the statistics it uses to find that band change smoothly with depth. The exception is how long the J-lens's top token lasts at later positions. This peaks in GPT-2's middle layers too, but it is gone 16 tokens later, while in Claude it is still strong 32 tokens later. In Claude, an input made halfway between "France" and "Germany" snaps to one of the two at the start of the band. In GPT-2 it stays halfway at every layer. Claude's MLP layers amplify J-lens directions about 10 times as much as random directions, and GPT-2's amplify them 1.2 to 1.5 times as much. GPT-2 does have a limited J-space capacity, but it has a simple explanation that doesn't need a workspace.
 
 ## What we did
 
@@ -60,7 +60,7 @@ GPT-2's J-lens vectors all point in nearly the same direction. The average cosin
 
 ### The band of workspace layers
 
-The paper chooses its band of workspace layers from several statistics computed at each layer. In GPT-2 these statistics change smoothly with depth and don't mark out a band (see the structure section). We used layers 7 to 9, out of 0 to 11. Around layer 6 the lens starts to show content that persists across nearby tokens, and from layer 10 it mostly shows the next token. This is a judgment call, but the main results come out about the same for any band that starts at layer 6 or later.
+The paper chooses its band of workspace layers from several statistics computed at each layer. In GPT-2 most of these statistics change smoothly with depth and don't mark out a band (see the structure section). We used layers 7 to 9, out of 0 to 11. From layer 6 the lens's content persists more and more across nearby tokens, peaking at layer 9, and from layer 10 it mostly shows the next token. This is a judgment call, but the main results come out about the same for any band that starts at layer 6 or later.
 
 ## The five tests in more detail
 
@@ -135,13 +135,15 @@ GPT-2 small has almost none of the structure the paper reports in Claude.
 
 ![Figure 4](figures/fig4_structure.png)
 
-*Figure 4: Structure in GPT-2 small. The shaded region is our band, layers 7 to 9. (a) How often the J-lens's top token is the model's next-token prediction. (b) How often the lens's top token stays the same at nearby positions, above a shuffled baseline. (c) Similarity between the J-lens vectors of different layers. The paper finds three blocks here in Claude. GPT-2 has none. (d) For an input embedding mixed between two countries, how much of the mixing range it takes to move from 10% to 90% of the way between them. A sharp switch would give a small number. (e) How much the next MLP amplifies a direction, relative to random directions. (f) How many words of an 80-word list are in the J-lens top 25 as the model reads it.*
+*Figure 4: Structure in GPT-2 small. The shaded region is our band, layers 7 to 9. (a) How often the J-lens's top token is the model's next-token prediction. (b) How long the lens's top token lasts, measured as in the paper: the log-probability the lens gives it Δ positions later, minus the same for the top token of a random position. (c) Similarity between the J-lens vectors of different layers. The paper finds three blocks here in Claude. GPT-2 has none. (d) For an input embedding mixed between two countries, how much of the mixing range it takes to move from 10% to 90% of the way between them. A sharp switch would give a small number. (e) How much the next MLP amplifies a direction, relative to random directions. (f) How many words of an 80-word list are in the J-lens top 25 as the model reads it.*
 
-### No band of workspace layers
+### No distinct band of workspace layers
 
-The paper finds its band with a few statistics computed at each layer. One is the excess kurtosis of the lens readout. Kurtosis measures how heavy the tails of a distribution are. Here it is high when a few tokens score far above the rest of the vocabulary, which the paper reads as the J-space holding a few definite concepts. In Claude it rises at the start of the band and falls at the end. Two other statistics track whether the lens's top token stays the same across nearby positions, and how many directions the J-lens vectors spread across. The paper also compares the J-lens vectors of every pair of layers, and finds three clear blocks of similar layers, which it calls sensory, workspace, and motor.
+The paper finds its band with a few statistics computed at each layer. One is the excess kurtosis of the lens readout. Kurtosis measures how heavy the tails of a distribution are. Here it is high when a few tokens score far above the rest of the vocabulary, which the paper reads as the J-space holding a few definite concepts. In Claude it rises at the start of the band and falls at the end. Two other statistics track how long the lens's top token lasts at later positions, and how many directions the J-lens vectors spread across. In Claude both jump at the start of the band. The paper also compares the J-lens vectors of every pair of layers, and finds three clear blocks of similar layers, which it calls sensory, workspace, and motor.
 
-In GPT-2 none of these mark out a band. Kurtosis is flat across layers. The top token's persistence rises gradually from layer 6 to layer 9. The J-lens vectors spread out steadily with depth. And the similarity between layers falls off smoothly with the distance between them, with no blocks.
+In GPT-2 only persistence comes close to marking out a band. Kurtosis is flat across layers. The J-lens vectors spread out steadily with depth, while in Claude they sit in a small subspace before the band and fan out at its start. And the similarity between layers falls off smoothly with the distance between them, with no blocks.
+
+Persistence does peak in the middle. The lens's top token is most likely to still be there a token later at layers 8 and 9, and much less likely at the last layer, as in Claude. But in GPT-2 it doesn't last. The effect roughly halves each time the distance doubles, and it is gone 16 tokens later. In Claude, 32 tokens later it keeps between half and 70% of its strength across the band. This isn't the lens repeating words from the text: counting only top tokens that never appear in the input gives the same result. So GPT-2's middle layers carry content over the next few tokens, but not the lasting content Claude's band holds. Qwen3-1.7B's persistence is short-lived in the same way (Appendix E). Figure 5 in the appendix puts all four statistics next to Claude's.
 
 ### No ignition
 
@@ -156,14 +158,6 @@ The paper measures how much the next MLP layer amplifies a direction, compared w
 The paper measures how many J-lens vectors are active at once. At each position, it rebuilds the activation from J-lens vectors, adding one at a time. It counts how many it can add before adding another J-lens vector helps the fit less than adding a random direction would. It calls this number occupancy. In Claude it is about 25. In GPT-2 it is 2 to 5, so only a handful of J-lens vectors are clearly active at any position. When GPT-2 reads a long list of unrelated words, its J-space holds about one of them at a time, where Claude holds about six. When a list switches from one category of words to another, the old category drops out of GPT-2's J-space, as the paper reports for Claude.
 
 None of this needs a workspace. As David Chalmers [points out](https://philpapers.org/rec/CHAITJ-2), the J-space is defined as combinations of a few vectors, so its capacity is limited by construction. And in a list, the model expects the next words to come from the current category. The J-lens reads what the model expects to say, so the old category drops out when the list moves on.
-
-### Attention heads that copy J-lens directions, but everywhere
-
-The paper looks for "broadcast heads": attention heads that pass J-lens directions from one position to another. For each head and each set of directions, it measures how much the head amplifies the directions, and how faithfully it maps each direction onto itself rather than onto other directions in the set. Heads that score high on both for J-lens vectors are its broadcast heads, and it checks that no similar group of heads exists for other sets of directions. We did the same, taking the top three heads in the layers that read our band. GPT-2 has 36 heads there, so the paper's top 1% would be less than one head.
-
-GPT-2 has heads like this. Many heads map J-lens directions faithfully onto themselves, and almost none do this for the same directions after a random rotation. But these heads aren't concentrated near the band. They are most common in block 3, well before it. They include the three "name mover" heads from the indirect-object circuit in GPT-2 ([Wang et al., 2022](https://arxiv.org/abs/2211.00593)), whose known job is to copy a name from earlier in the text. Removing the top three heads changes the J-space a little more than removing random heads does: at layer 10, 84% of the top 25 J-lens tokens survive, against 91% for random heads. In Claude the difference is larger (67% against 86%).
-
-We think these are ordinary copying heads. Language models have many heads that copy tokens from earlier in the text ([Olsson et al., 2022](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)). A head that copies tokens preserves directions tied to tokens, and a random rotation breaks that tie.
 
 ## Why the tests are cheap
 
@@ -181,7 +175,7 @@ For selectivity, part of the result comes from how the ablation is defined. The 
 
 For directed modulation, the part GPT-2 passes is what next-word prediction does. The J-lens measures how much the residual stream would make the model say a word, now or later. Anything that makes a word more likely to come up later in the text raises it. Mentioning "lemon" does that, and "think about lemon" and "don't think about lemon" do it more, because text that talks about thinking about lemons tends to go on about lemons. The downward part, "ignore lemon", shows up in Qwen3-1.7B, and the same logic covers it. A model that follows instructions is less likely to mention something it was told to ignore.
 
-The structure GPT-2 does have also has simple explanations. Capacity is limited by construction, the category effect in lists comes from what the model expects to say next, and the heads that copy J-lens directions look like ordinary copying heads. The structure that would set a workspace apart, a distinct band, ignition, and strong amplification, is missing.
+The structure GPT-2 does have also has simple explanations. Capacity is limited by construction, and the category effect in lists comes from what the model expects to say next. The structure that would set a workspace apart, a distinct band, ignition, and strong amplification, is missing.
 
 Taken together, the functional tests show that a model keeps intermediate results in directions that line up with the words for them, and uses those directions in later steps. Nanda calls this a working memory. It is a real finding, and it makes the J-lens a useful tool even on small models. But it is not specific to a global workspace. In the Eleos commentary's terms, the tests show a privileged set of representations, and GPT-2 small has one too. Showing that the set forms a workspace takes more, and that is the job of the structural results.
 
@@ -557,22 +551,30 @@ Line counting: GPT-2 answers "been", "a", or "the". A count reaches the band len
 
 ## D. Structure
 
+![Figure 5](figures/fig5_band_stats.png)
+
+*Figure 5: The paper's four layer statistics (its Figure 28) for Claude Sonnet 4.5, from the paper's released data, and for GPT-2 small, computed the same way. The paper numbers Claude's layers by percent of depth. The shaded region is the paper's band in Claude (L38 to L92) and ours in GPT-2 (layers 7 to 9). (a) How often the model's top next-token prediction is in the lens's top k. (b) Excess kurtosis of the lens readout, as percentiles over positions. (c) Persistence: the log-probability the lens gives its top token from Δ positions earlier, minus the same for the top token of a random position. (d) The fraction of dimensions needed to capture a given share of the variance of the J-lens vectors.*
+
 Layer statistics (48 WikiText-103 validation sequences of 128 tokens):
 
-| layer | lens top-1 = model top-1 | model top-1 in lens top 10 | excess kurtosis | top-1 persistence minus shuffled | effective dimensionality (90% of variance) |
-|---|---|---|---|---|---|
-| 0 | 0.00 | 0.00 | 0.5 | +0.001 | 0.13 |
-| 1 | 0.00 | 0.01 | 0.6 | −0.000 | 0.16 |
-| 2 | 0.00 | 0.01 | 0.6 | +0.000 | 0.19 |
-| 3 | 0.00 | 0.01 | 0.4 | +0.002 | 0.20 |
-| 4 | 0.00 | 0.02 | 0.5 | +0.004 | 0.22 |
-| 5 | 0.00 | 0.03 | 0.4 | +0.002 | 0.22 |
-| 6 | 0.01 | 0.04 | 0.4 | +0.007 | 0.26 |
-| 7 | 0.02 | 0.10 | 0.4 | +0.014 | 0.30 |
-| 8 | 0.04 | 0.13 | 0.5 | +0.021 | 0.35 |
-| 9 | 0.11 | 0.29 | 0.6 | +0.023 | 0.43 |
-| 10 | 0.24 | 0.51 | 0.5 | +0.020 | 0.50 |
-| 11 | 1.00 | 1.00 | 0.4 | +0.008 | 0.66 |
+| layer | lens top-1 = model top-1 | model top-1 in lens top 10 | excess kurtosis | persistence, Δ = 1 (nats) | persistence, Δ = 4 | persistence, Δ = 16 | effective dimensionality (90% of variance) |
+|---|---|---|---|---|---|---|---|
+| 0 | 0.00 | 0.00 | 0.5 | 0.6 | 0.1 | 0.0 | 0.13 |
+| 1 | 0.00 | 0.01 | 0.6 | 0.8 | 0.2 | −0.1 | 0.16 |
+| 2 | 0.00 | 0.01 | 0.6 | 1.2 | 0.0 | −0.2 | 0.19 |
+| 3 | 0.00 | 0.01 | 0.4 | 1.9 | 0.3 | −0.1 | 0.21 |
+| 4 | 0.00 | 0.02 | 0.5 | 2.4 | 0.3 | −0.2 | 0.22 |
+| 5 | 0.00 | 0.03 | 0.4 | 2.8 | 0.3 | −0.2 | 0.23 |
+| 6 | 0.01 | 0.04 | 0.4 | 3.9 | 0.9 | 0.1 | 0.27 |
+| 7 | 0.02 | 0.10 | 0.4 | 5.6 | 1.1 | 0.0 | 0.32 |
+| 8 | 0.04 | 0.13 | 0.5 | 7.1 | 1.8 | 0.2 | 0.38 |
+| 9 | 0.11 | 0.29 | 0.6 | 7.4 | 2.0 | 0.0 | 0.47 |
+| 10 | 0.24 | 0.51 | 0.5 | 5.3 | 1.6 | 0.2 | 0.55 |
+| 11 | 1.00 | 1.00 | 0.4 | 1.0 | 0.2 | 0.0 | 0.73 |
+
+Kurtosis is the mean over positions. The median is between 0.28 and 0.55 at every layer, and no percentile rises in the middle layers (Figure 5b). Persistence is the paper's measure: the mean log-probability the lens gives, at position t + Δ, to its top token at position t, minus the same for the top token of a random position in the same sequence. Effective dimensionality uses the centered J-lens vectors of the whole vocabulary.
+
+Persistence counting only top tokens that never appear in the sequence's input, for the random positions too: at layer 9 it is 7.6, 4.3, 2.0, 1.1, 0.1, and −0.3 nats at Δ = 1, 2, 4, 8, 16, and 32. With all top tokens it is 7.4, 4.0, 2.0, 0.9, 0.0, and −0.2. Between 24% and 38% of the lens's top tokens at layers 0 to 10 appear somewhere in the input. At Δ = 32, persistence is slightly below zero at every layer, probably because the random position is sometimes a nearby one. In Claude, at the peak of the band, it is 6.0 at Δ = 1 and 4.2 at Δ = 32.
 
 Similarity between layers: plain linear CKA between the layers' J-lens dictionaries is 0.94 or higher for every pair of layers 0 to 10, because one principal component carries 26–37% of each dictionary's variance even after centering. With the top 5 components removed, or with the mean canonical correlation over the top 50 dimensions, similarity falls off smoothly with distance. For adjacent layers (0 and 1, through 10 and 11) the mean canonical correlation is 0.89, 0.88, 0.92, 0.92, 0.90, 0.89, 0.88, 0.85, 0.83, 0.78, 0.76. There is no block.
 
@@ -594,11 +596,9 @@ Lists (8 lists of 80 words; a word counts as present if its best band rank is 25
 
 Category blocks (8 lists of four 20-word blocks from the paper's name, surname, country, and city pools, in shuffled order): averaged over commas 6 to 19 of a block, 21% of that block's words are present during the block and 0.8% during the next block.
 
-Attention heads: for each head, we measure gain (the mean output norm on a set of directions, relative to random directions) and label preservation (the mean reciprocal rank of cos(OV v_i, v_i) among cos(OV v_i, v_j), minus the same for random directions), with the head's LayerNorm gain folded in. Median label preservation over the 12 heads of each block, for J-lens vectors, is 0.01, 0.16, 0.47, 0.16, 0.16, 0.17, 0.09, 0.11, 0.11, 0.30, and 0.06 (blocks 1 to 11). The largest value in any block is 0.016 for rotated J-lens vectors and 0.35 for MLP neuron directions. The paper's selection rule (the worse of the two ranks, among the heads in blocks 8 to 10) picks heads 9.8, 10.4, and 10.0, with gain 1.23–1.38 and label preservation 0.36–0.49. The highest label preservation anywhere is in heads 2.9, 2.4, 2.2, 9.6, 3.7, and 9.9 (0.76–0.83). Zeroing heads 9.8, 10.4, and 10.0 at every position leaves 90% of the top 25 J-lens tokens at layer 9 and 84% at layer 10. Five sets of random heads from the same blocks leave 96% and 91% on average (lowest 95% and 89%). The top-1 prediction changes at 7.9% of positions, against 6.3% for random heads. The paper reports 67% against 86% for the J-space, and 5% against 2% for the top-1 prediction.
-
 ## E. Qwen3-1.7B
 
-Model: Qwen3-1.7B (28 layers, instruction-tuned), fp32, with its chat template and thinking turned off. Lens: Neuronpedia's Qwen3-1.7B J-lens, fit the same way as the GPT-2 one. J-lens vectors are centered the same way. Band: layers 12, 14, 16, 18, and 20. On 16 WikiText sequences, the lens's top token persists across positions above a shuffled baseline from about layer 9, most strongly at layers 16 to 20. Its agreement with the model's top-1 prediction is under 5% through layer 18, 10% at layer 20, and 18% at layer 21.
+Model: Qwen3-1.7B (28 layers, instruction-tuned), fp32, with its chat template and thinking turned off. Lens: Neuronpedia's Qwen3-1.7B J-lens, fit the same way as the GPT-2 one. J-lens vectors are centered the same way. Band: layers 12, 14, 16, 18, and 20. On 16 WikiText sequences, persistence (measured as in the paper, at Δ = 1) is about 4 nats at layers 8 to 14, rises to a peak of 7.2 at layer 20, and falls to 2.3 at layer 26. As in GPT-2, it is short-lived: at the band layers it is 0.3 to 0.6 at Δ = 8, and within 0.25 of zero at Δ = 16. Counting only top tokens that never appear in the input changes little. The lens's agreement with the model's top-1 prediction is under 5% through layer 18, 10% at layer 20, and 18% at layer 21.
 
 Verbal report (`Think of a {category}. Answer in one word.`, subtract-and-add swap at the band layers, targets starting at rank 11 or worse): Qwen answers with a single-token candidate in 6 of 14 categories. The swapped-in word becomes its answer on 6 of 14 trials, and reaches its top 5 on 8 of 14.
 

@@ -1,6 +1,6 @@
 """The structural statistics behind the choice of workspace band for gpt2-small.
 
-Three analyses, all reported in PROTOCOL.md ("Appendix: the workspace band"):
+Four analyses, all reported in PROTOCOL.md ("Appendix: the workspace band"):
 
   stats     paper Fig 28 metrics, over 48 wikitext-103 validation sequences x 128 tokens: lens-vs-
             model top-1/top-10 agreement, excess kurtosis of the lens readout, top-1
@@ -17,9 +17,16 @@ Three analyses, all reported in PROTOCOL.md ("Appendix: the workspace band"):
             block's pre-LN), normalized by the median over isotropic random unit directions;
             2000 J-lens vectors per layer, raw and centered, with the block's neuron output
             directions as a second control.         -> results/band/mlp_gain.json
+  fig28     paper Fig 28 as the paper plots it, on the same sequences as `stats`: top-k agreement
+            for k = 1..128, percentiles over positions of the readout's excess kurtosis, top-1
+            autocorrelation as the gain in lens log-probability over a position-shuffled null at
+            offsets 1..32 (and again using only top-1 tokens that occur nowhere in the sequence's
+            input, for the real pairs and the null alike), and the fraction of dimensions needed for 90..99.5% of the
+            variance of the full centered dictionary.
+                                                    -> results/band/fig28.json
 
-Run:  python -m jl.band [stats|cka|mlp_gain]   (default: all three)
-CPU is fine: about 2 + 4 + 1 minutes.  DEVICE=cuda uses the GPU.
+Run:  python -m jl.band [stats|cka|mlp_gain|fig28]   (default: all four)
+CPU is fine: about 2 + 4 + 1 + 2 minutes.  DEVICE=cuda uses the GPU.
 """
 from __future__ import annotations
 
@@ -42,12 +49,10 @@ def _seeded(lm=None):
     return lm or jl.Lensed()
 
 
-# =============================================================================== Fig 28 metrics
-def stats():
-    """Layer-wise lens statistics on wikitext-103 validation text."""
+def _wikitext(lm):
+    """48 wikitext-103 validation sequences of 128 tokens (BOS + 127)."""
     from datasets import load_dataset
 
-    lm = _seeded()
     ds = load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split="validation")
     texts = [t for t in ds["text"] if len(t) > 600]
     random.shuffle(texts)
@@ -55,6 +60,14 @@ def stats():
     for t in texts[:48]:
         ids = lm.tok(t, add_special_tokens=False).input_ids[:127]
         seqs.append(torch.tensor([[lm.bos] + ids]))
+    return seqs
+
+
+# =============================================================================== Fig 28 metrics
+def stats():
+    """Layer-wise lens statistics on wikitext-103 validation text."""
+    lm = _seeded()
+    seqs = _wikitext(lm)
 
     t0 = time.time()
     st = {L: dict(top1=0, top10=0, n=0, kurt=[], auto=[], null=[]) for L in LAYERS}
@@ -193,8 +206,77 @@ def mlp_gain():
     json.dump(out, open(jl.results_dir("band") / "mlp_gain.json", "w"))
 
 
+# =============================================================================== Fig 28 as plotted
+def fig28():
+    """Paper Fig 28's four panels, with the paper's series (top-k, percentiles, offsets, thresholds)."""
+    import numpy as np
+
+    lm = _seeded()
+    seqs = _wikitext(lm)
+    KS, PCTS, DS, FVE = [1, 2, 4, 8, 16, 32, 64, 128], [1, 10, 25, 50, 75, 90, 99], \
+        [1, 2, 4, 8, 16, 32], [0.9, 0.95, 0.98, 0.99, 0.995]
+    hit = {L: {k: 0 for k in KS} for L in LAYERS}
+    n = 0
+    kurt = {L: [] for L in LAYERS}
+    # [real, null] lists of log-probs, for all pairs and for pairs whose token isn't in the input
+    ac = {L: {d: dict(all=([], []), not_input=([], []), n=0, n_input=0) for d in DS} for L in LAYERS}
+    t0 = time.time()
+    for ids in seqs:
+        x = ids[0]
+        res = lm.residuals(ids, LAYERS)
+        model_top1 = lm.logits(ids)[:-1].argmax(-1)
+        n += len(model_top1)
+        for L in LAYERS:
+            lg = lm.lens_logits(res[L], L)                     # [T, vocab]
+            top = lg[:-1].topk(max(KS)).indices
+            for k in KS:
+                hit[L][k] += int((top[:, :k] == model_top1[:, None]).any(1).sum())
+            z = (lg - lg.mean(-1, keepdim=True)) / lg.std(-1, keepdim=True)
+            kurt[L] += ((z ** 4).mean(-1) - 3).tolist()        # one value per position
+            lp = torch.log_softmax(lg, -1)
+            t1 = lg.argmax(-1)
+            T = len(t1)
+            for d in DS:
+                # log p at t+d of the top-1 token at t, and of the top-1 token at a random position
+                tok_real, tok_null = t1[:-d], t1[torch.randint(T, (T - d,))]
+                real = lp[d:].gather(1, tok_real[:, None])[:, 0]
+                null = lp[d:].gather(1, tok_null[:, None])[:, 0]
+                # same rule for both: drop tokens that occur anywhere in the sequence's input
+                keep_r = ~torch.isin(tok_real, x)
+                keep_n = ~torch.isin(tok_null, x)
+                a = ac[L][d]
+                a["all"][0].extend(real.tolist())
+                a["all"][1].extend(null.tolist())
+                a["not_input"][0].extend(real[keep_r].tolist())
+                a["not_input"][1].extend(null[keep_n].tolist())
+                a["n"] += T - d
+                a["n_input"] += int((~keep_r).sum())
+    print("forward done", round(time.time() - t0), "s", flush=True)
+
+    eff = {}
+    for L in LAYERS:
+        ev = torch.linalg.eigvalsh(lm.V(L).double().T @ lm.V(L).double()).flip(0)
+        c = (ev.cumsum(0) / ev.sum()).cpu().numpy()
+        eff[L] = {f: float((np.searchsorted(c, f) + 1) / lm.d) for f in FVE}
+
+    gain = lambda L, d, which: float(np.mean(ac[L][d][which][0]) - np.mean(ac[L][d][which][1]))
+    out = dict(
+        topk={k: [hit[L][k] / n for L in LAYERS] for k in KS},
+        kurtosis={p: [float(np.percentile(kurt[L], p)) for L in LAYERS] for p in PCTS},
+        autocorr={d: [gain(L, d, "all") for L in LAYERS] for d in DS},
+        autocorr_not_input={d: [gain(L, d, "not_input") for L in LAYERS] for d in DS},
+        frac_top1_is_input={d: [ac[L][d]["n_input"] / ac[L][d]["n"] for L in LAYERS] for d in DS},
+        effdim={f: [eff[L][f] for L in LAYERS] for f in FVE},
+    )
+    for key in ["autocorr", "autocorr_not_input", "frac_top1_is_input", "effdim"]:
+        print(key)
+        for s, ys in out[key].items():
+            print(f"  {s:>5} " + " ".join(f"{v:6.2f}" for v in ys))
+    json.dump(out, open(jl.results_dir("band") / "fig28.json", "w"), indent=1)
+
+
 if __name__ == "__main__":
-    which = sys.argv[1:] or ["stats", "cka", "mlp_gain"]
+    which = sys.argv[1:] or ["stats", "cka", "mlp_gain", "fig28"]
     for name in which:
         print(f"===== {name}", flush=True)
-        {"stats": stats, "cka": cka, "mlp_gain": mlp_gain}[name]()
+        {"stats": stats, "cka": cka, "mlp_gain": mlp_gain, "fig28": fig28}[name]()
