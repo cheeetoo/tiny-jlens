@@ -253,7 +253,7 @@ def main():
         s = lm.tid(" " + it["intermediate"])
         for p in it["partners"]:
             before = rank_out(it["lg"], p["answer"])
-            if before < 10:            # paper rule: target answer not already in top-10
+            if before <= 10:           # paper rule: target answer not already in top-10
                 continue
             t = lm.tid(" " + p["intermediate"])
             lg = lm.logits(it["ids"], coord_swap_edits(lm, it["ids"], s, t, band, clean=it["clean"]))[-1]
@@ -271,7 +271,7 @@ def main():
         sI = lm.tid(" " + it["intermediate"])
         ansI = lm.tid(" " + it["answer"]) if lm.is_single(" " + it["answer"]) else None
         for p in it["partners"][:1]:   # one partner/item (paper: random same-category)
-            if rank_out(it["lg"], p["answer"]) < 10:
+            if rank_out(it["lg"], p["answer"]) <= 10:
                 continue
             tI = lm.tid(" " + p["intermediate"])
             ansT = lm.tid(" " + p["answer"]) if lm.is_single(" " + p["answer"]) else None
@@ -331,7 +331,7 @@ def main():
         s = lm.tid(" " + A)
         for p in it["partners"]:
             B = p["intermediate"]
-            if B not in probe or rank_out(it["lg"], p["answer"]) < 10:
+            if B not in probe or rank_out(it["lg"], p["answer"]) <= 10:
                 continue
             t = lm.tid(" " + B)
             full = {L: probe[B][L] - probe[A][L] for L in band}
@@ -369,7 +369,7 @@ def main():
         fl["single"] += allsingle
         if cap and allsingle:
             fl["cap_items"].append(it["name"])
-            if rank_out(lg, it["swap_answer"]) >= 10:
+            if rank_out(lg, it["swap_answer"]) > 10:
                 s, t = lm.tid(" " + it["intermediate"]), lm.tid(" " + it["swap_to"])
                 sw = lm.logits(ids, coord_swap_edits(lm, ids, s, t, band))[-1]
                 fl["swap_n"] += 1
@@ -399,15 +399,15 @@ def summarize(out, lm) -> str:
     for l in lm.layers:
         med = lambda k: median([r["ranks"][k][str(l)] if str(l) in r["ranks"][k] else r["ranks"][k][l]
                                 for r in out["readout"]])
-        pct = 100 * sum((r["ranks"]["intermediate"].get(str(l), r["ranks"]["intermediate"].get(l))) < 10
+        pct = 100 * sum((r["ranks"]["intermediate"].get(str(l), r["ranks"]["intermediate"].get(l))) <= 10
                         for r in out["readout"]) / len(out["readout"])
         tag = "  <- band" if l in band else ""
         L.append(f"  L{l:<2d} {med('intermediate'):11.0f} {med('answer'):7.0f} {med('arg'):7.0f} {med('null'):7.0f}   {pct:5.0f}%{tag}")
-    uns = [r for r in out["readout"] if r["int_out_rank"] >= 10]
+    uns = [r for r in out["readout"] if r["int_out_rank"] > 10]
     def bandmin(r):
         return min(r["ranks"]["intermediate"].get(str(l), r["ranks"]["intermediate"].get(l)) for l in band)
-    L.append(f"  unspoken items (intermediate output-rank>=10): {len(uns)}/{len(out['readout'])}; "
-             f"of these, in lens top-10 at some band layer: {sum(bandmin(r) < 10 for r in uns)}/{len(uns)}")
+    L.append(f"  unspoken items (intermediate outside the output top 10): {len(uns)}/{len(out['readout'])}; "
+             f"of these, in lens top-10 at some band layer: {sum(bandmin(r) <= 10 for r in uns)}/{len(uns)}")
 
     # E2
     if out["case"]:
@@ -422,7 +422,7 @@ def summarize(out, lm) -> str:
         k, n = sum(r["hit"] for r in s), len(s)
         p, lo, hi = wilson(k, n)
         return f"{p:5.1%} [{lo:3.0%},{hi:3.0%}] (n={n}), median rank {median([r['before'] for r in s]):.0f}->{median([r['after'] for r in s]):.0f}"
-    L.append("\nE3 swap — coordinate swap; swap_answer reaches output top-1 (targets starting rank>=10)")
+    L.append("\nE3 swap — coordinate swap; swap_answer reaches output top-1 (targets starting outside the output top 10)")
     L.append(f"  all families    {rate(out['swap'])}")
     for fam in sorted({r["family"] for r in out["swap"]}):
         L.append(f"  {fam:15s} {rate(out['swap'], lambda r, f=fam: r['family'] == f)}")
@@ -480,10 +480,10 @@ def summarize(out, lm) -> str:
 @torch.no_grad()
 def swap_ops():
     """E3 under BOTH swap operations, on the items and partner rule of `main` (target answer
-    starting at output rank >= 10).  The criterion reports the coordinate swap because §3.3 names
+    starting outside the output top 10).  The criterion reports the coordinate swap because §3.3 names
     it and it is the more conservative of the two; this is where that comparison comes from.
-    Writes results/c3_reasoning/swap_ops.json.  On gpt2-small: coordinate swap 705/999 = 70.6%,
-    subtract-and-add 854/999 = 85.5%."""
+    Writes results/c3_reasoning/swap_ops.json.  On gpt2-small: coordinate swap 695/984 = 70.6%,
+    subtract-and-add 843/984 = 85.7%."""
     lm = jl.Lensed()
     band = jl.BAND
     R = jl.results_dir("c3_reasoning")
@@ -501,7 +501,7 @@ def swap_ops():
             if (p["family"] != it["family"] or p["intermediate"] == it["intermediate"]
                     or p["answer"] == it["answer"]):
                 continue
-            if int(jl.ranks_of(it["lg"], [p["a"]])[0]) < 10:
+            if int(jl.ranks_of(it["lg"], [p["a"]])[0]) <= 10:
                 continue
             for name, mk in (("subadd", swap_edits), ("coord", coord_swap_edits)):
                 lg = lm.logits(it["ids"], mk(lm, it["ids"], it["s"], p["s"], band, clean=it["clean"]))[-1]

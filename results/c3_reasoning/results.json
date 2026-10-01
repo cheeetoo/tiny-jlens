@@ -7383,17 +7383,6 @@
   {
    "family": "cap_language",
    "intermediate": "Germany",
-   "target": "China",
-   "answer": "German",
-   "swap_answer": "Chinese",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Chinese"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Germany",
    "target": "Portugal",
    "answer": "German",
    "swap_answer": "Portuguese",
@@ -7830,17 +7819,6 @@
    "after": 1,
    "hit": true,
    "got": " Icelandic"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Italy",
-   "target": "France",
-   "answer": "Italian",
-   "swap_answer": "French",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " French"
   },
   {
    "family": "cap_language",
@@ -8721,17 +8699,6 @@
    "after": 1,
    "hit": true,
    "got": " Persian"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "China",
-   "target": "Vietnam",
-   "answer": "Chinese",
-   "swap_answer": "Vietnamese",
-   "before": 10,
-   "after": 3,
-   "hit": false,
-   "got": " Chinese"
   },
   {
    "family": "cap_language",
@@ -9737,17 +9704,6 @@
   {
    "family": "cap_language",
    "intermediate": "Turkey",
-   "target": "Iran",
-   "answer": "Turkish",
-   "swap_answer": "Persian",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Persian"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Turkey",
    "target": "Korea",
    "answer": "Turkish",
    "swap_answer": "Korean",
@@ -9920,17 +9876,6 @@
    "after": 1,
    "hit": true,
    "got": " Chinese"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Sweden",
-   "target": "Portugal",
-   "answer": "Swedish",
-   "swap_answer": "Portuguese",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Portuguese"
   },
   {
    "family": "cap_language",
@@ -11442,17 +11387,6 @@
   {
    "family": "cap_language",
    "intermediate": "Vietnam",
-   "target": "Korea",
-   "answer": "Vietnamese",
-   "swap_answer": "Korean",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Korean"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Vietnam",
    "target": "Netherlands",
    "answer": "Vietnamese",
    "swap_answer": "Dutch",
@@ -11706,17 +11640,6 @@
   {
    "family": "cap_language",
    "intermediate": "Thailand",
-   "target": "Korea",
-   "answer": "Thai",
-   "swap_answer": "Korean",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Korean"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Thailand",
    "target": "Netherlands",
    "answer": "Thai",
    "swap_answer": "Dutch",
@@ -11809,17 +11732,6 @@
    "answer": "Thai",
    "swap_answer": "Spanish",
    "before": 59,
-   "after": 1,
-   "hit": true,
-   "got": " Spanish"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Netherlands",
-   "target": "Spain",
-   "answer": "Dutch",
-   "swap_answer": "Spanish",
-   "before": 10,
    "after": 1,
    "hit": true,
    "got": " Spanish"
@@ -12021,28 +11933,6 @@
    "after": 1,
    "hit": true,
    "got": " Icelandic"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Netherlands",
-   "target": "Cuba",
-   "answer": "Dutch",
-   "swap_answer": "Spanish",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Spanish"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Netherlands",
-   "target": "Argentina",
-   "answer": "Dutch",
-   "swap_answer": "Spanish",
-   "before": 10,
-   "after": 3,
-   "hit": false,
-   "got": " Italian"
   },
   {
    "family": "cap_language",
@@ -12377,17 +12267,6 @@
   {
    "family": "cap_language",
    "intermediate": "Denmark",
-   "target": "Greece",
-   "answer": "Danish",
-   "swap_answer": "Greek",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Greek"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Denmark",
    "target": "India",
    "answer": "Danish",
    "swap_answer": "Hindi",
@@ -12538,17 +12417,6 @@
    "after": 1,
    "hit": true,
    "got": " Spanish"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Romania",
-   "target": "Germany",
-   "answer": "Romanian",
-   "swap_answer": "German",
-   "before": 10,
-   "after": 2,
-   "hit": false,
-   "got": " English"
   },
   {
    "family": "cap_language",
@@ -13334,17 +13202,6 @@
   {
    "family": "cap_language",
    "intermediate": "Iceland",
-   "target": "Spain",
-   "answer": "Icelandic",
-   "swap_answer": "Spanish",
-   "before": 10,
-   "after": 1,
-   "hit": true,
-   "got": " Spanish"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Iceland",
    "target": "Italy",
    "answer": "Icelandic",
    "swap_answer": "Italian",
@@ -13526,28 +13383,6 @@
    "swap_answer": "Indonesian",
    "before": 43,
    "after": 4,
-   "hit": false,
-   "got": " English"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Iceland",
-   "target": "Cuba",
-   "answer": "Icelandic",
-   "swap_answer": "Spanish",
-   "before": 10,
-   "after": 2,
-   "hit": false,
-   "got": " English"
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Iceland",
-   "target": "Argentina",
-   "answer": "Icelandic",
-   "swap_answer": "Spanish",
-   "before": 10,
-   "after": 3,
    "hit": false,
    "got": " English"
   },
@@ -14492,30 +14327,6 @@
      "8": 3.835782051086426,
      "9": 5.912877082824707,
      "10": 5.375835418701172
-    }
-   }
-  },
-  {
-   "intermediate": "Italy",
-   "target": "France",
-   "effect": {
-    "interm": {
-     "4": 3.1806687116622925,
-     "5": 0.38998985290527344,
-     "6": -1.3766026496887207,
-     "7": -0.2923398017883301,
-     "8": 3.4642151594161987,
-     "9": 4.3453869223594666,
-     "10": 4.444095253944397
-    },
-    "answer": {
-     "4": 3.8708484172821045,
-     "5": 1.4857091903686523,
-     "6": -1.4639029502868652,
-     "7": 0.9276652336120605,
-     "8": 4.103292644023895,
-     "9": 4.620951950550079,
-     "10": 4.59490168094635
     }
    }
   },
@@ -21916,24 +21727,6 @@
   {
    "family": "cap_language",
    "intermediate": "Germany",
-   "target": "China",
-   "swap_answer": "Chinese",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Germany",
    "target": "Portugal",
    "swap_answer": "Portuguese",
    "raw_lens": true,
@@ -22654,24 +22447,6 @@
   {
    "family": "cap_language",
    "intermediate": "Italy",
-   "target": "France",
-   "swap_answer": "French",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Italy",
    "target": "Poland",
    "swap_answer": "Polish",
    "raw_lens": true,
@@ -24108,24 +23883,6 @@
    "nonj_clamp_k25": false,
    "rpart_k25": true,
    "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "China",
-   "target": "Vietnam",
-   "swap_answer": "Vietnamese",
-   "raw_lens": false,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": false,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": false
   },
   {
    "family": "cap_language",
@@ -25768,24 +25525,6 @@
   {
    "family": "cap_language",
    "intermediate": "Turkey",
-   "target": "Iran",
-   "swap_answer": "Persian",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Turkey",
    "target": "Korea",
    "swap_answer": "Korean",
    "raw_lens": true,
@@ -26062,24 +25801,6 @@
    "full": true,
    "jpart_k3": true,
    "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Sweden",
-   "target": "Portugal",
-   "swap_answer": "Portuguese",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
    "nonj_clamp_k3": false,
    "rpart_k3": false,
    "rrest_k3": true,
@@ -28553,24 +28274,6 @@
    "nonj_k25": false,
    "nonj_clamp_k25": false,
    "rpart_k25": false,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Vietnam",
-   "target": "Korea",
-   "swap_answer": "Korean",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
    "rrest_k25": true
   },
   {
@@ -28990,24 +28693,6 @@
   {
    "family": "cap_language",
    "intermediate": "Thailand",
-   "target": "Korea",
-   "swap_answer": "Korean",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Thailand",
    "target": "Netherlands",
    "swap_answer": "Dutch",
    "raw_lens": true,
@@ -29170,24 +28855,6 @@
   {
    "family": "cap_language",
    "intermediate": "Netherlands",
-   "target": "Spain",
-   "swap_answer": "Spanish",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Netherlands",
    "target": "Poland",
    "swap_answer": "Polish",
    "raw_lens": false,
@@ -29503,42 +29170,6 @@
    "nonj_clamp_k3": false,
    "rpart_k3": false,
    "rrest_k3": false,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": false
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Netherlands",
-   "target": "Cuba",
-   "swap_answer": "Spanish",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": false,
-   "rrest_k25": false
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Netherlands",
-   "target": "Argentina",
-   "swap_answer": "Spanish",
-   "raw_lens": false,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": false,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
    "jpart_k25": true,
    "nonj_k25": false,
    "nonj_clamp_k25": false,
@@ -30088,24 +29719,6 @@
   {
    "family": "cap_language",
    "intermediate": "Denmark",
-   "target": "Greece",
-   "swap_answer": "Greek",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Denmark",
    "target": "India",
    "swap_answer": "Hindi",
    "raw_lens": true,
@@ -30353,24 +29966,6 @@
    "nonj_k25": false,
    "nonj_clamp_k25": false,
    "rpart_k25": false,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Romania",
-   "target": "Germany",
-   "swap_answer": "German",
-   "raw_lens": false,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": true,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": true,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
    "rrest_k25": true
   },
   {
@@ -31654,24 +31249,6 @@
   {
    "family": "cap_language",
    "intermediate": "Iceland",
-   "target": "Spain",
-   "swap_answer": "Spanish",
-   "raw_lens": true,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": true,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Iceland",
    "target": "Italy",
    "swap_answer": "Italian",
    "raw_lens": false,
@@ -31968,42 +31545,6 @@
    "nonj_k3": false,
    "nonj_clamp_k3": false,
    "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Iceland",
-   "target": "Cuba",
-   "swap_answer": "Spanish",
-   "raw_lens": false,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": true,
-   "rpart_k3": false,
-   "rrest_k3": true,
-   "jpart_k25": true,
-   "nonj_k25": false,
-   "nonj_clamp_k25": false,
-   "rpart_k25": true,
-   "rrest_k25": true
-  },
-  {
-   "family": "cap_language",
-   "intermediate": "Iceland",
-   "target": "Argentina",
-   "swap_answer": "Spanish",
-   "raw_lens": false,
-   "full": true,
-   "jpart_k3": true,
-   "nonj_k3": true,
-   "nonj_clamp_k3": false,
-   "rpart_k3": true,
    "rrest_k3": true,
    "jpart_k25": true,
    "nonj_k25": false,

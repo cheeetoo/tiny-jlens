@@ -5,10 +5,22 @@
 - `post/post.md` is the source. `post/post.html` is a local preview made from it, with the figures inline. After editing the Markdown, run `post/build.sh` (needs pandoc) and open `post/post.html` in a browser.
 - Figure 1 is built from `post/fig1/template.html` and the data in `post/fig1/data/` by `python post/fig1/build.py` (run from the repo root), which writes `fig1.html` and renders `fig1.png` with headless Chromium.
 
-- Figures 2 to 5 come from `post/figures/centering.py`, `introspect.py`, `structure.py`, and `band_stats.py` (run them from the repo root with `PYTHONPATH=. .venv/bin/python`). I renamed the outputs so the numbers match the order in the post: `fig3_introspect.png` and `fig4_structure.png`. The old `fig3_structure.png` and `fig4_introspect.png` are deleted.
+- Figures 2 to 8 come from `post/figures/centering.py`, `introspect.py`, `structure.py`, `introspect_setups.py`, `dm_rates.py`, `dm_gpt2_frames.py`, and `band_stats.py` (run them from the repo root with `PYTHONPATH=. .venv/bin/python`). The outputs are numbered in the order they appear in the post: `fig2_centering.png`, `fig3_introspect.png`, `fig4_structure.png`, `fig5_introspect_setups.png` (Appendix C.1), `fig6_modulation.png` and `fig7_modulation_frames.png` (Appendix C.2), `fig8_band_stats.png` (Appendix D; it was Figure 6 before round 11). `dm_rates.py` and the other `dm_*.py` scripts also write the figures of `post/DM_SETUP.md` to `post/figures/dm/`.
+- `post/five_tests_draft.md` is no longer kept in sync with `post.md` (the author doesn't use it). Don't update it; its source list may still help when checking numbers.
 - `paper.md` (local only) is the paper. `commentary/` (local only, except `README.md`) has the commentaries. `commentary/README.md` is a sourced summary of what's online.
+- Figure 3 (`post/figures/introspect.py`) is new: the injected-thought test drawn like the paper's Fig. 7, from `ref/paper-data/verbal-introspection.json` (Claude) and `results/control/gpt2/introspect_researcher_centered_surface_word.json`.
 
-## Numbers of J-lens vectors (latest pass)
+## The injected thought now passes on the paper's measure (latest pass, 2026-09-29)
+
+Details are in `CHANGES.md` (round 4). In short:
+- The paper's Fig. 7 prefill ends `about the word "`, not `about "`. We had only run the second (the released protocol's "default"). With the Fig. 7 reply and the one-line question, GPT-2 reports the word about as often as Claude (top 5 for 52 of 57 at the best strength; Claude 89%), and on the paper's own control, the word stays well down at the other positions of the reply.
+- The per-layer strengths look very different (GPT-2's report reaches the top at 0.2, Claude's at 0.02), but the strength is per layer: we add the vector at 3 layers, and the paper at every layer of its band, 38% to 92% of Claude's depth (the paper numbers layers by percent of depth; Claude's layer count isn't public), presumably many more. Figure 3 plots each model against its own per-layer strength, as the paper does, and the post says this in one sentence.
+- What's left of the old failure: GPT-2 also makes the word its top prediction after "The" and "an injected" (the points where the reply could say what was injected). The paper's pooled control can't see that, and its released data can't show whether Claude does it too.
+- The result depends on the prompt: with the paper's full prompt as a transcript the report is much weaker, and with the `about "` reply the word leaks more than it's reported. All six versions are in Appendix C.1.
+- The verdicts and caveats below about the injected thought ("fails", "the one functional result small models don't reproduce") are from before this change.
+- Qwen3.5-0.8B is no longer mentioned in the main text for this test. Its results with the Fig. 7 reply are in Appendix E.
+
+## Numbers of J-lens vectors (earlier pass)
 
 The paper fixes a number of J-lens vectors in three places:
 - 16 for a concept vector's J-space part (verbal report privilege);
@@ -123,24 +135,6 @@ What changed:
 5. The Qwen checks with a tuned band and strengths, and the other three tests on Qwen.
 6. A two-concept version of the paper's dual-task (competition) test.
 7. KL divergence instead of top-1 agreement on ordinary text, and more than 16 paragraphs.
-
-## Slack message draft
-
-> New draft: we ran the tests from Anthropic's global workspace paper on GPT-2 small (124M, 2019). It passes verbal report, internal reasoning, flexible generalization, and selectivity about as well as Claude, partly passes directed modulation, and has almost none of the structure (no band of workspace layers, no ignition, little MLP amplification). Our take is that the five functional tests are cheap, so passing them is weak evidence for a workspace, and the case for Claude rests on the structural results. Draft: [link]. Comments welcome, especially on the injected-thought test and the internal-reasoning comparison.
-
-## Tweet thread draft
-
-> 1/ Anthropic's global workspace paper found that Claude's "J-space" passes five functional tests of a global workspace. We ran the same tests on GPT-2 small, a 124M model from 2019. It mostly passes them. [Figure 1]
-
-> 2/ Verbal report, internal reasoning, flexible generalization, and selectivity work about as well as in Claude. Swapping France for China in GPT-2's J-space turns "Paris" into "Beijing" on 71% of swaps (Claude: 70%, on harder questions). Ablating the J-space breaks two-hop questions but not copying, with numbers close to Claude's.
-
-> 3/ Directed modulation partly works. Told to "ignore lemon", GPT-2 doesn't push "lemon" down the way Claude does. A small chat model, Qwen3-1.7B, does, so that part seems to come with instruction tuning.
-
-> 4/ What GPT-2 lacks is the structure: no distinct band of workspace layers, no "ignition" (a France/Germany blend stays a blend), and MLPs amplify J-lens directions 1.2–1.5x, against ~10x in Claude.
-
-> 5/ We think the functional tests are cheap. A functional global workspace would be a big deal, but a 124M base model mostly passes these tests, so passing them is weak evidence for one. The case for a workspace in Claude rests on the structure.
-
-> 6/ Post: [link]. Code: [link].
 
 ## Re-run check (earlier session, all criteria on CPU)
 

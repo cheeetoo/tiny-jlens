@@ -47,6 +47,7 @@
   .says:before { content: ""; position: absolute; left: -9px; bottom: 16px; border: 9px solid transparent; border-right-color: var(--box); border-left: 0; }
   .says .lab { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .9px; color: var(--muted); margin-bottom: 3px; }
   .says table { border-collapse: collapse; } .says td { padding: 0 18px 0 0; }
+  .says .note { font-family: var(--sans); font-size: 14px; line-height: 1.35; margin-top: 7px; color: var(--ink2); }
 
   .spanel { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .sp { background: var(--box); border-radius: 12px; padding: 14px 16px 14px; }
@@ -94,7 +95,7 @@ function icon(kind, size) {
   return `<svg width="${size}" height="${size}" style="flex:none"><circle cx="${r}" cy="${r}" r="${r}" fill="${c}"/>${inner}</svg>`;
 }
 const LABEL = { works: "WORKS", partly: "PARTLY", no: "MISSING" };
-const pill = v => `<span class="pill">${icon(v, 18)}${LABEL[v]}</span>`;
+const pill = (v, label) => `<span class="pill">${icon(v, 18)}${label || LABEL[v]}</span>`;
 // line-drawn robot face: antenna, rounded head, two eyes, small mouth
 const robot = (s = 46) => `<svg width="${s}" height="${s}" viewBox="0 0 32 32" style="display:block;flex:none" fill="none" stroke="var(--bot)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
   <line x1="16" y1="5.5" x2="16" y2="9"/><circle cx="16" cy="4" r="1.6" fill="var(--bot)" stroke="none"/>
@@ -107,18 +108,19 @@ const mk = (k, t) => `<span class="mk ${k}">${{ ok: "✓", x: "✗", mid: "~" }[
 
 const TESTS = [
   { name: "Verbal report", v: "works", prompt: `<span class="dim">Name a planet: Neptune\nName a tree: Oak\n…</span>\nName a sport:`,
-    op: "SWAP", bub: ["<s>Running</s>", "<em>Rugby</em>"], lab: "GPT-2 SAYS", says: `<s>Running</s> <em>Rugby</em>` },
+    op: "SWAP", bub: ["<s>Running</s>", "<em>Rugby</em>"], lab: "GPT-2 SAYS",
+    says: `<s>Running</s> <em>Rugby</em><div class="note">${mk("ok", " injected thought (an extra test)")}</div>` },
   { name: "Internal reasoning", v: "works", prompt: `In the country where people speak French, the capital city is called`,
     op: "SWAP", bub: ["<s>France</s>", "<em>China</em>"], lab: "GPT-2 SAYS", says: `<s>Paris</s> <em>Beijing</em>` },
-  { name: "Flexible generalization", v: "works", prompt: `The capital of France is…\nMost people in France speak…\nThe currency used in France is…`,
-    op: "SWAP", bub: ["<s>France</s>", "<em>China</em>"], lab: "GPT-2 SAYS",
-    says: `<table><tr><td><s>Paris</s></td><td><em>Beijing</em></td></tr><tr><td><s>French</s></td><td><em>Chinese</em></td></tr><tr><td><s>Franc</s></td><td><em>Yuan</em></td></tr></table>` },
+  { name: "Flexible generalization", v: "works", prompt: `The capital of Canada is…\nMost people in Canada speak…\nCanada is on the continent of…`,
+    op: "SWAP", bub: ["<s>Canada</s>", "<em>France</em>"], lab: "GPT-2 SAYS",
+    says: `<table><tr><td><s>Toronto</s></td><td><em>Paris</em></td></tr><tr><td><s>English</s></td><td><em>French</em></td></tr><tr><td><s>Canada</s></td><td><em>Europe</em></td></tr></table>` },
   { name: "Selectivity", v: "works", prompt: `<span class="dim">(two-hop questions, copying, ordinary text)</span>`,
     op: "ABLATE", bub: ["<s>France</s>"], lab: "AFTER REMOVING THE TOP J-LENS VECTOR",
     says: `${mk("x", " two-hop questions break")}<br>${mk("ok", " copying still works")}<br>${mk("ok", " ordinary text mostly unchanged")}` },
-  { name: "Directed modulation", v: "partly", prompt: `Write "The old painting hung…"\n<b>Think about lemon.</b>`,
-    op: "READ", bub: ["<em>lemon ↑</em>"], lab: "GPT-2'S J-LENS",
-    says: `${mk("ok", ` "think about lemon": ↑`)}<br>${mk("x", ` "ignore lemon": no ↓`)}` },
+  { name: "Directed modulation", v: "no", label: "FAILS", prompt: `Write "The old painting hung…"\n<b>Think about citrus fruits.</b>`,
+    op: "READ", bub: ["<em>orange? lime?</em>"], lab: "GPT-2'S J-LENS",
+    says: `${mk("x", " a citrus fruit on top: <1%")}<br>${mk("x", ` "ignore": no effect`)}<div class="note">${mk("mid", " instruction-tuned 0.8B: 23% (Claude: 93–97%)")}</div>` },
 ];
 const C25 = 25;
 const STRUCT = [
@@ -129,7 +131,7 @@ const STRUCT = [
 
 function figure(el) {
   const card = t => `<div class="card ${t.v}">
-      <div class="head"><div class="title">${t.name}</div>${pill(t.v)}</div>
+      <div class="head"><div class="title">${t.name}</div>${pill(t.v, t.label)}</div>
       <div class="prompt">${t.prompt}</div>
       <div class="scene">
         <div style="display:flex;flex-direction:column;align-items:flex-start">${bubble(t.op, t.bub)}<div style="margin-left:4px">${robot()}</div></div>

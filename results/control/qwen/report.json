@@ -1,0 +1,245 @@
+{
+ "band": [
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22
+ ],
+ "rows": [
+  {
+   "cat": "country",
+   "gate": true,
+   "source": "China",
+   "target": "Spain",
+   "before": 21,
+   "after": 1
+  },
+  {
+   "cat": "country",
+   "gate": true,
+   "source": "China",
+   "target": "Germany",
+   "before": 12,
+   "after": 1
+  },
+  {
+   "cat": "country",
+   "gate": true,
+   "source": "China",
+   "target": "Canada",
+   "before": 14,
+   "after": 1
+  },
+  {
+   "cat": "country",
+   "gate": true,
+   "source": "China",
+   "target": "Mexico",
+   "before": 23,
+   "after": 1
+  },
+  {
+   "cat": "color",
+   "gate": true,
+   "source": "Black",
+   "target": "Green",
+   "before": 19,
+   "after": 1
+  },
+  {
+   "cat": "color",
+   "gate": true,
+   "source": "Black",
+   "target": "White",
+   "before": 20,
+   "after": 1
+  },
+  {
+   "cat": "color",
+   "gate": true,
+   "source": "Black",
+   "target": "Pink",
+   "before": 23,
+   "after": 1
+  },
+  {
+   "cat": "color",
+   "gate": true,
+   "source": "Black",
+   "target": "Brown",
+   "before": 17,
+   "after": 1
+  },
+  {
+   "cat": "fruit",
+   "gate": true,
+   "source": "Apple",
+   "target": "Berry",
+   "before": 15,
+   "after": 1
+  },
+  {
+   "cat": "fruit",
+   "gate": true,
+   "source": "Apple",
+   "target": "Fig",
+   "before": 349,
+   "after": 1
+  },
+  {
+   "cat": "fruit",
+   "gate": true,
+   "source": "Apple",
+   "target": "Date",
+   "before": 89,
+   "after": 1
+  },
+  {
+   "cat": "sport",
+   "gate": true,
+   "source": "Football",
+   "target": "Chess",
+   "before": 34,
+   "after": 1
+  },
+  {
+   "cat": "sport",
+   "gate": true,
+   "source": "Football",
+   "target": "Running",
+   "before": 13,
+   "after": 1
+  },
+  {
+   "cat": "instrument",
+   "gate": false,
+   "greedy": "G"
+  },
+  {
+   "cat": "planet",
+   "gate": true,
+   "source": "Earth",
+   "target": "Titan",
+   "before": 117,
+   "after": 1
+  },
+  {
+   "cat": "planet",
+   "gate": true,
+   "source": "Earth",
+   "target": "Sun",
+   "before": 11,
+   "after": 1
+  },
+  {
+   "cat": "tree",
+   "gate": false,
+   "greedy": "Tree"
+  },
+  {
+   "cat": "bird",
+   "gate": false,
+   "greedy": "E"
+  },
+  {
+   "cat": "language",
+   "gate": true,
+   "source": "English",
+   "target": "Spanish",
+   "before": 15,
+   "after": 1
+  },
+  {
+   "cat": "language",
+   "gate": true,
+   "source": "English",
+   "target": "Russian",
+   "before": 12,
+   "after": 1
+  },
+  {
+   "cat": "language",
+   "gate": true,
+   "source": "English",
+   "target": "Italian",
+   "before": 69,
+   "after": 1
+  },
+  {
+   "cat": "language",
+   "gate": true,
+   "source": "English",
+   "target": "Greek",
+   "before": 101,
+   "after": 1
+  },
+  {
+   "cat": "language",
+   "gate": true,
+   "source": "English",
+   "target": "Latin",
+   "before": 13,
+   "after": 1
+  },
+  {
+   "cat": "profession",
+   "gate": true,
+   "source": "Doctor",
+   "target": "Teacher",
+   "before": 17,
+   "after": 1
+  },
+  {
+   "cat": "profession",
+   "gate": true,
+   "source": "Doctor",
+   "target": "Artist",
+   "before": 19,
+   "after": 1
+  },
+  {
+   "cat": "profession",
+   "gate": true,
+   "source": "Doctor",
+   "target": "Actor",
+   "before": 105,
+   "after": 1
+  },
+  {
+   "cat": "profession",
+   "gate": true,
+   "source": "Doctor",
+   "target": "Judge",
+   "before": 454,
+   "after": 1
+  },
+  {
+   "cat": "beverage",
+   "gate": true,
+   "source": "Coffee",
+   "target": "Beer",
+   "before": 11,
+   "after": 1
+  },
+  {
+   "cat": "organ",
+   "gate": false,
+   "greedy": "heart"
+  },
+  {
+   "cat": "city",
+   "gate": false,
+   "greedy": "New"
+  },
+  {
+   "cat": "river",
+   "gate": false,
+   "greedy": "O"
+  }
+ ],
+ "summary": "  answers with a candidate in 8/14 categories; swap target top-1 25/25, top-5 25/25"
+}

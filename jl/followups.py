@@ -446,7 +446,7 @@ def variants(configs=None, name="variants"):
                 if p["fam"] != it["fam"] or p["c"] == it["c"] or p["ans"] == it["ans"]:
                     continue
                 t_ans = lm.tid(" " + p["ans"])
-                if int(jl.ranks_of(it["lg"], [t_ans])[0]) < 10:
+                if int(jl.ranks_of(it["lg"], [t_ans])[0]) <= 10:     # target answer outside the top 10
                     continue
                 edits = jl.coord_swap_edits(lm, it["ids"], lm.tid(" " + it["c"]), lm.tid(" " + p["c"]), band, clean=it["clean"])
                 hits += int(lm.logits(it["ids"], edits)[-1].argmax()) == t_ans

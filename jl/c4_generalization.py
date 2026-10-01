@@ -6,11 +6,18 @@ See PROTOCOL.md.
   E1 case Fig 18: one argument (France) read by every country function under a single
           fixed swap France->China; which functions follow the swap
   E2 swap Fig 19 left + appendix grids: the 4x4 grids, 16 funcs x 12 ordered pairs =
-          192 trials; subtract-and-add swap (paper §3.4) at alpha=1 and alpha=2, plus
-          the coordinate swap for comparison; success = target answer reaches top-1
+          192 trials; the lens-coordinate swap (the operation the paper's Fig. 68 names) and
+          the subtract-and-add swap (§3.4's wording), each at alpha=1 and alpha=2; success =
+          target answer reaches top-1.  Scored on the pairs a swap could change (GPT-2 knows
+          the target's answer, which is not already its top-1), with Claude's result on the
+          same pairs from the paper's released grid (ref/paper-data/flex-gen-appendix.json);
+          also at top-5, where the grid's ranks give Claude at alpha=1
   E3 load Fig 19 right: workspace loading (cos of residual with the arg lens vector)
-          per argument and per category, and its relationship to swap success
-  floor   the paper's bare templates, verbatim, no frame: capability + swap
+          per argument and per category, and its relationship to the swap effect (the
+          paper's measure: change in the target answer's log-prob minus change in the
+          spontaneous answer's) and to swap success, with Claude's from the paper's
+          released Fig. 19 data (ref/paper-data/flex-gen-systematic.json)
+  floor   the paper's bare templates, verbatim, no frame: capability + coordinate swap
 
 Writes results/c4_generalization/{results.json, prompts.json, summary.txt}.
 Run:  python -m jl.c4_generalization          (the criterion)
@@ -21,14 +28,41 @@ from __future__ import annotations
 import json
 import sys
 from collections import defaultdict
+from statistics import mean
 
 import torch
 
 import jl
 from jl import coord_swap_edits, loading, swap_edits
-from jl.stats import median, spearman, wilson
+from jl.stats import pearson, spearman, wilson
 
 ALPHAS = [1.0, 2.0]
+OPS = {"coord": "coordinate swap (paper's Fig. 68)", "subadd": "subtract-and-add swap"}
+PAPER_GRID = jl.model.ROOT / "ref/paper-data/flex-gen-appendix.json"
+PAPER_SUMMARY = jl.model.ROOT / "ref/paper-data/flex-gen-systematic.json"
+
+
+def key(r):
+    """(category, function, source argument, target argument) of a swap row."""
+    return (r["category"], r["function"], r["source"], r["target"])
+
+
+def claude_ranks() -> dict:
+    """{key: the target answer's rank after the swap in Claude Sonnet 4.5 (alpha = 1)}, from the
+    paper's released Fig. 68 data."""
+    out = {}
+    for c in json.load(open(PAPER_GRID))["cats"]:
+        for f in c["funcs"]:
+            for i, s in enumerate(c["args"]):
+                for j, t in enumerate(c["args"]):
+                    if i != j:
+                        out[(c["name"], f["name"], s, t)] = f["cells"][i][j]["rk"]
+    return out
+
+
+def claude_grid() -> dict:
+    """{key: did the swap put the target answer at top-1 in Claude Sonnet 4.5 (alpha = 1)}."""
+    return {k: rk == 1 for k, rk in claude_ranks().items()}
 
 
 # =============================================================================== prompt material
@@ -151,6 +185,9 @@ def main():
         v = W(word)
         return int(jl.ranks_of(lg, v).min()) if v else 10**9
 
+    def lp(lg, toks):
+        return float(lg.log_softmax(-1)[toks].max())
+
     def arg_pos(ids, arg):
         """Last position of any single-token variant of `arg` in the prompt."""
         variants = set()
@@ -196,18 +233,18 @@ def main():
         tgt_answer = fn["answers"][cs["target"]]
         s = lm.tid(" " + cs["source"])
         t = lm.tid(" " + cs["target"])
-        sw = lm.logits(src["ids"], swap_edits(lm, src["ids"], s, t, band,
-                                                     alpha=1.0, clean=src["clean"]))[-1]
-        out["case"].append(dict(
-            function=fn["name"], template=fn["template"],
-            source=cs["source"], target=cs["target"],
-            source_answer=fn["answers"][cs["source"]], target_answer=tgt_answer,
-            source_gated=src["gated"],
-            target_gated=cells[(cat["name"], fn["name"], cs["target"])]["gated"],
-            clean_top1=lm.dec(top1(src["lg"])), swapped_top1=lm.dec(top1(sw)),
-            follows=hit(sw, tgt_answer),
-            target_rank_clean=rank_out(src["lg"], tgt_answer),
-            target_rank_swapped=rank_out(sw, tgt_answer)))
+        row = dict(function=fn["name"], template=fn["template"],
+                   source=cs["source"], target=cs["target"],
+                   source_answer=fn["answers"][cs["source"]], target_answer=tgt_answer,
+                   source_gated=src["gated"],
+                   target_gated=cells[(cat["name"], fn["name"], cs["target"])]["gated"],
+                   clean_top1=lm.dec(top1(src["lg"])),
+                   target_rank_clean=rank_out(src["lg"], tgt_answer))
+        for label, mk in (("coord", coord_swap_edits), ("subadd", swap_edits)):
+            sw = lm.logits(src["ids"], mk(lm, src["ids"], s, t, band, alpha=1.0, clean=src["clean"]))[-1]
+            row[label] = dict(swapped_top1=lm.dec(top1(sw)), follows=hit(sw, tgt_answer),
+                              target_rank_swapped=rank_out(sw, tgt_answer))
+        out["case"].append(row)
 
     # ------------------------------------------------------------------ E2 systematic swap (192)
     # Every function x every ordered (source, target) argument pair.  The prompt is the
@@ -231,6 +268,7 @@ def main():
                     distinct = not (set(W(t_ans)) & set(W(src["answer"])))  # target answer != source answer
                     echo = bool(set(W(t_ans)) & src["prompt_ids"])          # target answer visible in the frame
                     before = rank_out(src["lg"], t_ans)
+                    spon = [top1(src["lg"])]  # the spontaneous answer: GPT-2's own, before the swap
                     row = dict(category=cat["name"], function=fn["name"],
                                source=sa, target=ta, source_i=si, target_i=ti,
                                source_answer=src["answer"], target_answer=t_ans,
@@ -240,8 +278,12 @@ def main():
                         for al in ALPHAS:
                             lg = lm.logits(src["ids"], mk(lm, src["ids"], s, t, band,
                                                           alpha=al, clean=src["clean"]))[-1]
+                            # the paper's Fig. 19 swap effect: dlp(target) - dlp(spontaneous)
+                            effect = ((lp(lg, W(t_ans)) - lp(src["lg"], W(t_ans)))
+                                      - (lp(lg, spon) - lp(src["lg"], spon)))
                             row[label][str(al)] = dict(after=rank_out(lg, t_ans),
-                                                       hit=hit(lg, t_ans), got=lm.dec(top1(lg)))
+                                                       hit=hit(lg, t_ans), got=lm.dec(top1(lg)),
+                                                       effect=effect)
                     out["swap"].append(row)
 
     # ------------------------------------------------------------------ E3 loading (Fig 19 right)
@@ -269,7 +311,7 @@ def main():
                 fl["n"] += 1; cc["n"] += 1
                 fl["cap"] += g; cc["cap"] += g
                 clean_bare[(fn["name"], a)] = dict(ids=ids, lg=lg, gated=g)
-        # bare-template swap on gated source cells (subtract-and-add, alpha=1)
+        # bare-template swap on gated source cells (coordinate swap, alpha=1)
         for fn in cat["funcs"]:
             for sa in cat["args"]:
                 sc = clean_bare[(fn["name"], sa)]
@@ -282,7 +324,7 @@ def main():
                     if set(W(t_ans)) & set(W(fn["answers"][sa])):
                         continue
                     s, t = lm.tid(" " + sa), lm.tid(" " + ta)
-                    lg = lm.logits(sc["ids"], swap_edits(lm, sc["ids"], s, t, band))[-1]
+                    lg = lm.logits(sc["ids"], coord_swap_edits(lm, sc["ids"], s, t, band))[-1]
                     fl["swap_n"] += 1
                     fl["swap_hit"] += hit(lg, t_ans)
         fl["per_cat"][cat["name"]] = cc
@@ -317,72 +359,97 @@ def summarize(out) -> str:
         L.append(f"  {cat:9s} {tot:2d}/16   {detail}")
 
     # E1 case study (Fig 18) — one argument, many functions, one fixed swap
-    nfollow = sum(c["follows"] for c in out["case"])
-    L.append(f"\nE1 case study (Fig 18) — one argument read by many functions: "
-             f"{out['case'][0]['source']} -> {out['case'][0]['target']}, ONE fixed swap  "
-             f"({nfollow}/{len(out['case'])} functions follow)")
-    for c in out["case"]:
-        mark = "FOLLOWS" if c["follows"] else "no     "
-        L.append(f"  {c['function']:11s} clean={c['clean_top1']!r:11s} -> swapped={c['swapped_top1']!r:11s}"
-                 f"  want {c['target']}'s {c['target_answer']!r:10s} (rank {c['target_rank_clean']:>4}->{c['target_rank_swapped']:<3}) [{mark}]")
+    for op in OPS:
+        nfollow = sum(c[op]["follows"] for c in out["case"])
+        L.append(f"\nE1 case study (Fig 18), {OPS[op]}: {out['case'][0]['source']} -> {out['case'][0]['target']}, "
+                 f"one fixed swap ({nfollow}/{len(out['case'])} functions follow)")
+        for c in out["case"]:
+            s = c[op]
+            L.append(f"  {c['function']:11s} clean={c['clean_top1']!r:11s} ({'right' if c['source_gated'] else 'WRONG'}) "
+                     f"-> swapped={s['swapped_top1']!r:11s} want {c['target']}'s {c['target_answer']!r:10s} "
+                     f"(rank {c['target_rank_clean']:>4}->{s['target_rank_swapped']:<3}) [{'FOLLOWS' if s['follows'] else 'no'}]")
 
-    # E2 swap — subsets.  clean = distinct target answer, not echoable from the frame.
-    def rate(rows, label, al):
-        k = sum(r[label][str(al)]["hit"] for r in rows)
-        return k, len(rows), *wilson(k, len(rows))
+    # E2 swap.  A swap can only succeed if GPT-2 knows the target argument's answer (target cell
+    # gated), and only counts as moving the answer if that answer is not already GPT-2's top-1
+    # before the swap (before > 1: e.g. GPT-2 answers "seven" to every month-number prompt, so a
+    # swap *to* July would otherwise score as a success with nothing changed).  `clean` also drops
+    # pairs whose two answers coincide or whose target answer appears in the worked examples.
+    claude = claude_grid()
 
-    def subset(name, flt, note=""):
+    def clean(r):
+        return r["distinct"] and not r["echo"]
+
+    def testable(r):
+        return clean(r) and r["target_gated"] and r["before"] > 1
+
+    def rate(rows, op, al="1.0"):
+        return sum(r[op][al]["hit"] for r in rows)
+
+    def subset(name, flt):
         rows = [r for r in out["swap"] if flt(r)]
-        L.append(f"\nE2 swap — {name}  (n={len(rows)} pairs){note}")
-        L.append("     operation      alpha=1              alpha=2")
-        for label in ("subadd", "coord"):
-            k1, n1, p1, lo1, hi1 = rate(rows, label, 1.0)
-            k2, n2, p2, lo2, hi2 = rate(rows, label, 2.0)
-            tag = "  (paper's op)" if label == "subadd" else "  (comparison)"
-            L.append(f"     {label:9s} {k1:3d}/{n1:<3d} {p1:5.1%} [{lo1:3.0%},{hi1:3.0%}]"
-                     f"   {k2:3d}/{n2:<3d} {p2:5.1%} [{lo2:3.0%},{hi2:3.0%}]{tag}")
+        n = len(rows)
+        cl = sum(claude[key(r)] for r in rows)
+        L.append(f"\nE2 swap — {name}  (n={n} pairs)")
+        for op in OPS:
+            k1, k2 = rate(rows, op), rate(rows, op, "2.0")
+            p, lo, hi = wilson(k1, n)
+            L.append(f"     GPT-2, {OPS[op]:36s} a=1 {k1:3d}/{n:<3d} {p:5.1%} [{lo:3.0%},{hi:3.0%}]   a=2 {k2:3d}/{n}")
+        L.append(f"     Claude Sonnet 4.5 on the same pairs (a=1, paper's Fig. 68 grid)  {cl:3d}/{n:<3d} {cl / max(n, 1):5.1%}")
         return rows
 
-    clean = lambda r: r["distinct"] and not r["echo"]
-    subset("all 192 ordered pairs, ungated (paper: 76/192 a=1, 101/192 a=2)",
-           lambda r: True, note="   <- capability-penalized: 44/64 cells fail the gate")
-    subset("capable subset: target function gated (distinct, no echo)",
-           lambda r: r["target_gated"] and clean(r),
-           note="   <- the clean broadcast rate")
-    subset("strictest: source AND target gated (distinct, no echo)",
-           lambda r: r["source_gated"] and r["target_gated"] and clean(r))
+    subset("all 192 ordered pairs, ungated (paper: 76/192 at a=1, 101/192 at a=2)", lambda r: True)
+    rows = subset("testable: target answer known to GPT-2 and not already its top-1 (the fair set)", testable)
+    subset("stricter: GPT-2 also answers the source prompt correctly", lambda r: clean(r) and r["source_gated"] and r["target_gated"])
+    L.append("  (without the before > 1 rule, target-gated pairs give coordinate "
+             f"{rate([r for r in out['swap'] if clean(r) and r['target_gated']], 'coord')}/"
+             f"{len([r for r in out['swap'] if clean(r) and r['target_gated']])}, of which "
+             f"{sum(r['coord']['1.0']['hit'] for r in out['swap'] if clean(r) and r['target_gated'] and r['before'] == 1)} "
+             "had the target answer at top-1 before any swap)")
 
-    # per-category on the capable (target-gated) subset — paper's Fig 68 / Fig 19 ordering
-    L.append("\n  by category, capable subset (target gated, distinct, no echo; subtract-and-add a=1):")
-    for cat in ["countries", "months", "animals", "numbers"]:
-        rows = [r for r in out["swap"] if r["category"] == cat and r["target_gated"] and clean(r)]
-        if not rows:
-            L.append(f"     {cat:9s} (no capable pairs)")
-            continue
-        k1, n1, p1, *_ = rate(rows, "subadd", 1.0)
-        mb = median([r["before"] for r in rows]); ma = median([r["subadd"]["1.0"]["after"] for r in rows])
-        L.append(f"     {cat:9s} {k1:2d}/{n1:<2d} {p1:5.0%}   median target rank {mb:.0f} -> {ma:.0f}")
-
-    # per-function: which functions FOLLOW the swap.  A clean split (paper does not
-    # report this): lookup/retrieval functions follow, relational/compute do not.
-    L.append("\n  by function, capable subset (a=1) — lookup functions follow, relational ones do not:")
-    byfn = {}
-    for r in out["swap"]:
-        if r["target_gated"] and clean(r):
-            byfn.setdefault((r["category"], r["function"]), []).append(r["subadd"]["1.0"]["hit"])
-    for (cat, fn), hits in sorted(byfn.items(), key=lambda kv: -sum(kv[1]) / max(len(kv[1]), 1)):
-        L.append(f"     {cat:9s}/{fn:12s} {sum(hits):2d}/{len(hits):<2d}")
+    L.append("\n  testable pairs by category and function (a=1): GPT-2 coordinate | subtract-and-add | Claude, same pairs")
+    for grp in (lambda r: r["category"], lambda r: (r["category"], r["function"])):
+        by = {}
+        for r in rows:
+            by.setdefault(grp(r), []).append(r)
+        for k, rs in sorted(by.items(), key=str):
+            label = k if isinstance(k, str) else f"{k[0]}/{k[1]}"
+            L.append(f"     {label:24s} n={len(rs):2d}   {rate(rs, 'coord'):2d} | {rate(rs, 'subadd'):2d} | "
+                     f"{sum(claude[key(r)] for r in rs):2d}")
+        L.append("")
+    L.append("  Claude, all 12 swaps per function (Fig. 68): " + ", ".join(
+        f"{fn} {sum(claude[k] for k in claude if k[1] == fn)}" for fn in dict.fromkeys(k[1] for k in claude)))
 
     # alpha=2 overshoot: the swap emits the injected ARGUMENT word rather than f(argument)
-    def arg_out(al):
-        rows = [r for r in out["swap"] if clean(r)]
-        n = len(rows)
-        k = sum(r["subadd"][str(al)]["got"].strip().lower() == r["target"].lower() for r in rows)
-        return k, n
-    k1, n1 = arg_out(1.0); k2, n2 = arg_out(2.0)
-    L.append(f"\n  alpha=2 overshoot: the swap emits the injected ARGUMENT word (not f(argument)) on "
-             f"{k1}/{n1} pairs at a=1 but {k2}/{n2} at a=2,")
-    L.append("  so a=2 does not help here (opposite to the paper's 76->101); double strength names the argument.")
+    for op in OPS:
+        rs = [r for r in out["swap"] if clean(r)]
+        k1 = sum(r[op]["1.0"]["got"].strip().lower() == r["target"].lower() for r in rs)
+        k2 = sum(r[op]["2.0"]["got"].strip().lower() == r["target"].lower() for r in rs)
+        L.append(f"  {OPS[op]}: the swap makes GPT-2 output the swapped-in argument itself on {k1}/{len(rs)} "
+                 f"clean pairs at a=1 and {k2}/{len(rs)} at a=2")
+    # ...while the swap still pushes the target answer further (the paper's Fig. 19 swap effect)
+    L.append("  mean swap effect (dlp target - dlp spontaneous), coordinate swap, all 192 pairs: a=1 "
+             f"{mean(r['coord']['1.0']['effect'] for r in out['swap']):+.2f}  a=2 "
+             f"{mean(r['coord']['2.0']['effect'] for r in out['swap']):+.2f}   by category (a=1 / a=2): " +
+             ", ".join(f"{c} {mean(r['coord']['1.0']['effect'] for r in out['swap'] if r['category'] == c):+.1f} / "
+                       f"{mean(r['coord']['2.0']['effect'] for r in out['swap'] if r['category'] == c):+.1f}"
+                       for c in ["countries", "months", "animals", "numbers"]))
+
+    # E2 at top-5: the grid's ranks give Claude at alpha=1 (its alpha=2 ranks aren't released)
+    K = 5
+    crank = claude_ranks()
+    pre = sum(r["before"] <= K for r in out["swap"])
+    L.append(f"\nE2 swap at top-{K} — the target answer in the output top {K} (coordinate swap)")
+    L.append(f"     all 192 pairs            GPT-2 a=1 {sum(r['coord']['1.0']['after'] <= K for r in out['swap']):3d}  "
+             f"a=2 {sum(r['coord']['2.0']['after'] <= K for r in out['swap']):3d}   Claude a=1 "
+             f"{sum(crank[key(r)] <= K for r in out['swap']):3d}   (GPT-2 already top-{K} before the swap: {pre})")
+    rows5 = [r for r in out["swap"] if clean(r) and r["target_gated"] and r["before"] > K]
+    L.append(f"     testable at top-{K} (n={len(rows5)}; as above, with the target outside the top {K} before)")
+    for label, rs in [("all", rows5)] + sorted(
+            ((f"{c}/{f}", [r for r in rows5 if (r["category"], r["function"]) == (c, f)])
+             for c, f in dict.fromkeys((r["category"], r["function"]) for r in rows5)), key=str):
+        L.append(f"       {label:22s} n={len(rs):2d}   GPT-2 a=1 {sum(r['coord']['1.0']['after'] <= K for r in rs):2d}  "
+                 f"a=2 {sum(r['coord']['2.0']['after'] <= K for r in rs):2d}   Claude a=1 "
+                 f"{sum(crank[key(r)] <= K for r in rs):2d}")
 
     # E3 loading (Fig 19 right)
     lo = out["loading"]
@@ -390,22 +457,49 @@ def summarize(out) -> str:
     catload = {c: [x["loading"] for x in lo if x["category"] == c] for c in ["countries", "months", "animals", "numbers"]}
     for cat, v in sorted(((c, sum(vs) / len(vs)) for c, vs in catload.items()), key=lambda x: -x[1]):
         L.append(f"     {cat:9s} loading {v:+.3f}")
-    # cell-level loading vs swap success (capable subset)
+    # source-cell loading vs its swaps' success rate (testable pairs, coordinate swap)
     loadmap = {(x["category"], x["function"], x["arg"]): x["loading"] for x in lo}
     cell = {}
+    for r in rows:
+        c = cell.setdefault((r["category"], r["function"], r["source"]), [0, 0])
+        c[0] += r["coord"]["1.0"]["hit"]
+        c[1] += 1
+    xs = [loadmap[k] for k in cell]
+    ys = [cell[k][0] / cell[k][1] for k in cell]
+    L.append(f"  source-cell loading vs its swaps' success (testable pairs, coordinate swap): "
+             f"Spearman {spearman(xs, ys):+.2f} over {len(xs)} cells")
+    # The paper's own measure: per function, mean loading vs the mean swap effect at alpha=1 over
+    # all 12 pairs.  Its x is cos at the argument + cos at the readout; ours is their mean, which
+    # doesn't change a correlation.
+    paper = json.load(open(PAPER_SUMMARY))
+    eff = defaultdict(list)
     for r in out["swap"]:
-        if r["target_gated"] and clean(r):
-            key = (r["category"], r["function"], r["source"])
-            c = cell.setdefault(key, [0, 0]); c[0] += r["subadd"]["1.0"]["hit"]; c[1] += 1
-    xs = [loadmap[k] for k in cell]; ys = [cell[k][0] / cell[k][1] for k in cell]
-    L.append("  category ordering matches the paper (countries/animals high, number words lowest);")
-    L.append(f"  but the cell-level loading->success link is weak: Spearman = {spearman(xs, ys):+.2f} "
-             f"over {len(xs)} source cells (paper: loading predicts success well).")
+        eff[(r["category"], r["function"], r["source"])].append(r["coord"]["1.0"]["effect"])
+    fns = list(dict.fromkeys(k[:2] for k in eff))
+    g = {f: (mean(loadmap[k] for k in eff if k[:2] == f),
+             mean(e for k in eff if k[:2] == f for e in eff[k])) for f in fns}
+    c = {(p["cat"], p["func"]): (p["csum"], p["dlpc"]) for p in paper["pts"]}
+
+    def corr(d, keep=lambda f: True):
+        fs = [f for f in d if keep(f)]
+        xs, ys = [d[f][0] for f in fs], [d[f][1] for f in fs]
+        return f"Pearson {pearson(xs, ys):+.2f}  Spearman {spearman(xs, ys):+.2f}  (n={len(fs)})"
+
+    L.append("  loading vs swap effect (dlp target - dlp spontaneous, a=1; the paper's Fig. 19 right), per function:")
+    L.append(f"     GPT-2, coordinate swap        {corr(g)}")
+    L.append(f"     Claude (paper's data)         {corr(c)}   (paper: r = {paper['r']})")
+    L.append(f"     without the country functions: GPT-2 {corr(g, lambda f: f[0] != 'countries')}   "
+             f"Claude {corr(c, lambda f: f[0] != 'countries')}")
+    cells = {k: (loadmap[k], mean(v)) for k, v in eff.items()}
+    L.append(f"     GPT-2 per source cell         {corr(cells)}")
+    for f in fns:
+        L.append(f"       {f[0] + '/' + f[1]:24s} loading {g[f][0]:.3f}  effect {g[f][1]:+6.2f}   "
+                 f"Claude: csum {c[f][0]:.3f}  effect {c[f][1]:+6.2f}")
 
     # floor
     fl = out["floor"]
     L.append(f"\nfloor — paper's bare templates, no frame: capability {fl['cap']}/{fl['n']}; "
-             f"subtract-and-add swap on gated bare cells {fl['swap_hit']}/{fl['swap_n']}")
+             f"coordinate swap on gated bare cells {fl['swap_hit']}/{fl['swap_n']}")
     L.append("  per category (bare capability): " +
              "  ".join(f"{c} {d['cap']}/{d['n']}" for c, d in fl["per_cat"].items()))
     return "\n".join(L)

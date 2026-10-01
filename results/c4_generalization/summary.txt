@@ -8,54 +8,91 @@ gate — cells answered correctly, by category / function (of 4 args each)
   animals    1/16   habitat:0/4  legs:0/4  class:1/4  group:0/4
   numbers    7/16   double:0/4  square:1/4  successor:4/4  first_letter:2/4
 
-E1 case study (Fig 18) — one argument read by many functions: France -> China, ONE fixed swap  (3/4 functions follow)
-  capital     clean=' Paris'    -> swapped=' Beijing'   want China's 'Beijing'  (rank  595->1  ) [FOLLOWS]
-  language    clean=' French'   -> swapped=' Chinese'   want China's 'Chinese'  (rank   53->1  ) [FOLLOWS]
-  continent   clean=' France'   -> swapped=' China'     want China's 'Asia'     (rank   10->5  ) [no     ]
-  currency    clean=' Franc'    -> swapped=' Yuan'      want China's 'Yuan'     (rank 1366->1  ) [FOLLOWS]
+E1 case study (Fig 18), coordinate swap (paper's Fig. 68): France -> China, one fixed swap (1/4 functions follow)
+  capital     clean=' Paris'    (right) -> swapped=' Shanghai' want China's 'Beijing'  (rank  595->2  ) [no]
+  language    clean=' French'   (right) -> swapped=' Chinese'  want China's 'Chinese'  (rank   53->1  ) [FOLLOWS]
+  continent   clean=' France'   (WRONG) -> swapped=' China'    want China's 'Asia'     (rank   10->2  ) [no]
+  currency    clean=' Franc'    (WRONG) -> swapped=' Yen'      want China's 'Yuan'     (rank 1366->2  ) [no]
 
-E2 swap — all 192 ordered pairs, ungated (paper: 76/192 a=1, 101/192 a=2)  (n=192 pairs)   <- capability-penalized: 44/64 cells fail the gate
-     operation      alpha=1              alpha=2
-     subadd     33/192 17.2% [13%,23%]    30/192 15.6% [11%,21%]  (paper's op)
-     coord      28/192 14.6% [10%,20%]    23/192 12.0% [ 8%,17%]  (comparison)
+E1 case study (Fig 18), subtract-and-add swap: France -> China, one fixed swap (3/4 functions follow)
+  capital     clean=' Paris'    (right) -> swapped=' Beijing'  want China's 'Beijing'  (rank  595->1  ) [FOLLOWS]
+  language    clean=' French'   (right) -> swapped=' Chinese'  want China's 'Chinese'  (rank   53->1  ) [FOLLOWS]
+  continent   clean=' France'   (WRONG) -> swapped=' China'    want China's 'Asia'     (rank   10->5  ) [no]
+  currency    clean=' Franc'    (WRONG) -> swapped=' Yuan'     want China's 'Yuan'     (rank 1366->1  ) [FOLLOWS]
 
-E2 swap — capable subset: target function gated (distinct, no echo)  (n=54 pairs)   <- the clean broadcast rate
-     operation      alpha=1              alpha=2
-     subadd     19/54  35.2% [24%,49%]    15/54  27.8% [18%,41%]  (paper's op)
-     coord      14/54  25.9% [16%,39%]    12/54  22.2% [13%,35%]  (comparison)
+E2 swap — all 192 ordered pairs, ungated (paper: 76/192 at a=1, 101/192 at a=2)  (n=192 pairs)
+     GPT-2, coordinate swap (paper's Fig. 68)    a=1  28/192 14.6% [10%,20%]   a=2  23/192
+     GPT-2, subtract-and-add swap                a=1  33/192 17.2% [13%,23%]   a=2  30/192
+     Claude Sonnet 4.5 on the same pairs (a=1, paper's Fig. 68 grid)   76/192 39.6%
 
-E2 swap — strictest: source AND target gated (distinct, no echo)  (n=32 pairs)
-     operation      alpha=1              alpha=2
-     subadd      4/32  12.5% [ 5%,28%]     2/32   6.2% [ 2%,20%]  (paper's op)
-     coord       6/32  18.8% [ 9%,35%]     6/32  18.8% [ 9%,35%]  (comparison)
+E2 swap — testable: target answer known to GPT-2 and not already its top-1 (the fair set)  (n=46 pairs)
+     GPT-2, coordinate swap (paper's Fig. 68)    a=1  10/46  21.7% [12%,36%]   a=2  10/46
+     GPT-2, subtract-and-add swap                a=1  11/46  23.9% [14%,38%]   a=2   8/46
+     Claude Sonnet 4.5 on the same pairs (a=1, paper's Fig. 68 grid)   16/46  34.8%
 
-  by category, capable subset (target gated, distinct, no echo; subtract-and-add a=1):
-     countries 10/15   67%   median target rank 9 -> 1
-     months     3/15   20%   median target rank 9 -> 3
-     animals    0/3     0%   median target rank 9 -> 2
-     numbers    6/21   29%   median target rank 5 -> 4
+E2 swap — stricter: GPT-2 also answers the source prompt correctly  (n=32 pairs)
+     GPT-2, coordinate swap (paper's Fig. 68)    a=1   6/32  18.8% [ 9%,35%]   a=2   6/32
+     GPT-2, subtract-and-add swap                a=1   4/32  12.5% [ 5%,28%]   a=2   2/32
+     Claude Sonnet 4.5 on the same pairs (a=1, paper's Fig. 68 grid)    5/32  15.6%
+  (without the before > 1 rule, target-gated pairs give coordinate 14/54, of which 4 had the target answer at top-1 before any swap)
 
-  by function, capable subset (a=1) — lookup functions follow, relational ones do not:
-     months   /number        3/3 
-     numbers  /square        3/3 
-     countries/language      7/9 
-     countries/capital       2/3 
-     numbers  /first_letter  3/6 
-     countries/currency      1/3 
-     months   /next_month    0/12
-     animals  /class         0/3 
-     numbers  /successor     0/12
+  testable pairs by category and function (a=1): GPT-2 coordinate | subtract-and-add | Claude, same pairs
+     animals                  n= 3    0 |  0 |  2
+     countries                n=15    9 | 10 | 14
+     months                   n=12    0 |  0 |  0
+     numbers                  n=16    1 |  1 |  0
 
-  alpha=2 overshoot: the swap emits the injected ARGUMENT word (not f(argument)) on 56/185 pairs at a=1 but 98/185 at a=2,
-  so a=2 does not help here (opposite to the paper's 76->101); double strength names the argument.
+     animals/class            n= 3    0 |  0 |  2
+     countries/capital        n= 3    2 |  2 |  3
+     countries/currency       n= 3    0 |  1 |  3
+     countries/language       n= 9    7 |  7 |  8
+     months/next_month        n=12    0 |  0 |  0
+     numbers/first_letter     n= 4    1 |  1 |  0
+     numbers/successor        n=12    0 |  0 |  0
+
+  Claude, all 12 swaps per function (Fig. 68): capital 12, language 10, continent 12, currency 8, season 11, number 1, holiday 12, next_month 0, habitat 2, legs 0, class 4, group 4, double 0, square 0, successor 0, first_letter 0
+  coordinate swap (paper's Fig. 68): the swap makes GPT-2 output the swapped-in argument itself on 30/185 clean pairs at a=1 and 55/185 at a=2
+  subtract-and-add swap: the swap makes GPT-2 output the swapped-in argument itself on 56/185 clean pairs at a=1 and 98/185 at a=2
+  mean swap effect (dlp target - dlp spontaneous), coordinate swap, all 192 pairs: a=1 +3.57  a=2 +6.39   by category (a=1 / a=2): countries +9.4 / +16.3, months +1.4 / +2.7, animals +2.4 / +4.9, numbers +1.1 / +1.6
+
+E2 swap at top-5 — the target answer in the output top 5 (coordinate swap)
+     all 192 pairs            GPT-2 a=1 100  a=2  94   Claude a=1 105   (GPT-2 already top-5 before the swap: 49)
+     testable at top-5 (n=32; as above, with the target outside the top 5 before)
+       all                    n=32   GPT-2 a=1 23  a=2 24   Claude a=1 17
+       animals/class          n= 3   GPT-2 a=1  3  a=2  3   Claude a=1  3
+       countries/capital      n= 3   GPT-2 a=1  3  a=2  3   Claude a=1  3
+       countries/currency     n= 3   GPT-2 a=1  3  a=2  3   Claude a=1  3
+       countries/language     n= 4   GPT-2 a=1  4  a=2  4   Claude a=1  4
+       months/next_month      n=11   GPT-2 a=1  8  a=2 10   Claude a=1  4
+       numbers/successor      n= 8   GPT-2 a=1  2  a=2  1   Claude a=1  0
 
 E3 workspace loading (Fig 19 right) — cos(residual, arg lens vector), band mean
      countries loading +0.152
      animals   loading +0.151
      months    loading +0.086
      numbers   loading +0.068
-  category ordering matches the paper (countries/animals high, number words lowest);
-  but the cell-level loading->success link is weak: Spearman = -0.38 over 31 source cells (paper: loading predicts success well).
+  source-cell loading vs its swaps' success (testable pairs, coordinate swap): Spearman -0.11 over 25 cells
+  loading vs swap effect (dlp target - dlp spontaneous, a=1; the paper's Fig. 19 right), per function:
+     GPT-2, coordinate swap        Pearson +0.60  Spearman +0.64  (n=16)
+     Claude (paper's data)         Pearson +0.91  Spearman +0.92  (n=16)   (paper: r = 0.91)
+     without the country functions: GPT-2 Pearson +0.60  Spearman +0.44  (n=12)   Claude Pearson +0.92  Spearman +0.88  (n=12)
+     GPT-2 per source cell         Pearson +0.58  Spearman +0.69  (n=64)
+       countries/capital        loading 0.159  effect +16.02   Claude: csum 0.180  effect +17.56
+       countries/language       loading 0.148  effect  +8.22   Claude: csum 0.185  effect +11.79
+       countries/continent      loading 0.165  effect  +6.09   Claude: csum 0.167  effect +10.46
+       countries/currency       loading 0.138  effect  +7.15   Claude: csum 0.172  effect +12.04
+       months/season            loading 0.102  effect  +0.98   Claude: csum 0.169  effect  +8.46
+       months/number            loading 0.061  effect  +0.36   Claude: csum 0.141  effect  +4.70
+       months/holiday           loading 0.078  effect  +0.40   Claude: csum 0.177  effect +10.51
+       months/next_month        loading 0.103  effect  +3.82   Claude: csum 0.152  effect  +2.90
+       animals/habitat          loading 0.171  effect  +2.78   Claude: csum 0.156  effect  +6.09
+       animals/legs             loading 0.121  effect  +0.16   Claude: csum 0.118  effect  +1.09
+       animals/class            loading 0.181  effect  +3.77   Claude: csum 0.168  effect  +9.55
+       animals/group            loading 0.131  effect  +2.73   Claude: csum 0.168  effect  +9.80
+       numbers/double           loading 0.067  effect  +0.86   Claude: csum 0.142  effect  +0.90
+       numbers/square           loading 0.088  effect  +0.22   Claude: csum 0.134  effect  +1.15
+       numbers/successor        loading 0.074  effect  +3.11   Claude: csum 0.121  effect  -0.02
+       numbers/first_letter     loading 0.042  effect  +0.39   Claude: csum 0.138  effect  +1.34
 
-floor — paper's bare templates, no frame: capability 9/64; subtract-and-add swap on gated bare cells 3/27
+floor — paper's bare templates, no frame: capability 9/64; coordinate swap on gated bare cells 5/27
   per category (bare capability): countries 7/16  months 0/16  animals 2/16  numbers 0/16

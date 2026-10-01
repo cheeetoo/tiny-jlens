@@ -25,10 +25,17 @@ jl/                     the library
   band.py               the structural statistics behind the choice of band
   followups.py          follow-up experiments: protection rule, ignition, lists, neurons,
                         lens variants, band sensitivity, linear check, injected thought, seeds
-  qwen_control.py       the tests GPT-2 fails, on Qwen3-1.7B (instruct) with its Neuronpedia lens
+  control.py            the two tests of top-down control (injected thought, directed modulation) as
+                        the paper runs them, on GPT-2 (several base-model frames) and on Qwen3.5-0.8B
+                        (instruct) with its Neuronpedia lens; also Qwen's verbal report, layer stats, and the
+                        arithmetic and paired-question parts of directed modulation
+  qwen_control.py       an earlier version of the same checks on Qwen3-1.7B (superseded by control.py)
   introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)
 results/<criterion>/    results.json, prompts.json, summary.txt from the runs behind PROTOCOL.md
 results/followups/      one JSON per follow-up experiment
+results/control/        jl.control's results, one directory per model
+ref/paper-data/         the paper's released figure data used in scoring (Claude's per-swap grid,
+                        directed modulation rates, verbal report correlations)
 post/                   the blog post draft (post.md), figures, and NOTES.md
 commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
                         (local copies of the paper and commentary texts are gitignored)
@@ -58,6 +65,11 @@ summary. The follow-ups run with `python -m jl.followups [name ...]` and
 ```
 python -m jl.c3_reasoning swap_ops       # E3 under both swap operations
 python -m jl.c4_generalization gating    # E2 swap rates by gating class
+python -m jl.c5_selectivity language     # the language test only, merged into results.json
+python -m jl.control --model qwen introspect modulation report stats clauses
+python -m jl.control --model gpt2 introspect modulation
+NCARRIERS=20 python -m jl.control --model qwen modulation_grid   # directed modulation on the paper's prompt, every layer kept
+NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # (also modulation_readout, modulation_copy; see post/DM_SETUP.md)
 python -m jl.band [stats|cka|mlp_gain]   # the band statistics
 ```
 

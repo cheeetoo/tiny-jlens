@@ -1,4 +1,4 @@
-"""Figure 5 (appendix): the paper's Fig 28 layer statistics, Claude against gpt2-small.
+"""Figure 8 (appendix): the paper's Fig 28 layer statistics, Claude against gpt2-small.
 
 Reads post/fig1/data/paper_layer_lines.json (Claude Sonnet 4.5: the data behind the paper's Fig 28,
 from transformer-circuits.pub/2026/workspace/data/layer-lines/main.json) and results/band/fig28.json
@@ -49,5 +49,5 @@ for j, (key, legend, ylabel, title) in enumerate(PANELS):
             ax.set_xticks(range(12))
         ax.legend(title=legend, frameon=False, fontsize=8, title_fontsize=8, ncol=2)
 fig.tight_layout()
-fig.savefig(OUT / "fig5_band_stats.png", dpi=200)
-print("saved", OUT / "fig5_band_stats.png")
+fig.savefig(OUT / "fig8_band_stats.png", dpi=200)
+print("saved", OUT / "fig8_band_stats.png")

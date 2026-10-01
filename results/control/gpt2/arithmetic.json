@@ -1,0 +1,508 @@
+{
+ "rows": [
+  {
+   "frame": "bare",
+   "expr": "4 * 2",
+   "answer": "8",
+   "rank": 8,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "5 + 4",
+   "answer": "9",
+   "rank": 10,
+   "top": " 4"
+  },
+  {
+   "frame": "bare",
+   "expr": "3 * 3",
+   "answer": "9",
+   "rank": 11,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "3 + 4",
+   "answer": "7",
+   "rank": 8,
+   "top": " 4"
+  },
+  {
+   "frame": "bare",
+   "expr": "2 * 3",
+   "answer": "6",
+   "rank": 7,
+   "top": " 4"
+  },
+  {
+   "frame": "bare",
+   "expr": "2 + 3",
+   "answer": "5",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "bare",
+   "expr": "14 / 2",
+   "answer": "7",
+   "rank": 12,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "18 / 2",
+   "answer": "9",
+   "rank": 14,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "11 - 5",
+   "answer": "6",
+   "rank": 5,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "15 - 7",
+   "answer": "8",
+   "rank": 5,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "9 - 5",
+   "answer": "4",
+   "rank": 6,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "11 - 9",
+   "answer": "2",
+   "rank": 3,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "12 / 4",
+   "answer": "3",
+   "rank": 7,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "21 / 3",
+   "answer": "7",
+   "rank": 11,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "24 / 3",
+   "answer": "8",
+   "rank": 8,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "rank": 11,
+   "top": " 3"
+  },
+  {
+   "frame": "bare",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "bare",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "rank": 12,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "rank": 10,
+   "top": " 2"
+  },
+  {
+   "frame": "bare",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "bare",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "rank": 11,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "rank": 11,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "rank": 10,
+   "top": " 1"
+  },
+  {
+   "frame": "bare",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "rank": 7,
+   "top": " 1"
+  },
+  {
+   "frame": "worked",
+   "expr": "4 * 2",
+   "answer": "8",
+   "rank": 7,
+   "top": " 6"
+  },
+  {
+   "frame": "worked",
+   "expr": "5 + 4",
+   "answer": "9",
+   "rank": 9,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "3 * 3",
+   "answer": "9",
+   "rank": 9,
+   "top": " 6"
+  },
+  {
+   "frame": "worked",
+   "expr": "3 + 4",
+   "answer": "7",
+   "rank": 7,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "2 * 3",
+   "answer": "6",
+   "rank": 1,
+   "top": " 6"
+  },
+  {
+   "frame": "worked",
+   "expr": "2 + 3",
+   "answer": "5",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "14 / 2",
+   "answer": "7",
+   "rank": 6,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "18 / 2",
+   "answer": "9",
+   "rank": 8,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "11 - 5",
+   "answer": "6",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "15 - 7",
+   "answer": "8",
+   "rank": 7,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "9 - 5",
+   "answer": "4",
+   "rank": 1,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "11 - 9",
+   "answer": "2",
+   "rank": 4,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "12 / 4",
+   "answer": "3",
+   "rank": 1,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "21 / 3",
+   "answer": "7",
+   "rank": 7,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "24 / 3",
+   "answer": "8",
+   "rank": 8,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "rank": 7,
+   "top": " 3"
+  },
+  {
+   "frame": "worked",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "rank": 9,
+   "top": " 2"
+  },
+  {
+   "frame": "worked",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "rank": 4,
+   "top": " 2"
+  },
+  {
+   "frame": "worked",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "rank": 5,
+   "top": " 4"
+  },
+  {
+   "frame": "worked",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "rank": 8,
+   "top": " 2"
+  },
+  {
+   "frame": "worked",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "rank": 8,
+   "top": " 2"
+  },
+  {
+   "frame": "worked",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "rank": 9,
+   "top": " 2"
+  },
+  {
+   "frame": "worked",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "rank": 6,
+   "top": " 2"
+  },
+  {
+   "frame": "qa",
+   "expr": "4 * 2",
+   "answer": "8",
+   "rank": 6,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "5 + 4",
+   "answer": "9",
+   "rank": 8,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "3 * 3",
+   "answer": "9",
+   "rank": 9,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "3 + 4",
+   "answer": "7",
+   "rank": 4,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "2 * 3",
+   "answer": "6",
+   "rank": 3,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "2 + 3",
+   "answer": "5",
+   "rank": 1,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "14 / 2",
+   "answer": "7",
+   "rank": 3,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "18 / 2",
+   "answer": "9",
+   "rank": 6,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "11 - 5",
+   "answer": "6",
+   "rank": 1,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "15 - 7",
+   "answer": "8",
+   "rank": 3,
+   "top": " 7"
+  },
+  {
+   "frame": "qa",
+   "expr": "9 - 5",
+   "answer": "4",
+   "rank": 3,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "11 - 9",
+   "answer": "2",
+   "rank": 11,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "12 / 4",
+   "answer": "3",
+   "rank": 6,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "21 / 3",
+   "answer": "7",
+   "rank": 3,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "24 / 3",
+   "answer": "8",
+   "rank": 5,
+   "top": " 6"
+  },
+  {
+   "frame": "qa",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "rank": 5,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "rank": 1,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "rank": 10,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "rank": 2,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "rank": 1,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "rank": 4,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "rank": 4,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "rank": 7,
+   "top": " 5"
+  },
+  {
+   "frame": "qa",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "rank": 1,
+   "top": " 6"
+  }
+ ]
+}

@@ -32,6 +32,18 @@ def sign_test(pairs) -> tuple[float, int, float]:
     return k / n, n, erfc(abs(z) / 2 ** 0.5)
 
 
+def pearson(xs, ys) -> float:
+    """Pearson correlation."""
+    n = len(xs)
+    if n < 2:
+        return float("nan")
+    mx, my = sum(xs) / n, sum(ys) / n
+    sxy = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
+    sxx = sum((x - mx) ** 2 for x in xs)
+    syy = sum((y - my) ** 2 for y in ys)
+    return sxy / (sxx * syy) ** 0.5 if sxx and syy else float("nan")
+
+
 def spearman(xs, ys) -> float:
     """Spearman rank correlation, no tie correction (the d^2 formula)."""
     if len(xs) < 2:

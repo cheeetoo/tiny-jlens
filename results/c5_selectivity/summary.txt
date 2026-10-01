@@ -15,7 +15,13 @@ S2a ablation battery  (n: two-hop 48, one-hop 52, induction 40, wikitext paras 1
   induction       automatic  1.00     0.95 (1.00-1.00)    0.65 (0.53-0.95)    0.00 (0.07-0.80)
   pretrain_match  automatic  1.00     0.71 (0.80-0.82)    0.54 (0.67-0.68)    0.41 (0.57-0.58)
 
-S2b language dissociation  (report gate: 7/8 passages; the SAME language swap under two tasks, by swap strength alpha)
+S2b language, swap across the question tokens (paper's form): the answer follows the swapped-in language
+  task       passages done correctly   alpha=1          alpha=2          language name in band lens over the question (median best rank)
+  report     7/8                       12/21 =  57%     13/21 =  62%     3
+  author     0/8                        0/0  =   0%      0/0  =   0%     53
+  continue   8/8                        0/24 =   0%      0/24 =   0%     568
+
+S2b, earlier version: the swap applied over the PASSAGE (report gate: 7/8 passages; the same language swap under two tasks, by swap strength alpha)
   alpha   deliberate report -> swapped language | automatic continuation -> keeps own language
     0.5    report flips  4/21 =  19%      continuation holds 19/21 =  90%
     1.0    report flips  8/21 =  38%      continuation holds 16/21 =  76%

@@ -531,10 +531,17 @@
    "source_gated": true,
    "target_gated": false,
    "clean_top1": " Paris",
-   "swapped_top1": " Beijing",
-   "follows": true,
    "target_rank_clean": 595,
-   "target_rank_swapped": 1
+   "coord": {
+    "swapped_top1": " Shanghai",
+    "follows": false,
+    "target_rank_swapped": 2
+   },
+   "subadd": {
+    "swapped_top1": " Beijing",
+    "follows": true,
+    "target_rank_swapped": 1
+   }
   },
   {
    "function": "language",
@@ -546,10 +553,17 @@
    "source_gated": true,
    "target_gated": true,
    "clean_top1": " French",
-   "swapped_top1": " Chinese",
-   "follows": true,
    "target_rank_clean": 53,
-   "target_rank_swapped": 1
+   "coord": {
+    "swapped_top1": " Chinese",
+    "follows": true,
+    "target_rank_swapped": 1
+   },
+   "subadd": {
+    "swapped_top1": " Chinese",
+    "follows": true,
+    "target_rank_swapped": 1
+   }
   },
   {
    "function": "continent",
@@ -561,10 +575,17 @@
    "source_gated": false,
    "target_gated": false,
    "clean_top1": " France",
-   "swapped_top1": " China",
-   "follows": false,
    "target_rank_clean": 10,
-   "target_rank_swapped": 5
+   "coord": {
+    "swapped_top1": " China",
+    "follows": false,
+    "target_rank_swapped": 2
+   },
+   "subadd": {
+    "swapped_top1": " China",
+    "follows": false,
+    "target_rank_swapped": 5
+   }
   },
   {
    "function": "currency",
@@ -576,10 +597,17 @@
    "source_gated": false,
    "target_gated": true,
    "clean_top1": " Franc",
-   "swapped_top1": " Yuan",
-   "follows": true,
    "target_rank_clean": 1366,
-   "target_rank_swapped": 1
+   "coord": {
+    "swapped_top1": " Yen",
+    "follows": false,
+    "target_rank_swapped": 2
+   },
+   "subadd": {
+    "swapped_top1": " Yuan",
+    "follows": true,
+    "target_rank_swapped": 1
+   }
   }
  ],
  "swap": [
@@ -601,24 +629,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " Toronto"
+     "got": " Toronto",
+     "effect": 21.118599236011505
     },
     "2.0": {
      "after": 16,
      "hit": false,
-     "got": " Vancouver"
+     "got": " Vancouver",
+     "effect": 26.127727806568146
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Toronto"
+     "got": " Toronto",
+     "effect": 15.281334102153778
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 19.48010689020157
     }
    }
   },
@@ -640,24 +672,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Beijing"
+     "got": " Beijing",
+     "effect": 24.322571218013763
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Beijing"
+     "got": " Beijing",
+     "effect": 31.218078911304474
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Shanghai"
+     "got": " Shanghai",
+     "effect": 14.820640981197357
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Beijing"
+     "got": " Beijing",
+     "effect": 20.865783870220184
     }
    }
   },
@@ -679,24 +715,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 30.030159056186676
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 35.51865464448929
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Alexandria"
+     "got": " Alexandria",
+     "effect": 15.180412590503693
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Alexandria"
+     "got": " Alexandria",
+     "effect": 24.091522991657257
     }
    }
   },
@@ -718,24 +758,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Paris"
+     "got": " Paris",
+     "effect": 28.71955156326294
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Paris"
+     "got": " Paris",
+     "effect": 39.63124018907547
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Paris"
+     "got": " Paris",
+     "effect": 10.441986501216888
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Paris"
+     "got": " Paris",
+     "effect": 21.847916305065155
     }
    }
   },
@@ -757,24 +801,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Beijing"
+     "got": " Beijing",
+     "effect": 25.676957070827484
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Beijing"
+     "got": " Beijing",
+     "effect": 36.18486100435257
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Shanghai"
+     "got": " Shanghai",
+     "effect": 13.724510610103607
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Shanghai"
+     "got": " Shanghai",
+     "effect": 20.71488243341446
     }
    }
   },
@@ -796,24 +844,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Cairo"
+     "got": " Cairo",
+     "effect": 37.00413626432419
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 46.10186976194382
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Alexandria"
+     "got": " Alexandria",
+     "effect": 15.419319570064545
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Alexandria"
+     "got": " Alexandria",
+     "effect": 32.78396683931351
     }
    }
   },
@@ -835,24 +887,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Paris"
+     "got": " Paris",
+     "effect": 31.474701166152954
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 45.3689968585968
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Marse"
+     "got": " Marse",
+     "effect": 21.83345890045166
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Stras"
+     "got": " Stras",
+     "effect": 38.81109046936035
     }
    }
   },
@@ -874,24 +930,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Toronto"
+     "got": " Toronto",
+     "effect": 29.64075493812561
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 48.64034581184387
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Toronto"
+     "got": " Toronto",
+     "effect": 21.367180109024048
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 42.131455421447754
     }
    }
   },
@@ -913,24 +973,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 36.359344482421875
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 48.62838935852051
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Shanghai"
+     "got": " Shanghai",
+     "effect": 10.64502763748169
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Alexandria"
+     "got": " Alexandria",
+     "effect": 29.34968638420105
     }
    }
   },
@@ -952,24 +1016,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 26.509692907333374
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 30.63299036026001
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Paris"
+     "got": " Paris",
+     "effect": 16.71416437625885
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 23.81340003013611
     }
    }
   },
@@ -991,24 +1059,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Ottawa"
+     "got": " Ottawa",
+     "effect": 28.22207510471344
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 30.427704572677612
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 18.257052898406982
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 23.267728090286255
     }
    }
   },
@@ -1030,24 +1102,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Beijing"
+     "got": " Beijing",
+     "effect": 25.752094268798828
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 29.179881811141968
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 18.570441961288452
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 22.26856029033661
     }
    }
   },
@@ -1069,24 +1145,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 8.94551857560873
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 14.996334038674831
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " English"
+     "got": " English",
+     "effect": 4.239112816751003
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 8.647067986428738
     }
    }
   },
@@ -1108,24 +1188,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 22.06452164053917
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 30.408908180892467
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 13.255172692239285
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 18.98031970113516
     }
    }
   },
@@ -1147,24 +1231,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 17.137123309075832
     },
     "2.0": {
      "after": 103,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 25.21351643651724
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 9.629440508782864
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 19.3698193654418
     }
    }
   },
@@ -1186,24 +1274,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 6.0109101459383965
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 7.523300528526306
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 2.619453325867653
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 3.6192704290151596
     }
    }
   },
@@ -1225,24 +1317,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 8.748046889901161
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 12.138564795255661
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 5.92214971780777
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 7.425712496042252
     }
    }
   },
@@ -1264,24 +1360,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 8.547667980194092
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 9.744377136230469
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " French"
+     "got": " French",
+     "effect": 5.618179440498352
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 7.875968933105469
     }
    }
   },
@@ -1303,24 +1403,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 25.98553393781185
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 37.42693442106247
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 14.751014690846205
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 32.22706550359726
     }
    }
   },
@@ -1342,24 +1446,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 11.945861995220184
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 22.936454713344574
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " French"
+     "got": " French",
+     "effect": 7.92086786031723
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " French"
+     "got": " French",
+     "effect": 18.847924172878265
     }
    }
   },
@@ -1381,24 +1489,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 19.85935229063034
     },
     "2.0": {
      "after": 24,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 31.949049174785614
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 8.170166194438934
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 25.310103595256805
     }
    }
   },
@@ -1420,24 +1532,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 21.40675650537014
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 25.607676684856415
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 9.20484907925129
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " French"
+     "got": " French",
+     "effect": 14.829239159822464
     }
    }
   },
@@ -1459,24 +1575,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " English"
+     "got": " English",
+     "effect": 17.93544763326645
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " English"
+     "got": " English",
+     "effect": 21.929432451725006
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " French"
+     "got": " French",
+     "effect": 8.155201256275177
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " English"
+     "got": " English",
+     "effect": 13.868724644184113
     }
    }
   },
@@ -1498,24 +1618,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 18.75373548269272
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Japanese"
+     "got": " Japanese",
+     "effect": 23.65832608938217
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 9.206764340400696
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Chinese"
+     "got": " Chinese",
+     "effect": 13.202289819717407
     }
    }
   },
@@ -1537,24 +1661,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 20.348342061042786
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 27.5460547208786
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 8.143905997276306
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 12.058205008506775
     }
    }
   },
@@ -1576,24 +1704,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 20.70504081249237
     },
     "2.0": {
      "after": 14,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 25.95082151889801
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 9.351409554481506
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 13.495468497276306
     }
    }
   },
@@ -1615,24 +1747,28 @@
     "1.0": {
      "after": 464,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 23.206833958625793
     },
     "2.0": {
      "after": 1107,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 29.588815808296204
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Central"
+     "got": " Central",
+     "effect": 12.118370652198792
     },
     "2.0": {
      "after": 115,
      "hit": false,
-     "got": " Central"
+     "got": " Central",
+     "effect": 20.72692835330963
     }
    }
   },
@@ -1654,24 +1790,28 @@
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 17.68714129924774
     },
     "2.0": {
      "after": 91,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 27.655905604362488
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Europe"
+     "got": " Europe",
+     "effect": 3.233184576034546
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 7.638412356376648
     }
    }
   },
@@ -1693,24 +1833,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 17.95825207233429
     },
     "2.0": {
      "after": 64,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 24.972609877586365
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Asia"
+     "got": " Asia",
+     "effect": 7.1042786836624146
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 11.712851881980896
     }
    }
   },
@@ -1732,24 +1876,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 25.892342448234558
     },
     "2.0": {
      "after": 158,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 32.12754046916962
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Central"
+     "got": " Central",
+     "effect": 10.022003054618835
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 23.01744854450226
     }
    }
   },
@@ -1771,24 +1919,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 9.491683840751648
     },
     "2.0": {
      "after": 23,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 10.16878592967987
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 7.5746990442276
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 10.786277651786804
     }
    }
   },
@@ -1810,24 +1962,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 6.6562420129776
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 5.9996336698532104
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 4.801673769950867
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 6.763435244560242
     }
    }
   },
@@ -1849,24 +2005,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 8.56750476360321
     },
     "2.0": {
      "after": 63,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 8.437071681022644
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " East"
+     "got": " East",
+     "effect": 4.722358584403992
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 6.8076478242874146
     }
    }
   },
@@ -1888,24 +2048,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 6.317168951034546
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 7.612571954727173
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 3.6560895442962646
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 5.511565923690796
     }
    }
   },
@@ -1927,24 +2091,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 2.0232467651367188
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 2.4596900939941406
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 1.0397186279296875
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 1.7088241577148438
     }
    }
   },
@@ -1966,24 +2134,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 1.3888168334960938
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 1.5582504272460938
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 1.3312911987304688
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " China"
+     "got": " China",
+     "effect": 1.7691724300384521
     }
    }
   },
@@ -2005,24 +2177,28 @@
     "1.0": {
      "after": 15,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 8.664337038993835
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " B"
+     "got": " B",
+     "effect": 12.36193835735321
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 6.131576418876648
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 9.932849526405334
     }
    }
   },
@@ -2044,24 +2220,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Yuan"
+     "got": " Yuan",
+     "effect": 17.73609960079193
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Yuan"
+     "got": " Yuan",
+     "effect": 21.237457871437073
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 12.235435605049133
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 15.292214274406433
     }
    }
   },
@@ -2083,24 +2263,28 @@
     "1.0": {
      "after": 425,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 6.656333804130554
     },
     "2.0": {
      "after": 2111,
      "hit": false,
-     "got": " Ob"
+     "got": " Ob",
+     "effect": 10.819479823112488
     }
    },
    "coord": {
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 4.3532408475875854
     },
     "2.0": {
      "after": 376,
      "hit": false,
-     "got": " Ob"
+     "got": " Ob",
+     "effect": 6.924430727958679
     }
    }
   },
@@ -2122,24 +2306,28 @@
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " French"
+     "got": " French",
+     "effect": 15.961318969726562
     },
     "2.0": {
      "after": 362,
      "hit": false,
-     "got": " F"
+     "got": " F",
+     "effect": 25.295394897460938
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " Franc"
+     "got": " Franc",
+     "effect": 3.9584197998046875
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " C"
+     "got": " C",
+     "effect": 10.84344482421875
     }
    }
   },
@@ -2161,24 +2349,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 19.476112008094788
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Yuan"
+     "got": " Yuan",
+     "effect": 28.19121503829956
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 8.250953197479248
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 14.84990668296814
     }
    }
   },
@@ -2200,24 +2392,28 @@
     "1.0": {
      "after": 389,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 11.936013221740723
     },
     "2.0": {
      "after": 2617,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 21.429412841796875
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 6.412834167480469
     },
     "2.0": {
      "after": 976,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 15.484176635742188
     }
    }
   },
@@ -2239,24 +2435,28 @@
     "1.0": {
      "after": 67,
      "hit": false,
-     "got": " Franc"
+     "got": " Franc",
+     "effect": 23.956589937210083
     },
     "2.0": {
      "after": 742,
      "hit": false,
-     "got": " France"
+     "got": " France",
+     "effect": 33.334490060806274
     }
    },
    "coord": {
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " Franc"
+     "got": " Franc",
+     "effect": 14.872062921524048
     },
     "2.0": {
      "after": 490,
      "hit": false,
-     "got": " F"
+     "got": " F",
+     "effect": 30.044707536697388
     }
    }
   },
@@ -2278,24 +2478,28 @@
     "1.0": {
      "after": 191,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 16.552223443984985
     },
     "2.0": {
      "after": 520,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 27.373710870742798
     }
    },
    "coord": {
     "1.0": {
      "after": 52,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 12.935539484024048
     },
     "2.0": {
      "after": 581,
      "hit": false,
-     "got": " Canada"
+     "got": " Canada",
+     "effect": 23.165489435195923
     }
    }
   },
@@ -2317,24 +2521,28 @@
     "1.0": {
      "after": 2339,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 14.611792802810669
     },
     "2.0": {
      "after": 4432,
      "hit": false,
-     "got": " Egypt"
+     "got": " Egypt",
+     "effect": 25.69549584388733
     }
    },
    "coord": {
     "1.0": {
      "after": 76,
      "hit": false,
-     "got": " Egyptian"
+     "got": " Egyptian",
+     "effect": 6.876487970352173
     },
     "2.0": {
      "after": 3239,
      "hit": false,
-     "got": " S"
+     "got": " S",
+     "effect": 21.100724458694458
     }
    }
   },
@@ -2356,24 +2564,28 @@
     "1.0": {
      "after": 69,
      "hit": false,
-     "got": " Franc"
+     "got": " Franc",
+     "effect": 3.0947954654693604
     },
     "2.0": {
      "after": 131,
      "hit": false,
-     "got": " D"
+     "got": " D",
+     "effect": 3.642547845840454
     }
    },
    "coord": {
     "1.0": {
      "after": 27,
      "hit": false,
-     "got": " Franc"
+     "got": " Franc",
+     "effect": 2.4756548404693604
     },
     "2.0": {
      "after": 79,
      "hit": false,
-     "got": " Franc"
+     "got": " Franc",
+     "effect": 3.1274149417877197
     }
    }
   },
@@ -2395,24 +2607,28 @@
     "1.0": {
      "after": 20,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 4.915970087051392
     },
     "2.0": {
      "after": 30,
      "hit": false,
-     "got": " Kron"
+     "got": " Kron",
+     "effect": 4.854007959365845
     }
    },
    "coord": {
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 4.017921686172485
     },
     "2.0": {
      "after": 14,
      "hit": false,
-     "got": " Canadian"
+     "got": " Canadian",
+     "effect": 4.95474648475647
     }
    }
   },
@@ -2434,24 +2650,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 3.8001062870025635
     },
     "2.0": {
      "after": 34,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 2.6827585697174072
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 3.265434503555298
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Yen"
+     "got": " Yen",
+     "effect": 3.449089288711548
     }
    }
   },
@@ -2473,24 +2693,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 0.4653282165527344
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 0.7055702209472656
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 0.6793746948242188
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 0.6936835050582886
     }
    }
   },
@@ -2512,24 +2736,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 1.2915534973144531
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " summer"
+     "got": " summer",
+     "effect": 2.443881869316101
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " summer"
+     "got": " summer",
+     "effect": 1.7055397033691406
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " summer"
+     "got": " summer",
+     "effect": 2.8915748596191406
     }
    }
   },
@@ -2551,24 +2779,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 2.0645828247070312
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " autumn"
+     "got": " autumn",
+     "effect": 3.4425352811813354
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " autumn"
+     "got": " autumn",
+     "effect": 2.6377334594726562
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " autumn"
+     "got": " autumn",
+     "effect": 3.742790102958679
     }
    }
   },
@@ -2590,24 +2822,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.0
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.0
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " spring"
+     "got": " spring",
+     "effect": 0.0
     }
    }
   },
@@ -2629,24 +2865,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.711929440498352
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 1.417831540107727
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.14681243896484375
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " spring"
+     "got": " spring",
+     "effect": 0.44821953773498535
     }
    }
   },
@@ -2668,24 +2908,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " fall"
+     "got": " fall",
+     "effect": 0.8599854707717896
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " October"
+     "got": " October",
+     "effect": 1.5210038423538208
     }
    },
    "coord": {
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.16481029987335205
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.2378312349319458
     }
    }
   },
@@ -2707,24 +2951,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " fall"
+     "got": " fall",
+     "effect": -0.11138147115707397
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 0.2851410508155823
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " fall"
+     "got": " fall",
+     "effect": 0.431922972202301
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " spring"
+     "got": " spring",
+     "effect": 1.2715149521827698
     }
    }
   },
@@ -2746,24 +2994,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " fall"
+     "got": " fall",
+     "effect": 1.0152283310890198
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 2.173835813999176
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 2.9239196181297302
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 5.209938108921051
     }
    }
   },
@@ -2785,24 +3037,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " fall"
+     "got": " fall",
+     "effect": 1.3674240708351135
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " October"
+     "got": " October",
+     "effect": 2.679145872592926
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " fall"
+     "got": " fall",
+     "effect": 0.6985931992530823
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " autumn"
+     "got": " autumn",
+     "effect": 1.626350462436676
     }
    }
   },
@@ -2824,24 +3080,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.0
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " winter"
+     "got": " winter",
+     "effect": 0.0
     }
    }
   },
@@ -2863,24 +3123,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 1.0348129272460938
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 1.7259750366210938
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 1.1695632934570312
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " spring"
+     "got": " spring",
+     "effect": 1.8267402648925781
     }
    }
   },
@@ -2902,24 +3166,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 1.3927383422851562
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " summer"
+     "got": " summer",
+     "effect": 2.656951904296875
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " winter"
+     "got": " winter",
+     "effect": 1.1498945951461792
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " summer"
+     "got": " summer",
+     "effect": 2.4750137329101562
     }
    }
   },
@@ -2941,24 +3209,28 @@
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0818634033203125
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.2554779052734375
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.575408935546875
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 1.0519256591796875
     }
    }
   },
@@ -2980,24 +3252,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.0
     }
    }
   },
@@ -3019,24 +3295,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.284454345703125
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.5020599365234375
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.06048595905303955
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.1040191650390625
     }
    }
   },
@@ -3058,24 +3338,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.2116091251373291
     },
     "2.0": {
      "after": 12,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.5692750215530396
     }
    },
    "coord": {
     "1.0": {
      "after": 12,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.32145678997039795
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.5862579345703125
     }
    }
   },
@@ -3097,24 +3381,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.0
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.0
     }
    }
   },
@@ -3136,24 +3424,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.484832763671875
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.9340667724609375
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": -0.544403076171875
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": -0.9661102294921875
     }
    }
   },
@@ -3175,24 +3467,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.6277925968170166
     },
     "2.0": {
      "after": 14,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.3163299560546875
     }
    },
    "coord": {
     "1.0": {
      "after": 15,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.4459991455078125
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.114501953125
     }
    }
   },
@@ -3214,24 +3510,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.662094235420227
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 1.3461761474609375
     }
    },
    "coord": {
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 1.7453765869140625
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 3.303955078125
     }
    }
   },
@@ -3253,24 +3553,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.948028564453125
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.804458498954773
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.7756805419921875
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.5452728271484375
     }
    }
   },
@@ -3292,24 +3596,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.4430999755859375
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.9958494901657104
     }
    },
    "coord": {
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.2490537166595459
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.512313723564148
     }
    }
   },
@@ -3331,24 +3639,28 @@
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.20532214641571045
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.45960986614227295
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.737808108329773
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 1.4123992919921875
     }
    }
   },
@@ -3370,24 +3682,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.0
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.0
     }
    }
   },
@@ -3409,24 +3725,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.6391830444335938
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 1.0567092895507812
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.4089164733886719
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.5600013732910156
     }
    }
   },
@@ -3448,24 +3768,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.5317227840423584
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 2.296546697616577
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.2434920072555542
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 1.3613736629486084
     }
    }
   },
@@ -3487,24 +3811,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.209983468055725
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 2.213927984237671
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.4262770414352417
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 2.434364080429077
     }
    }
   },
@@ -3526,24 +3854,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.37887585163116455
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 0.3851318359375
     }
    },
    "coord": {
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -0.14777374267578125
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -0.693634033203125
     }
    }
   },
@@ -3565,24 +3897,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.2186357975006104
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 2.101723074913025
     }
    },
    "coord": {
     "1.0": {
      "after": 11,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.5932542085647583
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.074623465538025
     }
    }
   },
@@ -3604,24 +3940,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.124603271484375
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.0678786039352417
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.103729248046875
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -0.08281713724136353
     }
    }
   },
@@ -3643,24 +3983,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.3280565738677979
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 2.0296175479888916
     }
    },
    "coord": {
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -0.0013959407806396484
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -0.38889288902282715
     }
    }
   },
@@ -3682,24 +4026,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " Easter"
+     "got": " Easter",
+     "effect": 1.1584625244140625
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Easter"
+     "got": " Easter",
+     "effect": 2.080078125
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.2674635648727417
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.41402435302734375
     }
    }
   },
@@ -3721,24 +4069,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.8382796049118042
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.4346923828125
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.22647106647491455
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.3184889554977417
     }
    }
   },
@@ -3760,24 +4112,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.8120421171188354
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 3.264838933944702
     }
    },
    "coord": {
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -0.6415865421295166
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": -1.6487655639648438
     }
    }
   },
@@ -3799,24 +4155,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.462325930595398
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " Easter"
+     "got": " Easter",
+     "effect": 2.686546206474304
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.43992602825164795
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.7699203491210938
     }
    }
   },
@@ -3838,24 +4198,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.479354739189148
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 2.4550169706344604
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 0.9101943969726562
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " Christmas"
+     "got": " Christmas",
+     "effect": 1.4785079956054688
     }
    }
   },
@@ -3877,24 +4241,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " March"
+     "got": " March",
+     "effect": 2.079982653260231
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 4.170234516263008
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 3.9292448312044144
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 5.624152973294258
     }
    }
   },
@@ -3916,24 +4284,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " March"
+     "got": " March",
+     "effect": 2.9398877769708633
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 5.990005329251289
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 5.342933490872383
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 7.58061583340168
     }
    }
   },
@@ -3955,24 +4327,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " March"
+     "got": " March",
+     "effect": 3.26781065762043
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " October"
+     "got": " October",
+     "effect": 6.442916706204414
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " September"
+     "got": " September",
+     "effect": 5.572059467434883
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " October"
+     "got": " October",
+     "effect": 9.022796466946602
     }
    }
   },
@@ -3994,24 +4370,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " May"
+     "got": " May",
+     "effect": 1.542426958680153
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 3.7168044596910477
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " May"
+     "got": " May",
+     "effect": 0.1658019796013832
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " May"
+     "got": " May",
+     "effect": 1.6545561403036118
     }
    }
   },
@@ -4033,24 +4413,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 2.045028641819954
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 4.894645646214485
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " May"
+     "got": " May",
+     "effect": 2.380660966038704
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 7.196281388401985
     }
    }
   },
@@ -4072,24 +4456,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " May"
+     "got": " May",
+     "effect": 3.7944716960191727
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " October"
+     "got": " October",
+     "effect": 8.095428422093391
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " May"
+     "got": " May",
+     "effect": 2.832946613430977
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " November"
+     "got": " November",
+     "effect": 9.47203053534031
     }
    }
   },
@@ -4111,24 +4499,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 2.126426987349987
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 5.011322192847729
     }
    },
    "coord": {
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 1.5388795360922813
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 4.194847397506237
     }
    }
   },
@@ -4150,24 +4542,28 @@
     "1.0": {
      "after": 47,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 1.7858349606394768
     },
     "2.0": {
      "after": 29,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 3.9367441460490227
     }
    },
    "coord": {
     "1.0": {
      "after": 11,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 6.074538879096508
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 12.768912963569164
     }
    }
   },
@@ -4189,24 +4585,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 2.7252884432673454
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " October"
+     "got": " October",
+     "effect": 5.722992114722729
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 1.9638751968741417
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " August"
+     "got": " August",
+     "effect": 4.822792284190655
     }
    }
   },
@@ -4228,24 +4628,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " November"
+     "got": " November",
+     "effect": 2.8469998836517334
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " February"
+     "got": " February",
+     "effect": 6.215438693761826
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " November"
+     "got": " November",
+     "effect": 1.9913937896490097
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " March"
+     "got": " March",
+     "effect": 7.95426931977272
     }
    }
   },
@@ -4267,24 +4671,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " November"
+     "got": " November",
+     "effect": 3.4440838992595673
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 7.032607883214951
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 7.621757358312607
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " April"
+     "got": " April",
+     "effect": 11.449042648077011
     }
    }
   },
@@ -4306,24 +4714,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " November"
+     "got": " November",
+     "effect": 2.8336868584156036
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 6.016761392354965
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 6.405204623937607
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " July"
+     "got": " July",
+     "effect": 11.120200961828232
     }
    }
   },
@@ -4345,24 +4757,28 @@
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 8.446449518203735
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 11.768676996231079
     }
    },
    "coord": {
     "1.0": {
      "after": 16,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 2.864929437637329
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 5.25531792640686
     }
    }
   },
@@ -4384,24 +4800,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 11.327378511428833
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 15.135083436965942
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " lake"
+     "got": " lake",
+     "effect": 3.4304888248443604
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 6.181411981582642
     }
    }
   },
@@ -4423,24 +4843,28 @@
     "1.0": {
      "after": 945,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 2.323753595352173
     },
     "2.0": {
      "after": 2450,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 4.962265253067017
     }
    },
    "coord": {
     "1.0": {
      "after": 572,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 0.5817031860351562
     },
     "2.0": {
      "after": 455,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 1.00067138671875
     }
    }
   },
@@ -4462,24 +4886,28 @@
     "1.0": {
      "after": 45,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 3.3511428833007812
     },
     "2.0": {
      "after": 68,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 4.825981140136719
     }
    },
    "coord": {
     "1.0": {
      "after": 164,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 0.9424974918365479
     },
     "2.0": {
      "after": 114,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 1.4423599243164062
     }
    }
   },
@@ -4501,24 +4929,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 4.166938781738281
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 6.243938446044922
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " lake"
+     "got": " lake",
+     "effect": 0.7087936401367188
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " lake"
+     "got": " lake",
+     "effect": 1.1925430297851562
     }
    }
   },
@@ -4540,24 +4972,28 @@
     "1.0": {
      "after": 1069,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 1.021836280822754
     },
     "2.0": {
      "after": 3297,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 2.147003650665283
     }
    },
    "coord": {
     "1.0": {
      "after": 457,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 0.17668938636779785
     },
     "2.0": {
      "after": 464,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 0.1507415771484375
     }
    }
   },
@@ -4579,24 +5015,28 @@
     "1.0": {
      "after": 183,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 6.814514636993408
     },
     "2.0": {
      "after": 660,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 7.961292743682861
     }
    },
    "coord": {
     "1.0": {
      "after": 43,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 3.7213828563690186
     },
     "2.0": {
      "after": 70,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 5.156067371368408
     }
    }
   },
@@ -4618,24 +5058,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 13.5478515625
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 16.07872772216797
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 4.468452453613281
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 8.819038391113281
     }
    }
   },
@@ -4657,24 +5101,28 @@
     "1.0": {
      "after": 571,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 14.594712734222412
     },
     "2.0": {
      "after": 735,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 18.713982105255127
     }
    },
    "coord": {
     "1.0": {
      "after": 778,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 5.483215808868408
     },
     "2.0": {
      "after": 431,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 8.574013233184814
     }
    }
   },
@@ -4696,24 +5144,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 7.116523504257202
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 9.306732892990112
     }
    },
    "coord": {
     "1.0": {
      "after": 30,
      "hit": false,
-     "got": " forest"
+     "got": " forest",
+     "effect": 2.7377471923828125
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 4.377906560897827
     }
    }
   },
@@ -4735,24 +5187,28 @@
     "1.0": {
      "after": 14,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 7.240302801132202
     },
     "2.0": {
      "after": 86,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 9.208022832870483
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 3.1590116024017334
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 5.349120855331421
     }
    }
   },
@@ -4774,24 +5230,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 10.791198492050171
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 13.41323733329773
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " ocean"
+     "got": " ocean",
+     "effect": 5.142425537109375
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 7.53106689453125
     }
    }
   },
@@ -4813,24 +5273,28 @@
     "1.0": {
      "after": 18,
      "hit": false,
-     "got": " twelve"
+     "got": " twelve",
+     "effect": 1.094421625137329
     },
     "2.0": {
      "after": 12,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 4.337051630020142
     }
    },
    "coord": {
     "1.0": {
      "after": 21,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.13017284870147705
     },
     "2.0": {
      "after": 21,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.34764134883880615
     }
    }
   },
@@ -4852,24 +5316,28 @@
     "1.0": {
      "after": 171,
      "hit": false,
-     "got": " fifteen"
+     "got": " fifteen",
+     "effect": -0.9498441219329834
     },
     "2.0": {
      "after": 374,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 0.9654390811920166
     }
    },
    "coord": {
     "1.0": {
      "after": 94,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.1561424732208252
     },
     "2.0": {
      "after": 103,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.2739260196685791
     }
    }
   },
@@ -4891,24 +5359,28 @@
     "1.0": {
      "after": 21,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.0205385684967041
     },
     "2.0": {
      "after": 36,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 1.9649507999420166
     }
    },
    "coord": {
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.0987393856048584
     },
     "2.0": {
      "after": 23,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.0506589412689209
     }
    }
   },
@@ -4930,24 +5402,28 @@
     "1.0": {
      "after": 11,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.07034313678741455
     },
     "2.0": {
      "after": 12,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.85693359375
     }
    },
    "coord": {
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.12164306640625
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.306549072265625
     }
    }
   },
@@ -4969,24 +5445,28 @@
     "1.0": {
      "after": 123,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.28494298458099365
     },
     "2.0": {
      "after": 186,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.7598273754119873
     }
    },
    "coord": {
     "1.0": {
      "after": 94,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.07345664501190186
     },
     "2.0": {
      "after": 101,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.2064676284790039
     }
    }
   },
@@ -5008,24 +5488,28 @@
     "1.0": {
      "after": 20,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.09803760051727295
     },
     "2.0": {
      "after": 21,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 1.1361618041992188
     }
    },
    "coord": {
     "1.0": {
      "after": 17,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.577468752861023
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 1.22637939453125
     }
    }
   },
@@ -5047,24 +5531,28 @@
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.37408447265625
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.093414306640625
     }
    },
    "coord": {
     "1.0": {
      "after": 11,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.049346923828125
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.09085071086883545
     }
    }
   },
@@ -5086,24 +5574,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 1.1761932373046875
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 2.81439208984375
     }
    },
    "coord": {
     "1.0": {
      "after": 21,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.0925290584564209
     },
     "2.0": {
      "after": 21,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.18505847454071045
     }
    }
   },
@@ -5125,24 +5617,28 @@
     "1.0": {
      "after": 17,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.27449023723602295
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 1.3360214233398438
     }
    },
    "coord": {
     "1.0": {
      "after": 20,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.20162975788116455
     },
     "2.0": {
      "after": 19,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.45312488079071045
     }
    }
   },
@@ -5164,24 +5660,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 1.437164306640625
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 3.1817474365234375
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.049285888671875
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.13029491901397705
     }
    }
   },
@@ -5203,24 +5703,28 @@
     "1.0": {
      "after": 14,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 2.2411653995513916
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 4.871322870254517
     }
    },
    "coord": {
     "1.0": {
      "after": 18,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.5059055089950562
     },
     "2.0": {
      "after": 17,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 1.0552828311920166
     }
    }
   },
@@ -5242,24 +5746,28 @@
     "1.0": {
      "after": 101,
      "hit": false,
-     "got": " 20"
+     "got": " 20",
+     "effect": 1.728424072265625
     },
     "2.0": {
      "after": 131,
      "hit": false,
-     "got": " 12"
+     "got": " 12",
+     "effect": 3.981720209121704
     }
    },
    "coord": {
     "1.0": {
      "after": 78,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.4292757511138916
     },
     "2.0": {
      "after": 73,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.8621522188186646
     }
    }
   },
@@ -5281,24 +5789,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 32.32211196422577
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 44.48073375225067
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 5.131309151649475
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 13.921592831611633
     }
    }
   },
@@ -5320,24 +5832,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 26.941009402275085
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 37.64650523662567
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " mammal"
+     "got": " mammal",
+     "effect": 3.051467776298523
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 6.7177122831344604
     }
    }
   },
@@ -5359,24 +5875,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 28.085830569267273
     },
     "2.0": {
      "after": 36,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 39.121896624565125
     }
    },
    "coord": {
     "1.0": {
      "after": 52,
      "hit": false,
-     "got": " snake"
+     "got": " snake",
+     "effect": 3.9789732694625854
     },
     "2.0": {
      "after": 27,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 9.968047976493835
     }
    }
   },
@@ -5398,24 +5918,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 7.906216144561768
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 10.571263313293457
     }
    },
    "coord": {
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " bird"
+     "got": " bird",
+     "effect": 1.3725814819335938
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 2.4528656005859375
     }
    }
   },
@@ -5437,24 +5961,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 10.082542419433594
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 12.74191951751709
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " fish"
+     "got": " fish",
+     "effect": 2.133026123046875
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " fish"
+     "got": " fish",
+     "effect": 3.52044677734375
     }
    }
   },
@@ -5476,24 +6004,28 @@
     "1.0": {
      "after": 29,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 8.808784246444702
     },
     "2.0": {
      "after": 66,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 12.090854406356812
     }
    },
    "coord": {
     "1.0": {
      "after": 50,
      "hit": false,
-     "got": " bird"
+     "got": " bird",
+     "effect": 0.9186934232711792
     },
     "2.0": {
      "after": 48,
      "hit": false,
-     "got": " bird"
+     "got": " bird",
+     "effect": 1.6132431030273438
     }
    }
   },
@@ -5515,24 +6047,28 @@
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 20.816523671150208
     },
     "2.0": {
      "after": 226,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 28.356820225715637
     }
    },
    "coord": {
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 6.242988705635071
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 11.657989621162415
     }
    }
   },
@@ -5554,24 +6090,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 33.33824169635773
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 40.40947735309601
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 9.250495791435242
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 19.93266212940216
     }
    }
   },
@@ -5593,24 +6133,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 27.483845829963684
     },
     "2.0": {
      "after": 16,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 36.830761075019836
     }
    },
    "coord": {
     "1.0": {
      "after": 39,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 5.891822934150696
     },
     "2.0": {
      "after": 24,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 11.00415813922882
     }
    }
   },
@@ -5632,24 +6176,28 @@
     "1.0": {
      "after": 12,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 7.048866033554077
     },
     "2.0": {
      "after": 90,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 10.212203741073608
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 1.6804425716400146
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 4.018439531326294
     }
    }
   },
@@ -5671,24 +6219,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 11.592666625976562
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 15.023651123046875
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 3.4784622192382812
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 7.250396251678467
     }
    }
   },
@@ -5710,24 +6262,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 8.176207542419434
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 13.406959533691406
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " fish"
+     "got": " fish",
+     "effect": 2.0827255249023438
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 3.1935274600982666
     }
    }
   },
@@ -5749,24 +6305,28 @@
     "1.0": {
      "after": 19826,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 1.7686270475387573
     },
     "2.0": {
      "after": 18183,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 6.934146761894226
     }
    },
    "coord": {
     "1.0": {
      "after": 10604,
      "hit": false,
-     "got": " pack"
+     "got": " pack",
+     "effect": -0.8854185342788696
     },
     "2.0": {
      "after": 14283,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 0.2643698453903198
     }
    }
   },
@@ -5788,24 +6348,28 @@
     "1.0": {
      "after": 124,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 10.46197497844696
     },
     "2.0": {
      "after": 358,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 14.844951510429382
     }
    },
    "coord": {
     "1.0": {
      "after": 160,
      "hit": false,
-     "got": " school"
+     "got": " school",
+     "effect": 1.631991982460022
     },
     "2.0": {
      "after": 104,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 3.7139662504196167
     }
    }
   },
@@ -5827,24 +6391,28 @@
     "1.0": {
      "after": 186,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 11.623165011405945
     },
     "2.0": {
      "after": 570,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 15.751972079277039
     }
    },
    "coord": {
     "1.0": {
      "after": 468,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 2.5110474824905396
     },
     "2.0": {
      "after": 239,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 4.981273531913757
     }
    }
   },
@@ -5866,24 +6434,28 @@
     "1.0": {
      "after": 852,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 0.6208233833312988
     },
     "2.0": {
      "after": 1280,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 2.2274904251098633
     }
    },
    "coord": {
     "1.0": {
      "after": 939,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 0.0003434419631958008
     },
     "2.0": {
      "after": 872,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 0.0635915994644165
     }
    }
   },
@@ -5905,24 +6477,28 @@
     "1.0": {
      "after": 39,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 5.951996326446533
     },
     "2.0": {
      "after": 22,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 9.501854419708252
     }
    },
    "coord": {
     "1.0": {
      "after": 285,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 0.10090696811676025
     },
     "2.0": {
      "after": 221,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 0.493202805519104
     }
    }
   },
@@ -5944,24 +6520,28 @@
     "1.0": {
      "after": 65,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 6.8924455642700195
     },
     "2.0": {
      "after": 45,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 10.687309741973877
     }
    },
    "coord": {
     "1.0": {
      "after": 815,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 0.2500842809677124
     },
     "2.0": {
      "after": 658,
      "hit": false,
-     "got": " herd"
+     "got": " herd",
+     "effect": 0.6207277774810791
     }
    }
   },
@@ -5983,24 +6563,28 @@
     "1.0": {
      "after": 45,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 25.15612816810608
     },
     "2.0": {
      "after": 18,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 35.455601930618286
     }
    },
    "coord": {
     "1.0": {
      "after": 462,
      "hit": false,
-     "got": " school"
+     "got": " school",
+     "effect": 5.406280755996704
     },
     "2.0": {
      "after": 238,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 12.092247247695923
     }
    }
   },
@@ -6022,24 +6606,28 @@
     "1.0": {
      "after": 25033,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 20.74578309059143
     },
     "2.0": {
      "after": 19268,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 33.02955460548401
     }
    },
    "coord": {
     "1.0": {
      "after": 9161,
      "hit": false,
-     "got": " flock"
+     "got": " flock",
+     "effect": 3.7754366397857666
     },
     "2.0": {
      "after": 15069,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 11.575088739395142
     }
    }
   },
@@ -6061,24 +6649,28 @@
     "1.0": {
      "after": 295,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 23.803189516067505
     },
     "2.0": {
      "after": 554,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 32.602285623550415
     }
    },
    "coord": {
     "1.0": {
      "after": 338,
      "hit": false,
-     "got": " school"
+     "got": " school",
+     "effect": 5.785095453262329
     },
     "2.0": {
      "after": 213,
      "hit": false,
-     "got": " spider"
+     "got": " spider",
+     "effect": 10.952247858047485
     }
    }
   },
@@ -6100,24 +6692,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 28.51415979862213
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 39.08608114719391
     }
    },
    "coord": {
     "1.0": {
      "after": 634,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 6.005553841590881
     },
     "2.0": {
      "after": 139,
      "hit": false,
-     "got": " lion"
+     "got": " lion",
+     "effect": 14.482917428016663
     }
    }
   },
@@ -6139,24 +6735,28 @@
     "1.0": {
      "after": 15744,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 21.280486702919006
     },
     "2.0": {
      "after": 12405,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 31.82697069644928
     }
    },
    "coord": {
     "1.0": {
      "after": 7486,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 3.127829670906067
     },
     "2.0": {
      "after": 10390,
      "hit": false,
-     "got": " eagle"
+     "got": " eagle",
+     "effect": 11.312347054481506
     }
    }
   },
@@ -6178,24 +6778,28 @@
     "1.0": {
      "after": 40,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 26.31707775592804
     },
     "2.0": {
      "after": 33,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 36.11858379840851
     }
    },
    "coord": {
     "1.0": {
      "after": 83,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 5.085170865058899
     },
     "2.0": {
      "after": 45,
      "hit": false,
-     "got": " shark"
+     "got": " shark",
+     "effect": 11.049824357032776
     }
    }
   },
@@ -6217,24 +6821,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.35221850872039795
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.720077395439148
     }
    },
    "coord": {
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": -0.05110955238342285
     },
     "2.0": {
      "after": 16,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": -0.25499725341796875
     }
    }
   },
@@ -6256,24 +6864,28 @@
     "1.0": {
      "after": 14,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.7484132051467896
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 1.4129486083984375
     }
    },
    "coord": {
     "1.0": {
      "after": 51,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": 0.5760421752929688
     },
     "2.0": {
      "after": 107,
      "hit": false,
-     "got": " a"
+     "got": " a",
+     "effect": 1.81353759765625
     }
    }
   },
@@ -6295,24 +6907,28 @@
     "1.0": {
      "after": 19,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 1.398452639579773
     },
     "2.0": {
      "after": 16,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 2.575653076171875
     }
    },
    "coord": {
     "1.0": {
      "after": 237,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": 0.12277626991271973
     },
     "2.0": {
      "after": 770,
      "hit": false,
-     "got": " a"
+     "got": " a",
+     "effect": 0.8592872619628906
     }
    }
   },
@@ -6334,24 +6950,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.2801361083984375
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.521240234375
     }
    },
    "coord": {
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 0.15941238403320312
     },
     "2.0": {
      "after": 179,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.8131828308105469
     }
    }
   },
@@ -6373,24 +6993,28 @@
     "1.0": {
      "after": 15,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.8309016227722168
     },
     "2.0": {
      "after": 14,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 1.501281499862671
     }
    },
    "coord": {
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": -1.1779556274414062
     },
     "2.0": {
      "after": 44,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": -1.7837754487991333
     }
    }
   },
@@ -6412,24 +7036,28 @@
     "1.0": {
      "after": 16,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 1.5913236141204834
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 2.7490687370300293
     }
    },
    "coord": {
     "1.0": {
      "after": 48,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": -1.5927813053131104
     },
     "2.0": {
      "after": 191,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": -1.8581314086914062
     }
    }
   },
@@ -6451,24 +7079,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.8077239990234375
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 1.5652464628219604
     }
    },
    "coord": {
     "1.0": {
      "after": 54,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 1.7009810209274292
     },
     "2.0": {
      "after": 613,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 2.5691603422164917
     }
    }
   },
@@ -6490,24 +7122,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 1.1996915340423584
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 2.424239993095398
     }
    },
    "coord": {
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 3.368331551551819
     },
     "2.0": {
      "after": 16,
      "hit": false,
-     "got": " a"
+     "got": " a",
+     "effect": 5.336372256278992
     }
    }
   },
@@ -6529,24 +7165,28 @@
     "1.0": {
      "after": 18,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 1.4505306482315063
     },
     "2.0": {
      "after": 17,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 2.720382571220398
     }
    },
    "coord": {
     "1.0": {
      "after": 20,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 1.637863278388977
     },
     "2.0": {
      "after": 12,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 4.082748293876648
     }
    }
   },
@@ -6568,24 +7208,28 @@
     "1.0": {
      "after": 24,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.1277618408203125
     },
     "2.0": {
      "after": 51,
      "hit": false,
-     "got": " 10"
+     "got": " 10",
+     "effect": 0.4361494779586792
     }
    },
    "coord": {
     "1.0": {
      "after": 55,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 3.7175177335739136
     },
     "2.0": {
      "after": 504,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 3.732047915458679
     }
    }
   },
@@ -6607,24 +7251,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.0
     },
     "2.0": {
      "after": 31,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.0
     }
    }
   },
@@ -6646,24 +7294,28 @@
     "1.0": {
      "after": 18,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.15518176555633545
     },
     "2.0": {
      "after": 23,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.2759246826171875
     }
    },
    "coord": {
     "1.0": {
      "after": 18,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 1.8472670316696167
     },
     "2.0": {
      "after": 53,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 2.1204603910446167
     }
    }
   },
@@ -6685,24 +7337,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.1641082763671875
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.323455810546875
     }
    },
    "coord": {
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 0.09368896484375
     },
     "2.0": {
      "after": 25,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 0.596710205078125
     }
    }
   },
@@ -6724,24 +7380,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 15,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 0.0
     },
     "2.0": {
      "after": 367,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.0
     }
    }
   },
@@ -6763,24 +7423,28 @@
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.505950927734375
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.9800567626953125
     }
    },
    "coord": {
     "1.0": {
      "after": 72,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": -0.058475494384765625
     },
     "2.0": {
      "after": 159,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 2.898101806640625
     }
    }
   },
@@ -6802,24 +7466,28 @@
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": -0.1191251277923584
     },
     "2.0": {
      "after": 22,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": -0.2047882080078125
     }
    },
    "coord": {
     "1.0": {
      "after": 20,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 0.40531182289123535
     },
     "2.0": {
      "after": 99,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 1.7645759582519531
     }
    }
   },
@@ -6841,24 +7509,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.0
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 0.0
     }
    }
   },
@@ -6880,24 +7552,28 @@
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.30926513671875
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 0.5998687744140625
     }
    },
    "coord": {
     "1.0": {
      "after": 19,
      "hit": false,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": -0.35440826416015625
     },
     "2.0": {
      "after": 80,
      "hit": false,
-     "got": " a"
+     "got": " a",
+     "effect": -0.3682899475097656
     }
    }
   },
@@ -6919,24 +7595,28 @@
     "1.0": {
      "after": 23,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": -0.3071131706237793
     },
     "2.0": {
      "after": 24,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": -0.4568479061126709
     }
    },
    "coord": {
     "1.0": {
      "after": 43,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": 0.9392588138580322
     },
     "2.0": {
      "after": 623,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 1.8453257083892822
     }
    }
   },
@@ -6958,24 +7638,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.3441314697265625
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.7043609619140625
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.9452056884765625
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 1.5582199096679688
     }
    }
   },
@@ -6997,24 +7681,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.2638702392578125
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " ninety"
+     "got": " ninety",
+     "effect": 0.500152587890625
     }
    },
    "coord": {
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": -0.4474717378616333
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": -0.7594375610351562
     }
    }
   },
@@ -7036,24 +7724,28 @@
     "1.0": {
      "after": 29,
      "hit": false,
-     "got": " forty"
+     "got": " forty",
+     "effect": -1.6473841667175293
     },
     "2.0": {
      "after": 195,
      "hit": false,
-     "got": " two"
+     "got": " two",
+     "effect": -2.8737411499023438
     }
    },
    "coord": {
     "1.0": {
      "after": 134,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.34828972816467285
     },
     "2.0": {
      "after": 2068,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 0.9053232669830322
     }
    }
   },
@@ -7075,24 +7767,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.164276123046875
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 0.42110443115234375
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " twenty"
+     "got": " twenty",
+     "effect": 0.7636833190917969
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " a"
+     "got": " a",
+     "effect": 1.2233085632324219
     }
    }
   },
@@ -7114,24 +7810,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.0
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " seventy"
+     "got": " seventy",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " forty"
+     "got": " forty",
+     "effect": 0.0
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.0
     }
    }
   },
@@ -7153,24 +7853,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.41706857085227966
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.8724290430545807
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 0.8100776374340057
     },
     "2.0": {
      "after": 27,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": 1.0889855325222015
     }
    }
   },
@@ -7192,24 +7896,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 1.2238235771656036
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 2.501922696828842
     }
    },
    "coord": {
     "1.0": {
      "after": 35,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": 1.0419693887233734
     },
     "2.0": {
      "after": 195,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 1.123342603445053
     }
    }
   },
@@ -7231,24 +7939,28 @@
     "1.0": {
      "after": 13,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 1.0223539769649506
     },
     "2.0": {
      "after": 13,
      "hit": false,
-     "got": " four"
+     "got": " four",
+     "effect": 2.15322145819664
     }
    },
    "coord": {
     "1.0": {
      "after": 18,
      "hit": false,
-     "got": " three"
+     "got": " three",
+     "effect": 2.0579489171504974
     },
     "2.0": {
      "after": 101,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 2.6334494054317474
     }
    }
   },
@@ -7270,24 +7982,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " six"
+     "got": " six",
+     "effect": 0.14728575944900513
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " six"
+     "got": " six",
+     "effect": 0.36219796538352966
     }
    },
    "coord": {
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 5.2423136830329895
     },
     "2.0": {
      "after": 59,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 5.909542143344879
     }
    }
   },
@@ -7309,24 +8025,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " six"
+     "got": " six",
+     "effect": 0.431327760219574
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 0.932334840297699
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 0.7897493243217468
     },
     "2.0": {
      "after": 15,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 1.222919523715973
     }
    }
   },
@@ -7348,24 +8068,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " six"
+     "got": " six",
+     "effect": 0.28276073932647705
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " six"
+     "got": " six",
+     "effect": 0.7414246201515198
     }
    },
    "coord": {
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " six"
+     "got": " six",
+     "effect": 1.2178879380226135
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 2.0394592881202698
     }
    }
   },
@@ -7387,24 +8111,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": 1.0586395859718323
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": 2.341545045375824
     }
    },
    "coord": {
     "1.0": {
      "after": 14,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 6.2270336747169495
     },
     "2.0": {
      "after": 111,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 7.543197691440582
     }
    }
   },
@@ -7426,24 +8154,28 @@
     "1.0": {
      "after": 10,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": 0.507682740688324
     },
     "2.0": {
      "after": 11,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": 1.149353265762329
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " five"
+     "got": " five",
+     "effect": 4.8454514145851135
     },
     "2.0": {
      "after": 66,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 5.604772627353668
     }
    }
   },
@@ -7465,24 +8197,28 @@
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": 0.6477660536766052
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " nine"
+     "got": " nine",
+     "effect": 1.2810515761375427
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": -0.0662078857421875
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " eight"
+     "got": " eight",
+     "effect": -0.12938693165779114
     }
    }
   },
@@ -7504,24 +8240,28 @@
     "1.0": {
      "after": 14,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.5860442817211151
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 1.7671433091163635
     }
    },
    "coord": {
     "1.0": {
      "after": 15,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 6.586255967617035
     },
     "2.0": {
      "after": 96,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 7.432516038417816
     }
    }
   },
@@ -7543,24 +8283,28 @@
     "1.0": {
      "after": 17,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": -0.056030482053756714
     },
     "2.0": {
      "after": 12,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.36297619342803955
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 4.596965491771698
     },
     "2.0": {
      "after": 53,
      "hit": false,
-     "got": " the"
+     "got": " the",
+     "effect": 4.683957993984222
     }
    }
   },
@@ -7582,24 +8326,28 @@
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.28039562702178955
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " ten"
+     "got": " ten",
+     "effect": 0.9011306762695312
     }
    },
    "coord": {
     "1.0": {
      "after": 3,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 3.913658082485199
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " seven"
+     "got": " seven",
+     "effect": 5.204273164272308
     }
    }
   },
@@ -7621,24 +8369,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     }
    }
   },
@@ -7660,24 +8412,28 @@
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0685882568359375
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.158233642578125
     }
    },
    "coord": {
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.0717010498046875
     },
     "2.0": {
      "after": 10,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.1042633056640625
     }
    }
   },
@@ -7699,24 +8455,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " n"
+     "got": " n",
+     "effect": 0.115509033203125
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " n"
+     "got": " n",
+     "effect": 0.2376556396484375
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.14560699462890625
     },
     "2.0": {
      "after": 5,
      "hit": false,
-     "got": " d"
+     "got": " d",
+     "effect": -0.10596466064453125
     }
    }
   },
@@ -7738,24 +8498,28 @@
     "1.0": {
      "after": 8,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.005767941474914551
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.03811657428741455
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.9360963106155396
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " z"
+     "got": " z",
+     "effect": 1.702877163887024
     }
    }
   },
@@ -7777,24 +8541,28 @@
     "1.0": {
      "after": 6,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.11442577838897705
     },
     "2.0": {
      "after": 7,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.22587597370147705
     }
    },
    "coord": {
     "1.0": {
      "after": 9,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.08219897747039795
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.11859118938446045
     }
    }
   },
@@ -7816,24 +8584,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.2114870548248291
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.414306640625
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.18381500244140625
     },
     "2.0": {
      "after": 4,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": -0.2353438138961792
     }
    }
   },
@@ -7855,24 +8627,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.07220458984375
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.18805694580078125
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " z"
+     "got": " z",
+     "effect": 0.8514785766601562
     },
     "2.0": {
      "after": 3,
      "hit": false,
-     "got": " z"
+     "got": " z",
+     "effect": 1.2040939331054688
     }
    }
   },
@@ -7894,24 +8670,28 @@
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     },
     "2.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 0.0
     }
    }
   },
@@ -7933,24 +8713,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.124664306640625
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.2572021484375
     }
    },
    "coord": {
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.12908935546875
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.267913818359375
     }
    }
   },
@@ -7972,24 +8756,28 @@
     "1.0": {
      "after": 7,
      "hit": false,
-     "got": " n"
+     "got": " n",
+     "effect": 0.0462188720703125
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " n"
+     "got": " n",
+     "effect": 0.1511460542678833
     }
    },
    "coord": {
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " z"
+     "got": " z",
+     "effect": 1.318893551826477
     },
     "2.0": {
      "after": 9,
      "hit": false,
-     "got": " z"
+     "got": " z",
+     "effect": 1.7815724611282349
     }
    }
   },
@@ -8011,24 +8799,28 @@
     "1.0": {
      "after": 2,
      "hit": false,
-     "got": " n"
+     "got": " n",
+     "effect": 0.2515031099319458
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " n"
+     "got": " n",
+     "effect": 0.4898684024810791
     }
    },
    "coord": {
     "1.0": {
      "after": 1,
      "hit": true,
-     "got": " f"
+     "got": " f",
+     "effect": 1.1512681245803833
     },
     "2.0": {
      "after": 2,
      "hit": false,
-     "got": " z"
+     "got": " z",
+     "effect": 1.2473317384719849
     }
    }
   },
@@ -8050,24 +8842,28 @@
     "1.0": {
      "after": 5,
      "hit": false,
-     "got": " n"
+     "got": " n",
+     "effect": -0.00374603271484375
     },
     "2.0": {
      "after": 6,
      "hit": false,
-     "got": " n"
+     "got": " n",
+     "effect": 0.0075836181640625
     }
    },
    "coord": {
     "1.0": {
      "after": 4,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 0.752853512763977
     },
     "2.0": {
      "after": 8,
      "hit": false,
-     "got": " f"
+     "got": " f",
+     "effect": 1.1269913911819458
     }
    }
   }
@@ -8544,7 +9340,7 @@
    }
   },
   "swap_n": 27,
-  "swap_hit": 3
+  "swap_hit": 5
  },
  "alphas": [
   1.0,

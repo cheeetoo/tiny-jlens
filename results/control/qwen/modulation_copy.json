@@ -1,0 +1,7596 @@
+{
+ "rows": [
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "mention",
+   "first": false,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 3,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "mention",
+   "first": false,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "focus",
+   "first": false,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 3,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 3,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 4,
+   "cond": "mention",
+   "first": false,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 4,
+   "cond": "focus",
+   "first": false,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 3,
+   "cond": "focus",
+   "first": false,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 3,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 7,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 3,
+   "cond": "focus",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "mention",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 3,
+   "cond": "mention",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 4,
+   "cond": "mention",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "baseline",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "mention",
+   "first": false,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "focus",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 10,
+   "n_rest": 10
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 3,
+   "cond": "baseline",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 3,
+   "cond": "mention",
+   "first": false,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 3,
+   "cond": "focus",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 3,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 3,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 8,
+   "n_rest": 8
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 4,
+   "cond": "baseline",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 4,
+   "cond": "mention",
+   "first": false,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 4,
+   "cond": "focus",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 4,
+   "cond": "dismissal",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 4,
+   "cond": "negated-think",
+   "first": true,
+   "rest": 9,
+   "n_rest": 9
+  }
+ ],
+ "replies": [
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its branches twisting like the way the sun was trying to reach the",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town. The air smells of fresh citrus zest and warm honey, and the light hits",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended. The sun had just dipped below the horizon, painting the sky in hues of",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "citrus fruits",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "months of the year.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.\n\nMonths of the year passed, and the wall remained a silent",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "January",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "The months of the year were not just a sequence of dates, but a tapestry woven from the threads of anticipation,",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "months of the year",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "Monday.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "Monday. The old painting hung crookedly on the wall.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "Monday",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "Monday. The sun is shining brightly today in town.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "Monday",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "Monday. The clock struck twelve, and the silence stretched long enough to hold the weight of the week. They all went",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "days of the week",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its canvas stretched taut against the uneven ceiling, casting a shadow",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.\n\nThe sun hung low over the horizon, casting long shadows across the city",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "planets",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its diagonal lines of color stretching across the surface like a broken chess",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.\nA knight's eye glows on the white square, casting a warm",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "The King, Queen, and Rook all moved to the corner.\nThe Bishop, Knight, and Pawns all",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.\n\nThe board was quiet, the pieces resting in their designated squares, waiting",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "chess pieces",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall. precious metals.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its frame tarnished by decades of neglect. The gold leaf on",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended. precious metals.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended. The heavy, golden dust of the day settled on the floor like a slow",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "precious metals",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its surface a mosaic of fractured emeralds and obsidian shards",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.\n\nThe heavy silence of the office faded into the quiet of the night,",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "gemstones",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its frame twisted like a bent willow. A pig trotted",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town. The cows are grazing on the green pasture, and the chickens are pecking",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town. A flock of sheep grazes peacefully on the green pasture, their wool soft",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "The sun had just dipped below the horizon, painting the sky in hues of orange and gold, and the heavy, rhyth",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "farm animals",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its canvas stretched unevenly across the frame. The brushstrokes",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.\n\nThe **cymbals** beat a steady rhythm against the pavement,",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "The keys of the piano fell silent, then the strings of the violin began to hum, and finally, the cello",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "musical instruments",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its canvas stretched taut against the shifting gray of a stormy",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "The rain tapped a rhythmic rhythm against the windowpane, turning the gray afternoon into a soft, gray blanket. They",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "The afternoon sun had just begun to dip below the horizon, casting long, golden shadows across the park. The air was",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "weather conditions",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "body parts",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "vegetables",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660\u2660",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "card suits",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its canvas stretched taut against the rough, gray stone of the",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town. The waves crash against the rocks, and the sea creatures swim in the surf",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town. The waves crash against the shore, sending a gentle wave of salt and sand",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "The sun dipped below the horizon, painting the sky in hues of burnt orange and deep indigo, signaling the end of",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "ocean creatures",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its branches twisting like a tangled knot of forgotten memories.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "Oak, Maple, and Pine.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town. A cluster of ancient oaks stands tall beside the old stone bridge, their",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "Oak, Maple, and Pine.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.\n\nThe leaves on the oak tree turned a deep, rich crimson, signaling",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of trees",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall. kitchen utensils.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town. kitchen utensils.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended. kitchen utensils.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "kitchen utensils",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall, its face twisted in a sad, unsteady smile.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its frame twisted like a broken bone, and the colors seemed to",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "The last bell rang, a soft, rhythmic sound that cut through the silence of the office, signaling the end of",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "emotions",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.\nA circle.\nA square.\nA triangle.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "\u2600\ufe0f\n\u2600\ufe0f\n\u2600\ufe0f\n\u2600\ufe0f\n\u2600\ufe0f\n\u2600\ufe0f",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "\ud83c\udfe0\ud83c\udfe0\ud83c\udfe0\ud83c\udfe0\ud83c\udfe0\ud83c\udfe0\ud83c\udfe0\ud83c\udfe0",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all walked toward the door, the floorboards groaning under their weight. The light from the window cast long,",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "geometric shapes",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of boats",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall. insects.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its frame twisted like a rusted hinge. A single moth drifted",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town. It paints the sky in shades of gold and orange, casting long, dancing",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended. insects.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended. The buzzing of the bees, the rustle of the cicadas, and",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "insects",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall, its brushstrokes a tangled mess of forgotten colors.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.\n\nThe kitchen was quiet, save for the soft, warm scent of vanilla",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "desserts",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "baseline",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "mention",
+   "reply": "Leather boots, leather boots, leather boots.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "focus",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "dismissal",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 0,
+   "cond": "negated-think",
+   "reply": "The old painting hung crookedly on the wall.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "baseline",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "mention",
+   "reply": "Sandals, sneakers, boots, and sandals.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "focus",
+   "reply": "The sun is shining brightly today in town. I am wearing a sturdy leather boot with a thick sole for walking on uneven",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "dismissal",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 1,
+   "cond": "negated-think",
+   "reply": "The sun is shining brightly today in town.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "baseline",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "mention",
+   "reply": "Leather boots, sneakers, and sandals.",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "focus",
+   "reply": "They all went home together after work ended.\n\nThe evening air felt heavy with the scent of coffee and sweat, but",
+   "exact": false
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "dismissal",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  },
+  {
+   "frame": "paper",
+   "x": "types of footwear",
+   "carrier": 2,
+   "cond": "negated-think",
+   "reply": "They all went home together after work ended.",
+   "exact": true
+  }
+ ]
+}

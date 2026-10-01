@@ -1,51 +1,62 @@
-"""Figure 3: the injected-thought test, in top predictions.
+"""Figure 3: the injected-thought test, drawn like the right panel of the paper's Fig. 7.
 
-For each injection strength, the number of concepts for which the injected word is the model's top
-next-token prediction (a) at the report ("about" and the open quote) and (b) at the very start of
-the reply, before it says anything about a thought.  GPT-2 small (two-speaker transcript) and
-Qwen3-1.7B (the paper's chat prompt).
+The median (line) and quartiles (band) of the injected word's reciprocal rank at the open quote,
+where the report goes, and at every other position of the reply, pooled over positions and
+concepts, against the per-layer steering strength. (a) Claude Sonnet 4.5, the paper's released
+data; (b) GPT-2 small, the one-line frame with the paper's Fig. 7 reply ('... about the word "'),
+the centered J-lens vector of the word's bare token, strengths up to 0.5 (the table in the post's
+Appendix C.1 goes to 1.0).
 
-Reads results/introspect_probs/{gpt2,qwen}.json.  Run from the repo root:
+Reads ref/paper-data/verbal-introspection.json and
+results/control/gpt2/introspect_researcher_centered_surface_word.json.  Run from the repo root:
     python post/figures/introspect.py
 """
 import json
 import pathlib
 
 import matplotlib.pyplot as plt
+import numpy as np
+from cycler import cycler
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = pathlib.Path(__file__).resolve().parent
-MAROON, SLATE = "#800000", "#33658a"
+MAROON, SLATE, ORANGE, TEAL, GOLD, GRAY = "#800000", "#33658a", "#d45d00", "#3a7d6a", "#c99000", "#8a8580"
 BG = "#fbfbf9"
-plt.rcParams.update({"figure.facecolor": BG, "axes.facecolor": BG, "savefig.facecolor": BG})
+plt.rcParams.update({
+    "figure.facecolor": BG, "axes.facecolor": BG, "savefig.facecolor": BG,
+    "axes.prop_cycle": cycler(color=[MAROON, SLATE, ORANGE, TEAL, GOLD, GRAY]),
+})
+FLOOR, GPT2_MAX = 1e-4, 0.5
+QS = (25, 50, 75)
 
+c = json.load(open(ROOT / "ref/paper-data/verbal-introspection.json"))["curve"]
+claude = {"s": np.array(c["s"]),
+          "report": np.array([c["slot"][f"q{q}"] for q in QS]),
+          "other": np.array([c["other"][f"q{q}"] for q in QS])}
 
-def start_positions(model, toks):
-    """Positions whose next token begins the reply, before any mention of a thought."""
-    if model == "gpt2":
-        return [toks.index("Model"), toks.index(":"), toks.index(" Yes")]
-    return [toks.index("</think>") + 1, toks.index("Yes")]
+r = json.load(open(ROOT / "results/control/gpt2/introspect_researcher_centered_surface_word.json"))
+S = [s for s in r["strengths"] if s <= GPT2_MAX]
+rows = {s: [x for x in r["rows"] if x["strength"] == s] for s in S}
+gpt2 = {"s": np.array(S),
+        "report": np.array([np.percentile([1 / x["report"] for x in rows[s]], QS) for s in S]).T,
+        "other": np.array([np.percentile([1 / v for x in rows[s] for v in x["other"]], QS) for s in S]).T}
 
-
-panels = [("gpt2", "GPT-2 small"), ("qwen", "Qwen3-1.7B (instruction-tuned)")]
-fig, axes = plt.subplots(1, 2, figsize=(10.4, 3.8))
-for ax, (model, title) in zip(axes, panels):
-    forced = json.load(open(ROOT / f"results/introspect_probs/{model}.json"))["forced"]
-    toks, rows = forced["tokens"], forced["rows"]
-    start = start_positions(model, toks)
-    S = sorted({r["strength"] for r in rows})
-    n = sum(r["strength"] == S[0] for r in rows)
-    rep = [sum(any(r["top1"][-2:]) for r in rows if r["strength"] == s) for s in S]
-    beg = [sum(any(r["top1"][i] for i in start) for r in rows if r["strength"] == s) for s in S]
-    ax.plot(S, rep, "o-", color=MAROON, label="at the report")
-    ax.plot(S, beg, "o-", color=SLATE, label="at the start of the reply")
-    ax.set_xscale("symlog", linthresh=0.05)
-    ax.set_xticks(S, [f"{s:g}" for s in S], fontsize=8)
-    ax.set_ylim(-1, n + 1)
-    ax.set_xlabel("Injection strength (× mean residual norm)")
-    ax.set_ylabel(f"Concepts where the word is the\ntop prediction (of {n})")
+SERIES = [("report", MAROON, "At the open quote (the report)"),
+          ("other", GRAY, "Every other position of the reply")]
+fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.9), sharey=True)
+for ax, d, title in [(axes[0], claude, "(a) Claude Sonnet 4.5"),
+                     (axes[1], gpt2, "(b) GPT-2 small")]:
+    for key, col, label in SERIES:
+        lo, med, hi = np.maximum(d[key], FLOOR)
+        ax.fill_between(d["s"], lo, hi, color=col, alpha=0.2, lw=0)
+        ax.plot(d["s"], med, "o-", ms=3, color=col, label=label)
+    ax.set_yscale("log")
+    ax.set_ylim(FLOOR, 1.6)
+    ax.set_yticks([1e-4, 1e-3, 1e-2, 1e-1, 1], ["0.0001", "0.001", "0.01", "0.1", "1"])
+    ax.set_xlabel("Steering strength (per layer)")
     ax.set_title(title)
-    ax.legend(frameon=False, loc="upper left", fontsize=9)
+axes[0].set_ylabel("Median reciprocal rank of the injected word")
+axes[0].legend(frameon=False, fontsize=8, loc="upper left")
 fig.tight_layout()
 fig.savefig(OUT / "fig3_introspect.png", dpi=200)
 print("saved", OUT / "fig3_introspect.png")

@@ -1,0 +1,74 @@
+{
+ "rows": [
+  {
+   "key": "spelling",
+   "expected": 592,
+   "foil": 1124,
+   "top3": [
+    " I",
+    "\n",
+    " The"
+   ]
+  },
+  {
+   "key": "register",
+   "expected": 3043,
+   "foil": 8839,
+   "top3": [
+    " I",
+    " It",
+    " \""
+   ]
+  },
+  {
+   "key": "tense",
+   "expected": 731,
+   "foil": 342,
+   "top3": [
+    "\n",
+    " The",
+    " I"
+   ]
+  },
+  {
+   "key": "number",
+   "expected": 69,
+   "foil": 4,
+   "top3": [
+    " Yes",
+    " No",
+    " The"
+   ]
+  },
+  {
+   "key": "pos",
+   "expected": 2041,
+   "foil": 1094,
+   "top3": [
+    " The",
+    "\n",
+    " \""
+   ]
+  },
+  {
+   "key": "pos_tense",
+   "expected": 822,
+   "foil": 219,
+   "top3": [
+    " The",
+    "\n",
+    " In"
+   ]
+  },
+  {
+   "key": "tone",
+   "expected": 446,
+   "foil": 165,
+   "top3": [
+    " It",
+    " The",
+    " I"
+   ]
+  }
+ ]
+}
