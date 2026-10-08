@@ -71,6 +71,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import time
 
@@ -95,12 +96,22 @@ PHRASINGS = {g: [p["text"] for p in DM["phrasings"] if p["group"] == g] for g in
 # =============================================================================== models
 class Instruct:
     """An instruction-tuned HF model with its Neuronpedia J-lens, behind the jl.Lensed interface."""
+    default_frames = ["paper"]                            # the modulation frames run by default
 
     def __init__(self):
         self.name = "qwen"
         self.model_id = os.environ.get("MODEL", "Qwen/Qwen3.5-0.8B")
         slug = self.model_id.split("/")[-1]
-        lens_file = os.environ.get("LENS", f"{slug.lower()}/jlens/Salesforce-wikitext/{slug}_jacobian_lens.pt")
+        self._load(os.environ.get("LENS", f"{slug.lower()}/jlens/Salesforce-wikitext/{slug}_jacobian_lens.pt"))
+        band = os.environ.get("CBAND", "15-22")
+        lo, hi = (int(x) for x in band.split("-"))
+        self.band = list(range(lo, hi + 1))
+        if band != "15-22":                               # other bands are elicitation variants
+            self.name = f"qwen_band{band}"
+        self.offset = 0                                   # no BOS is prepended
+
+    def _load(self, lens_file):
+        """self.model_id (fp32) and its Neuronpedia lens `lens_file`."""
         self.device = os.environ.get("DEVICE") or ("mps" if torch.backends.mps.is_available() else "cpu")
         self.tok = transformers.AutoTokenizer.from_pretrained(self.model_id)
         hf = transformers.AutoModelForCausalLM.from_pretrained(self.model_id, dtype=torch.float32).to(self.device).eval()
@@ -110,14 +121,8 @@ class Instruct:
         self.n_layers, self.d = self.m.n_layers, self.m.d_model
         lens = jlens.JacobianLens.load(hf_hub_download("neuronpedia/jacobian-lens", lens_file))
         self.J = {L: lens.jacobians[L].float().to(self.device) for L in lens.source_layers}
-        band = os.environ.get("CBAND", "15-22")
-        lo, hi = (int(x) for x in band.split("-"))
-        self.band = list(range(lo, hi + 1))
-        if band != "15-22":                               # other bands are elicitation variants
-            self.name = f"qwen_band{band}"
         self.U = self.m._lm_head.weight.detach().float()
         self.ubar = self.U.mean(0)
-        self.offset = 0                                   # no BOS is prepended
 
     def chat(self, turns, prefill=""):
         msgs = [{"role": r, "content": t} for r, t in turns]
@@ -167,8 +172,56 @@ class Instruct:
         return (self.U[t] - self.ubar) @ self.J[L]
 
 
+# Gemma 3, base and instruction-tuned, at two sizes: {--model: (checkpoint, Neuronpedia lens file)}.
+# The checkpoints are unsloth's ungated mirrors of Google's: model.safetensors has the same sha256.
+GEMMA = {
+    "gemma-270m": ("unsloth/gemma-3-270m", "gemma-3-270m/jlens/Salesforce-wikitext/gemma-3-270m_jacobian_lens.pt"),
+    "gemma-270m-it": ("unsloth/gemma-3-270m-it",
+                      "gemma-3-270m-it/jlens/Salesforce-wikitext/gemma-3-270m-it_jacobian_lens.pt"),
+    "gemma-1b": ("unsloth/gemma-3-1b-pt", "gemma-3-1b/jlens/Salesforce-wikitext/gemma-3-1b-pt_jacobian_lens.pt"),
+    "gemma-1b-it": ("unsloth/gemma-3-1b-it", "gemma-3-1b-it/jlens/Salesforce-wikitext/gemma-3-1b-it_jacobian_lens.pt"),
+}
+
+
+class Gemma(Instruct):
+    """A Gemma 3 model, base or instruction-tuned, with its Neuronpedia J-lens.  Every prompt gets
+    <bos> prepended, as GPT-2's gets <|endoftext|>: Gemma needs it, and the lens was fit with it.
+    Chat frames use Gemma's turn format, written out here so that the base model (whose tokenizer
+    has no chat template) and the instruction-tuned one see the same tokens.  Both are run in the
+    paper's prompt as a chat (`paper`) and as plain text (`human`), so that the two models can be
+    compared on the same tokens.  Band: the paper's, 38% to 92% of depth (CBAND overrides).
+    LENS_FROM=<another key of GEMMA> reads this model with that model's lens (the base model's
+    lens on the instruction-tuned model, or the reverse)."""
+    default_frames = ["paper", "human"]
+
+    def __init__(self, name):
+        self.name = name
+        self.model_id, lens_file = GEMMA[name]
+        if os.environ.get("LENS_FROM"):
+            lens_file = GEMMA[os.environ["LENS_FROM"]][1]
+            self.name = f"{name}_lens-{os.environ['LENS_FROM']}"
+        self._load(lens_file)
+        last = self.n_layers - 1                          # layer L of 0..last is at 100 L / last % of depth
+        lo, hi = math.ceil(0.38 * last), math.floor(0.92 * last)
+        if os.environ.get("CBAND"):
+            lo, hi = (int(x) for x in os.environ["CBAND"].split("-"))
+            self.name = f"{name}_band{lo}-{hi}"
+        self.band = list(range(lo, hi + 1))
+        self.bos = self.tok.bos_token_id
+        self.offset = 1
+
+    def chat(self, turns, prefill=""):
+        roles = {"user": "user", "assistant": "model"}
+        return ("".join(f"<start_of_turn>{roles[r]}\n{t.strip()}<end_of_turn>\n" for r, t in turns)
+                + "<start_of_turn>model\n" + prefill)
+
+    def ids(self, text):
+        return torch.tensor([[self.bos] + self.tok(text, add_special_tokens=False).input_ids], device=self.device)
+
+
 class GPT2:
     """jl.Lensed behind the same interface (text gets the <|endoftext|> BOS prepended)."""
+    default_frames = ["human"]
 
     def __init__(self):
         self.name = "gpt2"
@@ -209,7 +262,7 @@ class GPT2:
 
 
 def load(name):
-    return GPT2() if name == "gpt2" else Instruct()
+    return GPT2() if name == "gpt2" else Gemma(name) if name in GEMMA else Instruct()
 
 
 def _save(A, name, obj):
@@ -447,13 +500,14 @@ def summarize_privilege(res):
 # paper's prompt as plain text; the other five are plain-text frames of our own.  In every frame the
 # lens is read over the copied carrier only.
 PAPER_TAIL = " Don't write anything else."
+CHAT_FRAMES = ("paper", "after", "before")              # the others are plain text
 
 
 def mod_text(A, frame, carrier, instr):
     """(text, start char of the scored carrier)."""
     i = f" {instr}" if instr else ""                      # the instruction, if any, with a leading space
     q = f' She said, "{instr}"' if instr else ""          # ... or quoted, for the two story frames
-    if A.name != "gpt2":
+    if frame in CHAT_FRAMES:
         user = {"paper": f'Write "{carrier}"{i}{PAPER_TAIL}',
                 "after": f'Write the following sentence: "{carrier}"{i}',
                 "before": (f"{instr} " if instr else "") + f'Write the following sentence: "{carrier}"'}[frame]
@@ -528,6 +582,23 @@ RANK_CAP = 65535                                          # ranks are stored as 
 
 
 @torch.no_grad()
+def residual_means(A, layers, n=16, T=128):
+    """{L: the mean residual at layer L} over the tokens of n WikiText-103 validation passages
+    (the first T tokens of each, <bos> left out): the text the lens was fit on."""
+    from datasets import load_dataset
+    ds = load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split="validation")
+    texts = [t for t in ds["text"] if len(t) > 600][:n]
+    tot = {L: 0 for L in layers}
+    count = 0
+    for t in texts:
+        res = A.residuals(A.ids(t)[:, :T], layers)
+        for L in layers:
+            tot[L] = tot[L] + res[L][1:].sum(0)
+        count += res[layers[0]].shape[0] - 1
+    return {L: tot[L] / count for L in layers}
+
+
+@torch.no_grad()
 def modulation_grid(A, frames=None):
     """Directed modulation with nothing fixed in advance: for every trial, the best rank of a
     tracked token at every lens layer and every position of the copied carrier, and in the model's
@@ -537,7 +608,12 @@ def modulation_grid(A, frames=None):
 
     Writes modulation_grid_{frame}.json (the trials, in order) and modulation_grid_{frame}.npz
     (`ranks` [trial, layer, position], 0 where the carrier is shorter; the last layer row is the
-    model's output)."""
+    model's output).
+
+    LENS_CENTER=1 reads the lens on h minus the layer's mean residual (`residual_means`), and
+    saves with a `_centered` suffix.  The lens ranks are those of W_U diag(g) J_L h (the final
+    norm only rescales each row), so this removes a fixed bias over the vocabulary at each layer:
+    in Gemma, a few dimensions of nearly constant sign hold most of the residual's norm."""
     import numpy as np
     carriers = DM["carrier_sentences"][:N_CARRIERS]
     tg = targets(A)
@@ -545,7 +621,12 @@ def modulation_grid(A, frames=None):
     unembed = (A.lm.m if A.name == "gpt2" else A.m).unembed
     last = A.n_layers - 1
     lens_layers = sorted(L for L in J if L != last)
-    for frame in frames or (["human"] if A.name == "gpt2" else ["paper"]):
+    center = os.environ.get("LENS_CENTER") == "1"
+    mu = residual_means(A, lens_layers) if center else {L: 0 for L in lens_layers}
+    # GRID_TAG names a partial run (e.g. GRID_TAG=_math with FAMILIES=math) so that it doesn't
+    # overwrite the main one
+    suffix = ("_centered" if center else "") + os.environ.get("GRID_TAG", "")
+    for frame in frames or A.default_frames:
         jobs = []
         for fam, x, tids in tg:
             for ci, car in enumerate(carriers):
@@ -556,19 +637,19 @@ def modulation_grid(A, frames=None):
                         text, start = mod_text(A, frame, car, instr.format(x=x) if instr else None)
                         jobs.append((dict(family=fam, x=x, carrier=ci, cond=cond, phrasing=instr),
                                      A.ids(text), A.span(text, car, start_at=start), tids))
-        # On MPS every prompt is right-padded to one length, and every readout to one number of
-        # rows, so that the kernels are compiled once (attention is causal, so the padding changes
-        # nothing at the positions read).
+        # On MPS every prompt is right-padded to one length, and every readout to a multiple of 4
+        # rows, so that the kernels are compiled for a few shapes only (attention is causal, so the
+        # padding changes nothing at the positions read).
         fixed = A.device == "mps"
-        T, P = max(j[1].shape[1] for j in jobs), max(len(j[2]) for j in jobs)
+        T = max(j[1].shape[1] for j in jobs)
         trials, ranks, t0 = [], [], time.time()
         for n, (trial, ids, pos, tids) in enumerate(jobs):
             if fixed:
                 ids = torch.cat([ids, ids[:, -1:].expand(1, T - ids.shape[1])], dim=1)
-            rows = pos + [pos[-1]] * (P - len(pos)) if fixed else pos
+            rows = pos + [pos[-1]] * (-len(pos) % 4) if fixed else pos
             res = A.residuals(ids, lens_layers + [last])
             # the lens readout at every layer, and the model's output, in one unembedding
-            h = torch.cat([res[L][rows] @ J[L].T for L in lens_layers] + [res[last][rows]])
+            h = torch.cat([(res[L][rows] - mu[L]) @ J[L].T for L in lens_layers] + [res[last][rows]])
             rk = rank_rows(unembed(h).float(), tids).view(len(lens_layers) + 1, len(rows))[:, :len(pos)]
             ranks.append(rk.clamp(max=RANK_CAP).cpu().numpy().astype(np.uint16))
             trials.append(dict(trial, n_pos=len(pos)))
@@ -578,14 +659,14 @@ def modulation_grid(A, frames=None):
         for i, r in enumerate(ranks):
             out[i, :, :r.shape[1]] = r
         d = jl.results_dir(f"control/{A.name}")
-        np.savez_compressed(d / f"modulation_grid_{frame}.npz", ranks=out)
+        np.savez_compressed(d / f"modulation_grid_{frame}{suffix}.npz", ranks=out)
         ex_text, ex_start = mod_text(A, frame, carriers[0], PHRASINGS["focus"][0].format(x=tg[0][1]))
-        _save(A, f"modulation_grid_{frame}", dict(
+        _save(A, f"modulation_grid_{frame}{suffix}", dict(
             frame=frame, band=A.band, layers=lens_layers + ["output"], carriers=carriers,
             tracked={x: [A.dec(t) for t in tids] for _, x, tids in tg}, trials=trials, example=ex_text,
             example_tokens=[A.dec(int(t)) for t in A.ids(ex_text)[0]],
             example_positions=A.span(ex_text, carriers[0], start_at=ex_start)))
-        print(f"== modulation_grid {A.name} frame={frame}: {len(trials)} trials ({time.time() - t0:.0f}s)")
+        print(f"== modulation_grid{suffix} {A.name} frame={frame}: {len(trials)} trials ({time.time() - t0:.0f}s)")
 
 
 @torch.no_grad()
@@ -596,7 +677,7 @@ def modulation_copy(A, frames=None):
     prediction, given the tokens before.  For the instruction-tuned model, also its own greedy
     reply (the first 3 carriers), and whether it is exactly the sentence."""
     rows = []
-    for frame in frames or (["human"] if A.name == "gpt2" else ["paper"]):
+    for frame in frames or A.default_frames:
         for fam, x, _ in targets(A):
             if fam != "topic":
                 continue
@@ -617,10 +698,11 @@ def modulation_copy(A, frames=None):
             print(f"  {cond:14s} first token right {sum(r['first'] for r in s) / len(s):.3f}   the rest "
                   f"{sum(r['rest'] for r in s) / sum(r['n_rest'] for r in s):.3f}   whole sentence "
                   f"{sum(r['first'] and r['rest'] == r['n_rest'] for r in s) / len(s):.3f}   (n={len(s)})")
-    # The instruction-tuned model's own reply: greedy, first 3 carriers, the same phrasings.
+    # The model's own reply: greedy, first 3 carriers, the same phrasings.  `exact`: the reply is
+    # the sentence; `starts`: it begins with the sentence (in plain text a model doesn't stop there).
     replies = []
     if A.name != "gpt2":
-        for frame in frames or ["paper"]:
+        for frame in frames or A.default_frames:
             for fam, x, _ in targets(A):
                 if fam != "topic":
                     continue
@@ -631,10 +713,13 @@ def modulation_copy(A, frames=None):
                         ids = A.ids(text[:start])
                         out = A.m._hf_model.generate(ids, max_new_tokens=24, do_sample=False)
                         reply = A.tok.decode(out[0, ids.shape[1]:], skip_special_tokens=True).strip()
-                        replies.append(dict(frame=frame, x=x, carrier=ci, cond=cond, reply=reply, exact=reply == car))
+                        replies.append(dict(frame=frame, x=x, carrier=ci, cond=cond, reply=reply, exact=reply == car,
+                                            starts=reply.startswith(car)))
+            print(f"== modulation_copy {A.name} frame={frame}, its own reply")
             for cond in CONDITIONS:
                 s = [r for r in replies if r["frame"] == frame and r["cond"] == cond]
-                print(f"  {cond:14s} its own reply is exactly the sentence: {sum(r['exact'] for r in s)}/{len(s)}")
+                print(f"  {cond:14s} exactly the sentence: {sum(r['exact'] for r in s)}/{len(s)}   "
+                      f"begins with it: {sum(r['starts'] for r in s)}/{len(s)}")
     _save(A, "modulation_copy", dict(rows=rows, replies=replies))
 
 
@@ -657,7 +742,7 @@ def modulation_readout(A, frames=None, k=9):
     lens_layers = sorted(L for L in J if L != last)
     tg = {x: tids for _, x, tids in targets(A)}
     car = DM["carrier_sentences"][0]
-    for frame in frames or (["human"] if A.name == "gpt2" else ["paper"]):
+    for frame in frames or A.default_frames:
         panels = []
         for fam, instr, x in READOUT_EXAMPLES:
             text, start = mod_text(A, frame, car, instr.format(x=x))
@@ -716,7 +801,7 @@ def arithmetic(A):
     """Capability check for the math family, GPT-2: can it do the paper's 24 problems as plain
     text, with nothing before the problem, after eight worked examples, or as questions and
     answers?  The rank of the answer (digit or number word) as the next token, and the top token."""
-    assert A.name == "gpt2", "GPT-2 only (the instruction-tuned model's check is in `clauses`)"
+    assert A.name == "gpt2" or isinstance(A, Gemma), "plain text: GPT-2 or Gemma (Qwen's check is in `clauses`)"
     words = {"2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine"}
     rows = []
     for frame, f in ARITH_FRAMES.items():
@@ -731,6 +816,37 @@ def arithmetic(A):
         s = [r for r in rows if r["frame"] == frame]
         print(f"  {frame:7s} answer top-1 on {sum(r['rank'] == 1 for r in s)}/{len(s)}   its top tokens: "
               + " ".join(sorted({r['top'].strip() for r in s})))
+
+
+@torch.no_grad()
+def arithmetic_gen(A):
+    """The same check, read from what the model writes: its greedy continuation (12 tokens) in each
+    plain-text frame and, for Gemma, as a chat (`What is {expr}? Answer with just the number.`).
+    The answer is the last number (digits or a number word) on the first non-empty line.  Needed
+    for Gemma, which writes " 8" as " " then "8", and in a chat often restates the expression
+    first, so the next-token rank in `arithmetic` and `clauses` misses answers it gets right."""
+    import re
+    words = {"zero": "0", "one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7",
+             "eight": "8", "nine": "9", "ten": "10"}
+    frames = dict(ARITH_FRAMES)
+    if isinstance(A, Gemma):
+        frames["chat"] = lambda e: A.chat([("user", f"What is {e}? Answer with just the number.")])
+    rows = []
+    for frame, f in frames.items():
+        for m in DM["math_problems"]:
+            ids = A.ids(f(m["expr"]))
+            hf = A.lm.m._hf_model if A.name == "gpt2" else A.m._hf_model
+            out = hf.generate(ids, max_new_tokens=12, do_sample=False)
+            reply = A.tok.decode(out[0, ids.shape[1]:], skip_special_tokens=True)
+            line = next((ln for ln in reply.split("\n") if ln.strip()), "")
+            nums = [words.get(n.lower(), n) for n in re.findall(r"\d+|" + "|".join(words), line, flags=re.I)]
+            rows.append(dict(frame=frame, expr=m["expr"], answer=m["answer"], reply=reply,
+                             said=nums[-1] if nums else None, right=bool(nums) and nums[-1] == m["answer"]))
+    _save(A, "arithmetic_gen", dict(rows=rows))
+    print(f"== arithmetic_gen {A.name}")
+    for frame in frames:
+        s = [r for r in rows if r["frame"] == frame]
+        print(f"  {frame:7s} right on {sum(r['right'] for r in s)}/{len(s)}   e.g. {s[0]['expr']!r} -> {s[0]['reply']!r}")
 
 
 # =============================================================================== paired questions
@@ -873,7 +989,7 @@ def stats(A):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="qwen", choices=["qwen", "gpt2"])
+    ap.add_argument("--model", default="qwen", choices=["qwen", "gpt2", *GEMMA])
     ap.add_argument("--frames", default=None, help="comma-separated modulation frames")
     ap.add_argument("--tokforms", default="surface,space", help="injected token forms: surface, space")
     ap.add_argument("--prefill", default="default", choices=sorted(PREFILLS), help="introspect: which released prefill")
@@ -895,4 +1011,4 @@ if __name__ == "__main__":
                                                 args.intro_frames.split(",") if args.intro_frames else None),
              "introspect_privilege": introspect_privilege,
              "report": report, "stats": stats, "questions": questions, "clauses": clauses,
-             "arithmetic": arithmetic}[e](A)
+             "arithmetic": arithmetic, "arithmetic_gen": arithmetic_gen}[e](A)

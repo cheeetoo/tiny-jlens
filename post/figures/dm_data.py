@@ -25,9 +25,18 @@ NO_RANK = 10 ** 6
 BANDS = {
     "gpt2": {"ours": (7, 9), "paper": (5, 10), "all": (0, 10)},
     "qwen": {"ours": (15, 22), "paper": (9, 21), "all": (0, 22)},
+    # Gemma 3: no band of our own, so `ours` is the paper's.  `late` is where the lens starts to
+    # agree with the model's output on WikiText (lens top 1 = output top 1 on 7% or more of tokens,
+    # results/control/{model}/stats.json).
+    "gemma-270m": {"ours": (7, 15), "paper": (7, 15), "late": (11, 16), "all": (0, 16)},
+    "gemma-270m-it": {"ours": (7, 15), "paper": (7, 15), "late": (11, 16), "all": (0, 16)},
+    "gemma-1b": {"ours": (10, 23), "paper": (10, 23), "all": (0, 24)},
+    "gemma-1b-it": {"ours": (10, 23), "paper": (10, 23), "all": (0, 24)},
 }
-MODEL_LABEL = {"gpt2": "GPT-2 small", "qwen": "Qwen3.5-0.8B"}
-MAIN_FRAME = {"gpt2": "human", "qwen": "paper"}
+MODEL_LABEL = {"gpt2": "GPT-2 small", "qwen": "Qwen3.5-0.8B", "gemma-270m": "Gemma-3-270m",
+               "gemma-270m-it": "Gemma-3-270m-it", "gemma-1b": "Gemma-3-1b", "gemma-1b-it": "Gemma-3-1b-it"}
+MAIN_FRAME = {"gpt2": "human", "qwen": "paper", "gemma-270m": "human", "gemma-270m-it": "paper",
+              "gemma-1b": "human", "gemma-1b-it": "paper"}
 
 
 class Grid:
@@ -52,7 +61,8 @@ class Grid:
         said)."""
         if band == "output":
             return self.ranks[:, -1, :].min(axis=1)
-        lo, hi = BANDS[self.model][band] if isinstance(band, str) else band
+        # a variant run (e.g. `gemma-270m-it_lens-gemma-270m`) uses its model's bands
+        lo, hi = BANDS[self.model.split("_")[0]][band] if isinstance(band, str) else band
         r = self.ranks[:, lo:hi + 1, :]
         if held:
             r = np.where((self.ranks[:, -1, :] <= held)[:, None, :], NO_RANK, r)

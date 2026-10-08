@@ -1,0 +1,369 @@
+{
+ "band": [
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23
+ ],
+ "math": [
+  {
+   "expr": "4 * 2",
+   "answer": "8",
+   "rank": 1,
+   "top": "8"
+  },
+  {
+   "expr": "5 + 4",
+   "answer": "9",
+   "rank": 1,
+   "top": "9"
+  },
+  {
+   "expr": "3 * 3",
+   "answer": "9",
+   "rank": 1,
+   "top": "9"
+  },
+  {
+   "expr": "3 + 4",
+   "answer": "7",
+   "rank": 1,
+   "top": "7"
+  },
+  {
+   "expr": "2 * 3",
+   "answer": "6",
+   "rank": 1,
+   "top": "6"
+  },
+  {
+   "expr": "2 + 3",
+   "answer": "5",
+   "rank": 1,
+   "top": "5"
+  },
+  {
+   "expr": "14 / 2",
+   "answer": "7",
+   "rank": 1,
+   "top": "7"
+  },
+  {
+   "expr": "18 / 2",
+   "answer": "9",
+   "rank": 1,
+   "top": "9"
+  },
+  {
+   "expr": "11 - 5",
+   "answer": "6",
+   "rank": 1,
+   "top": "6"
+  },
+  {
+   "expr": "15 - 7",
+   "answer": "8",
+   "rank": 1,
+   "top": "8"
+  },
+  {
+   "expr": "9 - 5",
+   "answer": "4",
+   "rank": 1,
+   "top": "4"
+  },
+  {
+   "expr": "11 - 9",
+   "answer": "2",
+   "rank": 1,
+   "top": "2"
+  },
+  {
+   "expr": "12 / 4",
+   "answer": "3",
+   "rank": 1,
+   "top": "3"
+  },
+  {
+   "expr": "21 / 3",
+   "answer": "7",
+   "rank": 1,
+   "top": "7"
+  },
+  {
+   "expr": "24 / 3",
+   "answer": "8",
+   "rank": 1,
+   "top": "8"
+  },
+  {
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "rank": 1,
+   "top": "7"
+  },
+  {
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "rank": 1,
+   "top": "5"
+  },
+  {
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "rank": 1,
+   "top": "9"
+  },
+  {
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "rank": 1,
+   "top": "6"
+  },
+  {
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "rank": 1,
+   "top": "5"
+  },
+  {
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "rank": 2,
+   "top": "1"
+  },
+  {
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "rank": 321,
+   "top": "1"
+  },
+  {
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "rank": 7,
+   "top": "2"
+  },
+  {
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "rank": 9,
+   "top": "2"
+  }
+ ],
+ "paired": [
+  {
+   "key": "spelling",
+   "q1": {
+    "n": 29,
+    "hit10": 0,
+    "best": 354,
+    "out_top3": [
+     "Color",
+     "Palette",
+     "Colour"
+    ],
+    "exp_rank": 5051,
+    "foil_rank": 3168,
+    "q1e_rank": 3
+   },
+   "q2": {
+    "n": 29,
+    "hit10": 0,
+    "best": 392,
+    "out_top3": [
+     "American",
+     "British",
+     "England"
+    ],
+    "exp_rank": 2,
+    "foil_rank": 1,
+    "q1e_rank": 1287
+   }
+  },
+  {
+   "key": "register",
+   "q1": {
+    "n": 38,
+    "hit10": 0,
+    "best": 72,
+    "out_top3": [
+     "Chaos",
+     "Mess",
+     "mess"
+    ],
+    "exp_rank": 429,
+    "foil_rank": 1134,
+    "q1e_rank": 4
+   },
+   "q2": {
+    "n": 38,
+    "hit10": 1,
+    "best": 5,
+    "out_top3": [
+     "Inform",
+     "Casual",
+     "Hum"
+    ],
+    "exp_rank": 2,
+    "foil_rank": 28,
+    "q1e_rank": 3997
+   }
+  },
+  {
+   "key": "tense",
+   "q1": {
+    "n": 26,
+    "hit10": 0,
+    "best": 145,
+    "out_top3": [
+     "Whis",
+     "W",
+     "Shadow"
+    ],
+    "exp_rank": 523,
+    "foil_rank": 1163,
+    "q1e_rank": 34
+   },
+   "q2": {
+    "n": 26,
+    "hit10": 0,
+    "best": 105,
+    "out_top3": [
+     "Five",
+     "Two",
+     "Three"
+    ],
+    "exp_rank": 45,
+    "foil_rank": 29,
+    "q1e_rank": 954
+   }
+  },
+  {
+   "key": "number",
+   "q1": {
+    "n": 21,
+    "hit10": 1,
+    "best": 10,
+    "out_top3": [
+     "Silence",
+     "Dis",
+     "Solution"
+    ],
+    "exp_rank": 317,
+    "foil_rank": 774,
+    "q1e_rank": 749
+   },
+   "q2": {
+    "n": 21,
+    "hit10": 2,
+    "best": 6,
+    "out_top3": [
+     "Multiple",
+     "More",
+     "Many"
+    ],
+    "exp_rank": 1,
+    "foil_rank": 29,
+    "q1e_rank": 2000
+   }
+  },
+  {
+   "key": "pos",
+   "q1": {
+    "n": 20,
+    "hit10": 0,
+    "best": 87,
+    "out_top3": [
+     "Comp",
+     "comprom",
+     "victory"
+    ],
+    "exp_rank": 13871,
+    "foil_rank": 11681,
+    "q1e_rank": 2551
+   },
+   "q2": {
+    "n": 20,
+    "hit10": 1,
+    "best": 7,
+    "out_top3": [
+     "Noun",
+     "Verb",
+     "Ad"
+    ],
+    "exp_rank": 69,
+    "foil_rank": 1,
+    "q1e_rank": 52541
+   }
+  },
+  {
+   "key": "pos_tense",
+   "q1": {
+    "n": 20,
+    "hit10": 0,
+    "best": 38,
+    "out_top3": [
+     "Comp",
+     "comprom",
+     "victory"
+    ],
+    "exp_rank": 2409,
+    "foil_rank": 583,
+    "q1e_rank": 2551
+   },
+   "q2": {
+    "n": 20,
+    "hit10": 0,
+    "best": 27,
+    "out_top3": [
+     "Three",
+     "Two",
+     "After"
+    ],
+    "exp_rank": 34,
+    "foil_rank": 15,
+    "q1e_rank": 118941
+   }
+  },
+  {
+   "key": "tone",
+   "q1": {
+    "n": 34,
+    "hit10": 2,
+    "best": 5,
+    "out_top3": [
+     "Silence",
+     "Quiet",
+     "silent"
+    ],
+    "exp_rank": 14,
+    "foil_rank": 364,
+    "q1e_rank": 26
+   },
+   "q2": {
+    "n": 34,
+    "hit10": 2,
+    "best": 3,
+    "out_top3": [
+     "Mel",
+     "Lonely",
+     "Sad"
+    ],
+    "exp_rank": 3,
+    "foil_rank": 649,
+    "q1e_rank": 119
+   }
+  }
+ ]
+}

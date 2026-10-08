@@ -1,0 +1,772 @@
+{
+ "rows": [
+  {
+   "frame": "bare",
+   "expr": "4 * 2",
+   "answer": "8",
+   "reply": " 8\n\n<strong>Answer:</strong>\n\n<strong>Step-by",
+   "said": "8",
+   "right": true
+  },
+  {
+   "frame": "bare",
+   "expr": "5 + 4",
+   "answer": "9",
+   "reply": " 10\n\n10 + 4 = 1",
+   "said": "10",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "3 * 3",
+   "answer": "9",
+   "reply": " 9\n\n<strong>Answer:</strong>\n\n<strong>Step-by",
+   "said": "9",
+   "right": true
+  },
+  {
+   "frame": "bare",
+   "expr": "3 + 4",
+   "answer": "7",
+   "reply": " 7\n\n3 + 4 + 4 + ",
+   "said": "7",
+   "right": true
+  },
+  {
+   "frame": "bare",
+   "expr": "2 * 3",
+   "answer": "6",
+   "reply": " 6\n\n6 + 3 = 9\n\n9",
+   "said": "6",
+   "right": true
+  },
+  {
+   "frame": "bare",
+   "expr": "2 + 3",
+   "answer": "5",
+   "reply": " 5\n\n2 + 3 + 5 = ",
+   "said": "5",
+   "right": true
+  },
+  {
+   "frame": "bare",
+   "expr": "14 / 2",
+   "answer": "7",
+   "reply": " 14\n\n15 / 2 = 1",
+   "said": "14",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "18 / 2",
+   "answer": "9",
+   "reply": " 1800\n\n1800/1",
+   "said": "1800",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "11 - 5",
+   "answer": "6",
+   "reply": " 12\n\n12 - 5 = 1",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "15 - 7",
+   "answer": "8",
+   "reply": " 15\n\n16 - 7 = 1",
+   "said": "15",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "9 - 5",
+   "answer": "4",
+   "reply": " 15\n\n15 + 5 = 1",
+   "said": "15",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "11 - 9",
+   "answer": "2",
+   "reply": " 10\n\n12 - 9 = 8",
+   "said": "10",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "12 / 4",
+   "answer": "3",
+   "reply": " 12\n\n12 + 12 = ",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "21 / 3",
+   "answer": "7",
+   "reply": " 21/3\n\n21/3 + ",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "24 / 3",
+   "answer": "8",
+   "reply": " 12\n\n12 x 12 = ",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "reply": " 3^2 - 4 = 3^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "reply": " 2^3 - 3^3 = 2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "reply": " 2^2 + 1 = 2^3",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "reply": " 2^2 + 4 = 4 + ",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "reply": " 3^2 - 2^2 = 3",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "reply": " 2^4 - 9 = 2^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "reply": " 36\n\n36 + 9 = 4",
+   "said": "36",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "reply": " 12\n\n6 * 6 / 4 =",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "bare",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "reply": " 5^2 - 19 - 19",
+   "said": "19",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "4 * 2",
+   "answer": "8",
+   "reply": " 8\n10 / 4 = 2\n",
+   "said": "8",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "5 + 4",
+   "answer": "9",
+   "reply": " 9\n10 / 5 = 2\n",
+   "said": "9",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "3 * 3",
+   "answer": "9",
+   "reply": " 9\n10 / 3 = 2\n",
+   "said": "9",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "3 + 4",
+   "answer": "7",
+   "reply": " 7\n10 / 3 = 2\n",
+   "said": "7",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "2 * 3",
+   "answer": "6",
+   "reply": " 6\n10 / 3 = 2\n",
+   "said": "6",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "2 + 3",
+   "answer": "5",
+   "reply": " 5\n10 / 3 = 2\n",
+   "said": "5",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "14 / 2",
+   "answer": "7",
+   "reply": " 7\n10 + 1 = 11",
+   "said": "7",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "18 / 2",
+   "answer": "9",
+   "reply": " 9\n10 + 1 = 11",
+   "said": "9",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "11 - 5",
+   "answer": "6",
+   "reply": " 6\n12 - 3 = 6\n",
+   "said": "6",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "15 - 7",
+   "answer": "8",
+   "reply": " 12\n12 + 1 = 1",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "9 - 5",
+   "answer": "4",
+   "reply": " 4\n10 + 1 = 10",
+   "said": "4",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "11 - 9",
+   "answer": "2",
+   "reply": " 4\n10 + 1 = 11",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "12 / 4",
+   "answer": "3",
+   "reply": " 3\n10 / 4 = 2\n",
+   "said": "3",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "21 / 3",
+   "answer": "7",
+   "reply": " 7\n10 / 2 = 5\n",
+   "said": "7",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "24 / 3",
+   "answer": "8",
+   "reply": " 8\n10 / 2 = 5\n",
+   "said": "8",
+   "right": true
+  },
+  {
+   "frame": "worked",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "reply": " 1\n10^2 - 2 = ",
+   "said": "1",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "reply": " 1\n10 / 2^3 = ",
+   "said": "1",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "reply": " 2^2 + 1\n2^2 +",
+   "said": "1",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "reply": " 4\n10^2 + 10 =",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "reply": " 12\n10^2 - 10",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "reply": " 16\n10^2 - 10",
+   "said": "16",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "reply": " 13\n10 / 4 = 2",
+   "said": "13",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "reply": " 12\n12 + 1 = 1",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "worked",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "reply": " 16\n10^2 - 19",
+   "said": "16",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "4 * 2",
+   "answer": "8",
+   "reply": " 4\nQ: What is 10 / ",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "5 + 4",
+   "answer": "9",
+   "reply": " 5\nQ: What is 10 - ",
+   "said": "5",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "3 * 3",
+   "answer": "9",
+   "reply": " 3\nQ: What is 10 / ",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "3 + 4",
+   "answer": "7",
+   "reply": " 3\nQ: What is 10 - ",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "2 * 3",
+   "answer": "6",
+   "reply": " 2\nQ: What is 10 / ",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "2 + 3",
+   "answer": "5",
+   "reply": " 2\nQ: What is 10 - ",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "14 / 2",
+   "answer": "7",
+   "reply": " 14\nQ: What is 10 /",
+   "said": "14",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "18 / 2",
+   "answer": "9",
+   "reply": " 18\nQ: What is 10 -",
+   "said": "18",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "11 - 5",
+   "answer": "6",
+   "reply": " 11\nQ: What is 10 -",
+   "said": "11",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "15 - 7",
+   "answer": "8",
+   "reply": " 15\nQ: What is 10 -",
+   "said": "15",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "9 - 5",
+   "answer": "4",
+   "reply": " 9\nQ: What is 10 - ",
+   "said": "9",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "11 - 9",
+   "answer": "2",
+   "reply": " 11\nQ: What is 10 -",
+   "said": "11",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "12 / 4",
+   "answer": "3",
+   "reply": " 12\nQ: What is 10 /",
+   "said": "12",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "21 / 3",
+   "answer": "7",
+   "reply": " 21\nQ: What is 10 /",
+   "said": "21",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "24 / 3",
+   "answer": "8",
+   "reply": " 24\nQ: What is 10 -",
+   "said": "24",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "reply": " 3^2 - 2 = 3^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "reply": " 2^3 - 3 = 2^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "reply": " 2^3 + 1 = 2^3",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "reply": " 2^2 + 2 = 2^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "reply": " 3^2 - 4 = 3^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "reply": " 2^4 - 9 = 2^2",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "reply": " 4\nQ: What is 10 - ",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "reply": " 6\nQ: What is 10 / ",
+   "said": "6",
+   "right": false
+  },
+  {
+   "frame": "qa",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "reply": " 5^2 - 19 = 5^",
+   "said": "5",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "4 * 2",
+   "answer": "8",
+   "reply": "What is 4 * 2? Answer with just the",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "5 + 4",
+   "answer": "9",
+   "reply": "What is 5 + 4? Answer with just the",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "3 * 3",
+   "answer": "9",
+   "reply": "What is 3 * 3? Answer with just the",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "3 + 4",
+   "answer": "7",
+   "reply": "What is 3 + 4? Answer with just the",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "2 * 3",
+   "answer": "6",
+   "reply": "What is 2 * 3? Answer with just the",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "2 + 3",
+   "answer": "5",
+   "reply": "What is 2 + 3? Answer with just the",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "14 / 2",
+   "answer": "7",
+   "reply": "What is 14 / 2? Answer with just",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "18 / 2",
+   "answer": "9",
+   "reply": "What is 18 / 2? Answer with just",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "11 - 5",
+   "answer": "6",
+   "reply": "What is 11 - 5? Answer with just",
+   "said": "5",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "15 - 7",
+   "answer": "8",
+   "reply": "What is 15 - 7? Answer with just",
+   "said": "7",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "9 - 5",
+   "answer": "4",
+   "reply": "What is 9 - 5? Answer with just the",
+   "said": "5",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "11 - 9",
+   "answer": "2",
+   "reply": "What is 11 - 9? Answer with just",
+   "said": "9",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "12 / 4",
+   "answer": "3",
+   "reply": "What is 12 / 4? Answer with just",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "21 / 3",
+   "answer": "7",
+   "reply": "What is 21 / 3? Answer with just",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "24 / 3",
+   "answer": "8",
+   "reply": "What is 24 / 3? Answer with just",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "reply": "What is 3^2 - 2? Answer with",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "reply": "What is 2^3 - 3? Answer with",
+   "said": "3",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "reply": "What is 2^3 + 1? Answer with",
+   "said": "1",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "reply": "What is 2^2 + 2? Answer with",
+   "said": "2",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "reply": "What is 3^2 - 4? Answer with",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "reply": "What is 2^4 - 9? Answer with",
+   "said": "9",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "reply": "What is 4 * 4 - 9? Answer",
+   "said": "9",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "reply": "What is 6 * 6 / 4 ? Answer",
+   "said": "4",
+   "right": false
+  },
+  {
+   "frame": "chat",
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "reply": "What is 5^2 - 19? Answer",
+   "said": "19",
+   "right": false
+  }
+ ]
+}

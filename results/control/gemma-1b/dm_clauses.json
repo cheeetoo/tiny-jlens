@@ -1,0 +1,369 @@
+{
+ "band": [
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23
+ ],
+ "math": [
+  {
+   "expr": "4 * 2",
+   "answer": "8",
+   "rank": 163,
+   "top": "What"
+  },
+  {
+   "expr": "5 + 4",
+   "answer": "9",
+   "rank": 76,
+   "top": "What"
+  },
+  {
+   "expr": "3 * 3",
+   "answer": "9",
+   "rank": 111,
+   "top": "What"
+  },
+  {
+   "expr": "3 + 4",
+   "answer": "7",
+   "rank": 89,
+   "top": "What"
+  },
+  {
+   "expr": "2 * 3",
+   "answer": "6",
+   "rank": 109,
+   "top": "What"
+  },
+  {
+   "expr": "2 + 3",
+   "answer": "5",
+   "rank": 54,
+   "top": "What"
+  },
+  {
+   "expr": "14 / 2",
+   "answer": "7",
+   "rank": 137,
+   "top": "What"
+  },
+  {
+   "expr": "18 / 2",
+   "answer": "9",
+   "rank": 107,
+   "top": "What"
+  },
+  {
+   "expr": "11 - 5",
+   "answer": "6",
+   "rank": 81,
+   "top": "What"
+  },
+  {
+   "expr": "15 - 7",
+   "answer": "8",
+   "rank": 114,
+   "top": "What"
+  },
+  {
+   "expr": "9 - 5",
+   "answer": "4",
+   "rank": 116,
+   "top": "What"
+  },
+  {
+   "expr": "11 - 9",
+   "answer": "2",
+   "rank": 28,
+   "top": "What"
+  },
+  {
+   "expr": "12 / 4",
+   "answer": "3",
+   "rank": 35,
+   "top": "What"
+  },
+  {
+   "expr": "21 / 3",
+   "answer": "7",
+   "rank": 139,
+   "top": "What"
+  },
+  {
+   "expr": "24 / 3",
+   "answer": "8",
+   "rank": 199,
+   "top": "What"
+  },
+  {
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "rank": 86,
+   "top": "What"
+  },
+  {
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "rank": 40,
+   "top": "What"
+  },
+  {
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "rank": 96,
+   "top": "What"
+  },
+  {
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "rank": 86,
+   "top": "What"
+  },
+  {
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "rank": 25,
+   "top": "What"
+  },
+  {
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "rank": 81,
+   "top": "What"
+  },
+  {
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "rank": 103,
+   "top": "What"
+  },
+  {
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "rank": 61,
+   "top": "What"
+  },
+  {
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "rank": 46,
+   "top": "What"
+  }
+ ],
+ "paired": [
+  {
+   "key": "spelling",
+   "q1": {
+    "n": 29,
+    "hit10": 0,
+    "best": 659,
+    "out_top3": [
+     "What",
+     "The",
+     "Which"
+    ],
+    "exp_rank": 3941,
+    "foil_rank": 5644,
+    "q1e_rank": 586
+   },
+   "q2": {
+    "n": 29,
+    "hit10": 0,
+    "best": 577,
+    "out_top3": [
+     "Which",
+     "The",
+     "He"
+    ],
+    "exp_rank": 3764,
+    "foil_rank": 12766,
+    "q1e_rank": 887
+   }
+  },
+  {
+   "key": "register",
+   "q1": {
+    "n": 38,
+    "hit10": 0,
+    "best": 101,
+    "out_top3": [
+     "What",
+     "So",
+     "I"
+    ],
+    "exp_rank": 51210,
+    "foil_rank": 21858,
+    "q1e_rank": 2255
+   },
+   "q2": {
+    "n": 38,
+    "hit10": 0,
+    "best": 92,
+    "out_top3": [
+     "How",
+     "The",
+     "What"
+    ],
+    "exp_rank": 35242,
+    "foil_rank": 13499,
+    "q1e_rank": 2290
+   }
+  },
+  {
+   "key": "tense",
+   "q1": {
+    "n": 26,
+    "hit10": 0,
+    "best": 39,
+    "out_top3": [
+     "She",
+     "What",
+     "The"
+    ],
+    "exp_rank": 15501,
+    "foil_rank": 8810,
+    "q1e_rank": 22
+   },
+   "q2": {
+    "n": 26,
+    "hit10": 0,
+    "best": 30,
+    "out_top3": [
+     "When",
+     "She",
+     "The"
+    ],
+    "exp_rank": 26971,
+    "foil_rank": 14841,
+    "q1e_rank": 7
+   }
+  },
+  {
+   "key": "number",
+   "q1": {
+    "n": 21,
+    "hit10": 0,
+    "best": 14,
+    "out_top3": [
+     "The",
+     "What",
+     "Which"
+    ],
+    "exp_rank": 87,
+    "foil_rank": 22,
+    "q1e_rank": 178
+   },
+   "q2": {
+    "n": 21,
+    "hit10": 0,
+    "best": 17,
+    "out_top3": [
+     "The",
+     "Is",
+     "A"
+    ],
+    "exp_rank": 91,
+    "foil_rank": 17,
+    "q1e_rank": 117
+   }
+  },
+  {
+   "key": "pos",
+   "q1": {
+    "n": 20,
+    "hit10": 1,
+    "best": 4,
+    "out_top3": [
+     "The",
+     "What",
+     "Which"
+    ],
+    "exp_rank": 19657,
+    "foil_rank": 1291,
+    "q1e_rank": 65450
+   },
+   "q2": {
+    "n": 20,
+    "hit10": 1,
+    "best": 2,
+    "out_top3": [
+     "The",
+     "What",
+     "Which"
+    ],
+    "exp_rank": 3760,
+    "foil_rank": 331,
+    "q1e_rank": 56281
+   }
+  },
+  {
+   "key": "pos_tense",
+   "q1": {
+    "n": 20,
+    "hit10": 0,
+    "best": 49,
+    "out_top3": [
+     "The",
+     "What",
+     "Which"
+    ],
+    "exp_rank": 30807,
+    "foil_rank": 6902,
+    "q1e_rank": 65450
+   },
+   "q2": {
+    "n": 20,
+    "hit10": 0,
+    "best": 15,
+    "out_top3": [
+     "The",
+     "When",
+     "Which"
+    ],
+    "exp_rank": 21762,
+    "foil_rank": 3218,
+    "q1e_rank": 49483
+   }
+  },
+  {
+   "key": "tone",
+   "q1": {
+    "n": 34,
+    "hit10": 1,
+    "best": 1,
+    "out_top3": [
+     "The",
+     "What",
+     "She"
+    ],
+    "exp_rank": 50802,
+    "foil_rank": 738,
+    "q1e_rank": 58
+   },
+   "q2": {
+    "n": 34,
+    "hit10": 2,
+    "best": 1,
+    "out_top3": [
+     "The",
+     "What",
+     "She"
+    ],
+    "exp_rank": 43233,
+    "foil_rank": 2548,
+    "q1e_rank": 104
+   }
+  }
+ ]
+}

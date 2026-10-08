@@ -1,0 +1,364 @@
+{
+ "band": [
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "math": [
+  {
+   "expr": "4 * 2",
+   "answer": "8",
+   "rank": 5,
+   "top": "4"
+  },
+  {
+   "expr": "5 + 4",
+   "answer": "9",
+   "rank": 20,
+   "top": "5"
+  },
+  {
+   "expr": "3 * 3",
+   "answer": "9",
+   "rank": 5,
+   "top": "3"
+  },
+  {
+   "expr": "3 + 4",
+   "answer": "7",
+   "rank": 9,
+   "top": "4"
+  },
+  {
+   "expr": "2 * 3",
+   "answer": "6",
+   "rank": 3,
+   "top": "3"
+  },
+  {
+   "expr": "2 + 3",
+   "answer": "5",
+   "rank": 3,
+   "top": "3"
+  },
+  {
+   "expr": "14 / 2",
+   "answer": "7",
+   "rank": 5,
+   "top": "1"
+  },
+  {
+   "expr": "18 / 2",
+   "answer": "9",
+   "rank": 8,
+   "top": "1"
+  },
+  {
+   "expr": "11 - 5",
+   "answer": "6",
+   "rank": 12,
+   "top": "1"
+  },
+  {
+   "expr": "15 - 7",
+   "answer": "8",
+   "rank": 12,
+   "top": "1"
+  },
+  {
+   "expr": "9 - 5",
+   "answer": "4",
+   "rank": 8,
+   "top": "9"
+  },
+  {
+   "expr": "11 - 9",
+   "answer": "2",
+   "rank": 16,
+   "top": "1"
+  },
+  {
+   "expr": "12 / 4",
+   "answer": "3",
+   "rank": 4,
+   "top": "1"
+  },
+  {
+   "expr": "21 / 3",
+   "answer": "7",
+   "rank": 5,
+   "top": "3"
+  },
+  {
+   "expr": "24 / 3",
+   "answer": "8",
+   "rank": 9,
+   "top": "<end_of_turn>"
+  },
+  {
+   "expr": "3^2 - 2",
+   "answer": "7",
+   "rank": 10,
+   "top": "3"
+  },
+  {
+   "expr": "2^3 - 3",
+   "answer": "5",
+   "rank": 18,
+   "top": "2"
+  },
+  {
+   "expr": "2^3 + 1",
+   "answer": "9",
+   "rank": 13,
+   "top": "2"
+  },
+  {
+   "expr": "2^2 + 2",
+   "answer": "6",
+   "rank": 11,
+   "top": "2"
+  },
+  {
+   "expr": "3^2 - 4",
+   "answer": "5",
+   "rank": 16,
+   "top": "3"
+  },
+  {
+   "expr": "2^4 - 9",
+   "answer": "7",
+   "rank": 11,
+   "top": "2"
+  },
+  {
+   "expr": "4 * 4 - 9",
+   "answer": "7",
+   "rank": 14,
+   "top": "4"
+  },
+  {
+   "expr": "6 * 6 / 4",
+   "answer": "9",
+   "rank": 19,
+   "top": "6"
+  },
+  {
+   "expr": "5^2 - 19",
+   "answer": "6",
+   "rank": 13,
+   "top": "5"
+  }
+ ],
+ "paired": [
+  {
+   "key": "spelling",
+   "q1": {
+    "n": 29,
+    "hit10": 0,
+    "best": 820,
+    "out_top3": [
+     "She",
+     "Red",
+     "**"
+    ],
+    "exp_rank": 5655,
+    "foil_rank": 2018,
+    "q1e_rank": 53
+   },
+   "q2": {
+    "n": 29,
+    "hit10": 0,
+    "best": 579,
+    "out_top3": [
+     "She",
+     "Red",
+     "The"
+    ],
+    "exp_rank": 5293,
+    "foil_rank": 3622,
+    "q1e_rank": 156
+   }
+  },
+  {
+   "key": "register",
+   "q1": {
+    "n": 38,
+    "hit10": 0,
+    "best": 34,
+    "out_top3": [
+     "That",
+     "<end_of_turn>",
+     "Okay"
+    ],
+    "exp_rank": 976,
+    "foil_rank": 1688,
+    "q1e_rank": 377
+   },
+   "q2": {
+    "n": 38,
+    "hit10": 0,
+    "best": 22,
+    "out_top3": [
+     "Un",
+     "So",
+     "Definitely"
+    ],
+    "exp_rank": 208,
+    "foil_rank": 1064,
+    "q1e_rank": 355
+   }
+  },
+  {
+   "key": "tense",
+   "q1": {
+    "n": 26,
+    "hit10": 0,
+    "best": 29,
+    "out_top3": [
+     "She",
+     "The",
+     "**"
+    ],
+    "exp_rank": 799,
+    "foil_rank": 587,
+    "q1e_rank": 508
+   },
+   "q2": {
+    "n": 26,
+    "hit10": 0,
+    "best": 32,
+    "out_top3": [
+     "sealed",
+     "The",
+     "She"
+    ],
+    "exp_rank": 660,
+    "foil_rank": 943,
+    "q1e_rank": 650
+   }
+  },
+  {
+   "key": "number",
+   "q1": {
+    "n": 21,
+    "hit10": 1,
+    "best": 2,
+    "out_top3": [
+     "The",
+     "Finally",
+     "That"
+    ],
+    "exp_rank": 1514,
+    "foil_rank": 166,
+    "q1e_rank": 674
+   },
+   "q2": {
+    "n": 21,
+    "hit10": 1,
+    "best": 4,
+    "out_top3": [
+     "The",
+     "One",
+     "No"
+    ],
+    "exp_rank": 11,
+    "foil_rank": 2,
+    "q1e_rank": 324
+   }
+  },
+  {
+   "key": "pos",
+   "q1": {
+    "n": 20,
+    "hit10": 0,
+    "best": 37,
+    "out_top3": [
+     "The",
+     "That",
+     "In"
+    ],
+    "exp_rank": 13084,
+    "foil_rank": 2861,
+    "q1e_rank": 12086
+   },
+   "q2": {
+    "n": 20,
+    "hit10": 0,
+    "best": 33,
+    "out_top3": [
+     "The",
+     "Opinion",
+     "In"
+    ],
+    "exp_rank": 3000,
+    "foil_rank": 339,
+    "q1e_rank": 18161
+   }
+  },
+  {
+   "key": "pos_tense",
+   "q1": {
+    "n": 20,
+    "hit10": 0,
+    "best": 46,
+    "out_top3": [
+     "The",
+     "That",
+     "In"
+    ],
+    "exp_rank": 2904,
+    "foil_rank": 260,
+    "q1e_rank": 12086
+   },
+   "q2": {
+    "n": 20,
+    "hit10": 0,
+    "best": 33,
+    "out_top3": [
+     "The",
+     "Ultimately",
+     "In"
+    ],
+    "exp_rank": 2455,
+    "foil_rank": 281,
+    "q1e_rank": 13265
+   }
+  },
+  {
+   "key": "tone",
+   "q1": {
+    "n": 34,
+    "hit10": 0,
+    "best": 43,
+    "out_top3": [
+     "The",
+     "That",
+     "**"
+    ],
+    "exp_rank": 460,
+    "foil_rank": 772,
+    "q1e_rank": 24
+   },
+   "q2": {
+    "n": 34,
+    "hit10": 0,
+    "best": 39,
+    "out_top3": [
+     "Empty",
+     "Em",
+     "E"
+    ],
+    "exp_rank": 4,
+    "foil_rank": 110,
+    "q1e_rank": 241
+   }
+  }
+ ]
+}
