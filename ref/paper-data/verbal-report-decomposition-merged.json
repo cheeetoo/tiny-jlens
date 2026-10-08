@@ -1,0 +1,907 @@
+{
+  "meta": {
+    "model": "Sonnet 4.5",
+    "band_label": "L38–92",
+    "atom_layer_label": "L92",
+    "ito_k": 16,
+    "baseline_n_words": 100,
+    "introspection": {
+      "n": 72,
+      "n_total": 100,
+      "n_random_excluded": 0,
+      "median_aligned_var": 0.0649,
+      "median_residual_var": 0.935
+    },
+    "swap": {
+      "n_trials": 64,
+      "n_categories": 13,
+      "min_clean_rank": 11,
+      "alpha": 1.0,
+      "median_aligned_var": 0.0644,
+      "median_residual_var": 0.9357
+    }
+  },
+  "conditions": [
+    {
+      "key": "random",
+      "label": "random direction",
+      "color": "#d1d5db",
+      "in_swap_panel": false,
+      "in_dose_panel": false
+    },
+    {
+      "key": "residual_jclamp",
+      "label": "non-J-space, J-coordinates clamped",
+      "color": "#111827",
+      "in_swap_panel": true,
+      "in_dose_panel": true
+    },
+    {
+      "key": "residual",
+      "label": "non-J-space component",
+      "color": "#6b7280",
+      "in_swap_panel": true,
+      "in_dose_panel": true
+    },
+    {
+      "key": "full",
+      "label": "full concept vector",
+      "color": "#2563eb",
+      "in_swap_panel": false,
+      "in_dose_panel": false
+    },
+    {
+      "key": "aligned",
+      "label": "J-space component",
+      "color": "#ff6b35",
+      "in_swap_panel": true,
+      "in_dose_panel": true
+    },
+    {
+      "key": "jlens",
+      "label": "pure J-lens vectors",
+      "color": "#c2410c",
+      "in_swap_panel": true,
+      "in_dose_panel": true
+    }
+  ],
+  "construction": {
+    "word": "thunder",
+    "aligned_var": 0.1242,
+    "residual_var": 0.8764,
+    "atom_layer_label": "L92",
+    "atoms": [
+      {
+        "token": "thunder",
+        "weight": 0.2446
+      },
+      {
+        "token": "weather",
+        "weight": 0.0608
+      },
+      {
+        "token": "yth",
+        "weight": 0.0598
+      },
+      {
+        "token": "phenomenon",
+        "weight": 0.0588
+      },
+      {
+        "token": "audio",
+        "weight": 0.0583
+      }
+    ]
+  },
+  "swap": {
+    "ylabel": "fraction of swap targets reaching the model's top-5",
+    "series": {
+      "random": {
+        "p5": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0566,
+        "per_category": [
+          {
+            "category": "beverage",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "bird",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "city",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "color",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "country",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "fruit",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "instrument",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "language",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "organ",
+            "p5": 0.0,
+            "n": 7
+          },
+          {
+            "category": "planet",
+            "p5": 0.0,
+            "n": 1
+          },
+          {
+            "category": "profession",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "sport",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "tree",
+            "p5": 0.0,
+            "n": 6
+          }
+        ]
+      },
+      "residual_jclamp": {
+        "p5": 0.0156,
+        "ci_lo": 0.0028,
+        "ci_hi": 0.0833,
+        "per_category": [
+          {
+            "category": "beverage",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "bird",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "city",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "color",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "country",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "fruit",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "instrument",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "language",
+            "p5": 0.2,
+            "n": 5
+          },
+          {
+            "category": "organ",
+            "p5": 0.0,
+            "n": 7
+          },
+          {
+            "category": "planet",
+            "p5": 0.0,
+            "n": 1
+          },
+          {
+            "category": "profession",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "sport",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "tree",
+            "p5": 0.0,
+            "n": 6
+          }
+        ]
+      },
+      "residual": {
+        "p5": 0.0938,
+        "ci_lo": 0.0437,
+        "ci_hi": 0.1898,
+        "per_category": [
+          {
+            "category": "beverage",
+            "p5": 0.5,
+            "n": 4
+          },
+          {
+            "category": "bird",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "city",
+            "p5": 0.1667,
+            "n": 6
+          },
+          {
+            "category": "color",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "country",
+            "p5": 0.1667,
+            "n": 6
+          },
+          {
+            "category": "fruit",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "instrument",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "language",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "organ",
+            "p5": 0.2857,
+            "n": 7
+          },
+          {
+            "category": "planet",
+            "p5": 0.0,
+            "n": 1
+          },
+          {
+            "category": "profession",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "sport",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "tree",
+            "p5": 0.0,
+            "n": 6
+          }
+        ]
+      },
+      "full": {
+        "p5": 0.2344,
+        "ci_lo": 0.1475,
+        "ci_hi": 0.3513,
+        "per_category": [
+          {
+            "category": "beverage",
+            "p5": 0.5,
+            "n": 4
+          },
+          {
+            "category": "bird",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "city",
+            "p5": 0.6667,
+            "n": 6
+          },
+          {
+            "category": "color",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "country",
+            "p5": 0.6667,
+            "n": 6
+          },
+          {
+            "category": "fruit",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "instrument",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "language",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "organ",
+            "p5": 0.1429,
+            "n": 7
+          },
+          {
+            "category": "planet",
+            "p5": 0.0,
+            "n": 1
+          },
+          {
+            "category": "profession",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "sport",
+            "p5": 0.25,
+            "n": 4
+          },
+          {
+            "category": "tree",
+            "p5": 0.5,
+            "n": 6
+          }
+        ]
+      },
+      "aligned": {
+        "p5": 0.5469,
+        "ci_lo": 0.4257,
+        "ci_hi": 0.6627,
+        "per_category": [
+          {
+            "category": "beverage",
+            "p5": 0.75,
+            "n": 4
+          },
+          {
+            "category": "bird",
+            "p5": 0.0,
+            "n": 5
+          },
+          {
+            "category": "city",
+            "p5": 1.0,
+            "n": 6
+          },
+          {
+            "category": "color",
+            "p5": 0.6,
+            "n": 5
+          },
+          {
+            "category": "country",
+            "p5": 1.0,
+            "n": 6
+          },
+          {
+            "category": "fruit",
+            "p5": 0.0,
+            "n": 4
+          },
+          {
+            "category": "instrument",
+            "p5": 0.6,
+            "n": 5
+          },
+          {
+            "category": "language",
+            "p5": 1.0,
+            "n": 5
+          },
+          {
+            "category": "organ",
+            "p5": 0.0,
+            "n": 7
+          },
+          {
+            "category": "planet",
+            "p5": 1.0,
+            "n": 1
+          },
+          {
+            "category": "profession",
+            "p5": 0.0,
+            "n": 6
+          },
+          {
+            "category": "sport",
+            "p5": 1.0,
+            "n": 4
+          },
+          {
+            "category": "tree",
+            "p5": 0.6667,
+            "n": 6
+          }
+        ]
+      },
+      "jlens": {
+        "p5": 0.875,
+        "ci_lo": 0.7723,
+        "ci_hi": 0.9353,
+        "per_category": [
+          {
+            "category": "beverage",
+            "p5": 1.0,
+            "n": 4
+          },
+          {
+            "category": "bird",
+            "p5": 0.2,
+            "n": 5
+          },
+          {
+            "category": "city",
+            "p5": 1.0,
+            "n": 6
+          },
+          {
+            "category": "color",
+            "p5": 1.0,
+            "n": 5
+          },
+          {
+            "category": "country",
+            "p5": 1.0,
+            "n": 6
+          },
+          {
+            "category": "fruit",
+            "p5": 1.0,
+            "n": 4
+          },
+          {
+            "category": "instrument",
+            "p5": 0.8,
+            "n": 5
+          },
+          {
+            "category": "language",
+            "p5": 1.0,
+            "n": 5
+          },
+          {
+            "category": "organ",
+            "p5": 0.8571,
+            "n": 7
+          },
+          {
+            "category": "planet",
+            "p5": 1.0,
+            "n": 1
+          },
+          {
+            "category": "profession",
+            "p5": 0.6667,
+            "n": 6
+          },
+          {
+            "category": "sport",
+            "p5": 1.0,
+            "n": 4
+          },
+          {
+            "category": "tree",
+            "p5": 1.0,
+            "n": 6
+          }
+        ]
+      }
+    }
+  },
+  "dose": {
+    "strengths": [
+      0.01,
+      0.02,
+      0.04,
+      0.08,
+      0.16,
+      0.32,
+      0.64
+    ],
+    "ylabel": "fraction of concepts reported in the model's top-5",
+    "series": {
+      "random": {
+        "peak_strength": 0.64,
+        "peak_p5": 0.0,
+        "peak_ci_lo": 0.0,
+        "peak_ci_hi": 0.0507,
+        "p5": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ci_lo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ci_hi": [
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507
+        ],
+        "p10": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p10_ci_lo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p10_ci_hi": [
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507
+        ]
+      },
+      "residual_jclamp": {
+        "peak_strength": 0.32,
+        "peak_p5": 0.0278,
+        "peak_ci_lo": 0.0077,
+        "peak_ci_hi": 0.0957,
+        "p5": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0139,
+          0.0278,
+          0.0
+        ],
+        "ci_lo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0025,
+          0.0077,
+          0.0
+        ],
+        "ci_hi": [
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0746,
+          0.0957,
+          0.0507
+        ],
+        "p10": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0139,
+          0.0278,
+          0.0
+        ],
+        "p10_ci_lo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0025,
+          0.0077,
+          0.0
+        ],
+        "p10_ci_hi": [
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0507,
+          0.0746,
+          0.0957,
+          0.0507
+        ]
+      },
+      "residual": {
+        "peak_strength": 0.16,
+        "peak_p5": 0.125,
+        "peak_ci_lo": 0.0672,
+        "peak_ci_hi": 0.2208,
+        "p5": [
+          0.0,
+          0.0,
+          0.0,
+          0.0694,
+          0.125,
+          0.0833,
+          0.0139
+        ],
+        "ci_lo": [
+          0.0,
+          0.0,
+          0.0,
+          0.03,
+          0.0672,
+          0.0388,
+          0.0025
+        ],
+        "ci_hi": [
+          0.0507,
+          0.0507,
+          0.0507,
+          0.1525,
+          0.2208,
+          0.1701,
+          0.0746
+        ],
+        "p10": [
+          0.0,
+          0.0,
+          0.0139,
+          0.125,
+          0.1667,
+          0.1944,
+          0.0556
+        ],
+        "p10_ci_lo": [
+          0.0,
+          0.0,
+          0.0025,
+          0.0672,
+          0.098,
+          0.1195,
+          0.0218
+        ],
+        "p10_ci_hi": [
+          0.0507,
+          0.0507,
+          0.0746,
+          0.2208,
+          0.2691,
+          0.3003,
+          0.1343
+        ]
+      },
+      "full": {
+        "peak_strength": 0.08,
+        "peak_p5": 0.5694,
+        "peak_ci_lo": 0.4544,
+        "peak_ci_hi": 0.6774,
+        "p5": [
+          0.0,
+          0.0278,
+          0.2222,
+          0.5694,
+          0.5139,
+          0.5,
+          0.3611
+        ],
+        "ci_lo": [
+          0.0,
+          0.0077,
+          0.1417,
+          0.4544,
+          0.4007,
+          0.3875,
+          0.2598
+        ],
+        "ci_hi": [
+          0.0507,
+          0.0957,
+          0.3309,
+          0.6774,
+          0.6257,
+          0.6125,
+          0.4765
+        ],
+        "p10": [
+          0.0,
+          0.0556,
+          0.375,
+          0.6528,
+          0.5972,
+          0.5417,
+          0.4167
+        ],
+        "p10_ci_lo": [
+          0.0,
+          0.0218,
+          0.2722,
+          0.5376,
+          0.4818,
+          0.4274,
+          0.3099
+        ],
+        "p10_ci_hi": [
+          0.0507,
+          0.1343,
+          0.4905,
+          0.7525,
+          0.7028,
+          0.6517,
+          0.5319
+        ]
+      },
+      "aligned": {
+        "peak_strength": 0.04,
+        "peak_p5": 0.7917,
+        "peak_ci_lo": 0.6843,
+        "peak_ci_hi": 0.8695,
+        "p5": [
+          0.0694,
+          0.3889,
+          0.7917,
+          0.7083,
+          0.5694,
+          0.1389,
+          0.1389
+        ],
+        "ci_lo": [
+          0.03,
+          0.2847,
+          0.6843,
+          0.5949,
+          0.4544,
+          0.0772,
+          0.0772
+        ],
+        "ci_hi": [
+          0.1525,
+          0.5044,
+          0.8695,
+          0.8006,
+          0.6774,
+          0.2371,
+          0.2371
+        ],
+        "p10": [
+          0.0972,
+          0.5556,
+          0.8611,
+          0.8194,
+          0.625,
+          0.2222,
+          0.1528
+        ],
+        "p10_ci_lo": [
+          0.0479,
+          0.4409,
+          0.7629,
+          0.7152,
+          0.5095,
+          0.1417,
+          0.0875
+        ],
+        "p10_ci_hi": [
+          0.1874,
+          0.6646,
+          0.9228,
+          0.8913,
+          0.7278,
+          0.3309,
+          0.2532
+        ]
+      },
+      "jlens": {
+        "peak_strength": 0.02,
+        "peak_p5": 0.8889,
+        "peak_ci_lo": 0.7958,
+        "peak_ci_hi": 0.9426,
+        "p5": [
+          0.2639,
+          0.8889,
+          0.7917,
+          0.7083,
+          0.4167,
+          0.4167,
+          0.25
+        ],
+        "ci_lo": [
+          0.1759,
+          0.7958,
+          0.6843,
+          0.5949,
+          0.3099,
+          0.3099,
+          0.1644
+        ],
+        "ci_hi": [
+          0.3758,
+          0.9426,
+          0.8695,
+          0.8006,
+          0.5319,
+          0.5319,
+          0.3609
+        ],
+        "p10": [
+          0.2917,
+          1.0,
+          0.8333,
+          0.7778,
+          0.5278,
+          0.5,
+          0.2917
+        ],
+        "p10_ci_lo": [
+          0.1994,
+          0.9493,
+          0.7309,
+          0.6691,
+          0.414,
+          0.3875,
+          0.1994
+        ],
+        "p10_ci_hi": [
+          0.4051,
+          1.0,
+          0.902,
+          0.8583,
+          0.6387,
+          0.6125,
+          0.4051
+        ]
+      }
+    }
+  }
+}

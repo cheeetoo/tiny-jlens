@@ -1,0 +1,1 @@
+{"rows":[{"name":"light","color":"#fdba74","layers":"62–71","mh_acc":0.68,"pt_acc":0.87},{"name":"medium","color":"#f97316","layers":"54–79","mh_acc":0.26,"pt_acc":0.75},{"name":"heavy","color":"#c2410c","layers":"42–88","mh_acc":0.06,"pt_acc":0.65},{"name":"random","color":"#9ca3af","layers":"54–79","mh_acc":0.98,"pt_acc":0.96}],"n_items":50,"clean_acc":0.98,"n_pos":458856}

@@ -6,8 +6,7 @@ using the J-lens artifact the authors released for it?
 
 A re-implementation of the paper's five functional criteria, one module per criterion, written
 against the paper text and Anthropic's reference implementation plus released prompt data
-(`ref/jacobian-lens`) only. `PROTOCOL.md` is the record: for each criterion, the paper's text,
-what we ran, what we found, and every deviation the base model forced.
+(`ref/jacobian-lens`) only.
 
 ## Layout
 
@@ -26,17 +25,20 @@ jl/                     the library
   followups.py          follow-up experiments: protection rule, ignition, lists, neurons,
                         lens variants, band sensitivity, linear check, injected thought, seeds
   control.py            the two tests of top-down control (injected thought, directed modulation) as
-                        the paper runs them, on GPT-2 (several base-model frames) and on Qwen3.5-0.8B
-                        (instruct) with its Neuronpedia lens; also Qwen's verbal report, layer stats, and the
+                        the paper runs them, on GPT-2 (several base-model frames), on Qwen3.5-0.8B
+                        (instruct), and on Gemma 3 270m and 1b (base and instruct), each with its
+                        Neuronpedia lens; also Qwen's verbal report, layer stats, and the
                         arithmetic and paired-question parts of directed modulation
   qwen_control.py       an earlier version of the same checks on Qwen3-1.7B (superseded by control.py)
   introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)
-results/<criterion>/    results.json, prompts.json, summary.txt from the runs behind PROTOCOL.md
+results/<criterion>/    results.json, prompts.json, summary.txt from each criterion's run
 results/followups/      one JSON per follow-up experiment
 results/control/        jl.control's results, one directory per model
-ref/paper-data/         the paper's released figure data used in scoring (Claude's per-swap grid,
-                        directed modulation rates, verbal report correlations)
-post/                   the blog post draft (post.md), figures, and NOTES.md
+ref/paper-data/         the data behind the paper's interactive figures (Claude's numbers, per trial
+                        where released); its README describes each file
+post/                   the post's figures: fig1/ (Figure 1), sketches/ (the structure figures) and
+                        figures/; and the directed modulation write-ups DM_SETUP.md (GPT-2, Qwen)
+                        and DM_GEMMA.md (Gemma 3), whose tables come from post/figures/dm_*.py
 commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
                         (local copies of the paper and commentary texts are gitignored)
 lenses/gpt2-small/      the released lens: fit config and convergence (the .pt is not in git)
@@ -44,7 +46,7 @@ ref/jacobian-lens/      Anthropic's reference implementation (installed editable
 ```
 
 Each criterion module is self-contained: the paper's materials and the base-model prompt frame,
-the experiments, and the summary that `PROTOCOL.md` quotes.
+the experiments, and the summary.
 
 ## Running
 
@@ -73,9 +75,14 @@ NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # (also modulat
 python -m jl.band [stats|cka|mlp_gain]   # the band statistics
 ```
 
-Setup: `pip install -e ref/jacobian-lens`, plus torch, transformers, datasets and scipy. (A working
+The Gemma runs are listed at the end of `post/DM_GEMMA.md`. The figures are built from the
+repository root with `python post/fig1/build.py` (needs headless Chromium) and
+`PYTHONPATH=. python post/figures/<name>.py`.
+
+Setup: `pip install -r requirements.txt` (Python 3.13; it installs `ref/jacobian-lens` editable). (A working
 environment is in `.venv/`: `source .venv/bin/activate`.) The
 lens file itself is a large binary and is not in git: download the authors' released gpt2-small
 lens (Neuronpedia, `neuronpedia/jacobian-lens`) to
 `lenses/_hf/gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt`, or point `JLENS_LENS` at
-it. `DEVICE` overrides the device, which otherwise is the GPU when there is one.
+it. `DEVICE` overrides the device. Otherwise `jl.model` uses CUDA when there is one, but
+`jl.control` and `jl.qwen_control` use MPS or else the CPU, so set `DEVICE=cuda` for them on a GPU.

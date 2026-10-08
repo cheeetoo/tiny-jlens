@@ -1,0 +1,11 @@
+# Python 3.13.  The versions the results in results/ were produced with.
+# From the repository root:  pip install -r requirements.txt
+-e ./ref/jacobian-lens
+torch==2.14.0
+transformers==5.17.0
+huggingface_hub==1.32.0
+datasets==5.0.1
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+pillow==12.3.0

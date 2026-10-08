@@ -52,3 +52,25 @@ Downloaded from the paper's page, where each interactive figure loads its data f
   assistant turn (`other`), at strengths `s` from 0 to 0.025. Values are rounded to 3 decimals.
   Used by `post/figures/introspect.py`. (Not to be confused with
   `ref/jacobian-lens/data/experiments/verbal-introspection.json`, the released protocol.)
+- `verbal-report-decomposition-merged.json` — `data/verbal-report-decomposition-merged/data.json`,
+  the data behind Fig. 8 (the J-space part of a concept vector is privileged for verbal report,
+  Sonnet 4.5, k = 16, band L38–92): for six conditions (`random`, `residual_jclamp`, `residual`,
+  `full`, `aligned`, `jlens`), the fraction of swap targets reaching the model's top 5 (`swap`) and
+  the fraction of concepts reported in the top 5 at strengths 0.01 to 0.64 (`dose`, 72 concepts),
+  with the decomposition of the example concept "thunder" (`construction`).
+- `probe-swap.json` — `data/probe-swap/data.json`, the data behind Fig. 16 (the J-space part of an
+  intermediate's probe carries most of its causal effect, Sonnet 4.5, 90 two-hop items, k = 25):
+  the swap rates of the whole probe (`jlens`), its J-space part (`jpart`) and the rest (`ortho`)
+  over L38–83 (`full_band`), the figure's other panels (`bars`, `sweep`), and an example. (Not to
+  be confused with `ref/jacobian-lens/data/experiments/probe-swap.json`, the released two-hop items
+  that `jl.c3_reasoning` uses.)
+- `ablation-strength.json` — `data/ablation-strength/table.json`, the data behind Fig. 22 (the three
+  J-space ablation strengths): for light (L62–71), medium (L54–79), heavy (L42–88) and random
+  (L54–79) ablation, multi-hop accuracy (`mh_acc`, 50 items; 0.98 clean) and the share of
+  ordinary-text tokens whose top 1 is unchanged (`pt_acc`).
+- `ablation-bars.json` — `data/ablation-bars/bars.json`, the data behind Fig. 24 (J-space ablation
+  across 14 tasks): each task's score under light, medium and heavy ablation relative to clean
+  Sonnet 4.5, with clean Haiku for comparison, and intervals (`lo`, `hi`).
+- `capacity-fve-occupancy.json` — `data/capacity-fve-occupancy/data.json`, the data behind Fig. 30
+  (J-space occupancy by layer): percentiles (1st to 99th) of occupancy at each of 25 layers, the
+  band (layers 9 to 22), and variance-explained curves at L58, L67, L75, L83 and L92.
