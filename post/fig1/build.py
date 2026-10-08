@@ -6,11 +6,13 @@ Data:
       and .../data/ignition/data.json
   ../../results/band/cka.json                      GPT-2 dictionary CKA (top 5 PCs removed)
   data/ignition_grid.json                          GPT-2 ignition sweep (data/ignition_grid.py)
-Run from the repo root:  python post/fig1/build.py
+Run from the repo root:  .venv/bin/python post/fig1/build.py
 """
 import json
 import pathlib
 import subprocess
+
+from PIL import Image, ImageChops
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -29,6 +31,10 @@ data = dict(
 html = (HERE / "template.html").read_text().replace("__DATA__", json.dumps(data, separators=(",", ":")))
 (HERE / "fig1.html").write_text(html)
 subprocess.run([CHROMIUM, "--headless", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2",
-                "--window-size=1500,1210", f"--screenshot={HERE / 'fig1.png'}", (HERE / "fig1.html").as_uri()],
+                "--window-size=1436,1300", f"--screenshot={HERE / 'fig1.png'}", (HERE / "fig1.html").as_uri()],
                check=True, capture_output=True)
+# crop the white below the figure, keeping the same 2px (4px at 2x) margin as the other sides
+img = Image.open(HERE / "fig1.png").convert("RGB")
+bottom = ImageChops.difference(img, Image.new("RGB", img.size, "white")).getbbox()[3]
+img.crop((0, 0, img.width, bottom + 4)).save(HERE / "fig1.png")
 print("wrote", HERE / "fig1.html", "and fig1.png")
