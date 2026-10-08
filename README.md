@@ -29,6 +29,9 @@ jl/                     the library
                         (instruct), and on Gemma 3 270m and 1b (base and instruct), each with its
                         Neuronpedia lens; also Qwen's verbal report, layer stats, and the
                         arithmetic and paired-question parts of directed modulation
+  intentional.py        the earlier paper's version of the same test (Lindsey 2025, "Intentional Control"):
+                        think / don't think about a named word while writing a sentence, as that paper runs
+                        it, read with its concept vectors and with the J-lens (post/DM_LINDSEY.md)
   qwen_control.py       an earlier version of the same checks on Qwen3-1.7B (superseded by control.py)
   introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)
 results/<criterion>/    results.json, prompts.json, summary.txt from each criterion's run
@@ -36,9 +39,12 @@ results/followups/      one JSON per follow-up experiment
 results/control/        jl.control's results, one directory per model
 ref/paper-data/         the data behind the paper's interactive figures (Claude's numbers, per trial
                         where released); its README describes each file
+ref/introspection/      the materials of Lindsey (2025)'s intentional-control experiment (words, sentences,
+                        prompts), checked against that paper's text
 post/                   the post's figures: fig1/ (Figure 1), sketches/ (the structure figures) and
                         figures/; and the directed modulation write-ups DM_SETUP.md (GPT-2, Qwen)
-                        and DM_GEMMA.md (Gemma 3), whose tables come from post/figures/dm_*.py
+                        and DM_GEMMA.md (Gemma 3), and DM_LINDSEY.md (the named-word version, all five models),
+                        whose tables come from post/figures/dm_*.py
 commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
                         (local copies of the paper and commentary texts are gitignored)
 lenses/gpt2-small/      the released lens: fit config and convergence (the .pt is not in git)
@@ -75,7 +81,9 @@ NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # (also modulat
 python -m jl.band [stats|cka|mlp_gain]   # the band statistics
 ```
 
-The Gemma runs are listed at the end of `post/DM_GEMMA.md`. The figures are built from the
+The Gemma runs are listed at the end of `post/DM_GEMMA.md`, and the named-word runs at the end of
+`post/DM_LINDSEY.md`. On a GPU, `GRID_BATCH=32` runs `modulation_grid` in batches (the default, 1, is
+the per-trial loop the existing results were made with; the two agree to within a few places of rank). The figures are built from the
 repository root with `python post/fig1/build.py` (needs headless Chromium) and
 `PYTHONPATH=. python post/figures/<name>.py`.
 
@@ -84,5 +92,5 @@ environment is in `.venv/`: `source .venv/bin/activate`.) The
 lens file itself is a large binary and is not in git: download the authors' released gpt2-small
 lens (Neuronpedia, `neuronpedia/jacobian-lens`) to
 `lenses/_hf/gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt`, or point `JLENS_LENS` at
-it. `DEVICE` overrides the device. Otherwise `jl.model` uses CUDA when there is one, but
-`jl.control` and `jl.qwen_control` use MPS or else the CPU, so set `DEVICE=cuda` for them on a GPU.
+it. `DEVICE` overrides the device. Otherwise `jl.model` and `jl.control` use CUDA when there is one
+(`jl.control` then MPS, then the CPU), and `jl.qwen_control` uses MPS or else the CPU.

@@ -53,12 +53,13 @@ class Grid:
         self.cond = np.array([t["cond"] for t in self.trials])
         self.phrasing = np.array([t["phrasing"] or "" for t in self.trials])
 
-    def best(self, band="ours", skip_first=False, held=None):
+    def best(self, band="ours", skip_first=False, held=None, skip_last=False):
         """[trial] best rank of a tracked token over the band's layers and every position.
         `band`: a key of BANDS, a (first, last) pair of layers, or "output".
         `skip_first`: leave out the sentence's first token.  `held`: count only positions where no
         tracked token is in the model's own top `held` next tokens (held in mind, not about to be
-        said)."""
+        said).  `skip_last`: leave out the sentence's last token, where a small model recalls what
+        followed the sentence in the prompt (post/DM_LINDSEY.md)."""
         if band == "output":
             return self.ranks[:, -1, :].min(axis=1)
         # a variant run (e.g. `gemma-270m-it_lens-gemma-270m`) uses its model's bands
@@ -66,6 +67,9 @@ class Grid:
         r = self.ranks[:, lo:hi + 1, :]
         if held:
             r = np.where((self.ranks[:, -1, :] <= held)[:, None, :], NO_RANK, r)
+        if skip_last:
+            n = np.array([t["n_pos"] for t in self.trials])
+            r = np.where((np.arange(r.shape[2]) == (n - 1)[:, None])[:, None, :], NO_RANK, r)
         if skip_first:
             r = r[:, :, 1:]
         return r.min(axis=(1, 2))

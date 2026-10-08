@@ -1,6 +1,6 @@
 # Directed modulation in Gemma 3: base against instruction-tuned
 
-Written 2026-10-03. This follows `post/DM_SETUP.md`: the same task, materials, prompt and score, run on Gemma-3-270m and Gemma-3-1b, each as the base model and its instruction-tuned version. Every model is read with its own Neuronpedia J-lens. The numbers come from `python post/figures/dm_gemma.py 270m` and `... 1b`, and the figures from `post/figures/dm_gemma_fig.py`.
+Written 2026-10-03; updated 2026-10-08 with the two runs that hadn't finished, the centered readout and the math family at 1b (sections 4.7 and 4.8). This follows `post/DM_SETUP.md`: the same task, materials, prompt and score, run on Gemma-3-270m and Gemma-3-1b, each as the base model and its instruction-tuned version. Every model is read with its own Neuronpedia J-lens. The numbers come from `python post/figures/dm_gemma.py 270m` and `... 1b`, and the figures from `post/figures/dm_gemma_fig.py`.
 
 ## In short
 
@@ -22,7 +22,8 @@ Written 2026-10-03. This follows `post/DM_SETUP.md`: the same task, materials, p
 - **At 270m, neither model does it.** Post-training tilts the ranks the right way: "think about" moves up toward a mention, and "don't think about" falls close to the no-instruction level. But nothing reaches the top of the lens.
 - **So in this family, post-training is necessary but not sufficient.** No base model shows directed modulation. The instruction-tuned one shows it at 1b and not at 270m.
 - **Gemma's residual stream is as odd as expected, but that doesn't touch this test.** Five of 640 dimensions hold 75% to 98% of the residual's squared norm. This test only reads the lens, and the lens's ranks are a linear function of the residual: the final RMSNorm only rescales each vector. So the rogue dimensions can add at most a fixed bias over the vocabulary at each layer. The centered-readout control removes that bias (section 4.7).
-- **The effect is in the model, not its lens.** Read with the base model's lens, Gemma-3-1b-it still has a member on top on 65.2% of "think about" trials. The base model read with the instruction-tuned lens still shows nothing. At 270m, centering the readout to remove the rogue dimensions' bias changes no conclusion (section 4.7; the 1b run was paused).
+- **The effect is in the model, not its lens.** Read with the base model's lens, Gemma-3-1b-it still has a member on top on 65.2% of "think about" trials. The base model read with the instruction-tuned lens still shows nothing. Centering the readout to remove the rogue dimensions' bias changes no conclusion at either size (section 4.7).
+- **Mental arithmetic at 1b goes the right way, mostly below the top of the lens.** Told to evaluate an expression while copying, Gemma-3-1b-it has the answer in the lens top 5 on 21% of trials (chat), against 12% with a bare mention and 1.5% with no instruction, and "think about" beats a mention on 77% of pairs. At the paper's score (rank 1) it is 2.9%, where Claude is at 73% to 96%. Unlike the categories, this isn't the model about to say the answer. The base model shows nothing (section 4.8).
 - **Part of the effect is the model wanting to say the word.** Left to reply by itself, 1b-it writes something other than the sentence on 51 of 66 "think about" trials, mostly by bringing the category in ("Sunday, Monday, Tuesday…", or the sentence followed by "Mars glows a faint orange."). Counting only tokens where it isn't about to write a member, "think about" is 28.5%, a mention 16.4%, and no instruction 2.0% (section 4.5).
 - **A detail for the post.** At this score, the small models' "hits" in the base models and at 270m are almost all a few (category, sentence) pairs where the sentence itself evokes a member, like "The sun is shining brightly today in town." with weather. GPT-2's 0.5% in every condition is this: 48 of its 50 hits under an instruction are two pairs (section 4.6).
 
@@ -241,16 +242,52 @@ Some of these pairs hit with no instruction too. Others hit only once the catego
 | Gemma-3-270m-it, chat | centered | 0.0% | 0.2% | 0.2% | 0.2% | 0.0% | 41% | 152 |
 | Gemma-3-270m, plain text | as the paper | 0.0% | 0.4% | 0.6% | 0.4% | 0.4% | 26% | 110 |
 | Gemma-3-270m, plain text | centered | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 27% | 250 |
-
-The same check at 1b hasn't finished (section 6).
+| Gemma-3-1b-it, chat | as the paper | 2.0% | 65.2% | 34.5% | 2.0% | 14.5% | 97% | 1 |
+| Gemma-3-1b-it, chat | centered | 0.7% | 58.5% | 22.9% | 0.6% | 7.7% | 96% | 1 |
+| Gemma-3-1b, plain text | as the paper | 0.7% | 2.8% | 3.2% | 1.8% | 2.2% | 33% | 36 |
+| Gemma-3-1b, plain text | centered | 0.7% | 3.6% | 3.6% | 2.3% | 3.0% | 31% | 77 |
 
 - Centering doesn't uncover anything hidden at 270m. The paired comparisons barely move (think about against a mention: 40% → 41% and 26% → 27%; the others move by at most 8 points in the same direction). The categories just rank lower overall: the fixed bias was lifting these common words, not hiding them.
+- At 1b it changes neither result. In the instruction-tuned model "think about" falls from 65.2% to 58.5% and a bare mention from 34.5% to 22.9%, so the effect, if anything, separates more from a mention. "Think about" still beats a mention on 96% of pairs, and where the model isn't about to say a member it is 24.1% (28.5% before). The base model still shows nothing: "think about" equals a mention (3.6%) and loses to it on 69% of pairs.
+- These rows come from `controls()` in `post/figures/dm_gemma.py`, which also prints the swapped-lens table above.
 
 ### 4.8 Math
 
 - No Gemma-3-270m model gets a math hit in any condition or frame. A tracked answer reaches the lens top 25 on at most 6% of trials, flat across conditions.
 - The answer can't be blamed on the model not knowing it. Writing the answer itself (`arithmetic_gen`, greedy), Gemma-3-270m-it gets 20 of 24 right after `{expr} =`, 21 of 24 after worked examples, and 15 of 24 as question and answer. The base model gets 5, 13 and 0. Asked in a chat ("What is 4 * 2? Answer with just the number."), 270m-it gets 1 of 24: it repeats one of the operands.
-- Gemma-3-1b-it gets 20 of 24 in the chat, and 21, 23 and 21 in the three plain-text frames. The base 1b model gets 9, 15 and 15 in plain text and 0 in the chat. So at 1b the math family can be read, because the instruction-tuned model knows the answers. The math grid at 1b hasn't been run (section 6).
+- Gemma-3-1b-it gets 20 of 24 in the chat, and 21, 23 and 21 in the three plain-text frames. The base 1b model gets 9, 15 and 15 in plain text and 0 in the chat. So at 1b the math family can be read, because the instruction-tuned model knows the answers.
+
+The math grid at 1b (both models, both frames, all 26 phrasings including the paper's two math-only focus phrasings, 12,960 trials each), the paper's band:
+
+| model, prompt | score | no instruction | think about | mention | don't think about | ignore |
+|---|---|---|---|---|---|---|
+| Gemma-3-1b, plain text | rank 1 | 0.0% | 0.1% | 0.1% | 0.1% | 0.1% |
+| Gemma-3-1b-it, plain text | rank 1 | 0.0% | 2.6% | 0.6% | 0.2% | 0.2% |
+| Gemma-3-1b, chat | rank 1 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% |
+| Gemma-3-1b-it, chat | rank 1 | 1.2% | 2.9% | 2.8% | 1.1% | 1.9% |
+| Gemma-3-1b, plain text | top 5 | 0.6% | 0.5% | 0.6% | 0.4% | 0.5% |
+| Gemma-3-1b-it, plain text | top 5 | 1.2% | 16.4% | 4.1% | 2.1% | 2.2% |
+| Gemma-3-1b, chat | top 5 | 0.4% | 0.4% | 0.4% | 0.4% | 0.4% |
+| Gemma-3-1b-it, chat | top 5 | 1.5% | 20.9% | 12.4% | 1.7% | 6.2% |
+| Gemma-3-1b-it, plain text | top 25 | 14.2% | 55.7% | 32.1% | 19.1% | 20.9% |
+| Gemma-3-1b-it, chat | top 25 | 6.5% | 68.9% | 55.4% | 12.9% | 31.4% |
+| Claude (Haiku, Sonnet, Opus 4.5) | rank 1 | 0%, 0%, 0% | 73%, 91%, 96% | 70%, 92%, 96% | 50%, 81%, 88% | 14%, 42%, 41% |
+
+Paired comparisons (share of (problem, sentence) pairs in which the first condition ranks the answer higher):
+
+| model, prompt | mention vs. none | think about vs. mention | ignore vs. mention | don't think vs. mention | don't think vs. think about |
+|---|---|---|---|---|---|
+| Gemma-3-1b, plain text | 81% | 29% | 71% | 62% | 86% |
+| Gemma-3-1b-it, plain text | 94% | 92% | 18% | 12% | 4% |
+| Gemma-3-1b, chat | 72% | 66% | 49% | 80% | 73% |
+| Gemma-3-1b-it, chat | 100% | 77% | 8% | 2% | 1% |
+
+- **The instruction-tuned model computes in the direction of the instruction, but the answer rarely reaches the top.** "Think about" puts the answer in the top 5 on 16% to 21% of trials and in the top 25 on 56% to 69%, well above a mention of the expression and far above no instruction. At rank 1, the paper's score, it is under 3%, and in the chat frame no better than a mention (2.9% against 2.8%).
+- **Unlike the categories, this isn't the model about to say the answer.** Counting only tokens where the answer isn't among the model's own 10 most likely next tokens moves "think about" from 20.9% to 20.4% (chat) and from 16.4% to 16.1% (plain text) in the top 5. The categories' "think about" falls by more than half under the same filter (section 4.5).
+- **Restricting to the 20 problems it solves when asked changes nothing** (chat, top 5: 20.8%, 12.7% and 1.2%).
+- **The base model shows nothing.** The answer is flat at 0.4% to 0.6% in the top 5 in every condition. In plain text "don't think about" outranks "think about" on 86% of pairs, the base-model pattern of DM_SETUP.
+- The chat frame's no-instruction hits (1.2%) are one coincidence: six problems whose answer is 7, each with sentence 16 ("The museum was nearly empty that morning…").
+- So the paper's "mental calculation" part goes the paper's way at 1b, but weakly: the computed answer is held near the top of the lens, not on it.
 
 ## 5. What this says
 
@@ -262,8 +299,6 @@ The same check at 1b hasn't finished (section 6).
 
 ## 6. Not done
 
-- **The centered readout at 1b** (both models). It was paused partway to free the laptop. It matters less than at 270m: there the question was whether centering uncovers a hidden effect, and at 1b the effect is already there and doesn't depend on the lens. `FAMILIES=topic NCARRIERS=20 LENS_CENTER=1 python -m jl.control --model gemma-1b-it --frames paper modulation_grid`, and the same for `--model gemma-1b --frames human`. About 75 minutes each.
-- **The math family at 1b.** Gemma-3-1b-it does the sums (20 of 24 in a chat), so this is where the paper's "mental calculation" part can be tested. `FAMILIES=math GRID_TAG=_math NCARRIERS=20 python -m jl.control --model gemma-1b-it --frames paper modulation_grid`, and the same for `--model gemma-1b --frames human`. About 90 minutes each. `GRID_TAG` keeps it from overwriting the categories run; score it with `dm_data.Grid(model, "paper_math")`.
 - **The swapped-lens control at 270m.** There is no effect at 270m for it to attribute, so it was dropped.
 - The paired-question part of the definition at 1b.
 - Gemma-3-4b (base and instruction-tuned lenses exist on Neuronpedia), for a third size.
@@ -279,8 +314,11 @@ FAMILIES=topic NCARRIERS=20 python -m jl.control --model gemma-1b modulation_gri
 python -m jl.control --model gemma-270m stats modulation_readout                          # the lens checks
 FAMILIES=topic NCARRIERS=20 LENS_FROM=gemma-1b python -m jl.control --model gemma-1b-it --frames paper modulation_grid
 FAMILIES=topic NCARRIERS=20 LENS_CENTER=1 python -m jl.control --model gemma-1b-it --frames paper modulation_grid
+FAMILIES=topic NCARRIERS=20 LENS_CENTER=1 python -m jl.control --model gemma-1b --frames human modulation_grid
+FAMILIES=math GRID_TAG=_math NCARRIERS=20 python -m jl.control --model gemma-1b-it modulation_grid   # both frames
+FAMILIES=math GRID_TAG=_math NCARRIERS=20 python -m jl.control --model gemma-1b modulation_grid
 python post/figures/dm_gemma.py 270m; python post/figures/dm_gemma.py 1b
 python post/figures/dm_gemma_fig.py; python post/figures/dm_gemma_fig.py 25
 ```
 
-On an M3 laptop, a 270m frame takes about 50 minutes alone (24k trials), and a 1b frame of categories about 75 minutes (11k trials).
+On an M3 laptop, a 270m frame takes about 50 minutes alone (24k trials), and a 1b frame of categories about 75 minutes (11k trials). On an A100 the per-trial loop takes about 10 minutes for a 1b frame of math (13k trials), and with `GRID_BATCH=32` a 270m frame takes about 4 minutes.
