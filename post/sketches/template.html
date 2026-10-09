@@ -59,10 +59,7 @@
       <svg id="f1-claude" width="440" height="414"></svg>
     </div>
     <div>
-      <div class="ctl" style="padding-left:52px">
-        <span>similarity</span>
-        <div class="seg" id="f1-seg"></div>
-      </div>
+      <div style="height:29px"></div>
       <svg id="f1-gpt2" width="560" height="414"></svg>
     </div>
   </div>
@@ -241,16 +238,10 @@ panel(document.getElementById("f1-claude"), DATA.claude.cka, {
   title: "Claude Sonnet 4.5", cmap: viridis, axis: "Layer (reindexed)", ticks: C_TICKS, frac: cFrac,
   brackets: claudeBrackets,
 });
-let ckaVariant = "drop_top5";
-function drawGpt2Cka() {
-  panel(document.getElementById("f1-gpt2"), DATA.gpt2.cka[ckaVariant], {
-    title: "GPT-2 small", cmap: viridis, axis: "Layer", ticks: G_TICKS, frac: gFrac, brackets: ourBand,
-    cbar: [[[0, "0.0"], [.2, "0.2"], [.4, "0.4"], [.6, "0.6"], [.8, "0.8"], [1, "1.0"]], "CKA similarity"],
-  });
-}
-segmented("f1-seg", [["drop_top5", "drop top 5"], ["linear", "plain CKA"]],
-  () => ckaVariant, v => { ckaVariant = v; drawGpt2Cka(); });
-drawGpt2Cka();
+panel(document.getElementById("f1-gpt2"), DATA.gpt2.cka, {
+  title: "GPT-2 small", cmap: viridis, axis: "Layer", ticks: G_TICKS, frac: gFrac, brackets: ourBand,
+  cbar: [[[0, "0.0"], [.2, "0.2"], [.4, "0.4"], [.6, "0.6"], [.8, "0.8"], [1, "1.0"]], "CKA similarity"],
+});
 
 // ------------------------------------------------------------------ Figure 2 heatmaps
 let ignKey = "share_full";

@@ -16,3 +16,7 @@ commentary/*
 !commentary/README.md
 # generated preview of the post
 post/post.html
+
+# the local Markdown copy of the post and its paste instructions (the post itself lives on LessWrong)
+post/lesswrong/lesswrong_post.md
+post/lesswrong/README.md

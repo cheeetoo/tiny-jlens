@@ -25,13 +25,14 @@ NO_RANK = 10 ** 6
 BANDS = {
     "gpt2": {"ours": (7, 9), "paper": (5, 10), "all": (0, 10)},
     "qwen": {"ours": (15, 22), "paper": (9, 21), "all": (0, 22)},
-    # Gemma 3: no band of our own, so `ours` is the paper's.  `late` is where the lens starts to
-    # agree with the model's output on WikiText (lens top 1 = output top 1 on 7% or more of tokens,
-    # results/control/{model}/stats.json).
-    "gemma-270m": {"ours": (7, 15), "paper": (7, 15), "late": (11, 16), "all": (0, 16)},
-    "gemma-270m-it": {"ours": (7, 15), "paper": (7, 15), "late": (11, 16), "all": (0, 16)},
-    "gemma-1b": {"ours": (10, 23), "paper": (10, 23), "all": (0, 24)},
-    "gemma-1b-it": {"ours": (10, 23), "paper": (10, 23), "all": (0, 24)},
+    # Gemma 3: `ours` is the band each pair's layer statistics point to (post/figures/band_gemma.py):
+    # the middle block of the CKA between layer dictionaries, ending where persistence peaks and the
+    # dictionary's dimensionality jumps (the start of the motor layers).  The base and instruction-tuned
+    # model of each size have the same blocks, so they share a band.
+    "gemma-270m": {"ours": (6, 11), "paper": (7, 15), "all": (0, 16)},
+    "gemma-270m-it": {"ours": (6, 11), "paper": (7, 15), "all": (0, 16)},
+    "gemma-1b": {"ours": (11, 16), "paper": (10, 23), "all": (0, 24)},
+    "gemma-1b-it": {"ours": (11, 16), "paper": (10, 23), "all": (0, 24)},
 }
 MODEL_LABEL = {"gpt2": "GPT-2 small", "qwen": "Qwen3.5-0.8B", "gemma-270m": "Gemma-3-270m",
                "gemma-270m-it": "Gemma-3-270m-it", "gemma-1b": "Gemma-3-1b", "gemma-1b-it": "Gemma-3-1b-it"}

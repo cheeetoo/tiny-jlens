@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Structure sketches</title>
+<title>Ignition</title>
 <style>
   :root {
     --bg: #fbfbf9;
@@ -20,7 +20,6 @@
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); }
-  main { width: 1500px; padding: 28px 36px 40px; }
   figure { margin: 0 0 56px; }
   .row { display: flex; align-items: flex-start; }
   svg text { font-family: var(--sans); fill: var(--ink2); }
@@ -46,35 +45,34 @@
   .mix .arr { color: #777; padding: 0 4px; }
   .cb { color: #2f5f93; font-weight: 600; }
   .ca { color: #9b2a2a; font-weight: 600; }
+
+  html, body { margin: 0; overflow-x: hidden; }
+  main { width: max-content; padding: 12px 16px; transform-origin: 0 0; }
+  figure { margin: 0; }
+
+  :root { --bg: #fff; }
+  html, body { overflow: hidden; }
+  main { padding: 0; }
+  .setup { width: 0; min-width: 100%; margin: 0 0 10px; padding: 10px 14px; flex-wrap: wrap; row-gap: 8px; justify-content: space-between; }
+  .setup .ex { font-size: 17px; }
+  .seg button { font-size: 14.5px; padding: 5px 11px; }
+  svg .tick { font-size: 12.5px; }
+  svg .axl { font-size: 13px; }
+  svg .model { font-size: 16px; }
+  svg .phase { font-size: 14px; }
 </style>
 </head>
 <body>
 <main>
-<!-- =================================================================== Figure 1: CKA -->
-<figure id="f1">
-  <div class="row">
-    <svg id="f1-schem" width="400" height="440"></svg>
-    <div>
-      <div style="height:29px"></div>
-      <svg id="f1-claude" width="440" height="414"></svg>
-    </div>
-    <div>
-      <div style="height:29px"></div>
-      <svg id="f1-gpt2" width="560" height="414"></svg>
-    </div>
-  </div>
-</figure>
-
 <!-- =================================================================== Figure 2: ignition -->
 <figure id="f2">
   <div class="setup">
     <div class="ex">Her accent suggests she grew up in <span class="mix"><span class="cb">Germany</span><span class="arr">⇄</span><span class="ca">France</span></span>.</div>
-    <div class="note">input embedding = (1−α)·<span class="cb">B</span> + α·<span class="ca">A</span></div>
-    <div class="ctl" style="margin:0 0 0 12px"><span>measure</span><div class="seg" id="f2-seg"></div></div>
+    <div class="ctl" style="margin:0"><div class="seg" id="f2-seg"></div></div>
   </div>
   <div class="row">
-    <svg id="f2-claude" width="440" height="414"></svg>
-    <svg id="f2-gpt2" width="560" height="414" style="margin-left:40px"></svg>
+    <svg id="f2-claude" width="452" height="394"></svg>
+    <svg id="f2-gpt2" width="440" height="394" style="margin-left:12px"></svg>
   </div>
 </figure>
 </main>
@@ -157,46 +155,6 @@ function annot(parent, x, yMid, key, subs) {
   subs.forEach((s, i) => el(t, "tspan", { x, y: y0 + 16 * (i + 1) + 1, dy: ".35em", class: "anno-sub" }, s));
 }
 
-// ------------------------------------------------------------------ Figure 1 schematic
-(function () {
-  const s = document.getElementById("f1-schem");
-  const cx = 222, top = 40, bot = 400;     // tower column
-  const Y = f => bot - 14 - f * (bot - top - 28); // fraction of depth -> y
-  el(s, "rect", { x: cx - 58, y: 6, width: 116, height: 24, rx: 5, fill: "#fff", stroke: "#e8e5de" });
-  el(s, "text", { x: cx, y: 18, dy: ".35em", "text-anchor": "middle", class: "io" }, "Output");
-  el(s, "rect", { x: cx - 58, y: bot + 10, width: 116, height: 24, rx: 5, fill: "#fff", stroke: "#e8e5de" });
-  el(s, "text", { x: cx, y: bot + 22, dy: ".35em", "text-anchor": "middle", class: "io" }, "Input");
-  el(s, "rect", { x: cx - 58, y: top, width: 116, height: bot - top, rx: 13, fill: "#f6f5f1", stroke: "#e0ddd5" });
-  // residual stream + J-space segment
-  el(s, "rect", { x: cx - 7, y: Y(1), width: 14, height: Y(0) - Y(1), rx: 7, fill: "#dddad3" });
-  el(s, "rect", { x: cx - 7, y: Y(0.93), width: 14, height: Y(0.36) - Y(0.93), rx: 4, fill: "var(--ws-fill)", stroke: "var(--ws-stroke)", "stroke-width": 1.1, "stroke-dasharray": "4 3" });
-  // J-space arrow
-  const defs = el(s, "defs");
-  const mk = el(defs, "marker", { id: "arr", viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto-start-reverse" });
-  el(mk, "path", { d: "M1,1 L8,5 L1,9", fill: "none", stroke: "#bbb", "stroke-width": 1.4, "stroke-linecap": "round" });
-  el(s, "line", { x1: cx + 20, x2: cx + 20, y1: Y(1) + 2, y2: Y(0) - 2, stroke: "#c8c5be", "marker-start": "url(#arr)", "marker-end": "url(#arr)" });
-  el(s, "text", { transform: `translate(${cx + 33},${(Y(0) + Y(1)) / 2}) rotate(-90)`, "text-anchor": "middle", class: "io" }, "J-space");
-  // layer blocks on the right
-  for (let i = 0; i < 6; i++) {
-    const yc = Y((i + 0.5) / 6), inWs = i >= 2 && i <= 4;
-    const bx = cx + 76;
-    el(s, "path", { d: `M${cx + 58},${yc + 14} C${cx + 70},${yc + 14} ${bx + 24},${yc + 14} ${bx + 24},${yc + 10}`, fill: "none", stroke: "#c8c5be", "stroke-width": .9 });
-    el(s, "path", { d: `M${bx + 24},${yc - 10} C${bx + 24},${yc - 14} ${cx + 70},${yc - 14} ${cx + 59},${yc - 14}`, fill: "none", stroke: "#c8c5be", "stroke-width": .9, "marker-end": "url(#arr)" });
-    el(s, "rect", { x: bx, y: yc - 11, width: 48, height: 22, rx: 5, fill: inWs ? "#fdf6e8" : "#fbfaf6", stroke: inWs ? "#f0e0c0" : "#ebe8e0" });
-    const t = el(s, "text", { x: bx + 24, y: yc, dy: ".35em", "text-anchor": "middle", class: "block", fill: inWs ? "#333" : "#bbb" });
-    el(t, "tspan", {}, "ℓ");
-    el(t, "tspan", { dy: ".25em", "font-size": "75%" }, String(i + 1));
-  }
-  // annotations
-  brace(s, cx - 61, Y(1) + 2, Y(0.87));
-  annot(s, cx - 82, (Y(1) + Y(0.87)) / 2, "motor", ["committing to", "next-token", "probabilities"]);
-  brace(s, cx - 10, Y(0.93) + 1, Y(0.36) - 1);
-  el(s, "line", { x1: cx - 26, x2: cx - 78, y1: (Y(0.93) + Y(0.36)) / 2, y2: (Y(0.93) + Y(0.36)) / 2, stroke: "#c8c5be", "stroke-dasharray": "3 3" });
-  annot(s, cx - 82, (Y(0.93) + Y(0.36)) / 2, "workspace", ["J-space carries", "reportable,", "reusable content", "here"]);
-  brace(s, cx - 61, Y(0.33), Y(0) - 2);
-  annot(s, cx - 82, (Y(0.33) + Y(0)) / 2, "sensory", ["low-level", "parsing: syntax,", "local context"]);
-})();
-
 // ------------------------------------------------------------------ shared heatmap panel
 const HM = 300;
 function panel(svg, M, opts) {
@@ -233,16 +191,6 @@ const claudeBrackets = DATA.claude.phases.map(ph => [ph.lo / C_N, (ph.hi + 1) / 
 const G_TICKS = [0, 2, 4, 6, 8, 10], gFrac = v => (v + .5) / 12;
 const ourBand = [[7 / 12, 10 / 12, "our band\n(7–9)", { dash: "3 3", dim: true, color: "#aaa" }]];
 
-// ------------------------------------------------------------------ Figure 1 heatmaps
-panel(document.getElementById("f1-claude"), DATA.claude.cka, {
-  title: "Claude Sonnet 4.5", cmap: viridis, axis: "Layer (reindexed)", ticks: C_TICKS, frac: cFrac,
-  brackets: claudeBrackets,
-});
-panel(document.getElementById("f1-gpt2"), DATA.gpt2.cka, {
-  title: "GPT-2 small", cmap: viridis, axis: "Layer", ticks: G_TICKS, frac: gFrac, brackets: ourBand,
-  cbar: [[[0, "0.0"], [.2, "0.2"], [.4, "0.4"], [.6, "0.6"], [.8, "0.8"], [1, "1.0"]], "CKA similarity"],
-});
-
 // ------------------------------------------------------------------ Figure 2 heatmaps
 let ignKey = "share_full";
 const ignX = [[0, .5, 1], v => v, v => ({ 0: "Pure B", .5: "Ambiguous", 1: "Pure A" })[v]];
@@ -255,12 +203,26 @@ function drawIgn() {
   panel(document.getElementById("f2-gpt2"), DATA.gpt2[ignKey], {
     title: "GPT-2 small", cmap: rdbu, axis: "Layer", ticks: G_TICKS, frac: gFrac,
     xticks: ignX, xaxis: "input evidence", brackets: ourBand, guides: [7 / 12, 10 / 12],
-    cbar: [[[0, "pure B"], [.5, "½"], [1, "pure A"]], "position between pure B and pure A"],
   });
 }
 segmented("f2-seg", [["share_full", "whole activation"], ["share_J", "J-lens directions only"]],
   () => ignKey, v => { ignKey = v; drawIgn(); });
 drawIgn();
+</script>
+
+<script>
+// Scale the figure down to the width it is shown at.
+(function () {
+  const m = document.querySelector("main");
+  function fit() {
+    m.style.transform = "";
+    const s = Math.min(1, document.documentElement.clientWidth / m.offsetWidth);
+    m.style.transform = `scale(${s})`;
+    document.body.style.height = Math.ceil(m.offsetHeight * s) + "px";
+  }
+  addEventListener("resize", fit);
+  fit();
+})();
 </script>
 </body>
 </html>

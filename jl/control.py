@@ -30,7 +30,7 @@ instruction-tuned model.
               `mod_text`), with every lens layer and reply position kept, all 20 carrier sentences
               (NCARRIERS=20), and the two math-only focus phrasings of its Fig 65.  The band, the
               rank threshold and the positions are then chosen when scoring
-              (post/figures/dm_data.py).
+              (post/figures/dm_data.py).  GRID_BATCH=32 runs it in batches on a GPU.
   modulation_readout  the paper's Fig 9 for our models: the top lens tokens at every layer and
               token of its two copying examples.
   modulation_copy  does the model copy the sentence when the reply isn't forced?
@@ -112,7 +112,8 @@ class Instruct:
 
     def _load(self, lens_file):
         """self.model_id (fp32) and its Neuronpedia lens `lens_file`."""
-        self.device = os.environ.get("DEVICE") or ("mps" if torch.backends.mps.is_available() else "cpu")
+        self.device = os.environ.get("DEVICE") or ("cuda" if torch.cuda.is_available() else
+                                                   "mps" if torch.backends.mps.is_available() else "cpu")
         self.tok = transformers.AutoTokenizer.from_pretrained(self.model_id)
         hf = transformers.AutoModelForCausalLM.from_pretrained(self.model_id, dtype=torch.float32).to(self.device).eval()
         import jlens
@@ -268,6 +269,81 @@ def load(name):
 def _save(A, name, obj):
     d = jl.results_dir(f"control/{A.name}")
     json.dump(obj, open(d / f"{name}.json", "w"), indent=1, default=float)
+
+
+def lens_parts(A):
+    """(J, unembed, lens layers, last layer): the lens maps, the model's unembedding (final norm, then
+    W_U), the layers that have a lens, and the last layer, which is read as the model's output."""
+    J = A.lm.J if A.name == "gpt2" else A.J
+    unembed = (A.lm.m if A.name == "gpt2" else A.m).unembed
+    last = A.n_layers - 1
+    return J, unembed, sorted(L for L in J if L != last), last
+
+
+@torch.no_grad()
+def batched_residuals(A, ids, layers, size=32):
+    """Yield (indices, {L: [B, T, d]}) for the prompts `ids` (each [1, T_i]), in batches of `size`
+    sorted by length.  Each prompt is right-padded with its own last token: attention is causal, so
+    the padding changes nothing at the prompt's own positions."""
+    from jlens.hooks import ActivationRecorder
+    m = A.lm.m if A.name == "gpt2" else A.m
+    order = sorted(range(len(ids)), key=lambda i: ids[i].shape[1])
+    for s in range(0, len(order), size):
+        idx = order[s:s + size]
+        T = max(ids[i].shape[1] for i in idx)
+        batch = torch.cat([torch.cat([ids[i], ids[i][:, -1:].expand(1, T - ids[i].shape[1])], dim=1) for i in idx])
+        with ActivationRecorder(m.layers, at=sorted(set(layers))) as rec:
+            m.forward(batch)
+            res = {L: rec.activations[L].float() for L in layers}
+        yield idx, res
+
+
+def to_device(x, device):
+    """A list or array of integers as a tensor on `device`, sent without making the host wait for the
+    GPU (pinned memory, non-blocking), so that the GPU's queue isn't drained at every small index."""
+    t = torch.as_tensor(x)
+    if torch.device(device).type != "cuda":
+        return t.to(device)
+    return t.pin_memory().to(device, non_blocking=True)
+
+
+def rows_of(res, layers, positions):
+    """[len(layers), M, d]: the residual rows at the positions of each batch item in turn
+    (positions[b] for item b), stacked over `layers`."""
+    dev = res[layers[0]].device
+    b = to_device([i for i, p in enumerate(positions) for _ in p], dev)
+    t = to_device([x for p in positions for x in p], dev)
+    return torch.stack([res[L][b, t] for L in layers])
+
+
+@torch.no_grad()
+def lens_logit_chunks(A, H, mu=None, chunk=4096):
+    """Yield (start, logits [rows, vocab]) over the lens readout of H [layer, M, d] (every block
+    output, last layer last): row l * M + m is the lens at lens layer l, then the model's output
+    (l = the number of lens layers), for H's row m.  `mu`: {L: vector} subtracted before the lens.
+    The lens maps are applied as one batched matmul and the unembedding in chunks of `chunk` rows."""
+    J, unembed, lens_layers, last = lens_parts(A)
+    if getattr(A, "_Js", None) is None:
+        A._Js = torch.stack([J[L] for L in lens_layers]).transpose(1, 2).contiguous()   # [layer, d, d]: J_L^T
+    X = H[:len(lens_layers)]
+    if mu is not None:
+        X = X - torch.stack([torch.as_tensor(mu[L], device=X.device) for L in lens_layers])[:, None]
+    flat = torch.cat([torch.bmm(X, A._Js), H[-1:]]).reshape(-1, H.shape[-1])
+    for s in range(0, flat.shape[0], chunk):
+        yield s, unembed(flat[s:s + chunk]).float()
+
+
+def lens_ranks(A, H, tids, mu=None):
+    """[lens layer + output, M]: the best rank of row m's tracked tokens tids[m] in the lens readout
+    of H [layer, M, d] at every lens layer, then in the model's output (as `rank_rows`)."""
+    K = max(len(t) for t in tids)
+    T = to_device([list(t) + [t[0]] * (K - len(t)) for t in tids], H.device)
+    T = T.repeat(len(lens_parts(A)[2]) + 1, 1)
+    out = torch.empty(T.shape[0], dtype=torch.long, device=H.device)
+    for s, lg in lens_logit_chunks(A, H, mu):
+        top = lg.gather(1, T[s:s + len(lg)]).max(dim=1, keepdim=True).values
+        out[s:s + len(lg)] = (lg > top).sum(dim=1) + 1
+    return out.view(-1, H.shape[1])
 
 
 def rank_rows(lg, tids):
@@ -496,9 +572,9 @@ def summarize_privilege(res):
 #     Assistant: {carrier}
 # `qwen`: "paper" is that user turn in the chat template, with the carrier teacher-forced as the
 # reply.  "after" and "before" are the two wordings run before the template was found (the
-# instruction after or before 'Write the following sentence: "{carrier}"').  GPT-2: "human" is the
-# paper's prompt as plain text; the other five are plain-text frames of our own.  In every frame the
-# lens is read over the copied carrier only.
+# instruction after or before 'Write the following sentence: "{carrier}"').  "human" is the paper's
+# prompt as plain text (GPT-2's only frame; also run on the Gemma models).  In every frame the lens is
+# read over the copied carrier only.
 PAPER_TAIL = " Don't write anything else."
 CHAT_FRAMES = ("paper", "after", "before")              # the others are plain text
 
@@ -506,26 +582,19 @@ CHAT_FRAMES = ("paper", "after", "before")              # the others are plain t
 def mod_text(A, frame, carrier, instr):
     """(text, start char of the scored carrier)."""
     i = f" {instr}" if instr else ""                      # the instruction, if any, with a leading space
-    q = f' She said, "{instr}"' if instr else ""          # ... or quoted, for the two story frames
     if frame in CHAT_FRAMES:
         user = {"paper": f'Write "{carrier}"{i}{PAPER_TAIL}',
                 "after": f'Write the following sentence: "{carrier}"{i}',
                 "before": (f"{instr} " if instr else "") + f'Write the following sentence: "{carrier}"'}[frame]
         text = A.chat([("user", user)], prefill=carrier)
         return text, text.rindex(carrier)
-    pre = {
-        "human": f'\n\nHuman: Write "{carrier}"{i}{PAPER_TAIL}\n\nAssistant: ',
-        "copy": f'Write "{carrier}"{i} "',
-        "transcript": f'User: Write the following sentence: "{carrier}"{i}\nAssistant: ',
-        "exercise": f"Exercise 4.{i} Copy the sentence below.\n{carrier}\nAnswer: ",
-        "teacher": f"The teacher wrote a sentence on the board for the class to copy.{q}\nSentence: {carrier}\nThe student wrote: ",
-        "narrative": f"Her teacher gave her a sentence to copy.{q} She wrote it out: ",
-    }[frame]
+    assert frame == "human", frame
+    pre = f'\n\nHuman: Write "{carrier}"{i}{PAPER_TAIL}\n\nAssistant: '
     return pre + carrier, len(pre)
 
 
 def mod_frames(A):
-    return ["after", "before"] if A.name != "gpt2" else ["copy", "transcript", "exercise", "teacher", "narrative"]
+    return ["after", "before"] if A.name != "gpt2" else ["human"]
 
 
 def targets(A):
@@ -639,11 +708,26 @@ def modulation_grid(A, frames=None):
                                      A.ids(text), A.span(text, car, start_at=start), tids))
         # On MPS every prompt is right-padded to one length, and every readout to a multiple of 4
         # rows, so that the kernels are compiled for a few shapes only (attention is causal, so the
-        # padding changes nothing at the positions read).
+        # padding changes nothing at the positions read).  GRID_BATCH=n (n > 1) runs the prompts in
+        # batches of n instead (`batched_residuals`), for a GPU.
         fixed = A.device == "mps"
         T = max(j[1].shape[1] for j in jobs)
         trials, ranks, t0 = [], [], time.time()
-        for n, (trial, ids, pos, tids) in enumerate(jobs):
+        size = int(os.environ.get("GRID_BATCH", 1))
+        if size > 1:
+            ranks = [None] * len(jobs)
+            for n, (idx, res) in enumerate(batched_residuals(A, [j[1] for j in jobs], lens_layers + [last], size)):
+                H = rows_of(res, lens_layers + [last], [jobs[i][2] for i in idx])
+                rk = lens_ranks(A, H, [jobs[i][3] for i in idx for _ in jobs[i][2]], mu if center else None)
+                rk = rk.clamp(max=RANK_CAP).cpu().numpy().astype(np.uint16)
+                s = 0
+                for i in idx:
+                    ranks[i] = rk[:, s:s + len(jobs[i][2])]
+                    s += len(jobs[i][2])
+                if (n + 1) * size % 1000 < size:
+                    print(f"  {frame}: {(n + 1) * size}/{len(jobs)} ({time.time() - t0:.0f}s)", flush=True)
+            trials = [dict(trial, n_pos=len(pos)) for trial, _, pos, _ in jobs]
+        for n, (trial, ids, pos, tids) in enumerate(jobs if size == 1 else []):
             if fixed:
                 ids = torch.cat([ids, ids[:, -1:].expand(1, T - ids.shape[1])], dim=1)
             rows = pos + [pos[-1]] * (-len(pos) % 4) if fixed else pos

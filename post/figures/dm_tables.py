@@ -1,4 +1,4 @@
-"""The directed-modulation numbers in post/DM_SETUP.md, as Markdown tables, from the grid runs.
+"""The directed-modulation numbers in post/DM.md, as Markdown tables, from the grid runs.
 
 Run from the repo root:  python post/figures/dm_tables.py
 """
@@ -15,7 +15,7 @@ sys.path.insert(0, str(D.ROOT))
 from jl.stats import sign_test  # noqa: E402
 
 ALL = ["baseline"] + D.CONDS
-GPT2_FRAMES = ["human", "copy", "transcript", "exercise", "teacher", "narrative"]
+GPT2_FRAMES = ["human"]
 
 
 def pct(x, digits=1):

@@ -27,10 +27,19 @@ Four analyses, all reported in PROTOCOL.md ("Appendix: the workspace band"):
 
 Run:  python -m jl.band [stats|cka|mlp_gain|fig28]   (default: all four)
 CPU is fine: about 2 + 4 + 1 + 2 minutes.  DEVICE=cuda uses the GPU.
+
+The Gemma 3 models of jl.control (gemma-270m, gemma-270m-it, gemma-1b, gemma-1b-it), with their
+Neuronpedia lenses, run `cka` and `fig28` the same way:
+      python -m jl.band --model gemma-1b-it cka fig28     -> results/band/gemma-1b-it/{cka,fig28}.json
+For every model, `cka` and `fig28` also compute the dictionary statistics (CKA, effective
+dimensionality) with the final norm's gain folded into the unembedding (keys ending `_gain`): the
+direction each token actually reads.  In Gemma this matters (see `GemmaLensed`); in GPT-2 the CKA
+shows no blocks either way.  NSEQ sets the number of sequences (default 48).
 """
 from __future__ import annotations
 
 import json
+import os
 import random
 import sys
 import time
@@ -42,6 +51,87 @@ import jl
 LAYERS = list(range(12))
 
 
+class GemmaLensed:
+    """A Gemma 3 model from jl.control behind the interface these statistics use (jl.Lensed's): its
+    residuals and logits, the lens readout at every layer (the model's own output at the last layer,
+    whose lens is the identity), and the centered J-lens dictionary (U - mean_t U) J_L, read in rows
+    (`rows`) or as its d x d Gram matrix (`gram`), since the 262k-row dictionary is too big to hold at
+    every layer.  `gain=True` folds the final RMSNorm's gain (1 + w) into U, giving the direction each
+    token actually reads; in Gemma that gain varies about 50x across dimensions.  GPT-2's dictionary
+    (jl.Lensed.V) leaves its ln_f gain out, and so does the default here."""
+
+    def __init__(self, name):
+        from jl import control
+
+        A = control.load(name)
+        self.name, self.A, self.m = name, A, A.m
+        self.tok, self.device, self.bos, self.d, self.n_layers = A.tok, A.device, A.bos, A.d, A.n_layers
+        self.J = dict(A.J)
+        self.J[self.n_layers - 1] = torch.eye(self.d, device=self.device)
+        gain = 1 + self.m._final_norm.weight.detach().float()
+        self.U = {False: A.U, True: A.U * gain}
+        self.vocab = A.U.shape[0]
+        self._G = {}
+
+    def residuals(self, ids, layers):
+        return self.A.residuals(ids, layers)
+
+    def logits(self, ids):
+        return self.A.logits(ids)
+
+    def lens_logits(self, h, L):
+        return self.m.unembed(h @ self.J[L].T).float()
+
+    def rows(self, L, idx, gain=False):
+        U = self.U[gain]
+        return (U[idx.to(U.device)] - U.mean(0)) @ self.J[L]
+
+    def gram(self, L, gain=False):
+        """V^T V of the full centered dictionary, in float64 on the CPU (MPS has no float64)."""
+        if gain not in self._G:
+            U = self.U[gain].cpu().double()
+            U = U - U.mean(0)
+            self._G[gain] = U.T @ U
+        J = self.J[L].cpu().double()
+        return J.T @ self._G[gain] @ J
+
+
+def _layers(lm):
+    return list(range(lm.n_layers)) if isinstance(lm, GemmaLensed) else LAYERS
+
+
+def _out(lm):
+    return jl.results_dir("band" if not isinstance(lm, GemmaLensed) else f"band/{lm.name}")
+
+
+def _gpt2_gained(lm):
+    """GPT-2's unembedding with its ln_f gain folded in."""
+    return lm.U * lm.m._final_norm.weight.detach().float()
+
+
+def _rows(lm, L, idx, gain=False):
+    """Rows `idx` of the centered J-lens dictionary at layer L (`gain`: the final norm's gain folded in)."""
+    if isinstance(lm, GemmaLensed):
+        return lm.rows(L, idx, gain)
+    if not gain:
+        return lm.V(L)[idx]
+    U = _gpt2_gained(lm)
+    return (U[idx] - U.mean(0)) @ lm.J[L]
+
+
+def _gram(lm, L, gain=False):
+    """V^T V of the full centered J-lens dictionary at layer L, in float64."""
+    if isinstance(lm, GemmaLensed):
+        return lm.gram(L, gain)
+    if not gain:
+        V = lm.V(L).double()
+        return V.T @ V
+    U = _gpt2_gained(lm).double()
+    U = U - U.mean(0)
+    J = lm.J[L].double()
+    return J.T @ (U.T @ U) @ J
+
+
 def _seeded(lm=None):
     torch.set_num_threads(1)
     random.seed(0)
@@ -50,16 +140,16 @@ def _seeded(lm=None):
 
 
 def _wikitext(lm):
-    """48 wikitext-103 validation sequences of 128 tokens (BOS + 127)."""
+    """48 (NSEQ) wikitext-103 validation sequences of 128 tokens (BOS + 127)."""
     from datasets import load_dataset
 
     ds = load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split="validation")
     texts = [t for t in ds["text"] if len(t) > 600]
     random.shuffle(texts)
     seqs = []
-    for t in texts[:48]:
+    for t in texts[:int(os.environ.get("NSEQ", 48))]:
         ids = lm.tok(t, add_special_tokens=False).input_ids[:127]
-        seqs.append(torch.tensor([[lm.bos] + ids]))
+        seqs.append(torch.tensor([[lm.bos] + ids], device=lm.device))
     return seqs
 
 
@@ -127,50 +217,53 @@ def stats():
 
 
 # =============================================================================== dictionary CKA
-def cka():
+def cka(lm=None):
     """Dictionary similarity between layers, controlling for the dominant direction."""
-    lm = _seeded()
+    lm = _seeded(lm)
+    layers = _layers(lm)
     idx = torch.randperm(lm.vocab)[:3000]
-    D, SV = {}, {}
-    for L in LAYERS:
-        V = lm.V(L)[idx]
-        V = V - V.mean(0)
-        D[L] = V
-        SV[L] = torch.linalg.svd(V, full_matrices=False)
-
-    def cka_feat(A, B):   # linear CKA, feature-space form
-        return float((A.T @ B).norm() ** 2 / ((A.T @ A).norm() * (B.T @ B).norm()))
-
-    def whiten(L, r):
-        return SV[L][0][:, :r]
-
-    def drop_top(L, k):
-        U, S, Vh = SV[L]
-        S = S.clone()
-        S[:k] = 0
-        return U @ torch.diag(S) @ Vh
-
-    W = {r: {L: whiten(L, r) for L in LAYERS} for r in [50, 100, 300]}
-    T5 = {L: drop_top(L, 5) for L in LAYERS}
-    T20 = {L: drop_top(L, 20) for L in LAYERS}
     out = {}
-    for name, f in [("linear", lambda a, b: cka_feat(D[a], D[b])),
-                    ("drop_top5", lambda a, b: cka_feat(T5[a], T5[b])),
-                    ("drop_top20", lambda a, b: cka_feat(T20[a], T20[b])),
-                    ("mean_cca_r50", lambda a, b: cka_feat(W[50][a], W[50][b])),
-                    ("mean_cca_r100", lambda a, b: cka_feat(W[100][a], W[100][b])),
-                    ("mean_cca_r300", lambda a, b: cka_feat(W[300][a], W[300][b]))]:
-        M = [[f(a, b) for b in LAYERS] for a in LAYERS]
-        out[name] = M
-        print("\n" + name, flush=True)
-        for a in LAYERS:
-            print(f"{a:2d} " + " ".join(f"{M[a][b]:.2f}" for b in LAYERS), flush=True)
-    print("\nlayer: top-1 PC share, top-5 PC share, #PCs for 90% var")
-    for L in LAYERS:
-        s = SV[L][1] ** 2
-        c = s.cumsum(0) / s.sum()
-        print(L, f"{float(s[0]/s.sum()):.2f}", f"{float(s[:5].sum()/s.sum()):.2f}", int((c < 0.9).sum()) + 1)
-    json.dump(out, open(jl.results_dir("band") / "cka.json", "w"))
+    for gain in [False, True]:
+        D, SV = {}, {}
+        for L in layers:
+            V = _rows(lm, L, idx, gain).cpu()
+            V = V - V.mean(0)
+            D[L] = V
+            SV[L] = torch.linalg.svd(V, full_matrices=False)
+
+        def cka_feat(A, B):   # linear CKA, feature-space form
+            return float((A.T @ B).norm() ** 2 / ((A.T @ A).norm() * (B.T @ B).norm()))
+
+        def whiten(L, r):
+            return SV[L][0][:, :r]
+
+        def drop_top(L, k):
+            U, S, Vh = SV[L]
+            S = S.clone()
+            S[:k] = 0
+            return U @ torch.diag(S) @ Vh
+
+        W = {r: {L: whiten(L, r) for L in layers} for r in [50, 100, 300]}
+        T5 = {L: drop_top(L, 5) for L in layers}
+        T20 = {L: drop_top(L, 20) for L in layers}
+        sfx = "_gain" if gain else ""
+        for name, f in [("linear", lambda a, b: cka_feat(D[a], D[b])),
+                        ("drop_top5", lambda a, b: cka_feat(T5[a], T5[b])),
+                        ("drop_top20", lambda a, b: cka_feat(T20[a], T20[b])),
+                        ("mean_cca_r50", lambda a, b: cka_feat(W[50][a], W[50][b])),
+                        ("mean_cca_r100", lambda a, b: cka_feat(W[100][a], W[100][b])),
+                        ("mean_cca_r300", lambda a, b: cka_feat(W[300][a], W[300][b]))]:
+            M = [[f(a, b) for b in layers] for a in layers]
+            out[name + sfx] = M
+            print("\n" + name + sfx, flush=True)
+            for a in layers:
+                print(f"{a:2d} " + " ".join(f"{M[a][b]:.2f}" for b in layers), flush=True)
+        print(f"\nlayer: top-1 PC share, top-5 PC share, #PCs for 90% var{sfx}")
+        for L in layers:
+            s = SV[L][1] ** 2
+            c = s.cumsum(0) / s.sum()
+            print(L, f"{float(s[0]/s.sum()):.2f}", f"{float(s[:5].sum()/s.sum()):.2f}", int((c < 0.9).sum()) + 1)
+    json.dump(out, open(_out(lm) / "cka.json", "w"))
 
 
 # =============================================================================== MLP gain
@@ -207,26 +300,29 @@ def mlp_gain():
 
 
 # =============================================================================== Fig 28 as plotted
-def fig28():
+def fig28(lm=None):
     """Paper Fig 28's four panels, with the paper's series (top-k, percentiles, offsets, thresholds)."""
     import numpy as np
 
-    lm = _seeded()
+    lm = _seeded(lm)
+    layers = _layers(lm)
     seqs = _wikitext(lm)
     KS, PCTS, DS, FVE = [1, 2, 4, 8, 16, 32, 64, 128], [1, 10, 25, 50, 75, 90, 99], \
         [1, 2, 4, 8, 16, 32], [0.9, 0.95, 0.98, 0.99, 0.995]
-    hit = {L: {k: 0 for k in KS} for L in LAYERS}
+    hit = {L: {k: 0 for k in KS} for L in layers}
     n = 0
-    kurt = {L: [] for L in LAYERS}
+    kurt = {L: [] for L in layers}
     # [real, null] lists of log-probs, for all pairs and for pairs whose token isn't in the input
-    ac = {L: {d: dict(all=([], []), not_input=([], []), n=0, n_input=0) for d in DS} for L in LAYERS}
+    ac = {L: {d: dict(all=([], []), not_input=([], []), n=0, n_input=0) for d in DS} for L in layers}
     t0 = time.time()
-    for ids in seqs:
+    for si, ids in enumerate(seqs):
+        if si:
+            print(f"  sequence {si}/{len(seqs)} ({time.time() - t0:.0f}s)", flush=True)
         x = ids[0]
-        res = lm.residuals(ids, LAYERS)
+        res = lm.residuals(ids, layers)
         model_top1 = lm.logits(ids)[:-1].argmax(-1)
         n += len(model_top1)
-        for L in LAYERS:
+        for L in layers:
             lg = lm.lens_logits(res[L], L)                     # [T, vocab]
             top = lg[:-1].topk(max(KS)).indices
             for k in KS:
@@ -238,7 +334,7 @@ def fig28():
             T = len(t1)
             for d in DS:
                 # log p at t+d of the top-1 token at t, and of the top-1 token at a random position
-                tok_real, tok_null = t1[:-d], t1[torch.randint(T, (T - d,))]
+                tok_real, tok_null = t1[:-d], t1[torch.randint(T, (T - d,)).to(t1.device)]
                 real = lp[d:].gather(1, tok_real[:, None])[:, 0]
                 null = lp[d:].gather(1, tok_null[:, None])[:, 0]
                 # same rule for both: drop tokens that occur anywhere in the sequence's input
@@ -253,30 +349,42 @@ def fig28():
                 a["n_input"] += int((~keep_r).sum())
     print("forward done", round(time.time() - t0), "s", flush=True)
 
-    eff = {}
-    for L in LAYERS:
-        ev = torch.linalg.eigvalsh(lm.V(L).double().T @ lm.V(L).double()).flip(0)
-        c = (ev.cumsum(0) / ev.sum()).cpu().numpy()
-        eff[L] = {f: float((np.searchsorted(c, f) + 1) / lm.d) for f in FVE}
+    def effdim(gain):
+        eff = {}
+        for L in layers:
+            ev = torch.linalg.eigvalsh(_gram(lm, L, gain)).flip(0)
+            c = (ev.cumsum(0) / ev.sum()).cpu().numpy()
+            eff[L] = {f: float((np.searchsorted(c, f) + 1) / lm.d) for f in FVE}
+        return {f: [eff[L][f] for L in layers] for f in FVE}
 
     gain = lambda L, d, which: float(np.mean(ac[L][d][which][0]) - np.mean(ac[L][d][which][1]))
     out = dict(
-        topk={k: [hit[L][k] / n for L in LAYERS] for k in KS},
-        kurtosis={p: [float(np.percentile(kurt[L], p)) for L in LAYERS] for p in PCTS},
-        autocorr={d: [gain(L, d, "all") for L in LAYERS] for d in DS},
-        autocorr_not_input={d: [gain(L, d, "not_input") for L in LAYERS] for d in DS},
-        frac_top1_is_input={d: [ac[L][d]["n_input"] / ac[L][d]["n"] for L in LAYERS] for d in DS},
-        effdim={f: [eff[L][f] for L in LAYERS] for f in FVE},
+        topk={k: [hit[L][k] / n for L in layers] for k in KS},
+        kurtosis={p: [float(np.percentile(kurt[L], p)) for L in layers] for p in PCTS},
+        autocorr={d: [gain(L, d, "all") for L in layers] for d in DS},
+        autocorr_not_input={d: [gain(L, d, "not_input") for L in layers] for d in DS},
+        frac_top1_is_input={d: [ac[L][d]["n_input"] / ac[L][d]["n"] for L in layers] for d in DS},
+        effdim=effdim(False),
+        effdim_gain=effdim(True),
     )
-    for key in ["autocorr", "autocorr_not_input", "frac_top1_is_input", "effdim"]:
+    for key in ["autocorr", "autocorr_not_input", "frac_top1_is_input", "effdim", "effdim_gain"]:
         print(key)
         for s, ys in out[key].items():
             print(f"  {s:>5} " + " ".join(f"{v:6.2f}" for v in ys))
-    json.dump(out, open(jl.results_dir("band") / "fig28.json", "w"), indent=1)
+    json.dump(out, open(_out(lm) / "fig28.json", "w"), indent=1)
 
 
 if __name__ == "__main__":
-    which = sys.argv[1:] or ["stats", "cka", "mlp_gain", "fig28"]
+    args = sys.argv[1:]
+    model = None
+    if "--model" in args:
+        i = args.index("--model")
+        model = args[i + 1]
+        del args[i:i + 2]
+    lm = GemmaLensed(model) if model and model != "gpt2" else None
+    which = args or (["stats", "cka", "mlp_gain", "fig28"] if lm is None else ["cka", "fig28"])
     for name in which:
         print(f"===== {name}", flush=True)
-        {"stats": stats, "cka": cka, "mlp_gain": mlp_gain, "fig28": fig28}[name]()
+        if lm is not None and name not in ("cka", "fig28"):
+            raise SystemExit(f"{name} runs on GPT-2 only")
+        {"stats": stats, "cka": cka, "mlp_gain": mlp_gain, "fig28": fig28}[name](*([lm] if lm is not None else []))

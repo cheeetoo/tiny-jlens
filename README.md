@@ -25,9 +25,8 @@ jl/                     the library
   followups.py          follow-up experiments: protection rule, ignition, lists, neurons,
                         lens variants, band sensitivity, linear check, injected thought, seeds
   control.py            the two tests of top-down control (injected thought, directed modulation) as
-                        the paper runs them, on GPT-2 (several base-model frames), on Qwen3.5-0.8B
-                        (instruct), and on Gemma 3 270m and 1b (base and instruct), each with its
-                        Neuronpedia lens; also Qwen's verbal report, layer stats, and the
+                        the paper runs them, on GPT-2, on Gemma 3 270m and 1b (base and instruct),
+                        and (earlier, no longer in the post) on Qwen3.5-0.8B, each with its Neuronpedia lens; also Qwen's verbal report, layer stats, and the
                         arithmetic and paired-question parts of directed modulation
   qwen_control.py       an earlier version of the same checks on Qwen3-1.7B (superseded by control.py)
   introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)
@@ -37,8 +36,8 @@ results/control/        jl.control's results, one directory per model
 ref/paper-data/         the data behind the paper's interactive figures (Claude's numbers, per trial
                         where released); its README describes each file
 post/                   the post's figures: fig1/ (Figure 1), sketches/ (the structure figures) and
-                        figures/; and the directed modulation write-ups DM_SETUP.md (GPT-2, Qwen)
-                        and DM_GEMMA.md (Gemma 3), whose tables come from post/figures/dm_*.py
+                        figures/; lesswrong/ (the post's interactive embeds); and DM.md, the directed
+                        modulation write-up (GPT-2 and Gemma 3), whose tables come from post/figures/dm_*.py
 commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
                         (local copies of the paper and commentary texts are gitignored)
 lenses/gpt2-small/      the released lens: fit config and convergence (the .pt is not in git)
@@ -71,11 +70,12 @@ python -m jl.c5_selectivity language     # the language test only, merged into r
 python -m jl.control --model qwen introspect modulation report stats clauses
 python -m jl.control --model gpt2 introspect modulation
 NCARRIERS=20 python -m jl.control --model qwen modulation_grid   # directed modulation on the paper's prompt, every layer kept
-NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # (also modulation_readout, modulation_copy; see post/DM_SETUP.md)
-python -m jl.band [stats|cka|mlp_gain]   # the band statistics
+NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # (also modulation_readout, modulation_copy; see post/DM.md)
+python -m jl.band [stats|cka|fig28|mlp_gain]   # the band statistics (--model gemma-1b etc. for Gemma)
 ```
 
-The Gemma runs are listed at the end of `post/DM_GEMMA.md`. The figures are built from the
+The Gemma runs are listed at the end of `post/DM.md`. On a GPU, `GRID_BATCH=32` runs `modulation_grid` in batches (the default, 1, is
+the per-trial loop the existing results were made with; the two agree to within a few places of rank). The figures are built from the
 repository root with `python post/fig1/build.py` (needs headless Chromium) and
 `PYTHONPATH=. python post/figures/<name>.py`.
 
@@ -84,5 +84,5 @@ environment is in `.venv/`: `source .venv/bin/activate`.) The
 lens file itself is a large binary and is not in git: download the authors' released gpt2-small
 lens (Neuronpedia, `neuronpedia/jacobian-lens`) to
 `lenses/_hf/gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt`, or point `JLENS_LENS` at
-it. `DEVICE` overrides the device. Otherwise `jl.model` uses CUDA when there is one, but
-`jl.control` and `jl.qwen_control` use MPS or else the CPU, so set `DEVICE=cuda` for them on a GPU.
+it. `DEVICE` overrides the device. Otherwise `jl.model` and `jl.control` use CUDA when there is one
+(`jl.control` then MPS, then the CPU), and `jl.qwen_control` uses MPS or else the CPU.

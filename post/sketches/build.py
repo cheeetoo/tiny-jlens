@@ -1,6 +1,7 @@
 """Fill template.html with data -> sketches.html (open in a browser; the figures are interactive).
 
-Inputs: results/band/cka.json (GPT-2 CKA: top 5 PCs removed, and plain), and in post/fig1/data/: ignition_grid.json (GPT-2
+Inputs: results/band/cka.json (GPT-2 CKA, with the final LayerNorm's gain folded into the J-lens
+vectors), and in post/fig1/data/: ignition_grid.json (GPT-2
 ignition, from ignition_grid.py) and paper_{cka,ignition}.json (Claude Sonnet 4.5: the data behind
 the paper's Figs 27 and 29, from transformer-circuits.pub/2026/workspace/data/layer-diagram/cka.json
 and .../data/ignition/data.json).
@@ -20,7 +21,7 @@ r3 = lambda M: [[round(v, 3) for v in row] for row in M]
 data = dict(
     claude=dict(cka=r3(p_cka["sim"]), phases=p_cka["phases"], ws_band=p_ign["ws_band"],
                 share_full=r3(p_ign["heatmaps"]["proj"]), share_J=r3(p_ign["heatmaps"]["jspan"])),
-    gpt2=dict(cka={k: r3(g_cka[k]) for k in ("drop_top5", "linear")},
+    gpt2=dict(cka=r3(g_cka["linear_gain"]),
               share_full=r3(ign["share_full"]), share_J=r3(ign["share_J"])),
 )
 html = (HERE / "template.html").read_text().replace("__DATA__", json.dumps(data, separators=(",", ":")))

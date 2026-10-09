@@ -141,11 +141,13 @@ function figure(el) {
       ${["claude", "gpt2"].map((m, i) => `<div><div class="who">${m === "claude" ? "Claude" : "GPT-2 small"}</div>
         ${heatSVG(DATA[m][s.key], 230, s.cmap, s.guides ? s.guides[m] : [])}
         <div class="cap ${i ? "bad" : ""}">${i ? "✗ " : ""}${s.caps[i]}</div></div>`).join("")}</div></div>`;
-  el.innerHTML = `
-    <div class="grid3">${TESTS.slice(0, 3).map(card).join("")}</div>
-    <div class="grid2">${TESTS.slice(3).map(card).join("")}</div>
-    <div class="card no"><div class="head"><div class="title">The structure</div>${pill("no")}</div>
+  // #tests / #structure render one half; no hash renders both
+  const part = location.hash.slice(1);
+  const tests = `<div class="grid3">${TESTS.slice(0, 3).map(card).join("")}</div>
+    <div class="grid2">${TESTS.slice(3).map(card).join("")}</div>`;
+  const structure = `<div class="card no"><div class="head"><div class="title">The structure</div>${pill("no")}</div>
       <div class="spanel">${STRUCT.map(sp).join("")}</div></div>`;
+  el.innerHTML = part === "tests" ? tests : part === "structure" ? structure : tests + structure;
 }
 figure(document.getElementById("fig"));
 

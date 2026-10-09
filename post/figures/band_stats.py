@@ -3,6 +3,8 @@
 Reads post/fig1/data/paper_layer_lines.json (Claude Sonnet 4.5: the data behind the paper's Fig 28,
 from transformer-circuits.pub/2026/workspace/data/layer-lines/main.json) and results/band/fig28.json
 (`python -m jl.band fig28`).
+Panel (d) for GPT-2 uses the J-lens vectors with the final LayerNorm's gain folded into the
+unembedding (`effdim_gain`), as the CKA does.
 Run from the repo root:  python post/figures/band_stats.py
 """
 import json
@@ -27,7 +29,7 @@ PANELS = [  # key in fig28.json, legend title, y label, title
     ("topk", "k", "Fraction of positions", "(a) Model's top-1 token in lens top k"),
     ("kurtosis", "percentile", "Excess kurtosis", "(b) Kurtosis of the lens readout"),
     ("autocorr", "Δ", "Log-prob gain over shuffled (nats)", "(c) Persistence of the lens's top-1 token"),
-    ("effdim", "variance", "Fraction of dimensions", "(d) Dimensions needed for share of variance"),
+    ("effdim_gain", "variance", "Fraction of dimensions", "(d) Dimensions needed for share of variance"),
 ]
 
 fig, axes = plt.subplots(2, 4, figsize=(18, 8), sharey="col")

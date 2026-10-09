@@ -1,9 +1,20 @@
 {
- "frame": "transcript",
+ "frame": "human",
  "band": [
-  7,
-  8,
-  9
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23
  ],
  "layers": [
   0,
@@ -17,6 +28,20 @@
   8,
   9,
   10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
   "output"
  ],
  "carriers": [
@@ -45,424 +70,596 @@
   "citrus fruits": [
    " orange",
    " Orange",
-   "lime",
    " lime",
+   "orange",
+   "lime",
    "Orange",
-   " Mandarin",
    " Lime",
-   "orange"
+   " Mandarin",
+   " mandarin",
+   "Lime"
   ],
   "months of the year": [
-   " September",
    " June",
    " March",
+   " April",
    " July",
    " August",
-   " April",
-   " October",
+   " September",
    " January",
+   " October",
    " November",
    " December",
    " February",
    " march",
+   "March",
    "June",
    "July",
-   "March",
    "April",
-   "September",
    "August",
-   "October",
-   "December",
-   "November",
+   "September",
    "January",
-   "February"
+   "December",
+   "October",
+   "November",
+   "February",
+   " august",
+   " april",
+   " september",
+   " november",
+   " december",
+   " july",
+   " june",
+   " october",
+   " january",
+   " february",
+   "march",
+   "april",
+   "november"
   ],
   "days of the week": [
    " Friday",
-   " Monday",
-   " Tuesday",
    " Sunday",
-   " Wednesday",
-   " Thursday",
    " Saturday",
-   "Saturday",
+   " Monday",
+   " Thursday",
+   " Tuesday",
+   " Wednesday",
    "Friday",
+   "Saturday",
    "Sunday",
    "Monday",
    "Thursday",
    "Tuesday",
-   "Wednesday"
+   "Wednesday",
+   " friday",
+   " sunday",
+   " monday",
+   " saturday",
+   " thursday",
+   "friday",
+   " tuesday",
+   "sunday",
+   "monday"
   ],
   "planets": [
-   " Earth",
    " earth",
+   " Earth",
    " Mars",
+   " mars",
+   " mercury",
    "earth",
    " Venus",
    " Mercury",
-   " Jupiter",
    "Earth",
+   " Jupiter",
    " Saturn",
-   " Neptune",
-   " mercury",
+   "mars",
+   "jupiter",
    "Mars",
-   " mars"
+   " Neptune",
+   "Venus",
+   " venus",
+   "Mercury",
+   "venus",
+   "Jupiter"
   ],
   "chess pieces": [
    " King",
    "king",
    " king",
-   " Knight",
    " Queen",
+   " queen",
    " Kings",
    " Queens",
-   " Knights",
    "King",
+   " Knight",
    " Bishop",
-   " queen",
+   "Queen",
    " kings",
+   " Knights",
    " knight",
    " bishop",
-   " knights",
-   " bishops",
    "bishop",
-   "Queen",
+   " bishops",
    " queens",
+   "Queens",
+   "queen",
+   "Knight",
+   " knights",
    "Kings",
-   "Knight"
+   "knight",
+   "Bishop",
+   " Bishops",
+   "kings",
+   "queens"
   ],
   "precious metals": [
    "iron",
-   " Gold",
    " gold",
-   " iron",
-   " Silver",
+   " Gold",
    " steel",
+   " iron",
+   " silver",
+   " copper",
+   " Silver",
    " Steel",
    " Iron",
-   " silver",
    "Gold",
-   " copper",
-   " Bronze",
-   " bronze",
-   "Iron",
-   " Platinum",
    "gold",
+   " bronze",
+   " platinum",
    "Silver",
    " Copper",
-   " platinum",
-   "Steel",
+   "Iron",
    "silver",
-   "steel"
+   " Platinum",
+   "steel",
+   " Bronze",
+   "Steel",
+   "copper",
+   "Copper",
+   "Bronze",
+   "platinum",
+   "Platinum"
   ],
   "gemstones": [
-   " Ruby",
-   " Diamond",
    " diamond",
-   " Pearl",
-   " Jade",
-   " gems",
-   " Emerald",
-   " Gems",
+   " Diamond",
    " diamonds",
-   "Ruby",
-   " ruby",
+   " Pearl",
+   " Ruby",
    " pearl",
+   "diamond",
+   " gems",
+   "ruby",
+   " ruby",
+   " Jade",
    "Diamond",
-   "ruby"
+   " jade",
+   " emerald",
+   " Emerald",
+   "Ruby",
+   "jade",
+   " Diamonds",
+   "gems",
+   "pearl",
+   "Jade",
+   " Gems",
+   "Pearl",
+   "Diamonds",
+   "emerald",
+   "diamonds",
+   "Emerald"
   ],
   "farm animals": [
-   " horse",
-   "cow",
-   " chicken",
    " cow",
-   " Cow",
+   " horse",
+   " chicken",
    " pig",
    " sheep",
-   " Chicken",
-   " Horse",
-   " Duck",
+   " Cow",
    " duck",
-   " Pig",
+   " Horse",
+   " Chicken",
+   "pig",
    "horse",
-   " Sheep",
+   " Duck",
+   " Pig",
+   "cow",
+   "duck",
    "Cow",
-   "Chicken"
+   "sheep",
+   " Sheep",
+   "Chicken",
+   "chicken",
+   "Horse",
+   "Duck",
+   "Pig",
+   "Sheep"
   ],
   "musical instruments": [
    " guitar",
-   " drum",
    " piano",
-   " Drum",
-   " Guitar",
+   " drum",
    " violin",
+   "violin",
+   " Drum",
    " trumpet",
-   " Piano"
+   "guitar",
+   " Piano",
+   "Guitar",
+   " Guitar",
+   "trumpet",
+   " saxophone",
+   "piano",
+   "drum",
+   "saxophone",
+   "Piano",
+   "Drum",
+   " Violin"
   ],
   "weather conditions": [
-   " wind",
-   " Wind",
    "rain",
+   " wind",
    " rain",
    " snow",
-   " Snow",
    "wind",
-   "Wind",
-   " Thunder",
-   " Rain",
-   " Lightning",
-   " lightning",
-   " thunder",
-   " fog",
    " sunny",
-   "Snow",
-   "Rain",
-   " Sunny",
-   " Fog",
+   " Wind",
+   " fog",
+   " Rain",
+   " Snow",
+   "snow",
+   " lightning",
    " cloudy",
-   "Thunder"
+   " Thunder",
+   " thunder",
+   "Wind",
+   "Rain",
+   "Snow",
+   " Sunny",
+   " Lightning",
+   " Fog",
+   "fog",
+   "lightning",
+   "Fog",
+   "Sunny",
+   "Thunder",
+   " Cloudy",
+   "Lightning",
+   "sunny",
+   "thunder"
   ],
   "body parts": [
    "ear",
    " hand",
-   " ear",
-   " head",
-   " leg",
-   "leg",
    "arm",
+   " head",
+   "leg",
+   " leg",
    "head",
-   " foot",
-   " Ear",
-   " eyes",
    " arm",
-   " Leg",
-   " eye",
+   " foot",
    "hand",
-   "foot",
-   " Arm",
-   " Head",
-   " Hand",
-   " neck",
-   " finger",
-   " Foot",
-   " shoulder",
-   "Ear",
-   " fingers",
-   " nose",
-   " knee",
-   "Leg",
    "Hand",
-   "Head",
-   " Eye",
-   "Foot",
-   " Eyes",
-   "Eye",
+   " eyes",
+   " Arm",
+   " eye",
+   "foot",
+   " Leg",
+   " Hand",
+   " ear",
+   " neck",
+   " Head",
+   " Foot",
+   " finger",
+   " shoulder",
+   " nose",
    "eye",
+   "Head",
+   "Leg",
+   "Foot",
+   " fingers",
+   " knee",
    "Arm",
+   " Eye",
    "neck",
-   " Neck",
+   " Ear",
+   "Eye",
+   "knee",
    "finger",
+   " Neck",
+   "nose",
+   " Eyes",
    " Finger",
+   "eyes",
+   " Shoulder",
    " Nose",
-   "eyes"
+   "shoulder",
+   "Ear",
+   " Knee",
+   " Fingers",
+   "Eyes",
+   "Neck",
+   "Finger"
   ],
   "vegetables": [
-   " Corn",
    " corn",
-   " pepper",
    "bean",
+   "Bean",
+   " Corn",
    " beans",
-   "corn",
-   " potato",
-   " Pepper",
-   " bean",
-   " Bean",
-   " carrots",
-   " spinach",
-   " lettuce",
-   "Corn",
-   " Potato",
+   " pepper",
    "beans",
-   " Beans"
+   " potato",
+   " bean",
+   "corn",
+   "potato",
+   " carrots",
+   "Corn",
+   " lettuce",
+   " Bean",
+   " spinach",
+   " Pepper",
+   "Beans",
+   " Potato",
+   " Beans",
+   "Potato",
+   "pepper",
+   "Pepper",
+   " Spinach",
+   " Lettuce"
   ],
   "card suits": [
    "ace",
-   " clubs",
    " hearts",
-   " Ace",
-   " Hearts",
-   " diamonds",
+   " clubs",
    " ace",
-   " Clubs"
+   " Ace",
+   " diamonds",
+   " Hearts",
+   "Ace",
+   " Clubs",
+   "clubs",
+   " Diamonds",
+   "hearts",
+   "Diamonds",
+   "diamonds",
+   "Hearts"
   ],
   "ocean creatures": [
    " fish",
    "fish",
-   " Fish",
    " seal",
+   " Fish",
    " shark",
+   "Fish",
    " whale",
    " Seal",
    " Shark",
-   "Fish",
+   "seal",
+   "shark",
    " dolphin",
+   " Whale",
+   "whale",
    " Dolphin",
-   " Whale"
+   "Seal",
+   "Shark",
+   "dolphin"
   ],
   "types of trees": [
-   " Oak",
-   "oak",
    " pine",
-   " Maple",
-   " Pine",
+   " Oak",
    "pine",
    " oak",
+   " Pine",
    " maple",
-   " Elm",
+   " Maple",
    " Cedar",
-   "Oak"
+   "elm",
+   " Elm",
+   "Oak",
+   " cedar",
+   "Pine",
+   " elm",
+   "oak",
+   "Cedar",
+   "Maple"
   ],
   "kitchen utensils": [
    " pan",
-   " Pan",
-   "plate",
    "pan",
+   "plate",
+   "Pan",
    " plate",
-   " Bowl",
+   " Pan",
    " bowl",
    " knife",
    " fork",
-   "Pan",
+   " Bowl",
    " Plate",
-   " Knife",
+   "knife",
    "fork",
-   "bowl",
+   "Plate",
    " Fork",
-   "knife"
+   " Knife",
+   "bowl",
+   " spatula",
+   "Fork",
+   "Knife",
+   "Bowl"
   ],
   "emotions": [
-   "anger",
    "joy",
-   " fear",
+   "anger",
    " happy",
-   " surprise",
+   " fear",
    " sad",
-   " afraid",
-   " angry",
    " joy",
+   " surprise",
+   " afraid",
+   "happy",
+   "Happy",
+   " happiness",
+   " Happy",
+   " angry",
    " anger",
+   " Joy",
+   " Sad",
    " shame",
    " scared",
-   " happiness",
-   " Joy",
-   " Happy",
-   " Sad",
-   " Fear",
-   " disgust",
    " grief",
-   "Happy",
+   "sad",
+   " Fear",
    "Sad",
-   " Angry",
-   "happy",
-   "Fear",
-   " Happiness",
+   " disgust",
    "Joy",
-   " Anger",
+   " Happiness",
+   "Fear",
    " Surprise",
-   " Shame"
+   " Angry",
+   "happiness",
+   "fear",
+   " Shame",
+   "angry",
+   " Grief",
+   " Anger",
+   "surprise",
+   "Happiness",
+   "Angry"
   ],
   "geometric shapes": [
    " square",
-   "oval",
    " circle",
-   " Square",
-   " Circle",
-   " sphere",
-   " triangle",
-   " Cube",
    "square",
-   " cube",
-   " Oval",
-   " cone",
-   "Cube",
-   " Sphere",
-   " Triangle",
-   " rectangle",
-   "Sphere",
-   "cube",
-   " oval",
+   " triangle",
+   " Square",
    "circle",
+   "oval",
+   "triangle",
+   " sphere",
+   " cube",
+   " Circle",
+   " cone",
+   " oval",
+   " rectangle",
+   "Circle",
+   "Cube",
    "Square",
-   "cone"
+   "rectangle",
+   "cube",
+   "Rectangle",
+   "Sphere",
+   "cone",
+   " Cube",
+   " Triangle",
+   " Rectangle",
+   "sphere",
+   " Oval",
+   " Sphere",
+   " Cone",
+   "Triangle",
+   "Oval",
+   "Cone"
   ],
   "types of boats": [
-   " ship",
    "ship",
-   " vessel",
+   " ship",
    " boat",
-   " Ship",
+   " vessel",
    "boat",
+   " Ship",
+   " Boat",
    "Ship",
    " ferry",
-   " Boat",
-   " Ferry",
    " yacht",
-   " Vessel"
+   " Yacht",
+   " Ferry",
+   " sailboat",
+   "Boat",
+   " Vessel",
+   "sailboat"
   ],
   "insects": [
    "ant",
    " ant",
    " Ant",
    " fly",
-   "fly",
-   " Spider",
    "Ant",
+   "fly",
    " Fly",
    " cricket",
+   "bee",
    " spider",
    " bee",
-   "bee",
-   " Bee",
-   "Fly",
-   " Cricket",
    " butterfly",
+   " Spider",
+   " Bee",
    " mosquito",
+   "spider",
+   " Cricket",
+   " moth",
+   "Fly",
+   "Bee",
    " Butterfly",
    "Spider",
-   " moth",
+   "mosquito",
    " beetle",
+   "butterfly",
    " beetles",
    " Beetle",
-   "Bee"
+   " Moth",
+   "Cricket",
+   " Mosquito",
+   "Butterfly"
   ],
   "desserts": [
    " pie",
-   " chocolate",
-   " cake",
-   " candy",
-   " cookie",
-   " Pie",
    "pie",
-   " Candy",
-   " Chocolate",
-   "cake",
-   " Cake",
-   " Cookie",
+   " cake",
+   " chocolate",
+   " cookie",
    "cookie",
-   "Pie"
+   " candy",
+   " Pie",
+   " Cookie",
+   "cake",
+   "Cookie",
+   " Chocolate",
+   " Cake",
+   " Candy",
+   "Pie",
+   "Chocolate",
+   "chocolate",
+   "Cake",
+   " brownie",
+   "candy",
+   "Candy"
   ],
   "types of footwear": [
-   " boot",
-   " shoes",
-   " boots",
-   " shoe",
    "boot",
+   " shoes",
+   " boot",
+   " boots",
+   "Boot",
+   " shoe",
+   "sock",
    " Boot",
    " heel",
-   " Boots",
    " sock",
-   "Boot",
-   " Shoes"
+   "shoe",
+   " Shoes",
+   " Shoe",
+   " Boots",
+   " sandal",
+   "boots",
+   "heel",
+   "shoes",
+   "Sock",
+   " Heel",
+   " Sock",
+   "Shoes"
   ]
  },
  "trials": [
@@ -4272,7 +4469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4280,7 +4477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4288,7 +4485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4296,7 +4493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4304,7 +4501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4312,7 +4509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4320,7 +4517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4328,7 +4525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4336,7 +4533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4344,7 +4541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4352,7 +4549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4360,7 +4557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4368,7 +4565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4376,7 +4573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4384,7 +4581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4392,7 +4589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4400,7 +4597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4408,7 +4605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4416,7 +4613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4424,7 +4621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4432,7 +4629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4440,7 +4637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4448,7 +4645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4456,7 +4653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -4464,7 +4661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8272,7 +8469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8280,7 +8477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8288,7 +8485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8296,7 +8493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8304,7 +8501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8312,7 +8509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8320,7 +8517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8328,7 +8525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8336,7 +8533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8344,7 +8541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8352,7 +8549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8360,7 +8557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8368,7 +8565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8376,7 +8573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8384,7 +8581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8392,7 +8589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8400,7 +8597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8408,7 +8605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8416,7 +8613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8424,7 +8621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8432,7 +8629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8440,7 +8637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8448,7 +8645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8456,7 +8653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -8464,7 +8661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12272,7 +12469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12280,7 +12477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12288,7 +12485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12296,7 +12493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12304,7 +12501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12312,7 +12509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12320,7 +12517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12328,7 +12525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12336,7 +12533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12344,7 +12541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12352,7 +12549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12360,7 +12557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12368,7 +12565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12376,7 +12573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12384,7 +12581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12392,7 +12589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12400,7 +12597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12408,7 +12605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12416,7 +12613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12424,7 +12621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12432,7 +12629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12440,7 +12637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12448,7 +12645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12456,7 +12653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -12464,7 +12661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16272,7 +16469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16280,7 +16477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16288,7 +16485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16296,7 +16493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16304,7 +16501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16312,7 +16509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16320,7 +16517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16328,7 +16525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16336,7 +16533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16344,7 +16541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16352,7 +16549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16360,7 +16557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16368,7 +16565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16376,7 +16573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16384,7 +16581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16392,7 +16589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16400,7 +16597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16408,7 +16605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16416,7 +16613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16424,7 +16621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16432,7 +16629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16440,7 +16637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16448,7 +16645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16456,7 +16653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -16464,7 +16661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20272,7 +20469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20280,7 +20477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20288,7 +20485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20296,7 +20493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20304,7 +20501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20312,7 +20509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20320,7 +20517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20328,7 +20525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20336,7 +20533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20344,7 +20541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20352,7 +20549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20360,7 +20557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20368,7 +20565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20376,7 +20573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20384,7 +20581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20392,7 +20589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20400,7 +20597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20408,7 +20605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20416,7 +20613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20424,7 +20621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20432,7 +20629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20440,7 +20637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20448,7 +20645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20456,7 +20653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -20464,7 +20661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24272,7 +24469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24280,7 +24477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24288,7 +24485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24296,7 +24493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24304,7 +24501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24312,7 +24509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24320,7 +24517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24328,7 +24525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24336,7 +24533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24344,7 +24541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24352,7 +24549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24360,7 +24557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24368,7 +24565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24376,7 +24573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24384,7 +24581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24392,7 +24589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24400,7 +24597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24408,7 +24605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24416,7 +24613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24424,7 +24621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24432,7 +24629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24440,7 +24637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24448,7 +24645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24456,7 +24653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -24464,7 +24661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28272,55 +28469,55 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
-  },
-  {
-   "family": "topic",
-   "x": "gemstones",
-   "carrier": 19,
-   "cond": "mention",
-   "phrasing": "{x}.",
-   "n_pos": 14
-  },
-  {
-   "family": "topic",
-   "x": "gemstones",
-   "carrier": 19,
-   "cond": "mention",
-   "phrasing": "({x})",
-   "n_pos": 14
-  },
-  {
-   "family": "topic",
-   "x": "gemstones",
-   "carrier": 19,
-   "cond": "mention",
-   "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
-  },
-  {
-   "family": "topic",
-   "x": "gemstones",
-   "carrier": 19,
-   "cond": "mention",
-   "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
-  },
-  {
-   "family": "topic",
-   "x": "gemstones",
-   "carrier": 19,
-   "cond": "mention",
-   "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
-  },
-  {
-   "family": "topic",
-   "x": "gemstones",
-   "carrier": 19,
-   "cond": "mention",
-   "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
+  },
+  {
+   "family": "topic",
+   "x": "gemstones",
+   "carrier": 19,
+   "cond": "mention",
+   "phrasing": "{x}.",
+   "n_pos": 13
+  },
+  {
+   "family": "topic",
+   "x": "gemstones",
+   "carrier": 19,
+   "cond": "mention",
+   "phrasing": "({x})",
+   "n_pos": 13
+  },
+  {
+   "family": "topic",
+   "x": "gemstones",
+   "carrier": 19,
+   "cond": "mention",
+   "phrasing": "{x} came up in conversation.",
+   "n_pos": 13
+  },
+  {
+   "family": "topic",
+   "x": "gemstones",
+   "carrier": 19,
+   "cond": "mention",
+   "phrasing": "{x} appears in this prompt.",
+   "n_pos": 13
+  },
+  {
+   "family": "topic",
+   "x": "gemstones",
+   "carrier": 19,
+   "cond": "mention",
+   "phrasing": "This prompt contains a reference to {x}.",
+   "n_pos": 13
+  },
+  {
+   "family": "topic",
+   "x": "gemstones",
+   "carrier": 19,
+   "cond": "mention",
+   "phrasing": "There is a phrase, {x}, included here.",
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28328,7 +28525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28336,7 +28533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28344,7 +28541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28352,7 +28549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28360,7 +28557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28368,7 +28565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28376,7 +28573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28384,7 +28581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28392,7 +28589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28400,7 +28597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28408,7 +28605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28416,7 +28613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28424,7 +28621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28432,7 +28629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28440,7 +28637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28448,7 +28645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28456,7 +28653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -28464,7 +28661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32272,7 +32469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32280,7 +32477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32288,7 +32485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32296,7 +32493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32304,7 +32501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32312,7 +32509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32320,7 +32517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32328,7 +32525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32336,7 +32533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32344,7 +32541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32352,7 +32549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32360,7 +32557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32368,7 +32565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32376,7 +32573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32384,7 +32581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32392,7 +32589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32400,7 +32597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32408,7 +32605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32416,7 +32613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32424,7 +32621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32432,7 +32629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32440,7 +32637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32448,7 +32645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32456,7 +32653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -32464,7 +32661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36272,7 +36469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36280,7 +36477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36288,7 +36485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36296,7 +36493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36304,7 +36501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36312,7 +36509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36320,7 +36517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36328,7 +36525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36336,7 +36533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36344,7 +36541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36352,7 +36549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36360,7 +36557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36368,7 +36565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36376,7 +36573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36384,7 +36581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36392,7 +36589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36400,7 +36597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36408,7 +36605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36416,7 +36613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36424,7 +36621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36432,7 +36629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36440,7 +36637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36448,7 +36645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36456,7 +36653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -36464,7 +36661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40272,7 +40469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40280,7 +40477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40288,7 +40485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40296,7 +40493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40304,7 +40501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40312,7 +40509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40320,7 +40517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40328,7 +40525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40336,7 +40533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40344,7 +40541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40352,7 +40549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40360,7 +40557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40368,7 +40565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40376,7 +40573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40384,7 +40581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40392,7 +40589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40400,7 +40597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40408,7 +40605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40416,7 +40613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40424,7 +40621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40432,7 +40629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40440,7 +40637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40448,7 +40645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40456,7 +40653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -40464,7 +40661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44272,7 +44469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44280,7 +44477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44288,7 +44485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44296,7 +44493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44304,7 +44501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44312,7 +44509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44320,7 +44517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44328,7 +44525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44336,7 +44533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44344,7 +44541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44352,7 +44549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44360,7 +44557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44368,7 +44565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44376,7 +44573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44384,7 +44581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44392,7 +44589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44400,7 +44597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44408,7 +44605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44416,7 +44613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44424,7 +44621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44432,7 +44629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44440,7 +44637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44448,7 +44645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44456,7 +44653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -44464,7 +44661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48272,7 +48469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48280,7 +48477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48288,7 +48485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48296,7 +48493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48304,7 +48501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48312,7 +48509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48320,7 +48517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48328,7 +48525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48336,7 +48533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48344,7 +48541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48352,7 +48549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48360,7 +48557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48368,7 +48565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48376,7 +48573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48384,7 +48581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48392,7 +48589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48400,7 +48597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48408,7 +48605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48416,7 +48613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48424,7 +48621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48432,7 +48629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48440,7 +48637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48448,7 +48645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48456,7 +48653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -48464,7 +48661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52272,7 +52469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52280,7 +52477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52288,7 +52485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52296,7 +52493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52304,7 +52501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52312,7 +52509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52320,7 +52517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52328,7 +52525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52336,7 +52533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52344,7 +52541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52352,7 +52549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52360,7 +52557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52368,7 +52565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52376,7 +52573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52384,7 +52581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52392,7 +52589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52400,7 +52597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52408,7 +52605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52416,7 +52613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52424,7 +52621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52432,7 +52629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52440,7 +52637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52448,7 +52645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52456,7 +52653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -52464,7 +52661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56272,7 +56469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56280,7 +56477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56288,7 +56485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56296,7 +56493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56304,7 +56501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56312,7 +56509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56320,7 +56517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56328,7 +56525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56336,7 +56533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56344,7 +56541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56352,7 +56549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56360,7 +56557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56368,7 +56565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56376,7 +56573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56384,7 +56581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56392,7 +56589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56400,7 +56597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56408,7 +56605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56416,7 +56613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56424,7 +56621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56432,7 +56629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56440,7 +56637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56448,7 +56645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56456,7 +56653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -56464,7 +56661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60272,7 +60469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60280,7 +60477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60288,7 +60485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60296,7 +60493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60304,7 +60501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60312,7 +60509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60320,7 +60517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60328,7 +60525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60336,7 +60533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60344,7 +60541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60352,7 +60549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60360,7 +60557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60368,7 +60565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60376,7 +60573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60384,7 +60581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60392,7 +60589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60400,7 +60597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60408,7 +60605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60416,7 +60613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60424,7 +60621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60432,7 +60629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60440,7 +60637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60448,7 +60645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60456,7 +60653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -60464,7 +60661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64272,7 +64469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64280,7 +64477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64288,7 +64485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64296,7 +64493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64304,7 +64501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64312,7 +64509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64320,7 +64517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64328,7 +64525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64336,7 +64533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64344,7 +64541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64352,7 +64549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64360,7 +64557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64368,7 +64565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64376,7 +64573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64384,7 +64581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64392,7 +64589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64400,7 +64597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64408,7 +64605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64416,7 +64613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64424,7 +64621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64432,7 +64629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64440,7 +64637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64448,7 +64645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64456,7 +64653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -64464,7 +64661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68272,7 +68469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68280,7 +68477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68288,7 +68485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68296,7 +68493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68304,7 +68501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68312,7 +68509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68320,7 +68517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68328,7 +68525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68336,7 +68533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68344,7 +68541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68352,7 +68549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68360,7 +68557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68368,7 +68565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68376,7 +68573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68384,7 +68581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68392,7 +68589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68400,7 +68597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68408,7 +68605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68416,7 +68613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68424,7 +68621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68432,7 +68629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68440,7 +68637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68448,7 +68645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68456,7 +68653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -68464,7 +68661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72272,7 +72469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72280,7 +72477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72288,7 +72485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72296,7 +72493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72304,7 +72501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72312,7 +72509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72320,7 +72517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72328,7 +72525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72336,7 +72533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72344,7 +72541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72352,7 +72549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72360,7 +72557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72368,7 +72565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72376,7 +72573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72384,7 +72581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72392,7 +72589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72400,7 +72597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72408,7 +72605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72416,7 +72613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72424,7 +72621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72432,7 +72629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72440,7 +72637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72448,7 +72645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72456,7 +72653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -72464,7 +72661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76272,7 +76469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76280,7 +76477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76288,7 +76485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76296,7 +76493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76304,7 +76501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76312,7 +76509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76320,7 +76517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76328,7 +76525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76336,7 +76533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76344,7 +76541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76352,7 +76549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76360,7 +76557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76368,7 +76565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76376,7 +76573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76384,7 +76581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76392,7 +76589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76400,7 +76597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76408,7 +76605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76416,7 +76613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76424,7 +76621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76432,7 +76629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76440,7 +76637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76448,7 +76645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76456,7 +76653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -76464,7 +76661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80272,7 +80469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80280,7 +80477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80288,7 +80485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80296,7 +80493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80304,7 +80501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80312,7 +80509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80320,7 +80517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80328,7 +80525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80336,7 +80533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80344,7 +80541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80352,7 +80549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80360,7 +80557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80368,7 +80565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80376,7 +80573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80384,7 +80581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80392,7 +80589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80400,7 +80597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80408,7 +80605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80416,7 +80613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80424,7 +80621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80432,7 +80629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80440,7 +80637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80448,7 +80645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80456,7 +80653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -80464,7 +80661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84272,7 +84469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84280,7 +84477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84288,7 +84485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84296,7 +84493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84304,7 +84501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84312,7 +84509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84320,7 +84517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84328,7 +84525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84336,7 +84533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84344,7 +84541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84352,7 +84549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84360,7 +84557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84368,7 +84565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84376,7 +84573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84384,7 +84581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84392,7 +84589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84400,7 +84597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84408,7 +84605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84416,7 +84613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84424,7 +84621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84432,7 +84629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84440,7 +84637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84448,7 +84645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84456,7 +84653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -84464,7 +84661,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88272,7 +88469,7 @@
    "carrier": 19,
    "cond": "baseline",
    "phrasing": null,
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88280,7 +88477,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88288,7 +88485,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "({x})",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88296,7 +88493,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} came up in conversation.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88304,7 +88501,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "{x} appears in this prompt.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88312,7 +88509,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "This prompt contains a reference to {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88320,7 +88517,7 @@
    "carrier": 19,
    "cond": "mention",
    "phrasing": "There is a phrase, {x}, included here.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88328,7 +88525,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88336,7 +88533,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Concentrate on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88344,7 +88541,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Try to focus on {x} while you write the sentence.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88352,7 +88549,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Hold {x} in mind as you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88360,7 +88557,7 @@
    "carrier": 19,
    "cond": "focus",
    "phrasing": "Keep {x} in your thoughts.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88368,7 +88565,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant \u2014 ignore it.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88376,7 +88573,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is irrelevant.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88384,7 +88581,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "Ignore {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88392,7 +88589,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "(Ignore: {x}.)",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88400,7 +88597,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is a distraction \u2014 push it out of your mind.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88408,7 +88605,7 @@
    "carrier": 19,
    "cond": "dismissal",
    "phrasing": "{x} is unrelated to this task.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88416,7 +88613,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88424,7 +88621,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Avoid thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88432,7 +88629,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Clear your mind of {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88440,7 +88637,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Try very hard not to think about {x} while you write.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88448,7 +88645,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "You are forbidden from thinking about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88456,7 +88653,7 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Whatever you do, do not think about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   },
   {
    "family": "topic",
@@ -88464,19 +88661,16 @@
    "carrier": 19,
    "cond": "negated-think",
    "phrasing": "Don't worry about {x}.",
-   "n_pos": 14
+   "n_pos": 13
   }
  ],
- "example": "User: Write the following sentence: \"The old painting hung crookedly on the wall.\" Think about citrus fruits while you write.\nAssistant: The old painting hung crookedly on the wall.",
+ "example": "\n\nHuman: Write \"The old painting hung crookedly on the wall.\" Think about citrus fruits while you write. Don't write anything else.\n\nAssistant: The old painting hung crookedly on the wall.",
  "example_tokens": [
-  "<|endoftext|>",
-  "User",
+  "<bos>",
+  "\n\n",
+  "Human",
   ":",
   " Write",
-  " the",
-  " following",
-  " sentence",
-  ":",
   " \"",
   "The",
   " old",
@@ -88496,7 +88690,14 @@
   " you",
   " write",
   ".",
-  "\n",
+  " Don",
+  "'",
+  "t",
+  " write",
+  " anything",
+  " else",
+  ".",
+  "\n\n",
   "Assistant",
   ":",
   " The",
@@ -88511,15 +88712,15 @@
   "."
  ],
  "example_positions": [
-  30,
-  31,
-  32,
-  33,
   34,
   35,
   36,
   37,
   38,
-  39
+  39,
+  40,
+  41,
+  42,
+  43
  ]
 }

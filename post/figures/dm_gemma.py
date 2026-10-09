@@ -19,14 +19,35 @@ from dm_tables import ALL, cond_mask, mean_over_phrasings, paired, pct  # noqa: 
 FRAMES = {"human": "plain text", "paper": "chat"}
 
 
-def runs(size):
-    """[(label, Grid)] for the base and the instruction-tuned model, in each frame."""
+def runs(size, tag=""):
+    """[(label, Grid)] for the base and the instruction-tuned model, in each frame.  `tag` picks a
+    partial run (`_math`: the math family at 1b, run on its own)."""
     out = []
     for frame in FRAMES:
         for m in (f"gemma-{size}", f"gemma-{size}-it"):
-            if (D.RESULTS / f"control/{m}/modulation_grid_{frame}.json").exists():
-                out.append((f"{D.MODEL_LABEL[m]}, {FRAMES[frame]}", D.Grid(m, frame)))
+            if (D.RESULTS / f"control/{m}/modulation_grid_{frame}{tag}.json").exists():
+                out.append((f"{D.MODEL_LABEL[m]}, {FRAMES[frame]}", D.Grid(m, frame + tag)))
     return out
+
+
+def controls(size):
+    """post/DM.md section 3: each model in its main frame, read as the paper reads it, with the other
+    model's lens (LENS_FROM), and centered (LENS_CENTER=1), for whichever of these runs exist."""
+    print("\n### Controls (categories, our band): the other model's lens, and the centered readout\n")
+    print("| model, prompt | readout | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " | think about vs. mention (pairs) "
+          "| think about, where the model isn't about to say it | median best rank, think about |\n|---|---|"
+          + "---|" * (len(ALL) + 3))
+    for m, other in ((f"gemma-{size}", f"gemma-{size}-it"), (f"gemma-{size}-it", f"gemma-{size}")):
+        frame = D.MAIN_FRAME[m]
+        for label, model, fr in (("its own lens", m, frame), (f"{D.MODEL_LABEL[other]}'s lens", f"{m}_lens-{other}", frame),
+                                 ("centered", m, f"{frame}_centered")):
+            if not (D.RESULTS / f"control/{model}/modulation_grid_{fr}.json").exists():
+                continue
+            g = D.Grid(model, fr)
+            b, h = g.best("ours"), g.best("ours", held=10)
+            print(f"| {D.MODEL_LABEL[m]}, {FRAMES[frame]} | {label} | " + " | ".join(rate_row(g, "topic", b))
+                  + f" | {paired(g, 'topic', 'ours')[1]} | {pct(mean_over_phrasings(g, 'topic', 'focus', h <= 1))} | "
+                  f"{np.median(b[cond_mask(g, 'topic', 'focus')]):.0f} |")
 
 
 def rate_row(g, fam, best, k=1):
@@ -55,38 +76,45 @@ def main(size="270m"):
     R = runs(size)
     head = "| model, prompt | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " |\n|---|" + "---|" * len(ALL)
 
+    R_main = R
     for fam in D.FAMILIES:
-        if not any((g.family == fam).any() for _, g in R):      # the 1b runs have no math problems
-            continue
+        R = R_main
+        if not any((g.family == fam).any() for _, g in R):      # the 1b math problems were run on their own
+            R = runs(size, "_math")
+            if not any((g.family == fam).any() for _, g in R):
+                continue
         for k, what in ((1, "hit rate (a tracked token at lens rank 1)"), (5, "a tracked token in the lens top 5"),
                         (25, "a tracked token in the lens top 25")):
-            print(f"\n### {D.FAMILY_LABEL[fam]}: {what}, the paper's band\n\n{head}")
+            print(f"\n### {D.FAMILY_LABEL[fam]}: {what}, our band\n\n{head}")
             for label, g in R:
-                print(f"| {label} | " + " | ".join(rate_row(g, fam, g.best("paper"), k)) + " |")
+                print(f"| {label} | " + " | ".join(rate_row(g, fam, g.best("ours"), k)) + " |")
         print(f"\n### {D.FAMILY_LABEL[fam]}: hit rate without the (target, sentence) pairs that hit with no "
-              f"instruction, the paper's band\n\n" + head.replace("| model, prompt |", "| model, prompt | pairs left out |")
+              f"instruction, our band\n\n" + head.replace("| model, prompt |", "| model, prompt | pairs left out |")
               .replace("|---|", "|---|---|", 1))
         for label, g in R:
-            best = g.best("paper")
+            best = g.best("ours")
             pairs = {(t["x"], t["carrier"]) for t, c in zip(g.trials, coincident(g, fam, best)) if c}
             print(f"| {label} | {len(pairs)}: " + "; ".join(f"{x} + sentence {c + 1}" for x, c in sorted(pairs))
                   + " | " + " | ".join(rate_row_excl(g, fam, best)) + " |")
-        print(f"\n### {D.FAMILY_LABEL[fam]}: median best rank, the paper's band\n\n{head}")
+        print(f"\n### {D.FAMILY_LABEL[fam]}: median best rank, our band\n\n{head}")
         for label, g in R:
-            b = g.best("paper")
+            b = g.best("ours")
             print(f"| {label} | " + " | ".join(f"{np.median(b[cond_mask(g, fam, c)]):.0f}" for c in ALL) + " |")
-        print(f"\n### {D.FAMILY_LABEL[fam]}: paired comparisons, the paper's band\n")
+        print(f"\n### {D.FAMILY_LABEL[fam]}: paired comparisons, our band\n")
         print("Share of (target, sentence) pairs in which the first condition ranks the target higher, on the "
               "median best rank over each condition's phrasings.\n")
         print("| model, prompt | mention vs. none | think about vs. mention | ignore vs. mention | "
               "don't think vs. mention | don't think vs. think about |\n|---|---|---|---|---|---|")
         for label, g in R:
-            print(f"| {label} | " + " | ".join(paired(g, fam, "paper")) + " |")
+            print(f"| {label} | " + " | ".join(paired(g, fam, "ours")) + " |")
+
+    R = R_main
+    controls(size)
 
     print("\n### Categories: hit rate by which layers are read\n")
     print("| model, prompt | layers | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " |\n|---|---|" + "---|" * len(ALL))
     for label, g in R:
-        for name in ("paper", "late", "all"):
+        for name in ("ours", "paper", "all"):
             if name in D.BANDS[g.model]:
                 lo, hi = D.BANDS[g.model][name]
                 print(f"| {label} | {lo} to {hi} ({name}) | " + " | ".join(rate_row(g, "topic", g.best(name))) + " |")
@@ -101,16 +129,16 @@ def main(size="270m"):
                                              for c in ("focus", "mention", "baseline")))
         print(f"- {label}: " + ", ".join(cells))
 
-    print("\n### Categories: hit rate by which positions count, the paper's band\n")
+    print("\n### Categories: hit rate by which positions count, our band\n")
     print("| model, prompt | positions | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " |\n|---|---|" + "---|" * len(ALL))
     for label, g in R:
         for name, kw in (("every token of the sentence", {}), ("without its first token", dict(skip_first=True)),
                          ("only where no tracked token is in the model's own top 10", dict(held=10))):
-            print(f"| {label} | {name} | " + " | ".join(rate_row(g, "topic", g.best("paper", **kw))) + " |")
+            print(f"| {label} | {name} | " + " | ".join(rate_row(g, "topic", g.best("ours", **kw))) + " |")
 
-    print("\n### Categories: a tracked token in the lens top 25 by phrasing, the paper's band\n")
+    print("\n### Categories: a tracked token in the lens top 25 by phrasing, our band\n")
     print("| phrasing | condition | " + " | ".join(label for label, _ in R) + " |\n|---|---|" + "---|" * len(R))
-    rates = [g.rates("topic", "paper", k=25) for _, g in R]
+    rates = [g.rates("topic", "ours", k=25) for _, g in R]
     for c in ALL:
         for p in rates[0][c][1]:
             print(f"| `{p}` | {D.COND_LABEL[c]} | " + " | ".join(pct(r[c][1][p], 0) for r in rates) + " |")
