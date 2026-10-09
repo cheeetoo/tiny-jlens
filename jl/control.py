@@ -1,5 +1,5 @@
-"""The two tests of top-down control, run as the paper runs them, on GPT-2 small and on a small
-instruction-tuned model.
+"""The two tests of top-down control, run as the paper runs them, on GPT-2 small and on Gemma 3
+(270m and 1b, base and instruction-tuned).
 
   introspect  the injected thought (paper §3.1, Fig 7; ref/.../verbal-introspection.json).  The
               paper's prompt and prefill, ending at an open quote.  A concept's J-lens vector --
@@ -50,22 +50,17 @@ instruction-tuned model.
               same passage after the next-word question (q1) or the property question (q2); the
               number of passage positions with an expected label in the band J-lens top 10.
 
-Models.  `--model gpt2` is GPT-2 small with the released lens (band 7-9), in base-model prompt
-frames: the paper's prompts have no base-model form, so each test is run in several plain-text
-frames, all reported.  `--model qwen` (the default) is Qwen3.5-0.8B (instruction-tuned) with
-Neuronpedia's J-lens, fit with Anthropic's code on WikiText-103; band 15-22 (override with CBAND),
-chat template with thinking off, as the paper runs Claude.  MODEL / LENS override the checkpoint.
+Models.  `--model gpt2` (the default) is GPT-2 small with the released lens (band 7-9), with the
+paper's prompts as plain text (the injected thought in several plain-text frames, all reported).
+`--model gemma-270m`, `gemma-270m-it`, `gemma-1b`, `gemma-1b-it` are Gemma 3 with Neuronpedia's
+J-lenses, fit with Anthropic's code on WikiText-103 (see `Gemma`).
 
 Writes results/control/{model}/{experiment}[_{variant}].json.
-Run:  python -m jl.control --model qwen introspect modulation report stats clauses
-      python -m jl.control --model gpt2 introspect modulation
-      NCARRIERS=20 python -m jl.control --model qwen modulation_grid modulation_readout modulation_copy
+Run:  python -m jl.control --model gpt2 introspect modulation
       NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid modulation_readout modulation_copy
-        (the paper's prompt: frame `paper` for Qwen, `human` for GPT-2; `--frames` picks others,
-        and FAMILIES=topic or FAMILIES=math runs one task family)
-      NCARRIERS=3 CBAND=9-22 python -m jl.control --model qwen --frames after modulation
-        (band check: rows keep each layer's best rank in `layer_best`, so any sub-band's hit
-        rate can be read off this one run)
+      NCARRIERS=20 python -m jl.control --model gemma-1b-it modulation_grid modulation_copy clauses
+        (the paper's prompt: frame `human` (plain text) for GPT-2, `paper` (chat) and `human` for
+        Gemma; `--frames` picks one, and FAMILIES=topic or FAMILIES=math runs one task family)
 """
 from __future__ import annotations
 
@@ -95,20 +90,8 @@ PHRASINGS = {g: [p["text"] for p in DM["phrasings"] if p["group"] == g] for g in
 
 # =============================================================================== models
 class Instruct:
-    """An instruction-tuned HF model with its Neuronpedia J-lens, behind the jl.Lensed interface."""
+    """An HF model with its Neuronpedia J-lens, behind the jl.Lensed interface (see `Gemma`)."""
     default_frames = ["paper"]                            # the modulation frames run by default
-
-    def __init__(self):
-        self.name = "qwen"
-        self.model_id = os.environ.get("MODEL", "Qwen/Qwen3.5-0.8B")
-        slug = self.model_id.split("/")[-1]
-        self._load(os.environ.get("LENS", f"{slug.lower()}/jlens/Salesforce-wikitext/{slug}_jacobian_lens.pt"))
-        band = os.environ.get("CBAND", "15-22")
-        lo, hi = (int(x) for x in band.split("-"))
-        self.band = list(range(lo, hi + 1))
-        if band != "15-22":                               # other bands are elicitation variants
-            self.name = f"qwen_band{band}"
-        self.offset = 0                                   # no BOS is prepended
 
     def _load(self, lens_file):
         """self.model_id (fp32) and its Neuronpedia lens `lens_file`."""
@@ -124,14 +107,6 @@ class Instruct:
         self.J = {L: lens.jacobians[L].float().to(self.device) for L in lens.source_layers}
         self.U = self.m._lm_head.weight.detach().float()
         self.ubar = self.U.mean(0)
-
-    def chat(self, turns, prefill=""):
-        msgs = [{"role": r, "content": t} for r, t in turns]
-        return self.tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True,
-                                            enable_thinking=False) + prefill
-
-    def ids(self, text):
-        return torch.tensor([self.tok(text, add_special_tokens=False).input_ids], device=self.device)
 
     def span(self, text, sub, start_at=0):
         return token_span(self, text, sub, start_at)
@@ -263,7 +238,7 @@ class GPT2:
 
 
 def load(name):
-    return GPT2() if name == "gpt2" else Gemma(name) if name in GEMMA else Instruct()
+    return GPT2() if name == "gpt2" else Gemma(name)
 
 
 def _save(A, name, obj):
@@ -373,7 +348,7 @@ def forms(A, word):
 
 
 # =============================================================================== injected thought
-# Prompt frames.  `qwen`: the paper's turns and prefill in the model's chat template.  GPT-2 has no
+# Prompt frames.  Gemma: the paper's turns and prefill in the model's chat format.  GPT-2 has no
 # chat format, so the same content is given as plain text in three frames; the question is the
 # last user line, and the prefill ends at the open quote as in the paper.
 INTRO = [t["content"].strip() for t in VI["intro_prompt"] if t["content"].strip()]   # user, assistant, user
@@ -432,7 +407,7 @@ def introspect(A, tokforms=("surface", "space"), prefill="default", strengths=ST
         toks = [A.dec(int(t)) for t in ids[0]]
         clean = A.residuals(ids, A.band)
         # the layer's mean residual norm on this prompt, leaving out position 0 (the attention
-        # sink: <|endoftext|> in GPT-2, <|im_start|> in Qwen, whose norm is many times the rest)
+        # sink: <|endoftext|> in GPT-2, <bos> in Gemma, whose norm is many times the rest)
         norms = {L: float(clean[L][1:].norm(dim=-1).mean()) for L in A.band}
         norm0 = {L: float(clean[L][0].norm()) for L in A.band}
         for vec, tokform in [(v, f) for f in tokforms for v in vectors]:
@@ -570,23 +545,18 @@ def summarize_privilege(res):
 # on the paper's page; the released protocol has no template):
 #     Human: Write "{carrier}" {instruction} Don't write anything else.
 #     Assistant: {carrier}
-# `qwen`: "paper" is that user turn in the chat template, with the carrier teacher-forced as the
-# reply.  "after" and "before" are the two wordings run before the template was found (the
-# instruction after or before 'Write the following sentence: "{carrier}"').  "human" is the paper's
-# prompt as plain text (GPT-2's only frame; also run on the Gemma models).  In every frame the lens is
+# "paper" is that user turn in the chat format, with the carrier teacher-forced as the reply.
+# "human" is the paper's prompt as plain text (GPT-2's only frame; also run on the Gemma models).  In every frame the lens is
 # read over the copied carrier only.
 PAPER_TAIL = " Don't write anything else."
-CHAT_FRAMES = ("paper", "after", "before")              # the others are plain text
+CHAT_FRAMES = ("paper",)                                # the other, "human", is plain text
 
 
 def mod_text(A, frame, carrier, instr):
     """(text, start char of the scored carrier)."""
     i = f" {instr}" if instr else ""                      # the instruction, if any, with a leading space
     if frame in CHAT_FRAMES:
-        user = {"paper": f'Write "{carrier}"{i}{PAPER_TAIL}',
-                "after": f'Write the following sentence: "{carrier}"{i}',
-                "before": (f"{instr} " if instr else "") + f'Write the following sentence: "{carrier}"'}[frame]
-        text = A.chat([("user", user)], prefill=carrier)
+        text = A.chat([("user", f'Write "{carrier}"{i}{PAPER_TAIL}')], prefill=carrier)
         return text, text.rindex(carrier)
     assert frame == "human", frame
     pre = f'\n\nHuman: Write "{carrier}"{i}{PAPER_TAIL}\n\nAssistant: '
@@ -594,7 +564,7 @@ def mod_text(A, frame, carrier, instr):
 
 
 def mod_frames(A):
-    return ["after", "before"] if A.name != "gpt2" else ["human"]
+    return A.default_frames
 
 
 def targets(A):
@@ -885,7 +855,7 @@ def arithmetic(A):
     """Capability check for the math family, GPT-2: can it do the paper's 24 problems as plain
     text, with nothing before the problem, after eight worked examples, or as questions and
     answers?  The rank of the answer (digit or number word) as the next token, and the top token."""
-    assert A.name == "gpt2" or isinstance(A, Gemma), "plain text: GPT-2 or Gemma (Qwen's check is in `clauses`)"
+    assert A.name == "gpt2" or isinstance(A, Gemma), "plain text: GPT-2 or Gemma"
     words = {"2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine"}
     rows = []
     for frame, f in ARITH_FRAMES.items():
@@ -1073,7 +1043,7 @@ def stats(A):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="qwen", choices=["qwen", "gpt2", *GEMMA])
+    ap.add_argument("--model", default="gpt2", choices=["gpt2", *GEMMA])
     ap.add_argument("--frames", default=None, help="comma-separated modulation frames")
     ap.add_argument("--tokforms", default="surface,space", help="injected token forms: surface, space")
     ap.add_argument("--prefill", default="default", choices=sorted(PREFILLS), help="introspect: which released prefill")

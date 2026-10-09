@@ -10,7 +10,7 @@
     jl.c4_generalization
     jl.c5_selectivity
     jl.band              the structural statistics behind the choice of band
-    jl.control           the two top-down control tests, as the paper runs them, on GPT-2 and Qwen3.5-0.8B
+    jl.control           the two top-down control tests, as the paper runs them, on GPT-2 and Gemma 3
 """
 from .model import BAND, LENS_PATH, REF_DATA, RESULTS, Lensed, ranks_of, results_dir, scaled_k
 from .hooks import Edit, Session

@@ -2,15 +2,15 @@
 a sentence under an instruction to think about something else.
 
 One figure per example of the paper's Fig. 9 (citrus fruits; evaluating 3^2 - 2).  One panel per
-model: Claude Sonnet 4.5 (the data behind the paper's figure, which has six of its lens layers),
-Qwen3.5-0.8B, and GPT-2 small, all on the paper's prompt.  Columns are the tokens of the copied
+model: Claude Sonnet 4.5 (the data behind the paper's figure, which has six of its lens layers)
+and GPT-2 small, both on the paper's prompt.  Columns are the tokens of the copied
 sentence, rows are layers (the output at the top), and each cell shows the lens's top token there.
 A cell is dark when a tracked word is the top token (the paper's "hit") and light when one is in
 the top 5.  The gray bar marks the band the hit rate is read over.
 
 Reads ref/paper-data/modulation-readout.json and
-results/control/{gpt2,qwen}/modulation_readout_{human,paper}.json
-(`python -m jl.control --model gpt2 modulation_readout`, and the same with `--model qwen`).
+results/control/gpt2/modulation_readout_human.json
+(`python -m jl.control --model gpt2 modulation_readout`).
 Run from the repo root:  python post/figures/dm_readout.py
 """
 import json
@@ -105,8 +105,7 @@ def draw(ax, cols, rows, title):
 for i, (name, instr) in enumerate([("topic", "Concentrate on citrus fruits while you write the sentence."),
                                    ("math", "Try to focus on evaluating 3^2 - 2 while you write the sentence.")]):
     panels = [(*claude_panel(i), "(a) Claude Sonnet 4.5 (the paper's data; six of its lens layers, in percent of depth)")]
-    for label, model, frame, first, band in [("(b) Qwen3.5-0.8B (layers 8 to 22 of 0 to 23)", "qwen", "paper", 8, (15, 22)),
-                                             ("(c) GPT-2 small (layers 0 to 10 of 0 to 11)", "gpt2", "human", 0, (7, 9))]:
+    for label, model, frame, first, band in [("(b) GPT-2 small (layers 0 to 10 of 0 to 11)", "gpt2", "human", 0, (7, 9))]:
         if (ROOT / f"results/control/{model}/modulation_readout_{frame}.json").exists():
             panels.append((*our_panel(model, frame, i, first, band), label))
     heights = [len(rows) + 2.5 for _, rows, _ in panels]

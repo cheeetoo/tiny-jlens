@@ -25,19 +25,17 @@ jl/                     the library
   followups.py          follow-up experiments: protection rule, ignition, lists, neurons,
                         lens variants, band sensitivity, linear check, injected thought, seeds
   control.py            the two tests of top-down control (injected thought, directed modulation) as
-                        the paper runs them, on GPT-2, on Gemma 3 270m and 1b (base and instruct),
-                        and (earlier, no longer in the post) on Qwen3.5-0.8B, each with its Neuronpedia lens; also Qwen's verbal report, layer stats, and the
-                        arithmetic and paired-question parts of directed modulation
-  qwen_control.py       an earlier version of the same checks on Qwen3-1.7B (superseded by control.py)
-  introspect_probs.py   the injected-thought test in probabilities (GPT-2 and Qwen)
+                        the paper runs them, on GPT-2 and on Gemma 3 270m and 1b (base and instruct),
+                        each Gemma model with its Neuronpedia lens; also the arithmetic and
+                        paired-question parts of directed modulation
+  introspect_probs.py   the injected-thought test in probabilities (GPT-2)
 results/<criterion>/    results.json, prompts.json, summary.txt from each criterion's run
 results/followups/      one JSON per follow-up experiment
 results/control/        jl.control's results, one directory per model
 ref/paper-data/         the data behind the paper's interactive figures (Claude's numbers, per trial
                         where released); its README describes each file
 post/                   the post's figures: fig1/ (Figure 1), sketches/ (the structure figures) and
-                        figures/; lesswrong/ (the post's interactive embeds); and DM.md, the directed
-                        modulation write-up (GPT-2 and Gemma 3), whose tables come from post/figures/dm_*.py
+                        figures/; and lesswrong/ (the post's interactive embeds)
 commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
                         (local copies of the paper and commentary texts are gitignored)
 lenses/gpt2-small/      the released lens: fit config and convergence (the .pt is not in git)
@@ -60,21 +58,24 @@ python -m jl.c5_selectivity
 ```
 
 Each writes `results/<criterion>/{results.json, prompts.json, summary.txt}` and prints the
-summary. The follow-ups run with `python -m jl.followups [name ...]` and
-`python -m jl.qwen_control [name ...]`, and `python -m jl.introspect_probs [gpt2|qwen]`. Two secondary analyses can be run with:
+summary. The follow-ups run with `python -m jl.followups [name ...]` and `python -m jl.introspect_probs`.
+Other analyses:
 
 ```
 python -m jl.c3_reasoning swap_ops       # E3 under both swap operations
 python -m jl.c4_generalization gating    # E2 swap rates by gating class
 python -m jl.c5_selectivity language     # the language test only, merged into results.json
-python -m jl.control --model qwen introspect modulation report stats clauses
 python -m jl.control --model gpt2 introspect modulation
-NCARRIERS=20 python -m jl.control --model qwen modulation_grid   # directed modulation on the paper's prompt, every layer kept
-NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # (also modulation_readout, modulation_copy; see post/DM.md)
+NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # directed modulation on the paper's prompt, every layer kept
+                                                                # (also modulation_readout, modulation_copy)
+NCARRIERS=20 python -m jl.control --model gemma-1b-it modulation_grid modulation_copy clauses
+                                                                # likewise gemma-270m, gemma-270m-it, gemma-1b;
+                                                                # FAMILIES=math GRID_TAG=_math for the math family alone,
+                                                                # LENS_FROM=<model> / LENS_CENTER=1 for the lens controls
 python -m jl.band [stats|cka|fig28|mlp_gain]   # the band statistics (--model gemma-1b etc. for Gemma)
 ```
 
-The Gemma runs are listed at the end of `post/DM.md`. On a GPU, `GRID_BATCH=32` runs `modulation_grid` in batches (the default, 1, is
+On a GPU, `GRID_BATCH=32` runs `modulation_grid` in batches (the default, 1, is
 the per-trial loop the existing results were made with; the two agree to within a few places of rank). The figures are built from the
 repository root with `python post/fig1/build.py` (needs headless Chromium) and
 `PYTHONPATH=. python post/figures/<name>.py`.
@@ -85,4 +86,4 @@ lens file itself is a large binary and is not in git: download the authors' rele
 lens (Neuronpedia, `neuronpedia/jacobian-lens`) to
 `lenses/_hf/gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt`, or point `JLENS_LENS` at
 it. `DEVICE` overrides the device. Otherwise `jl.model` and `jl.control` use CUDA when there is one
-(`jl.control` then MPS, then the CPU), and `jl.qwen_control` uses MPS or else the CPU.
+(`jl.control` then MPS, then the CPU).

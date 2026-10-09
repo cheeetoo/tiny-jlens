@@ -14,9 +14,43 @@ import numpy as np
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import dm_data as D  # noqa: E402
-from dm_tables import ALL, cond_mask, mean_over_phrasings, paired, pct  # noqa: E402
+
+sys.path.insert(0, str(D.ROOT))
+from jl.stats import sign_test  # noqa: E402
 
 FRAMES = {"human": "plain text", "paper": "chat"}
+ALL = ["baseline"] + D.CONDS
+
+
+def pct(x, digits=1):
+    return "–" if x != x else f"{100 * x:.{digits}f}%"
+
+
+def cond_mask(g, fam, cond):
+    return (g.family == fam) & (g.cond == cond)
+
+
+def mean_over_phrasings(g, fam, cond, values):
+    m = cond_mask(g, fam, cond)
+    return float(np.mean([values[m & (g.phrasing == p)].mean() for p in dict.fromkeys(g.phrasing[m])]))
+
+
+def paired(g, fam, band="ours"):
+    """Per (target, sentence): the median best rank over a condition's phrasings; the share of pairs
+    in which the first condition ranks the target higher (sign test)."""
+    best = g.best(band)
+    med = {}
+    for t, b in zip(g.trials, best):
+        if t["family"] == fam:
+            med.setdefault((t["x"], t["carrier"], t["cond"]), []).append(b)
+    med = {k: float(np.median(v)) for k, v in med.items()}
+    keys = sorted({(x, c) for x, c, _ in med})
+    out = []
+    for a, b in (("mention", "baseline"), ("focus", "mention"), ("dismissal", "mention"),
+                 ("negated-think", "mention"), ("negated-think", "focus")):
+        frac, _, p = sign_test([(med[(x, c, a)], med[(x, c, b)]) for x, c in keys])
+        out.append(f"{frac:.0%} (p = {p:.0e})")
+    return out
 
 
 def runs(size, tag=""):
@@ -31,7 +65,7 @@ def runs(size, tag=""):
 
 
 def controls(size):
-    """post/DM.md section 3: each model in its main frame, read as the paper reads it, with the other
+    """Each model in its main frame, read as the paper reads it, with the other
     model's lens (LENS_FROM), and centered (LENS_CENTER=1), for whichever of these runs exist."""
     print("\n### Controls (categories, our band): the other model's lens, and the centered readout\n")
     print("| model, prompt | readout | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " | think about vs. mention (pairs) "

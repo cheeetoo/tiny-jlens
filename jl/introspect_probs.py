@@ -1,19 +1,17 @@
 """The injected-thought test (paper §3.1, Fig 7) in probabilities rather than top-10 ranks.
 
-On the prefilled transcript (as in `followups introspect` / `qwen_control introspect`), with a
+On the prefilled transcript (as in `followups introspect`), with a
 concept injected over the question, record the concept's probability as the next token (both
 surface forms summed), whether it is the top-1 prediction, and the entropy, at every position of
 the model's line.  This checks that "in the top 10 earlier in the line" means the model would
 actually say the word there, not that it sits in a low-entropy tail.
 
-Run:  python -m jl.introspect_probs gpt2        (CPU)
-      python -m jl.introspect_probs qwen        (MPS if available)
-Writes results/introspect_probs/{model}.json.
+Run:  python -m jl.introspect_probs
+Writes results/introspect_probs/gpt2.json.
 """
 from __future__ import annotations
 
 import json
-import sys
 
 import torch
 
@@ -25,25 +23,17 @@ def unit(x):
 
 
 class Adapter:
-    """Uniform interface over GPT-2 (jl.Lensed) and Qwen (jl.qwen_control.QLensed)."""
+    """GPT-2 (jl.Lensed) with the interface the test uses."""
 
-    def __init__(self, which):
+    def __init__(self, which="gpt2"):
         self.which = which
-        if which == "gpt2":
-            self.m = jl.Lensed()
-            self.band = jl.BAND
-            self.strengths = (0.0, 0.05, 0.1, 0.15, 0.25, 0.5, 1.0)
-        else:
-            from jl.qwen_control import BAND, QLensed
-            self.m = QLensed()
-            self.band = BAND
-            self.strengths = (0.0, 0.15, 0.25, 0.5)
+        self.m = jl.Lensed()
+        self.band = jl.BAND
+        self.strengths = (0.0, 0.05, 0.1, 0.15, 0.25, 0.5, 1.0)
         self.tok = self.m.tok
 
     def ids(self, text):
-        if self.which == "gpt2":
-            return torch.tensor([[self.m.bos] + self.tok(text, add_special_tokens=False).input_ids], device=self.m.device)
-        return self.m.ids(text)
+        return torch.tensor([[self.m.bos] + self.tok(text, add_special_tokens=False).input_ids], device=self.m.device)
 
     def is_single(self, s):
         return self.m.is_single(s)
@@ -62,18 +52,15 @@ class Adapter:
 
     # ---------------------------------------------------------------- prompts
     def report_prompt(self, D):
-        """(text, question).  GPT-2: two-speaker transcript; Qwen: the paper's chat and prefill."""
-        if self.which == "gpt2":
-            from jl.followups import INTRO_A, INTRO_Q
-            return INTRO_Q + INTRO_A, INTRO_Q
-        turns = [(t["role"], t["content"].strip()) for t in D["intro_prompt"] if t["content"].strip()]
-        return self.m.chat(turns, prefill=D["prefills"]["default"].lstrip()), turns[-1][1]
+        """(text, question): the two-speaker transcript."""
+        from jl.followups import INTRO_A, INTRO_Q
+        return INTRO_Q + INTRO_A, INTRO_Q
 
     def span(self, text, sub):
         enc = self.tok(text, add_special_tokens=False, return_offsets_mapping=True)
         a = text.index(sub)
         b = a + len(sub)
-        off = 1 if self.which == "gpt2" else 0          # the prepended <|endoftext|>
+        off = 1                                          # the prepended <|endoftext|>
         return [i + off for i, (s, e) in enumerate(enc.offset_mapping) if s < b and e > a]
 
 
@@ -122,4 +109,4 @@ def main(which):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "gpt2")
+    main("gpt2")

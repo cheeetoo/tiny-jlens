@@ -1,6 +1,6 @@
 """Shared loading and scoring for the directed-modulation figures.
 
-A grid run (`python -m jl.control --model {gpt2,qwen} modulation_grid`) keeps, for every trial, the
+A grid run (`python -m jl.control --model {gpt2,gemma-...} modulation_grid`) keeps, for every trial, the
 best rank of a tracked token at every lens layer and every position of the copied sentence.  The
 paper's score for a trial is a hit: a tracked token at lens rank 1 at any layer of the band and any
 position.  `best` gives the best rank over a set of layers, so a hit at any rank threshold and any
@@ -24,7 +24,6 @@ NO_RANK = 10 ** 6
 # paper's band, 38% to 92% of depth, in each model's layers (layer L of 0..N-1 is at 100 L / (N-1)).
 BANDS = {
     "gpt2": {"ours": (7, 9), "paper": (5, 10), "all": (0, 10)},
-    "qwen": {"ours": (15, 22), "paper": (9, 21), "all": (0, 22)},
     # Gemma 3: `ours` is the band each pair's layer statistics point to (post/figures/band_gemma.py):
     # the middle block of the CKA between layer dictionaries, ending where persistence peaks and the
     # dictionary's dimensionality jumps (the start of the motor layers).  The base and instruction-tuned
@@ -34,9 +33,9 @@ BANDS = {
     "gemma-1b": {"ours": (11, 16), "paper": (10, 23), "all": (0, 24)},
     "gemma-1b-it": {"ours": (11, 16), "paper": (10, 23), "all": (0, 24)},
 }
-MODEL_LABEL = {"gpt2": "GPT-2 small", "qwen": "Qwen3.5-0.8B", "gemma-270m": "Gemma-3-270m",
+MODEL_LABEL = {"gpt2": "GPT-2 small", "gemma-270m": "Gemma-3-270m",
                "gemma-270m-it": "Gemma-3-270m-it", "gemma-1b": "Gemma-3-1b", "gemma-1b-it": "Gemma-3-1b-it"}
-MAIN_FRAME = {"gpt2": "human", "qwen": "paper", "gemma-270m": "human", "gemma-270m-it": "paper",
+MAIN_FRAME = {"gpt2": "human", "gemma-270m": "human", "gemma-270m-it": "paper",
               "gemma-1b": "human", "gemma-1b-it": "paper"}
 
 

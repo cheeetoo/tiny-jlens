@@ -1,4 +1,4 @@
-"""Directed modulation in Gemma 3, base against instruction-tuned (post/DM.md).
+"""Directed modulation in Gemma 3, base against instruction-tuned.
 
 dm/dm_gemma.png   One panel per model size and prompt frame.  In each, the base model and the
                   instruction-tuned one on the same tokens: bars for the mean over each condition's
