@@ -63,6 +63,8 @@ Other analyses:
 
 ```
 python -m jl.c3_reasoning swap_ops       # E3 under both swap operations
+python -m jl.c3_reasoning probe_cues     # E5's probes: GPT-2's next token at each probe prompt, and
+                                         # the J-lens vectors in each probe's J-space part
 python -m jl.c4_generalization gating    # E2 swap rates by gating class
 python -m jl.c5_selectivity language     # the language test only, merged into results.json
 python -m jl.control --model gpt2 introspect modulation

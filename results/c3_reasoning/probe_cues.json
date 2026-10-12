@@ -1,0 +1,7428 @@
+{
+ "countries": [
+  "Argentina",
+  "China",
+  "Cuba",
+  "Denmark",
+  "Finland",
+  "France",
+  "Germany",
+  "Greece",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Italy",
+  "Korea",
+  "Netherlands",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Romania",
+  "Russia",
+  "Serbia",
+  "Spain",
+  "Sweden",
+  "Thailand",
+  "Turkey",
+  "Ukraine",
+  "Vietnam"
+ ],
+ "cues": [
+  {
+   "country": "Argentina",
+   "cue": 0,
+   "text": "People in the country whose capital is Buenos mostly speak the language of",
+   "top5": [
+    " the",
+    " their",
+    " Argentina",
+    " Buenos",
+    " \""
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 4,
+    "language": 11
+   }
+  },
+  {
+   "country": "Argentina",
+   "cue": 1,
+   "text": "A traveler flying into Buenos has landed on the continent of",
+   "top5": [
+    " Africa",
+    " South",
+    " the",
+    " North",
+    " Mexico"
+   ],
+   "rank": {
+    "country": 9,
+    "capital": 56,
+    "language": 560
+   }
+  },
+  {
+   "country": "Argentina",
+   "cue": 2,
+   "text": "The homeland of the Spanish language lies on the continent of",
+   "top5": [
+    " the",
+    " Spain",
+    " Catalonia",
+    " Africa",
+    " Central"
+   ],
+   "rank": {
+    "country": 12,
+    "capital": 256,
+    "language": 132
+   }
+  },
+  {
+   "country": "Argentina",
+   "cue": 3,
+   "text": "Newspapers printed in Buenos are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Latin",
+    " Argentina",
+    " their"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 11,
+    "language": 10
+   }
+  },
+  {
+   "country": "Argentina",
+   "cue": 4,
+   "text": "The country whose largest city is Buenos is located on the continent of",
+   "top5": [
+    " Africa",
+    " South",
+    " the",
+    " Argentina",
+    " Mexico"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 49,
+    "language": 484
+   }
+  },
+  {
+   "country": "Argentina",
+   "cue": 5,
+   "text": "Someone who grew up speaking Spanish was most likely born in the city of",
+   "top5": [
+    " Valencia",
+    " San",
+    " Santiago",
+    " Madrid",
+    " Barcelona"
+   ],
+   "rank": {
+    "country": 592,
+    "capital": 20,
+    "language": 296
+   }
+  },
+  {
+   "country": "China",
+   "cue": 0,
+   "text": "People in the country whose capital is Beijing mostly speak the language of",
+   "top5": [
+    " the",
+    " China",
+    " Chinese",
+    " Beijing",
+    " \""
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 4,
+    "language": 3
+   }
+  },
+  {
+   "country": "China",
+   "cue": 1,
+   "text": "A traveler flying into Beijing has landed on the continent of",
+   "top5": [
+    " China",
+    " Africa",
+    " the",
+    " Asia",
+    " South"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 175,
+    "language": 151
+   }
+  },
+  {
+   "country": "China",
+   "cue": 2,
+   "text": "The homeland of the Chinese language lies on the continent of",
+   "top5": [
+    " the",
+    " China",
+    " Tibet",
+    " North",
+    " Xin"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 210,
+    "language": 143
+   }
+  },
+  {
+   "country": "China",
+   "cue": 3,
+   "text": "Newspapers printed in Beijing are usually written in the language of",
+   "top5": [
+    " the",
+    " China",
+    " Chinese",
+    " a",
+    " \""
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 6,
+    "language": 3
+   }
+  },
+  {
+   "country": "China",
+   "cue": 4,
+   "text": "The country whose largest city is Beijing is located on the continent of",
+   "top5": [
+    " Africa",
+    " South",
+    " the",
+    " Asia",
+    " China"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 451,
+    "language": 300
+   }
+  },
+  {
+   "country": "China",
+   "cue": 5,
+   "text": "Someone who grew up speaking Chinese was most likely born in the city of",
+   "top5": [
+    " Guang",
+    " Cheng",
+    " Shen",
+    " Qing",
+    " Chong"
+   ],
+   "rank": {
+    "country": 97,
+    "capital": 6,
+    "language": 338
+   }
+  },
+  {
+   "country": "Cuba",
+   "cue": 0,
+   "text": "People in the country whose capital is Havana mostly speak the language of",
+   "top5": [
+    " the",
+    " Cuba",
+    " their",
+    " Latin",
+    " Cuban"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 11,
+    "language": 13
+   }
+  },
+  {
+   "country": "Cuba",
+   "cue": 1,
+   "text": "A traveler flying into Havana has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Cuba",
+    " the",
+    " South",
+    " Europe"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 118,
+    "language": 387
+   }
+  },
+  {
+   "country": "Cuba",
+   "cue": 2,
+   "text": "The homeland of the Spanish language lies on the continent of",
+   "top5": [
+    " the",
+    " Spain",
+    " Catalonia",
+    " Africa",
+    " Central"
+   ],
+   "rank": {
+    "country": 36,
+    "capital": 2424,
+    "language": 132
+   }
+  },
+  {
+   "country": "Cuba",
+   "cue": 3,
+   "text": "Newspapers printed in Havana are usually written in the language of",
+   "top5": [
+    " the",
+    " Latin",
+    " a",
+    " Cuba",
+    " Fidel"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 10,
+    "language": 12
+   }
+  },
+  {
+   "country": "Cuba",
+   "cue": 4,
+   "text": "The country whose largest city is Havana is located on the continent of",
+   "top5": [
+    " Africa",
+    " Cuba",
+    " the",
+    " South",
+    " Latin"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 377,
+    "language": 447
+   }
+  },
+  {
+   "country": "Cuba",
+   "cue": 5,
+   "text": "Someone who grew up speaking Spanish was most likely born in the city of",
+   "top5": [
+    " Valencia",
+    " San",
+    " Santiago",
+    " Madrid",
+    " Barcelona"
+   ],
+   "rank": {
+    "country": 891,
+    "capital": 143,
+    "language": 296
+   }
+  },
+  {
+   "country": "Denmark",
+   "cue": 0,
+   "text": "People in the country whose capital is Copenhagen mostly speak the language of",
+   "top5": [
+    " the",
+    " Denmark",
+    " Danish",
+    " their",
+    " \""
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 6,
+    "language": 3
+   }
+  },
+  {
+   "country": "Denmark",
+   "cue": 1,
+   "text": "A traveler flying into Copenhagen has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " North",
+    " Antarctica"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 104,
+    "language": 855
+   }
+  },
+  {
+   "country": "Denmark",
+   "cue": 2,
+   "text": "The homeland of the Danish language lies on the continent of",
+   "top5": [
+    " the",
+    " Denmark",
+    " Norway",
+    " North",
+    " Scandinav"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 138,
+    "language": 127
+   }
+  },
+  {
+   "country": "Denmark",
+   "cue": 3,
+   "text": "Newspapers printed in Copenhagen are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Denmark",
+    " \"",
+    " Danish"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 8,
+    "language": 5
+   }
+  },
+  {
+   "country": "Denmark",
+   "cue": 4,
+   "text": "The country whose largest city is Copenhagen is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 179,
+    "language": 629
+   }
+  },
+  {
+   "country": "Denmark",
+   "cue": 5,
+   "text": "Someone who grew up speaking Danish was most likely born in the city of",
+   "top5": [
+    " Copenhagen",
+    " K",
+    " V",
+    " Got",
+    " L"
+   ],
+   "rank": {
+    "country": 35,
+    "capital": 1,
+    "language": 273
+   }
+  },
+  {
+   "country": "Finland",
+   "cue": 0,
+   "text": "People in the country whose capital is Helsinki mostly speak the language of",
+   "top5": [
+    " the",
+    " Finland",
+    " Finnish",
+    " Helsinki",
+    " their"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 4,
+    "language": 3
+   }
+  },
+  {
+   "country": "Finland",
+   "cue": 1,
+   "text": "A traveler flying into Helsinki has landed on the continent of",
+   "top5": [
+    " Europe",
+    " the",
+    " Antarctica",
+    " Africa",
+    " North"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 84,
+    "language": 286
+   }
+  },
+  {
+   "country": "Finland",
+   "cue": 2,
+   "text": "The homeland of the Finnish language lies on the continent of",
+   "top5": [
+    " Finland",
+    " the",
+    " North",
+    " O",
+    " Finn"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 154,
+    "language": 46
+   }
+  },
+  {
+   "country": "Finland",
+   "cue": 3,
+   "text": "Newspapers printed in Helsinki are usually written in the language of",
+   "top5": [
+    " the",
+    " Finnish",
+    " Finland",
+    " a",
+    " Helsinki"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 5,
+    "language": 2
+   }
+  },
+  {
+   "country": "Finland",
+   "cue": 4,
+   "text": "The country whose largest city is Helsinki is located on the continent of",
+   "top5": [
+    " the",
+    " Finland",
+    " Europe",
+    " Africa",
+    " North"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 167,
+    "language": 162
+   }
+  },
+  {
+   "country": "Finland",
+   "cue": 5,
+   "text": "Someone who grew up speaking Finnish was most likely born in the city of",
+   "top5": [
+    " Helsinki",
+    " K",
+    " T",
+    " L",
+    " V"
+   ],
+   "rank": {
+    "country": 29,
+    "capital": 1,
+    "language": 197
+   }
+  },
+  {
+   "country": "France",
+   "cue": 0,
+   "text": "People in the country whose capital is Paris mostly speak the language of",
+   "top5": [
+    " the",
+    " French",
+    " France",
+    " \"",
+    " their"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 6,
+    "language": 2
+   }
+  },
+  {
+   "country": "France",
+   "cue": 1,
+   "text": "A traveler flying into Paris has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " France",
+    " the",
+    " North"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 15,
+    "language": 77
+   }
+  },
+  {
+   "country": "France",
+   "cue": 2,
+   "text": "The homeland of the French language lies on the continent of",
+   "top5": [
+    " France",
+    " the",
+    " Europe",
+    " Africa",
+    " North"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 58,
+    "language": 36
+   }
+  },
+  {
+   "country": "France",
+   "cue": 3,
+   "text": "Newspapers printed in Paris are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " French",
+    " \"",
+    " France"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 7,
+    "language": 3
+   }
+  },
+  {
+   "country": "France",
+   "cue": 4,
+   "text": "The country whose largest city is Paris is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 199,
+    "language": 161
+   }
+  },
+  {
+   "country": "France",
+   "cue": 5,
+   "text": "Someone who grew up speaking French was most likely born in the city of",
+   "top5": [
+    " Paris",
+    " Marse",
+    " Lyon",
+    " Montreal",
+    " L"
+   ],
+   "rank": {
+    "country": 75,
+    "capital": 1,
+    "language": 193
+   }
+  },
+  {
+   "country": "Germany",
+   "cue": 0,
+   "text": "People in the country whose capital is Berlin mostly speak the language of",
+   "top5": [
+    " the",
+    " Germany",
+    " German",
+    " their",
+    " \""
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 6,
+    "language": 3
+   }
+  },
+  {
+   "country": "Germany",
+   "cue": 1,
+   "text": "A traveler flying into Berlin has landed on the continent of",
+   "top5": [
+    " Europe",
+    " Africa",
+    " the",
+    " North",
+    " Antarctica"
+   ],
+   "rank": {
+    "country": 11,
+    "capital": 90,
+    "language": 384
+   }
+  },
+  {
+   "country": "Germany",
+   "cue": 2,
+   "text": "The homeland of the German language lies on the continent of",
+   "top5": [
+    " the",
+    " Europe",
+    " Germany",
+    " North",
+    " Africa"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 101,
+    "language": 68
+   }
+  },
+  {
+   "country": "Germany",
+   "cue": 3,
+   "text": "Newspapers printed in Berlin are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " German",
+    " \"",
+    " Germany"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 14,
+    "language": 3
+   }
+  },
+  {
+   "country": "Germany",
+   "cue": 4,
+   "text": "The country whose largest city is Berlin is located on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 9,
+    "capital": 279,
+    "language": 307
+   }
+  },
+  {
+   "country": "Germany",
+   "cue": 5,
+   "text": "Someone who grew up speaking German was most likely born in the city of",
+   "top5": [
+    " Dresden",
+    " Hamburg",
+    " Berlin",
+    " Cologne",
+    " Munich"
+   ],
+   "rank": {
+    "country": 121,
+    "capital": 3,
+    "language": 244
+   }
+  },
+  {
+   "country": "Greece",
+   "cue": 0,
+   "text": "People in the country whose capital is Athens mostly speak the language of",
+   "top5": [
+    " the",
+    " Athens",
+    " Greece",
+    " Greek",
+    " their"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 2,
+    "language": 4
+   }
+  },
+  {
+   "country": "Greece",
+   "cue": 1,
+   "text": "A traveler flying into Athens has landed on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " Greece",
+    " Asia"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 57,
+    "language": 155
+   }
+  },
+  {
+   "country": "Greece",
+   "cue": 2,
+   "text": "The homeland of the Greek language lies on the continent of",
+   "top5": [
+    " the",
+    " Greece",
+    " Cyprus",
+    " Cy",
+    " Europe"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 48,
+    "language": 112
+   }
+  },
+  {
+   "country": "Greece",
+   "cue": 3,
+   "text": "Newspapers printed in Athens are usually written in the language of",
+   "top5": [
+    " the",
+    " Athens",
+    " a",
+    " Greek",
+    " Greece"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 2,
+    "language": 4
+   }
+  },
+  {
+   "country": "Greece",
+   "cue": 4,
+   "text": "The country whose largest city is Athens is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 130,
+    "language": 143
+   }
+  },
+  {
+   "country": "Greece",
+   "cue": 5,
+   "text": "Someone who grew up speaking Greek was most likely born in the city of",
+   "top5": [
+    " Athens",
+    " T",
+    " Ph",
+    " B",
+    " P"
+   ],
+   "rank": {
+    "country": 29,
+    "capital": 1,
+    "language": 212
+   }
+  },
+  {
+   "country": "Hungary",
+   "cue": 0,
+   "text": "People in the country whose capital is Budapest mostly speak the language of",
+   "top5": [
+    " the",
+    " Hungarian",
+    " their",
+    " Hungary",
+    " Budapest"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 5,
+    "language": 2
+   }
+  },
+  {
+   "country": "Hungary",
+   "cue": 1,
+   "text": "A traveler flying into Budapest has landed on the continent of",
+   "top5": [
+    " Europe",
+    " Africa",
+    " the",
+    " North",
+    " Central"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 225,
+    "language": 544
+   }
+  },
+  {
+   "country": "Hungary",
+   "cue": 2,
+   "text": "The homeland of the Hungarian language lies on the continent of",
+   "top5": [
+    " the",
+    " Europe",
+    " Hungary",
+    " Central",
+    " Poland"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 181,
+    "language": 147
+   }
+  },
+  {
+   "country": "Hungary",
+   "cue": 3,
+   "text": "Newspapers printed in Budapest are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Hungarian",
+    " their",
+    " Hungary"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 10,
+    "language": 3
+   }
+  },
+  {
+   "country": "Hungary",
+   "cue": 4,
+   "text": "The country whose largest city is Budapest is located on the continent of",
+   "top5": [
+    " Europe",
+    " Africa",
+    " the",
+    " Central",
+    " North"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 335,
+    "language": 356
+   }
+  },
+  {
+   "country": "Hungary",
+   "cue": 5,
+   "text": "Someone who grew up speaking Hungarian was most likely born in the city of",
+   "top5": [
+    " Budapest",
+    " Sz",
+    " L",
+    " H",
+    " K"
+   ],
+   "rank": {
+    "country": 23,
+    "capital": 1,
+    "language": 98
+   }
+  },
+  {
+   "country": "Iceland",
+   "cue": 0,
+   "text": "People in the country whose capital is Reykjavik mostly speak the language of",
+   "top5": [
+    " the",
+    " Iceland",
+    " Rey",
+    " their",
+    " Icelandic"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 1000000000,
+    "language": 5
+   }
+  },
+  {
+   "country": "Iceland",
+   "cue": 1,
+   "text": "A traveler flying into Reykjavik has landed on the continent of",
+   "top5": [
+    " Iceland",
+    " the",
+    " North",
+    " Europe",
+    " Antarctica"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 1000000000,
+    "language": 254
+   }
+  },
+  {
+   "country": "Iceland",
+   "cue": 2,
+   "text": "The homeland of the Icelandic language lies on the continent of",
+   "top5": [
+    " Iceland",
+    " the",
+    " North",
+    " Norway",
+    " Greenland"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 1000000000,
+    "language": 85
+   }
+  },
+  {
+   "country": "Iceland",
+   "cue": 3,
+   "text": "Newspapers printed in Reykjavik are usually written in the language of",
+   "top5": [
+    " the",
+    " Iceland",
+    " Rey",
+    " a",
+    " Icelandic"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 1000000000,
+    "language": 5
+   }
+  },
+  {
+   "country": "Iceland",
+   "cue": 4,
+   "text": "The country whose largest city is Reykjavik is located on the continent of",
+   "top5": [
+    " Iceland",
+    " the",
+    " North",
+    " Europe",
+    " Norway"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 1000000000,
+    "language": 82
+   }
+  },
+  {
+   "country": "Iceland",
+   "cue": 5,
+   "text": "Someone who grew up speaking Icelandic was most likely born in the city of",
+   "top5": [
+    " Rey",
+    " \ufffd",
+    " K",
+    " L",
+    " Got"
+   ],
+   "rank": {
+    "country": 16,
+    "capital": 1000000000,
+    "language": 342
+   }
+  },
+  {
+   "country": "India",
+   "cue": 0,
+   "text": "People in the country whose capital is Delhi mostly speak the language of",
+   "top5": [
+    " the",
+    " Hindi",
+    " India",
+    " their",
+    " Delhi"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 5,
+    "language": 2
+   }
+  },
+  {
+   "country": "India",
+   "cue": 1,
+   "text": "A traveler flying into Delhi has landed on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " South",
+    " Antarctica",
+    " India"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 243,
+    "language": 3781
+   }
+  },
+  {
+   "country": "India",
+   "cue": 2,
+   "text": "The homeland of the Hindi language lies on the continent of",
+   "top5": [
+    " India",
+    " the",
+    " South",
+    " Sri",
+    " North"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 203,
+    "language": 154
+   }
+  },
+  {
+   "country": "India",
+   "cue": 3,
+   "text": "Newspapers printed in Delhi are usually written in the language of",
+   "top5": [
+    " the",
+    " Hindu",
+    " a",
+    " Hindi",
+    " India"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 14,
+    "language": 4
+   }
+  },
+  {
+   "country": "India",
+   "cue": 4,
+   "text": "The country whose largest city is Delhi is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " South",
+    " Asia",
+    " India"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 466,
+    "language": 2528
+   }
+  },
+  {
+   "country": "India",
+   "cue": 5,
+   "text": "Someone who grew up speaking Hindi was most likely born in the city of",
+   "top5": [
+    " K",
+    " Hyder",
+    " Mumbai",
+    " Bangalore",
+    " G"
+   ],
+   "rank": {
+    "country": 217,
+    "capital": 7,
+    "language": 226
+   }
+  },
+  {
+   "country": "Indonesia",
+   "cue": 0,
+   "text": "People in the country whose capital is Jakarta mostly speak the language of",
+   "top5": [
+    " the",
+    " Islam",
+    " Indonesia",
+    " their",
+    " J"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 6,
+    "language": 12
+   }
+  },
+  {
+   "country": "Indonesia",
+   "cue": 1,
+   "text": "A traveler flying into Jakarta has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Indonesia",
+    " South",
+    " Asia",
+    " the"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 250,
+    "language": 111
+   }
+  },
+  {
+   "country": "Indonesia",
+   "cue": 2,
+   "text": "The homeland of the Indonesian language lies on the continent of",
+   "top5": [
+    " Indonesia",
+    " the",
+    " Papua",
+    " South",
+    " Southeast"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 296,
+    "language": 32
+   }
+  },
+  {
+   "country": "Indonesia",
+   "cue": 3,
+   "text": "Newspapers printed in Jakarta are usually written in the language of",
+   "top5": [
+    " the",
+    " Islam",
+    " Indonesia",
+    " a",
+    " Jakarta"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 5,
+    "language": 6
+   }
+  },
+  {
+   "country": "Indonesia",
+   "cue": 4,
+   "text": "The country whose largest city is Jakarta is located on the continent of",
+   "top5": [
+    " Africa",
+    " South",
+    " the",
+    " Indonesia",
+    " Southeast"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 454,
+    "language": 115
+   }
+  },
+  {
+   "country": "Indonesia",
+   "cue": 5,
+   "text": "Someone who grew up speaking Indonesian was most likely born in the city of",
+   "top5": [
+    " K",
+    " Jakarta",
+    " B",
+    " J",
+    " Bang"
+   ],
+   "rank": {
+    "country": 176,
+    "capital": 2,
+    "language": 608
+   }
+  },
+  {
+   "country": "Iran",
+   "cue": 0,
+   "text": "People in the country whose capital is Tehran mostly speak the language of",
+   "top5": [
+    " the",
+    " Islam",
+    " Iran",
+    " Islamic",
+    " their"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 13,
+    "language": 11
+   }
+  },
+  {
+   "country": "Iran",
+   "cue": 1,
+   "text": "A traveler flying into Tehran has landed on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 8,
+    "capital": 167,
+    "language": 686
+   }
+  },
+  {
+   "country": "Iran",
+   "cue": 2,
+   "text": "The homeland of the Persian language lies on the continent of",
+   "top5": [
+    " the",
+    " Persia",
+    " Iran",
+    " Iraq",
+    " Asia"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 504,
+    "language": 16
+   }
+  },
+  {
+   "country": "Iran",
+   "cue": 3,
+   "text": "Newspapers printed in Tehran are usually written in the language of",
+   "top5": [
+    " the",
+    " Islamic",
+    " Islam",
+    " a",
+    " Iran"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 16,
+    "language": 12
+   }
+  },
+  {
+   "country": "Iran",
+   "cue": 4,
+   "text": "The country whose largest city is Tehran is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " North",
+    " South",
+    " Europe"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 394,
+    "language": 409
+   }
+  },
+  {
+   "country": "Iran",
+   "cue": 5,
+   "text": "Someone who grew up speaking Persian was most likely born in the city of",
+   "top5": [
+    " Kh",
+    " Q",
+    " K",
+    " Z",
+    " B"
+   ],
+   "rank": {
+    "country": 46,
+    "capital": 16,
+    "language": 67
+   }
+  },
+  {
+   "country": "Italy",
+   "cue": 0,
+   "text": "People in the country whose capital is Rome mostly speak the language of",
+   "top5": [
+    " the",
+    " Rome",
+    " their",
+    " a",
+    " Roman"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 2,
+    "language": 11
+   }
+  },
+  {
+   "country": "Italy",
+   "cue": 1,
+   "text": "A traveler flying into Rome has landed on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " Asia",
+    " Italy"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 10,
+    "language": 604
+   }
+  },
+  {
+   "country": "Italy",
+   "cue": 2,
+   "text": "The homeland of the Italian language lies on the continent of",
+   "top5": [
+    " the",
+    " Sicily",
+    " Italy",
+    " Europe",
+    " Africa"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 38,
+    "language": 116
+   }
+  },
+  {
+   "country": "Italy",
+   "cue": 3,
+   "text": "Newspapers printed in Rome are usually written in the language of",
+   "top5": [
+    " the",
+    " Rome",
+    " a",
+    " Roman",
+    " their"
+   ],
+   "rank": {
+    "country": 15,
+    "capital": 2,
+    "language": 13
+   }
+  },
+  {
+   "country": "Italy",
+   "cue": 4,
+   "text": "The country whose largest city is Rome is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " Asia",
+    " South"
+   ],
+   "rank": {
+    "country": 8,
+    "capital": 76,
+    "language": 649
+   }
+  },
+  {
+   "country": "Italy",
+   "cue": 5,
+   "text": "Someone who grew up speaking Italian was most likely born in the city of",
+   "top5": [
+    " Milan",
+    " Rome",
+    " Naples",
+    " Florence",
+    " L"
+   ],
+   "rank": {
+    "country": 127,
+    "capital": 2,
+    "language": 248
+   }
+  },
+  {
+   "country": "Korea",
+   "cue": 0,
+   "text": "People in the country whose capital is Seoul mostly speak the language of",
+   "top5": [
+    " the",
+    " Korea",
+    " their",
+    " South",
+    " China"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 9,
+    "language": 7
+   }
+  },
+  {
+   "country": "Korea",
+   "cue": 1,
+   "text": "A traveler flying into Seoul has landed on the continent of",
+   "top5": [
+    " South",
+    " Africa",
+    " North",
+    " Antarctica",
+    " the"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 79,
+    "language": 236
+   }
+  },
+  {
+   "country": "Korea",
+   "cue": 2,
+   "text": "The homeland of the Korean language lies on the continent of",
+   "top5": [
+    " South",
+    " North",
+    " the",
+    " Korea",
+    " Asia"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 108,
+    "language": 58
+   }
+  },
+  {
+   "country": "Korea",
+   "cue": 3,
+   "text": "Newspapers printed in Seoul are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Korea",
+    " Korean",
+    " \""
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 13,
+    "language": 4
+   }
+  },
+  {
+   "country": "Korea",
+   "cue": 4,
+   "text": "The country whose largest city is Seoul is located on the continent of",
+   "top5": [
+    " South",
+    " Africa",
+    " North",
+    " the",
+    " Asia"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 216,
+    "language": 185
+   }
+  },
+  {
+   "country": "Korea",
+   "cue": 5,
+   "text": "Someone who grew up speaking Korean was most likely born in the city of",
+   "top5": [
+    " Seoul",
+    " Chong",
+    " Je",
+    " Ch",
+    " K"
+   ],
+   "rank": {
+    "country": 43,
+    "capital": 1,
+    "language": 186
+   }
+  },
+  {
+   "country": "Netherlands",
+   "cue": 0,
+   "text": "People in the country whose capital is Amsterdam mostly speak the language of",
+   "top5": [
+    " the",
+    " Dutch",
+    " their",
+    " Amsterdam",
+    " English"
+   ],
+   "rank": {
+    "country": 124,
+    "capital": 4,
+    "language": 2
+   }
+  },
+  {
+   "country": "Netherlands",
+   "cue": 1,
+   "text": "A traveler flying into Amsterdam has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 645,
+    "capital": 65,
+    "language": 361
+   }
+  },
+  {
+   "country": "Netherlands",
+   "cue": 2,
+   "text": "The homeland of the Dutch language lies on the continent of",
+   "top5": [
+    " the",
+    " Europe",
+    " Africa",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 110,
+    "capital": 68,
+    "language": 46
+   }
+  },
+  {
+   "country": "Netherlands",
+   "cue": 3,
+   "text": "Newspapers printed in Amsterdam are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Dutch",
+    " English",
+    " \""
+   ],
+   "rank": {
+    "country": 364,
+    "capital": 7,
+    "language": 3
+   }
+  },
+  {
+   "country": "Netherlands",
+   "cue": 4,
+   "text": "The country whose largest city is Amsterdam is located on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 246,
+    "capital": 103,
+    "language": 249
+   }
+  },
+  {
+   "country": "Netherlands",
+   "cue": 5,
+   "text": "Someone who grew up speaking Dutch was most likely born in the city of",
+   "top5": [
+    " Amsterdam",
+    " Rot",
+    " K",
+    " Ut",
+    " V"
+   ],
+   "rank": {
+    "country": 401,
+    "capital": 1,
+    "language": 124
+   }
+  },
+  {
+   "country": "Norway",
+   "cue": 0,
+   "text": "People in the country whose capital is Oslo mostly speak the language of",
+   "top5": [
+    " the",
+    " Oslo",
+    " Norway",
+    " their",
+    " \""
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 2,
+    "language": 7
+   }
+  },
+  {
+   "country": "Norway",
+   "cue": 1,
+   "text": "A traveler flying into Oslo has landed on the continent of",
+   "top5": [
+    " Europe",
+    " Africa",
+    " the",
+    " North",
+    " Antarctica"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 108,
+    "language": 432
+   }
+  },
+  {
+   "country": "Norway",
+   "cue": 2,
+   "text": "The homeland of the Norwegian language lies on the continent of",
+   "top5": [
+    " Norway",
+    " the",
+    " North",
+    " Scandinav",
+    " Europe"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 114,
+    "language": 98
+   }
+  },
+  {
+   "country": "Norway",
+   "cue": 3,
+   "text": "Newspapers printed in Oslo are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " \"",
+    " English",
+    " Oslo"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 5,
+    "language": 9
+   }
+  },
+  {
+   "country": "Norway",
+   "cue": 4,
+   "text": "The country whose largest city is Oslo is located on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " North",
+    " Norway"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 205,
+    "language": 335
+   }
+  },
+  {
+   "country": "Norway",
+   "cue": 5,
+   "text": "Someone who grew up speaking Norwegian was most likely born in the city of",
+   "top5": [
+    " Oslo",
+    " V",
+    " K",
+    " Ut",
+    " O"
+   ],
+   "rank": {
+    "country": 44,
+    "capital": 1,
+    "language": 233
+   }
+  },
+  {
+   "country": "Poland",
+   "cue": 0,
+   "text": "People in the country whose capital is Warsaw mostly speak the language of",
+   "top5": [
+    " the",
+    " Poland",
+    " Polish",
+    " their",
+    " \""
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 7,
+    "language": 3
+   }
+  },
+  {
+   "country": "Poland",
+   "cue": 1,
+   "text": "A traveler flying into Warsaw has landed on the continent of",
+   "top5": [
+    " Europe",
+    " Africa",
+    " the",
+    " Poland",
+    " North"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 161,
+    "language": 199
+   }
+  },
+  {
+   "country": "Poland",
+   "cue": 2,
+   "text": "The homeland of the Polish language lies on the continent of",
+   "top5": [
+    " Poland",
+    " the",
+    " Europe",
+    " Central",
+    " North"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 62,
+    "language": 37
+   }
+  },
+  {
+   "country": "Poland",
+   "cue": 3,
+   "text": "Newspapers printed in Warsaw are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Poland",
+    " Polish",
+    " their"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 17,
+    "language": 4
+   }
+  },
+  {
+   "country": "Poland",
+   "cue": 4,
+   "text": "The country whose largest city is Warsaw is located on the continent of",
+   "top5": [
+    " Europe",
+    " the",
+    " Africa",
+    " Poland",
+    " Central"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 143,
+    "language": 111
+   }
+  },
+  {
+   "country": "Poland",
+   "cue": 5,
+   "text": "Someone who grew up speaking Polish was most likely born in the city of",
+   "top5": [
+    " Warsaw",
+    " K",
+    " Lub",
+    " Z",
+    " L"
+   ],
+   "rank": {
+    "country": 50,
+    "capital": 1,
+    "language": 72
+   }
+  },
+  {
+   "country": "Portugal",
+   "cue": 0,
+   "text": "People in the country whose capital is Lisbon mostly speak the language of",
+   "top5": [
+    " the",
+    " Portuguese",
+    " Portugal",
+    " Lisbon",
+    " English"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 4,
+    "language": 2
+   }
+  },
+  {
+   "country": "Portugal",
+   "cue": 1,
+   "text": "A traveler flying into Lisbon has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " Portugal",
+    " South"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 24,
+    "language": 300
+   }
+  },
+  {
+   "country": "Portugal",
+   "cue": 2,
+   "text": "The homeland of the Portuguese language lies on the continent of",
+   "top5": [
+    " the",
+    " Portugal",
+    " Africa",
+    " Brazil",
+    " Central"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 66,
+    "language": 53
+   }
+  },
+  {
+   "country": "Portugal",
+   "cue": 3,
+   "text": "Newspapers printed in Lisbon are usually written in the language of",
+   "top5": [
+    " the",
+    " Portuguese",
+    " a",
+    " Portugal",
+    " English"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 6,
+    "language": 2
+   }
+  },
+  {
+   "country": "Portugal",
+   "cue": 4,
+   "text": "The country whose largest city is Lisbon is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " Portugal",
+    " South"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 30,
+    "language": 186
+   }
+  },
+  {
+   "country": "Portugal",
+   "cue": 5,
+   "text": "Someone who grew up speaking Portuguese was most likely born in the city of",
+   "top5": [
+    " Lisbon",
+    " P",
+    " C",
+    " Port",
+    " B"
+   ],
+   "rank": {
+    "country": 40,
+    "capital": 1,
+    "language": 196
+   }
+  },
+  {
+   "country": "Romania",
+   "cue": 0,
+   "text": "People in the country whose capital is Bucharest mostly speak the language of",
+   "top5": [
+    " the",
+    " Romania",
+    " Romanian",
+    " their",
+    " Russian"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 1000000000,
+    "language": 3
+   }
+  },
+  {
+   "country": "Romania",
+   "cue": 1,
+   "text": "A traveler flying into Bucharest has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " Asia",
+    " North"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 1000000000,
+    "language": 576
+   }
+  },
+  {
+   "country": "Romania",
+   "cue": 2,
+   "text": "The homeland of the Romanian language lies on the continent of",
+   "top5": [
+    " Romania",
+    " the",
+    " Europe",
+    " Central",
+    " Mold"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 1000000000,
+    "language": 100
+   }
+  },
+  {
+   "country": "Romania",
+   "cue": 3,
+   "text": "Newspapers printed in Bucharest are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Romania",
+    " their",
+    " Romanian"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 1000000000,
+    "language": 5
+   }
+  },
+  {
+   "country": "Romania",
+   "cue": 4,
+   "text": "The country whose largest city is Bucharest is located on the continent of",
+   "top5": [
+    " Africa",
+    " Romania",
+    " Europe",
+    " the",
+    " South"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 1000000000,
+    "language": 199
+   }
+  },
+  {
+   "country": "Romania",
+   "cue": 5,
+   "text": "Someone who grew up speaking Romanian was most likely born in the city of",
+   "top5": [
+    " Buch",
+    " C",
+    " L",
+    " Z",
+    " V"
+   ],
+   "rank": {
+    "country": 146,
+    "capital": 1000000000,
+    "language": 265
+   }
+  },
+  {
+   "country": "Russia",
+   "cue": 0,
+   "text": "People in the country whose capital is Moscow mostly speak the language of",
+   "top5": [
+    " the",
+    " Russian",
+    " Russia",
+    " their",
+    " Moscow"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 5,
+    "language": 2
+   }
+  },
+  {
+   "country": "Russia",
+   "cue": 1,
+   "text": "A traveler flying into Moscow has landed on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " Russia",
+    " North"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 126,
+    "language": 148
+   }
+  },
+  {
+   "country": "Russia",
+   "cue": 2,
+   "text": "The homeland of the Russian language lies on the continent of",
+   "top5": [
+    " the",
+    " Siberia",
+    " Russia",
+    " Europe",
+    " North"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 211,
+    "language": 78
+   }
+  },
+  {
+   "country": "Russia",
+   "cue": 3,
+   "text": "Newspapers printed in Moscow are usually written in the language of",
+   "top5": [
+    " the",
+    " Russian",
+    " Soviet",
+    " a",
+    " Russia"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 8,
+    "language": 2
+   }
+  },
+  {
+   "country": "Russia",
+   "cue": 4,
+   "text": "The country whose largest city is Moscow is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " Russia"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 274,
+    "language": 178
+   }
+  },
+  {
+   "country": "Russia",
+   "cue": 5,
+   "text": "Someone who grew up speaking Russian was most likely born in the city of",
+   "top5": [
+    " K",
+    " St",
+    " Che",
+    " Sochi",
+    " Kh"
+   ],
+   "rank": {
+    "country": 129,
+    "capital": 6,
+    "language": 170
+   }
+  },
+  {
+   "country": "Serbia",
+   "cue": 0,
+   "text": "People in the country whose capital is Belgrade mostly speak the language of",
+   "top5": [
+    " the",
+    " Serbia",
+    " Serbian",
+    " their",
+    " Russian"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 1000000000,
+    "language": 3
+   }
+  },
+  {
+   "country": "Serbia",
+   "cue": 1,
+   "text": "A traveler flying into Belgrade has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " South",
+    " North"
+   ],
+   "rank": {
+    "country": 8,
+    "capital": 1000000000,
+    "language": 742
+   }
+  },
+  {
+   "country": "Serbia",
+   "cue": 2,
+   "text": "The homeland of the Serbian language lies on the continent of",
+   "top5": [
+    " the",
+    " Serbia",
+    " Bosnia",
+    " Croatia",
+    " Kosovo"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 1000000000,
+    "language": 118
+   }
+  },
+  {
+   "country": "Serbia",
+   "cue": 3,
+   "text": "Newspapers printed in Belgrade are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Serbian",
+    " Serbia",
+    " their"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 1000000000,
+    "language": 3
+   }
+  },
+  {
+   "country": "Serbia",
+   "cue": 4,
+   "text": "The country whose largest city is Belgrade is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " South",
+    " North"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 1000000000,
+    "language": 405
+   }
+  },
+  {
+   "country": "Serbia",
+   "cue": 5,
+   "text": "Someone who grew up speaking Serbian was most likely born in the city of",
+   "top5": [
+    " Sar",
+    " Bel",
+    " K",
+    " Ser",
+    " S"
+   ],
+   "rank": {
+    "country": 66,
+    "capital": 1000000000,
+    "language": 147
+   }
+  },
+  {
+   "country": "Spain",
+   "cue": 0,
+   "text": "People in the country whose capital is Madrid mostly speak the language of",
+   "top5": [
+    " the",
+    " Spain",
+    " Spanish",
+    " their",
+    " Catalonia"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 9,
+    "language": 3
+   }
+  },
+  {
+   "country": "Spain",
+   "cue": 1,
+   "text": "A traveler flying into Madrid has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Spain",
+    " Europe",
+    " the",
+    " South"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 140,
+    "language": 218
+   }
+  },
+  {
+   "country": "Spain",
+   "cue": 2,
+   "text": "The homeland of the Spanish language lies on the continent of",
+   "top5": [
+    " the",
+    " Spain",
+    " Catalonia",
+    " Africa",
+    " Central"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 280,
+    "language": 132
+   }
+  },
+  {
+   "country": "Spain",
+   "cue": 3,
+   "text": "Newspapers printed in Madrid are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Spanish",
+    " Spain",
+    " their"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 12,
+    "language": 3
+   }
+  },
+  {
+   "country": "Spain",
+   "cue": 4,
+   "text": "The country whose largest city is Madrid is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Spain",
+    " Europe",
+    " South"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 243,
+    "language": 156
+   }
+  },
+  {
+   "country": "Spain",
+   "cue": 5,
+   "text": "Someone who grew up speaking Spanish was most likely born in the city of",
+   "top5": [
+    " Valencia",
+    " San",
+    " Santiago",
+    " Madrid",
+    " Barcelona"
+   ],
+   "rank": {
+    "country": 196,
+    "capital": 4,
+    "language": 296
+   }
+  },
+  {
+   "country": "Sweden",
+   "cue": 0,
+   "text": "People in the country whose capital is Stockholm mostly speak the language of",
+   "top5": [
+    " the",
+    " Sweden",
+    " Stockholm",
+    " Swedish",
+    " \""
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 3,
+    "language": 4
+   }
+  },
+  {
+   "country": "Sweden",
+   "cue": 1,
+   "text": "A traveler flying into Stockholm has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Europe",
+    " the",
+    " Antarctica",
+    " North"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 248,
+    "language": 509
+   }
+  },
+  {
+   "country": "Sweden",
+   "cue": 2,
+   "text": "The homeland of the Swedish language lies on the continent of",
+   "top5": [
+    " the",
+    " Sweden",
+    " North",
+    " Scandinav",
+    " Norway"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 156,
+    "language": 110
+   }
+  },
+  {
+   "country": "Sweden",
+   "cue": 3,
+   "text": "Newspapers printed in Stockholm are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Sweden",
+    " Swedish",
+    " \""
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 7,
+    "language": 4
+   }
+  },
+  {
+   "country": "Sweden",
+   "cue": 4,
+   "text": "The country whose largest city is Stockholm is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " South"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 231,
+    "language": 339
+   }
+  },
+  {
+   "country": "Sweden",
+   "cue": 5,
+   "text": "Someone who grew up speaking Swedish was most likely born in the city of",
+   "top5": [
+    " Stockholm",
+    " Got",
+    " St",
+    " K",
+    " Lund"
+   ],
+   "rank": {
+    "country": 19,
+    "capital": 1,
+    "language": 105
+   }
+  },
+  {
+   "country": "Thailand",
+   "cue": 0,
+   "text": "People in the country whose capital is Bangkok mostly speak the language of",
+   "top5": [
+    " the",
+    " Thailand",
+    " Thai",
+    " their",
+    " Bangkok"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 5,
+    "language": 3
+   }
+  },
+  {
+   "country": "Thailand",
+   "cue": 1,
+   "text": "A traveler flying into Bangkok has landed on the continent of",
+   "top5": [
+    " Africa",
+    " Asia",
+    " the",
+    " Southeast",
+    " South"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 153,
+    "language": 323
+   }
+  },
+  {
+   "country": "Thailand",
+   "cue": 2,
+   "text": "The homeland of the Thai language lies on the continent of",
+   "top5": [
+    " Thailand",
+    " Southeast",
+    " the",
+    " Asia",
+    " Laos"
+   ],
+   "rank": {
+    "country": 1,
+    "capital": 130,
+    "language": 39
+   }
+  },
+  {
+   "country": "Thailand",
+   "cue": 3,
+   "text": "Newspapers printed in Bangkok are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " Thailand",
+    " Thai",
+    " their"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 7,
+    "language": 4
+   }
+  },
+  {
+   "country": "Thailand",
+   "cue": 4,
+   "text": "The country whose largest city is Bangkok is located on the continent of",
+   "top5": [
+    " Africa",
+    " Asia",
+    " Southeast",
+    " South",
+    " the"
+   ],
+   "rank": {
+    "country": 7,
+    "capital": 296,
+    "language": 383
+   }
+  },
+  {
+   "country": "Thailand",
+   "cue": 5,
+   "text": "Someone who grew up speaking Thai was most likely born in the city of",
+   "top5": [
+    " Bangkok",
+    " Ph",
+    " Th",
+    " Ch",
+    " K"
+   ],
+   "rank": {
+    "country": 23,
+    "capital": 1,
+    "language": 63
+   }
+  },
+  {
+   "country": "Turkey",
+   "cue": 0,
+   "text": "People in the country whose capital is Ankara mostly speak the language of",
+   "top5": [
+    " the",
+    " Turkish",
+    " Islam",
+    " Turkey",
+    " their"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 37,
+    "language": 2
+   }
+  },
+  {
+   "country": "Turkey",
+   "cue": 1,
+   "text": "A traveler flying into Ankara has landed on the continent of",
+   "top5": [
+    " Europe",
+    " Africa",
+    " the",
+    " North",
+    " Turkey"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 646,
+    "language": 200
+   }
+  },
+  {
+   "country": "Turkey",
+   "cue": 2,
+   "text": "The homeland of the Turkish language lies on the continent of",
+   "top5": [
+    " the",
+    " Europe",
+    " Turkey",
+    " Central",
+    " North"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 784,
+    "language": 120
+   }
+  },
+  {
+   "country": "Turkey",
+   "cue": 3,
+   "text": "Newspapers printed in Ankara are usually written in the language of",
+   "top5": [
+    " the",
+    " Turkish",
+    " a",
+    " Islam",
+    " Turkey"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 40,
+    "language": 2
+   }
+  },
+  {
+   "country": "Turkey",
+   "cue": 4,
+   "text": "The country whose largest city is Ankara is located on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " Europe",
+    " North",
+    " Central"
+   ],
+   "rank": {
+    "country": 6,
+    "capital": 1276,
+    "language": 216
+   }
+  },
+  {
+   "country": "Turkey",
+   "cue": 5,
+   "text": "Someone who grew up speaking Turkish was most likely born in the city of",
+   "top5": [
+    " K",
+    " Istanbul",
+    " B",
+    " T",
+    " Ankara"
+   ],
+   "rank": {
+    "country": 83,
+    "capital": 5,
+    "language": 155
+   }
+  },
+  {
+   "country": "Ukraine",
+   "cue": 0,
+   "text": "People in the country whose capital is Kiev mostly speak the language of",
+   "top5": [
+    " the",
+    " Russian",
+    " Russia",
+    " Ukraine",
+    " their"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 8,
+    "language": 7
+   }
+  },
+  {
+   "country": "Ukraine",
+   "cue": 1,
+   "text": "A traveler flying into Kiev has landed on the continent of",
+   "top5": [
+    " Europe",
+    " Ukraine",
+    " Africa",
+    " Russia",
+    " the"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 61,
+    "language": 179
+   }
+  },
+  {
+   "country": "Ukraine",
+   "cue": 2,
+   "text": "The homeland of the Ukrainian language lies on the continent of",
+   "top5": [
+    " the",
+    " Ukraine",
+    " Europe",
+    " Russia",
+    " Crimea"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 102,
+    "language": 51
+   }
+  },
+  {
+   "country": "Ukraine",
+   "cue": 3,
+   "text": "Newspapers printed in Kiev are usually written in the language of",
+   "top5": [
+    " the",
+    " Ukraine",
+    " a",
+    " Ukrainian",
+    " Russian"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 8,
+    "language": 4
+   }
+  },
+  {
+   "country": "Ukraine",
+   "cue": 4,
+   "text": "The country whose largest city is Kiev is located on the continent of",
+   "top5": [
+    " the",
+    " Ukraine",
+    " Europe",
+    " Africa",
+    " Russia"
+   ],
+   "rank": {
+    "country": 2,
+    "capital": 227,
+    "language": 102
+   }
+  },
+  {
+   "country": "Ukraine",
+   "cue": 5,
+   "text": "Someone who grew up speaking Ukrainian was most likely born in the city of",
+   "top5": [
+    " Donetsk",
+    " Lv",
+    " Kiev",
+    " K",
+    " Kh"
+   ],
+   "rank": {
+    "country": 69,
+    "capital": 3,
+    "language": 152
+   }
+  },
+  {
+   "country": "Vietnam",
+   "cue": 0,
+   "text": "People in the country whose capital is Hanoi mostly speak the language of",
+   "top5": [
+    " the",
+    " H",
+    " Vietnam",
+    " their",
+    " Vietnamese"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 1000000000,
+    "language": 5
+   }
+  },
+  {
+   "country": "Vietnam",
+   "cue": 1,
+   "text": "A traveler flying into Hanoi has landed on the continent of",
+   "top5": [
+    " Africa",
+    " the",
+    " South",
+    " Asia",
+    " Vietnam"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 1000000000,
+    "language": 499
+   }
+  },
+  {
+   "country": "Vietnam",
+   "cue": 2,
+   "text": "The homeland of the Vietnamese language lies on the continent of",
+   "top5": [
+    " the",
+    " South",
+    " Laos",
+    " Vietnam",
+    " North"
+   ],
+   "rank": {
+    "country": 4,
+    "capital": 1000000000,
+    "language": 81
+   }
+  },
+  {
+   "country": "Vietnam",
+   "cue": 3,
+   "text": "Newspapers printed in Hanoi are usually written in the language of",
+   "top5": [
+    " the",
+    " a",
+    " H",
+    " Vietnamese",
+    " Vietnam"
+   ],
+   "rank": {
+    "country": 5,
+    "capital": 1000000000,
+    "language": 4
+   }
+  },
+  {
+   "country": "Vietnam",
+   "cue": 4,
+   "text": "The country whose largest city is Hanoi is located on the continent of",
+   "top5": [
+    " South",
+    " Africa",
+    " Vietnam",
+    " the",
+    " Asia"
+   ],
+   "rank": {
+    "country": 3,
+    "capital": 1000000000,
+    "language": 228
+   }
+  },
+  {
+   "country": "Vietnam",
+   "cue": 5,
+   "text": "Someone who grew up speaking Vietnamese was most likely born in the city of",
+   "top5": [
+    " Ph",
+    " Ch",
+    " H",
+    " Ho",
+    " Sa"
+   ],
+   "rank": {
+    "country": 18,
+    "capital": 1000000000,
+    "language": 165
+   }
+  }
+ ],
+ "atoms": [
+  {
+   "country": "Argentina",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " issuance",
+    " Ay",
+    "lla"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.0696115717291832
+  },
+  {
+   "country": "Argentina",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Buenos",
+    "Ca",
+    " Ricardo"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.11632364988327026
+  },
+  {
+   "country": "Argentina",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Argentine",
+    " los",
+    " Rodriguez"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.27082133293151855
+  },
+  {
+   "country": "Argentina",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " issuance",
+    " Ay",
+    "lla",
+    "etition",
+    " Gods",
+    " que",
+    "ocal",
+    " bulb",
+    "Price",
+    " discovers",
+    "frames",
+    " prox",
+    "iller",
+    " CITY",
+    " Conservation",
+    "\u044b",
+    " bouncing",
+    " unemployment",
+    " finale",
+    "olas",
+    " Needs",
+    " thou",
+    " 1988",
+    "rika",
+    " bacteria"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.28370124101638794
+  },
+  {
+   "country": "Argentina",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Buenos",
+    "Ca",
+    " Ricardo",
+    "305",
+    "illo",
+    " Superman",
+    " Purchase",
+    "elle",
+    "asta",
+    "................................",
+    " averages",
+    " que",
+    " hereby",
+    " CAS",
+    " prominence",
+    "eral",
+    " Winc",
+    " berries",
+    "Access",
+    "ura",
+    " cinem",
+    " anticipating",
+    " conviction",
+    "acter",
+    " downs"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.37895578145980835
+  },
+  {
+   "country": "Argentina",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Argentine",
+    " los",
+    " Rodriguez",
+    "\u00f1o",
+    "ico",
+    " Baton",
+    " Contra",
+    " CAS",
+    " Equip",
+    " quer",
+    " avocado",
+    "ment",
+    "acter",
+    " carriage",
+    " Tec",
+    "otional",
+    " imag",
+    "Dead",
+    "compl",
+    " brightness",
+    " Gems",
+    "Corp",
+    "288",
+    "historic",
+    " Fernando"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.5533930063247681
+  },
+  {
+   "country": "China",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Xi",
+    " calculating",
+    " ENTER"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.06971832364797592
+  },
+  {
+   "country": "China",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Beijing",
+    " Heavenly",
+    " Crane"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.18783019483089447
+  },
+  {
+   "country": "China",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Beijing",
+    " Xie",
+    " Heavenly"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.3680402636528015
+  },
+  {
+   "country": "China",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Xi",
+    " calculating",
+    " ENTER",
+    " contemplated",
+    "baby",
+    " CLE",
+    " dismissing",
+    " firms",
+    "Sky",
+    " genius",
+    " Oval",
+    " harassment",
+    "console",
+    " Role",
+    " weap",
+    " pixels",
+    " Haitian",
+    " Hound",
+    "reed",
+    "\ufffd",
+    "EEE",
+    " shedding",
+    "resources",
+    " Faw",
+    "uns"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2803719639778137
+  },
+  {
+   "country": "China",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Beijing",
+    " Heavenly",
+    " Crane",
+    " Droid",
+    " 288",
+    "SH",
+    " embell",
+    "XP",
+    " diluted",
+    "ping",
+    "Gener",
+    " peek",
+    " secretary",
+    "rict",
+    " BLACK",
+    "ibo",
+    " engineered",
+    " Situation",
+    "izzle",
+    " clears",
+    " workplace",
+    " doubtful",
+    " Butterfly",
+    " CSI",
+    " Bene"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.4278584420681
+  },
+  {
+   "country": "China",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Beijing",
+    " Xie",
+    " Heavenly",
+    " Crane",
+    " cultiv",
+    " Jian",
+    "WH",
+    " bulletin",
+    " Progressive",
+    " endlessly",
+    "flags",
+    "312",
+    " Highly",
+    " eliminating",
+    "pool",
+    " condensed",
+    " trusts",
+    "cm",
+    "Buzz",
+    " gotten",
+    " claimant",
+    "ments",
+    " PLA",
+    " slash",
+    "Reference"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.604772686958313
+  },
+  {
+   "country": "Cuba",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Cuba",
+    "istance",
+    " utilized"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.05190607160329819
+  },
+  {
+   "country": "Cuba",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Havana",
+    " Mexican",
+    "uan"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.15528281033039093
+  },
+  {
+   "country": "Cuba",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Cuba",
+    " Herrera",
+    " los"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2912936210632324
+  },
+  {
+   "country": "Cuba",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Cuba",
+    "istance",
+    " utilized",
+    " rejecting",
+    "amed",
+    " occup",
+    " Disciple",
+    " drafts",
+    " addicted",
+    " comfort",
+    "NUM",
+    " tropical",
+    " seizures",
+    " Dennis",
+    " Submit",
+    "590",
+    "ative",
+    "rier",
+    " unrecogn",
+    " trumpet",
+    "another",
+    " disag",
+    "enic",
+    " Singh",
+    " viewers"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.22633807361125946
+  },
+  {
+   "country": "Cuba",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Havana",
+    " Mexican",
+    "uan",
+    " directs",
+    " endured",
+    " overflow",
+    " CAS",
+    "383",
+    " CHRIST",
+    "ael",
+    "kee",
+    "ucked",
+    " Medic",
+    " Desmond",
+    " sporting",
+    "Helper",
+    " submitting",
+    "cle",
+    " audiences",
+    " McM",
+    " Colors",
+    "ablo",
+    " infinite",
+    " vested",
+    "cult"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.4067390263080597
+  },
+  {
+   "country": "Cuba",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Cuba",
+    " Herrera",
+    " los",
+    " Cue",
+    " hurricane",
+    " Argentine",
+    "CA",
+    "orio",
+    " Profession",
+    " Fab",
+    "ismo",
+    " pul",
+    " cartel",
+    "ales",
+    " Conce",
+    " wonderfully",
+    "ount",
+    " expr",
+    "361",
+    " refresh",
+    "Dead",
+    " aspir",
+    " Liberation",
+    " interfere",
+    "ucci"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.5910559892654419
+  },
+  {
+   "country": "Denmark",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " merry",
+    " Olsen",
+    " Makes"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.05460023134946823
+  },
+  {
+   "country": "Denmark",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Denmark",
+    "ds",
+    " Koen"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.1336076408624649
+  },
+  {
+   "country": "Denmark",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Copenhagen",
+    " Anders",
+    " hed"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.3215423822402954
+  },
+  {
+   "country": "Denmark",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " merry",
+    " Olsen",
+    " Makes",
+    " inertia",
+    "Ox",
+    " closes",
+    "trip",
+    "668",
+    " trailing",
+    " fitt",
+    " manifesto",
+    "held",
+    "cies",
+    " Spr",
+    " deficit",
+    " molecular",
+    "rama",
+    "Friends",
+    " modules",
+    "rovers",
+    " wink",
+    "agn",
+    " reaff",
+    " posters",
+    " Risk"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2839079797267914
+  },
+  {
+   "country": "Denmark",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Denmark",
+    "ds",
+    " Koen",
+    "Dave",
+    " fork",
+    " dives",
+    " Clarke",
+    " mattered",
+    " Door",
+    " nil",
+    " viewer",
+    "Charles",
+    " dd",
+    "gain",
+    " nerve",
+    "Contin",
+    " Literature",
+    "cies",
+    " narrowly",
+    " Doesn",
+    "KE",
+    " dag",
+    " recycling",
+    "enh",
+    " dwelling"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3898928761482239
+  },
+  {
+   "country": "Denmark",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Copenhagen",
+    " Anders",
+    " hed",
+    "402",
+    "ild",
+    " cd",
+    "ensen",
+    " Lands",
+    " nerd",
+    "Creat",
+    "atter",
+    " tale",
+    " compassionate",
+    " knots",
+    " Norman",
+    "testing",
+    "ENN",
+    " cove",
+    " exists",
+    " broadband",
+    " editions",
+    " Kle",
+    "wreck",
+    "gru",
+    "History"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5793114900588989
+  },
+  {
+   "country": "Finland",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " contacted",
+    "alog",
+    " Finland"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.05157848075032234
+  },
+  {
+   "country": "Finland",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Finland",
+    " Uni",
+    " Feature"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.12983015179634094
+  },
+  {
+   "country": "Finland",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Finnish",
+    " Hansen",
+    " io"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.32929837703704834
+  },
+  {
+   "country": "Finland",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " contacted",
+    "alog",
+    " Finland",
+    " inscription",
+    " introduce",
+    "gov",
+    "MT",
+    "asar",
+    " Runner",
+    " Pope",
+    "specific",
+    "Animation",
+    " nearest",
+    " spine",
+    " Picard",
+    " [*",
+    " OW",
+    "amps",
+    " publicized",
+    "yes",
+    " Surgery",
+    " Rangers",
+    " Beet",
+    " thee",
+    " Fabric"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.27066850662231445
+  },
+  {
+   "country": "Finland",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Finland",
+    " Uni",
+    " Feature",
+    " lighthouse",
+    "ft",
+    " Hatt",
+    "inary",
+    " amendment",
+    " KO",
+    "focus",
+    " Hawkins",
+    " Toll",
+    " IDs",
+    " Feeling",
+    " voluntarily",
+    " entertain",
+    "656",
+    "Fin",
+    " veget",
+    " premier",
+    "error",
+    " Holt",
+    "ingly",
+    " infusion",
+    "iku"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3877282440662384
+  },
+  {
+   "country": "Finland",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Finnish",
+    " Hansen",
+    " io",
+    " motel",
+    " Fee",
+    " Tall",
+    "UI",
+    " Guth",
+    " stalk",
+    "inen",
+    " Lands",
+    "oid",
+    "Fin",
+    " alloc",
+    " LOVE",
+    " quarterback",
+    " isot",
+    "puter",
+    " reactions",
+    "orpor",
+    "alone",
+    " momentarily",
+    " Mitt",
+    "attle",
+    "she"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.5616011023521423
+  },
+  {
+   "country": "France",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    "acey",
+    " relentless",
+    " Retail"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.054051462560892105
+  },
+  {
+   "country": "France",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    "French",
+    " Jean",
+    " 293"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.14026671648025513
+  },
+  {
+   "country": "France",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    "French",
+    " Jacques",
+    " une"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.22918854653835297
+  },
+  {
+   "country": "France",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    "acey",
+    " relentless",
+    " Retail",
+    " vanity",
+    "TER",
+    " 1850",
+    " Crash",
+    " aesthetics",
+    "Office",
+    "groups",
+    " aver",
+    " flask",
+    "court",
+    "Health",
+    " latch",
+    " 205",
+    " LGBTQ",
+    "Rem",
+    "owski",
+    " weeds",
+    "ceived",
+    " fitted",
+    "ool",
+    " nominations",
+    " servicing"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.25640618801116943
+  },
+  {
+   "country": "France",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    "French",
+    " Jean",
+    " 293",
+    " discomfort",
+    "antage",
+    "TER",
+    " Laure",
+    " exploded",
+    " giveaways",
+    " cou",
+    "acket",
+    " CLA",
+    " themes",
+    "lif",
+    "iddy",
+    " Privacy",
+    " regener",
+    " pour",
+    "695",
+    " Lloyd",
+    " predatory",
+    " Shows",
+    " reasoned",
+    "FB",
+    " conformity"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.4090764820575714
+  },
+  {
+   "country": "France",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    "French",
+    " Jacques",
+    " une",
+    " Baton",
+    " Harvey",
+    " cout",
+    " endorsements",
+    "aux",
+    " gou",
+    " CLASS",
+    " finite",
+    " Notice",
+    "ifle",
+    " que",
+    " thri",
+    " comforting",
+    " collisions",
+    "ancer",
+    " Enlightenment",
+    "Data",
+    " Grande",
+    " incremental",
+    " convicted",
+    "nard",
+    "CON"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.5217606425285339
+  },
+  {
+   "country": "Germany",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    "January",
+    " existential",
+    " BMW"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.052805375307798386
+  },
+  {
+   "country": "Germany",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Berlin",
+    "bern",
+    "Gs"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.16574497520923615
+  },
+  {
+   "country": "Germany",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    "German",
+    " Wein",
+    " Berlin"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": true
+   },
+   "frac": 0.2850206196308136
+  },
+  {
+   "country": "Germany",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    "January",
+    " existential",
+    " BMW",
+    " PRESS",
+    " technician",
+    " folded",
+    "ents",
+    " hubs",
+    " Equality",
+    " Invasion",
+    " antis",
+    "geon",
+    "Everything",
+    " Weber",
+    " teenage",
+    " 348",
+    "ourn",
+    " acquisitions",
+    "erc",
+    " Spray",
+    "Need",
+    " subversive",
+    "tti",
+    " bandwidth",
+    " Jung"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.26774901151657104
+  },
+  {
+   "country": "Germany",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Berlin",
+    "bern",
+    "Gs",
+    " purposefully",
+    " Bucks",
+    " Products",
+    "Wolf",
+    " FRE",
+    " outbreak",
+    " alloy",
+    " Bert",
+    " indifference",
+    "rend",
+    " keyword",
+    " Educational",
+    "207",
+    " undermin",
+    "atter",
+    " reversible",
+    "ief",
+    " capitalist",
+    "Anyone",
+    " Glenn",
+    " FULL",
+    "uding"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.4040370285511017
+  },
+  {
+   "country": "Germany",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    "German",
+    " Wein",
+    " Berlin",
+    " Bayern",
+    "FB",
+    " Schneider",
+    "Race",
+    " angst",
+    " Peer",
+    " Waste",
+    "gers",
+    " phenomen",
+    "enburg",
+    " 1300",
+    " revealing",
+    " concentrations",
+    "gear",
+    " chees",
+    " Allow",
+    " keyword",
+    " lied",
+    "hift",
+    " assortment",
+    " WILL",
+    " Feld"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": true
+   },
+   "frac": 0.566163182258606
+  },
+  {
+   "country": "Greece",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " tavern",
+    "lar",
+    " Arche"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.052615974098443985
+  },
+  {
+   "country": "Greece",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Athen",
+    " Greek",
+    "aea"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.19683806598186493
+  },
+  {
+   "country": "Greece",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Athens",
+    " \ufffd",
+    " Hades"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.3397839665412903
+  },
+  {
+   "country": "Greece",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " tavern",
+    "lar",
+    " Arche",
+    "atha",
+    " Nero",
+    " Thr",
+    "wt",
+    " Scream",
+    " Pep",
+    " transcend",
+    " Libraries",
+    " slack",
+    " MOR",
+    " accum",
+    "aven",
+    " assertions",
+    "later",
+    " Hilton",
+    " Brach",
+    " Gloss",
+    "sit",
+    " redemption",
+    " Loud",
+    " Aether",
+    "py"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.23653995990753174
+  },
+  {
+   "country": "Greece",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Athen",
+    " Greek",
+    "aea",
+    "orum",
+    " assum",
+    " 336",
+    " Geoffrey",
+    "[\"",
+    "OG",
+    "Cos",
+    " angels",
+    " Expansion",
+    " Carbon",
+    "\ufffd",
+    "mph",
+    " IPS",
+    " messenger",
+    "los",
+    " awhile",
+    " Gem",
+    " Resp",
+    " Colleg",
+    " Achilles",
+    " feces",
+    "UD"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.4468316435813904
+  },
+  {
+   "country": "Greece",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Athens",
+    " \ufffd",
+    " Hades",
+    "onis",
+    " Arist",
+    "GS",
+    " Greeks",
+    " Lance",
+    "rite",
+    " Them",
+    "Component",
+    " appealing",
+    " muzzle",
+    " soph",
+    "written",
+    " Fitness",
+    "pid",
+    "ether",
+    "Access",
+    " PACK",
+    "xxx",
+    " traits",
+    " continual",
+    "stice",
+    " explosion"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5733360052108765
+  },
+  {
+   "country": "Hungary",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Hungarian",
+    " travers",
+    "middle"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.06374610215425491
+  },
+  {
+   "country": "Hungary",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Hungarian",
+    "Hist",
+    " Gret"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.13498938083648682
+  },
+  {
+   "country": "Hungary",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Hungarian",
+    "oln",
+    " Gem"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.30857396125793457
+  },
+  {
+   "country": "Hungary",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Hungarian",
+    " travers",
+    "middle",
+    " Bid",
+    " Lomb",
+    "abil",
+    " Rum",
+    "aban",
+    " punk",
+    " exposition",
+    "wer",
+    "isol",
+    " Sacred",
+    " collapses",
+    " oranges",
+    " Zo",
+    "tal",
+    " Renew",
+    " outbreak",
+    " np",
+    " sponsor",
+    "City",
+    " Poc",
+    " assassination",
+    "GL"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.26549944281578064
+  },
+  {
+   "country": "Hungary",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Hungarian",
+    "Hist",
+    " Gret",
+    "HB",
+    " jug",
+    "atz",
+    "environment",
+    " Problem",
+    " ([",
+    "vest",
+    " Rage",
+    " Hector",
+    " betting",
+    "bury",
+    "0000",
+    "uality",
+    " Tob",
+    "yers",
+    " incorpor",
+    " Companion",
+    " vector",
+    " possessions",
+    " FANT",
+    "null",
+    "Hash"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.3979581296443939
+  },
+  {
+   "country": "Hungary",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Hungarian",
+    "oln",
+    " Gem",
+    " 1923",
+    " Byrne",
+    " posit",
+    " Route",
+    "Hart",
+    "Present",
+    "urt",
+    " Homeless",
+    " oppose",
+    " PRODUCT",
+    " bounds",
+    "Hash",
+    " Ernst",
+    " forgiveness",
+    " Myth",
+    "yond",
+    "\ufffd",
+    " bashing",
+    " purch",
+    "bird",
+    " stair",
+    "Cas"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.5451794266700745
+  },
+  {
+   "country": "Iceland",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    "deen",
+    " Gim",
+    " Prob"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.056692641228437424
+  },
+  {
+   "country": "Iceland",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Iceland",
+    "ku",
+    "horn"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.11596585810184479
+  },
+  {
+   "country": "Iceland",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Iceland",
+    " saga",
+    " Tooth"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3108241856098175
+  },
+  {
+   "country": "Iceland",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    "deen",
+    " Gim",
+    " Prob",
+    " translates",
+    "MT",
+    " stumbled",
+    " frog",
+    " Cities",
+    "hew",
+    " Nug",
+    "Continue",
+    " abundant",
+    " blindness",
+    " variance",
+    "init",
+    " Bonus",
+    " conducts",
+    "asar",
+    " lig",
+    "rake",
+    " preview",
+    " Gothic",
+    "Ma",
+    " mile",
+    "arent"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.25956669449806213
+  },
+  {
+   "country": "Iceland",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Iceland",
+    "ku",
+    "horn",
+    "Grant",
+    " skeleton",
+    " Nug",
+    "hew",
+    "\u3044",
+    " Kart",
+    "rage",
+    " Sight",
+    " voters",
+    " ja",
+    " Cycle",
+    " excludes",
+    " gracious",
+    " Lair",
+    "Due",
+    " fing",
+    "si",
+    " VICE",
+    " shepherd",
+    " predominantly",
+    "wave",
+    "ALD"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.36649537086486816
+  },
+  {
+   "country": "Iceland",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Iceland",
+    " saga",
+    " Tooth",
+    "igr",
+    " Om",
+    "arson",
+    " ranger",
+    "kn",
+    " shel",
+    " Rey",
+    " Guth",
+    " Partner",
+    "ISH",
+    "olf",
+    " Adding",
+    " comprise",
+    " api",
+    " banners",
+    " sane",
+    " Slime",
+    " applicants",
+    "still",
+    " sled",
+    "Web",
+    " rite"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.5688964128494263
+  },
+  {
+   "country": "India",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " bats",
+    " Rs",
+    " futuristic"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.06699051707983017
+  },
+  {
+   "country": "India",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Delhi",
+    " Gujarat",
+    " HAL"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.25796958804130554
+  },
+  {
+   "country": "India",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Delhi",
+    " Gujarat",
+    "Jay"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.2781790792942047
+  },
+  {
+   "country": "India",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " bats",
+    " Rs",
+    " futuristic",
+    " Dairy",
+    " HELL",
+    "view",
+    "Senior",
+    " Whenever",
+    " remedy",
+    " slapping",
+    " Draper",
+    "engu",
+    " dimensional",
+    "Social",
+    " backyard",
+    "impro",
+    " Molly",
+    " CDs",
+    "Len",
+    " ignorance",
+    " waters",
+    "ocate",
+    " Timeline",
+    " combining",
+    "eq"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2756427526473999
+  },
+  {
+   "country": "India",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Delhi",
+    " Gujarat",
+    " HAL",
+    "tm",
+    " backward",
+    "Jay",
+    " plethora",
+    "icks",
+    " gravitational",
+    " scaven",
+    " Commit",
+    " spectrum",
+    " moms",
+    " Hence",
+    "rit",
+    " mislead",
+    " PSU",
+    " Identification",
+    "Ter",
+    " Medal",
+    " Cunningham",
+    " automation",
+    " Shard",
+    "ures",
+    " Indie"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.4987117052078247
+  },
+  {
+   "country": "India",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Delhi",
+    " Gujarat",
+    "Jay",
+    " Deep",
+    "tm",
+    " wherein",
+    " todd",
+    " Shiva",
+    " Minority",
+    " inputs",
+    "blem",
+    " Param",
+    "obs",
+    " Cellular",
+    " debunk",
+    " celestial",
+    "icks",
+    " dreaded",
+    " Hath",
+    "IF",
+    " Rs",
+    " insulated",
+    " evolve",
+    " agitation",
+    " Soldier"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5482646822929382
+  },
+  {
+   "country": "Indonesia",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Indonesian",
+    " Imam",
+    "pick"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.07509268820285797
+  },
+  {
+   "country": "Indonesia",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Indonesia",
+    " Jade",
+    " inches"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.15995103120803833
+  },
+  {
+   "country": "Indonesia",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Indonesia",
+    " Kaw",
+    "adult"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3304537832736969
+  },
+  {
+   "country": "Indonesia",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Indonesian",
+    " Imam",
+    "pick",
+    " livestock",
+    " eru",
+    "asa",
+    " beforehand",
+    " Spectrum",
+    " FOX",
+    " whites",
+    "\u00a3",
+    " simulated",
+    "andi",
+    " namesake",
+    " Hide",
+    " advis",
+    " Shake",
+    "abwe",
+    "ments",
+    " preached",
+    " Tara",
+    " additionally",
+    "dirty",
+    " 267",
+    " toward"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.25857919454574585
+  },
+  {
+   "country": "Indonesia",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Indonesia",
+    " Jade",
+    " inches",
+    "Kid",
+    "aze",
+    " elim",
+    " aides",
+    " BJ",
+    " beacon",
+    "option",
+    "alo",
+    " Toad",
+    " startling",
+    "jun",
+    " licensing",
+    " Hasan",
+    " Okay",
+    "ificial",
+    " fruits",
+    " 246",
+    "Op",
+    " CLICK",
+    "tun",
+    " prophecy",
+    " anonymity"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.39819997549057007
+  },
+  {
+   "country": "Indonesia",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Indonesia",
+    " Kaw",
+    "adult",
+    " Abbott",
+    " KL",
+    " Prayer",
+    " jungle",
+    "Um",
+    " JD",
+    " adjoining",
+    "bird",
+    " Purs",
+    " smarter",
+    " tolerance",
+    " Mysterious",
+    " projecting",
+    "attled",
+    " 255",
+    "awa",
+    " upload",
+    " hormones",
+    " Ong",
+    "capt",
+    "Guide",
+    " equals"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.5738972425460815
+  },
+  {
+   "country": "Iran",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Tant",
+    " ominous",
+    " Jonah"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.05622633919119835
+  },
+  {
+   "country": "Iran",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Iranian",
+    " Ibn",
+    " Prophe"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2281031608581543
+  },
+  {
+   "country": "Iran",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Iranian",
+    " Imam",
+    " Persia"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3606967031955719
+  },
+  {
+   "country": "Iran",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Tant",
+    " ominous",
+    " Jonah",
+    "pure",
+    " battlefield",
+    " Millenn",
+    " constructive",
+    " SAL",
+    "py",
+    "leep",
+    " BCC",
+    "Open",
+    " bureaucr",
+    "ading",
+    " alley",
+    "hab",
+    "cus",
+    " Slot",
+    " departed",
+    " Saur",
+    " complexes",
+    " disagree",
+    "ols",
+    " laundry",
+    "duration"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.25858166813850403
+  },
+  {
+   "country": "Iran",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Iranian",
+    " Ibn",
+    " Prophe",
+    "fat",
+    " scorp",
+    "Mom",
+    " Citadel",
+    " spacious",
+    "115",
+    " residue",
+    " RAND",
+    " Amen",
+    " Fay",
+    " mischief",
+    " Overt",
+    " interchangeable",
+    "activity",
+    "##",
+    " Millenn",
+    " inputs",
+    "Ba",
+    "owers",
+    " Paradise",
+    "fill",
+    " myst"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.48340722918510437
+  },
+  {
+   "country": "Iran",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Iranian",
+    " Imam",
+    " Persia",
+    " gh",
+    "fill",
+    "\ufffd",
+    "Rat",
+    "ction",
+    " Mash",
+    " nonex",
+    "otional",
+    " margin",
+    " Correct",
+    " Phar",
+    "007",
+    " Perse",
+    "fat",
+    " PROG",
+    "Said",
+    " ballistic",
+    " notices",
+    " lucrative",
+    " disconnected",
+    " Column",
+    "awn"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.6126067042350769
+  },
+  {
+   "country": "Italy",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Claud",
+    " Late",
+    " eld"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.062293071299791336
+  },
+  {
+   "country": "Italy",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Rome",
+    " Lucius",
+    " Orig"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.19038672745227814
+  },
+  {
+   "country": "Italy",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Rome",
+    "Italian",
+    " Angelo"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": true
+   },
+   "frac": 0.3041338622570038
+  },
+  {
+   "country": "Italy",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Claud",
+    " Late",
+    " eld",
+    "tha",
+    " monks",
+    " Springs",
+    "384",
+    " latent",
+    "Collect",
+    " Devils",
+    "\u0113",
+    " CITY",
+    " Kell",
+    " Enhancement",
+    " lateral",
+    " fiat",
+    " Hook",
+    " interviews",
+    "aned",
+    " furious",
+    "+.",
+    " trusted",
+    "uper",
+    " Freed",
+    "145"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.24321149289608002
+  },
+  {
+   "country": "Italy",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Rome",
+    " Lucius",
+    " Orig",
+    " Bucc",
+    " philosophers",
+    "ico",
+    "263",
+    " Profession",
+    " Salam",
+    "tti",
+    "rast",
+    " Rig",
+    " restrain",
+    " legions",
+    "elia",
+    "Ant",
+    "\u03b5",
+    "lag",
+    " subter",
+    "pressed",
+    "INT",
+    " Resident",
+    " offic",
+    "138",
+    " creatures"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.43106675148010254
+  },
+  {
+   "country": "Italy",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Rome",
+    "Italian",
+    " Angelo",
+    " Lucius",
+    " gener",
+    " Bucc",
+    " Medic",
+    " legions",
+    " Compl",
+    " Ratio",
+    "otional",
+    " fragment",
+    "lla",
+    " Ric",
+    "null",
+    " floors",
+    " Fiesta",
+    " vulner",
+    " arg",
+    "footed",
+    " Millenn",
+    "heres",
+    " eval",
+    "ico",
+    "runner"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": true
+   },
+   "frac": 0.5731102824211121
+  },
+  {
+   "country": "Korea",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " wherein",
+    "smart",
+    "XY"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.0448942705988884
+  },
+  {
+   "country": "Korea",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    "Kim",
+    " Korea",
+    " assigning"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.1526680588722229
+  },
+  {
+   "country": "Korea",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Seoul",
+    " Kim",
+    " conglomer"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.33285191655158997
+  },
+  {
+   "country": "Korea",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " wherein",
+    "smart",
+    "XY",
+    " assumption",
+    " Guam",
+    "Video",
+    " rarity",
+    "killed",
+    " Focus",
+    "chief",
+    " Explan",
+    " advertisers",
+    " Foo",
+    "IA",
+    "rito",
+    " comet",
+    " enduring",
+    " protestors",
+    " liqu",
+    " Ow",
+    "ange",
+    " Butcher",
+    " fathers",
+    " instructed",
+    " 386"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2503104507923126
+  },
+  {
+   "country": "Korea",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    "Kim",
+    " Korea",
+    " assigning",
+    " lockdown",
+    " smallest",
+    " Sunset",
+    " shin",
+    "Young",
+    " Hoo",
+    " determines",
+    "____",
+    " Sect",
+    " stroke",
+    "winner",
+    " unders",
+    " VIDEO",
+    "asi",
+    "comings",
+    " doomed",
+    " Surge",
+    " convenience",
+    "virtual",
+    " blues",
+    " impe",
+    "ures"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.36159375309944153
+  },
+  {
+   "country": "Korea",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Seoul",
+    " Kim",
+    " conglomer",
+    "hew",
+    "Cho",
+    " hover",
+    " innings",
+    " POWER",
+    " correcting",
+    " Awareness",
+    " Twice",
+    "Lee",
+    " skip",
+    " darkened",
+    "clamation",
+    " handsome",
+    " inherently",
+    " gamer",
+    " [(",
+    "backed",
+    "oys",
+    " Incident",
+    " designation",
+    "Internal",
+    "urry"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5799686312675476
+  },
+  {
+   "country": "Netherlands",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    "verts",
+    " cider",
+    "ike"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.07554658502340317
+  },
+  {
+   "country": "Netherlands",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Amsterdam",
+    " enchantment",
+    "anne"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.1424473375082016
+  },
+  {
+   "country": "Netherlands",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Amsterdam",
+    "inge",
+    " Wes"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.2893485128879547
+  },
+  {
+   "country": "Netherlands",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    "verts",
+    " cider",
+    "ike",
+    " Amsterdam",
+    " Disabled",
+    " collaborative",
+    " ornament",
+    " carriers",
+    "Lex",
+    " \u00ae",
+    " muff",
+    "erton",
+    " curve",
+    " lasted",
+    " unreasonable",
+    "Nov",
+    " acquitted",
+    " Banks",
+    " horde",
+    " Diet",
+    "Features",
+    " WITH",
+    " mailing",
+    "387",
+    " peers"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.2672702968120575
+  },
+  {
+   "country": "Netherlands",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Amsterdam",
+    " enchantment",
+    "anne",
+    " Dickens",
+    " Dude",
+    " EF",
+    " aids",
+    "neck",
+    "Walker",
+    "Only",
+    "ober",
+    " colonies",
+    " OEM",
+    " thoughtful",
+    " advertise",
+    " euro",
+    " 132",
+    "Neil",
+    "Wh",
+    " Arrows",
+    " misunder",
+    " demos",
+    "Mode",
+    " Drake",
+    "endo"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.3647055923938751
+  },
+  {
+   "country": "Netherlands",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Amsterdam",
+    "inge",
+    " Wes",
+    "Dutch",
+    " enchantment",
+    " hemor",
+    "mond",
+    " Suggest",
+    " Able",
+    "gers",
+    " Clo",
+    " 1800",
+    "Der",
+    " thoughtful",
+    "bee",
+    " Winc",
+    " tert",
+    "JC",
+    "pack",
+    " chancellor",
+    " performers",
+    " Environment",
+    " clues",
+    " Sadly",
+    "eder"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": true
+   },
+   "frac": 0.5270137786865234
+  },
+  {
+   "country": "Norway",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Oslo",
+    " repeats",
+    " sill"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.06236211583018303
+  },
+  {
+   "country": "Norway",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Norway",
+    "Os",
+    "night"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.17535348236560822
+  },
+  {
+   "country": "Norway",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Norway",
+    " Anders",
+    " Sight"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.31868571043014526
+  },
+  {
+   "country": "Norway",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Oslo",
+    " repeats",
+    " sill",
+    " tracker",
+    "ourn",
+    " intact",
+    "qualified",
+    "awa",
+    " shotgun",
+    " sabotage",
+    "Martin",
+    " Rim",
+    " shadowy",
+    " Putting",
+    " sponsorship",
+    " --------",
+    "ross",
+    " mistakes",
+    " descend",
+    "obbies",
+    " reproductive",
+    " container",
+    " orthodoxy",
+    "Dark",
+    "market"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.2736479341983795
+  },
+  {
+   "country": "Norway",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Norway",
+    "Os",
+    "night",
+    " Leigh",
+    " nonsensical",
+    "nette",
+    " Archive",
+    "KE",
+    " nons",
+    "ettle",
+    " foolish",
+    "992",
+    " anomaly",
+    " Nutrition",
+    " detachment",
+    "Road",
+    " oy",
+    " lik",
+    " plugins",
+    "ership",
+    "standing",
+    "rand",
+    "bomb",
+    " poetic",
+    " Goo"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.4256642460823059
+  },
+  {
+   "country": "Norway",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Norway",
+    " Anders",
+    " Sight",
+    " Olson",
+    "NO",
+    " woods",
+    " Oslo",
+    "gru",
+    " wo",
+    "402",
+    " covenant",
+    " Peer",
+    "shut",
+    " EDIT",
+    " exists",
+    " Jelly",
+    "ledge",
+    " scrutin",
+    "leading",
+    "nes",
+    " Gained",
+    " packaged",
+    " trilogy",
+    "History",
+    " bum"
+   ],
+   "has": {
+    "country": true,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5717554688453674
+  },
+  {
+   "country": "Poland",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Czech",
+    " Md",
+    " ord"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.06929966062307358
+  },
+  {
+   "country": "Poland",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Poland",
+    " pree",
+    " Kr"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.14687657356262207
+  },
+  {
+   "country": "Poland",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Poland",
+    "zie",
+    " Zy"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.33903488516807556
+  },
+  {
+   "country": "Poland",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Czech",
+    " Md",
+    " ord",
+    "isol",
+    " uprising",
+    " Helena",
+    " belong",
+    "arb",
+    " successive",
+    "olan",
+    " Attacks",
+    " Trader",
+    " retard",
+    "vas",
+    "Hard",
+    " 305",
+    "athan",
+    " illustrate",
+    "!]",
+    " Ministry",
+    "jen",
+    "cling",
+    " rid",
+    " reservoirs",
+    " IRS"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2848588228225708
+  },
+  {
+   "country": "Poland",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Poland",
+    " pree",
+    " Kr",
+    "rb",
+    " Wonderful",
+    "zen",
+    " Representative",
+    " ptr",
+    " Warren",
+    " loaf",
+    " Crime",
+    " workload",
+    "rant",
+    " kW",
+    "mail",
+    " sculpt",
+    "WP",
+    " marches",
+    "oney",
+    "writing",
+    " accordance",
+    "Failure",
+    " controllers",
+    "posted",
+    " descriptive"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.4213344156742096
+  },
+  {
+   "country": "Poland",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Poland",
+    "zie",
+    " Zy",
+    " flour",
+    " structured",
+    "wb",
+    " Sitting",
+    " trench",
+    "tones",
+    " Zombie",
+    " std",
+    "lessly",
+    "pri",
+    "268",
+    " totals",
+    " visionary",
+    " crim",
+    " unfit",
+    "March",
+    " Passive",
+    "sch",
+    " broadcasters",
+    "ogs",
+    "Pol",
+    " nostalgic"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.565098762512207
+  },
+  {
+   "country": "Portugal",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " introduce",
+    "ician",
+    " Portable"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.058522697538137436
+  },
+  {
+   "country": "Portugal",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Portugal",
+    "cc",
+    " pineapple"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.15569832921028137
+  },
+  {
+   "country": "Portugal",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Portugal",
+    " Antonio",
+    "\u00e3o"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3055785000324249
+  },
+  {
+   "country": "Portugal",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " introduce",
+    "ician",
+    " Portable",
+    "alog",
+    " Patt",
+    " Madrid",
+    " COUNTY",
+    " yo",
+    " reviewers",
+    " helmet",
+    "ipped",
+    "ains",
+    " enzyme",
+    " stitching",
+    "held",
+    "unct",
+    " Flu",
+    " bounded",
+    " FTC",
+    " rocky",
+    " submitting",
+    "();",
+    " Chau",
+    " Absolutely",
+    " Redux"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.28796765208244324
+  },
+  {
+   "country": "Portugal",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Portugal",
+    "cc",
+    " pineapple",
+    "167",
+    "elli",
+    "ivers",
+    " splendid",
+    " tradem",
+    " Pip",
+    "Oper",
+    "orge",
+    " convention",
+    "265",
+    " Journals",
+    "eline",
+    " lug",
+    "Loc",
+    " comedian",
+    " ROB",
+    " nested",
+    "ared",
+    " repairs",
+    " compar",
+    " licens",
+    " commenting"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.4018791615962982
+  },
+  {
+   "country": "Portugal",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Portugal",
+    " Antonio",
+    "\u00e3o",
+    " Cart",
+    "rio",
+    " Aux",
+    " regenerate",
+    " cas",
+    "ernand",
+    " carn",
+    " Canary",
+    "Common",
+    " io",
+    "isco",
+    " Customer",
+    " Interesting",
+    " lettuce",
+    " Foley",
+    "uno",
+    "({",
+    " Legacy",
+    " defin",
+    " Mov",
+    " consultants",
+    "URL"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.5976563692092896
+  },
+  {
+   "country": "Romania",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Bulgarian",
+    " municip",
+    " limitation"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.0693737119436264
+  },
+  {
+   "country": "Romania",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Romania",
+    " municip",
+    "burg"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.13917545974254608
+  },
+  {
+   "country": "Romania",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Romanian",
+    " Buch",
+    "State"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.30225926637649536
+  },
+  {
+   "country": "Romania",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Bulgarian",
+    " municip",
+    " limitation",
+    "Apart",
+    "FS",
+    " Ding",
+    "swer",
+    " metro",
+    " Tutorial",
+    "uring",
+    " intest",
+    "ondo",
+    " Pepper",
+    "\ufffd",
+    " Brunswick",
+    " Worldwide",
+    " accent",
+    " sue",
+    "doi",
+    " voted",
+    " warehouse",
+    "Dex",
+    " originating",
+    " Dylan",
+    "258"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.296491801738739
+  },
+  {
+   "country": "Romania",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Romania",
+    " municip",
+    "burg",
+    "ULL",
+    " dialect",
+    " Carlo",
+    " Rect",
+    "chest",
+    " cancell",
+    " regulate",
+    " Rally",
+    "chi",
+    " browsing",
+    " utilizes",
+    " Stat",
+    " bargaining",
+    "rice",
+    " dere",
+    "575",
+    " Bryan",
+    " amidst",
+    "rb",
+    " Cure",
+    " Printed",
+    " dependencies"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.38954395055770874
+  },
+  {
+   "country": "Romania",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Romanian",
+    " Buch",
+    "State",
+    "VILLE",
+    " Medic",
+    " 308",
+    "cin",
+    " comprom",
+    " VS",
+    "ither",
+    " Membership",
+    "RB",
+    " distract",
+    "ordering",
+    " Yard",
+    " rely",
+    " Creat",
+    " HRC",
+    "steel",
+    " approx",
+    " itiner",
+    " leveling",
+    " proclaimed",
+    " couch",
+    "rina"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.5289174914360046
+  },
+  {
+   "country": "Russia",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Kremlin",
+    " worried",
+    " incapable"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.06598199158906937
+  },
+  {
+   "country": "Russia",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Kremlin",
+    " Solid",
+    " violated"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.1582253873348236
+  },
+  {
+   "country": "Russia",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Kremlin",
+    " Russia",
+    " Mikhail"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3927924633026123
+  },
+  {
+   "country": "Russia",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Kremlin",
+    " worried",
+    " incapable",
+    "Bill",
+    " ENTER",
+    " Oval",
+    " lately",
+    " symb",
+    " benchmarks",
+    "252",
+    "MF",
+    " Victim",
+    " nano",
+    "finished",
+    " conce",
+    " Pyro",
+    " organizational",
+    "bars",
+    "iable",
+    " Clement",
+    " \"$",
+    " battlefield",
+    " tant",
+    "len",
+    " takeover"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.26861488819122314
+  },
+  {
+   "country": "Russia",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Kremlin",
+    " Solid",
+    " violated",
+    " chatter",
+    " 267",
+    "RD",
+    " mercenary",
+    "size",
+    " Vaults",
+    " determin",
+    " Sparkle",
+    "(),",
+    " Pierce",
+    " depress",
+    " sketches",
+    " SUPER",
+    "ello",
+    " Putting",
+    "Tar",
+    " Vince",
+    " pixels",
+    " dormant",
+    "Staff",
+    " Comfort",
+    " stall"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.42447254061698914
+  },
+  {
+   "country": "Russia",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Kremlin",
+    " Russia",
+    " Mikhail",
+    " Vaults",
+    " 313",
+    " ignores",
+    " Mechanical",
+    "rocket",
+    "vy",
+    " backward",
+    "Material",
+    " rav",
+    " lease",
+    " Rost",
+    " stunts",
+    "vich",
+    " discern",
+    " gotten",
+    "bytes",
+    "Never",
+    " Soy",
+    " inspirational",
+    "iting",
+    "Series",
+    " boundary"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.611356794834137
+  },
+  {
+   "country": "Serbia",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Alban",
+    " incite",
+    "gru"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.06015607714653015
+  },
+  {
+   "country": "Serbia",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Serbian",
+    "\u05ea",
+    " stri"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.1450006365776062
+  },
+  {
+   "country": "Serbia",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Serbian",
+    " Ark",
+    " demos"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.2960633635520935
+  },
+  {
+   "country": "Serbia",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Alban",
+    " incite",
+    "gru",
+    " Syria",
+    "aro",
+    " Esper",
+    " Freed",
+    " denomination",
+    "\u00c3",
+    " wound",
+    " Explain",
+    "oca",
+    " towns",
+    " infiltration",
+    " backers",
+    "PER",
+    " unfairly",
+    " Feed",
+    "ku",
+    " bodily",
+    "while",
+    " Adamant",
+    " LU",
+    "ovsky",
+    " extensively"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2739361822605133
+  },
+  {
+   "country": "Serbia",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Serbian",
+    "\u05ea",
+    " stri",
+    " Slay",
+    "Ger",
+    " Spin",
+    "\ufffd",
+    " brethren",
+    "offs",
+    "urch",
+    " Soldiers",
+    " VM",
+    " Slug",
+    " persuade",
+    "atus",
+    " childhood",
+    "\u305f",
+    "Rachel",
+    "keeping",
+    "ause",
+    " sulfur",
+    " Playing",
+    "ava",
+    " dependencies",
+    " ple"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.3752063512802124
+  },
+  {
+   "country": "Serbia",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Serbian",
+    " Ark",
+    " demos",
+    "keep",
+    "301",
+    "rov",
+    " burns",
+    " Barg",
+    "Soc",
+    " destroying",
+    " parity",
+    " Legs",
+    "UG",
+    " Gry",
+    " cite",
+    " dissolved",
+    " Planned",
+    "sole",
+    "present",
+    " Lonely",
+    "ava",
+    " +/-",
+    " fledgling",
+    " manipulative",
+    " shirts"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.5169939398765564
+  },
+  {
+   "country": "Spain",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    "acion",
+    " Newcastle",
+    " personalized"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.05556637421250343
+  },
+  {
+   "country": "Spain",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Madrid",
+    "299",
+    "ardo"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.13325250148773193
+  },
+  {
+   "country": "Spain",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Madrid",
+    " Javier",
+    " los"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.29806092381477356
+  },
+  {
+   "country": "Spain",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    "acion",
+    " Newcastle",
+    " personalized",
+    "transfer",
+    " suits",
+    "idae",
+    " keyboard",
+    "880",
+    " catalyst",
+    " Gonz",
+    "ney",
+    "EU",
+    "umbling",
+    " restriction",
+    "iders",
+    " THR",
+    " grate",
+    " crop",
+    "whose",
+    " Install",
+    " cultures",
+    " shredded",
+    " Psychology",
+    "oline",
+    " borders"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.265697181224823
+  },
+  {
+   "country": "Spain",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Madrid",
+    "299",
+    "ardo",
+    " royalty",
+    "RES",
+    " vertically",
+    " lig",
+    " whatsoever",
+    "Tab",
+    " dealers",
+    " mc",
+    " accents",
+    " Newcastle",
+    "aron",
+    "ferred",
+    "cam",
+    " Martinez",
+    "ulsion",
+    " lengthy",
+    " Disaster",
+    " Apply",
+    " revel",
+    " referencing",
+    "ilo",
+    " Traps"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.3770470917224884
+  },
+  {
+   "country": "Spain",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Madrid",
+    " Javier",
+    " los",
+    " Rodriguez",
+    " Spani",
+    "CA",
+    "ismo",
+    " fictional",
+    " Corpus",
+    " Equip",
+    " que",
+    "ugar",
+    " cautioned",
+    " Sierra",
+    "arc",
+    " Calcul",
+    " cul",
+    " miracles",
+    "azz",
+    " recurring",
+    "near",
+    " microphone",
+    "eal",
+    " primer",
+    "ORTS"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5826126933097839
+  },
+  {
+   "country": "Sweden",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " backlash",
+    "Put",
+    "1994"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.060899436473846436
+  },
+  {
+   "country": "Sweden",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Swedish",
+    " slump",
+    " sock"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.1181824803352356
+  },
+  {
+   "country": "Sweden",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Sweden",
+    " Anders",
+    "Stock"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.315519243478775
+  },
+  {
+   "country": "Sweden",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " backlash",
+    "Put",
+    "1994",
+    " obsession",
+    " partnerships",
+    "frame",
+    " incidence",
+    " whisky",
+    "ools",
+    " pickup",
+    " monetary",
+    " propel",
+    " Chains",
+    " scra",
+    "resses",
+    "FUN",
+    " Author",
+    " Anders",
+    " inverse",
+    "iper",
+    " delightful",
+    "confirmed",
+    " Academic",
+    "sent",
+    " tanks"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2678557336330414
+  },
+  {
+   "country": "Sweden",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Swedish",
+    " slump",
+    " sock",
+    " Sight",
+    "Stephen",
+    "itte",
+    " dash",
+    " Swanson",
+    "sex",
+    " rese",
+    " mechanisms",
+    " Stupid",
+    " trusts",
+    " penned",
+    "sen",
+    "Ton",
+    " sustainability",
+    " advertisement",
+    " ranging",
+    " TEXT",
+    " chased",
+    "arding",
+    " Taken",
+    " isot",
+    "cop"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.3915286958217621
+  },
+  {
+   "country": "Sweden",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Sweden",
+    " Anders",
+    "Stock",
+    " sled",
+    " Stranger",
+    " slime",
+    "itte",
+    " merge",
+    " STEM",
+    " Lund",
+    " timeless",
+    "lers",
+    " Administrator",
+    " fors",
+    "grab",
+    " publication",
+    " hampered",
+    "ause",
+    " Sight",
+    " pricing",
+    " anonymously",
+    " piano",
+    " Span",
+    "402",
+    " fantasies"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.5676051378250122
+  },
+  {
+   "country": "Thailand",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    "ahu",
+    " Thailand",
+    " IGN"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.061397816985845566
+  },
+  {
+   "country": "Thailand",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Thailand",
+    "365",
+    " boon"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.13820013403892517
+  },
+  {
+   "country": "Thailand",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Thailand",
+    " Chow",
+    " ng"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.3621319532394409
+  },
+  {
+   "country": "Thailand",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    "ahu",
+    " Thailand",
+    " IGN",
+    " beings",
+    " Albany",
+    " garn",
+    " mileage",
+    "rant",
+    "Stats",
+    " choosing",
+    "iley",
+    " Millions",
+    " mixer",
+    "qi",
+    " \u2191",
+    "ford",
+    "iform",
+    " haze",
+    " ETH",
+    " Grip",
+    " gospel",
+    " simulator",
+    " Sul",
+    "Bring",
+    " Zig"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.27973803877830505
+  },
+  {
+   "country": "Thailand",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Thailand",
+    "365",
+    " boon",
+    " Thunder",
+    " Tray",
+    "Rank",
+    "arson",
+    " CY",
+    " bending",
+    " Tooth",
+    " Ahmed",
+    "tm",
+    " Bringing",
+    " succession",
+    " subconscious",
+    "requires",
+    " Fans",
+    " \ufffd",
+    "approved",
+    " installment",
+    " ape",
+    " bridges",
+    "yet",
+    "bow",
+    "phy"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.38839706778526306
+  },
+  {
+   "country": "Thailand",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Thailand",
+    " Chow",
+    " ng",
+    "Jay",
+    " bod",
+    "changed",
+    " Pt",
+    "745",
+    " CY",
+    " Allow",
+    " deity",
+    " sprawling",
+    "rays",
+    "idd",
+    " Component",
+    " lantern",
+    "pick",
+    " crotch",
+    " readers",
+    "soon",
+    "Um",
+    " mastering",
+    " Wing",
+    " CPI",
+    "Public"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.6068059802055359
+  },
+  {
+   "country": "Turkey",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " jihadist",
+    " polit",
+    " Euph"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.07392798364162445
+  },
+  {
+   "country": "Turkey",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Ankara",
+    " Islamic",
+    " Temporary"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.13742144405841827
+  },
+  {
+   "country": "Turkey",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Ankara",
+    " Muslim",
+    " KH"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.3184816539287567
+  },
+  {
+   "country": "Turkey",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " jihadist",
+    " polit",
+    " Euph",
+    " Apart",
+    " deleg",
+    "LS",
+    "danger",
+    "blue",
+    " longstanding",
+    "eddy",
+    " SCH",
+    "vet",
+    " bloated",
+    " stances",
+    "Har",
+    " casing",
+    " sympath",
+    " envisioned",
+    " Previous",
+    "custom",
+    " Barron",
+    " circumvent",
+    "508",
+    "ivity",
+    "never"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.28769609332084656
+  },
+  {
+   "country": "Turkey",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Ankara",
+    " Islamic",
+    " Temporary",
+    "Tur",
+    " tabs",
+    " embro",
+    " responsibly",
+    "##",
+    " obstruction",
+    "CT",
+    " Oath",
+    " accur",
+    "augh",
+    "435",
+    " apt",
+    " dismissive",
+    " Cunningham",
+    "push",
+    " ambassador",
+    "hal",
+    " Hath",
+    " Banana",
+    " expans",
+    "aku",
+    " GOP"
+   ],
+   "has": {
+    "country": false,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.37832990288734436
+  },
+  {
+   "country": "Turkey",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Ankara",
+    " Muslim",
+    " KH",
+    " axes",
+    "Hash",
+    " Protection",
+    " insulting",
+    " tabs",
+    " turkey",
+    "ERA",
+    " Euph",
+    "shaw",
+    " Temporary",
+    "Apple",
+    " forth",
+    "pose",
+    " majesty",
+    "[[",
+    " Rule",
+    "erness",
+    " retract",
+    " energ",
+    "UD",
+    " fanc",
+    "441"
+   ],
+   "has": {
+    "country": true,
+    "capital": true,
+    "language": false
+   },
+   "frac": 0.5661356449127197
+  },
+  {
+   "country": "Ukraine",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Assad",
+    " illegally",
+    " Quart"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.0741141140460968
+  },
+  {
+   "country": "Ukraine",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Ukraine",
+    "Democratic",
+    " vile"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.15455102920532227
+  },
+  {
+   "country": "Ukraine",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Ukrainian",
+    "henko",
+    " ///"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.3485472798347473
+  },
+  {
+   "country": "Ukraine",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Assad",
+    " illegally",
+    " Quart",
+    " fronts",
+    " Lenin",
+    " Scal",
+    "Area",
+    " helpless",
+    "status",
+    "ately",
+    " cleanup",
+    "flag",
+    " porous",
+    " JS",
+    "Gam",
+    " \u00bd",
+    " Jub",
+    " Understand",
+    "heavy",
+    " mimic",
+    " safer",
+    "031",
+    " loyalty",
+    "broad",
+    " trauma"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.29323044419288635
+  },
+  {
+   "country": "Ukraine",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Ukraine",
+    "Democratic",
+    " vile",
+    " MTV",
+    " violate",
+    "Wa",
+    " Units",
+    " exacerbated",
+    " Vern",
+    " swung",
+    "nie",
+    "_(",
+    " readiness",
+    " McMahon",
+    " Hollow",
+    "utter",
+    " ply",
+    "shut",
+    " fights",
+    "allion",
+    " RD",
+    " alterations",
+    " reservoir",
+    "Beyond",
+    "588"
+   ],
+   "has": {
+    "country": true,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.41542956233024597
+  },
+  {
+   "country": "Ukraine",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Ukrainian",
+    "henko",
+    " ///",
+    " RD",
+    " shoved",
+    "Nov",
+    " militia",
+    " vap",
+    "arus",
+    " dividing",
+    " Moves",
+    "never",
+    "MK",
+    " Wrath",
+    " specifics",
+    " playground",
+    " 298",
+    " Sync",
+    " justify",
+    " Bars",
+    "YS",
+    " drastically",
+    "iot",
+    " {}",
+    " Availability"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.5596123337745667
+  },
+  {
+   "country": "Vietnam",
+   "k": 3,
+   "layer": 7,
+   "atoms": [
+    " Sha",
+    " Manit",
+    "Starting"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.04478522390127182
+  },
+  {
+   "country": "Vietnam",
+   "k": 3,
+   "layer": 8,
+   "atoms": [
+    " Vietnamese",
+    " Shi",
+    " Hancock"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.09965487569570541
+  },
+  {
+   "country": "Vietnam",
+   "k": 3,
+   "layer": 9,
+   "atoms": [
+    " Vietnamese",
+    " Quan",
+    " Hawaii"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.3188757300376892
+  },
+  {
+   "country": "Vietnam",
+   "k": 25,
+   "layer": 7,
+   "atoms": [
+    " Sha",
+    " Manit",
+    "Starting",
+    "mil",
+    " Heroic",
+    " Pam",
+    " Ish",
+    "voice",
+    " dred",
+    "nv",
+    "DO",
+    " garrison",
+    " Upper",
+    "massive",
+    " olive",
+    " Haf",
+    " souls",
+    " Surprise",
+    " bronze",
+    "enforcement",
+    " freely",
+    " cousin",
+    " queries",
+    " ALE",
+    "camp"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": false
+   },
+   "frac": 0.2388574182987213
+  },
+  {
+   "country": "Vietnam",
+   "k": 25,
+   "layer": 8,
+   "atoms": [
+    " Vietnamese",
+    " Shi",
+    " Hancock",
+    "HC",
+    "Rain",
+    " Harbor",
+    "hd",
+    " Conce",
+    "voice",
+    " checklist",
+    "mil",
+    "render",
+    " Ways",
+    " Hurricane",
+    " Liang",
+    "ination",
+    " 418",
+    "Imp",
+    " Kand",
+    " misuse",
+    " gui",
+    "ayed",
+    "ony",
+    " memoir",
+    " scenic"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.325448215007782
+  },
+  {
+   "country": "Vietnam",
+   "k": 25,
+   "layer": 9,
+   "atoms": [
+    " Vietnamese",
+    " Quan",
+    " Hawaii",
+    " Disciple",
+    " LIN",
+    " Ng",
+    " Repair",
+    "Har",
+    " rainy",
+    " Sect",
+    " teaser",
+    "Account",
+    " crafted",
+    " Rouge",
+    "hew",
+    " determining",
+    " nipple",
+    " saturation",
+    "ready",
+    " breakout",
+    " encourages",
+    "ithe",
+    " Hughes",
+    "item",
+    " ordinarily"
+   ],
+   "has": {
+    "country": false,
+    "capital": false,
+    "language": true
+   },
+   "frac": 0.569381594657898
+  }
+ ]
+}

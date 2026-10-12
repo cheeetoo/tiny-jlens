@@ -14,8 +14,11 @@ See PROTOCOL.md.
   floor    the paper's own probe-swap.json, verbatim: capability + swap (the deviation cost)
 
 Writes results/c3_reasoning/{results.json, prompts.json, summary.txt}.
-Run:  python -m jl.c3_reasoning            (the criterion)
-      python -m jl.c3_reasoning swap_ops   (E3 under both swap operations)
+Run:  python -m jl.c3_reasoning              (the criterion)
+      python -m jl.c3_reasoning swap_ops     (E3 under both swap operations)
+      python -m jl.c3_reasoning probe_cues   (E5's probe cues: what GPT-2 is about to say at the
+                                              end of each, and the J-lens vectors in each probe's
+                                              J-space part)
 """
 from __future__ import annotations
 
@@ -59,9 +62,11 @@ DEPTH_LAYERS = [4, 5, 6, 7, 8, 9, 10]  # E4 single-layer sweep
 #
 # For the privileging experiment (§3.3, Fig 16) we also build a probe for each
 # country from several cue prompts that *imply* the country through different
-# surface cues and ask about different attributes, with the country name never the
-# next token (paper: "prompts that imply the same intermediate through different
-# surface cues and ask different questions about it").
+# surface cues and ask about different attributes (paper: "prompts that imply the
+# same intermediate through different surface cues and ask different questions
+# about it").  The cues never name the country, but GPT-2 can't answer most of
+# their questions and often predicts the country itself as the next token
+# (`probe_cues` below).
 #
 # The paper's own two-hop set (ref/.../probe-swap.json) is loaded verbatim for the
 # capability-floor check below.
@@ -120,8 +125,8 @@ FAMILIES = [
 ]
 
 # §3.3 privileging: cues that IMPLY the country through varied surface cues and
-# ask about a DIFFERENT attribute, so the country name is never the next token.
-# Filled per country from its capital / language / continent.
+# ask about a DIFFERENT attribute.  The country is never named, but it can still be
+# GPT-2's next token (see `probe_cues`).  Filled per country from its capital / language.
 PROBE_CUES = [
     "People in the country whose capital is {capital} mostly speak the language of",
     "A traveler flying into {capital} has landed on the continent of",
@@ -135,6 +140,25 @@ CASE_STUDY = dict(family="lang_capital", source="France", target="China")  # Par
 
 
 # =============================================================================== the run
+
+
+@torch.no_grad()
+def country_probes(lm, countries) -> dict:
+    """E5's probe for each country, {country: {L: probe}} at every lens layer: the mean final-token
+    residual over PROBE_CUES filled in for that country, minus the mean of these over `countries`
+    (paper: "the mean residual-stream activation over a set of prompts that imply the same
+    intermediate ..., minus the mean over all intermediates")."""
+    probe = {}
+    for c in sorted(countries):
+        f = COUNTRIES[c]
+        stacks = {L: [] for L in lm.layers}
+        for cue in PROBE_CUES:
+            r = lm.residuals(lm.encode(cue.format(capital=f["capital"], language=f["language"])))
+            for L in lm.layers:
+                stacks[L].append(r[L][-1])
+        probe[c] = {L: torch.stack(v).mean(0) for L, v in stacks.items()}
+    grand = {L: torch.stack([probe[c][L] for c in probe]).mean(0) for L in lm.layers}
+    return {c: {L: p[L] - grand[L] for L in lm.layers} for c, p in probe.items()}
 
 
 class Words:
@@ -291,22 +315,10 @@ def main():
     # probe per country from PROBE_CUES (imply country, ask other attribute), minus
     # grand mean; split by pursuit into J-space (k atoms) + remainder at every layer, for each k
     # in KS; and, as a control, against a same-size random dictionary at the band layers.
-    probe = {}
-    for c in sorted(countries_pass):
-        f = COUNTRIES[c]
-        stacks = {L: [] for L in lm.layers}
-        for cue in PROBE_CUES:
-            r = lm.residuals(lm.encode(cue.format(capital=f["capital"], language=f["language"])))
-            for L in lm.layers:
-                stacks[L].append(r[L][-1])
-        probe[c] = {L: torch.stack(v).mean(0) for L, v in stacks.items()}
-    grand = {L: torch.stack([probe[c][L] for c in probe]).mean(0) for L in lm.layers}
+    probe = country_probes(lm, countries_pass)
     rdict = {L: torch.randn(lm.V(L).shape, generator=torch.Generator().manual_seed(L)).to(lm.device) for L in band}
     part = {k: {} for k in KS}                  # part[k][c][L] = dict(j, n, support)
     rpart = {k: {} for k in KS}                 # the same split with the random dictionary
-    for c in probe:
-        for L in lm.layers:
-            probe[c][L] = probe[c][L] - grand[L]  # store centered probe
     for c in probe:
         for k in KS:
             part[k][c], rpart[k][c] = {}, {}
@@ -515,5 +527,78 @@ def swap_ops():
             print(f"{name:7s} {fam:14s} {sum(r)}/{len(r)} = {100 * sum(r) / len(r):.1f}%")
 
 
+# =============================================================================== probe cues
+@torch.no_grad()
+def probe_cues():
+    """E5's probes, looked at directly, for the countries `main` keeps (results/c3_reasoning/
+    prompts.json).  The paper doesn't say whether the intermediate may be the next token of its
+    probe prompts (which it doesn't release); its one released decomposition (Fig. 16, China)
+    has China, Beijing and pandas as the top J-lens vectors.
+
+      cues   for each country and cue, GPT-2's top 5 next tokens and the rank of the country,
+             its capital and its language (any single-token form) as the next token
+      atoms  for each country, band layer and k in KS, the k J-lens vectors of the probe's
+             J-space part, in the order pursuit picks them, and whether they include the
+             country, its capital or its language
+
+    Writes results/c3_reasoning/probe_cues.json."""
+    lm = jl.Lensed()
+    W = Words(lm)
+    R = jl.results_dir("c3_reasoning")
+    countries = sorted({it["intermediate"] for it in json.load(open(R / "prompts.json"))})
+    words = lambda c: dict(country=c, capital=COUNTRIES[c]["capital"], language=COUNTRIES[c]["language"])
+
+    cues = []
+    for c in countries:
+        f = COUNTRIES[c]
+        for i, cue in enumerate(PROBE_CUES):
+            text = cue.format(capital=f["capital"], language=f["language"])
+            lg = lm.logits(lm.encode(text))[-1]
+            cues.append(dict(country=c, cue=i, text=text,
+                             top5=[lm.dec(t) for t in lg.topk(5).indices.tolist()],
+                             rank={name: int(jl.ranks_of(lg, W(w)).min()) if W(w) else 10**9
+                                   for name, w in words(c).items()}))
+
+    probe = country_probes(lm, countries)
+    atoms = []
+    for c in countries:
+        ids = {name: set(W(w)) for name, w in words(c).items()}
+        for k in KS:
+            for L in jl.BAND:
+                support, recon = jl.pursuit(probe[c][L], lm.V(L), k)
+                atoms.append(dict(country=c, k=k, layer=L, atoms=[lm.dec(t) for t in support],
+                                  has={name: bool(set(support) & v) for name, v in ids.items()},
+                                  frac=float(recon.norm() ** 2 / probe[c][L].norm() ** 2)))
+    json.dump(dict(countries=countries, cues=cues, atoms=atoms), open(R / "probe_cues.json", "w"), indent=1)
+
+    n = len(countries)
+    print(f"probe cues, {n} countries: next-token rank of the country / its capital / its language")
+    for i, cue in enumerate(PROBE_CUES):
+        rs = [r for r in cues if r["cue"] == i]
+        print(f"  cue {i}: {cue}")
+        for name in ("country", "capital", "language"):
+            v = [r["rank"][name] for r in rs]
+            print(f"    {name:8s} top-1 {sum(x == 1 for x in v):2d}/{n}   top-5 {sum(x <= 5 for x in v):2d}/{n}   "
+                  f"median rank {median(v):.0f}")
+    per = [sum(r["rank"]["country"] <= 5 for r in cues if r["country"] == c) for c in countries]
+    print(f"  cues per country with the country in the top 5: median {median(per):.0f} of {len(PROBE_CUES)} "
+          f"(min {min(per)}, max {max(per)})")
+    print("probes' J-space parts: countries whose own country / capital / language token is among the k vectors")
+    for k in KS:
+        for L in jl.BAND:
+            a = [x for x in atoms if x["k"] == k and x["layer"] == L]
+            print(f"  k={k:2d} L{L}: " + "   ".join(f"{name} {sum(x['has'][name] for x in a):2d}/{n}"
+                                                for name in ("country", "capital", "language")))
+    for c in ("France", "China"):
+        for x in atoms:
+            if x["country"] == c and x["k"] == K_PURSUIT:
+                print(f"  {c} L{x['layer']} k={x['k']}: {x['atoms']}")
+
+
 if __name__ == "__main__":
-    swap_ops() if "swap_ops" in sys.argv[1:] else main()
+    if "swap_ops" in sys.argv[1:]:
+        swap_ops()
+    elif "probe_cues" in sys.argv[1:]:
+        probe_cues()
+    else:
+        main()

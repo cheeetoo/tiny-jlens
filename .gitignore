@@ -18,5 +18,4 @@ commentary/*
 post/post.html
 
 # the local Markdown copy of the post and its paste instructions (the post itself lives on LessWrong)
-post/lesswrong/lesswrong_post.md
 post/lesswrong/README.md
