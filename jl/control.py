@@ -474,7 +474,6 @@ def introspect_privilege(A):
       rest_clamp    the rest, with the J-lens coordinates of the word's forms and of the pursuit
                     support held at their clean values at every position and lens layer
       random        a random direction
-      rpart / rrest the same split against a same-size random dictionary (as in c1_report)
     Strengths run past the paper's 0.64, since GPT-2's J-lens vector needs about 10 times Claude's
     strength.  Score: the report's rank (and the other positions'), as in `introspect`."""
     assert A.name == "gpt2", "GPT-2 only"
@@ -489,7 +488,6 @@ def introspect_privilege(A):
     concepts = concepts[:int(os.environ.get("NCONCEPTS", len(concepts)))]        # for a quick check
     raw = {w: torch.stack([lm.residuals(lm.encode(CONCEPT_PROMPT.format(concept=w)))[L][-1] for L in lm.layers])
            for w in everyone}
-    rdict = {L: torch.randn(lm.V(L).shape, generator=torch.Generator().manual_seed(L)).to(lm.device) for L in A.band}
     g = torch.Generator().manual_seed(0)
     rows, t0 = [], time.time()
     for ci, w in enumerate(concepts):
@@ -507,9 +505,6 @@ def introspect_privilege(A):
             clamps[f"rest_clamp_k{k}"] = jl.clamp_edits(
                 lm, ids, {L: torch.stack([lm.v(L, i) for i in sorted(set(forms(A, w)) | set(split[L][0]))])
                           for L in lm.layers}, clean=clean)
-            rsplit = {L: jl.pursuit(u[L], rdict[L], k)[1] for L in A.band}
-            dirs[f"rpart_k{k}"] = rsplit
-            dirs[f"rrest_k{k}"] = {L: u[L] - rsplit[L] for L in A.band}
         for cond, D in dirs.items():
             for s in PRIV_STRENGTHS:
                 edits = [Edit(L, lambda h, pos, d=jl.unit(D[L]) * norms[L] * s: h + d, qpos) for L in A.band]

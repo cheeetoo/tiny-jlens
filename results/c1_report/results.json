@@ -2581,24 +2581,6 @@
    "cat": "country",
    "gate": true,
    "target": "France",
-   "cond": "rpart",
-   "k": 2,
-   "before": 21,
-   "after": 6
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "France",
-   "cond": "rrest",
-   "k": 2,
-   "before": 21,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "France",
    "cond": "jpart",
    "k": 16,
    "before": 21,
@@ -2621,24 +2603,6 @@
    "k": 16,
    "before": 21,
    "after": 15
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "France",
-   "cond": "rpart",
-   "k": 16,
-   "before": 21,
-   "after": 6
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "France",
-   "cond": "rrest",
-   "k": 16,
-   "before": 21,
-   "after": 1
   },
   {
    "cat": "country",
@@ -2680,24 +2644,6 @@
    "cat": "country",
    "gate": true,
    "target": "Brazil",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 4
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Brazil",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Brazil",
    "cond": "jpart",
    "k": 16,
    "before": 4,
@@ -2720,24 +2666,6 @@
    "k": 16,
    "before": 4,
    "after": 7
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Brazil",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 2
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Brazil",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "country",
@@ -2779,24 +2707,6 @@
    "cat": "country",
    "gate": true,
    "target": "China",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2,
-   "after": 2
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "China",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "China",
    "cond": "jpart",
    "k": 16,
    "before": 2,
@@ -2819,24 +2729,6 @@
    "k": 16,
    "before": 2,
    "after": 2
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "China",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "China",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2,
-   "after": 1
   },
   {
    "cat": "country",
@@ -2873,24 +2765,6 @@
    "k": 2,
    "before": 10,
    "after": 13
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "India",
-   "cond": "rpart",
-   "k": 2,
-   "before": 10,
-   "after": 4
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "India",
-   "cond": "rrest",
-   "k": 2,
-   "before": 10,
-   "after": 1
   },
   {
    "cat": "country",
@@ -2918,24 +2792,6 @@
    "k": 16,
    "before": 10,
    "after": 12
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "India",
-   "cond": "rpart",
-   "k": 16,
-   "before": 10,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "India",
-   "cond": "rrest",
-   "k": 16,
-   "before": 10,
-   "after": 1
   },
   {
    "cat": "country",
@@ -2977,24 +2833,6 @@
    "cat": "country",
    "gate": true,
    "target": "Spain",
-   "cond": "rpart",
-   "k": 2,
-   "before": 15,
-   "after": 5
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Spain",
-   "cond": "rrest",
-   "k": 2,
-   "before": 15,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Spain",
    "cond": "jpart",
    "k": 16,
    "before": 15,
@@ -3017,24 +2855,6 @@
    "k": 16,
    "before": 15,
    "after": 24
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Spain",
-   "cond": "rpart",
-   "k": 16,
-   "before": 15,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Spain",
-   "cond": "rrest",
-   "k": 16,
-   "before": 15,
-   "after": 1
   },
   {
    "cat": "country",
@@ -3076,24 +2896,6 @@
    "cat": "country",
    "gate": true,
    "target": "Italy",
-   "cond": "rpart",
-   "k": 2,
-   "before": 38,
-   "after": 9
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Italy",
-   "cond": "rrest",
-   "k": 2,
-   "before": 38,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Italy",
    "cond": "jpart",
    "k": 16,
    "before": 38,
@@ -3116,24 +2918,6 @@
    "k": 16,
    "before": 38,
    "after": 42
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Italy",
-   "cond": "rpart",
-   "k": 16,
-   "before": 38,
-   "after": 11
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Italy",
-   "cond": "rrest",
-   "k": 16,
-   "before": 38,
-   "after": 1
   },
   {
    "cat": "country",
@@ -3175,24 +2959,6 @@
    "cat": "country",
    "gate": true,
    "target": "Germany",
-   "cond": "rpart",
-   "k": 2,
-   "before": 37,
-   "after": 31
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Germany",
-   "cond": "rrest",
-   "k": 2,
-   "before": 37,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Germany",
    "cond": "jpart",
    "k": 16,
    "before": 37,
@@ -3215,24 +2981,6 @@
    "k": 16,
    "before": 37,
    "after": 32
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Germany",
-   "cond": "rpart",
-   "k": 16,
-   "before": 37,
-   "after": 17
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Germany",
-   "cond": "rrest",
-   "k": 16,
-   "before": 37,
-   "after": 1
   },
   {
    "cat": "country",
@@ -3274,24 +3022,6 @@
    "cat": "country",
    "gate": true,
    "target": "Canada",
-   "cond": "rpart",
-   "k": 2,
-   "before": 13,
-   "after": 22
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Canada",
-   "cond": "rrest",
-   "k": 2,
-   "before": 13,
-   "after": 1
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Canada",
    "cond": "jpart",
    "k": 16,
    "before": 13,
@@ -3314,24 +3044,6 @@
    "k": 16,
    "before": 13,
    "after": 10
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Canada",
-   "cond": "rpart",
-   "k": 16,
-   "before": 13,
-   "after": 5
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Canada",
-   "cond": "rrest",
-   "k": 16,
-   "before": 13,
-   "after": 1
   },
   {
    "cat": "country",
@@ -3368,24 +3080,6 @@
    "k": 2,
    "before": 16,
    "after": 31
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Mexico",
-   "cond": "rpart",
-   "k": 2,
-   "before": 16,
-   "after": 4
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Mexico",
-   "cond": "rrest",
-   "k": 2,
-   "before": 16,
-   "after": 1
   },
   {
    "cat": "country",
@@ -3415,24 +3109,6 @@
    "after": 19
   },
   {
-   "cat": "country",
-   "gate": true,
-   "target": "Mexico",
-   "cond": "rpart",
-   "k": 16,
-   "before": 16,
-   "after": 8
-  },
-  {
-   "cat": "country",
-   "gate": true,
-   "target": "Mexico",
-   "cond": "rrest",
-   "k": 16,
-   "before": 16,
-   "after": 1
-  },
-  {
    "cat": "color",
    "gate": true,
    "target": "Red",
@@ -3472,24 +3148,6 @@
    "cat": "color",
    "gate": true,
    "target": "Red",
-   "cond": "rpart",
-   "k": 2,
-   "before": 5,
-   "after": 5
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Red",
-   "cond": "rrest",
-   "k": 2,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Red",
    "cond": "jpart",
    "k": 16,
    "before": 5,
@@ -3512,24 +3170,6 @@
    "k": 16,
    "before": 5,
    "after": 5
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Red",
-   "cond": "rpart",
-   "k": 16,
-   "before": 5,
-   "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Red",
-   "cond": "rrest",
-   "k": 16,
-   "before": 5,
-   "after": 3
   },
   {
    "cat": "color",
@@ -3571,24 +3211,6 @@
    "cat": "color",
    "gate": true,
    "target": "Green",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2,
-   "after": 2
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Green",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Green",
    "cond": "jpart",
    "k": 16,
    "before": 2,
@@ -3611,24 +3233,6 @@
    "k": 16,
    "before": 2,
    "after": 2
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Green",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Green",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2,
-   "after": 1
   },
   {
    "cat": "color",
@@ -3665,24 +3269,6 @@
    "k": 2,
    "before": 6,
    "after": 6
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Yellow",
-   "cond": "rpart",
-   "k": 2,
-   "before": 6,
-   "after": 6
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Yellow",
-   "cond": "rrest",
-   "k": 2,
-   "before": 6,
-   "after": 1
   },
   {
    "cat": "color",
@@ -3714,24 +3300,6 @@
   {
    "cat": "color",
    "gate": true,
-   "target": "Yellow",
-   "cond": "rpart",
-   "k": 16,
-   "before": 6,
-   "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Yellow",
-   "cond": "rrest",
-   "k": 16,
-   "before": 6,
-   "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
    "target": "Black",
    "cond": "lens",
    "k": null,
@@ -3769,24 +3337,6 @@
    "cat": "color",
    "gate": true,
    "target": "Black",
-   "cond": "rpart",
-   "k": 2,
-   "before": 3,
-   "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Black",
-   "cond": "rrest",
-   "k": 2,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Black",
    "cond": "jpart",
    "k": 16,
    "before": 3,
@@ -3809,24 +3359,6 @@
    "k": 16,
    "before": 3,
    "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Black",
-   "cond": "rpart",
-   "k": 16,
-   "before": 3,
-   "after": 2
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Black",
-   "cond": "rrest",
-   "k": 16,
-   "before": 3,
-   "after": 1
   },
   {
    "cat": "color",
@@ -3863,24 +3395,6 @@
    "k": 2,
    "before": 4,
    "after": 4
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "White",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "White",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "color",
@@ -3908,24 +3422,6 @@
    "k": 16,
    "before": 4,
    "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "White",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 3
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "White",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "color",
@@ -3967,24 +3463,6 @@
    "cat": "color",
    "gate": true,
    "target": "Orange",
-   "cond": "rpart",
-   "k": 2,
-   "before": 8,
-   "after": 8
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Orange",
-   "cond": "rrest",
-   "k": 2,
-   "before": 8,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Orange",
    "cond": "jpart",
    "k": 16,
    "before": 8,
@@ -4007,24 +3485,6 @@
    "k": 16,
    "before": 8,
    "after": 6
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Orange",
-   "cond": "rpart",
-   "k": 16,
-   "before": 8,
-   "after": 5
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Orange",
-   "cond": "rrest",
-   "k": 16,
-   "before": 8,
-   "after": 1
   },
   {
    "cat": "color",
@@ -4066,24 +3526,6 @@
    "cat": "color",
    "gate": true,
    "target": "Purple",
-   "cond": "rpart",
-   "k": 2,
-   "before": 7,
-   "after": 5
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Purple",
-   "cond": "rrest",
-   "k": 2,
-   "before": 7,
-   "after": 2
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Purple",
    "cond": "jpart",
    "k": 16,
    "before": 7,
@@ -4106,24 +3548,6 @@
    "k": 16,
    "before": 7,
    "after": 7
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Purple",
-   "cond": "rpart",
-   "k": 16,
-   "before": 7,
-   "after": 7
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Purple",
-   "cond": "rrest",
-   "k": 16,
-   "before": 7,
-   "after": 2
   },
   {
    "cat": "color",
@@ -4160,24 +3584,6 @@
    "k": 2,
    "before": 10,
    "after": 9
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Pink",
-   "cond": "rpart",
-   "k": 2,
-   "before": 10,
-   "after": 7
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Pink",
-   "cond": "rrest",
-   "k": 2,
-   "before": 10,
-   "after": 1
   },
   {
    "cat": "color",
@@ -4209,24 +3615,6 @@
   {
    "cat": "color",
    "gate": true,
-   "target": "Pink",
-   "cond": "rpart",
-   "k": 16,
-   "before": 10,
-   "after": 2
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Pink",
-   "cond": "rrest",
-   "k": 16,
-   "before": 10,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
    "target": "Brown",
    "cond": "lens",
    "k": null,
@@ -4264,24 +3652,6 @@
    "cat": "color",
    "gate": true,
    "target": "Brown",
-   "cond": "rpart",
-   "k": 2,
-   "before": 9,
-   "after": 7
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Brown",
-   "cond": "rrest",
-   "k": 2,
-   "before": 9,
-   "after": 1
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Brown",
    "cond": "jpart",
    "k": 16,
    "before": 9,
@@ -4304,24 +3674,6 @@
    "k": 16,
    "before": 9,
    "after": 8
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Brown",
-   "cond": "rpart",
-   "k": 16,
-   "before": 9,
-   "after": 5
-  },
-  {
-   "cat": "color",
-   "gate": true,
-   "target": "Brown",
-   "cond": "rrest",
-   "k": 16,
-   "before": 9,
-   "after": 2
   },
   {
    "cat": "fruit",
@@ -4358,24 +3710,6 @@
    "k": 2,
    "before": 7,
    "after": 8
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Apple",
-   "cond": "rpart",
-   "k": 2,
-   "before": 7,
-   "after": 6
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Apple",
-   "cond": "rrest",
-   "k": 2,
-   "before": 7,
-   "after": 1
   },
   {
    "cat": "fruit",
@@ -4407,24 +3741,6 @@
   {
    "cat": "fruit",
    "gate": false,
-   "target": "Apple",
-   "cond": "rpart",
-   "k": 16,
-   "before": 7,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Apple",
-   "cond": "rrest",
-   "k": 16,
-   "before": 7,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
    "target": "Orange",
    "cond": "lens",
    "k": null,
@@ -4462,24 +3778,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Orange",
-   "cond": "rpart",
-   "k": 2,
-   "before": 5,
-   "after": 6
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Orange",
-   "cond": "rrest",
-   "k": 2,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Orange",
    "cond": "jpart",
    "k": 16,
    "before": 5,
@@ -4502,24 +3800,6 @@
    "k": 16,
    "before": 5,
    "after": 19
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Orange",
-   "cond": "rpart",
-   "k": 16,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Orange",
-   "cond": "rrest",
-   "k": 16,
-   "before": 5,
-   "after": 1
   },
   {
    "cat": "fruit",
@@ -4561,24 +3841,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Banana",
-   "cond": "rpart",
-   "k": 2,
-   "before": 9,
-   "after": 16
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Banana",
-   "cond": "rrest",
-   "k": 2,
-   "before": 9,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Banana",
    "cond": "jpart",
    "k": 16,
    "before": 9,
@@ -4601,24 +3863,6 @@
    "k": 16,
    "before": 9,
    "after": 10
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Banana",
-   "cond": "rpart",
-   "k": 16,
-   "before": 9,
-   "after": 5
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Banana",
-   "cond": "rrest",
-   "k": 16,
-   "before": 9,
-   "after": 2
   },
   {
    "cat": "fruit",
@@ -4660,24 +3904,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Grape",
-   "cond": "rpart",
-   "k": 2,
-   "before": 6,
-   "after": 4
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Grape",
-   "cond": "rrest",
-   "k": 2,
-   "before": 6,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Grape",
    "cond": "jpart",
    "k": 16,
    "before": 6,
@@ -4700,24 +3926,6 @@
    "k": 16,
    "before": 6,
    "after": 5
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Grape",
-   "cond": "rpart",
-   "k": 16,
-   "before": 6,
-   "after": 2
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Grape",
-   "cond": "rrest",
-   "k": 16,
-   "before": 6,
-   "after": 1
   },
   {
    "cat": "fruit",
@@ -4759,24 +3967,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Cherry",
-   "cond": "rpart",
-   "k": 2,
-   "before": 13,
-   "after": 13
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Cherry",
-   "cond": "rrest",
-   "k": 2,
-   "before": 13,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Cherry",
    "cond": "jpart",
    "k": 16,
    "before": 13,
@@ -4799,24 +3989,6 @@
    "k": 16,
    "before": 13,
    "after": 22
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Cherry",
-   "cond": "rpart",
-   "k": 16,
-   "before": 13,
-   "after": 3
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Cherry",
-   "cond": "rrest",
-   "k": 16,
-   "before": 13,
-   "after": 1
   },
   {
    "cat": "fruit",
@@ -4858,24 +4030,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Lemon",
-   "cond": "rpart",
-   "k": 2,
-   "before": 10,
-   "after": 8
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lemon",
-   "cond": "rrest",
-   "k": 2,
-   "before": 10,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lemon",
    "cond": "jpart",
    "k": 16,
    "before": 10,
@@ -4898,24 +4052,6 @@
    "k": 16,
    "before": 10,
    "after": 12
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lemon",
-   "cond": "rpart",
-   "k": 16,
-   "before": 10,
-   "after": 4
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lemon",
-   "cond": "rrest",
-   "k": 16,
-   "before": 10,
-   "after": 1
   },
   {
    "cat": "fruit",
@@ -4957,24 +4093,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Lime",
-   "cond": "rpart",
-   "k": 2,
-   "before": 86,
-   "after": 23
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lime",
-   "cond": "rrest",
-   "k": 2,
-   "before": 86,
-   "after": 1
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lime",
    "cond": "jpart",
    "k": 16,
    "before": 86,
@@ -4997,24 +4115,6 @@
    "k": 16,
    "before": 86,
    "after": 105
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lime",
-   "cond": "rpart",
-   "k": 16,
-   "before": 86,
-   "after": 6
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Lime",
-   "cond": "rrest",
-   "k": 16,
-   "before": 86,
-   "after": 2
   },
   {
    "cat": "fruit",
@@ -5056,24 +4156,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Plum",
-   "cond": "rpart",
-   "k": 2,
-   "before": 138,
-   "after": 69
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Plum",
-   "cond": "rrest",
-   "k": 2,
-   "before": 138,
-   "after": 3
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Plum",
    "cond": "jpart",
    "k": 16,
    "before": 138,
@@ -5096,24 +4178,6 @@
    "k": 16,
    "before": 138,
    "after": 166
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Plum",
-   "cond": "rpart",
-   "k": 16,
-   "before": 138,
-   "after": 12
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Plum",
-   "cond": "rrest",
-   "k": 16,
-   "before": 138,
-   "after": 12
   },
   {
    "cat": "fruit",
@@ -5155,24 +4219,6 @@
    "cat": "fruit",
    "gate": false,
    "target": "Berry",
-   "cond": "rpart",
-   "k": 2,
-   "before": 51,
-   "after": 43
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Berry",
-   "cond": "rrest",
-   "k": 2,
-   "before": 51,
-   "after": 2
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Berry",
    "cond": "jpart",
    "k": 16,
    "before": 51,
@@ -5195,24 +4241,6 @@
    "k": 16,
    "before": 51,
    "after": 82
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Berry",
-   "cond": "rpart",
-   "k": 16,
-   "before": 51,
-   "after": 8
-  },
-  {
-   "cat": "fruit",
-   "gate": false,
-   "target": "Berry",
-   "cond": "rrest",
-   "k": 16,
-   "before": 51,
-   "after": 4
   },
   {
    "cat": "sport",
@@ -5254,24 +4282,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Basketball",
-   "cond": "rpart",
-   "k": 2,
-   "before": 3,
-   "after": 6
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Basketball",
-   "cond": "rrest",
-   "k": 2,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Basketball",
    "cond": "jpart",
    "k": 16,
    "before": 3,
@@ -5291,24 +4301,6 @@
    "gate": true,
    "target": "Basketball",
    "cond": "nonj_clamp",
-   "k": 16,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Basketball",
-   "cond": "rpart",
-   "k": 16,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Basketball",
-   "cond": "rrest",
    "k": 16,
    "before": 3,
    "after": 1
@@ -5353,24 +4345,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Soccer",
-   "cond": "rpart",
-   "k": 2,
-   "before": 7,
-   "after": 6
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Soccer",
-   "cond": "rrest",
-   "k": 2,
-   "before": 7,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Soccer",
    "cond": "jpart",
    "k": 16,
    "before": 7,
@@ -5397,24 +4371,6 @@
   {
    "cat": "sport",
    "gate": true,
-   "target": "Soccer",
-   "cond": "rpart",
-   "k": 16,
-   "before": 7,
-   "after": 4
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Soccer",
-   "cond": "rrest",
-   "k": 16,
-   "before": 7,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
    "target": "Tennis",
    "cond": "lens",
    "k": null,
@@ -5452,24 +4408,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Tennis",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Tennis",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Tennis",
    "cond": "jpart",
    "k": 16,
    "before": 2,
@@ -5489,24 +4427,6 @@
    "gate": true,
    "target": "Tennis",
    "cond": "nonj_clamp",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Tennis",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Tennis",
-   "cond": "rrest",
    "k": 16,
    "before": 2,
    "after": 1
@@ -5551,24 +4471,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Football",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 6
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Football",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Football",
    "cond": "jpart",
    "k": 16,
    "before": 4,
@@ -5591,24 +4493,6 @@
    "k": 16,
    "before": 4,
    "after": 3
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Football",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Football",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "sport",
@@ -5650,24 +4534,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Baseball",
-   "cond": "rpart",
-   "k": 2,
-   "before": 6,
-   "after": 2
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Baseball",
-   "cond": "rrest",
-   "k": 2,
-   "before": 6,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Baseball",
    "cond": "jpart",
    "k": 16,
    "before": 6,
@@ -5690,24 +4556,6 @@
    "k": 16,
    "before": 6,
    "after": 3
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Baseball",
-   "cond": "rpart",
-   "k": 16,
-   "before": 6,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Baseball",
-   "cond": "rrest",
-   "k": 16,
-   "before": 6,
-   "after": 1
   },
   {
    "cat": "sport",
@@ -5749,24 +4597,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Golf",
-   "cond": "rpart",
-   "k": 2,
-   "before": 5,
-   "after": 2
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Golf",
-   "cond": "rrest",
-   "k": 2,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Golf",
    "cond": "jpart",
    "k": 16,
    "before": 5,
@@ -5789,24 +4619,6 @@
    "k": 16,
    "before": 5,
    "after": 2
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Golf",
-   "cond": "rpart",
-   "k": 16,
-   "before": 5,
-   "after": 2
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Golf",
-   "cond": "rrest",
-   "k": 16,
-   "before": 5,
-   "after": 1
   },
   {
    "cat": "sport",
@@ -5848,24 +4660,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Hockey",
-   "cond": "rpart",
-   "k": 2,
-   "before": 14,
-   "after": 11
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Hockey",
-   "cond": "rrest",
-   "k": 2,
-   "before": 14,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Hockey",
    "cond": "jpart",
    "k": 16,
    "before": 14,
@@ -5888,24 +4682,6 @@
    "k": 16,
    "before": 14,
    "after": 5
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Hockey",
-   "cond": "rpart",
-   "k": 16,
-   "before": 14,
-   "after": 2
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Hockey",
-   "cond": "rrest",
-   "k": 16,
-   "before": 14,
-   "after": 1
   },
   {
    "cat": "sport",
@@ -5947,24 +4723,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Rugby",
-   "cond": "rpart",
-   "k": 2,
-   "before": 40,
-   "after": 35
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Rugby",
-   "cond": "rrest",
-   "k": 2,
-   "before": 40,
-   "after": 2
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Rugby",
    "cond": "jpart",
    "k": 16,
    "before": 40,
@@ -5987,24 +4745,6 @@
    "k": 16,
    "before": 40,
    "after": 31
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Rugby",
-   "cond": "rpart",
-   "k": 16,
-   "before": 40,
-   "after": 16
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Rugby",
-   "cond": "rrest",
-   "k": 16,
-   "before": 40,
-   "after": 7
   },
   {
    "cat": "sport",
@@ -6046,24 +4786,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Cricket",
-   "cond": "rpart",
-   "k": 2,
-   "before": 33,
-   "after": 99
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Cricket",
-   "cond": "rrest",
-   "k": 2,
-   "before": 33,
-   "after": 3
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Cricket",
    "cond": "jpart",
    "k": 16,
    "before": 33,
@@ -6086,24 +4808,6 @@
    "k": 16,
    "before": 33,
    "after": 30
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Cricket",
-   "cond": "rpart",
-   "k": 16,
-   "before": 33,
-   "after": 26
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Cricket",
-   "cond": "rrest",
-   "k": 16,
-   "before": 33,
-   "after": 2
   },
   {
    "cat": "sport",
@@ -6145,24 +4849,6 @@
    "cat": "sport",
    "gate": true,
    "target": "Chess",
-   "cond": "rpart",
-   "k": 2,
-   "before": 23,
-   "after": 13
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Chess",
-   "cond": "rrest",
-   "k": 2,
-   "before": 23,
-   "after": 1
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Chess",
    "cond": "jpart",
    "k": 16,
    "before": 23,
@@ -6185,24 +4871,6 @@
    "k": 16,
    "before": 23,
    "after": 16
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Chess",
-   "cond": "rpart",
-   "k": 16,
-   "before": 23,
-   "after": 3
-  },
-  {
-   "cat": "sport",
-   "gate": true,
-   "target": "Chess",
-   "cond": "rrest",
-   "k": 16,
-   "before": 23,
-   "after": 1
   },
   {
    "cat": "instrument",
@@ -6239,24 +4907,6 @@
    "k": 2,
    "before": 2,
    "after": 2
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Piano",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2,
-   "after": 2
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Piano",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2,
-   "after": 1
   },
   {
    "cat": "instrument",
@@ -6288,24 +4938,6 @@
   {
    "cat": "instrument",
    "gate": true,
-   "target": "Piano",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Piano",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
    "target": "Drum",
    "cond": "lens",
    "k": null,
@@ -6343,24 +4975,6 @@
    "cat": "instrument",
    "gate": true,
    "target": "Drum",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 6
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Drum",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Drum",
    "cond": "jpart",
    "k": 16,
    "before": 4,
@@ -6383,24 +4997,6 @@
    "k": 16,
    "before": 4,
    "after": 5
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Drum",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 6
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Drum",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "instrument",
@@ -6442,24 +5038,6 @@
    "cat": "instrument",
    "gate": true,
    "target": "Bass",
-   "cond": "rpart",
-   "k": 2,
-   "before": 40,
-   "after": 36
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bass",
-   "cond": "rrest",
-   "k": 2,
-   "before": 40,
-   "after": 7
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bass",
    "cond": "jpart",
    "k": 16,
    "before": 40,
@@ -6482,24 +5060,6 @@
    "k": 16,
    "before": 40,
    "after": 84
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bass",
-   "cond": "rpart",
-   "k": 16,
-   "before": 40,
-   "after": 43
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bass",
-   "cond": "rrest",
-   "k": 16,
-   "before": 40,
-   "after": 10
   },
   {
    "cat": "instrument",
@@ -6541,24 +5101,6 @@
    "cat": "instrument",
    "gate": true,
    "target": "Organ",
-   "cond": "rpart",
-   "k": 2,
-   "before": 22,
-   "after": 10
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Organ",
-   "cond": "rrest",
-   "k": 2,
-   "before": 22,
-   "after": 6
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Organ",
    "cond": "jpart",
    "k": 16,
    "before": 22,
@@ -6581,24 +5123,6 @@
    "k": 16,
    "before": 22,
    "after": 38
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Organ",
-   "cond": "rpart",
-   "k": 16,
-   "before": 22,
-   "after": 13
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Organ",
-   "cond": "rrest",
-   "k": 16,
-   "before": 22,
-   "after": 7
   },
   {
    "cat": "instrument",
@@ -6640,24 +5164,6 @@
    "cat": "instrument",
    "gate": true,
    "target": "Horn",
-   "cond": "rpart",
-   "k": 2,
-   "before": 129,
-   "after": 70
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Horn",
-   "cond": "rrest",
-   "k": 2,
-   "before": 129,
-   "after": 2
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Horn",
    "cond": "jpart",
    "k": 16,
    "before": 129,
@@ -6680,24 +5186,6 @@
    "k": 16,
    "before": 129,
    "after": 186
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Horn",
-   "cond": "rpart",
-   "k": 16,
-   "before": 129,
-   "after": 4
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Horn",
-   "cond": "rrest",
-   "k": 16,
-   "before": 129,
-   "after": 5
   },
   {
    "cat": "instrument",
@@ -6739,24 +5227,6 @@
    "cat": "instrument",
    "gate": true,
    "target": "Sax",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1755,
-   "after": 996
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Sax",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1755,
-   "after": 472
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Sax",
    "cond": "jpart",
    "k": 16,
    "before": 1755,
@@ -6779,24 +5249,6 @@
    "k": 16,
    "before": 1755,
    "after": 2232
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Sax",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1755,
-   "after": 871
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Sax",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1755,
-   "after": 659
   },
   {
    "cat": "instrument",
@@ -6838,24 +5290,6 @@
    "cat": "instrument",
    "gate": true,
    "target": "Bell",
-   "cond": "rpart",
-   "k": 2,
-   "before": 194,
-   "after": 191
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bell",
-   "cond": "rrest",
-   "k": 2,
-   "before": 194,
-   "after": 3
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bell",
    "cond": "jpart",
    "k": 16,
    "before": 194,
@@ -6878,24 +5312,6 @@
    "k": 16,
    "before": 194,
    "after": 262
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bell",
-   "cond": "rpart",
-   "k": 16,
-   "before": 194,
-   "after": 50
-  },
-  {
-   "cat": "instrument",
-   "gate": true,
-   "target": "Bell",
-   "cond": "rrest",
-   "k": 16,
-   "before": 194,
-   "after": 16
   },
   {
    "cat": "planet",
@@ -6937,24 +5353,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Neptune",
-   "cond": "rpart",
-   "k": 2,
-   "before": 8,
-   "after": 6
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Neptune",
-   "cond": "rrest",
-   "k": 2,
-   "before": 8,
-   "after": 15
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Neptune",
    "cond": "jpart",
    "k": 16,
    "before": 8,
@@ -6981,24 +5379,6 @@
   {
    "cat": "planet",
    "gate": true,
-   "target": "Neptune",
-   "cond": "rpart",
-   "k": 16,
-   "before": 8,
-   "after": 18
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Neptune",
-   "cond": "rrest",
-   "k": 16,
-   "before": 8,
-   "after": 3
-  },
-  {
-   "cat": "planet",
-   "gate": true,
    "target": "Saturn",
    "cond": "lens",
    "k": null,
@@ -7036,24 +5416,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Saturn",
-   "cond": "rpart",
-   "k": 2,
-   "before": 5,
-   "after": 5
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Saturn",
-   "cond": "rrest",
-   "k": 2,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Saturn",
    "cond": "jpart",
    "k": 16,
    "before": 5,
@@ -7076,24 +5438,6 @@
    "k": 16,
    "before": 5,
    "after": 4
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Saturn",
-   "cond": "rpart",
-   "k": 16,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Saturn",
-   "cond": "rrest",
-   "k": 16,
-   "before": 5,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7135,24 +5479,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Jupiter",
-   "cond": "rpart",
-   "k": 2,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Jupiter",
-   "cond": "rrest",
-   "k": 2,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Jupiter",
    "cond": "jpart",
    "k": 16,
    "before": 3,
@@ -7175,24 +5501,6 @@
    "k": 16,
    "before": 3,
    "after": 2
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Jupiter",
-   "cond": "rpart",
-   "k": 16,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Jupiter",
-   "cond": "rrest",
-   "k": 16,
-   "before": 3,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7234,24 +5542,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Venus",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Venus",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Venus",
    "cond": "jpart",
    "k": 16,
    "before": 2,
@@ -7274,24 +5564,6 @@
    "k": 16,
    "before": 2,
    "after": 3
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Venus",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Venus",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7333,24 +5605,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Mercury",
-   "cond": "rpart",
-   "k": 2,
-   "before": 6,
-   "after": 9
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Mercury",
-   "cond": "rrest",
-   "k": 2,
-   "before": 6,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Mercury",
    "cond": "jpart",
    "k": 16,
    "before": 6,
@@ -7373,24 +5627,6 @@
    "k": 16,
    "before": 6,
    "after": 7
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Mercury",
-   "cond": "rpart",
-   "k": 16,
-   "before": 6,
-   "after": 6
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Mercury",
-   "cond": "rrest",
-   "k": 16,
-   "before": 6,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7427,24 +5663,6 @@
    "k": 2,
    "before": 4,
    "after": 4
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Earth",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 4
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Earth",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7476,24 +5694,6 @@
   {
    "cat": "planet",
    "gate": true,
-   "target": "Earth",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 3
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Earth",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
    "target": "Pluto",
    "cond": "lens",
    "k": null,
@@ -7531,24 +5731,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Pluto",
-   "cond": "rpart",
-   "k": 2,
-   "before": 10,
-   "after": 11
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Pluto",
-   "cond": "rrest",
-   "k": 2,
-   "before": 10,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Pluto",
    "cond": "jpart",
    "k": 16,
    "before": 10,
@@ -7571,24 +5753,6 @@
    "k": 16,
    "before": 10,
    "after": 7
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Pluto",
-   "cond": "rpart",
-   "k": 16,
-   "before": 10,
-   "after": 7
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Pluto",
-   "cond": "rrest",
-   "k": 16,
-   "before": 10,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7630,24 +5794,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Moon",
-   "cond": "rpart",
-   "k": 2,
-   "before": 14,
-   "after": 19
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Moon",
-   "cond": "rrest",
-   "k": 2,
-   "before": 14,
-   "after": 1
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Moon",
    "cond": "jpart",
    "k": 16,
    "before": 14,
@@ -7670,24 +5816,6 @@
    "k": 16,
    "before": 14,
    "after": 13
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Moon",
-   "cond": "rpart",
-   "k": 16,
-   "before": 14,
-   "after": 6
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Moon",
-   "cond": "rrest",
-   "k": 16,
-   "before": 14,
-   "after": 1
   },
   {
    "cat": "planet",
@@ -7729,24 +5857,6 @@
    "cat": "planet",
    "gate": true,
    "target": "Titan",
-   "cond": "rpart",
-   "k": 2,
-   "before": 22,
-   "after": 11
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Titan",
-   "cond": "rrest",
-   "k": 2,
-   "before": 22,
-   "after": 5
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Titan",
    "cond": "jpart",
    "k": 16,
    "before": 22,
@@ -7769,24 +5879,6 @@
    "k": 16,
    "before": 22,
    "after": 21
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Titan",
-   "cond": "rpart",
-   "k": 16,
-   "before": 22,
-   "after": 9
-  },
-  {
-   "cat": "planet",
-   "gate": true,
-   "target": "Titan",
-   "cond": "rrest",
-   "k": 16,
-   "before": 22,
-   "after": 5
   },
   {
    "cat": "tree",
@@ -7828,24 +5920,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Oak",
-   "cond": "rpart",
-   "k": 2,
-   "before": 197,
-   "after": 70
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Oak",
-   "cond": "rrest",
-   "k": 2,
-   "before": 197,
-   "after": 4
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Oak",
    "cond": "jpart",
    "k": 16,
    "before": 197,
@@ -7868,24 +5942,6 @@
    "k": 16,
    "before": 197,
    "after": 255
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Oak",
-   "cond": "rpart",
-   "k": 16,
-   "before": 197,
-   "after": 36
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Oak",
-   "cond": "rrest",
-   "k": 16,
-   "before": 197,
-   "after": 7
   },
   {
    "cat": "tree",
@@ -7927,24 +5983,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Maple",
-   "cond": "rpart",
-   "k": 2,
-   "before": 103,
-   "after": 92
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Maple",
-   "cond": "rrest",
-   "k": 2,
-   "before": 103,
-   "after": 1
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Maple",
    "cond": "jpart",
    "k": 16,
    "before": 103,
@@ -7967,24 +6005,6 @@
    "k": 16,
    "before": 103,
    "after": 104
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Maple",
-   "cond": "rpart",
-   "k": 16,
-   "before": 103,
-   "after": 24
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Maple",
-   "cond": "rrest",
-   "k": 16,
-   "before": 103,
-   "after": 1
   },
   {
    "cat": "tree",
@@ -8026,24 +6046,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Birch",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1309,
-   "after": 1150
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Birch",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1309,
-   "after": 28
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Birch",
    "cond": "jpart",
    "k": 16,
    "before": 1309,
@@ -8066,24 +6068,6 @@
    "k": 16,
    "before": 1309,
    "after": 1816
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Birch",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1309,
-   "after": 323
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Birch",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1309,
-   "after": 100
   },
   {
    "cat": "tree",
@@ -8125,24 +6109,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Cedar",
-   "cond": "rpart",
-   "k": 2,
-   "before": 532,
-   "after": 154
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cedar",
-   "cond": "rrest",
-   "k": 2,
-   "before": 532,
-   "after": 1
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cedar",
    "cond": "jpart",
    "k": 16,
    "before": 532,
@@ -8165,24 +6131,6 @@
    "k": 16,
    "before": 532,
    "after": 588
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cedar",
-   "cond": "rpart",
-   "k": 16,
-   "before": 532,
-   "after": 55
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cedar",
-   "cond": "rrest",
-   "k": 16,
-   "before": 532,
-   "after": 6
   },
   {
    "cat": "tree",
@@ -8224,24 +6172,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Elm",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1478,
-   "after": 394
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Elm",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1478,
-   "after": 2
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Elm",
    "cond": "jpart",
    "k": 16,
    "before": 1478,
@@ -8264,24 +6194,6 @@
    "k": 16,
    "before": 1478,
    "after": 1669
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Elm",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1478,
-   "after": 27
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Elm",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1478,
-   "after": 5
   },
   {
    "cat": "tree",
@@ -8323,24 +6235,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Willow",
-   "cond": "rpart",
-   "k": 2,
-   "before": 195,
-   "after": 121
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Willow",
-   "cond": "rrest",
-   "k": 2,
-   "before": 195,
-   "after": 25
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Willow",
    "cond": "jpart",
    "k": 16,
    "before": 195,
@@ -8363,24 +6257,6 @@
    "k": 16,
    "before": 195,
    "after": 191
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Willow",
-   "cond": "rpart",
-   "k": 16,
-   "before": 195,
-   "after": 88
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Willow",
-   "cond": "rrest",
-   "k": 16,
-   "before": 195,
-   "after": 37
   },
   {
    "cat": "tree",
@@ -8422,24 +6298,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Cherry",
-   "cond": "rpart",
-   "k": 2,
-   "before": 325,
-   "after": 467
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cherry",
-   "cond": "rrest",
-   "k": 2,
-   "before": 325,
-   "after": 20
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cherry",
    "cond": "jpart",
    "k": 16,
    "before": 325,
@@ -8462,24 +6320,6 @@
    "k": 16,
    "before": 325,
    "after": 378
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cherry",
-   "cond": "rpart",
-   "k": 16,
-   "before": 325,
-   "after": 171
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Cherry",
-   "cond": "rrest",
-   "k": 16,
-   "before": 325,
-   "after": 23
   },
   {
    "cat": "tree",
@@ -8521,24 +6361,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Palm",
-   "cond": "rpart",
-   "k": 2,
-   "before": 297,
-   "after": 77
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Palm",
-   "cond": "rrest",
-   "k": 2,
-   "before": 297,
-   "after": 1
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Palm",
    "cond": "jpart",
    "k": 16,
    "before": 297,
@@ -8561,24 +6383,6 @@
    "k": 16,
    "before": 297,
    "after": 240
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Palm",
-   "cond": "rpart",
-   "k": 16,
-   "before": 297,
-   "after": 19
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Palm",
-   "cond": "rrest",
-   "k": 16,
-   "before": 297,
-   "after": 1
   },
   {
    "cat": "tree",
@@ -8620,24 +6424,6 @@
    "cat": "tree",
    "gate": false,
    "target": "Ash",
-   "cond": "rpart",
-   "k": 2,
-   "before": 327,
-   "after": 169
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Ash",
-   "cond": "rrest",
-   "k": 2,
-   "before": 327,
-   "after": 5
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Ash",
    "cond": "jpart",
    "k": 16,
    "before": 327,
@@ -8660,24 +6446,6 @@
    "k": 16,
    "before": 327,
    "after": 257
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Ash",
-   "cond": "rpart",
-   "k": 16,
-   "before": 327,
-   "after": 52
-  },
-  {
-   "cat": "tree",
-   "gate": false,
-   "target": "Ash",
-   "cond": "rrest",
-   "k": 16,
-   "before": 327,
-   "after": 6
   },
   {
    "cat": "bird",
@@ -8719,24 +6487,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Robin",
-   "cond": "rpart",
-   "k": 2,
-   "before": 897,
-   "after": 600
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Robin",
-   "cond": "rrest",
-   "k": 2,
-   "before": 897,
-   "after": 51
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Robin",
    "cond": "jpart",
    "k": 16,
    "before": 897,
@@ -8759,24 +6509,6 @@
    "k": 16,
    "before": 897,
    "after": 710
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Robin",
-   "cond": "rpart",
-   "k": 16,
-   "before": 897,
-   "after": 412
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Robin",
-   "cond": "rrest",
-   "k": 16,
-   "before": 897,
-   "after": 70
   },
   {
    "cat": "bird",
@@ -8818,24 +6550,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Eagle",
-   "cond": "rpart",
-   "k": 2,
-   "before": 246,
-   "after": 228
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Eagle",
-   "cond": "rrest",
-   "k": 2,
-   "before": 246,
-   "after": 45
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Eagle",
    "cond": "jpart",
    "k": 16,
    "before": 246,
@@ -8858,24 +6572,6 @@
    "k": 16,
    "before": 246,
    "after": 166
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Eagle",
-   "cond": "rpart",
-   "k": 16,
-   "before": 246,
-   "after": 152
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Eagle",
-   "cond": "rrest",
-   "k": 16,
-   "before": 246,
-   "after": 46
   },
   {
    "cat": "bird",
@@ -8917,24 +6613,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Crow",
-   "cond": "rpart",
-   "k": 2,
-   "before": 509,
-   "after": 341
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Crow",
-   "cond": "rrest",
-   "k": 2,
-   "before": 509,
-   "after": 58
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Crow",
    "cond": "jpart",
    "k": 16,
    "before": 509,
@@ -8957,24 +6635,6 @@
    "k": 16,
    "before": 509,
    "after": 501
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Crow",
-   "cond": "rpart",
-   "k": 16,
-   "before": 509,
-   "after": 283
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Crow",
-   "cond": "rrest",
-   "k": 16,
-   "before": 509,
-   "after": 75
   },
   {
    "cat": "bird",
@@ -9016,24 +6676,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Owl",
-   "cond": "rpart",
-   "k": 2,
-   "before": 57,
-   "after": 91
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Owl",
-   "cond": "rrest",
-   "k": 2,
-   "before": 57,
-   "after": 8
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Owl",
    "cond": "jpart",
    "k": 16,
    "before": 57,
@@ -9056,24 +6698,6 @@
    "k": 16,
    "before": 57,
    "after": 24
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Owl",
-   "cond": "rpart",
-   "k": 16,
-   "before": 57,
-   "after": 25
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Owl",
-   "cond": "rrest",
-   "k": 16,
-   "before": 57,
-   "after": 14
   },
   {
    "cat": "bird",
@@ -9115,24 +6739,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Hawk",
-   "cond": "rpart",
-   "k": 2,
-   "before": 45,
-   "after": 52
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Hawk",
-   "cond": "rrest",
-   "k": 2,
-   "before": 45,
-   "after": 4
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Hawk",
    "cond": "jpart",
    "k": 16,
    "before": 45,
@@ -9155,24 +6761,6 @@
    "k": 16,
    "before": 45,
    "after": 37
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Hawk",
-   "cond": "rpart",
-   "k": 16,
-   "before": 45,
-   "after": 18
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Hawk",
-   "cond": "rrest",
-   "k": 16,
-   "before": 45,
-   "after": 5
   },
   {
    "cat": "bird",
@@ -9214,24 +6802,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Sparrow",
-   "cond": "rpart",
-   "k": 2,
-   "before": 70,
-   "after": 64
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Sparrow",
-   "cond": "rrest",
-   "k": 2,
-   "before": 70,
-   "after": 25
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Sparrow",
    "cond": "jpart",
    "k": 16,
    "before": 70,
@@ -9254,24 +6824,6 @@
    "k": 16,
    "before": 70,
    "after": 55
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Sparrow",
-   "cond": "rpart",
-   "k": 16,
-   "before": 70,
-   "after": 122
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Sparrow",
-   "cond": "rrest",
-   "k": 16,
-   "before": 70,
-   "after": 20
   },
   {
    "cat": "bird",
@@ -9313,24 +6865,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Cardinal",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1785,
-   "after": 1173
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Cardinal",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1785,
-   "after": 786
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Cardinal",
    "cond": "jpart",
    "k": 16,
    "before": 1785,
@@ -9353,24 +6887,6 @@
    "k": 16,
    "before": 1785,
    "after": 1579
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Cardinal",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1785,
-   "after": 924
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Cardinal",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1785,
-   "after": 938
   },
   {
    "cat": "bird",
@@ -9412,24 +6928,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Falcon",
-   "cond": "rpart",
-   "k": 2,
-   "before": 122,
-   "after": 72
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Falcon",
-   "cond": "rrest",
-   "k": 2,
-   "before": 122,
-   "after": 5
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Falcon",
    "cond": "jpart",
    "k": 16,
    "before": 122,
@@ -9452,24 +6950,6 @@
    "k": 16,
    "before": 122,
    "after": 102
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Falcon",
-   "cond": "rpart",
-   "k": 16,
-   "before": 122,
-   "after": 46
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Falcon",
-   "cond": "rrest",
-   "k": 16,
-   "before": 122,
-   "after": 9
   },
   {
    "cat": "bird",
@@ -9511,24 +6991,6 @@
    "cat": "bird",
    "gate": false,
    "target": "Swan",
-   "cond": "rpart",
-   "k": 2,
-   "before": 284,
-   "after": 120
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Swan",
-   "cond": "rrest",
-   "k": 2,
-   "before": 284,
-   "after": 61
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Swan",
    "cond": "jpart",
    "k": 16,
    "before": 284,
@@ -9553,24 +7015,6 @@
    "after": 206
   },
   {
-   "cat": "bird",
-   "gate": false,
-   "target": "Swan",
-   "cond": "rpart",
-   "k": 16,
-   "before": 284,
-   "after": 140
-  },
-  {
-   "cat": "bird",
-   "gate": false,
-   "target": "Swan",
-   "cond": "rrest",
-   "k": 16,
-   "before": 284,
-   "after": 68
-  },
-  {
    "cat": "language",
    "gate": true,
    "target": "Japanese",
@@ -9610,24 +7054,6 @@
    "cat": "language",
    "gate": true,
    "target": "Japanese",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2,
-   "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Japanese",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2,
-   "after": 1
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Japanese",
    "cond": "jpart",
    "k": 16,
    "before": 2,
@@ -9647,24 +7073,6 @@
    "gate": true,
    "target": "Japanese",
    "cond": "nonj_clamp",
-   "k": 16,
-   "before": 2,
-   "after": 2
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Japanese",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2,
-   "after": 2
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Japanese",
-   "cond": "rrest",
    "k": 16,
    "before": 2,
    "after": 2
@@ -9709,24 +7117,6 @@
    "cat": "language",
    "gate": true,
    "target": "Spanish",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Spanish",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Spanish",
    "cond": "jpart",
    "k": 16,
    "before": 4,
@@ -9749,24 +7139,6 @@
    "k": 16,
    "before": 4,
    "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Spanish",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 2
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Spanish",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 2
   },
   {
    "cat": "language",
@@ -9808,24 +7180,6 @@
    "cat": "language",
    "gate": true,
    "target": "French",
-   "cond": "rpart",
-   "k": 2,
-   "before": 5,
-   "after": 5
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "French",
-   "cond": "rrest",
-   "k": 2,
-   "before": 5,
-   "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "French",
    "cond": "jpart",
    "k": 16,
    "before": 5,
@@ -9848,24 +7202,6 @@
    "k": 16,
    "before": 5,
    "after": 7
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "French",
-   "cond": "rpart",
-   "k": 16,
-   "before": 5,
-   "after": 5
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "French",
-   "cond": "rrest",
-   "k": 16,
-   "before": 5,
-   "after": 3
   },
   {
    "cat": "language",
@@ -9907,24 +7243,6 @@
    "cat": "language",
    "gate": true,
    "target": "German",
-   "cond": "rpart",
-   "k": 2,
-   "before": 11,
-   "after": 8
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "German",
-   "cond": "rrest",
-   "k": 2,
-   "before": 11,
-   "after": 5
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "German",
    "cond": "jpart",
    "k": 16,
    "before": 11,
@@ -9947,24 +7265,6 @@
    "k": 16,
    "before": 11,
    "after": 14
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "German",
-   "cond": "rpart",
-   "k": 16,
-   "before": 11,
-   "after": 9
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "German",
-   "cond": "rrest",
-   "k": 16,
-   "before": 11,
-   "after": 5
   },
   {
    "cat": "language",
@@ -10006,24 +7306,6 @@
    "cat": "language",
    "gate": true,
    "target": "Chinese",
-   "cond": "rpart",
-   "k": 2,
-   "before": 3,
-   "after": 2
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Chinese",
-   "cond": "rrest",
-   "k": 2,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Chinese",
    "cond": "jpart",
    "k": 16,
    "before": 3,
@@ -10046,24 +7328,6 @@
    "k": 16,
    "before": 3,
    "after": 4
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Chinese",
-   "cond": "rpart",
-   "k": 16,
-   "before": 3,
-   "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Chinese",
-   "cond": "rrest",
-   "k": 16,
-   "before": 3,
-   "after": 1
   },
   {
    "cat": "language",
@@ -10105,24 +7369,6 @@
    "cat": "language",
    "gate": true,
    "target": "Russian",
-   "cond": "rpart",
-   "k": 2,
-   "before": 12,
-   "after": 7
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Russian",
-   "cond": "rrest",
-   "k": 2,
-   "before": 12,
-   "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Russian",
    "cond": "jpart",
    "k": 16,
    "before": 12,
@@ -10145,24 +7391,6 @@
    "k": 16,
    "before": 12,
    "after": 13
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Russian",
-   "cond": "rpart",
-   "k": 16,
-   "before": 12,
-   "after": 6
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Russian",
-   "cond": "rrest",
-   "k": 16,
-   "before": 12,
-   "after": 5
   },
   {
    "cat": "language",
@@ -10204,24 +7432,6 @@
    "cat": "language",
    "gate": true,
    "target": "Arabic",
-   "cond": "rpart",
-   "k": 2,
-   "before": 10,
-   "after": 6
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Arabic",
-   "cond": "rrest",
-   "k": 2,
-   "before": 10,
-   "after": 1
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Arabic",
    "cond": "jpart",
    "k": 16,
    "before": 10,
@@ -10244,24 +7454,6 @@
    "k": 16,
    "before": 10,
    "after": 9
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Arabic",
-   "cond": "rpart",
-   "k": 16,
-   "before": 10,
-   "after": 6
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Arabic",
-   "cond": "rrest",
-   "k": 16,
-   "before": 10,
-   "after": 1
   },
   {
    "cat": "language",
@@ -10303,24 +7495,6 @@
    "cat": "language",
    "gate": true,
    "target": "Korean",
-   "cond": "rpart",
-   "k": 2,
-   "before": 8,
-   "after": 5
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Korean",
-   "cond": "rrest",
-   "k": 2,
-   "before": 8,
-   "after": 1
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Korean",
    "cond": "jpart",
    "k": 16,
    "before": 8,
@@ -10343,24 +7517,6 @@
    "k": 16,
    "before": 8,
    "after": 7
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Korean",
-   "cond": "rpart",
-   "k": 16,
-   "before": 8,
-   "after": 3
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Korean",
-   "cond": "rrest",
-   "k": 16,
-   "before": 8,
-   "after": 1
   },
   {
    "cat": "language",
@@ -10402,24 +7558,6 @@
    "cat": "language",
    "gate": true,
    "target": "Italian",
-   "cond": "rpart",
-   "k": 2,
-   "before": 22,
-   "after": 19
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Italian",
-   "cond": "rrest",
-   "k": 2,
-   "before": 22,
-   "after": 7
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Italian",
    "cond": "jpart",
    "k": 16,
    "before": 22,
@@ -10442,24 +7580,6 @@
    "k": 16,
    "before": 22,
    "after": 36
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Italian",
-   "cond": "rpart",
-   "k": 16,
-   "before": 22,
-   "after": 10
-  },
-  {
-   "cat": "language",
-   "gate": true,
-   "target": "Italian",
-   "cond": "rrest",
-   "k": 16,
-   "before": 22,
-   "after": 11
   },
   {
    "cat": "profession",
@@ -10501,24 +7621,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Teacher",
-   "cond": "rpart",
-   "k": 2,
-   "before": 114,
-   "after": 90
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Teacher",
-   "cond": "rrest",
-   "k": 2,
-   "before": 114,
-   "after": 5
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Teacher",
    "cond": "jpart",
    "k": 16,
    "before": 114,
@@ -10541,24 +7643,6 @@
    "k": 16,
    "before": 114,
    "after": 118
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Teacher",
-   "cond": "rpart",
-   "k": 16,
-   "before": 114,
-   "after": 24
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Teacher",
-   "cond": "rrest",
-   "k": 16,
-   "before": 114,
-   "after": 16
   },
   {
    "cat": "profession",
@@ -10600,24 +7684,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Doctor",
-   "cond": "rpart",
-   "k": 2,
-   "before": 48,
-   "after": 57
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Doctor",
-   "cond": "rrest",
-   "k": 2,
-   "before": 48,
-   "after": 3
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Doctor",
    "cond": "jpart",
    "k": 16,
    "before": 48,
@@ -10640,24 +7706,6 @@
    "k": 16,
    "before": 48,
    "after": 34
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Doctor",
-   "cond": "rpart",
-   "k": 16,
-   "before": 48,
-   "after": 15
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Doctor",
-   "cond": "rrest",
-   "k": 16,
-   "before": 48,
-   "after": 6
   },
   {
    "cat": "profession",
@@ -10699,24 +7747,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Engineer",
-   "cond": "rpart",
-   "k": 2,
-   "before": 185,
-   "after": 264
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Engineer",
-   "cond": "rrest",
-   "k": 2,
-   "before": 185,
-   "after": 17
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Engineer",
    "cond": "jpart",
    "k": 16,
    "before": 185,
@@ -10739,24 +7769,6 @@
    "k": 16,
    "before": 185,
    "after": 195
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Engineer",
-   "cond": "rpart",
-   "k": 16,
-   "before": 185,
-   "after": 113
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Engineer",
-   "cond": "rrest",
-   "k": 16,
-   "before": 185,
-   "after": 32
   },
   {
    "cat": "profession",
@@ -10798,24 +7810,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Nurse",
-   "cond": "rpart",
-   "k": 2,
-   "before": 92,
-   "after": 95
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Nurse",
-   "cond": "rrest",
-   "k": 2,
-   "before": 92,
-   "after": 1
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Nurse",
    "cond": "jpart",
    "k": 16,
    "before": 92,
@@ -10838,24 +7832,6 @@
    "k": 16,
    "before": 92,
    "after": 56
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Nurse",
-   "cond": "rpart",
-   "k": 16,
-   "before": 92,
-   "after": 22
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Nurse",
-   "cond": "rrest",
-   "k": 16,
-   "before": 92,
-   "after": 1
   },
   {
    "cat": "profession",
@@ -10897,24 +7873,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Chef",
-   "cond": "rpart",
-   "k": 2,
-   "before": 26,
-   "after": 18
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Chef",
-   "cond": "rrest",
-   "k": 2,
-   "before": 26,
-   "after": 25
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Chef",
    "cond": "jpart",
    "k": 16,
    "before": 26,
@@ -10937,24 +7895,6 @@
    "k": 16,
    "before": 26,
    "after": 19
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Chef",
-   "cond": "rpart",
-   "k": 16,
-   "before": 26,
-   "after": 15
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Chef",
-   "cond": "rrest",
-   "k": 16,
-   "before": 26,
-   "after": 21
   },
   {
    "cat": "profession",
@@ -10996,24 +7936,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Pilot",
-   "cond": "rpart",
-   "k": 2,
-   "before": 361,
-   "after": 250
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Pilot",
-   "cond": "rrest",
-   "k": 2,
-   "before": 361,
-   "after": 228
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Pilot",
    "cond": "jpart",
    "k": 16,
    "before": 361,
@@ -11036,24 +7958,6 @@
    "k": 16,
    "before": 361,
    "after": 487
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Pilot",
-   "cond": "rpart",
-   "k": 16,
-   "before": 361,
-   "after": 297
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Pilot",
-   "cond": "rrest",
-   "k": 16,
-   "before": 361,
-   "after": 257
   },
   {
    "cat": "profession",
@@ -11095,24 +7999,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Artist",
-   "cond": "rpart",
-   "k": 2,
-   "before": 20,
-   "after": 12
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Artist",
-   "cond": "rrest",
-   "k": 2,
-   "before": 20,
-   "after": 4
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Artist",
    "cond": "jpart",
    "k": 16,
    "before": 20,
@@ -11135,24 +8021,6 @@
    "k": 16,
    "before": 20,
    "after": 19
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Artist",
-   "cond": "rpart",
-   "k": 16,
-   "before": 20,
-   "after": 8
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Artist",
-   "cond": "rrest",
-   "k": 16,
-   "before": 20,
-   "after": 6
   },
   {
    "cat": "profession",
@@ -11194,24 +8062,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Writer",
-   "cond": "rpart",
-   "k": 2,
-   "before": 182,
-   "after": 311
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Writer",
-   "cond": "rrest",
-   "k": 2,
-   "before": 182,
-   "after": 20
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Writer",
    "cond": "jpart",
    "k": 16,
    "before": 182,
@@ -11234,24 +8084,6 @@
    "k": 16,
    "before": 182,
    "after": 187
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Writer",
-   "cond": "rpart",
-   "k": 16,
-   "before": 182,
-   "after": 70
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Writer",
-   "cond": "rrest",
-   "k": 16,
-   "before": 182,
-   "after": 44
   },
   {
    "cat": "profession",
@@ -11293,24 +8125,6 @@
    "cat": "profession",
    "gate": false,
    "target": "Actor",
-   "cond": "rpart",
-   "k": 2,
-   "before": 95,
-   "after": 69
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Actor",
-   "cond": "rrest",
-   "k": 2,
-   "before": 95,
-   "after": 2
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Actor",
    "cond": "jpart",
    "k": 16,
    "before": 95,
@@ -11333,24 +8147,6 @@
    "k": 16,
    "before": 95,
    "after": 47
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Actor",
-   "cond": "rpart",
-   "k": 16,
-   "before": 95,
-   "after": 17
-  },
-  {
-   "cat": "profession",
-   "gate": false,
-   "target": "Actor",
-   "cond": "rrest",
-   "k": 16,
-   "before": 95,
-   "after": 3
   },
   {
    "cat": "beverage",
@@ -11392,24 +8188,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Coffee",
-   "cond": "rpart",
-   "k": 2,
-   "before": 6,
-   "after": 3
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Coffee",
-   "cond": "rrest",
-   "k": 2,
-   "before": 6,
-   "after": 3
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Coffee",
    "cond": "jpart",
    "k": 16,
    "before": 6,
@@ -11432,24 +8210,6 @@
    "k": 16,
    "before": 6,
    "after": 10
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Coffee",
-   "cond": "rpart",
-   "k": 16,
-   "before": 6,
-   "after": 4
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Coffee",
-   "cond": "rrest",
-   "k": 16,
-   "before": 6,
-   "after": 2
   },
   {
    "cat": "beverage",
@@ -11491,24 +8251,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Tea",
-   "cond": "rpart",
-   "k": 2,
-   "before": 4,
-   "after": 3
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Tea",
-   "cond": "rrest",
-   "k": 2,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Tea",
    "cond": "jpart",
    "k": 16,
    "before": 4,
@@ -11531,24 +8273,6 @@
    "k": 16,
    "before": 4,
    "after": 4
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Tea",
-   "cond": "rpart",
-   "k": 16,
-   "before": 4,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Tea",
-   "cond": "rrest",
-   "k": 16,
-   "before": 4,
-   "after": 1
   },
   {
    "cat": "beverage",
@@ -11590,24 +8314,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Water",
-   "cond": "rpart",
-   "k": 2,
-   "before": 8,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Water",
-   "cond": "rrest",
-   "k": 2,
-   "before": 8,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Water",
    "cond": "jpart",
    "k": 16,
    "before": 8,
@@ -11630,24 +8336,6 @@
    "k": 16,
    "before": 8,
    "after": 5
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Water",
-   "cond": "rpart",
-   "k": 16,
-   "before": 8,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Water",
-   "cond": "rrest",
-   "k": 16,
-   "before": 8,
-   "after": 1
   },
   {
    "cat": "beverage",
@@ -11689,24 +8377,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Wine",
-   "cond": "rpart",
-   "k": 2,
-   "before": 3,
-   "after": 2
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Wine",
-   "cond": "rrest",
-   "k": 2,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Wine",
    "cond": "jpart",
    "k": 16,
    "before": 3,
@@ -11729,24 +8399,6 @@
    "k": 16,
    "before": 3,
    "after": 9
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Wine",
-   "cond": "rpart",
-   "k": 16,
-   "before": 3,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Wine",
-   "cond": "rrest",
-   "k": 16,
-   "before": 3,
-   "after": 1
   },
   {
    "cat": "beverage",
@@ -11788,24 +8440,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Juice",
-   "cond": "rpart",
-   "k": 2,
-   "before": 12,
-   "after": 12
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Juice",
-   "cond": "rrest",
-   "k": 2,
-   "before": 12,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Juice",
    "cond": "jpart",
    "k": 16,
    "before": 12,
@@ -11828,24 +8462,6 @@
    "k": 16,
    "before": 12,
    "after": 12
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Juice",
-   "cond": "rpart",
-   "k": 16,
-   "before": 12,
-   "after": 6
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Juice",
-   "cond": "rrest",
-   "k": 16,
-   "before": 12,
-   "after": 1
   },
   {
    "cat": "beverage",
@@ -11887,24 +8503,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Milk",
-   "cond": "rpart",
-   "k": 2,
-   "before": 13,
-   "after": 14
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Milk",
-   "cond": "rrest",
-   "k": 2,
-   "before": 13,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Milk",
    "cond": "jpart",
    "k": 16,
    "before": 13,
@@ -11927,24 +8525,6 @@
    "k": 16,
    "before": 13,
    "after": 14
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Milk",
-   "cond": "rpart",
-   "k": 16,
-   "before": 13,
-   "after": 4
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Milk",
-   "cond": "rrest",
-   "k": 16,
-   "before": 13,
-   "after": 1
   },
   {
    "cat": "beverage",
@@ -11986,24 +8566,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Soda",
-   "cond": "rpart",
-   "k": 2,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Soda",
-   "cond": "rrest",
-   "k": 2,
-   "before": 5,
-   "after": 2
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Soda",
    "cond": "jpart",
    "k": 16,
    "before": 5,
@@ -12026,24 +8588,6 @@
    "k": 16,
    "before": 5,
    "after": 4
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Soda",
-   "cond": "rpart",
-   "k": 16,
-   "before": 5,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Soda",
-   "cond": "rrest",
-   "k": 16,
-   "before": 5,
-   "after": 2
   },
   {
    "cat": "beverage",
@@ -12085,24 +8629,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Rum",
-   "cond": "rpart",
-   "k": 2,
-   "before": 50,
-   "after": 43
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Rum",
-   "cond": "rrest",
-   "k": 2,
-   "before": 50,
-   "after": 1
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Rum",
    "cond": "jpart",
    "k": 16,
    "before": 50,
@@ -12125,24 +8651,6 @@
    "k": 16,
    "before": 50,
    "after": 45
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Rum",
-   "cond": "rpart",
-   "k": 16,
-   "before": 50,
-   "after": 7
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Rum",
-   "cond": "rrest",
-   "k": 16,
-   "before": 50,
-   "after": 1
   },
   {
    "cat": "beverage",
@@ -12184,24 +8692,6 @@
    "cat": "beverage",
    "gate": true,
    "target": "Gin",
-   "cond": "rpart",
-   "k": 2,
-   "before": 14,
-   "after": 34
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Gin",
-   "cond": "rrest",
-   "k": 2,
-   "before": 14,
-   "after": 5
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Gin",
    "cond": "jpart",
    "k": 16,
    "before": 14,
@@ -12224,24 +8714,6 @@
    "k": 16,
    "before": 14,
    "after": 11
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Gin",
-   "cond": "rpart",
-   "k": 16,
-   "before": 14,
-   "after": 14
-  },
-  {
-   "cat": "beverage",
-   "gate": true,
-   "target": "Gin",
-   "cond": "rrest",
-   "k": 16,
-   "before": 14,
-   "after": 2
   },
   {
    "cat": "organ",
@@ -12283,24 +8755,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Brain",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1906,
-   "after": 1501
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Brain",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1906,
-   "after": 247
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Brain",
    "cond": "jpart",
    "k": 16,
    "before": 1906,
@@ -12323,24 +8777,6 @@
    "k": 16,
    "before": 1906,
    "after": 1378
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Brain",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1906,
-   "after": 761
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Brain",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1906,
-   "after": 557
   },
   {
    "cat": "organ",
@@ -12382,24 +8818,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Liver",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2368,
-   "after": 1109
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Liver",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2368,
-   "after": 883
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Liver",
    "cond": "jpart",
    "k": 16,
    "before": 2368,
@@ -12422,24 +8840,6 @@
    "k": 16,
    "before": 2368,
    "after": 1014
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Liver",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2368,
-   "after": 2004
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Liver",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2368,
-   "after": 729
   },
   {
    "cat": "organ",
@@ -12481,24 +8881,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Lung",
-   "cond": "rpart",
-   "k": 2,
-   "before": 838,
-   "after": 3591
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Lung",
-   "cond": "rrest",
-   "k": 2,
-   "before": 838,
-   "after": 4140
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Lung",
    "cond": "jpart",
    "k": 16,
    "before": 838,
@@ -12521,24 +8903,6 @@
    "k": 16,
    "before": 838,
    "after": 1117
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Lung",
-   "cond": "rpart",
-   "k": 16,
-   "before": 838,
-   "after": 3446
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Lung",
-   "cond": "rrest",
-   "k": 16,
-   "before": 838,
-   "after": 3248
   },
   {
    "cat": "organ",
@@ -12580,24 +8944,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Skin",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2491,
-   "after": 2237
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Skin",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2491,
-   "after": 185
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Skin",
    "cond": "jpart",
    "k": 16,
    "before": 2491,
@@ -12620,24 +8966,6 @@
    "k": 16,
    "before": 2491,
    "after": 2210
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Skin",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2491,
-   "after": 1515
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Skin",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2491,
-   "after": 348
   },
   {
    "cat": "organ",
@@ -12679,24 +9007,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Eye",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1704,
-   "after": 2160
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Eye",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1704,
-   "after": 150
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Eye",
    "cond": "jpart",
    "k": 16,
    "before": 1704,
@@ -12719,24 +9029,6 @@
    "k": 16,
    "before": 1704,
    "after": 1025
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Eye",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1704,
-   "after": 2054
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Eye",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1704,
-   "after": 139
   },
   {
    "cat": "organ",
@@ -12778,24 +9070,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Ear",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1020,
-   "after": 463
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Ear",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1020,
-   "after": 24
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Ear",
    "cond": "jpart",
    "k": 16,
    "before": 1020,
@@ -12818,24 +9092,6 @@
    "k": 16,
    "before": 1020,
    "after": 1016
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Ear",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1020,
-   "after": 551
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Ear",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1020,
-   "after": 36
   },
   {
    "cat": "organ",
@@ -12877,24 +9133,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Bone",
-   "cond": "rpart",
-   "k": 2,
-   "before": 1153,
-   "after": 987
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Bone",
-   "cond": "rrest",
-   "k": 2,
-   "before": 1153,
-   "after": 679
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Bone",
    "cond": "jpart",
    "k": 16,
    "before": 1153,
@@ -12917,24 +9155,6 @@
    "k": 16,
    "before": 1153,
    "after": 1479
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Bone",
-   "cond": "rpart",
-   "k": 16,
-   "before": 1153,
-   "after": 496
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Bone",
-   "cond": "rrest",
-   "k": 16,
-   "before": 1153,
-   "after": 916
   },
   {
    "cat": "organ",
@@ -12976,24 +9196,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Muscle",
-   "cond": "rpart",
-   "k": 2,
-   "before": 885,
-   "after": 666
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Muscle",
-   "cond": "rrest",
-   "k": 2,
-   "before": 885,
-   "after": 16
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Muscle",
    "cond": "jpart",
    "k": 16,
    "before": 885,
@@ -13016,24 +9218,6 @@
    "k": 16,
    "before": 885,
    "after": 1023
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Muscle",
-   "cond": "rpart",
-   "k": 16,
-   "before": 885,
-   "after": 138
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Muscle",
-   "cond": "rrest",
-   "k": 16,
-   "before": 885,
-   "after": 42
   },
   {
    "cat": "organ",
@@ -13075,24 +9259,6 @@
    "cat": "organ",
    "gate": false,
    "target": "Nose",
-   "cond": "rpart",
-   "k": 2,
-   "before": 2026,
-   "after": 660
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Nose",
-   "cond": "rrest",
-   "k": 2,
-   "before": 2026,
-   "after": 116
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Nose",
    "cond": "jpart",
    "k": 16,
    "before": 2026,
@@ -13115,24 +9281,6 @@
    "k": 16,
    "before": 2026,
    "after": 1932
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Nose",
-   "cond": "rpart",
-   "k": 16,
-   "before": 2026,
-   "after": 636
-  },
-  {
-   "cat": "organ",
-   "gate": false,
-   "target": "Nose",
-   "cond": "rrest",
-   "k": 16,
-   "before": 2026,
-   "after": 191
   },
   {
    "cat": "city",
@@ -13174,24 +9322,6 @@
    "cat": "city",
    "gate": true,
    "target": "Paris",
-   "cond": "rpart",
-   "k": 2,
-   "before": 49,
-   "after": 153
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Paris",
-   "cond": "rrest",
-   "k": 2,
-   "before": 49,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Paris",
    "cond": "jpart",
    "k": 16,
    "before": 49,
@@ -13214,24 +9344,6 @@
    "k": 16,
    "before": 49,
    "after": 47
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Paris",
-   "cond": "rpart",
-   "k": 16,
-   "before": 49,
-   "after": 48
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Paris",
-   "cond": "rrest",
-   "k": 16,
-   "before": 49,
-   "after": 2
   },
   {
    "cat": "city",
@@ -13273,24 +9385,6 @@
    "cat": "city",
    "gate": true,
    "target": "London",
-   "cond": "rpart",
-   "k": 2,
-   "before": 9,
-   "after": 25
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "London",
-   "cond": "rrest",
-   "k": 2,
-   "before": 9,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "London",
    "cond": "jpart",
    "k": 16,
    "before": 9,
@@ -13313,24 +9407,6 @@
    "k": 16,
    "before": 9,
    "after": 15
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "London",
-   "cond": "rpart",
-   "k": 16,
-   "before": 9,
-   "after": 8
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "London",
-   "cond": "rrest",
-   "k": 16,
-   "before": 9,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13372,24 +9448,6 @@
    "cat": "city",
    "gate": true,
    "target": "Rome",
-   "cond": "rpart",
-   "k": 2,
-   "before": 29,
-   "after": 27
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Rome",
-   "cond": "rrest",
-   "k": 2,
-   "before": 29,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Rome",
    "cond": "jpart",
    "k": 16,
    "before": 29,
@@ -13412,24 +9470,6 @@
    "k": 16,
    "before": 29,
    "after": 54
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Rome",
-   "cond": "rpart",
-   "k": 16,
-   "before": 29,
-   "after": 10
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Rome",
-   "cond": "rrest",
-   "k": 16,
-   "before": 29,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13471,24 +9511,6 @@
    "cat": "city",
    "gate": true,
    "target": "Berlin",
-   "cond": "rpart",
-   "k": 2,
-   "before": 210,
-   "after": 497
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Berlin",
-   "cond": "rrest",
-   "k": 2,
-   "before": 210,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Berlin",
    "cond": "jpart",
    "k": 16,
    "before": 210,
@@ -13511,24 +9533,6 @@
    "k": 16,
    "before": 210,
    "after": 253
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Berlin",
-   "cond": "rpart",
-   "k": 16,
-   "before": 210,
-   "after": 180
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Berlin",
-   "cond": "rrest",
-   "k": 16,
-   "before": 210,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13570,24 +9574,6 @@
    "cat": "city",
    "gate": true,
    "target": "Madrid",
-   "cond": "rpart",
-   "k": 2,
-   "before": 111,
-   "after": 250
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Madrid",
-   "cond": "rrest",
-   "k": 2,
-   "before": 111,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Madrid",
    "cond": "jpart",
    "k": 16,
    "before": 111,
@@ -13610,24 +9596,6 @@
    "k": 16,
    "before": 111,
    "after": 167
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Madrid",
-   "cond": "rpart",
-   "k": 16,
-   "before": 111,
-   "after": 71
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Madrid",
-   "cond": "rrest",
-   "k": 16,
-   "before": 111,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13669,24 +9637,6 @@
    "cat": "city",
    "gate": true,
    "target": "Moscow",
-   "cond": "rpart",
-   "k": 2,
-   "before": 76,
-   "after": 242
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Moscow",
-   "cond": "rrest",
-   "k": 2,
-   "before": 76,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Moscow",
    "cond": "jpart",
    "k": 16,
    "before": 76,
@@ -13709,24 +9659,6 @@
    "k": 16,
    "before": 76,
    "after": 146
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Moscow",
-   "cond": "rpart",
-   "k": 16,
-   "before": 76,
-   "after": 56
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Moscow",
-   "cond": "rrest",
-   "k": 16,
-   "before": 76,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13768,24 +9700,6 @@
    "cat": "city",
    "gate": true,
    "target": "Beijing",
-   "cond": "rpart",
-   "k": 2,
-   "before": 12,
-   "after": 19
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Beijing",
-   "cond": "rrest",
-   "k": 2,
-   "before": 12,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Beijing",
    "cond": "jpart",
    "k": 16,
    "before": 12,
@@ -13808,24 +9722,6 @@
    "k": 16,
    "before": 12,
    "after": 18
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Beijing",
-   "cond": "rpart",
-   "k": 16,
-   "before": 12,
-   "after": 3
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Beijing",
-   "cond": "rrest",
-   "k": 16,
-   "before": 12,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13867,24 +9763,6 @@
    "cat": "city",
    "gate": true,
    "target": "Cairo",
-   "cond": "rpart",
-   "k": 2,
-   "before": 199,
-   "after": 75
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Cairo",
-   "cond": "rrest",
-   "k": 2,
-   "before": 199,
-   "after": 1
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Cairo",
    "cond": "jpart",
    "k": 16,
    "before": 199,
@@ -13907,24 +9785,6 @@
    "k": 16,
    "before": 199,
    "after": 339
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Cairo",
-   "cond": "rpart",
-   "k": 16,
-   "before": 199,
-   "after": 60
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Cairo",
-   "cond": "rrest",
-   "k": 16,
-   "before": 199,
-   "after": 1
   },
   {
    "cat": "city",
@@ -13966,24 +9826,6 @@
    "cat": "city",
    "gate": true,
    "target": "Sydney",
-   "cond": "rpart",
-   "k": 2,
-   "before": 63,
-   "after": 59
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Sydney",
-   "cond": "rrest",
-   "k": 2,
-   "before": 63,
-   "after": 2
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Sydney",
    "cond": "jpart",
    "k": 16,
    "before": 63,
@@ -14006,24 +9848,6 @@
    "k": 16,
    "before": 63,
    "after": 51
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Sydney",
-   "cond": "rpart",
-   "k": 16,
-   "before": 63,
-   "after": 16
-  },
-  {
-   "cat": "city",
-   "gate": true,
-   "target": "Sydney",
-   "cond": "rrest",
-   "k": 16,
-   "before": 63,
-   "after": 2
   },
   {
    "cat": "river",
@@ -14065,24 +9889,6 @@
    "cat": "river",
    "gate": true,
    "target": "Amazon",
-   "cond": "rpart",
-   "k": 2,
-   "before": 135,
-   "after": 88
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Amazon",
-   "cond": "rrest",
-   "k": 2,
-   "before": 135,
-   "after": 1
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Amazon",
    "cond": "jpart",
    "k": 16,
    "before": 135,
@@ -14105,24 +9911,6 @@
    "k": 16,
    "before": 135,
    "after": 162
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Amazon",
-   "cond": "rpart",
-   "k": 16,
-   "before": 135,
-   "after": 11
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Amazon",
-   "cond": "rrest",
-   "k": 16,
-   "before": 135,
-   "after": 6
   },
   {
    "cat": "river",
@@ -14164,24 +9952,6 @@
    "cat": "river",
    "gate": true,
    "target": "Thames",
-   "cond": "rpart",
-   "k": 2,
-   "before": 23,
-   "after": 15
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Thames",
-   "cond": "rrest",
-   "k": 2,
-   "before": 23,
-   "after": 1
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Thames",
    "cond": "jpart",
    "k": 16,
    "before": 23,
@@ -14204,24 +9974,6 @@
    "k": 16,
    "before": 23,
    "after": 32
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Thames",
-   "cond": "rpart",
-   "k": 16,
-   "before": 23,
-   "after": 1
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Thames",
-   "cond": "rrest",
-   "k": 16,
-   "before": 23,
-   "after": 1
   },
   {
    "cat": "river",
@@ -14263,24 +10015,6 @@
    "cat": "river",
    "gate": true,
    "target": "Congo",
-   "cond": "rpart",
-   "k": 2,
-   "before": 445,
-   "after": 457
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Congo",
-   "cond": "rrest",
-   "k": 2,
-   "before": 445,
-   "after": 6
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Congo",
    "cond": "jpart",
    "k": 16,
    "before": 445,
@@ -14303,24 +10037,6 @@
    "k": 16,
    "before": 445,
    "after": 504
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Congo",
-   "cond": "rpart",
-   "k": 16,
-   "before": 445,
-   "after": 66
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Congo",
-   "cond": "rrest",
-   "k": 16,
-   "before": 445,
-   "after": 24
   },
   {
    "cat": "river",
@@ -14362,24 +10078,6 @@
    "cat": "river",
    "gate": true,
    "target": "Jordan",
-   "cond": "rpart",
-   "k": 2,
-   "before": 88,
-   "after": 57
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Jordan",
-   "cond": "rrest",
-   "k": 2,
-   "before": 88,
-   "after": 3
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Jordan",
    "cond": "jpart",
    "k": 16,
    "before": 88,
@@ -14402,24 +10100,6 @@
    "k": 16,
    "before": 88,
    "after": 88
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Jordan",
-   "cond": "rpart",
-   "k": 16,
-   "before": 88,
-   "after": 8
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Jordan",
-   "cond": "rrest",
-   "k": 16,
-   "before": 88,
-   "after": 4
   },
   {
    "cat": "river",
@@ -14461,24 +10141,6 @@
    "cat": "river",
    "gate": true,
    "target": "Ohio",
-   "cond": "rpart",
-   "k": 2,
-   "before": 129,
-   "after": 20
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Ohio",
-   "cond": "rrest",
-   "k": 2,
-   "before": 129,
-   "after": 1
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Ohio",
    "cond": "jpart",
    "k": 16,
    "before": 129,
@@ -14501,24 +10163,6 @@
    "k": 16,
    "before": 129,
    "after": 149
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Ohio",
-   "cond": "rpart",
-   "k": 16,
-   "before": 129,
-   "after": 3
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Ohio",
-   "cond": "rrest",
-   "k": 16,
-   "before": 129,
-   "after": 1
   },
   {
    "cat": "river",
@@ -14560,24 +10204,6 @@
    "cat": "river",
    "gate": true,
    "target": "Mississippi",
-   "cond": "rpart",
-   "k": 2,
-   "before": 58,
-   "after": 50
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Mississippi",
-   "cond": "rrest",
-   "k": 2,
-   "before": 58,
-   "after": 1
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Mississippi",
    "cond": "jpart",
    "k": 16,
    "before": 58,
@@ -14600,24 +10226,6 @@
    "k": 16,
    "before": 58,
    "after": 67
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Mississippi",
-   "cond": "rpart",
-   "k": 16,
-   "before": 58,
-   "after": 3
-  },
-  {
-   "cat": "river",
-   "gate": true,
-   "target": "Mississippi",
-   "cond": "rrest",
-   "k": 16,
-   "before": 58,
-   "after": 1
   }
  ],
  "variance_fraction": [

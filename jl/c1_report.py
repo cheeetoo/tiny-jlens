@@ -6,7 +6,7 @@
   1d/1e  concept vectors split into J-space part (k-atom pursuit) and remainder; swap along each,
          same magnitude; remainder also with the J coordinates clamped to clean.  Run at k = 2
          (the paper's 16 scaled to GPT-2's occupancy; see jl/model.py) and at the paper's k = 16.
-         Control: the same split against a same-size random dictionary.
+         Also: the share of variance that k atoms of a same-size random dictionary capture.
 
 Writes results/c1_report/{results.json, prompts.json, summary.txt}.
 Run:  python -m jl.c1_report
@@ -108,16 +108,15 @@ def main():
     words = sorted({w for cat in CATEGORIES for w in members(lm, cat)})
     raw = {w: torch.stack([lm.residuals(lm.encode(CONCEPT_PROMPT.format(concept=w)))[L][-1] for L in lm.layers]) for w in words}
     rng = random.Random(0)
-    # random-dictionary control: the same pursuit against a same-size Gaussian dictionary (band only)
+    # for comparison, the variance share of the same pursuit against a same-size Gaussian dictionary (band only)
     rdict = {L: torch.randn(lm.V(L).shape, generator=torch.Generator().manual_seed(L)).to(lm.device) for L in band}
     parts = {k: {} for k in KS}    # parts[k][token][L] = J-space part, remainder, support
-    rparts = {k: {} for k in KS}   # the same split with the random dictionary
     for w in words:
         base = rng.sample([x for x in words if x != w], N_BASELINE)
         u = raw[w] - torch.stack([raw[b] for b in base]).mean(0)
         tok = lm.tid(" " + w)
         for k in KS:
-            parts[k][tok], rparts[k][tok] = {}, {}
+            parts[k][tok] = {}
             for i, L in enumerate(lm.layers):  # every lens layer (the clamp in 1e needs all of them)
                 support, recon = jl.pursuit(u[i], lm.V(L), k)
                 parts[k][tok][L] = dict(j=recon, n=u[i] - recon, support=support)
@@ -125,7 +124,6 @@ def main():
                                                      frac=float(recon.norm() ** 2 / u[i].norm() ** 2)))
                 if L in band:
                     _, rrec = jl.pursuit(u[i], rdict[L], k)
-                    rparts[k][tok][L] = dict(j=rrec, n=u[i] - rrec)
                     out["variance_fraction"].append(dict(concept=w, layer=L, k=k, dictionary="random",
                                                          frac=float(rrec.norm() ** 2 / u[i].norm() ** 2)))
     for c in cats:
@@ -133,15 +131,13 @@ def main():
         for w, t in c["targets"]:
             conds = [("lens", None, jl.swap_edits(lm, c["ids"], s, t, band, clean=c["clean"]))]
             for k in KS:
-                P, Rp = parts[k], rparts[k]
+                P = parts[k]
                 nonj = jl.swap_edits(lm, c["ids"], s, t, band, clean=c["clean"], comp={L: (P[s][L]["n"], P[t][L]["n"]) for L in band})
                 relevant = {L: torch.stack([lm.v(L, i) for i in sorted({s, t} | set(P[s][L]["support"]) | set(P[t][L]["support"]))]) for L in lm.layers}
                 conds += [
                     ("jpart", k, jl.swap_edits(lm, c["ids"], s, t, band, clean=c["clean"], comp={L: (P[s][L]["j"], P[t][L]["j"]) for L in band})),
                     ("nonj", k, nonj),
                     ("nonj_clamp", k, nonj + jl.clamp_edits(lm, c["ids"], relevant, clean=c["clean"])),
-                    ("rpart", k, jl.swap_edits(lm, c["ids"], s, t, band, clean=c["clean"], comp={L: (Rp[s][L]["j"], Rp[t][L]["j"]) for L in band})),
-                    ("rrest", k, jl.swap_edits(lm, c["ids"], s, t, band, clean=c["clean"], comp={L: (Rp[s][L]["n"], Rp[t][L]["n"]) for L in band})),
                 ]
             for name, k, edits in conds:
                 lg = lm.logits(c["ids"], edits)[-1]
@@ -167,10 +163,10 @@ def summarize(out) -> str:
         a = [x["rho"] for x in out["corr"] if x["layer"] == L]
         g = [x["rho"] for x in out["corr"] if x["layer"] == L and x["gate"]]
         lines.append(f"  L{L:<2d} {sum(a)/len(a):+.3f} | {sum(g)/len(g):+.3f}" + ("   <- band" if L in out["band"] else ""))
-    priv = [("lens", None)] + [(c, k) for k in KS for c in ("jpart", "nonj", "nonj_clamp", "rpart", "rrest")]
+    priv = [("lens", None)] + [(c, k) for k in KS for c in ("jpart", "nonj", "nonj_clamp")]
     for title, key, conds in (("1b  swap: target reaches top-5 (top-1); targets starting at output rank >= 11", "swap", [(None, None)]),
                               ("1d/1e  same, swapping along each component at the same magnitude "
-                               "(k = pursuit atoms; rpart/rrest = the split against a random dictionary)", "privilege", priv)):
+                               "(k = pursuit atoms)", "privilege", priv)):
         lines.append("\n" + title)
         for label, flt in (("gate-passed", lambda x: x["gate"]), ("all categories", lambda x: True)):
             for cond, k in conds:
