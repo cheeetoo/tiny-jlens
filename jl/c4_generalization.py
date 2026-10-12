@@ -22,12 +22,15 @@ See PROTOCOL.md.
 Writes results/c4_generalization/{results.json, prompts.json, summary.txt}.
 Run:  python -m jl.c4_generalization          (the criterion)
       python -m jl.c4_generalization gating   (E2 swap rates by gating class)
+      python -m jl.c4_generalization summary  (rewrite summary.txt from results.json)
 """
 from __future__ import annotations
 
 import json
+import random
 import sys
 from collections import defaultdict
+from math import comb
 from statistics import mean
 
 import torch
@@ -419,6 +422,42 @@ def summarize(out) -> str:
     L.append("  Claude, all 12 swaps per function (Fig. 68): " + ", ".join(
         f"{fn} {sum(claude[k] for k in claude if k[1] == fn)}" for fn in dict.fromkeys(k[1] for k in claude)))
 
+    # The two models on the same testable pairs, pair by pair (coordinate swap, a=1).  Pairs share
+    # prompts and targets, so the exact sign test on the disagreements is a rough guide only.
+    g_only = sum(r["coord"]["1.0"]["hit"] and not claude[key(r)] for r in rows)
+    c_only = sum(claude[key(r)] and not r["coord"]["1.0"]["hit"] for r in rows)
+    both = sum(r["coord"]["1.0"]["hit"] and claude[key(r)] for r in rows)
+    nd = g_only + c_only
+    p = min(1.0, 2 * sum(comb(nd, i) for i in range(min(g_only, c_only) + 1)) / 2 ** nd)
+    L.append(f"  same testable pairs, pair by pair: both {both}, GPT-2 only {g_only}, Claude only {c_only}, "
+             f"neither {len(rows) - both - nd}; exact sign test on the {nd} disagreements p = {p:.2f}")
+    # ...so resample source prompts instead: Claude's rate minus GPT-2's, 95% bootstrap interval.
+    by_prompt = defaultdict(list)
+    for r in rows:
+        by_prompt[(r["category"], r["function"], r["source"])].append(claude[key(r)] - r["coord"]["1.0"]["hit"])
+    groups, rng, diffs = list(by_prompt.values()), random.Random(0), []
+    for _ in range(10000):
+        d = [x for g in rng.choices(groups, k=len(groups)) for x in g]
+        diffs.append(sum(d) / len(d))
+    diffs.sort()
+    L.append(f"  Claude minus GPT-2 on these pairs: {(c_only - g_only) / len(rows):+.2f}, 95% interval "
+             f"[{diffs[250]:+.2f}, {diffs[9749]:+.2f}] resampling the {len(groups)} source prompts")
+    # Claude at a=2 is released only as a count per function over all 12 pairs (Fig. 19), so on
+    # the testable pairs it is known only within bounds (exactly where every pair is testable).
+    fig19 = {(q["cat"], q["func"]): q for q in json.load(open(PAPER_SUMMARY))["pts"]}
+    fn_n = defaultdict(int)
+    for r in rows:
+        fn_n[(r["category"], r["function"])] += 1
+    lo = sum(max(0, fig19[f]["hit2"] - (12 - n)) for f, n in fn_n.items())
+    hi = sum(min(n, fig19[f]["hit2"]) for f, n in fn_n.items())
+    L.append(f"  Claude at a=2 on the same pairs: not released per pair; between {lo} and {hi} from its per-function "
+             f"counts. Over all 12 pairs of these {len(fn_n)} functions, Claude a=1 -> a=2: "
+             f"{sum(fig19[f]['hit1'] for f in fn_n)} -> {sum(fig19[f]['hit2'] for f in fn_n)} of {12 * len(fn_n)} (" +
+             ", ".join(f"{f[1]} {fig19[f]['hit1']} -> {fig19[f]['hit2']}" for f in sorted(fn_n)) + ")")
+    L.append("  GPT-2 outputs the swapped-in argument itself on the testable pairs (coordinate swap): a=1 "
+             f"{sum(r['coord']['1.0']['got'].strip().lower() == r['target'].lower() for r in rows)}  a=2 "
+             f"{sum(r['coord']['2.0']['got'].strip().lower() == r['target'].lower() for r in rows)}")
+
     # alpha=2 overshoot: the swap emits the injected ARGUMENT word rather than f(argument)
     for op in OPS:
         rs = [r for r in out["swap"] if clean(r)]
@@ -438,10 +477,12 @@ def summarize(out) -> str:
     K = 5
     crank = claude_ranks()
     pre = sum(r["before"] <= K for r in out["swap"])
+    pre_hit = sum(r["before"] <= K and r["coord"]["1.0"]["after"] <= K for r in out["swap"])
     L.append(f"\nE2 swap at top-{K} — the target answer in the output top {K} (coordinate swap)")
     L.append(f"     all 192 pairs            GPT-2 a=1 {sum(r['coord']['1.0']['after'] <= K for r in out['swap']):3d}  "
              f"a=2 {sum(r['coord']['2.0']['after'] <= K for r in out['swap']):3d}   Claude a=1 "
-             f"{sum(crank[key(r)] <= K for r in out['swap']):3d}   (GPT-2 already top-{K} before the swap: {pre})")
+             f"{sum(crank[key(r)] <= K for r in out['swap']):3d}   (GPT-2 already top-{K} before the swap: {pre}, "
+             f"{pre_hit} of them still top-{K} at a=1)")
     rows5 = [r for r in out["swap"] if clean(r) and r["target_gated"] and r["before"] > K]
     L.append(f"     testable at top-{K} (n={len(rows5)}; as above, with the target outside the top {K} before)")
     for label, rs in [("all", rows5)] + sorted(
@@ -492,6 +533,13 @@ def summarize(out) -> str:
              f"Claude {corr(c, lambda f: f[0] != 'countries')}")
     cells = {k: (loadmap[k], mean(v)) for k, v in eff.items()}
     L.append(f"     GPT-2 per source cell         {corr(cells)}")
+    # The paper's text says loading predicts swap *success*; per function, loading vs the top-1
+    # count over all 12 pairs at a=1.
+    hits = {f: sum(r["coord"]["1.0"]["hit"] for r in out["swap"] if (r["category"], r["function"]) == f) for f in fns}
+    L.append("  loading vs top-1 count over the 12 pairs (a=1), per function:")
+    L.append(f"     GPT-2, coordinate swap        {corr({f: (g[f][0], hits[f]) for f in fns})}")
+    hit1 = {(q["cat"], q["func"]): q["hit1"] for q in paper["pts"]}
+    L.append(f"     Claude (paper's data)         {corr({f: (c[f][0], hit1[f]) for f in fns})}")
     for f in fns:
         L.append(f"       {f[0] + '/' + f[1]:24s} loading {g[f][0]:.3f}  effect {g[f][1]:+6.2f}   "
                  f"Claude: csum {c[f][0]:.3f}  effect {c[f][1]:+6.2f}")
@@ -540,5 +588,18 @@ def gating_breakdown():
               "  ".join(f"{c}:{d[k][c][0]}/{d[k][c][1]}" for c in ["both", "tgt", "src", "none"] if d[k][c][1]))
 
 
+def resummarize():
+    """Rewrite summary.txt from an existing results.json, without running the model."""
+    R = jl.results_dir("c4_generalization")
+    summary = summarize(json.load(open(R / "results.json")))
+    open(R / "summary.txt", "w").write(summary)
+    print(summary)
+
+
 if __name__ == "__main__":
-    gating_breakdown() if "gating" in sys.argv[1:] else main()
+    if "gating" in sys.argv[1:]:
+        gating_breakdown()
+    elif "summary" in sys.argv[1:]:
+        resummarize()
+    else:
+        main()
