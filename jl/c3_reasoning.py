@@ -10,7 +10,7 @@ See PROTOCOL.md.
   E5 priv  probe -> J-space (k-atom pursuit) + remainder; swap along each at matched
            magnitude; remainder also with the J coordinates clamped to clean (Fig 16).  Run at
            k = 3 (the paper's 25 scaled to GPT-2's occupancy; see jl/model.py) and at k = 25.
-           Control: the same split against a same-size random dictionary.
+           Also: the share of variance that k atoms of a same-size random dictionary capture.
   floor    the paper's own probe-swap.json, verbatim: capability + swap (the deviation cost)
 
 Writes results/c3_reasoning/{results.json, prompts.json, summary.txt}.
@@ -318,21 +318,20 @@ def main():
     # ------------------------------------------------------------------ E5 privileging
     # probe per country from PROBE_CUES (imply country, ask other attribute), minus
     # grand mean; split by pursuit into J-space (k atoms) + remainder at every layer, for each k
-    # in KS; and, as a control, against a same-size random dictionary at the band layers.
+    # in KS; and, for comparison, the variance share of the same pursuit against a same-size random
+    # dictionary at the band layers.
     probe = country_probes(lm, countries_pass)
     rdict = {L: torch.randn(lm.V(L).shape, generator=torch.Generator().manual_seed(L)).to(lm.device) for L in band}
     part = {k: {} for k in KS}                  # part[k][c][L] = dict(j, n, support)
-    rpart = {k: {} for k in KS}                 # the same split with the random dictionary
     for c in probe:
         for k in KS:
-            part[k][c], rpart[k][c] = {}, {}
+            part[k][c] = {}
             for L in lm.layers:
                 u = probe[c][L]
                 support, recon = jl.pursuit(u, lm.V(L), k)
                 part[k][c][L] = dict(j=recon, n=u - recon, support=support)
                 if L in band:
                     _, rrec = jl.pursuit(u, rdict[L], k)
-                    rpart[k][c][L] = dict(j=rrec, n=u - rrec)
                     for name, rec in (("jlens", recon), ("random", rrec)):
                         out["variance_fraction"].append(dict(country=c, layer=L, k=k, dictionary=name,
                                                              frac=float(rec.norm() ** 2 / u.norm() ** 2)))
@@ -356,7 +355,7 @@ def main():
                 "full": delta_edits(full),
             }
             for k in KS:
-                P, Rp = part[k], rpart[k]
+                P = part[k]
                 jdel = {L: matched(P[B][L]["j"] - P[A][L]["j"], full[L]) for L in band}
                 ndel = {L: matched(P[B][L]["n"] - P[A][L]["n"], full[L]) for L in band}
                 clamp_dirs = {L: torch.stack([lm.v(L, i) for i in sorted(
@@ -364,8 +363,6 @@ def main():
                 conds[f"jpart_k{k}"] = delta_edits(jdel)
                 conds[f"nonj_k{k}"] = delta_edits(ndel)
                 conds[f"nonj_clamp_k{k}"] = delta_edits(ndel) + jl.clamp_edits(lm, it["ids"], clamp_dirs, clean=it["clean"])
-                conds[f"rpart_k{k}"] = delta_edits({L: matched(Rp[B][L]["j"] - Rp[A][L]["j"], full[L]) for L in band})
-                conds[f"rrest_k{k}"] = delta_edits({L: matched(Rp[B][L]["n"] - Rp[A][L]["n"], full[L]) for L in band})
             rec = dict(family=it["family"], intermediate=A, target=B, swap_answer=p["answer"])
             for name, edits in conds.items():
                 lg = lm.logits(it["ids"], edits)[-1]
@@ -471,8 +468,8 @@ def summarize(out, lm) -> str:
 
     # E5
     L.append("\nE5 privileging — swap_answer top-1, per condition (matched magnitude; n=%d; "
-             "k = pursuit atoms; rpart/rrest = the split against a random dictionary)" % len(out["privilege"]))
-    conds = ["raw_lens", "full"] + [f"{c}_k{k}" for k in KS for c in ("jpart", "nonj", "nonj_clamp", "rpart", "rrest")]
+             "k = pursuit atoms)" % len(out["privilege"]))
+    conds = ["raw_lens", "full"] + [f"{c}_k{k}" for k in KS for c in ("jpart", "nonj", "nonj_clamp")]
     for cond in conds:
         k = sum(r[cond] for r in out["privilege"]); n = len(out["privilege"])
         p, lo, hi = wilson(k, n)

@@ -37,19 +37,15 @@ E4 depth — onset layer (half-max) of the swap effect, intermediate vs answer (
     L9  intermediate  +5.09   answer  +5.35
     L10 intermediate  +5.07   answer  +5.14
 
-E5 privileging — swap_answer top-1, per condition (matched magnitude; n=984; k = pursuit atoms; rpart/rrest = the split against a random dictionary)
+E5 privileging — swap_answer top-1, per condition (matched magnitude; n=984; k = pursuit atoms)
   raw_lens        70.6% [68%,73%]  (695/984)
   full            88.1% [86%,90%]  (867/984)
   jpart_k3        94.1% [92%,95%]  (926/984)
   nonj_k3         14.0% [12%,16%]  (138/984)
   nonj_clamp_k3    0.2% [ 0%, 1%]  (2/984)
-  rpart_k3         1.0% [ 1%, 2%]  (10/984)
-  rrest_k3        86.3% [84%,88%]  (849/984)
   jpart_k25       95.3% [94%,96%]  (938/984)
   nonj_k25         1.4% [ 1%, 2%]  (14/984)
   nonj_clamp_k25   0.0% [ 0%, 0%]  (0/984)
-  rpart_k25       31.7% [29%,35%]  (312/984)
-  rrest_k25       64.9% [62%,68%]  (639/984)
   share of probe variance in the k-atom part (median), J-lens | random dictionary:
     k= 3: L7 6% | 6%,  L8 15% | 6%,  L9 32% | 6%
     k=25: L7 27% | 37%,  L8 40% | 37%,  L9 57% | 37%
