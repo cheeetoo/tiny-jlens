@@ -15,22 +15,19 @@ S2a ablation battery  (n: two-hop 48, one-hop 52, induction 40, wikitext paras 1
   induction       automatic  1.00     0.95 (1.00-1.00)    0.65 (0.53-0.95)    0.00 (0.07-0.80)
   pretrain_match  automatic  1.00     0.71 (0.80-0.82)    0.54 (0.67-0.68)    0.41 (0.57-0.58)
 
-S2b language, swap across the question tokens (paper's form): the answer follows the swapped-in language
-  task       passages done correctly   alpha=1          alpha=2          language name in band lens over the question (median best rank)
-  report     7/8                       12/21 =  57%     13/21 =  62%     3
-  author     0/8                        0/0  =   0%      0/0  =   0%     53
-  continue   8/8                        0/24 =   0%      0/24 =   0%     568
-
-S2b, earlier version: the swap applied over the PASSAGE (report gate: 7/8 passages; the same language swap under two tasks, by swap strength alpha)
-  alpha   deliberate report -> swapped language | automatic continuation -> keeps own language
-    0.5    report flips  4/21 =  19%      continuation holds 19/21 =  90%
-    1.0    report flips  8/21 =  38%      continuation holds 16/21 =  76%
-    1.5    report flips 19/21 =  90%      continuation holds 13/21 =  62%
-    2.0    report flips 19/21 =  90%      continuation holds 11/21 =  52%
-    3.0    report flips 21/21 = 100%      continuation holds  7/21 =  33%
-  n = 21 passage x alt-language swaps per alpha
-  panel (b) true-language label presence in band J-space over the passage (median band-min rank): report prompt 22, continuation prompt 21
-  -> the report follows the swap at strengths where the continuation keeps its own language: the same latent is causal for the deliberate task, less so for the automatic one.
+S2b language (the paper's 8 passages; the language's J-lens coordinate swapped for each other language's)
+  the language's name in the band lens, best rank per passage (min-max): over the question | over the passage
+    report           1-9 | 2-141
+    author        16-100 | 1-225
+    continue     22-2466 | 2-355
+  swap over the question tokens (the paper's design): the answer follows the swapped-in language
+    report    done correctly on 7/8 passages   alpha=1: 12/21   alpha=2: 13/21
+    author    done correctly on 0/8 passages   alpha=1: 0/0   alpha=2: 0/0
+    continue  done correctly on 8/8 passages (graded by eye)   alpha=1: follows 0/24, own language 22, other 2 (identical to no swap: 16)   alpha=2: follows 0/24, own language 22, other 2 (identical to no swap: 13)
+  swap over the passage tokens (not the paper's design): the answer follows the swapped-in language
+    report    done correctly on 7/8 passages   alpha=1: 9/21   alpha=1.5: 19/21
+    author    done correctly on 0/8 passages   alpha=1: 0/0   alpha=1.5: 0/0
+    continue  done correctly on 8/8 passages (graded by eye)   alpha=1: follows 4/24, own language 14, other 6 (identical to no swap: 3)   alpha=1.5: follows 6/24, own language 8, other 10 (identical to no swap: 0)
 
 S1 small subset  (wikitext activations, 150 positions per layer; pursuit up to K=30)
   per-position occupancy (percentiles 10/25/50/75/90) | variance captured at K = median occupancy, J-lens | random | excess | the same at the paper's K = 25

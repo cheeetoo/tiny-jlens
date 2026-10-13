@@ -14,8 +14,15 @@ See PROTOCOL.md.
   floor    the paper's own probe-swap.json, verbatim: capability + swap (the deviation cost)
 
 Writes results/c3_reasoning/{results.json, prompts.json, summary.txt}.
-Run:  python -m jl.c3_reasoning            (the criterion)
-      python -m jl.c3_reasoning swap_ops   (E3 under both swap operations)
+Run:  python -m jl.c3_reasoning              (the criterion)
+      python -m jl.c3_reasoning swap_ops     (E3 under both swap operations)
+      python -m jl.c3_reasoning probe_cues   (E5's probe cues: what GPT-2 is about to say at the
+                                              end of each, and the J-lens vectors in each probe's
+                                              J-space part)
+      python -m jl.c3_reasoning released     (GPT-2 on the paper's two released sets of two-hop
+                                              questions, and the swap on the 90 it answers)
+      python -m jl.c3_reasoning other_examples  (can GPT-2 plan a rhyme, or give an antonym
+                                              through French?)
 """
 from __future__ import annotations
 
@@ -59,9 +66,11 @@ DEPTH_LAYERS = [4, 5, 6, 7, 8, 9, 10]  # E4 single-layer sweep
 #
 # For the privileging experiment (§3.3, Fig 16) we also build a probe for each
 # country from several cue prompts that *imply* the country through different
-# surface cues and ask about different attributes, with the country name never the
-# next token (paper: "prompts that imply the same intermediate through different
-# surface cues and ask different questions about it").
+# surface cues and ask about different attributes (paper: "prompts that imply the
+# same intermediate through different surface cues and ask different questions
+# about it").  The cues never name the country, but GPT-2 can't answer most of
+# their questions and often predicts the country itself as the next token
+# (`probe_cues` below).
 #
 # The paper's own two-hop set (ref/.../probe-swap.json) is loaded verbatim for the
 # capability-floor check below.
@@ -120,8 +129,8 @@ FAMILIES = [
 ]
 
 # §3.3 privileging: cues that IMPLY the country through varied surface cues and
-# ask about a DIFFERENT attribute, so the country name is never the next token.
-# Filled per country from its capital / language / continent.
+# ask about a DIFFERENT attribute.  The country is never named, but it can still be
+# GPT-2's next token (see `probe_cues`).  Filled per country from its capital / language.
 PROBE_CUES = [
     "People in the country whose capital is {capital} mostly speak the language of",
     "A traveler flying into {capital} has landed on the continent of",
@@ -135,6 +144,25 @@ CASE_STUDY = dict(family="lang_capital", source="France", target="China")  # Par
 
 
 # =============================================================================== the run
+
+
+@torch.no_grad()
+def country_probes(lm, countries) -> dict:
+    """E5's probe for each country, {country: {L: probe}} at every lens layer: the mean final-token
+    residual over PROBE_CUES filled in for that country, minus the mean of these over `countries`
+    (paper: "the mean residual-stream activation over a set of prompts that imply the same
+    intermediate ..., minus the mean over all intermediates")."""
+    probe = {}
+    for c in sorted(countries):
+        f = COUNTRIES[c]
+        stacks = {L: [] for L in lm.layers}
+        for cue in PROBE_CUES:
+            r = lm.residuals(lm.encode(cue.format(capital=f["capital"], language=f["language"])))
+            for L in lm.layers:
+                stacks[L].append(r[L][-1])
+        probe[c] = {L: torch.stack(v).mean(0) for L, v in stacks.items()}
+    grand = {L: torch.stack([probe[c][L] for c in probe]).mean(0) for L in lm.layers}
+    return {c: {L: p[L] - grand[L] for L in lm.layers} for c, p in probe.items()}
 
 
 class Words:
@@ -291,22 +319,10 @@ def main():
     # probe per country from PROBE_CUES (imply country, ask other attribute), minus
     # grand mean; split by pursuit into J-space (k atoms) + remainder at every layer, for each k
     # in KS; and, as a control, against a same-size random dictionary at the band layers.
-    probe = {}
-    for c in sorted(countries_pass):
-        f = COUNTRIES[c]
-        stacks = {L: [] for L in lm.layers}
-        for cue in PROBE_CUES:
-            r = lm.residuals(lm.encode(cue.format(capital=f["capital"], language=f["language"])))
-            for L in lm.layers:
-                stacks[L].append(r[L][-1])
-        probe[c] = {L: torch.stack(v).mean(0) for L, v in stacks.items()}
-    grand = {L: torch.stack([probe[c][L] for c in probe]).mean(0) for L in lm.layers}
+    probe = country_probes(lm, countries_pass)
     rdict = {L: torch.randn(lm.V(L).shape, generator=torch.Generator().manual_seed(L)).to(lm.device) for L in band}
     part = {k: {} for k in KS}                  # part[k][c][L] = dict(j, n, support)
     rpart = {k: {} for k in KS}                 # the same split with the random dictionary
-    for c in probe:
-        for L in lm.layers:
-            probe[c][L] = probe[c][L] - grand[L]  # store centered probe
     for c in probe:
         for k in KS:
             part[k][c], rpart[k][c] = {}, {}
@@ -515,5 +531,215 @@ def swap_ops():
             print(f"{name:7s} {fam:14s} {sum(r)}/{len(r)} = {100 * sum(r) / len(r):.1f}%")
 
 
+# =============================================================================== probe cues
+@torch.no_grad()
+def probe_cues():
+    """E5's probes, looked at directly, for the countries `main` keeps (results/c3_reasoning/
+    prompts.json).  The paper doesn't say whether the intermediate may be the next token of its
+    probe prompts (which it doesn't release); its one released decomposition (Fig. 16, China)
+    has China, Beijing and pandas as the top J-lens vectors.
+
+      cues   for each country and cue, GPT-2's top 5 next tokens and the rank of the country,
+             its capital and its language (any single-token form) as the next token
+      atoms  for each country, band layer and k in KS, the k J-lens vectors of the probe's
+             J-space part, in the order pursuit picks them, and whether they include the
+             country, its capital or its language
+
+    Writes results/c3_reasoning/probe_cues.json."""
+    lm = jl.Lensed()
+    W = Words(lm)
+    R = jl.results_dir("c3_reasoning")
+    countries = sorted({it["intermediate"] for it in json.load(open(R / "prompts.json"))})
+    words = lambda c: dict(country=c, capital=COUNTRIES[c]["capital"], language=COUNTRIES[c]["language"])
+
+    cues = []
+    for c in countries:
+        f = COUNTRIES[c]
+        for i, cue in enumerate(PROBE_CUES):
+            text = cue.format(capital=f["capital"], language=f["language"])
+            lg = lm.logits(lm.encode(text))[-1]
+            cues.append(dict(country=c, cue=i, text=text,
+                             top5=[lm.dec(t) for t in lg.topk(5).indices.tolist()],
+                             rank={name: int(jl.ranks_of(lg, W(w)).min()) if W(w) else 10**9
+                                   for name, w in words(c).items()}))
+
+    probe = country_probes(lm, countries)
+    atoms = []
+    for c in countries:
+        ids = {name: set(W(w)) for name, w in words(c).items()}
+        for k in KS:
+            for L in jl.BAND:
+                support, recon = jl.pursuit(probe[c][L], lm.V(L), k)
+                atoms.append(dict(country=c, k=k, layer=L, atoms=[lm.dec(t) for t in support],
+                                  has={name: bool(set(support) & v) for name, v in ids.items()},
+                                  frac=float(recon.norm() ** 2 / probe[c][L].norm() ** 2)))
+    json.dump(dict(countries=countries, cues=cues, atoms=atoms), open(R / "probe_cues.json", "w"), indent=1)
+
+    n = len(countries)
+    print(f"probe cues, {n} countries: next-token rank of the country / its capital / its language")
+    for i, cue in enumerate(PROBE_CUES):
+        rs = [r for r in cues if r["cue"] == i]
+        print(f"  cue {i}: {cue}")
+        for name in ("country", "capital", "language"):
+            v = [r["rank"][name] for r in rs]
+            print(f"    {name:8s} top-1 {sum(x == 1 for x in v):2d}/{n}   top-5 {sum(x <= 5 for x in v):2d}/{n}   "
+                  f"median rank {median(v):.0f}")
+    per = [sum(r["rank"]["country"] <= 5 for r in cues if r["country"] == c) for c in countries]
+    print(f"  cues per country with the country in the top 5: median {median(per):.0f} of {len(PROBE_CUES)} "
+          f"(min {min(per)}, max {max(per)})")
+    print("probes' J-space parts: countries whose own country / capital / language token is among the k vectors")
+    for k in KS:
+        for L in jl.BAND:
+            a = [x for x in atoms if x["k"] == k and x["layer"] == L]
+            print(f"  k={k:2d} L{L}: " + "   ".join(f"{name} {sum(x['has'][name] for x in a):2d}/{n}"
+                                                for name in ("country", "capital", "language")))
+    for c in ("France", "China"):
+        for x in atoms:
+            if x["country"] == c and x["k"] == K_PURSUIT:
+                print(f"  {c} L{x['layer']} k={x['k']}: {x['atoms']}")
+
+
+# The released file of the paper's lens-quality evaluations (§app-quant "Multihop (50 items)"; it
+# holds 93), which contains the internal-reasoning examples (spider legs, Mars).
+LENS_EVAL_MULTIHOP = jl.REF_DATA.parent / "evaluations" / "lens-eval-multihop.json"
+# intermediates of either released set that are countries (for the summary's count only)
+RELEASED_COUNTRIES = {"Brazil", "China", "Russia", "Vatican", "Indonesia", "Italy", "Spain", "India", "France",
+                      "Germany", "Japan", "Egypt", "Peru", "Canada", "Greece", "Hungary", "Poland", "Sweden",
+                      "Mexico", "Australia", "England", "Netherlands", "Turkey", "Argentina", "Kenya", "Thailand"}
+
+
+@torch.no_grad()
+def released():
+    """GPT-2 on the paper's two released sets of two-hop questions, with one protocol: the 90 of its
+    privilege test (probe-swap.json) and the 93 of its lens evaluations (lens-eval-multihop.json).
+    Each question is asked with 0 or 2 worked examples (`{prompt} {answer}.`), the 2 chosen from
+    questions of the same kind where the set has any (the 90: `category`, except the catch-all
+    'multihop'; the 93: the name's prefix, e.g. 'atomic'), else at random, never from questions that
+    share a word with it, and never from the 93's chain ('nhop') questions.  Answered = the greedy next
+    token is a single-token form of the answer.  Then, on the 90 with 2 worked examples, the paper's
+    swap (`swap_to`, the coordinate swap over the band) for the answered questions whose words are
+    single tokens and whose target answer starts outside the top 10.
+    Writes results/c3_reasoning/released.json."""
+    lm = jl.Lensed()
+    W = Words(lm)
+    sets = {
+        "privilege_90": [dict(name=i["name"], prompt=i["prompt"], mid=i["intermediate"], ans=i["answer"],
+                              kind=i["category"] if i["category"] != "multihop" else None,
+                              swap_to=i["swap_to"], swap_answer=i["swap_answer"])
+                         for i in json.load(open(jl.REF_DATA / "probe-swap.json"))["items"]],
+        "lens_eval_93": [dict(name=i["name"], prompt=i["prompt"], mid=i["intermediates"][0], ans=i["target"],
+                              kind=i["name"].split("-")[0])
+                         for i in json.load(open(LENS_EVAL_MULTIHOP))["items"]],
+    }
+
+    def words(it):
+        return {it[k].lower() for k in ("mid", "ans", "swap_to", "swap_answer") if k in it}
+
+    def demos(it, items, n):
+        others = [o for o in items if o is not it and not (words(o) & words(it))
+                  and it["ans"].lower() not in o["prompt"].lower() and it["mid"].lower() not in o["prompt"].lower()
+                  and not o["name"].startswith("nhop")]
+        same = [o for o in others if it["kind"] and o["kind"] == it["kind"]]
+        rest = [o for o in others if o not in same]
+        rng = random.Random(it["name"])
+        rng.shuffle(same)
+        rng.shuffle(rest)
+        return (same + rest)[:n]
+
+    def prompt(it, items, n):
+        return "".join(o["prompt"].rstrip() + " " + o["ans"] + ".\n" for o in demos(it, items, n)) + it["prompt"].rstrip()
+
+    rank = lambda lg, w: int(jl.ranks_of(lg, W(w)).min()) if W(w) else 10**9
+    out = {}
+    for name, items in sets.items():
+        out[name] = {"n": len(items)}
+        for n in (0, 2):
+            answered = [dict(name=it["name"], intermediate=it["mid"], answer=it["ans"])
+                        for it in items if int(lm.logits(lm.encode(prompt(it, items, n)))[-1].argmax()) in W(it["ans"])]
+            out[name][f"answered_{n}"] = answered
+    swaps = []
+    items = sets["privilege_90"]
+    for it in items:
+        if not all(lm.is_single(" " + it[k]) for k in ("mid", "swap_to")) or not W(it["swap_answer"]):
+            continue
+        ids = lm.encode(prompt(it, items, 2))
+        lg = lm.logits(ids)[-1]
+        if int(lg.argmax()) not in W(it["ans"]):
+            continue
+        sw = lm.logits(ids, coord_swap_edits(lm, ids, lm.tid(" " + it["mid"]), lm.tid(" " + it["swap_to"]), jl.BAND))[-1]
+        swaps.append(dict(name=it["name"], intermediate=it["mid"], swap_to=it["swap_to"],
+                          before=rank(lg, it["swap_answer"]), after=rank(sw, it["swap_answer"]),
+                          hit=int(sw.argmax()) in W(it["swap_answer"]), got=lm.dec(int(sw.argmax()))))
+    out["privilege_90"]["swap_2"] = swaps
+    json.dump(out, open(jl.results_dir("c3_reasoning") / "released.json", "w"), indent=1)
+
+    for name in sets:
+        for n in (0, 2):
+            a = out[name][f"answered_{n}"]
+            via = [x for x in a if x["intermediate"] in RELEASED_COUNTRIES]
+            print(f"{name}, {n} worked examples: answered {len(a)}/{out[name]['n']}, "
+                  f"{len(via)} through a country")
+            for x in a:
+                print(f"    {x['name']:36s} {x['intermediate']:>12s} -> {x['answer']}")
+    names = lambda name: {x["name"] for x in out[name]["answered_2"]}
+    both = names("privilege_90") | names("lens_eval_93")
+    via = {x["name"] for s in sets for x in out[s]["answered_2"] if x["intermediate"] in RELEASED_COUNTRIES}
+    print(f"both sets, 2 worked examples: {len(both)} different questions answered, {len(via)} through a country "
+          f"(the sets share {len({i['name'] for i in sets['privilege_90']} & {i['name'] for i in sets['lens_eval_93']})} questions)")
+    elig = [s for s in swaps if s["before"] > 10]
+    print(f"swap on the 90 (2 worked examples): {len(swaps)} answered with single-token words, {len(elig)} with the "
+          f"target answer outside the top 10, top-1 after the swap on {sum(s['hit'] for s in elig)}")
+    for s in swaps:
+        print(f"    {s['name']:36s} {s['intermediate']:>10s} -> {s['swap_to']:<10s} target rank {s['before']:6d} -> "
+              f"{s['after']:5d} {'HIT' if s['hit'] else '   '} got {s['got']!r}")
+
+
+@torch.no_grad()
+def other_examples():
+    """Can GPT-2 do the paper's other examples of internal reasoning at all?  Capability and the band
+    lens only, no swaps.  Rhyme planning (a couplet's second line, with one worked couplet): GPT-2's
+    second line, and rhyme words in the band lens top 10 at the newline.  An antonym through another
+    language (the paper's is Chinese; GPT-2 has some French), with two worked examples: GPT-2's answer,
+    and the English antonym in the band lens top 10.  (The paper's arithmetic is in jl.c2_modulation.)"""
+    lm = jl.Lensed()
+
+    def band_top(ids, k=10):
+        res = lm.residuals(ids)
+        return {L: [lm.dec(t).strip() for t in lm.lens_logits(res[L][-1], L).topk(k).indices.tolist()] for L in jl.BAND}
+
+    def greedy(text, n):
+        ids = lm.encode(text)
+        for _ in range(n):
+            ids = torch.cat([ids, lm.logits(ids)[-1].argmax().view(1, 1)], dim=1)
+        return lm.tok.decode(ids[0, 1:].tolist())[len(text):]
+
+    print("rhyme planning: GPT-2's second line, and rhyme words in the band lens top 10 at the newline")
+    shot = "A rhyming couplet:\nThe cat sat down upon the mat,\nAnd then it wore a funny hat.\n\nA rhyming couplet:\n"
+    for first, rhymes in [("The soldier marched into the night,", {"fight", "light", "sight", "bright", "might", "flight", "right"}),
+                          ("He saw a carrot and had to grab it,", {"rabbit", "habit"}),
+                          ("The wind was cold and the sky was gray,", {"day", "way", "away", "play", "stay", "say"})]:
+        text = shot + first + "\n"
+        top = band_top(lm.encode(text))
+        print(f"  {first!r} -> {greedy(text, 12)!r}; rhymes in the lens: "
+              f"{ {L: [w for w in ws if w.lower() in rhymes] for L, ws in top.items()} }")
+    print("antonym through French: GPT-2's answer, and the English antonym in the band lens top 10")
+    shot = 'Le contraire de "chaud" est "froid".\nLe contraire de "haut" est "bas".\n'
+    for word, ans, eng in [("petit", "grand", {"big", "large", "great"}), ("noir", "blanc", {"white"}),
+                           ("jour", "nuit", {"night"}), ("vieux", "jeune", {"young"}), ("lent", "rapide", {"fast", "quick"})]:
+        ids = lm.encode(shot + f'Le contraire de "{word}" est "')
+        top = band_top(ids)
+        print(f"  {word} -> {lm.dec(int(lm.logits(ids)[-1].argmax()))!r} (expected {ans}); English antonym in the lens: "
+              f"{ {L: [w for w in ws if w.lower() in eng] for L, ws in top.items()} }")
+
+
 if __name__ == "__main__":
-    swap_ops() if "swap_ops" in sys.argv[1:] else main()
+    if "swap_ops" in sys.argv[1:]:
+        swap_ops()
+    elif "probe_cues" in sys.argv[1:]:
+        probe_cues()
+    elif "released" in sys.argv[1:]:
+        released()
+    elif "other_examples" in sys.argv[1:]:
+        other_examples()
+    else:
+        main()

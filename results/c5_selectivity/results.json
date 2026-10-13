@@ -248,10 +248,16 @@
   }
  },
  "language": {
-  "alphas": [
-   1.0,
-   2.0
-  ],
+  "alphas": {
+   "question": [
+    1.0,
+    2.0
+   ],
+   "passage": [
+    1.0,
+    1.5
+   ]
+  },
   "gate": [
    {
     "task": "report",
@@ -268,13 +274,6 @@
     "correct": false
    },
    {
-    "task": "continue",
-    "key": "fr1",
-    "category": "French",
-    "top1": " Le",
-    "correct": true
-   },
-   {
     "task": "report",
     "key": "fr2",
     "category": "French",
@@ -289,13 +288,6 @@
     "correct": false
    },
    {
-    "task": "continue",
-    "key": "fr2",
-    "category": "French",
-    "top1": " La",
-    "correct": true
-   },
-   {
     "task": "report",
     "key": "de1",
     "category": "German",
@@ -308,13 +300,6 @@
     "category": "German",
     "top1": " K",
     "correct": false
-   },
-   {
-    "task": "continue",
-    "key": "de1",
-    "category": "German",
-    "top1": " Die",
-    "correct": true
    },
    {
     "task": "report",
@@ -331,13 +316,6 @@
     "correct": false
    },
    {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "top1": " Die",
-    "correct": true
-   },
-   {
     "task": "report",
     "key": "es1",
     "category": "Spanish",
@@ -350,13 +328,6 @@
     "category": "Spanish",
     "top1": " P",
     "correct": false
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "top1": " El",
-    "correct": true
    },
    {
     "task": "report",
@@ -373,13 +344,6 @@
     "correct": false
    },
    {
-    "task": "continue",
-    "key": "es2",
-    "category": "Spanish",
-    "top1": " De",
-    "correct": true
-   },
-   {
     "task": "report",
     "key": "it1",
     "category": "Italian",
@@ -392,13 +356,6 @@
     "category": "Italian",
     "top1": " P",
     "correct": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "top1": " D",
-    "correct": true
    },
    {
     "task": "report",
@@ -413,13 +370,6 @@
     "category": "Italian",
     "top1": " P",
     "correct": false
-   },
-   {
-    "task": "continue",
-    "key": "it2",
-    "category": "Italian",
-    "top1": " D",
-    "correct": true
    }
   ],
   "trials": [
@@ -429,6 +379,7 @@
     "category": "French",
     "alt": "German",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -437,6 +388,7 @@
     "category": "French",
     "alt": "German",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -445,6 +397,7 @@
     "category": "French",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -453,6 +406,7 @@
     "category": "French",
     "alt": "Spanish",
     "alpha": 2.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -461,6 +415,7 @@
     "category": "French",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -469,54 +424,61 @@
     "category": "French",
     "alt": "Italian",
     "alpha": 2.0,
+    "where": "question",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr1",
     "category": "French",
     "alt": "German",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr1",
     "category": "French",
     "alt": "German",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr1",
     "category": "French",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr1",
     "category": "French",
     "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr1",
     "category": "French",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr1",
     "category": "French",
     "alt": "Italian",
-    "alpha": 2.0,
+    "alpha": 1.5,
+    "where": "passage",
     "follows": false
    },
    {
@@ -525,6 +487,7 @@
     "category": "French",
     "alt": "German",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -533,6 +496,7 @@
     "category": "French",
     "alt": "German",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -541,6 +505,7 @@
     "category": "French",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -549,6 +514,7 @@
     "category": "French",
     "alt": "Spanish",
     "alpha": 2.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -557,6 +523,7 @@
     "category": "French",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -565,54 +532,61 @@
     "category": "French",
     "alt": "Italian",
     "alpha": 2.0,
+    "where": "question",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr2",
     "category": "French",
     "alt": "German",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr2",
     "category": "French",
     "alt": "German",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr2",
     "category": "French",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr2",
     "category": "French",
     "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr2",
     "category": "French",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "fr2",
     "category": "French",
     "alt": "Italian",
-    "alpha": 2.0,
+    "alpha": 1.5,
+    "where": "passage",
     "follows": false
    },
    {
@@ -621,6 +595,7 @@
     "category": "German",
     "alt": "French",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -629,6 +604,7 @@
     "category": "German",
     "alt": "French",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -637,6 +613,7 @@
     "category": "German",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -645,6 +622,7 @@
     "category": "German",
     "alt": "Spanish",
     "alpha": 2.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -653,6 +631,7 @@
     "category": "German",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -661,55 +640,62 @@
     "category": "German",
     "alt": "Italian",
     "alpha": 2.0,
+    "where": "question",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "de1",
     "category": "German",
     "alt": "French",
     "alpha": 1.0,
-    "follows": false
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "de1",
     "category": "German",
     "alt": "French",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "de1",
     "category": "German",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "de1",
     "category": "German",
     "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "de1",
     "category": "German",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "de1",
     "category": "German",
     "alt": "Italian",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
     "task": "report",
@@ -717,6 +703,7 @@
     "category": "German",
     "alt": "French",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -725,6 +712,61 @@
     "category": "German",
     "alt": "French",
     "alpha": 2.0,
+    "where": "question",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "de2",
+    "category": "German",
+    "alt": "Spanish",
+    "alpha": 1.0,
+    "where": "question",
+    "follows": false
+   },
+   {
+    "task": "report",
+    "key": "de2",
+    "category": "German",
+    "alt": "Spanish",
+    "alpha": 2.0,
+    "where": "question",
+    "follows": false
+   },
+   {
+    "task": "report",
+    "key": "de2",
+    "category": "German",
+    "alt": "Italian",
+    "alpha": 1.0,
+    "where": "question",
+    "follows": false
+   },
+   {
+    "task": "report",
+    "key": "de2",
+    "category": "German",
+    "alt": "Italian",
+    "alpha": 2.0,
+    "where": "question",
+    "follows": false
+   },
+   {
+    "task": "report",
+    "key": "de2",
+    "category": "German",
+    "alt": "French",
+    "alpha": 1.0,
+    "where": "passage",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "de2",
+    "category": "German",
+    "alt": "French",
+    "alpha": 1.5,
+    "where": "passage",
     "follows": true
    },
    {
@@ -733,6 +775,7 @@
     "category": "German",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
@@ -740,8 +783,9 @@
     "key": "de2",
     "category": "German",
     "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
     "task": "report",
@@ -749,6 +793,7 @@
     "category": "German",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
@@ -756,56 +801,9 @@
     "key": "de2",
     "category": "German",
     "alt": "Italian",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "alt": "French",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "alt": "French",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "de2",
-    "category": "German",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
     "task": "report",
@@ -813,6 +811,7 @@
     "category": "Spanish",
     "alt": "French",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -821,6 +820,7 @@
     "category": "Spanish",
     "alt": "French",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -829,6 +829,7 @@
     "category": "Spanish",
     "alt": "German",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -837,6 +838,61 @@
     "category": "Spanish",
     "alt": "German",
     "alpha": 2.0,
+    "where": "question",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "es1",
+    "category": "Spanish",
+    "alt": "Italian",
+    "alpha": 1.0,
+    "where": "question",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "es1",
+    "category": "Spanish",
+    "alt": "Italian",
+    "alpha": 2.0,
+    "where": "question",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "es1",
+    "category": "Spanish",
+    "alt": "French",
+    "alpha": 1.0,
+    "where": "passage",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "es1",
+    "category": "Spanish",
+    "alt": "French",
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "es1",
+    "category": "Spanish",
+    "alt": "German",
+    "alpha": 1.0,
+    "where": "passage",
+    "follows": true
+   },
+   {
+    "task": "report",
+    "key": "es1",
+    "category": "Spanish",
+    "alt": "German",
+    "alpha": 1.5,
+    "where": "passage",
     "follows": true
    },
    {
@@ -845,63 +901,17 @@
     "category": "Spanish",
     "alt": "Italian",
     "alpha": 1.0,
-    "follows": true
+    "where": "passage",
+    "follows": false
    },
    {
     "task": "report",
     "key": "es1",
     "category": "Spanish",
     "alt": "Italian",
-    "alpha": 2.0,
+    "alpha": 1.5,
+    "where": "passage",
     "follows": true
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "alt": "French",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "alt": "French",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "alt": "German",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "alt": "German",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "es1",
-    "category": "Spanish",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "follows": false
    },
    {
     "task": "report",
@@ -909,6 +919,7 @@
     "category": "Spanish",
     "alt": "French",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -917,6 +928,7 @@
     "category": "Spanish",
     "alt": "French",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -925,6 +937,7 @@
     "category": "Spanish",
     "alt": "German",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -933,6 +946,7 @@
     "category": "Spanish",
     "alt": "German",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -941,6 +955,7 @@
     "category": "Spanish",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -949,103 +964,62 @@
     "category": "Spanish",
     "alt": "Italian",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "es2",
     "category": "Spanish",
     "alt": "French",
     "alpha": 1.0,
-    "follows": false
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "es2",
     "category": "Spanish",
     "alt": "French",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "es2",
     "category": "Spanish",
     "alt": "German",
     "alpha": 1.0,
-    "follows": false
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "es2",
     "category": "Spanish",
     "alt": "German",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "es2",
     "category": "Spanish",
     "alt": "Italian",
     "alpha": 1.0,
+    "where": "passage",
     "follows": false
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "es2",
     "category": "Spanish",
     "alt": "Italian",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "alt": "French",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "alt": "French",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "alt": "German",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "alt": "German",
-    "alpha": 2.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "follows": false
-   },
-   {
-    "task": "continue",
-    "key": "it1",
-    "category": "Italian",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
     "task": "report",
@@ -1053,6 +1027,7 @@
     "category": "Italian",
     "alt": "French",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -1061,6 +1036,7 @@
     "category": "Italian",
     "alt": "French",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -1069,6 +1045,7 @@
     "category": "Italian",
     "alt": "German",
     "alpha": 1.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -1077,6 +1054,7 @@
     "category": "Italian",
     "alt": "German",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
@@ -1085,6 +1063,7 @@
     "category": "Italian",
     "alt": "Spanish",
     "alpha": 1.0,
+    "where": "question",
     "follows": false
    },
    {
@@ -1093,177 +1072,842 @@
     "category": "Italian",
     "alt": "Spanish",
     "alpha": 2.0,
+    "where": "question",
     "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "it2",
     "category": "Italian",
     "alt": "French",
     "alpha": 1.0,
-    "follows": false
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "it2",
     "category": "Italian",
     "alt": "French",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "it2",
     "category": "Italian",
     "alt": "German",
     "alpha": 1.0,
-    "follows": false
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "it2",
     "category": "Italian",
     "alt": "German",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "it2",
     "category": "Italian",
     "alt": "Spanish",
     "alpha": 1.0,
-    "follows": false
+    "where": "passage",
+    "follows": true
    },
    {
-    "task": "continue",
+    "task": "report",
     "key": "it2",
     "category": "Italian",
     "alt": "Spanish",
-    "alpha": 2.0,
-    "follows": false
+    "alpha": 1.5,
+    "where": "passage",
+    "follows": true
    }
   ],
   "presence": [
    {
     "task": "report",
     "key": "fr1",
-    "best_rank": 1
+    "best_rank": 1,
+    "best_rank_passage": 2
    },
    {
     "task": "author",
     "key": "fr1",
-    "best_rank": 23
+    "best_rank": 23,
+    "best_rank_passage": 1
    },
    {
     "task": "continue",
     "key": "fr1",
-    "best_rank": 22
+    "best_rank": 22,
+    "best_rank_passage": 2
    },
    {
     "task": "report",
     "key": "fr2",
-    "best_rank": 2
+    "best_rank": 2,
+    "best_rank_passage": 6
    },
    {
     "task": "author",
     "key": "fr2",
-    "best_rank": 80
+    "best_rank": 80,
+    "best_rank_passage": 4
    },
    {
     "task": "continue",
     "key": "fr2",
-    "best_rank": 207
+    "best_rank": 207,
+    "best_rank_passage": 7
    },
    {
     "task": "report",
     "key": "de1",
-    "best_rank": 3
+    "best_rank": 3,
+    "best_rank_passage": 5
    },
    {
     "task": "author",
     "key": "de1",
-    "best_rank": 53
+    "best_rank": 53,
+    "best_rank_passage": 5
    },
    {
     "task": "continue",
     "key": "de1",
-    "best_rank": 568
+    "best_rank": 568,
+    "best_rank_passage": 7
    },
    {
     "task": "report",
     "key": "de2",
-    "best_rank": 6
+    "best_rank": 6,
+    "best_rank_passage": 5
    },
    {
     "task": "author",
     "key": "de2",
-    "best_rank": 81
+    "best_rank": 81,
+    "best_rank_passage": 5
    },
    {
     "task": "continue",
     "key": "de2",
-    "best_rank": 705
+    "best_rank": 705,
+    "best_rank_passage": 5
    },
    {
     "task": "report",
     "key": "es1",
-    "best_rank": 1
+    "best_rank": 1,
+    "best_rank_passage": 22
    },
    {
     "task": "author",
     "key": "es1",
-    "best_rank": 16
+    "best_rank": 16,
+    "best_rank_passage": 22
    },
    {
     "task": "continue",
     "key": "es1",
-    "best_rank": 174
+    "best_rank": 174,
+    "best_rank_passage": 22
    },
    {
     "task": "report",
     "key": "es2",
-    "best_rank": 1
+    "best_rank": 1,
+    "best_rank_passage": 14
    },
    {
     "task": "author",
     "key": "es2",
-    "best_rank": 16
+    "best_rank": 16,
+    "best_rank_passage": 21
    },
    {
     "task": "continue",
     "key": "es2",
-    "best_rank": 206
+    "best_rank": 206,
+    "best_rank_passage": 22
    },
    {
     "task": "report",
     "key": "it1",
-    "best_rank": 9
+    "best_rank": 9,
+    "best_rank_passage": 141
    },
    {
     "task": "author",
     "key": "it1",
-    "best_rank": 44
+    "best_rank": 44,
+    "best_rank_passage": 225
    },
    {
     "task": "continue",
     "key": "it1",
-    "best_rank": 1586
+    "best_rank": 1586,
+    "best_rank_passage": 355
    },
    {
     "task": "report",
     "key": "it2",
-    "best_rank": 6
+    "best_rank": 6,
+    "best_rank_passage": 43
    },
    {
     "task": "author",
     "key": "it2",
-    "best_rank": 100
+    "best_rank": 100,
+    "best_rank_passage": 16
    },
    {
     "task": "continue",
     "key": "it2",
-    "best_rank": 2466
+    "best_rank": 2466,
+    "best_rank_passage": 27
+   }
+  ],
+  "next_sentence": [
+   {
+    "key": "fr1",
+    "category": "French",
+    "clean": " Le monde de la vie, et la vie de la vie.",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Le monde de la vie, et la vie de la vie."
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 2.0,
+      "text": " Le monde de la vie, et la vie de la vie."
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Le monde de la vie, et la vie de la vie."
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 2.0,
+      "text": " Le monde de la vie, et la vie de la vie."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Le monde de la vie, et la vie de la vie."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 2.0,
+      "text": " Le monde de la vie, et la vie de la vie."
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Le monde de l'esprit de l'esprit de l'esprit de l'esprit de l"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.5,
+      "text": " D'un d'un d'un d'un d'un d'un d'un d'un d"
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Le monde de la champs de lavande, et la lumi\u00e8re dor\u00e9e baignait les champs"
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.5,
+      "text": " La lumi\u00e8re dor\u00e9e baignait les champs de lavande."
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Le monde de la champs de lavande, et la lumi\u00e8re dor\u00e9e baignait les champs"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.5,
+      "text": " Le monde de la champs de lavande, et la champs de champs de champs de champs de"
+     }
+    ]
+   },
+   {
+    "key": "fr2",
+    "category": "French",
+    "clean": " La vie de la vie de la mer.",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " La vie de la vie de la mer."
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 2.0,
+      "text": " Il \u00e9tait une fois un petit village au bord de la mer. Les p\u00eacheurs parta"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " La vie de la vie de la mer."
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 2.0,
+      "text": " La vie de la vie de la mer."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " La vie de la vie de la mer."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 2.0,
+      "text": " La vie de la vie de la mer."
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Il \u00e9tait une fois un petit village au bord de la mer. Les p\u00eacheurs parta"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.5,
+      "text": " Il \u00e9tait une fois un petit village au bord de la mer. Les p\u00eacheurs parta"
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " La vie de la vie de la mer."
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.5,
+      "text": " La vida de la vida de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Il \u00e9tait une fois un petit village au bord de la mer. Les p\u00eacheurs parta"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.5,
+      "text": " Il \u00e9tait une fois un petit village au bord de la mer. Les p\u00eacheurs parta"
+     }
+    ]
+   },
+   {
+    "key": "de1",
+    "category": "German",
+    "clean": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 2.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 2.0,
+      "text": " Daarna sliep hij onder de tafel."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 2.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.5,
+      "text": " D'un d'un d'un d'un d'un d'un d'un d'un d"
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Dios d'un sekter de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.5,
+      "text": " Dios que segado de la vida de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Die Sonne ging hinter den Bergen unter, und ein kalter Wind wehte durch d"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.5,
+      "text": " Dokumento de la vida de la vida."
+     }
+    ]
+   },
+   {
+    "key": "de2",
+    "category": "German",
+    "clean": " Die Wiese, die Wiese, die Wiese, die Wiese, die Wiese,",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Diese das kleine das Rande des Waldes."
+     },
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 2.0,
+      "text": " Diese das kleine das Rande des Waldes."
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Diese konnten, die Wiese konnten, die Wiese konnten"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 2.0,
+      "text": " Daarna sliep hij onder de tafel."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Die Wiese, die Wiese, die Wiese, die Wiese, die Wiese,"
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 2.0,
+      "text": " Diese das kleine das Rande des Waldes."
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Dans le dernier de la vie, dans le dernier de la vie."
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.5,
+      "text": " Dans le dernier de la vie, dans le dernier de la vie."
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Dios d'un sekter de la vida de la vida de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.5,
+      "text": " De kat zit op de mat bij het raam."
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Dokumente konnte, dar ein konnte, dar ein konnt"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.5,
+      "text": " Dokumente dokumente dokumente dokumente dokumente dokumente d"
+     }
+    ]
+   },
+   {
+    "key": "es1",
+    "category": "Spanish",
+    "clean": " El muy bueno de la muy bueno de la muy bueno de la muy bueno de la",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " El muy bueno de la muy bueno de la muy bueno de la muy bueno de la"
+     },
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 2.0,
+      "text": " Dios que se puede de la vida de la vida."
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Dios que se puede de la vida de la vida."
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 2.0,
+      "text": " Dios que se puede de la vida de la vida."
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " El muy bueno de la muy bueno de la muy bueno de la muy bueno de la"
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 2.0,
+      "text": " El muy bueno de la muy bueno de la muy bueno de la muy bueno de la"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " D\u00e9j\u00e0 vous avez de la vie, de la vie, de la vie."
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.5,
+      "text": " D'un d'un d'un d'un d'un d'un d'un d'un d"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Diosa de la vida, de la vida, de la vida, de la vida, de la"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.5,
+      "text": " Diese das konkon konkon, das konkon konkon,"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Dios que se puede de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.5,
+      "text": " Diosse darrai, darrai, darrai, darrai, dar"
+     }
+    ]
+   },
+   {
+    "key": "es2",
+    "category": "Spanish",
+    "clean": " De la pueblo de la pueblo de la pueblo de la pueblo de la pueblo",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Dios que segundo de la pueblo de la pueblo de la pueblo de la puebl"
+     },
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 2.0,
+      "text": " Dios que segundo de la pueblo de la pueblo de la pueblo de la puebl"
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Dios que segundo de la pueblo de la pueblo de la pueblo de la puebl"
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 2.0,
+      "text": " Dios que segundo de la pueblo de la pueblo de la pueblo de la puebl"
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " De la pueblo de la pueblo de la pueblo de la pueblo de la pueblo"
+     },
+     {
+      "where": "question",
+      "alt": "Italian",
+      "alpha": 2.0,
+      "text": " La pescadores de la pescadores de la pescadores de la pescadores de la"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " D\u00e9j\u00e0 vuesto de la vida de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.5,
+      "text": " D'un d'un d'un d'un d'un d'un d'un d'un d"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Dios de la vida de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.5,
+      "text": " Diese das de konkonkonkonkonkonkonkonkonk"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.0,
+      "text": " Dios que segundo de la pueblo de la pueblo de la pueblo de la puebl"
+     },
+     {
+      "where": "passage",
+      "alt": "Italian",
+      "alpha": 1.5,
+      "text": " Dios cada de la pescadore."
+     }
+    ]
+   },
+   {
+    "key": "it1",
+    "category": "Italian",
+    "clean": " Diamante d'una d'una d'una d'una d'una d'",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Diamo de la vida de la vida."
+     },
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 2.0,
+      "text": " Diamante d'una d'una d'una d'una d'una d'"
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Diamo de la vida de la vida."
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 2.0,
+      "text": " Diamante d'una d'una d'una d'una d'una d'"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Diamante d'una d'una."
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 2.0,
+      "text": " Diamante d'una d'una."
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " Dora dora dora dora dora dora dora dora dora dora dora dora d"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.5,
+      "text": " D'un d'un d'un d'un d'un d'un d'un d'un d"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " Dora dora dora dora dora dora dora dora dora dora dora dora d"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.5,
+      "text": " De kat zit op de mat bij het raam."
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " Dora de la vida de la vida."
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.5,
+      "text": " Diosse doloresse, e una luce dorata illuminava i campi."
+     }
+    ]
+   },
+   {
+    "key": "it2",
+    "category": "Italian",
+    "clean": " D'un avella della vida, e",
+    "swaps": [
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " D'un avella della vida, e"
+     },
+     {
+      "where": "question",
+      "alt": "French",
+      "alpha": 2.0,
+      "text": " D'un avella della vida, e"
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " D'un avella della vida, e"
+     },
+     {
+      "where": "question",
+      "alt": "German",
+      "alpha": 2.0,
+      "text": " D'un avella della vida, e"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " D'un avella della vida, e"
+     },
+     {
+      "where": "question",
+      "alt": "Spanish",
+      "alpha": 2.0,
+      "text": " D'un avella della vida, e"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.0,
+      "text": " I pescatori partivano ogni mattina prima dell'alba, e"
+     },
+     {
+      "where": "passage",
+      "alt": "French",
+      "alpha": 1.5,
+      "text": " I pescatori partivano ogni mattina prima dell'alba, e"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.0,
+      "text": " D'un vie de la vie de la vie de la vie de la vie de la vie"
+     },
+     {
+      "where": "passage",
+      "alt": "German",
+      "alpha": 1.5,
+      "text": " I pescatori partivano ogni mattina prima dell'alba, e"
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.0,
+      "text": " D'un a la vida de la vida de la vida de la vida de la vida de la"
+     },
+     {
+      "where": "passage",
+      "alt": "Spanish",
+      "alpha": 1.5,
+      "text": " Dios que seguido de la vida de la vida."
+     }
+    ]
    }
   ],
   "examples": {
@@ -3998,1221 +4642,5 @@
     " the"
    ]
   }
- },
- "language_passage": {
-  "alphas": [
-   0.5,
-   1.0,
-   1.5,
-   2.0,
-   3.0
-  ],
-  "report_gate": [
-   {
-    "category": "French",
-    "key": "fr1",
-    "gate": true,
-    "top1": " French"
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "gate": true,
-    "top1": " French"
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "gate": true,
-    "top1": " German"
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "gate": true,
-    "top1": " German"
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "gate": true,
-    "top1": " Spanish"
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "gate": true,
-    "top1": " Spanish"
-   },
-   {
-    "category": "Italian",
-    "key": "it1",
-    "gate": false,
-    "top1": " Spanish"
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "gate": true,
-    "top1": " Italian"
-   }
-  ],
-  "trials": [
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "German",
-    "alpha": 0.5,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 10.621994018554688
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "German",
-    "alpha": 1.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 5.54896354675293
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "German",
-    "alpha": 1.5,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -0.1287860870361328
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "German",
-    "alpha": 2.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -4.515522003173828
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "German",
-    "alpha": 3.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -8.482200622558594
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Spanish",
-    "alpha": 0.5,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 19.589935302734375
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 13.54623031616211
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Spanish",
-    "alpha": 1.5,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 6.741397857666016
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 2.1403427124023438
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Spanish",
-    "alpha": 3.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -1.9432258605957031
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Italian",
-    "alpha": 0.5,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 29.174434661865234
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 27.135774612426758
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Italian",
-    "alpha": 1.5,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 24.253562927246094
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 21.496665954589844
-   },
-   {
-    "category": "French",
-    "key": "fr1",
-    "alt": "Italian",
-    "alpha": 3.0,
-    "pres_report": 56,
-    "pres_cont": 49,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 17.622722625732422
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "German",
-    "alpha": 0.5,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 2.5582122802734375
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "German",
-    "alpha": 1.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": false,
-    "cont_margin": -3.4741249084472656
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "German",
-    "alpha": 1.5,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -9.905509948730469
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "German",
-    "alpha": 2.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -14.648902893066406
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "German",
-    "alpha": 3.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -21.335081100463867
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Spanish",
-    "alpha": 0.5,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 9.268783569335938
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 5.466377258300781
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Spanish",
-    "alpha": 1.5,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 0.4716300964355469
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -3.942211151123047
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Spanish",
-    "alpha": 3.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -9.31768798828125
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Italian",
-    "alpha": 0.5,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 17.018653869628906
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 15.136077880859375
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Italian",
-    "alpha": 1.5,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 12.600032806396484
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 10.184013366699219
-   },
-   {
-    "category": "French",
-    "key": "fr2",
-    "alt": "Italian",
-    "alpha": 3.0,
-    "pres_report": 56,
-    "pres_cont": 40,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 6.913703918457031
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "French",
-    "alpha": 0.5,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 22.265844345092773
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "French",
-    "alpha": 1.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 12.974235534667969
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "French",
-    "alpha": 1.5,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 7.354953765869141
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "French",
-    "alpha": 2.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 4.675537109375
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "French",
-    "alpha": 3.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 1.68896484375
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Spanish",
-    "alpha": 0.5,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 28.88018798828125
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 18.246679306030273
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Spanish",
-    "alpha": 1.5,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 10.480976104736328
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 8.354961395263672
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Spanish",
-    "alpha": 3.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 8.805442810058594
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Italian",
-    "alpha": 0.5,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 38.64034652709961
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 35.818756103515625
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Italian",
-    "alpha": 1.5,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 30.69736099243164
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 25.443592071533203
-   },
-   {
-    "category": "German",
-    "key": "de1",
-    "alt": "Italian",
-    "alpha": 3.0,
-    "pres_report": 16,
-    "pres_cont": 30,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 22.658023834228516
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "French",
-    "alpha": 0.5,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 17.772109985351562
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "French",
-    "alpha": 1.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 8.293384552001953
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "French",
-    "alpha": 1.5,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 2.9779586791992188
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "French",
-    "alpha": 2.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 0.17110061645507812
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "French",
-    "alpha": 3.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -3.9736366271972656
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Spanish",
-    "alpha": 0.5,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 19.996936798095703
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 9.981510162353516
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Spanish",
-    "alpha": 1.5,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 3.8910560607910156
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 0.7613029479980469
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Spanish",
-    "alpha": 3.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -1.2984962463378906
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Italian",
-    "alpha": 0.5,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 30.573623657226562
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 27.815555572509766
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Italian",
-    "alpha": 1.5,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 23.70293426513672
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 19.605178833007812
-   },
-   {
-    "category": "German",
-    "key": "de2",
-    "alt": "Italian",
-    "alpha": 3.0,
-    "pres_report": 18,
-    "pres_cont": 20,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 14.348377227783203
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "French",
-    "alpha": 0.5,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 14.637714385986328
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "French",
-    "alpha": 1.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 5.131187438964844
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "French",
-    "alpha": 1.5,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 0.2689170837402344
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "French",
-    "alpha": 2.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -1.48358154296875
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "French",
-    "alpha": 3.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -2.8325347900390625
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "German",
-    "alpha": 0.5,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 13.11777114868164
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "German",
-    "alpha": 1.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 2.7654647827148438
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "German",
-    "alpha": 1.5,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -3.6553726196289062
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "German",
-    "alpha": 2.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -6.909305572509766
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "German",
-    "alpha": 3.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -10.3197021484375
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "Italian",
-    "alpha": 0.5,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 19.595909118652344
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 15.838077545166016
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "Italian",
-    "alpha": 1.5,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 11.512554168701172
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 7.492938995361328
-   },
-   {
-    "category": "Spanish",
-    "key": "es1",
-    "alt": "Italian",
-    "alpha": 3.0,
-    "pres_report": 22,
-    "pres_cont": 19,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 2.2061614990234375
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "French",
-    "alpha": 0.5,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 10.65451431274414
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "French",
-    "alpha": 1.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 0.9510612487792969
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "French",
-    "alpha": 1.5,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -3.634265899658203
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "French",
-    "alpha": 2.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -5.4395599365234375
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "French",
-    "alpha": 3.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -6.537528991699219
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "German",
-    "alpha": 0.5,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 7.0081024169921875
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "German",
-    "alpha": 1.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -3.6120758056640625
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "German",
-    "alpha": 1.5,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -9.660598754882812
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "German",
-    "alpha": 2.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -13.019216537475586
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "German",
-    "alpha": 3.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -16.09508514404297
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "Italian",
-    "alpha": 0.5,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 18.257152557373047
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "Italian",
-    "alpha": 1.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": false,
-    "cont_hold": true,
-    "cont_margin": 13.481536865234375
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "Italian",
-    "alpha": 1.5,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 8.10009765625
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "Italian",
-    "alpha": 2.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 3.2759780883789062
-   },
-   {
-    "category": "Spanish",
-    "key": "es2",
-    "alt": "Italian",
-    "alpha": 3.0,
-    "pres_report": 14,
-    "pres_cont": 21,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -3.0315628051757812
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "French",
-    "alpha": 0.5,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": true,
-    "cont_margin": 0.695465087890625
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "French",
-    "alpha": 1.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -7.1041107177734375
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "French",
-    "alpha": 1.5,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -12.413871765136719
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "French",
-    "alpha": 2.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -15.339046478271484
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "French",
-    "alpha": 3.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -16.88431167602539
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "German",
-    "alpha": 0.5,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": false,
-    "cont_hold": false,
-    "cont_margin": -7.106357574462891
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "German",
-    "alpha": 1.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": false,
-    "cont_hold": false,
-    "cont_margin": -13.428829193115234
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "German",
-    "alpha": 1.5,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -17.109344482421875
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "German",
-    "alpha": 2.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -19.375885009765625
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "German",
-    "alpha": 3.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -21.81566619873047
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "Spanish",
-    "alpha": 0.5,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -5.836360931396484
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "Spanish",
-    "alpha": 1.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -10.420341491699219
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "Spanish",
-    "alpha": 1.5,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -14.028461456298828
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "Spanish",
-    "alpha": 2.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -16.492324829101562
-   },
-   {
-    "category": "Italian",
-    "key": "it2",
-    "alt": "Spanish",
-    "alpha": 3.0,
-    "pres_report": 40,
-    "pres_cont": 17,
-    "report_flip": true,
-    "cont_hold": false,
-    "cont_margin": -19.00069808959961
-   }
-  ]
  }
 }

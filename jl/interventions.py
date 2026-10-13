@@ -218,8 +218,10 @@ def ablation_edits(sel: dict, lm: Lensed, *, random: bool = False, seed: int = 0
     """Turn an `ablation_select` result into the J-space ablation (random=False) or its
     matched-norm random control (random=True).
 
-    Matched-norm random control (paper: "equal-sized, layer-matched sets of randomly chosen
-    directions").  We remove the residual's component in the span of k random directions,
+    Matched-norm random control.  The paper's Fig 22 says only "the random-direction control at the
+    medium layer range"; its controls for the experiential-report ablation are "matched in norm to
+    ... a J-space ablation ... at the same layer and token position", as here.  We remove the
+    residual's component in the span of k random directions,
     rescaled per position to the exact norm the J-space ablation removes there.  This isolates
     *which subspace* is removed from *how much norm*: any damage beyond the random control is
     attributable to the J-space specifically, not to the size of the perturbation."""

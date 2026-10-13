@@ -13,11 +13,12 @@
   S2b language          one passage, one latent (its language), three tasks posed after it:
                         name the language (explicit report), name an author who wrote in it
                         (flexible computation; the released `explicit_q`), and write the next
-                        sentence (automatic; the released `automatic_q`).  As in the paper, a
-                        J-lens swap of the language's vector for another's is applied across the
-                        question tokens only (paper §3.5.1, Fig 20).  Anomaly detection has no
-                        base-model form and is not run.  The earlier version, which swapped over
-                        the passage itself, is kept as `language_passage`.
+                        sentence (automatic; the released `automatic_q`; GPT-2's own sentence,
+                        graded by eye).  As in the paper, a J-lens swap of the language's vector
+                        for another's is applied across the question tokens (paper §3.5.1, Fig 20);
+                        also across the passage tokens, where GPT-2's J-space holds the language
+                        (not the paper's design).  Anomaly detection has no base-model form and is
+                        not run.
   floor line-counting   §3.5.1 Fig 21 is a base-model capability floor (reported, not plotted)
 
 Writes results/c5_selectivity/{results.json, prompts.json, summary.txt}.
@@ -35,7 +36,6 @@ import torch
 import jl
 from jl import ablation_edits, ablation_select, coord_swap_edits
 from jl.c3_reasoning import COUNTRIES, FAMILIES  # the two-hop task is criterion 3's
-from jl.stats import median
 
 STRENGTHS = {"light": [8], "medium": [7, 8, 9], "heavy": [6, 7, 8, 9, 10]}
 K_ABLATE_PAPER = 10                     # §3.5.2 top-k, sized for Claude
@@ -64,8 +64,8 @@ S1_WIDTHS = (768, 1536, 3072, 6144)     # synthetic: K random directions vs a ra
 #
 # S2b  same-latent language dissociation (§3.5.1, Fig 20).  The paper's released passages
 #      (ref/.../selectivity-language.json): a passage whose language is evident but unnamed, under
-#      a deliberate task (name the language) vs an automatic task (continue the passage).  The same
-#      language-label swap redirects the deliberate report but not the continuation.
+#      a deliberate task (name the language) vs an automatic task (continue the passage).  Does the
+#      same language-label swap redirect the deliberate report but not the continuation?
 #
 # floor  line-length counting (§3.5.1, Fig 21) is a base-model capability floor -- see below.
 # The two-hop task is criterion 3's: COUNTRIES and FAMILIES are imported from that module (see
@@ -170,42 +170,9 @@ LANG_DEMOS = {  # other-language demos for the few-shot language-ID cloze (none 
 }
 LANGS = ["French", "German", "Spanish", "Italian"]
 
-# Short, unambiguous continuation phrases, one per language, used to grade the *automatic* task:
-# after the (swapped) passage, does the model still prefer to continue in the passage's own
-# language, or has the swap pushed it toward the alternative?  (A next-token language classifier
-# is unreliable for the closely-related Romance languages; scoring a whole diagnostic phrase is
-# robust.)  "the sun was shining", in each language.
-LANG_CONT = {
-    "French": " et le soleil brillait",
-    "German": " und die Sonne schien",
-    "Spanish": " y el sol brillaba",
-    "Italian": " e il sole splendeva",
-}
-
 
 def language_data():
     return json.load(open(LANGUAGE_DATA))
-
-
-def report_prompt(lm, text):
-    """Few-shot language-ID cloze: '... Passage: {text}\\nLanguage:' -> the language name.
-    Built from explicit token pieces so the passage span is exact (avoids the GPT-2
-    leading-space tokenization drift)."""
-    prefix = "".join(f"Passage: {d}\nLanguage: {k}\n" for k, d in LANG_DEMOS.items()) + "Passage:"
-    pid = lm.tok(prefix, add_special_tokens=False).input_ids
-    tid = lm.tok(" " + text, add_special_tokens=False).input_ids
-    sid = lm.tok("\nLanguage:", add_special_tokens=False).input_ids
-    ids = torch.tensor([[lm.bos] + pid + tid + sid], device=lm.device)
-    passage_pos = list(range(1 + len(pid), 1 + len(pid) + len(tid)))  # +1 for BOS
-    return ids, passage_pos
-
-
-def continuation_prompt(lm, text):
-    """Automatic task: the passage alone; the model continues it in-language natively."""
-    tid = lm.tok(text, add_special_tokens=False).input_ids
-    ids = torch.tensor([[lm.bos] + tid], device=lm.device)
-    passage_pos = list(range(1, 1 + len(tid)))
-    return ids, passage_pos
 
 
 # =============================================================================== the run
@@ -293,71 +260,6 @@ def battery(lm):
 
 
 # =============================================================================== S2b language
-ALPHAS = (0.5, 1.0, 1.5, 2.0, 3.0)
-
-
-@torch.no_grad()
-def language_dissociation(lm):
-    """Same latent (a passage's language), two tasks.  The SAME language-label swap over the
-    passage is applied under a deliberate task (few-shot 'name the language' cloze) and an
-    automatic task (continue the passage).  Deliberate: does the reported language flip to the
-    swapped-in one?  Automatic: does the model still prefer to continue in the passage's own
-    language (scored against short per-language continuation phrases), or has the swap pushed it
-    to the alternative?  We sweep swap strength -- the report should follow at strengths where
-    the continuation does not."""
-    D = language_data()
-    lab = {L: lm.tid(" " + L) for L in LANGS}
-    cont = {L: lm.tok(LANG_CONT[L], add_special_tokens=False).input_ids for L in LANGS}
-    band = jl.BAND
-    out = {"alphas": list(ALPHAS), "report_gate": [], "trials": []}
-
-    def band_min_rank(ids, positions, tok):
-        res = lm.residuals(ids, band)
-        return min(int(jl.ranks_of(lm.lens_logits(res[L][p], L), [tok])[0])
-                   for L in band for p in positions)
-
-    def cont_logprob(ids, phrase, edits):
-        """Sum log-prob of a continuation phrase after `ids`, under `edits` (on the passage)."""
-        full = torch.cat([ids, torch.tensor([phrase], device=lm.device)], dim=1)
-        lp = lm.logits(full, edits).log_softmax(-1)
-        t0 = ids.shape[1]
-        return float(sum(lp[t0 - 1 + i, phrase[i]] for i in range(len(phrase))))
-
-    for psg in D["passages"]:
-        cat = psg["category"]
-        r_ids, r_pos = report_prompt(lm, psg["text"])
-        gate = lm.dec(int(lm.logits(r_ids)[-1].argmax())).strip() == cat
-        out["report_gate"].append(dict(category=cat, key=psg["key"], gate=gate,
-                                        top1=lm.dec(int(lm.logits(r_ids)[-1].argmax()))))
-        if not gate:
-            continue
-        c_ids, c_pos = continuation_prompt(lm, psg["text"])
-        # panel (b): the true language label is present in the band J-space over the passage,
-        # in BOTH prompts (comparable presence is what makes the continuation result meaningful)
-        pres_report = band_min_rank(r_ids, r_pos, lab[cat])
-        pres_cont = band_min_rank(c_ids, c_pos, lab[cat])
-        for alt in LANGS:
-            if alt == cat:
-                continue
-            s, t = lab[cat], lab[alt]
-            for alpha in ALPHAS:
-                r_edits = [jl.Edit(e.layer, e.fn, r_pos)
-                           for e in coord_swap_edits(lm, r_ids, s, t, band, alpha=alpha)]
-                report_flip = lm.dec(int(lm.logits(r_ids, r_edits)[-1].argmax())).strip() == alt
-                c_edits = [jl.Edit(e.layer, e.fn, c_pos)
-                           for e in coord_swap_edits(lm, c_ids, s, t, band, alpha=alpha)]
-                lp_true = cont_logprob(c_ids, cont[cat], c_edits)
-                lp_alt = cont_logprob(c_ids, cont[alt], c_edits)
-                out["trials"].append(dict(
-                    category=cat, key=psg["key"], alt=alt, alpha=alpha,
-                    pres_report=pres_report, pres_cont=pres_cont,
-                    report_flip=report_flip,                 # deliberate: report follows swap?
-                    cont_hold=lp_true > lp_alt,              # automatic: still prefers own language?
-                    cont_margin=lp_true - lp_alt,
-                ))
-    return out
-
-
 # The paper's form: the question follows the passage, and the swap covers only the question.
 # Each task is a few-shot frame "Passage: {demo}\n{cue}{answer}" over three demo languages that are
 # none of the four tested, then "Passage: {text}\n{cue}".  The question tokens are "\n{cue}".
@@ -373,33 +275,51 @@ LANG_TASKS = {
                                     "Dutch": " Daarna sliep hij onder de tafel.",
                                     "Swedish": " Sedan sov den under bordet."}),
 }
-# the continuation is scored by which of these (the same sentence in each language) GPT-2 prefers
-NEXT_SENTENCE = {"French": " Le lendemain matin, il faisait froid.",
-                 "German": " Am nächsten Morgen war es kalt.",
-                 "Spanish": " A la mañana siguiente hacía frío.",
-                 "Italian": " La mattina dopo faceva freddo."}
-LANG_TASK_ALPHAS = (1.0, 2.0)
+LANG_TASK_ALPHAS = (1.0, 2.0)        # swap over the question tokens (the paper's design)
+PASSAGE_ALPHAS = (1.0, 1.5)          # swap over the passage tokens (not the paper's design)
+NEXT_SENTENCE_TOKENS = 25
+# GPT-2's next sentences, graded by eye: each sentence it wrote -> its language, or "other" (mixed
+# languages, gibberish, or a copy of a worked example).  Sentences missing from this file are listed by
+# the summary as ungraded.
+NEXT_SENTENCE_LANGS = jl.RESULTS / "c5_selectivity" / "next_sentence_languages.json"
 
 
 def task_prompt(lm, task, text):
-    """(ids, question-token positions) for one task on one passage."""
+    """(ids, question-token positions, passage-token positions) for one task on one passage."""
     cue, demos = LANG_TASKS[task]
-    prefix = "".join(f"Passage: {LANG_DEMOS[k]}\n{cue}{a}\n\n" for k, a in demos.items()) + "Passage: " + text
-    pid = lm.tok(prefix, add_special_tokens=False).input_ids
+    head = "".join(f"Passage: {LANG_DEMOS[k]}\n{cue}{a}\n\n" for k, a in demos.items()) + "Passage:"
+    pid = lm.tok(head + " " + text, add_special_tokens=False).input_ids
+    hid = lm.tok(head, add_special_tokens=False).input_ids
+    assert pid[: len(hid)] == hid, "the passage must start on a token boundary"
     qid = lm.tok("\n" + cue, add_special_tokens=False).input_ids
     ids = torch.tensor([[lm.bos] + pid + qid], device=lm.device)
-    return ids, list(range(1 + len(pid), ids.shape[1]))
+    return ids, list(range(1 + len(pid), ids.shape[1])), list(range(1 + len(hid), 1 + len(pid)))
+
+
+@torch.no_grad()
+def next_sentence(lm, ids, edits=None) -> str:
+    """GPT-2's greedy next sentence: up to NEXT_SENTENCE_TOKENS tokens, stopping at the first newline
+    after any text (leading newlines dropped), with `edits` held at the prompt's positions."""
+    nl, out = lm.tid("\n"), []
+    for _ in range(NEXT_SENTENCE_TOKENS):
+        t = int(lm.logits(ids, edits)[-1].argmax())
+        if t == nl and any(x != nl for x in out):
+            break
+        out.append(t)
+        ids = torch.cat([ids, torch.tensor([[t]], device=lm.device)], dim=1)
+    return lm.tok.decode(out).lstrip("\n")
 
 
 @torch.no_grad()
 def language_tasks(lm):
-    """The paper's §3.5.1 language experiment, swap across the question tokens (see LANG_TASKS).
-    Per passage the model must do each task correctly without intervention (report: names the
-    language; author: names an author of that language, first token; continue: prefers its own
-    language's next sentence to the alternative's).  Then, for each alternative language, the
-    coordinate swap of the language's J-lens vector for the alternative's, at every band layer,
-    over the question tokens: does the answer follow the swap?  Panel (b): the best band rank of the
-    language's name (`intermediates` in the released data) over the question tokens, clean."""
+    """The paper's §3.5.1 language experiment (see LANG_TASKS).  For each passage and each other
+    language, the coordinate swap of the passage's language's J-lens vector for the other's, at every
+    band layer, (a) over the question tokens, as in the paper, and (b) over the passage tokens, where
+    GPT-2's J-space holds the language (not the paper's design).  Report and author: the answer's first
+    token, and a swap counts only where GPT-2 answers correctly without it.  Continue: GPT-2's greedy
+    next sentence, with and without each swap, graded by eye (NEXT_SENTENCE_LANGS).  Panel (b): the
+    best band rank of the language's name (`intermediates` in the released data) over the question
+    and over the passage, clean."""
     D = language_data()
     lab = {L: lm.tid(" " + L) for L in LANGS}
     firsts = {L: {lm.tok(" " + a.capitalize(), add_special_tokens=False).input_ids[0] for a in D["authors"][L]}
@@ -407,61 +327,83 @@ def language_tasks(lm):
     shared = {t for L in LANGS for M in LANGS if L != M for t in firsts[L] & firsts[M]}
     firsts = {L: v - shared for L, v in firsts.items()}                # author first tokens unique to a language
     names = {L: [lm.tid(f) for w in D["intermediates"][L] for f in (" " + w, w) if lm.is_single(f)] for L in LANGS}
-    sent = {L: lm.tok(NEXT_SENTENCE[L], add_special_tokens=False).input_ids for L in LANGS}
     band = jl.BAND
-
-    def sent_lp(ids, L, edits):
-        full = torch.cat([ids, torch.tensor([sent[L]], device=lm.device)], dim=1)
-        lp = lm.logits(full, edits).log_softmax(-1)
-        t0 = ids.shape[1]
-        return float(sum(lp[t0 - 1 + i, tok] for i, tok in enumerate(sent[L])))
 
     def answer(task, ids, cat, alt, edits=None):
         """Which language the answer belongs to: cat, alt, or None."""
-        if task == "continue":
-            return cat if sent_lp(ids, cat, edits) > sent_lp(ids, alt, edits) else alt
         top = int(lm.logits(ids, edits)[-1].argmax())
         for L in (cat, alt):
             if (task == "report" and lm.dec(top).strip() == L) or (task == "author" and top in firsts[L]):
                 return L
         return None
 
-    out = {"alphas": list(LANG_TASK_ALPHAS), "gate": [], "trials": [], "presence": [],
+    out = {"alphas": {"question": list(LANG_TASK_ALPHAS), "passage": list(PASSAGE_ALPHAS)},
+           "gate": [], "trials": [], "presence": [], "next_sentence": [],
            "examples": {t: lm.tok.decode(task_prompt(lm, t, D["passages"][0]["text"])[0][0, 1:].tolist()) for t in LANG_TASKS}}
     for psg in D["passages"]:
         cat = psg["category"]
+        alts = [a for a in LANGS if a != cat]
         for task in LANG_TASKS:
-            ids, qpos = task_prompt(lm, task, psg["text"])
+            ids, qpos, ppos = task_prompt(lm, task, psg["text"])
             res = lm.residuals(ids, band)
-            out["presence"].append(dict(task=task, key=psg["key"], best_rank=min(
-                int(jl.ranks_of(lm.lens_logits(res[L][p], L), names[cat]).min()) for L in band for p in qpos)))
-            alts = [a for a in LANGS if a != cat]
-            ok = {alt: answer(task, ids, cat, alt) == cat for alt in alts}
-            top = lm.dec(int(lm.logits(ids)[-1].argmax()))
-            out["gate"].append(dict(task=task, key=psg["key"], category=cat, top1=top, correct=all(ok.values())))
-            for alt in alts:
-                if not ok[alt]:
-                    continue
-                for alpha in LANG_TASK_ALPHAS:
-                    edits = [jl.Edit(e.layer, e.fn, qpos)
-                             for e in coord_swap_edits(lm, ids, lab[cat], lab[alt], band, alpha=alpha, clean=res)]
-                    out["trials"].append(dict(task=task, key=psg["key"], category=cat, alt=alt, alpha=alpha,
-                                              follows=answer(task, ids, cat, alt, edits) == alt))
+            best = lambda pos: min(int(jl.ranks_of(lm.lens_logits(res[L][p], L), names[cat]).min())
+                                   for L in band for p in pos)
+            out["presence"].append(dict(task=task, key=psg["key"], best_rank=best(qpos), best_rank_passage=best(ppos)))
+            swaps = [(where, pos, alt, alpha) for where, pos, alphas in (("question", qpos, LANG_TASK_ALPHAS),
+                                                                        ("passage", ppos, PASSAGE_ALPHAS))
+                     for alt in alts for alpha in alphas]
+            edits = lambda pos, alt, alpha: [jl.Edit(e.layer, e.fn, pos) for e in coord_swap_edits(
+                lm, ids, lab[cat], lab[alt], band, alpha=alpha, clean=res)]
+            if task == "continue":
+                out["next_sentence"].append(dict(key=psg["key"], category=cat, clean=next_sentence(lm, ids), swaps=[
+                    dict(where=where, alt=alt, alpha=alpha, text=next_sentence(lm, ids, edits(pos, alt, alpha)))
+                    for where, pos, alt, alpha in swaps]))
+                continue
+            correct = answer(task, ids, cat, alts[0]) == cat
+            out["gate"].append(dict(task=task, key=psg["key"], category=cat,
+                                    top1=lm.dec(int(lm.logits(ids)[-1].argmax())), correct=correct))
+            if correct:
+                out["trials"] += [dict(task=task, key=psg["key"], category=cat, alt=alt, alpha=alpha, where=where,
+                                       follows=answer(task, ids, cat, alt, edits(pos, alt, alpha)) == alt)
+                                  for where, pos, alt, alpha in swaps]
     return out
 
 
 def summarize_language_tasks(lg) -> list[str]:
-    L = ["\nS2b language, swap across the question tokens (paper's form): the answer follows the swapped-in language",
-         "  task       passages done correctly   alpha=1          alpha=2          language name in band lens over the question (median best rank)"]
+    labels = json.load(open(NEXT_SENTENCE_LANGS)) if NEXT_SENTENCE_LANGS.exists() else {}
+    span = lambda xs: f"{min(xs)}-{max(xs)}"
+    L = ["\nS2b language (the paper's 8 passages; the language's J-lens coordinate swapped for each other language's)",
+         "  the language's name in the band lens, best rank per passage (min-max): over the question | over the passage"]
     for task in LANG_TASKS:
-        g = [x for x in lg["gate"] if x["task"] == task]
+        pr = [x for x in lg["presence"] if x["task"] == task]
+        L.append(f"    {task:9s} {span([x['best_rank'] for x in pr]):>10s} | {span([x['best_rank_passage'] for x in pr])}")
+    ungraded = set()
+    for where, title in (("question", "over the question tokens (the paper's design)"),
+                         ("passage", "over the passage tokens (not the paper's design)")):
+        L.append(f"  swap {title}: the answer follows the swapped-in language")
+        for task in ("report", "author"):
+            g = [x for x in lg["gate"] if x["task"] == task]
+            cells = []
+            for a in lg["alphas"][where]:
+                tr = [t for t in lg["trials"] if t["task"] == task and t["where"] == where and t["alpha"] == a]
+                cells.append(f"alpha={a:g}: {sum(t['follows'] for t in tr)}/{len(tr)}")
+            L.append(f"    {task:9s} done correctly on {sum(x['correct'] for x in g)}/{len(g)} passages   " + "   ".join(cells))
+        ns = lg["next_sentence"]
+        ok = [r for r in ns if labels.get(r["clean"]) == r["category"]]
+        ungraded |= {r["clean"] for r in ns if r["clean"] not in labels}
         cells = []
-        for a in lg["alphas"]:
-            tr = [t for t in lg["trials"] if t["task"] == task and t["alpha"] == a]
-            k = sum(t["follows"] for t in tr)
-            cells.append(f"{k:2d}/{len(tr):<2d} = {k / max(len(tr), 1):4.0%}")
-        pres = median([x["best_rank"] for x in lg["presence"] if x["task"] == task])
-        L.append(f"  {task:9s}  {sum(x['correct'] for x in g)}/{len(g)}                       {cells[0]:16s} {cells[1]:16s} {pres:.0f}")
+        for a in lg["alphas"][where]:
+            tr = [(r, s) for r in ok for s in r["swaps"] if s["where"] == where and s["alpha"] == a]
+            ungraded |= {s["text"] for _, s in tr if s["text"] not in labels}
+            follows = sum(labels.get(s["text"]) == s["alt"] for _, s in tr)
+            own = sum(labels.get(s["text"]) == r["category"] for r, s in tr)
+            same = sum(s["text"] == r["clean"] for r, s in tr)
+            cells.append(f"alpha={a:g}: follows {follows}/{len(tr)}, own language {own}, other {len(tr) - follows - own}"
+                         f" (identical to no swap: {same})")
+        L.append(f"    {'continue':9s} done correctly on {len(ok)}/{len(ns)} passages (graded by eye)   " + "   ".join(cells))
+    if ungraded:
+        L.append(f"  {len(ungraded)} next sentences are not graded yet; add them to {NEXT_SENTENCE_LANGS.name}:")
+        L += [f"    {t!r}" for t in sorted(ungraded)]
     return L
 
 
@@ -557,7 +499,6 @@ def main():
     out = dict(band=jl.BAND, strengths=STRENGTHS)
     print("S2a battery ..."); out["battery"], prompt_samples = battery(lm)
     print("S2b language ..."); out["language"] = language_tasks(lm)
-    out["language_passage"] = language_dissociation(lm)
     print("S1 capacity ..."); out["capacity"] = capacity(lm)
     print("floor ..."); out["floor"] = linecount_floor(lm)
 
@@ -585,27 +526,6 @@ def summarize(out) -> str:
             L.append(f"  {row['task']:16s}{row['kind']:10s}{row['clean']:5.2f}    {cells}")
 
     L += summarize_language_tasks(out["language"])
-    lg = out["language_passage"]
-    npass = sum(g["gate"] for g in lg["report_gate"])
-    L.append(f"\nS2b, earlier version: the swap applied over the PASSAGE (report gate: {npass}/{len(lg['report_gate'])} passages;"
-             f" the same language swap under two tasks, by swap strength alpha)")
-    L.append("  alpha   deliberate report -> swapped language | automatic continuation -> keeps own language")
-    for a in lg["alphas"]:
-        tr = [t for t in lg["trials"] if t["alpha"] == a]
-        if not tr:
-            continue
-        flip = sum(t["report_flip"] for t in tr)
-        hold = sum(t["cont_hold"] for t in tr)
-        L.append(f"    {a:<5.1f}  report flips {flip:2d}/{len(tr)} = {flip/len(tr):4.0%}"
-                 f"      continuation holds {hold:2d}/{len(tr)} = {hold/len(tr):4.0%}")
-    tr1 = [t for t in lg["trials"] if t["alpha"] == 1.0]
-    if tr1:
-        L.append(f"  n = {len(tr1)} passage x alt-language swaps per alpha")
-        L.append(f"  panel (b) true-language label presence in band J-space over the passage "
-                 f"(median band-min rank): report prompt {median([t['pres_report'] for t in tr1]):.0f}, "
-                 f"continuation prompt {median([t['pres_cont'] for t in tr1]):.0f}")
-        L.append("  -> the report follows the swap at strengths where the continuation keeps its own "
-                 "language: the same latent is causal for the deliberate task, less so for the automatic one.")
 
     cap = out["capacity"]
     L.append(f"\nS1 small subset  (wikitext activations, {cap['n']} positions per layer; pursuit up to K={cap['kmax']})")
@@ -637,12 +557,11 @@ def summarize(out) -> str:
 
 @torch.no_grad()
 def language_only():
-    """Recompute S2b (the question-token form) and merge it into the existing results.json, moving
-    the earlier passage-swap result to `language_passage`."""
+    """Recompute S2b and merge it into the existing results.json (dropping the old forced-choice
+    passage-swap version, `language_passage`, if it is there)."""
     R = jl.results_dir("c5_selectivity")
     out = json.load(open(R / "results.json"))
-    if "language_passage" not in out:
-        out["language_passage"] = out["language"]
+    out.pop("language_passage", None)
     out["language"] = language_tasks(jl.Lensed())
     json.dump(out, open(R / "results.json", "w"), indent=1, default=float)
     summary = summarize(out)

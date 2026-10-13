@@ -1,0 +1,370 @@
+{
+ "privilege_90": {
+  "n": 90,
+  "answered_0": [
+   {
+    "name": "colosseum-currency",
+    "intermediate": "Italy",
+    "answer": "Euro"
+   },
+   {
+    "name": "ex-city-currency-Toronto-Beijing",
+    "intermediate": "Canada",
+    "answer": "Canadian"
+   },
+   {
+    "name": "ex-city-currency-Toronto-Mumbai",
+    "intermediate": "Canada",
+    "answer": "Canadian"
+   },
+   {
+    "name": "ex2-language-capital-Greek",
+    "intermediate": "Greece",
+    "answer": "Athens"
+   },
+   {
+    "name": "ex2-language-capital-Hungarian",
+    "intermediate": "Hungary",
+    "answer": "Budapest"
+   },
+   {
+    "name": "ex2-language-capital-Polish",
+    "intermediate": "Poland",
+    "answer": "Warsaw"
+   },
+   {
+    "name": "ex2-language-capital-Swedish",
+    "intermediate": "Sweden",
+    "answer": "Stockholm"
+   },
+   {
+    "name": "month-3-godof",
+    "intermediate": "Mars",
+    "answer": "war"
+   },
+   {
+    "name": "person-firstname-einstein",
+    "intermediate": "Einstein",
+    "answer": "Albert"
+   }
+  ],
+  "answered_2": [
+   {
+    "name": "chem-atmosphere-Z",
+    "intermediate": "nitrogen",
+    "answer": "7"
+   },
+   {
+    "name": "colosseum-currency",
+    "intermediate": "Italy",
+    "answer": "Euro"
+   },
+   {
+    "name": "ex-city-capital-Lyon-Naples",
+    "intermediate": "France",
+    "answer": "Paris"
+   },
+   {
+    "name": "ex-city-capital-Naples-Barcelona",
+    "intermediate": "Italy",
+    "answer": "Rome"
+   },
+   {
+    "name": "ex-city-language-Lyon-Naples",
+    "intermediate": "France",
+    "answer": "French"
+   },
+   {
+    "name": "ex2-city-capital-Munich",
+    "intermediate": "Germany",
+    "answer": "Berlin"
+   },
+   {
+    "name": "ex2-city-capital-Osaka",
+    "intermediate": "Japan",
+    "answer": "Tokyo"
+   },
+   {
+    "name": "ex2-city-continent-Lima",
+    "intermediate": "Peru",
+    "answer": "South"
+   },
+   {
+    "name": "ex2-city-language-Cairo",
+    "intermediate": "Egypt",
+    "answer": "Arabic"
+   },
+   {
+    "name": "ex2-city-language-Moscow",
+    "intermediate": "Russia",
+    "answer": "Russian"
+   },
+   {
+    "name": "ex2-language-capital-Greek",
+    "intermediate": "Greece",
+    "answer": "Athens"
+   },
+   {
+    "name": "ex2-language-capital-Hungarian",
+    "intermediate": "Hungary",
+    "answer": "Budapest"
+   },
+   {
+    "name": "ex2-language-capital-Polish",
+    "intermediate": "Poland",
+    "answer": "Warsaw"
+   },
+   {
+    "name": "ex2-language-capital-Swedish",
+    "intermediate": "Sweden",
+    "answer": "Stockholm"
+   },
+   {
+    "name": "gem-color-ruby",
+    "intermediate": "ruby",
+    "answer": "red"
+   },
+   {
+    "name": "month-3-godof",
+    "intermediate": "Mars",
+    "answer": "war"
+   },
+   {
+    "name": "person-country-shakespeare",
+    "intermediate": "Shakespeare",
+    "answer": "England"
+   },
+   {
+    "name": "person-firstname-einstein",
+    "intermediate": "Einstein",
+    "answer": "Albert"
+   },
+   {
+    "name": "planet-3-moons",
+    "intermediate": "Earth",
+    "answer": "1"
+   }
+  ],
+  "swap_2": [
+   {
+    "name": "chem-atmosphere-Z",
+    "intermediate": "nitrogen",
+    "swap_to": "oxygen",
+    "before": 11,
+    "after": 9,
+    "hit": false,
+    "got": " 7"
+   },
+   {
+    "name": "ex-city-capital-Lyon-Naples",
+    "intermediate": "France",
+    "swap_to": "Italy",
+    "before": 11,
+    "after": 7,
+    "hit": false,
+    "got": " Paris"
+   },
+   {
+    "name": "ex-city-capital-Naples-Barcelona",
+    "intermediate": "Italy",
+    "swap_to": "Spain",
+    "before": 12,
+    "after": 1,
+    "hit": true,
+    "got": " Madrid"
+   },
+   {
+    "name": "ex-city-language-Lyon-Naples",
+    "intermediate": "France",
+    "swap_to": "Italy",
+    "before": 8,
+    "after": 2,
+    "hit": false,
+    "got": " Russian"
+   },
+   {
+    "name": "ex2-city-capital-Munich",
+    "intermediate": "Germany",
+    "swap_to": "Japan",
+    "before": 35,
+    "after": 1,
+    "hit": true,
+    "got": " Tokyo"
+   },
+   {
+    "name": "ex2-city-capital-Osaka",
+    "intermediate": "Japan",
+    "swap_to": "Germany",
+    "before": 48,
+    "after": 2,
+    "hit": false,
+    "got": " Munich"
+   },
+   {
+    "name": "ex2-city-continent-Lima",
+    "intermediate": "Peru",
+    "swap_to": "Egypt",
+    "before": 31,
+    "after": 14,
+    "hit": false,
+    "got": " South"
+   },
+   {
+    "name": "ex2-city-language-Cairo",
+    "intermediate": "Egypt",
+    "swap_to": "Russia",
+    "before": 9,
+    "after": 1,
+    "hit": true,
+    "got": " Russian"
+   },
+   {
+    "name": "ex2-city-language-Moscow",
+    "intermediate": "Russia",
+    "swap_to": "Egypt",
+    "before": 9,
+    "after": 5,
+    "hit": false,
+    "got": " French"
+   },
+   {
+    "name": "ex2-language-capital-Greek",
+    "intermediate": "Greece",
+    "swap_to": "Sweden",
+    "before": 186,
+    "after": 2,
+    "hit": false,
+    "got": " Budapest"
+   },
+   {
+    "name": "ex2-language-capital-Hungarian",
+    "intermediate": "Hungary",
+    "swap_to": "Poland",
+    "before": 42,
+    "after": 10,
+    "hit": false,
+    "got": " Budapest"
+   },
+   {
+    "name": "ex2-language-capital-Polish",
+    "intermediate": "Poland",
+    "swap_to": "Greece",
+    "before": 228,
+    "after": 1,
+    "hit": true,
+    "got": " Athens"
+   },
+   {
+    "name": "ex2-language-capital-Swedish",
+    "intermediate": "Sweden",
+    "swap_to": "Hungary",
+    "before": 32,
+    "after": 1,
+    "hit": true,
+    "got": " Budapest"
+   },
+   {
+    "name": "gem-color-ruby",
+    "intermediate": "ruby",
+    "swap_to": "pearl",
+    "before": 9,
+    "after": 8,
+    "hit": false,
+    "got": " red"
+   },
+   {
+    "name": "month-3-godof",
+    "intermediate": "Mars",
+    "swap_to": "Venus",
+    "before": 12,
+    "after": 19,
+    "hit": false,
+    "got": " war"
+   },
+   {
+    "name": "person-country-shakespeare",
+    "intermediate": "Shakespeare",
+    "swap_to": "Einstein",
+    "before": 3,
+    "after": 1,
+    "hit": true,
+    "got": " Germany"
+   },
+   {
+    "name": "person-firstname-einstein",
+    "intermediate": "Einstein",
+    "swap_to": "Newton",
+    "before": 11,
+    "after": 12,
+    "hit": false,
+    "got": " Newton"
+   },
+   {
+    "name": "planet-3-moons",
+    "intermediate": "Earth",
+    "swap_to": "Mars",
+    "before": 4,
+    "after": 4,
+    "hit": false,
+    "got": " 1"
+   }
+  ]
+ },
+ "lens_eval_93": {
+  "n": 93,
+  "answered_0": [
+   {
+    "name": "month-3-godof",
+    "intermediate": "March",
+    "answer": "war"
+   },
+   {
+    "name": "colosseum-currency",
+    "intermediate": "Italy",
+    "answer": "Euro"
+   },
+   {
+    "name": "month-7-namedafter",
+    "intermediate": "July",
+    "answer": "Caesar"
+   },
+   {
+    "name": "nhop-clock-element",
+    "intermediate": "12",
+    "answer": "magnesium"
+   },
+   {
+    "name": "inv-roots-opposite",
+    "intermediate": "down",
+    "answer": "up"
+   },
+   {
+    "name": "louvre-language",
+    "intermediate": "France",
+    "answer": "French"
+   }
+  ],
+  "answered_2": [
+   {
+    "name": "mars-color",
+    "intermediate": "Mars",
+    "answer": "red"
+   },
+   {
+    "name": "planet-3-moons",
+    "intermediate": "Earth",
+    "answer": "1"
+   },
+   {
+    "name": "colosseum-currency",
+    "intermediate": "Italy",
+    "answer": "Euro"
+   },
+   {
+    "name": "month-7-namedafter",
+    "intermediate": "July",
+    "answer": "Caesar"
+   }
+  ]
+ }
+}

@@ -64,6 +64,11 @@ Downloaded from the paper's page, where each interactive figure loads its data f
   over L38–83 (`full_band`), the figure's other panels (`bars`, `sweep`), and an example. (Not to
   be confused with `ref/jacobian-lens/data/experiments/probe-swap.json`, the released two-hop items
   that `jl.c3_reasoning` uses.)
+- `multihop-swap-success.json` — the data behind Fig. 15 (internal reasoning), from the paper's page: the systematic swap's success rate on the 50 two-hop questions for Haiku 4.5,
+  Sonnet 4.5 and Opus 4.5 (`p`, `se`), and (`onset`, Sonnet 4.5) the mean and s.e. of the expected
+  answer's log-probability minus the original's after swapping the intermediate or the answer over
+  windows of layers from 9 to 9..22 of a 25-layer grid, over the 35 trials where the full swap works.
+  Used by `post/figures/depth_windows.py`.
 - `ablation-strength.json` — `data/ablation-strength/table.json`, the data behind Fig. 22 (the three
   J-space ablation strengths): for light (L62–71), medium (L54–79), heavy (L42–88) and random
   (L54–79) ablation, multi-hop accuracy (`mh_acc`, 50 items; 0.98 clean) and the share of

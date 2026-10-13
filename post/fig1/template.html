@@ -14,7 +14,7 @@
     --mono: "SF Mono", Menlo, Consolas, monospace;
   }
   /* the thought: one hue for the bubble, the new word, and the robot */
-  .pal-softviolet { --acc: #6552b8; --acc-tint: #f5f3fc; --acc-line: #b7ade6; --bot: #7a6fb0; }
+  .pal-cobalt { --acc: #2457c5; --acc-tint: #eef3fd; --acc-line: #9fb6e6; --bot: #4a72c9; }
 
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); }
@@ -23,31 +23,43 @@
   s { color: #aaa49b; text-decoration: line-through; text-decoration-thickness: 1.5px; }
   em { font-style: normal; color: var(--acc); font-weight: 650; }
   .ok { color: var(--works); } .x { color: var(--no); } .mid { color: var(--partly); }
-  .mk { font-family: var(--sans); font-weight: 800; display: inline-block; width: 18px; }
+  .mk { font-family: var(--sans); font-weight: 800; display: inline-block; width: 22px; }
 
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 18px; }
-  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 0 110px 18px; }
+  .row { display: flex; justify-content: center; gap: 18px; margin-bottom: 18px; }
+  .row > .card { width: 465px; }
   .card { background: var(--card); border: 3px solid var(--vc); border-radius: 15px; padding: 16px 18px 18px; position: relative; display: flex; flex-direction: column; }
   .card.works { --vc: var(--works); --vt: var(--works-tint); }
   .card.partly { --vc: var(--partly); --vt: var(--partly-tint); }
   .card.no { --vc: var(--no); --vt: var(--no-tint); }
   .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 13px; }
-  .title { font-size: 24px; font-weight: 750; letter-spacing: -.3px; }
+  .title { font-size: 25px; font-weight: 750; letter-spacing: -.3px; }
   .pill { display: inline-flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 800; letter-spacing: .7px; border-radius: 20px; padding: 5px 13px 5px 8px; color: var(--vc); background: var(--vt); }
-  .prompt { background: var(--box); border-radius: 9px; padding: 10px 12px; font-family: var(--mono); font-size: 14.5px; line-height: 1.45; white-space: pre-wrap; color: #333; }
+  .prompt { background: var(--box); border-radius: 9px; padding: 10px 12px; font-family: var(--mono); font-size: 15.5px; line-height: 1.45; white-space: pre-wrap; color: #333; }
   .prompt .dim { color: #9d978f; }
-  .scene { display: flex; align-items: flex-end; gap: 14px; margin-top: auto; padding-top: 22px; }
-  .scene .says { flex: 1; }
-  .bw { display: flex; flex-direction: column; align-items: center; }
-  .op { font-size: 12.5px; font-weight: 750; letter-spacing: 1.3px; color: var(--muted); margin-bottom: 3px; }
-  .bubble { border: 2px dashed var(--acc-line); background: var(--acc-tint); border-radius: 50%; padding: 12px 22px; text-align: center; font-family: var(--mono); font-size: 17px; line-height: 1.35; min-width: 132px; }
-  .trail { width: 100%; height: 26px; position: relative; }
+
+  /* the scene, stacked as in the paper's figure: the thought, then the robot and what it says */
+  .scene { margin-top: auto; padding-top: 20px; display: flex; flex-direction: column; }
+  .bw { align-self: flex-start; margin-left: 30px; display: flex; flex-direction: column; align-items: center; position: relative; }
+  .op { font-size: 13px; font-weight: 750; letter-spacing: 1.3px; color: var(--muted); margin-bottom: 4px; }
+  .bubble { border: 2px dashed var(--acc-line); background: var(--acc-tint); border-radius: 50%; padding: 13px 26px; text-align: center; font-family: var(--mono); font-size: 18px; line-height: 1.35; min-width: 150px; min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .bubble .x { font-weight: 800; }
+  .bubble.gone { background: none; border-color: #d3cec6; }
+  .ph { display: inline-block; height: 9px; border-radius: 5px; background: #ddd8d0; margin: 0 3px; vertical-align: middle; }
+  .trail { align-self: stretch; height: 24px; position: relative; }
   .trail i { position: absolute; border: 2px solid var(--acc-line); border-radius: 50%; background: var(--card); }
-  .says { background: var(--box); border-radius: 11px; padding: 10px 13px; font-family: var(--mono); font-size: 16px; line-height: 1.5; position: relative; }
-  .says:before { content: ""; position: absolute; left: -9px; bottom: 16px; border: 9px solid transparent; border-right-color: var(--box); border-left: 0; }
-  .says .lab { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .9px; color: var(--muted); margin-bottom: 3px; }
-  .says table { border-collapse: collapse; } .says td { padding: 0 18px 0 0; }
-  .says .note { font-family: var(--sans); font-size: 14px; line-height: 1.35; margin-top: 7px; color: var(--ink2); }
+  .trail i:first-child { width: 14px; height: 14px; left: -2px; top: 3px; } .trail i:last-child { width: 8px; height: 8px; left: -16px; top: 16px; }
+  .bubble.gone + .trail i { border-color: #d3cec6; }
+  .sayrow { display: flex; align-items: flex-end; gap: 14px; }
+  .says { flex: 0 1 auto; background: var(--box); border-radius: 11px; padding: 10px 13px; font-family: var(--mono); font-size: 16.5px; line-height: 1.5; position: relative; }
+  .says:before { content: ""; position: absolute; left: -9px; bottom: 15px; border: 9px solid transparent; border-right-color: var(--box); border-left: 0; }
+  .says table { border-collapse: collapse; } .says td { padding: 0 22px 0 0; }
+  /* the bottom row: what it says goes beside the thought, the robot under the thought's right edge
+     (its answers are taller, so this keeps both rows the same height) */
+  .scene.side { flex-direction: row; align-items: flex-end; gap: 16px; }
+  .scene.side .lcol { display: flex; flex-direction: column; }
+  .scene.side .bw { margin-left: 0; }
+  .scene.side .lcol > svg { align-self: flex-end; margin-right: 6px; }
+  .scene.side .trail i:first-child { left: auto; right: 26px; } .scene.side .trail i:last-child { left: auto; right: 18px; }
 
   .spanel { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .sp { background: var(--box); border-radius: 12px; padding: 14px 16px 14px; }
@@ -61,10 +73,9 @@
 </style>
 </head>
 <body>
-<div class="fig pal-softviolet tint-faint" id="fig"></div>
+<div class="fig pal-cobalt tint-faint" id="fig"></div>
 <script>
 const DATA = __DATA__;
-
 const hex2rgb = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
 function ramp(stops) {
   const rgb = stops.map(hex2rgb);
@@ -102,25 +113,34 @@ const robot = (s = 46) => `<svg width="${s}" height="${s}" viewBox="0 0 32 32" s
   <rect x="5.5" y="9" width="21" height="18" rx="5"/>
   <circle cx="12" cy="16.5" r="1.5" fill="var(--bot)" stroke="none"/><circle cx="20" cy="16.5" r="1.5" fill="var(--bot)" stroke="none"/>
   <line x1="13.5" y1="21.5" x2="18.5" y2="21.5"/></svg>`;
-const bubble = (op, lines) => `<div class="bw"><div class="op">${op}</div><div class="bubble">${lines.join("<br>")}</div>
-  <div class="trail"><i style="width:14px;height:14px;left:32%;top:4px"></i><i style="width:8px;height:8px;left:22%;top:18px"></i></div></div>`;
+// the thought bubble, with its trail of two circles down toward the robot
+const bubble = (op, body, cls = "") => `<div class="bw">${op ? `<div class="op">${op}</div>` : ""}<div class="bubble ${cls}"><div>${body}</div></div>
+  <div class="trail"><i></i><i></i></div></div>`;
 const mk = (k, t) => `<span class="mk ${k}">${{ ok: "✓", x: "✗", mid: "~" }[k]}</span>${t}`;
 
+// in the paper's order
 const TESTS = [
-  { name: "Verbal report", v: "works", prompt: `<span class="dim">Name a planet: Neptune\nName a tree: Oak\n…</span>\nName a sport:`,
-    op: "SWAP", bub: ["<s>Running</s>", "<em>Rugby</em>"], lab: "GPT-2 SAYS",
-    says: `<s>Running</s> <em>Rugby</em>` },
-  { name: "Internal reasoning", v: "works", prompt: `In the country where people speak French, the capital city is called`,
-    op: "SWAP", bub: ["<s>France</s>", "<em>China</em>"], lab: "GPT-2 SAYS", says: `<s>Paris</s> <em>Beijing</em>` },
-  { name: "Flexible generalization", v: "works", prompt: `The capital of Canada is…\nMost people in Canada speak…\nCanada is on the continent of…`,
-    op: "SWAP", bub: ["<s>Canada</s>", "<em>France</em>"], lab: "GPT-2 SAYS",
+  { name: "Verbal report", v: "works",
+    prompt: `<span class="dim">Name a tree: Oak\nName a planet: Neptune</span>\nName a sport:`,
+    op: "SWAP", bub: `<s>Running</s><br><em>Rugby</em>`, says: `<s>Running</s> <em>Rugby</em>` },
+  // a citrus fruit is the band's top J-lens word on ~0.5% of trials whatever the instruction (think about, don't
+  // think about, ignore, or just mention them), and 0% with none (post/figures/dm_data.py, the topic family)
+  { name: "Directed modulation", v: "no", label: "FAILS",
+    prompt: `Write "The old painting hung…"\n<b>Think / Don't think about citrus fruits.</b>`,
+    op: "READ", bub: `<span class="x">✗</span> no citrus fruits`, says: `The old painting hung crookedly on the wall.` },
+  { name: "Internal reasoning", v: "works",
+    prompt: `In the country where people speak French, the capital city is called`,
+    op: "SWAP", bub: `<s>France</s><br><em>China</em>`, says: `<s>Paris</s> <em>Beijing</em>` },
+  { name: "Flexible generalization", v: "works",
+    prompt: `The capital of Canada is…\nMost people in Canada speak…\nCanada is on the continent of…`,
+    op: "SWAP", bub: `<s>Canada</s><br><em>France</em>`,
     says: `<table><tr><td><s>Toronto</s></td><td><em>Paris</em></td></tr><tr><td><s>English</s></td><td><em>French</em></td></tr><tr><td><s>Canada</s></td><td><em>Europe</em></td></tr></table>` },
-  { name: "Selectivity", v: "works", prompt: `<span class="dim">(two-hop questions, copying, ordinary text)</span>`,
-    op: "ABLATE", bub: ["<s>France</s>"], lab: "AFTER REMOVING THE TOP J-LENS VECTOR",
-    says: `${mk("x", " two-hop questions break")}<br>${mk("ok", " copying still works")}<br>${mk("ok", " ordinary text mostly unchanged")}` },
-  { name: "Directed modulation", v: "no", label: "FAILS", prompt: `Write "The old painting hung…"\n<b>Think about citrus fruits.</b>`,
-    op: "READ", bub: ["<em>orange? lime?</em>"], lab: "GPT-2'S J-LENS",
-    says: `${mk("x", " a citrus fruit on top: <1%")}<br>${mk("x", ` "ignore": no effect`)}` },
+  { name: "Selectivity", v: "works",
+    prompt: `<span class="dim">(two-hop questions, copying,\nordinary text)</span>`,
+    // whatever is on top in the workspace, removed: redacted words
+    op: "ABLATE", bcls: "gone",
+    bub: `<span class="ph" style="width:34px"></span><span class="ph" style="width:22px"></span><span class="ph" style="width:38px"></span><br><span class="ph" style="width:26px"></span><span class="ph" style="width:40px"></span>`,
+    says: `${mk("x", "two-hop questions")}<br>${mk("ok", "copying")}<br>${mk("ok", "ordinary text")}` },
 ];
 const C25 = 25;
 const STRUCT = [
@@ -130,21 +150,22 @@ const STRUCT = [
 ];
 
 function figure(el) {
-  const card = t => `<div class="card ${t.v}">
+  const card = (t, side) => {
+    const scene = side
+      ? `<div class="scene side"><div class="lcol">${bubble(t.op, t.bub, t.bcls)}${robot()}</div><div class="says">${t.says}</div></div>`
+      : `<div class="scene">${bubble(t.op, t.bub, t.bcls)}<div class="sayrow">${robot()}<div class="says">${t.says}</div></div></div>`;
+    return `<div class="card ${t.v}">
       <div class="head"><div class="title">${t.name}</div>${pill(t.v, t.label)}</div>
-      <div class="prompt">${t.prompt}</div>
-      <div class="scene">
-        <div style="display:flex;flex-direction:column;align-items:flex-start">${bubble(t.op, t.bub)}<div style="margin-left:4px">${robot()}</div></div>
-        <div class="says"><div class="lab">${t.lab}</div>${t.says}</div>
-      </div></div>`;
+      <div class="prompt">${t.prompt}</div>${scene}</div>`;
+  };
   const sp = s => `<div class="sp"><div class="pn">${s.name}</div><div class="hm">
       ${["claude", "gpt2"].map((m, i) => `<div><div class="who">${m === "claude" ? "Claude" : "GPT-2 small"}</div>
         ${heatSVG(DATA[m][s.key], 230, s.cmap, s.guides ? s.guides[m] : [])}
         <div class="cap ${i ? "bad" : ""}">${i ? "✗ " : ""}${s.caps[i]}</div></div>`).join("")}</div></div>`;
   // #tests / #structure render one half; no hash renders both
   const part = location.hash.slice(1);
-  const tests = `<div class="grid3">${TESTS.slice(0, 3).map(card).join("")}</div>
-    <div class="grid2">${TESTS.slice(3).map(card).join("")}</div>`;
+  const tests = `<div class="row">${TESTS.slice(0, 3).map(t => card(t, false)).join("")}</div>
+    <div class="row">${TESTS.slice(3).map(t => card(t, true)).join("")}</div>`;
   const structure = `<div class="card no"><div class="head"><div class="title">The structure</div>${pill("no")}</div>
       <div class="spanel">${STRUCT.map(sp).join("")}</div></div>`;
   el.innerHTML = part === "tests" ? tests : part === "structure" ? structure : tests + structure;

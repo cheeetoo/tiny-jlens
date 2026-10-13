@@ -63,8 +63,14 @@ Other analyses:
 
 ```
 python -m jl.c3_reasoning swap_ops       # E3 under both swap operations
+python -m jl.c3_reasoning probe_cues     # E5's probes: GPT-2's next token at each probe prompt, and
+                                         # the J-lens vectors in each probe's J-space part
+python -m jl.c3_reasoning released       # GPT-2 on the paper's two released sets of two-hop questions
+python -m jl.c3_reasoning other_examples # can GPT-2 plan a rhyme, or give an antonym through French?
 python -m jl.c4_generalization gating    # E2 swap rates by gating class
-python -m jl.c5_selectivity language     # the language test only, merged into results.json
+python -m jl.c5_selectivity language     # the language test only, merged into results.json; GPT-2's next
+                                         # sentences are graded by eye in results/c5_selectivity/
+                                         # next_sentence_languages.json (the summary lists any ungraded)
 python -m jl.control --model gpt2 introspect modulation
 NCARRIERS=20 python -m jl.control --model gpt2 modulation_grid   # directed modulation on the paper's prompt, every layer kept
                                                                 # (also modulation_readout, modulation_copy)
