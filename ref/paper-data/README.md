@@ -22,13 +22,13 @@ Downloaded from the paper's page, where each interactive figure loads its data f
   its tokens, and the top 9 J-lens tokens at six layers (13, 15, 17, 19, 21, 24 of 0 to 24) at every
   token. **This is where the paper's prompt template for directed modulation comes from**
   (`Write "{sentence}" {instruction} Don't write anything else.`); the released protocol has none.
-  Used by `jl.control` (frames `paper` and `human`) and `post/figures/dm_readout.py`.
+  Used by `jl.control` (frames `paper` and `human`).
 - `modulation-prompts.json` — `data/modulation-prompts/data.json`, the data behind Fig. 65: for each
   task family and model, the hit rate of every instruction phrasing (`dots`, with its template `t`),
   the mean of each group (focus, mention, negated-think, dismissal), and the rate with no
   instruction (`none`). The rates are multiples of 1/440 (categories) and 1/480 (math), so every
   phrasing is run on all 20 carrier sentences. The math family has two focus phrasings that the
-  released protocol leaves out. Used by `post/figures/dm_rates.py`.
+  released protocol leaves out. Used by `figures/scripts/dm_data.py`.
 - `top-down-summoning.json` and `top-down-summoning-appendix.json` — `data/top-down-summoning/main.json`
   and `appendix.json`, the data behind Figs. 11 and 66 (the paired-question test, Sonnet 4.5): for
   each passage and question, the passage's tokens with the label's best lens rank where it is in
@@ -50,7 +50,7 @@ Downloaded from the paper's page, where each interactive figure loads its data f
   readouts for "lightning", and `curve`, the median and quartiles (`q25`, `q50`, `q75`) of the
   injected concept's reciprocal rank at the open quote (`slot`) and at the other positions of the
   assistant turn (`other`), at strengths `s` from 0 to 0.025. Values are rounded to 3 decimals.
-  Used by `post/figures/introspect.py`. (Not to be confused with
+  Used by `figures/scripts/introspect.py`. (Not to be confused with
   `ref/jacobian-lens/data/experiments/verbal-introspection.json`, the released protocol.)
 - `verbal-report-decomposition-merged.json` — `data/verbal-report-decomposition-merged/data.json`,
   the data behind Fig. 8 (the J-space part of a concept vector is privileged for verbal report,
@@ -68,7 +68,7 @@ Downloaded from the paper's page, where each interactive figure loads its data f
   Sonnet 4.5 and Opus 4.5 (`p`, `se`), and (`onset`, Sonnet 4.5) the mean and s.e. of the expected
   answer's log-probability minus the original's after swapping the intermediate or the answer over
   windows of layers from 9 to 9..22 of a 25-layer grid, over the 35 trials where the full swap works.
-  Used by `post/figures/depth_windows.py`.
+  Used by `figures/scripts/depth_windows.py`.
 - `ablation-strength.json` — `data/ablation-strength/table.json`, the data behind Fig. 22 (the three
   J-space ablation strengths): for light (L62–71), medium (L54–79), heavy (L42–88) and random
   (L54–79) ablation, multi-hop accuracy (`mh_acc`, 50 items; 0.98 clean) and the share of

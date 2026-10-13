@@ -30,7 +30,7 @@
               `mod_text`), with every lens layer and reply position kept, all 20 carrier sentences
               (NCARRIERS=20), and the two math-only focus phrasings of its Fig 65.  The band, the
               rank threshold and the positions are then chosen when scoring
-              (post/figures/dm_data.py).  GRID_BATCH=32 runs it in batches on a GPU.
+              (figures/scripts/dm_data.py).  GRID_BATCH=32 runs it in batches on a GPU.
   modulation_readout  the paper's Fig 9 for our models: the top lens tokens at every layer and
               token of its two copying examples.
   modulation_copy  does the model copy the sentence when the reply isn't forced?

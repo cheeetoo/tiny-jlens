@@ -34,8 +34,16 @@ results/followups/      one JSON per follow-up experiment
 results/control/        jl.control's results, one directory per model
 ref/paper-data/         the data behind the paper's interactive figures (Claude's numbers, per trial
                         where released); its README describes each file
-post/                   the post's figures: fig1/ (Figure 1), sketches/ (the structure figures) and
-                        figures/; and lesswrong/ (the post's interactive embeds)
+figures/                the post's figures as PNGs: fig1 and fig1_structure (Figure 1, and its
+                        structure panel alone), introspect (verbal report), dm_section (the
+                        directed-modulation section), depth_windows (internal reasoning), selectivity,
+                        introspect_setups (C.1), band_stats (Appendix D), band_gemma and dm_models
+                        (Appendix E)
+  embeds/               the post's two interactive figures (CKA, ignition), as they are in the draft;
+                        give the frame a height of 343px at LessWrong's 680px column
+  scripts/              <name>.py writes figures/<name>.png (dm_models.py writes dm_section.png too);
+                        dm_data.py and dm_gemma.py hold the directed-modulation scoring and tables;
+                        fig1/ builds Figure 1 from an HTML template
 commentary/README.md    a sourced summary of the invited commentary and other reactions, with links
                         (local copies of the paper and commentary texts are gitignored)
 lenses/gpt2-small/      the released lens: fit config and convergence (the .pt is not in git)
@@ -83,8 +91,8 @@ python -m jl.band [stats|cka|fig28|mlp_gain]   # the band statistics (--model ge
 
 On a GPU, `GRID_BATCH=32` runs `modulation_grid` in batches (the default, 1, is
 the per-trial loop the existing results were made with; the two agree to within a few places of rank). The figures are built from the
-repository root with `python post/fig1/build.py` (needs headless Chromium) and
-`PYTHONPATH=. python post/figures/<name>.py`.
+repository root with `python figures/scripts/fig1/build.py` (needs headless Chromium) and
+`PYTHONPATH=. python figures/scripts/<name>.py`.
 
 Setup: `pip install -r requirements.txt` (Python 3.13; it installs `ref/jacobian-lens` editable). (A working
 environment is in `.venv/`: `source .venv/bin/activate`.) The
