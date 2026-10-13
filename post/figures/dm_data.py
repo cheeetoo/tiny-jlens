@@ -24,14 +24,18 @@ NO_RANK = 10 ** 6
 # paper's band, 38% to 92% of depth, in each model's layers (layer L of 0..N-1 is at 100 L / (N-1)).
 BANDS = {
     "gpt2": {"ours": (7, 9), "paper": (5, 10), "all": (0, 10)},
-    # Gemma 3: `ours` is the band each pair's layer statistics point to (post/figures/band_gemma.py):
-    # the middle block of the CKA between layer dictionaries, ending where persistence peaks and the
-    # dictionary's dimensionality jumps (the start of the motor layers).  The base and instruction-tuned
-    # model of each size have the same blocks, so they share a band.
-    "gemma-270m": {"ours": (6, 11), "paper": (7, 15), "all": (0, 16)},
-    "gemma-270m-it": {"ours": (6, 11), "paper": (7, 15), "all": (0, 16)},
-    "gemma-1b": {"ours": (11, 16), "paper": (10, 23), "all": (0, 24)},
-    "gemma-1b-it": {"ours": (11, 16), "paper": (10, 23), "all": (0, 24)},
+    # Gemma 3: `ours` is the band each pair's layer statistics point to (post/figures/band_gemma.py),
+    # read as the paper's band sits on Claude's own curves (its released Fig 28 data): Claude's band
+    # ends where the lens switches to the next token (top-1 agreement with the output jumps from 0.33 to
+    # 0.66 right after it), and its readout's kurtosis rises across the band.  In Gemma the agreement
+    # climbs with no jump before the output itself, so the band runs to the last lens layer, from where
+    # the agreement and the kurtosis start to rise.  The base and instruction-tuned model of each size
+    # share a band.  The middle CKA block (6-11, 11-16) is the main alternative; dm_gemma.py's `every_band`
+    # scores every band.
+    "gemma-270m": {"ours": (10, 16), "paper": (7, 15), "all": (0, 16)},
+    "gemma-270m-it": {"ours": (10, 16), "paper": (7, 15), "all": (0, 16)},
+    "gemma-1b": {"ours": (11, 24), "paper": (10, 23), "all": (0, 24)},
+    "gemma-1b-it": {"ours": (11, 24), "paper": (10, 23), "all": (0, 24)},
 }
 MODEL_LABEL = {"gpt2": "GPT-2 small", "gemma-270m": "Gemma-3-270m",
                "gemma-270m-it": "Gemma-3-270m-it", "gemma-1b": "Gemma-3-1b", "gemma-1b-it": "Gemma-3-1b-it"}

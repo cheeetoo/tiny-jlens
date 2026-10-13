@@ -106,6 +106,45 @@ def rate_row_excl(g, fam, best, k=1):
     return out
 
 
+def every_band(size, R):
+    """Categories, every band lo..hi of lens layers: the highest rate any band gives each condition (a
+    bound, since it picks the band per cell), and for the instruction-tuned model in its main frame, the
+    rates as the band's end moves with its start fixed (at every position and where the model isn't
+    about to say it) and as its start moves with its end fixed."""
+    def per_band(g):
+        """{(lo, hi): ([trial] best rank, [trial] best rank where not about to say it)}."""
+        n = len(g.layers) - 1
+        B = np.stack([g.best((L, L)) for L in range(n)], 1)
+        H = np.stack([g.best((L, L), held=10) for L in range(n)], 1)
+        return {(lo, hi): (B[:, lo:hi + 1].min(1), H[:, lo:hi + 1].min(1)) for lo in range(n) for hi in range(lo, n)}
+
+    print("\n### Categories: the highest hit rate any band gives, each condition separately\n")
+    print("| model, prompt | bands | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " | largest think about − mention |\n|---|---|"
+          + "---|" * (len(ALL) + 1))
+    main_it = None
+    for label, g in R:
+        bands = per_band(g)
+        rates = {k: [mean_over_phrasings(g, "topic", c, b <= 1) for c in ALL] for k, (b, _) in bands.items()}
+        top = [max(r[i] for r in rates.values()) for i in range(len(ALL))]
+        gap = max(r[1] - r[2] for r in rates.values())
+        print(f"| {label} | {len(bands)} | " + " | ".join(pct(x) for x in top) + f" | {100 * gap:.1f} points |")
+        if g.model == f"gemma-{size}-it" and g.frame == D.MAIN_FRAME[g.model]:
+            main_it = (label, g, bands)
+    label, g, bands = main_it
+    lo, hi = D.BANDS[g.model]["ours"]
+    print(f"\n### Categories: {label}, as the band's end moves (first layer {lo})\n")
+    print("| band | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " | think about / mention, where the model isn't about "
+          "to say it |\n|---|" + "---|" * (len(ALL) + 1))
+    for end in range(lo, len(g.layers) - 1):
+        b, h = bands[(lo, end)]
+        print(f"| {lo} to {end} | " + " | ".join(rate_row(g, "topic", b)) + f" | {pct(mean_over_phrasings(g, 'topic', 'focus', h <= 1))}"
+              f" / {pct(mean_over_phrasings(g, 'topic', 'mention', h <= 1))} |")
+    print(f"\n### Categories: {label}, as the band's start moves (last layer {hi})\n")
+    print("| band | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " |\n|---|" + "---|" * len(ALL))
+    for start in range(hi + 1):
+        print(f"| {start} to {hi} | " + " | ".join(rate_row(g, "topic", bands[(start, hi)][0])) + " |")
+
+
 def main(size="270m"):
     R = runs(size)
     head = "| model, prompt | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " |\n|---|" + "---|" * len(ALL)
@@ -162,6 +201,8 @@ def main(size="270m"):
             cells.append(f"{L}: " + "/".join(pct(mean_over_phrasings(g, "topic", c, b <= 1))
                                              for c in ("focus", "mention", "baseline")))
         print(f"- {label}: " + ", ".join(cells))
+
+    every_band(size, R)
 
     print("\n### Categories: hit rate by which positions count, our band\n")
     print("| model, prompt | positions | " + " | ".join(D.COND_LABEL[c] for c in ALL) + " |\n|---|---|" + "---|" * len(ALL))

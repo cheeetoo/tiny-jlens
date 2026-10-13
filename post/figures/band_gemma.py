@@ -1,7 +1,8 @@
 """How we chose each Gemma 3 model's band: the layer statistics of the post's Figure 8 (the paper's Fig 28)
 and the CKA between the layers' J-lens dictionaries (the paper's Fig 27), one row per model.  Shaded (and
-outlined on the CKA): the band, 6-11 at 270m and 11-16 at 1b, the middle CKA block, ending where
-persistence peaks and the dictionary's dimensionality jumps (dm_data.BANDS["ours"]).
+outlined on the CKA): the band, 10-16 at 270m and 11-24 at 1b (dm_data.BANDS["ours"]), from where the lens's
+agreement with the model's output (a) and the readout's kurtosis (b) start to rise to the last lens layer:
+in Claude the band ends where that agreement jumps, and in Gemma it doesn't jump before the output.
 
 The dictionary statistics, (d) and (e), use the J-lens vectors with the final norm's gain folded into the
 unembedding (the `_gain` keys of jl.band): without it, Gemma's dictionary is dominated by one direction
