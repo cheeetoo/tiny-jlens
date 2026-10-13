@@ -47,12 +47,10 @@ def protect():
     Also records, per task and layer, how often the protection rule changes which directions are
     ablated: the fraction of items whose lens top-10 (at the scored position) contains a token from
     the clean output top-10, and the lens rank of the answer token itself."""
-    from jl.c5_selectivity import (KS_ABLATE, induction_items, one_hop_items, pretraining_paragraphs,
-                                   two_hop_items)
+    from jl.c5_selectivity import KS_ABLATE, one_hop_items, pretraining_paragraphs, two_hop_items
     lm = jl.Lensed()
     strengths = {"light": [8], "medium": [7, 8, 9]}
-    tasks = [("two_hop", two_hop_items(lm)), ("one_hop", one_hop_items(lm)),
-             ("induction", induction_items(lm))]
+    tasks = [("two_hop", two_hop_items(lm)), ("one_hop", one_hop_items(lm))]
     paras = pretraining_paragraphs()
     out = dict(strengths=strengths, ks=list(KS_ABLATE), rows=[], overlap=[])
 
@@ -124,11 +122,11 @@ def protect():
         lines.append(f"  {r['task']:15s}{r['strength']:8s}{r['k']:3d}{r['n']:4d}   {r['J_protect10']:.2f}    {r['R_protect10']:.2f}      "
                      f"{r['J_protect0']:.2f}    {r['R_protect0']:.2f}")
     lines.append("  how often the rule fires (lens top-10 meets output top-10) at the scored position:")
-    for task in ("two_hop", "one_hop", "induction", "pretrain_match"):
+    for task in ("two_hop", "one_hop", "pretrain_match"):
         cells = [o for o in out["overlap"] if o["task"] == task]
         lines.append(f"    {task:15s} " + " ".join(f"L{o['layer']}:{o['fires']:.2f}" for o in cells))
     lines.append("  answer token's median lens rank at the scored position:")
-    for task in ("two_hop", "one_hop", "induction"):
+    for task in ("two_hop", "one_hop"):
         cells = [o for o in out["overlap"] if o["task"] == task]
         lines.append(f"    {task:15s} " + " ".join(f"L{o['layer']}:{o['answer_lens_rank_median']}" for o in cells))
     print("\n".join(lines))

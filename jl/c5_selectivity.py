@@ -28,7 +28,6 @@ Run:  python -m jl.c5_selectivity             (the criterion)
 from __future__ import annotations
 
 import json
-import random
 import textwrap
 
 import torch
@@ -51,13 +50,12 @@ S1_WIDTHS = (768, 1536, 3072, 6144)     # synthetic: K random directions vs a ra
 # Prompt material for criterion 5 (selectivity): the paper's §3.5.
 #
 # Selectivity says the J-space is required for *flexible* cognition (report, multi-step inference)
-# but not for *automatic* processing (parsing, copying, one-step recall).  We test this three ways.
+# but not for *automatic* processing (parsing, one-step recall).  We test this three ways.
 #
 # S2a  J-space ablation battery (§3.5.2, Fig 22/24).  We ablate the top-k J-space directions and
 #      watch a battery of tasks split by how much they depend on assembling inferred content:
 #        - two-hop reasoning  (flexible)  -- criterion 3's task, the paper's own multihop control
 #        - one-hop recall     (recall)    -- the same country facts, one hop
-#        - induction / copy   (automatic) -- copy a token seen earlier in the context
 #        - next-token match   (automatic) -- agreement with the clean model on wikitext prose
 #      The two-hop items and their country table ARE criterion 3's, imported verbatim so the
 #      positive control is exactly the task c3 validated (48/53 answered).
@@ -84,13 +82,6 @@ ONE_HOP = {
     "language": ("The main language of Egypt is Arabic. The main language of Japan is Japanese. "
                  "The main language of {country} is", "language"),
 }
-
-# induction / copying: a novel token pair, then filler, then the cue token -> copy its partner.
-INDUCTION_POOL = [" apple", " river", " tiger", " velvet", " harbor", " maple", " copper",
-                  " cat", " dog", " house", " water", " fire", " gold", " king", " book",
-                  " tree", " star", " moon", " road", " door", " ship", " lake", " wolf",
-                  " bear", " iron", " glass", " stone", " cloud", " forest", " garden"]
-INDUCTION_FILLER = " The quick brown fox jumps over the lazy dog."
 
 
 def two_hop_items(lm):
@@ -126,23 +117,6 @@ def one_hop_items(lm):
             if int(lm.logits(ids)[-1].argmax()) == lm.tid(" " + ans):
                 items.append(dict(text=tmpl.format(country=c), ids=ids, answer=ans,
                                   ans_id=lm.tid(" " + ans)))
-    return items
-
-
-def induction_items(lm, n=40, seed=1):
-    """Copy the partner of a repeated token; gated to greedy-correct (pure induction)."""
-    rng = random.Random(seed)
-    pool = [w for w in INDUCTION_POOL if lm.is_single(w)]  # the lens/copy target must be one token
-    items, tries = [], 0
-    while len(items) < n and tries < 400:
-        tries += 1
-        a, b = rng.sample(pool, 2)
-        text = f"{a}{b}{INDUCTION_FILLER}{a}"
-        ids = lm.encode(text)
-        if int(lm.logits(ids)[-1].argmax()) == lm.tid(b):
-            items.append(dict(text=text, ids=ids, answer=b, ans_id=lm.tid(b)))
-        if len(items) >= n:
-            break
     return items
 
 
@@ -209,13 +183,11 @@ def pursuit_curve(x, V, kmax):
 def battery(lm):
     """Task score under no ablation / J-space ablation / matched-norm random control, per
     strength.  Accuracy tasks score 0/1 per item; pretraining scores per-position top-1 match."""
-    two, one, ind = two_hop_items(lm), one_hop_items(lm), induction_items(lm)
+    two, one = two_hop_items(lm), one_hop_items(lm)
     paras = pretraining_paragraphs()
-    tasks = [("two_hop", two, "flexible"), ("one_hop", one, "recall"),
-             ("induction", ind, "automatic")]
+    tasks = [("two_hop", two, "flexible"), ("one_hop", one, "recall")]
 
-    out = {"counts": {"two_hop": len(two), "one_hop": len(one), "induction": len(ind),
-                      "paras": len(paras)}, "acc": [], "pretrain": []}
+    out = {"counts": {"two_hop": len(two), "one_hop": len(one), "paras": len(paras)}, "acc": [], "pretrain": []}
 
     # row[f"{strength}_J_k{k}"] = score under the J ablation; row[f"{strength}_R_k{k}"] = the
     # matched-norm random control's score, one per seed
@@ -256,7 +228,7 @@ def battery(lm):
     out["pretrain"] = prow
     print(prow, flush=True)
     return out, {"two_hop": [it["text"] for it in two[:3]], "one_hop": [it["text"] for it in one[:3]],
-                 "induction": [it["text"] for it in ind[:3]], "pretrain": paras[0][:200]}
+                 "pretrain": paras[0][:200]}
 
 
 # =============================================================================== S2b language
@@ -514,8 +486,7 @@ def summarize(out) -> str:
     L = ["Criterion 5 -- selectivity -- gpt2-small", f"band {out['band']}"]
     b = out["battery"]
     c = b["counts"]
-    L.append(f"\nS2a ablation battery  (n: two-hop {c['two_hop']}, one-hop {c['one_hop']}, "
-             f"induction {c['induction']}, wikitext paras {c['paras']})")
+    L.append(f"\nS2a ablation battery  (n: two-hop {c['two_hop']}, one-hop {c['one_hop']}, wikitext paras {c['paras']})")
     for k in KS_ABLATE:
         L.append(f"  k = {k} ({'scaled to GPT-2 occupancy' if k == K_ABLATE else 'the paper'}): task score, "
                  f"no ablation | J-space ablation (matched-norm random control, min-max over {len(SEEDS)} seeds), per strength")

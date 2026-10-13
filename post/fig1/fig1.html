@@ -43,23 +43,14 @@
   .op { font-size: 13px; font-weight: 750; letter-spacing: 1.3px; color: var(--muted); margin-bottom: 4px; }
   .bubble { border: 2px dashed var(--acc-line); background: var(--acc-tint); border-radius: 50%; padding: 13px 26px; text-align: center; font-family: var(--mono); font-size: 18px; line-height: 1.35; min-width: 150px; min-height: 60px; display: flex; align-items: center; justify-content: center; }
   .bubble .x { font-weight: 800; }
-  .bubble.gone { background: none; border-color: #d3cec6; }
   .ph { display: inline-block; height: 9px; border-radius: 5px; background: #ddd8d0; margin: 0 3px; vertical-align: middle; }
   .trail { align-self: stretch; height: 24px; position: relative; }
   .trail i { position: absolute; border: 2px solid var(--acc-line); border-radius: 50%; background: var(--card); }
   .trail i:first-child { width: 14px; height: 14px; left: -2px; top: 3px; } .trail i:last-child { width: 8px; height: 8px; left: -16px; top: 16px; }
-  .bubble.gone + .trail i { border-color: #d3cec6; }
   .sayrow { display: flex; align-items: flex-end; gap: 14px; }
   .says { flex: 0 1 auto; background: var(--box); border-radius: 11px; padding: 10px 13px; font-family: var(--mono); font-size: 16.5px; line-height: 1.5; position: relative; }
   .says:before { content: ""; position: absolute; left: -9px; bottom: 15px; border: 9px solid transparent; border-right-color: var(--box); border-left: 0; }
   .says table { border-collapse: collapse; } .says td { padding: 0 22px 0 0; }
-  /* the bottom row: what it says goes beside the thought, the robot under the thought's right edge
-     (its answers are taller, so this keeps both rows the same height) */
-  .scene.side { flex-direction: row; align-items: flex-end; gap: 16px; }
-  .scene.side .lcol { display: flex; flex-direction: column; }
-  .scene.side .bw { margin-left: 0; }
-  .scene.side .lcol > svg { align-self: flex-end; margin-right: 6px; }
-  .scene.side .trail i:first-child { left: auto; right: 26px; } .scene.side .trail i:last-child { left: auto; right: 18px; }
 
   .spanel { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .sp { background: var(--box); border-radius: 12px; padding: 14px 16px 14px; }
@@ -114,7 +105,7 @@ const robot = (s = 46) => `<svg width="${s}" height="${s}" viewBox="0 0 32 32" s
   <circle cx="12" cy="16.5" r="1.5" fill="var(--bot)" stroke="none"/><circle cx="20" cy="16.5" r="1.5" fill="var(--bot)" stroke="none"/>
   <line x1="13.5" y1="21.5" x2="18.5" y2="21.5"/></svg>`;
 // the thought bubble, with its trail of two circles down toward the robot
-const bubble = (op, body, cls = "") => `<div class="bw">${op ? `<div class="op">${op}</div>` : ""}<div class="bubble ${cls}"><div>${body}</div></div>
+const bubble = (op, body) => `<div class="bw">${op ? `<div class="op">${op}</div>` : ""}<div class="bubble"><div>${body}</div></div>
   <div class="trail"><i></i><i></i></div></div>`;
 const mk = (k, t) => `<span class="mk ${k}">${{ ok: "✓", x: "✗", mid: "~" }[k]}</span>${t}`;
 
@@ -132,15 +123,15 @@ const TESTS = [
     prompt: `In the country where people speak French, the capital city is called`,
     op: "SWAP", bub: `<s>France</s><br><em>China</em>`, says: `<s>Paris</s> <em>Beijing</em>` },
   { name: "Flexible generalization", v: "works",
-    prompt: `The capital of Canada is…\nMost people in Canada speak…\nCanada is on the continent of…`,
+    prompt: `The capital of Canada is…\nMost people in Canada speak…`,
     op: "SWAP", bub: `<s>Canada</s><br><em>France</em>`,
-    says: `<table><tr><td><s>Toronto</s></td><td><em>Paris</em></td></tr><tr><td><s>English</s></td><td><em>French</em></td></tr><tr><td><s>Canada</s></td><td><em>Europe</em></td></tr></table>` },
+    says: `<table><tr><td><s>Toronto</s></td><td><em>Paris</em></td></tr><tr><td><s>English</s></td><td><em>French</em></td></tr></table>` },
   { name: "Selectivity", v: "works",
-    prompt: `<span class="dim">(two-hop questions, copying,\nordinary text)</span>`,
+    prompt: `<span class="dim">(two-hop questions,\nordinary text)</span>`,
     // whatever is on top in the workspace, removed: redacted words
-    op: "ABLATE", bcls: "gone",
+    op: "ABLATE",
     bub: `<span class="ph" style="width:34px"></span><span class="ph" style="width:22px"></span><span class="ph" style="width:38px"></span><br><span class="ph" style="width:26px"></span><span class="ph" style="width:40px"></span>`,
-    says: `${mk("x", "two-hop questions")}<br>${mk("ok", "copying")}<br>${mk("ok", "ordinary text")}` },
+    says: `${mk("x", "two-hop questions")}<br>${mk("ok", "ordinary text")}` },
 ];
 const C25 = 25;
 const STRUCT = [
@@ -150,10 +141,8 @@ const STRUCT = [
 ];
 
 function figure(el) {
-  const card = (t, side) => {
-    const scene = side
-      ? `<div class="scene side"><div class="lcol">${bubble(t.op, t.bub, t.bcls)}${robot()}</div><div class="says">${t.says}</div></div>`
-      : `<div class="scene">${bubble(t.op, t.bub, t.bcls)}<div class="sayrow">${robot()}<div class="says">${t.says}</div></div></div>`;
+  const card = t => {
+    const scene = `<div class="scene">${bubble(t.op, t.bub)}<div class="sayrow">${robot()}<div class="says">${t.says}</div></div></div>`;
     return `<div class="card ${t.v}">
       <div class="head"><div class="title">${t.name}</div>${pill(t.v, t.label)}</div>
       <div class="prompt">${t.prompt}</div>${scene}</div>`;
@@ -164,11 +153,15 @@ function figure(el) {
         <div class="cap ${i ? "bad" : ""}">${i ? "✗ " : ""}${s.caps[i]}</div></div>`).join("")}</div></div>`;
   // #tests / #structure render one half; no hash renders both
   const part = location.hash.slice(1);
-  const tests = `<div class="row">${TESTS.slice(0, 3).map(t => card(t, false)).join("")}</div>
-    <div class="row">${TESTS.slice(3).map(t => card(t, true)).join("")}</div>`;
+  const tests = `<div class="row">${TESTS.slice(0, 3).map(card).join("")}</div>
+    <div class="row">${TESTS.slice(3).map(card).join("")}</div>`;
   const structure = `<div class="card no"><div class="head"><div class="title">The structure</div>${pill("no")}</div>
       <div class="spanel">${STRUCT.map(sp).join("")}</div></div>`;
   el.innerHTML = part === "tests" ? tests : part === "structure" ? structure : tests + structure;
+  // both rows the height of the tallest card
+  const cards = [...el.querySelectorAll(".row > .card")];
+  const h = Math.max(...cards.map(c => c.getBoundingClientRect().height));
+  cards.forEach(c => c.style.minHeight = `${h}px`);
 }
 figure(document.getElementById("fig"));
 

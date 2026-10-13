@@ -1,18 +1,16 @@
 Criterion 5 -- selectivity -- gpt2-small
 band [7, 8, 9]
 
-S2a ablation battery  (n: two-hop 48, one-hop 52, induction 40, wikitext paras 16)
+S2a ablation battery  (n: two-hop 48, one-hop 52, wikitext paras 16)
   k = 1 (scaled to GPT-2 occupancy): task score, no ablation | J-space ablation (matched-norm random control, min-max over 5 seeds), per strength
   task            kind      clean                light              medium               heavy
   two_hop         flexible   1.00     0.69 (0.90-0.96)    0.21 (0.75-0.90)    0.00 (0.50-0.69)
   one_hop         recall     1.00     0.96 (0.94-1.00)    0.31 (0.90-1.00)    0.02 (0.63-0.92)
-  induction       automatic  1.00     0.97 (1.00-1.00)    0.95 (0.82-1.00)    0.42 (0.93-1.00)
   pretrain_match  automatic  1.00     0.82 (0.87-0.89)    0.72 (0.79-0.81)    0.59 (0.72-0.75)
   k = 10 (the paper): task score, no ablation | J-space ablation (matched-norm random control, min-max over 5 seeds), per strength
   task            kind      clean                light              medium               heavy
   two_hop         flexible   1.00     0.21 (0.83-0.92)    0.00 (0.58-0.75)    0.00 (0.12-0.58)
   one_hop         recall     1.00     0.73 (0.96-1.00)    0.06 (0.88-0.96)    0.00 (0.38-0.85)
-  induction       automatic  1.00     0.95 (1.00-1.00)    0.65 (0.53-0.95)    0.00 (0.07-0.80)
   pretrain_match  automatic  1.00     0.71 (0.80-0.82)    0.54 (0.67-0.68)    0.41 (0.57-0.58)
 
 S2b language (the paper's 8 passages; the language's J-lens coordinate swapped for each other language's)
